@@ -1,0 +1,76 @@
+:root {
+  --ink: #18212b;
+  --muted: #64748b;
+  --line: #dfe4ea;
+  --paper: #ffffff;
+  --canvas: #f4f6f8;
+  --navy: #172554;
+  --high: #7f1d1d;
+  --related: #1e3a5f;
+  --low: #475569;
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--canvas);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--canvas); line-height: 1.6; }
+a { color: #1d4ed8; text-decoration-thickness: .08em; text-underline-offset: .16em; }
+a:hover { color: #1e3a8a; }
+.container { width: min(100% - 32px, 960px); margin: 0 auto; }
+.site-header { background: var(--navy); color: white; border-bottom: 1px solid #0f172a; }
+.header-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.site-header a { color: white; }
+.site-name { color: white; font-weight: 750; text-decoration: none; letter-spacing: -.01em; }
+.subtitle { color: #cbd5e1; font-size: .9rem; }
+.site-header nav { display: flex; gap: 16px; font-size: .9rem; }
+.report, .home { padding: 42px 0 64px; }
+.report-hero, .home-hero, .latest-card, .priority-section, .archive { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 28px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(15,23,42,.04); }
+.home-hero { padding: 38px 32px; }
+h1, h2, h3 { line-height: 1.22; letter-spacing: -.02em; }
+h1 { margin: 4px 0 18px; font-size: clamp(2rem, 5vw, 3.2rem); }
+h2 { margin: 0 0 18px; font-size: 1.55rem; }
+h3 { margin: 2px 0 7px; font-size: 1.25rem; }
+.eyebrow, .paper-meta { margin: 0; color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.overview { font-size: 1.08rem; max-width: 78ch; }
+.scope-note { color: var(--muted); font-size: .88rem; margin-bottom: 0; }
+.count-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.count { display: inline-flex; gap: 4px; align-items: baseline; border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px; font-size: .86rem; background: #f8fafc; }
+.count.high { color: var(--high); }
+.count.related { color: var(--related); }
+.count.low { color: var(--low); }
+.paper-card { border: 1px solid var(--line); border-left: 4px solid var(--navy); border-radius: 8px; padding: 22px; margin: 18px 0; background: #fff; }
+.paper-card.fallback { border-left-color: #b45309; }
+.paper-heading { display: flex; justify-content: space-between; gap: 20px; }
+.paper-heading h3 a { color: var(--ink); }
+.authors { display: block; color: var(--muted); font-size: .92rem; }
+.confidence { white-space: nowrap; height: fit-content; border: 1px solid var(--line); border-radius: 999px; padding: 3px 9px; color: var(--muted); font-size: .74rem; text-transform: uppercase; }
+.warning { padding: 10px 12px; background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; font-size: .88rem; }
+.digest-fields { margin: 20px 0 0; }
+.digest-fields > div { display: grid; grid-template-columns: 155px 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid #eef2f7; }
+dt { font-weight: 700; color: #334155; }
+dd { margin: 0; }
+.paper-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 15px; }
+details { border-top: 1px solid #eef2f7; margin-top: 18px; padding-top: 13px; }
+summary { cursor: pointer; font-weight: 650; }
+.abstract { color: #334155; }
+.compact-paper-list { padding-left: 24px; }
+.compact-paper-list li { margin-bottom: 18px; }
+.compact-paper-list .metadata { display: block; color: var(--muted); font-size: .82rem; }
+.latest-card h2 { font-size: 2rem; }
+.archive-table { border-top: 1px solid var(--line); }
+.archive-row { display: grid; grid-template-columns: 130px 1fr auto; gap: 14px; padding: 13px 0; border-bottom: 1px solid var(--line); align-items: center; }
+.archive-date { font-weight: 700; }
+.archive-links { display: flex; gap: 10px; }
+.site-footer { color: var(--muted); font-size: .82rem; padding: 22px 0 40px; }
+@media (max-width: 680px) {
+  .header-inner, .paper-heading { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+  .digest-fields > div { grid-template-columns: 1fr; gap: 3px; }
+  .archive-row { grid-template-columns: 1fr; gap: 4px; }
+  .report-hero, .home-hero, .latest-card, .priority-section, .archive { padding: 20px; }
+}
+@media print {
+  .site-header, .site-footer, .paper-links { display: none; }
+  body { background: white; }
+  .report { padding: 0; }
+  .report-hero, .priority-section, .paper-card { box-shadow: none; break-inside: avoid; }
+}

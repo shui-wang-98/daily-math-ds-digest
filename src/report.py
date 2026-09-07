@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import re
 from pathlib import Path
 from typing import Any
 from xml.sax.saxutils import escape as xml_escape
@@ -24,6 +23,7 @@ from reportlab.platypus import (
 )
 
 from .models import AnalyzedPaper, DailyReport
+from .math_render import display_text, pdf_paragraph
 from .utils import atomic_write_bytes, atomic_write_text
 
 
@@ -32,47 +32,13 @@ PRIORITY_RELATED = "RELATED / POSSIBLY INTERESTING"
 PRIORITY_LOW = "LOW PRIORITY"
 
 
-_COMMON_LATEX = {
-    r"\mathbb{R}": "ℝ",
-    r"\mathbb{Z}": "ℤ",
-    r"\mathbb{N}": "ℕ",
-    r"\mathbb{Q}": "ℚ",
-    r"\mathbb{C}": "ℂ",
-    r"\to": "→",
-    r"\rightarrow": "→",
-    r"\leftarrow": "←",
-    r"\leftrightarrow": "↔",
-    r"\times": "×",
-    r"\geq": "≥",
-    r"\ge": "≥",
-    r"\leq": "≤",
-    r"\le": "≤",
-    r"\neq": "≠",
-    r"\infty": "∞",
-    r"\alpha": "α",
-    r"\beta": "β",
-    r"\gamma": "γ",
-    r"\delta": "δ",
-    r"\epsilon": "ε",
-    r"\varepsilon": "ε",
-    r"\lambda": "λ",
-    r"\mu": "μ",
-    r"\nu": "ν",
-    r"\pi": "π",
-    r"\sigma": "σ",
-    r"\tau": "τ",
-    r"\phi": "φ",
-    r"\psi": "ψ",
-    r"\omega": "ω",
-}
-
-
 def _jinja_environment(template_dir: str | Path) -> Environment:
     return Environment(
         loader=FileSystemLoader(str(template_dir)),
         autoescape=select_autoescape(["html", "xml"]),
         trim_blocks=True,
         lstrip_blocks=True,
+        finalize=lambda value: display_text(value) if isinstance(value, str) else value,
     )
 
 
@@ -99,26 +65,8 @@ def report_filenames(report_date: str, config: dict[str, Any]) -> tuple[str, str
     return pdf_name, markdown_name
 
 
-def _normalize_pdf_text(value: str) -> str:
-    text = value or ""
-    for source, target in _COMMON_LATEX.items():
-        text = text.replace(source, target)
-    text = text.replace("$$", "").replace("$", "")
-    text = text.replace(r"\(", "").replace(r"\)", "")
-    text = text.replace(r"\[", "").replace(r"\]", "")
-    try:
-        from pylatexenc.latex2text import LatexNodes2Text
-
-        text = LatexNodes2Text().latex_to_text(text)
-    except Exception:
-        # A conservative fallback that preserves readable source text.
-        text = re.sub(r"\\(?:mathrm|mathbf|mathit|operatorname)\{([^{}]*)\}", r"\1", text)
-        text = text.replace("{", "").replace("}", "")
-    return " ".join(text.split())
-
-
-def _safe_paragraph(value: str) -> str:
-    return xml_escape(_normalize_pdf_text(value)).replace("\n", "<br/>")
+def _safe_paragraph(value: str, size: float = 9.2) -> str:
+    return pdf_paragraph(value, size)
 
 
 def _register_pdf_fonts() -> tuple[str, str, str]:
@@ -229,6 +177,7 @@ def _pdf_styles() -> dict[str, ParagraphStyle]:
             fontName=regular,
             fontSize=9.2,
             leading=13.3,
+            autoLeading="max",
             textColor=colors.HexColor("#18212B"),
         ),
         "abstract": ParagraphStyle(
@@ -237,6 +186,7 @@ def _pdf_styles() -> dict[str, ParagraphStyle]:
             fontName=italic,
             fontSize=8.4,
             leading=12.2,
+            autoLeading="max",
             textColor=colors.HexColor("#475569"),
         ),
         "small": ParagraphStyle(
@@ -371,7 +321,7 @@ def render_pdf(
             paper = item.paper
             analysis = item.analysis
             heading_block = [
-                Paragraph(f"{number}. {_safe_paragraph(paper.title)}", styles["h2"]),
+                Paragraph(f"{number}. {_safe_paragraph(paper.title, 12.5)}", styles["h2"]),
                 Paragraph(
                     f"{_safe_paragraph(', '.join(paper.authors))}<br/>"
                     f"arXiv:{xml_escape(paper.arxiv_id)} · {xml_escape(paper.announce_type)} · "
@@ -423,7 +373,7 @@ def render_pdf(
                         Spacer(1, 5),
                         Paragraph("Original abstract", styles["label"]),
                         Spacer(1, 2),
-                        Paragraph(_safe_paragraph(paper.abstract), styles["abstract"]),
+                        Paragraph(_safe_paragraph(paper.abstract, 8.4), styles["abstract"]),
                     ]
                 )
             story.extend(
