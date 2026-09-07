@@ -1,0 +1,56 @@
+# Daily arXiv Digest - Dynamical Systems
+
+**Date:** {{ report.report_date }}  
+**Category:** {{ report.category }}  
+**New/cross-listed papers:** {{ report.papers | length }}  
+**Classification:** {{ counts.high }} high priority · {{ counts.related }} related · {{ counts.low }} low priority
+
+{{ report.overview }}
+
+> Only new and newly cross-listed papers are included. Replacement-only submissions are excluded. The mathematical summaries below use only titles and abstracts.
+
+{% for heading, entries in [('HIGH PRIORITY', sections.high), ('RELATED / POSSIBLY INTERESTING', sections.related)] %}
+## {{ heading }}
+
+{% if entries %}
+{% for item in entries %}
+### {{ item.paper.title }}
+
+**Authors:** {{ item.paper.authors | join(', ') }}  
+**arXiv:** [{{ item.paper.arxiv_id }}]({{ item.paper.abstract_url }}) · [PDF]({{ item.paper.pdf_url }})  
+**Announcement type:** {{ item.paper.announce_type }}  
+**Relevance:** {{ item.analysis.relevance_note }}  
+**TL;DR:** {{ item.analysis.tldr }}
+
+**Problem.** {{ item.analysis.problem }}
+
+**Main result.** {{ item.analysis.main_result }}
+
+**Methods / framework.** {% if item.analysis.methods %}{{ item.analysis.methods | join('; ') }}{% else %}Not specified in the abstract.{% endif %}
+
+**Context.** {{ item.analysis.context }}
+
+**Prerequisites.** {% if item.analysis.prerequisites %}{{ item.analysis.prerequisites | join('; ') }}{% else %}Not specified in the abstract.{% endif %}
+
+**Keywords.** {% if item.analysis.keywords %}{{ item.analysis.keywords | join('; ') }}{% else %}Not specified in the abstract.{% endif %}
+
+{% if include_original_abstract %}
+**Original abstract.** {{ item.paper.abstract }}
+{% endif %}
+
+---
+{% endfor %}
+{% else %}
+No papers in this section.
+{% endif %}
+{% endfor %}
+
+## LOW PRIORITY / PROBABLY NOT OF INTEREST
+
+{% if sections.low %}
+{% for item in sections.low %}
+- **[{{ item.paper.title }}]({{ item.paper.abstract_url }})** — {{ item.paper.authors | join(', ') }}
+{% endfor %}
+{% else %}
+No papers in this section.
+{% endif %}

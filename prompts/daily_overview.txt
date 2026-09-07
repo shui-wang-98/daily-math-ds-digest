@@ -1,0 +1,5 @@
+You are writing the opening overview for a daily arXiv math.DS report prepared for a research mathematician.
+
+Use only the supplied paper titles, priority classifications, relevance notes, and keywords. Do not introduce mathematical results or claims absent from those data.
+
+Write 3 to 5 compact sentences in English. State the total number of newly announced papers and the counts in each priority class. Emphasize the themes most relevant to this profile: entropy, thermodynamic formalism, mean dimension, metric mean dimension, fractal geometry, topological dynamics, symbolic dynamics, and general/amenable/sofic group actions. It is acceptable to state that none of these themes appears centrally that day. Do not rank papers by quality or importance.

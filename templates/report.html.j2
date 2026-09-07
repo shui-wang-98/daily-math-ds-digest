@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personalized daily arXiv digest for math.DS">
+  <title>{{ site_title }} - {{ report.report_date }}</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-name" href="../../">{{ site_title }}</a>
+      <nav><a href="{{ pdf_filename }}">Download PDF</a> <a href="{{ markdown_filename }}">Markdown</a></nav>
+    </div>
+  </header>
+
+  <main class="container report">
+    <section class="report-hero">
+      <p class="eyebrow">arXiv {{ report.category }} · {{ report.report_date }}</p>
+      <h1>Dynamical Systems Research Digest</h1>
+      <div class="count-row" aria-label="Paper counts">
+        <span class="count high"><strong>{{ counts.high }}</strong> high priority</span>
+        <span class="count related"><strong>{{ counts.related }}</strong> related</span>
+        <span class="count low"><strong>{{ counts.low }}</strong> low priority</span>
+      </div>
+      <p class="overview">{{ report.overview }}</p>
+      <p class="scope-note">Only new and newly cross-listed papers are included. Replacement-only submissions are excluded. Mathematical claims in the digest are constrained to the title and abstract.</p>
+    </section>
+
+    {% if sections.high %}
+    <section class="priority-section">
+      <h2>High Priority</h2>
+      {% for item in sections.high %}
+      {% include "paper_card.html.j2" %}
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if sections.related %}
+    <section class="priority-section">
+      <h2>Related / Possibly Interesting</h2>
+      {% for item in sections.related %}
+      {% include "paper_card.html.j2" %}
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    <section class="priority-section low-section">
+      <h2>Low Priority / Probably Not of Interest</h2>
+      {% if sections.low %}
+      <ol class="compact-paper-list">
+        {% for item in sections.low %}
+        <li>
+          <a href="{{ item.paper.abstract_url }}">{{ item.paper.title }}</a>
+          <span class="authors">{{ item.paper.authors | join(', ') }}</span>
+        </li>
+        {% endfor %}
+      </ol>
+      {% else %}
+      <p>No papers were classified as low priority.</p>
+      {% endif %}
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Generated {{ generated_label }} · AI summaries may contain errors; verify all mathematical statements against the original abstract and paper.</div>
+  </footer>
+</body>
+</html>

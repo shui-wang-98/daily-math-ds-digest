@@ -1,0 +1,83 @@
+project:
+  title: "Daily arXiv Digest - Dynamical Systems"
+  category: "math.DS"
+  timezone: "Europe/Warsaw"
+
+arxiv:
+  feed_url: "https://rss.arxiv.org/rss/math.DS"
+  include_announce_types:
+    - new
+    - cross
+    - replace-cross
+  request_timeout_seconds: 45
+  user_agent: "daily-math-ds-digest/1.0 (personal research digest)"
+
+openai:
+  # Override this with the OPENAI_MODEL repository variable if desired.
+  model: "gpt-5.6-terra"
+  max_workers: 3
+  max_retries: 3
+  retry_base_seconds: 2
+
+research_profile:
+  high_priority:
+    - entropy theory
+    - topological entropy and measure-theoretic entropy
+    - thermodynamic formalism
+    - topological pressure and variational principles
+    - equilibrium states and Gibbs measures
+    - mean dimension
+    - metric mean dimension
+    - rate-distortion dimension
+    - fractal geometry in dynamical systems
+    - Hausdorff, packing, box, Assouad, and related dimensions
+    - multifractal analysis
+    - topological dynamical systems
+    - symbolic dynamics, shifts, subshifts, and shifts of finite type
+    - symbolic coding and symbolic extensions
+    - group actions in dynamics
+    - amenable group actions
+    - sofic group actions and sofic entropy
+    - orbit complexity, specification-type properties, and related invariants
+  related:
+    - smooth dynamics with a clear entropy, symbolic, hyperbolic, dimensional, fractal, invariant-measure, pressure, or topological component
+    - hyperbolic and partially hyperbolic dynamics
+    - geodesic and Anosov flows with symbolic, entropy, dimension, or rigidity connections
+    - ergodic theory tied to entropy, pressure, coding, dimension, or topological dynamics
+    - complex dynamics with thermodynamic, symbolic, entropy, or fractal-dimension content
+    - homogeneous dynamics or Diophantine approximation with a substantial fractal-dimension or group-action component
+  low_priority:
+    - ODE-centered work with little connection to the topics above
+    - PDE-centered dynamical systems with little connection to the topics above
+    - numerical bifurcation analysis
+    - applied biological, physical, engineering, or control-oriented dynamics
+    - computation-heavy modeling unless a high-priority theme is central
+  policy:
+    - When uncertain between RELATED and LOW PRIORITY, choose RELATED.
+    - Do not mark smooth dynamics as low merely because it is smooth.
+    - ODE or PDE content alone is not a reason for exclusion when a high-priority theme is central.
+    - Classify from the title and abstract only.
+
+report:
+  language: "English"
+  include_original_abstract_for_full_entries: true
+  low_priority_fields:
+    - title
+    - authors
+  pdf_filename_pattern: "math-DS-digest-{date}.pdf"
+  markdown_filename_pattern: "math-DS-digest-{date}.md"
+
+notifications:
+  # A single persistent GitHub issue receives one comment per run. This uses
+  # GITHUB_TOKEN and requires no extra service credentials.
+  github_issue: true
+  github_issue_title: "Daily math.DS Digest notifications"
+  # Direct email is optional. The notifier tries Resend first, then SMTP.
+  # Credentials are supplied only through GitHub Secrets.
+  email_enabled: true
+  send_on_no_papers: true
+
+site:
+  title: "Daily math.DS Digest"
+  subtitle: "Personalized arXiv reports for Dynamical Systems"
+  show_latest_report_on_homepage: true

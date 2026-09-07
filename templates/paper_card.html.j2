@@ -1,0 +1,37 @@
+<article class="paper-card {{ 'fallback' if item.analysis_status == 'fallback' else '' }}">
+  <div class="paper-heading">
+    <div>
+      <p class="paper-meta">{{ item.paper.announce_type }} · arXiv:{{ item.paper.arxiv_id }}</p>
+      <h3><a href="{{ item.paper.abstract_url }}">{{ item.paper.title }}</a></h3>
+      <p class="authors">{{ item.paper.authors | join(', ') }}</p>
+    </div>
+    <span class="confidence">{{ item.analysis.confidence }} confidence</span>
+  </div>
+
+  {% if item.analysis_status == 'fallback' %}
+  <p class="warning">The model call failed for this paper. A conservative fallback classification is shown; use the original abstract as the authoritative source.</p>
+  {% endif %}
+
+  <dl class="digest-fields">
+    <div><dt>Relevance</dt><dd>{{ item.analysis.relevance_note }}</dd></div>
+    <div><dt>TL;DR</dt><dd>{{ item.analysis.tldr }}</dd></div>
+    <div><dt>Problem</dt><dd>{{ item.analysis.problem }}</dd></div>
+    <div><dt>Main result</dt><dd>{{ item.analysis.main_result }}</dd></div>
+    <div><dt>Methods / framework</dt><dd>{% if item.analysis.methods %}{{ item.analysis.methods | join(' · ') }}{% else %}Not specified in the abstract.{% endif %}</dd></div>
+    <div><dt>Context</dt><dd>{{ item.analysis.context }}</dd></div>
+    <div><dt>Prerequisites</dt><dd>{% if item.analysis.prerequisites %}{{ item.analysis.prerequisites | join(' · ') }}{% else %}Not specified in the abstract.{% endif %}</dd></div>
+    <div><dt>Keywords</dt><dd>{% if item.analysis.keywords %}{{ item.analysis.keywords | join(' · ') }}{% else %}Not specified in the abstract.{% endif %}</dd></div>
+  </dl>
+
+  <div class="paper-links">
+    <a href="{{ item.paper.abstract_url }}">Abstract page</a>
+    <a href="{{ item.paper.pdf_url }}">Original PDF</a>
+  </div>
+
+  {% if include_original_abstract %}
+  <details>
+    <summary>Original abstract</summary>
+    <p class="abstract">{{ item.paper.abstract }}</p>
+  </details>
+  {% endif %}
+</article>

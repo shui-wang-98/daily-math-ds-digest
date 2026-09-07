@@ -1,0 +1,20 @@
+<!doctype html>
+<html><body style="margin:0;background:#f4f6f8;font-family:Arial,Helvetica,sans-serif;color:#18212b">
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#f4f6f8;padding:24px 12px"><tr><td align="center">
+<table role="presentation" width="640" cellspacing="0" cellpadding="0" style="max-width:640px;background:white;border-radius:10px;padding:28px;border:1px solid #dfe4ea">
+<tr><td>
+<p style="margin:0 0 8px;color:#64748b;font-size:13px;text-transform:uppercase;letter-spacing:.08em">arXiv math.DS · {{ report.report_date }}</p>
+<h1 style="margin:0 0 14px;font-size:26px">Daily Dynamical Systems Digest</h1>
+<p style="margin:0 0 18px;line-height:1.55">{{ report.overview }}</p>
+<p style="margin:0 0 22px"><strong>{{ counts.high }}</strong> high priority · <strong>{{ counts.related }}</strong> related · <strong>{{ counts.low }}</strong> low priority</p>
+{% if top_papers %}
+<h2 style="font-size:17px;margin:0 0 8px">Top matches</h2>
+<ul style="padding-left:20px;line-height:1.5">
+{% for item in top_papers %}<li><a href="{{ item.paper.abstract_url }}">{{ item.paper.title }}</a></li>{% endfor %}
+</ul>
+{% endif %}
+<p style="margin:24px 0 0"><a href="{{ report_url }}" style="display:inline-block;background:#172554;color:white;text-decoration:none;padding:11px 16px;border-radius:6px;margin-right:8px">Read HTML report</a><a href="{{ pdf_url }}" style="display:inline-block;border:1px solid #172554;color:#172554;text-decoration:none;padding:10px 16px;border-radius:6px">Open PDF</a></p>
+<p style="margin:24px 0 0;color:#64748b;font-size:12px">The PDF is attached. Verify mathematical details against the original arXiv abstract and paper.</p>
+</td></tr></table>
+</td></tr></table>
+</body></html>
