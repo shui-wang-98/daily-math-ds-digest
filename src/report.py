@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import re
-import shutil
 from pathlib import Path
 from typing import Any
 from xml.sax.saxutils import escape as xml_escape
@@ -25,7 +24,7 @@ from reportlab.platypus import (
 )
 
 from .models import AnalyzedPaper, DailyReport
-from .utils import atomic_write_text
+from .utils import atomic_write_bytes, atomic_write_text
 
 
 PRIORITY_HIGH = "HIGH PRIORITY"
@@ -124,6 +123,11 @@ def _safe_paragraph(value: str) -> str:
 
 def _register_pdf_fonts() -> tuple[str, str, str]:
     candidates = [
+        (
+            "C:/Windows/Fonts/arial.ttf",
+            "C:/Windows/Fonts/arialbd.ttf",
+            "C:/Windows/Fonts/ariali.ttf",
+        ),
         (
             "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
             "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
@@ -305,6 +309,7 @@ def render_pdf(
         title=f"Daily math.DS Digest - {report.report_date}",
         author="daily-math-ds-digest",
         subject="Personalized arXiv math.DS research digest",
+        invariant=1,
     )
 
     story = [
@@ -362,7 +367,6 @@ def render_pdf(
         entries = sections[section_key]
         if not entries:
             continue
-        story.append(Paragraph(heading, styles["h1"]))
         for number, item in enumerate(entries, start=1):
             paper = item.paper
             analysis = item.analysis
@@ -376,15 +380,15 @@ def render_pdf(
                     styles["meta"],
                 ),
             ]
+            if number == 1:
+                heading_block.insert(0, Paragraph(heading, styles["h1"]))
             if item.analysis_status == "fallback":
                 heading_block.append(
                     Paragraph(
-                        "Model analysis failed; this entry uses a conservative fallback. Verify against the original abstract.",
+                        "This archived entry uses a legacy fallback classification. Consult the original abstract.",
                         styles["small"],
                     )
                 )
-            story.append(KeepTogether(heading_block))
-
             fields = [
                 ("Relevance", analysis.relevance_note),
                 ("TL;DR", analysis.tldr),
@@ -408,7 +412,9 @@ def render_pdf(
                     else "Not specified in the abstract.",
                 ),
             ]
-            for label, value in fields:
+            # Keep a paper heading with its first digest field across page breaks.
+            story.append(KeepTogether([*heading_block, _field_table(*fields[0], styles)]))
+            for label, value in fields[1:]:
                 story.append(_field_table(label, value, styles))
 
             if include_original_abstract:
@@ -439,7 +445,7 @@ def render_pdf(
             story.append(
                 Paragraph(
                     f'{number}. <link href="{xml_escape(paper.abstract_url)}"><b>{_safe_paragraph(paper.title)}</b></link><br/>'
-                    f"{_safe_paragraph(', '.join(paper.authors))}",
+                    f"{_safe_paragraph(', '.join(paper.authors))}<br/>arXiv:{_safe_paragraph(paper.arxiv_id)}",
                     styles["body"],
                 )
             )
@@ -516,8 +522,8 @@ def render_site_index(
     site_root = Path(site_dir)
     assets_dir = site_root / "assets"
     assets_dir.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(Path(static_dir) / "style.css", assets_dir / "style.css")
-    (site_root / ".nojekyll").touch()
+    atomic_write_bytes(assets_dir / "style.css", (Path(static_dir) / "style.css").read_bytes())
+    atomic_write_text(site_root / ".nojekyll", "")
 
     ordered = sorted(reports, key=lambda item: item.report_date, reverse=True)
     entries: list[dict[str, Any]] = []

@@ -1,0 +1,113 @@
+{
+  "$defs": {
+    "PaperAnalysisInput": {
+      "additionalProperties": false,
+      "properties": {
+        "priority": {
+          "enum": [
+            "HIGH PRIORITY",
+            "RELATED / POSSIBLY INTERESTING",
+            "LOW PRIORITY"
+          ],
+          "title": "Priority",
+          "type": "string"
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "title": "Confidence",
+          "type": "string"
+        },
+        "relevance_note": {
+          "title": "Relevance Note",
+          "type": "string"
+        },
+        "tldr": {
+          "title": "Tldr",
+          "type": "string"
+        },
+        "problem": {
+          "title": "Problem",
+          "type": "string"
+        },
+        "main_result": {
+          "title": "Main Result",
+          "type": "string"
+        },
+        "methods": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Methods",
+          "type": "array"
+        },
+        "context": {
+          "title": "Context",
+          "type": "string"
+        },
+        "prerequisites": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Prerequisites",
+          "type": "array"
+        },
+        "keywords": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Keywords",
+          "type": "array"
+        },
+        "arxiv_id": {
+          "title": "Arxiv Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "priority",
+        "confidence",
+        "relevance_note",
+        "tldr",
+        "problem",
+        "main_result",
+        "methods",
+        "context",
+        "prerequisites",
+        "keywords",
+        "arxiv_id"
+      ],
+      "title": "PaperAnalysisInput",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "report_date": {
+      "title": "Report Date",
+      "type": "string"
+    },
+    "overview": {
+      "minLength": 1,
+      "title": "Overview",
+      "type": "string"
+    },
+    "papers": {
+      "items": {
+        "$ref": "#/$defs/PaperAnalysisInput"
+      },
+      "title": "Papers",
+      "type": "array"
+    }
+  },
+  "required": [
+    "report_date",
+    "overview",
+    "papers"
+  ],
+  "title": "AnalysisRun",
+  "type": "object"
+}

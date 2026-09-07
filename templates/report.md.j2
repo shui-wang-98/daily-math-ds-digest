@@ -26,13 +26,13 @@
 
 **Main result.** {{ item.analysis.main_result }}
 
-**Methods / framework.** {% if item.analysis.methods %}{{ item.analysis.methods | join('; ') }}{% else %}Not specified in the abstract.{% endif %}
+**Methods / framework.** {{ item.analysis.methods | join('; ') if item.analysis.methods else 'Not specified in the abstract.' }}
 
 **Context.** {{ item.analysis.context }}
 
-**Prerequisites.** {% if item.analysis.prerequisites %}{{ item.analysis.prerequisites | join('; ') }}{% else %}Not specified in the abstract.{% endif %}
+**Prerequisites.** {{ item.analysis.prerequisites | join('; ') if item.analysis.prerequisites else 'Not specified in the abstract.' }}
 
-**Keywords.** {% if item.analysis.keywords %}{{ item.analysis.keywords | join('; ') }}{% else %}Not specified in the abstract.{% endif %}
+**Keywords.** {{ item.analysis.keywords | join('; ') if item.analysis.keywords else 'Not specified in the abstract.' }}
 
 {% if include_original_abstract %}
 **Original abstract.** {{ item.paper.abstract }}
@@ -49,7 +49,7 @@ No papers in this section.
 
 {% if sections.low %}
 {% for item in sections.low %}
-- **[{{ item.paper.title }}]({{ item.paper.abstract_url }})** — {{ item.paper.authors | join(', ') }}
+- **[{{ item.paper.title }}]({{ item.paper.abstract_url }})** — {{ item.paper.authors | join(', ') }} · arXiv:{{ item.paper.arxiv_id }}
 {% endfor %}
 {% else %}
 No papers in this section.

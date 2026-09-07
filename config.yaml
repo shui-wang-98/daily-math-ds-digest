@@ -12,13 +12,6 @@ arxiv:
   request_timeout_seconds: 45
   user_agent: "daily-math-ds-digest/1.0 (personal research digest)"
 
-openai:
-  # Override this with the OPENAI_MODEL repository variable if desired.
-  model: "gpt-5.6-terra"
-  max_workers: 3
-  max_retries: 3
-  retry_base_seconds: 2
-
 research_profile:
   high_priority:
     - entropy theory
@@ -64,6 +57,7 @@ report:
   low_priority_fields:
     - title
     - authors
+    - arxiv_id
   pdf_filename_pattern: "math-DS-digest-{date}.pdf"
   markdown_filename_pattern: "math-DS-digest-{date}.md"
 
@@ -72,9 +66,8 @@ notifications:
   # GITHUB_TOKEN and requires no extra service credentials.
   github_issue: true
   github_issue_title: "Daily math.DS Digest notifications"
-  # Direct email is optional. The notifier tries Resend first, then SMTP.
-  # Credentials are supplied only through GitHub Secrets.
-  email_enabled: true
+  # Direct email delivery is disabled; subscribe to the GitHub Issue instead.
+  email_enabled: false
   send_on_no_papers: true
 
 site:

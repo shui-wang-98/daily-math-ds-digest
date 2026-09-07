@@ -5,3 +5,6 @@ __pycache__/
 .env
 .DS_Store
 run_metadata.json
+data/pending_run.json
+data/analysis_run.json
+tmp/

@@ -1,5 +1,5 @@
 You are writing the opening overview for a daily arXiv math.DS report prepared for a research mathematician.
 
-Use only the supplied paper titles, priority classifications, relevance notes, and keywords. Do not introduce mathematical results or claims absent from those data.
+Follow DAILY_AUTOMATION.md. Use only the supplied paper titles and abstracts as evidence for mathematical claims. Counts and priority labels must match the validated analysis. Do not introduce claims from external sources or unsupported analysis notes.
 
-Write 3 to 5 compact sentences in English. State the total number of newly announced papers and the counts in each priority class. Emphasize the themes most relevant to this profile: entropy, thermodynamic formalism, mean dimension, metric mean dimension, fractal geometry, topological dynamics, symbolic dynamics, and general/amenable/sofic group actions. It is acceptable to state that none of these themes appears centrally that day. Do not rank papers by quality or importance.
+Write 3 to 5 compact sentences in English, or a short "No new papers." overview when the list is empty. State the total number of unseen announcements and the counts in each priority class. Emphasize supported themes relevant to config.yaml. It is acceptable to state that none of the strongest interests appears centrally that day. Do not rank papers by quality or importance. For same-day additions, describe the combined report, while analyzing only pending papers.

@@ -1,0 +1,45 @@
+{
+  "report_date": "2026-09-04",
+  "overview": "This offline fixture contains three unseen announcements: one high priority, one related, and one low priority. The high-priority entry concerns entropy, symbolic extensions, and a variational principle for amenable group actions. The related entry constructs examples of smooth flows using symbolic coding. The low-priority entry concerns numerical biological modeling. These are synthetic test papers, not a live arXiv digest.",
+  "papers": [
+    {
+      "arxiv_id": "2609.00001",
+      "priority": "HIGH PRIORITY",
+      "confidence": "high",
+      "relevance_note": "Entropy, symbolic extensions, amenable group actions, and a variational principle directly match the research profile.",
+      "tldr": "The paper studies topological entropy and symbolic extensions for actions of countable amenable groups. Under an explicit hypothesis whose content is not given in the abstract, it proves a variational principle for a pressure-type invariant.",
+      "problem": "Study topological entropy and symbolic extensions for actions of countable amenable groups.",
+      "main_result": "Under an explicit hypothesis, the authors prove a variational principle for a pressure-type invariant. The hypothesis and the formula for the invariant are not specified in the abstract.",
+      "methods": ["Not specified in the abstract."],
+      "context": "Topological entropy, symbolic extensions, and countable amenable group actions.",
+      "prerequisites": ["Topological entropy", "Symbolic extensions", "Countable amenable group actions"],
+      "keywords": ["topological entropy", "symbolic extensions", "amenable group actions", "variational principle"]
+    },
+    {
+      "arxiv_id": "2609.00002",
+      "priority": "LOW PRIORITY",
+      "confidence": "high",
+      "relevance_note": "The abstract describes numerical bifurcations in a biological reaction diffusion model without a stated connection to the main interests.",
+      "tldr": "",
+      "problem": "",
+      "main_result": "",
+      "methods": [],
+      "context": "",
+      "prerequisites": [],
+      "keywords": []
+    },
+    {
+      "arxiv_id": "2608.00003",
+      "priority": "RELATED / POSSIBLY INTERESTING",
+      "confidence": "medium",
+      "relevance_note": "The abstract uses symbolic coding to describe orbit structure in examples of smooth flows, providing a connection to symbolic dynamics.",
+      "tldr": "The authors construct examples of smooth flows and describe their orbit structure using symbolic coding.",
+      "problem": "Describe orbit structure in examples of smooth flows.",
+      "main_result": "A construction of examples of smooth flows is described. The abstract does not specify the examples or further properties.",
+      "methods": ["Symbolic coding"],
+      "context": "Smooth flows, orbit structure, and symbolic coding.",
+      "prerequisites": ["Smooth flows", "Symbolic coding"],
+      "keywords": ["smooth flows", "orbit structure", "symbolic coding"]
+    }
+  ]
+}

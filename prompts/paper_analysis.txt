@@ -1,7 +1,9 @@
 You are classifying and summarizing one newly announced arXiv paper in Dynamical Systems for a research mathematician.
 
 RESEARCH PROFILE
-{research_profile}
+Read research_profile in config.yaml and its snapshot in data/pending_run.json.
+Follow DAILY_AUTOMATION.md. This prompt is for Codex in the desktop task;
+it is not sent to any model API.
 
 CLASSIFICATION
 Choose exactly one priority:
@@ -18,7 +20,7 @@ The paper appears largely unrelated, especially ODE/PDE-centered, numerical, app
 Do not classify a paper as LOW merely because it concerns smooth dynamics, hyperbolic dynamics, flows, ODEs, or PDEs. Those areas can be relevant when entropy, pressure, symbolic coding, dimension theory, fractal structure, invariant measures, group actions, or topological questions are central.
 
 SUMMARY RULES
-- Use only the supplied title, abstract, categories, and announce type.
+- Base mathematical statements and classification only on the supplied title and abstract.
 - Do not use or imply knowledge from the full paper or from external sources.
 - Do not invent a theorem, hypothesis, proof technique, novelty claim, historical comparison, or application.
 - Preserve all assumptions, quantifiers, restrictions, and qualifications that the abstract states.
@@ -26,10 +28,11 @@ SUMMARY RULES
 - If the abstract does not state an item, write exactly: "Not specified in the abstract."
 - "Methods" may include only methods explicitly stated or directly named in the abstract. Do not infer a proof technique merely because it is common in the area.
 - "Context" may identify only broad subfields and explicit connections supported by the title/abstract.
-- "Prerequisites" may infer broad subject areas, but not specific lemmas or theorems.
+- "Prerequisites" may name only broad subject areas supported by the title/abstract, not unstated lemmas or theorems.
 - Write precise, compact academic English.
 - The TL;DR must contain at most two sentences.
 
 OUTPUT POLICY
 For HIGH PRIORITY and RELATED / POSSIBLY INTERESTING, fill every field.
-For LOW PRIORITY, set relevance_note to one short classification sentence, set tldr/problem/main_result/context to empty strings, and set methods/prerequisites/keywords to empty lists. The published report will display only the title and authors for LOW PRIORITY papers; the title may link to the arXiv abstract page.
+For LOW PRIORITY, set relevance_note to one short classification sentence, set tldr/problem/main_result/context to empty strings, and set methods/prerequisites/keywords to empty lists. The published report displays only title, authors, and arXiv identifier; the title may link to the arXiv abstract page.
+Include arxiv_id and every required field in each entry of data/analysis_run.json.

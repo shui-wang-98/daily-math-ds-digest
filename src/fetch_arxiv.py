@@ -121,13 +121,13 @@ def parse_feed(xml_text: str, include_types: Iterable[str]) -> FeedResult:
     for item in channel.findall("item"):
         try:
             paper = _parse_item(item)
-        except ArxivFeedError as exc:
+        except (ArxivFeedError, ValueError) as exc:
             errors.append(str(exc))
             continue
         if paper.announce_type in include:
             papers.append(paper)
 
-    if errors and not papers:
+    if errors:
         raise ArxivFeedError("; ".join(errors))
 
     build_raw = channel.findtext("lastBuildDate") or channel.findtext("pubDate")

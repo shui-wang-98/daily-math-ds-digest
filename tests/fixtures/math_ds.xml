@@ -43,5 +43,17 @@ Abstract: This replacement corrects a proof.</description>
       <arxiv:announce_type>replace</arxiv:announce_type>
       <dc:creator>Dora Corrector</dc:creator>
     </item>
+    <item>
+      <title>Symbolic coding for examples of smooth flows</title>
+      <link>https://arxiv.org/abs/2608.00003</link>
+      <description>arXiv:2608.00003v2 Announce Type: replace-cross
+Abstract: We construct examples of smooth flows and describe their orbit structure using symbolic coding.</description>
+      <guid isPermaLink="false">oai:arXiv.org:2608.00003v2</guid>
+      <category>math.DS</category>
+      <category>math.GT</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 -0400</pubDate>
+      <arxiv:announce_type>replace-cross</arxiv:announce_type>
+      <dc:creator>Emmy Example</dc:creator>
+    </item>
   </channel>
 </rss>

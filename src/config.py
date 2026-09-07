@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import os
 from pathlib import Path
 from typing import Any
 
@@ -24,7 +23,7 @@ def load_config(path: str | Path) -> dict[str, Any]:
         ("project", "timezone"),
         ("arxiv", "feed_url"),
         ("arxiv", "include_announce_types"),
-        ("openai", "model"),
+        ("research_profile", "high_priority"),
     ]
     for parts in required_paths:
         node: Any = config
@@ -33,9 +32,5 @@ def load_config(path: str | Path) -> dict[str, Any]:
                 dotted = ".".join(parts)
                 raise ConfigError(f"Missing required configuration key: {dotted}")
             node = node[part]
-
-    model_override = os.getenv("OPENAI_MODEL", "").strip()
-    if model_override:
-        config["openai"]["model"] = model_override
 
     return config

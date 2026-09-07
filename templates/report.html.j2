@@ -61,6 +61,7 @@
         <li>
           <a href="{{ item.paper.abstract_url }}">{{ item.paper.title }}</a>
           <span class="authors">{{ item.paper.authors | join(', ') }}</span>
+          <span class="paper-meta">arXiv:{{ item.paper.arxiv_id }}</span>
         </li>
         {% endfor %}
       </ol>
