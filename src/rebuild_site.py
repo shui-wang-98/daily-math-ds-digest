@@ -24,11 +24,13 @@ def rebuild_site(*, data_dir: str | Path = ROOT / "data", site_dir: str | Path =
         reports.append(report)
     # Reuse the daily rendering pipeline, but promote only HTML and shared assets.
     # A rendering error must not leave a partly restyled archive.
+    site_dir.parent.mkdir(parents=True, exist_ok=True)
     with TemporaryDirectory(prefix=".rebuild-site-", dir=site_dir.parent) as temporary:
         staging = Path(temporary)
         for report in reports:
-            render_report_html(report, config, ROOT / "templates", staging)
-        render_site_index(reports, config, ROOT / "templates", ROOT / "static", staging)
+            render_report_html(report, config, ROOT / "templates", staging, legacy_site_dir=site_dir)
+        render_site_index(reports, config, ROOT / "templates", ROOT / "static", staging,
+                          legacy_site_dir=site_dir)
         for source in sorted(staging.rglob("*")):
             if source.is_file():
                 atomic_write_bytes(site_dir / source.relative_to(staging), source.read_bytes())

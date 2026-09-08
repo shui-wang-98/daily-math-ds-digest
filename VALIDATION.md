@@ -1,4 +1,116 @@
-# Migration validation - 2026-09-07
+# HTML-only daily output validation - 2026-09-08
+
+New daily finalization generates HTML and backend JSON only. Historical PDF and
+Markdown files remain unchanged, and secondary links are discovered from files
+that actually exist. The dated HTML URL remains the primary report URL.
+
+## Current results
+
+- Initial working tree: clean.
+- Exact test command: `.\.venv\Scripts\python.exe -m pytest -q`.
+- Exact final result: **62 passed in 5.49s** (exit code 0).
+- `git diff --check`: passed; Git emitted LF-to-CRLF conversion advisories.
+- Offline normal date `2026-09-04`: three papers, one in each priority class.
+- Offline empty date `2026-09-05`: zero papers, correct no-new-papers page.
+- Both new dated directories contain exactly `index.html` and `report.json`;
+  no local digest PDF or Markdown files were generated anywhere in the demo site.
+- Verified all archive dates newest first, counts, relative links, matching
+  data/published JSON, full HIGH/RELATED fields and original abstracts, abbreviated
+  LOW entries, external arXiv paper PDF links, and exclusion of replacement-only
+  submissions. The state contains exactly the three eligible fixture IDs.
+- Repeated finalization and HTML rebuilding retain identical bytes and timestamps.
+- Tests cover existing legacy files during same-date retry, a later new date,
+  and HTML rebuilding; neither bytes nor timestamps change. Mixed archives keep
+  legacy secondary links and omit them for HTML-only dates. Empty files and
+  directories are excluded from download discovery, and filenames are URL-encoded.
+- Tests cover validation, HTML/JSON/index rendering and promotion failures,
+  delayed state writes, recovery, same-day merging, and no-new-papers idempotency.
+- Notifications validate HTML and matching JSON without requiring downloads;
+  generated notification text links to dated HTML and the permanent archive.
+  Notification tests use mocks. No actual notification was sent.
+- Browser inspection: homepage, full normal report, native abstract expansion,
+  and no-new-papers page at desktop and mobile width (390px). No horizontal
+  overflow or browser console errors. The existing design, external paper links,
+  mathematical rendering, and print CSS are retained.
+- All 14 protected production files retain identical SHA-256 hashes and
+  modification timestamps. This includes production state, every historical
+  site artifact (HTML, PDF, Markdown, JSON, homepage and assets), report metadata,
+  profile configuration, fetching code, schema/models, and workflow. No production
+  historical report was regenerated during this change.
+- `requirements.txt`: removed ReportLab and pypdf. Matplotlib and pylatexenc
+  remain necessary for vector mathematics and author accents. No new dependency.
+- `.github/workflows/daily.yml`: unchanged; it already only deploys committed
+  files and calls the notifier, with no direct PDF/Markdown assumption.
+- No unresolved implementation issue. Browser Save-as-PDF pagination was not
+  re-tested; print CSS is unchanged. Live deployment/notification was not run.
+- No commit, push, deployment, notification, API key, paid service, or scheduled-task
+  change. All demonstration output is isolated under ignored `tmp/`.
+
+## Exact future generated output set
+
+```text
+data/state.json
+data/reports/YYYY-MM-DD.json
+site/index.html
+site/reports/YYYY-MM-DD/index.html
+site/reports/YYYY-MM-DD/report.json
+site/assets/style.css
+site/.nojekyll
+```
+
+The last two shared assets are written only when needed or changed. The separate
+preparation/analysis steps still use ignored pending/analysis JSON. Existing
+legacy PDF and Markdown files are preserved in place, never regenerated.
+
+## Exact offline demonstration commands
+
+Run from the repository root with a fresh `tmp/html-only-demo/` directory:
+
+```powershell
+.\.venv\Scripts\python.exe -m src.prepare_run --local-feed tests/fixtures/math_ds.xml --report-date 2026-09-04 --data-dir tmp/html-only-demo/data
+Copy-Item -LiteralPath tests/fixtures/analysis_run.json -Destination tmp/html-only-demo/data/analysis_run.json
+.\.venv\Scripts\python.exe -m src.finalize_run --analysis tmp/html-only-demo/data/analysis_run.json --data-dir tmp/html-only-demo/data --site-dir tmp/html-only-demo/site
+.\.venv\Scripts\python.exe -m src.prepare_run --local-feed tests/fixtures/math_ds.xml --report-date 2026-09-05 --data-dir tmp/html-only-demo/data
+@'
+from src.models import AnalysisRun
+from src.utils import atomic_write_json
+atomic_write_json('tmp/html-only-demo/data/analysis_run.json', AnalysisRun(report_date='2026-09-05', overview='No new papers.', papers=[]))
+'@ | .\.venv\Scripts\python.exe -
+.\.venv\Scripts\python.exe -m src.finalize_run --analysis tmp/html-only-demo/data/analysis_run.json --data-dir tmp/html-only-demo/data --site-dir tmp/html-only-demo/site
+.\.venv\Scripts\python.exe -m src.notify --check-only --data-dir tmp/html-only-demo/data --site-dir tmp/html-only-demo/site
+.\.venv\Scripts\python.exe -m src.rebuild_site --data-dir tmp/html-only-demo/data --site-dir tmp/html-only-demo/site
+```
+
+An additional read-only audit checked the exact output sets, local links, count
+metadata, all full/compact fields, state IDs, and production hashes. It repeated
+`finalize_run` and `rebuild_site` with the same demo paths and verified identical
+bytes and timestamps for every demo file.
+
+## Files in this change
+
+Added: no tracked files. Ignored demonstration and audit files are under `tmp/`.
+
+Changed:
+
+- `AGENTS.md`, `DAILY_AUTOMATION.md`, `README.md`, `SETUP_CHECKLIST.zh-CN.md`,
+  `VALIDATION.md`
+- `requirements.txt`
+- `src/finalize_run.py`, `src/math_render.py`, `src/notify.py`,
+  `src/rebuild_site.py`, `src/report.py`
+- `templates/index.html.j2`, `templates/report.html.j2`
+- `tests/conftest.py`, `tests/test_html_archive.py`, `tests/test_math_render.py`,
+  `tests/test_notify.py`, `tests/test_pipeline.py`, `tests/test_render.py`
+
+Removed: `templates/report.md.j2` and the unused `templates/email.html.j2`.
+Obsolete PDF generation and Markdown formatting code was removed from the retained
+renderer modules. No generated historical file or Markdown documentation was removed.
+
+---
+
+# Historical migration validation - 2026-09-07
+
+The record below describes the earlier multi-format pipeline before the HTML-only
+change above; its PDF/Markdown generation expectations are no longer current.
 
 The local Codex task now prepares RSS metadata, writes structured analysis,
 and finalizes HTML/PDF/Markdown/JSON locally. GitHub Actions only checks committed

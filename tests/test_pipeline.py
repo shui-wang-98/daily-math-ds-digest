@@ -7,7 +7,6 @@ import sys
 
 import pytest
 from pydantic import ValidationError
-from pypdf import PdfReader
 
 import src.finalize_run as finalizer
 import src.prepare_run as preparer
@@ -114,26 +113,24 @@ def test_full_offline_outputs_and_idempotency(run):
     assert (data / "reports" / f"{DATE}.json").is_file()
     assert (folder / "report.json").is_file()
     html = (folder / "index.html").read_text(encoding="utf-8")
-    md = (folder / f"math-DS-digest-{DATE}.md").read_text(encoding="utf-8")
-    pdf = "\n".join(p.extract_text() for p in PdfReader(folder / f"math-DS-digest-{DATE}.pdf").pages)
-    for text in (html, md, pdf):
-        text = " ".join(text.split())
-        assert "2609.00002" in text
-        assert pending.papers[1].abstract not in text
-        assert pending.papers[0].abstract in text
-        assert pending.papers[2].abstract in text
+    assert {p.name for p in folder.iterdir()} == {"index.html", "report.json"}
+    text = " ".join(html.split())
+    assert "2609.00002" in text
+    assert pending.papers[1].abstract not in text
+    assert pending.papers[0].abstract in text
+    assert pending.papers[2].abstract in text
     assert "reports/2026-09-04/" in (site / "index.html").read_text(encoding="utf-8")
     assert (site / "assets/style.css").is_file()
     assert (site / ".nojekyll").is_file()
     state = json.loads((data / "state.json").read_text(encoding="utf-8"))
     assert set(state["seen"]) == {p.arxiv_id for p in pending.papers}
-    assert latest_report(data, site)[0] == report
+    assert latest_report(data, site) == report
     before = snapshot(data, site)
     assert finish(run) == report
     assert snapshot(data, site) == before
 
 
-@pytest.mark.parametrize("failure", ["pdf", "index", "promotion"])
+@pytest.mark.parametrize("failure", ["html", "json", "index", "promotion"])
 def test_failure_does_not_mark_seen_and_retry_recovers(run, monkeypatch, failure):
     import src.report as renderer
     data, site = run[:2]
@@ -142,8 +139,10 @@ def test_failure_does_not_mark_seen_and_retry_recovers(run, monkeypatch, failure
     def fail(*args, **kwargs):
         raise OSError("simulated failure")
     with monkeypatch.context() as patch:
-        if failure == "pdf":
-            patch.setattr(renderer, "render_pdf", fail)
+        if failure == "html":
+            patch.setattr(renderer, "render_report_html", fail)
+        elif failure == "json":
+            patch.setattr(renderer, "atomic_write_json", fail)
         elif failure == "index":
             patch.setattr(finalizer, "render_site_index", fail)
         else:
@@ -176,11 +175,11 @@ def test_failed_state_write_recovers_existing_report(run, monkeypatch):
 
 def test_repair_damaged_artifact_is_idempotent(run):
     finish(run)
-    pdf = run[1] / "reports" / DATE / f"math-DS-digest-{DATE}.pdf"
-    original = pdf.read_bytes()
-    pdf.write_bytes(b"damaged")
+    html = run[1] / "reports" / DATE / "index.html"
+    original = html.read_bytes()
+    html.write_bytes(b"damaged")
     finish(run)
-    assert pdf.read_bytes() == original
+    assert html.read_bytes() == original
 
 
 def test_stale_pending_cannot_duplicate_paper_on_another_day(run):
@@ -208,9 +207,12 @@ def test_no_new_papers_and_same_day_repreparation(run):
     assert set(report.counts.values()) == {0}
     folder = site / "reports/2026-09-07"
     assert "No new papers." in (folder / "index.html").read_text(encoding="utf-8")
-    assert "No new papers." in (folder / "math-DS-digest-2026-09-07.md").read_text(encoding="utf-8")
-    assert "No new papers." in PdfReader(folder / "math-DS-digest-2026-09-07.pdf").pages[0].extract_text()
-    assert latest_report(data, site)[0].report_date == "2026-09-07"
+    assert {p.name for p in folder.iterdir()} == {"index.html", "report.json"}
+    assert json.loads((folder / "report.json").read_text(encoding="utf-8"))["papers"] == []
+    before = snapshot(data, site)
+    finish(run)
+    assert snapshot(data, site) == before
+    assert latest_report(data, site).report_date == "2026-09-07"
 
 
 def test_same_day_additions_are_merged(run):

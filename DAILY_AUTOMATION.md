@@ -118,16 +118,23 @@ followed by atomic replacement. Match the Pydantic `AnalysisRun` model exactly:
 
 1. Run `python -m src.finalize_run --analysis data/analysis_run.json`.
    If validation fails, correct the analysis without inventing content. Never
-   bypass validation or manually mark papers seen.
+   bypass validation or manually mark papers seen. New reports produce HTML and
+   JSON only, plus the archive homepage, shared assets, and state. Do not generate
+   local digest PDF or Markdown reports. Preserve every existing legacy file
+   without deleting, rewriting, renaming, or moving it.
 2. Run `pytest -q` using the offline fixture. Do not require a live arXiv request
    for tests. Run `python -m src.notify --check-only` to check publication inputs.
 3. Inspect the dated JSON under `data/reports/`, the published JSON under `site/`,
-   the complete Markdown, HTML, PDF, and the site index. Open/render the HTML
-   and render every PDF page for visual inspection; also extract PDF text.
+   the complete dated HTML, and the archive homepage. Open/render both HTML pages
+   and check desktop and narrow/mobile widths when available.
    Verify counts, all pending IDs exactly once, metadata fidelity, original
-   abstracts, every full digest field, compact LOW entries, and working local
-   HTML/PDF/Markdown links. Check line wrapping, clipping, fonts, page breaks,
-   and mathematical notation. ReportLab PDF text conversion is not full TeX:
+   abstracts in native details/summary elements, every full digest field, compact
+   LOW entries, the archive-home link, and working external arXiv abstract and
+   original-paper PDF links. Verify every archive date, newest-first ordering,
+   and its relative HTML link. Legacy digest PDF/Markdown links may appear only
+   when the corresponding files already exist; new dates must not have them.
+   Do not regenerate or inspect local digest PDF/Markdown outputs as a daily
+   requirement. Check line wrapping, clipping, fonts, and mathematical notation;
    if conversion changes mathematical meaning, fix the rendering or stop.
 4. Confirm that state includes newly finalized papers only after all artifacts
    exist. Rerun the finalizer once and verify no content changes for identical
@@ -139,9 +146,13 @@ followed by atomic replacement. Match the Pydantic `AnalysisRun` model exactly:
 These steps apply to the future authorized daily task, not the migration session.
 
 1. Inspect `git diff --check`, `git status --short`, and the full generated diff.
-   Stage only `data/state.json`, the dated JSON report(s), and generated `site/`
-   files belonging to the validated run. Never stage pending, analysis, fixtures,
-   `tmp/`, `.venv/`, secrets, or unrelated changes. Do not use `git add .`.
+   Stage only `data/state.json`, `data/reports/YYYY-MM-DD.json`,
+   `site/reports/YYYY-MM-DD/index.html`, `site/reports/YYYY-MM-DD/report.json`,
+   `site/index.html`, and required shared site assets (`site/assets/` and
+   `site/.nojekyll`) belonging to the validated run. Preserve legacy PDF and
+   Markdown files; never stage their modification or deletion. Never stage
+   pending, analysis, fixtures, `tmp/`, `.venv/`, secrets, or unrelated changes.
+   Do not use `git add .`.
 2. Only after tests, schema validation, artifact checks, and visual/mathematical
    inspection all succeed, commit the generated files with a dated digest message
    and push to `origin main` using existing Git authentication. If there is no

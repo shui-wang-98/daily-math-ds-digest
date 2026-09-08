@@ -20,7 +20,7 @@
     <header class="home-intro">
       <h1>{{ site_title }}</h1>
       <p>Daily reports on newly announced and newly cross-listed arXiv papers in math.DS, classified according to a personalized research profile.</p>
-      <p class="reading-note">Choose a date to read the full report online. PDF and Markdown downloads remain available.</p>
+      <p class="reading-note">Choose a date to read the full report online. Historical PDF and Markdown downloads are linked where available.</p>
     </header>
 
     <section class="archive" aria-labelledby="archive-heading">
@@ -42,7 +42,9 @@
             <div><dt>TOTAL PAPERS</dt><dd>{{ item.total }}</dd></div>
           </dl>
           {% if item.total == 0 %}<p class="no-papers">No new papers.</p>{% endif %}
-          <p class="archive-downloads"><span>Also available:</span> <a href="reports/{{ item.report_date }}/{{ item.pdf_filename }}">PDF</a> <a href="reports/{{ item.report_date }}/{{ item.markdown_filename }}">Markdown</a></p>
+          {% if item.legacy_downloads %}
+          <p class="archive-downloads"><span>Historical downloads:</span>{% for download in item.legacy_downloads %} <a href="reports/{{ item.report_date }}/{{ download.href }}" title="{{ download.filename }}">{{ download.label }}</a>{% endfor %}</p>
+          {% endif %}
         </li>
         {% endfor %}
       </ol>

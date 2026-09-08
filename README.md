@@ -4,7 +4,7 @@ A personalized, English-only research digest from the official arXiv math.DS RSS
 
 ## Read reports on GitHub Pages
 
-**HTML is the primary reading format.** The permanent GitHub Pages homepage is
+**HTML is the sole newly generated human-readable report format.** The permanent GitHub Pages homepage is
 generated at `site/index.html`. It lists every available report date, newest
 first, with the three priority counts and the total number of papers. Each date
 has a prominent **Open report** link to `site/reports/YYYY-MM-DD/index.html`.
@@ -18,8 +18,10 @@ alternative text. Their vector shapes also remain sharp in browser printing.
 
 Use **Ctrl+P → Save as PDF** to print a daily page. Print CSS hides navigation,
 reveals closed original abstracts, and keeps short headings with following
-content where practical. PDF and Markdown downloads are temporarily retained
-as secondary formats; JSON archives and seen-paper state are unchanged.
+content where practical. This manually saves a PDF through the browser; the
+pipeline does not generate local digest PDFs or Markdown reports. Historical
+PDF and Markdown files remain unchanged and are linked only where they already
+exist. JSON archives and seen-paper state remain part of the pipeline.
 
 To apply presentation updates to historical HTML without fetching papers,
 reanalyzing them, or changing state or existing PDF/Markdown/JSON files, run:
@@ -30,7 +32,11 @@ reanalyzing them, or changing state or existing PDF/Markdown/JSON files, run:
 
 This uses the same HTML templates and renderer as daily finalization, reading
 the version-controlled metadata in `data/reports/`. It rebuilds the homepage,
-dated HTML pages, and shared site assets. It never deletes historical files.
+dated HTML pages, and shared site assets. It never deletes historical files or
+regenerates legacy PDF/Markdown files. Unchanged bytes and timestamps are retained.
+Legacy downloads are discovered from actual nonempty files in each dated folder,
+including filenames containing spaces; old filename-pattern configuration is
+ignored. Rebuilding uses the published directory for discovery while staging HTML.
 
 **No OpenAI API key, OpenAI Python SDK, OpenAI API billing, or other paid AI API is required.** The local scripts never call a model. Codex uses your existing ChatGPT sign-in and applicable account usage limits; this does not imply an unlimited or free Codex subscription.
 
@@ -39,7 +45,7 @@ local Codex scheduled task
     -> python -m src.prepare_run
     -> Codex writes data/analysis_run.json
     -> python -m src.finalize_run --analysis data/analysis_run.json
-    -> HTML / PDF / Markdown / JSON and site index
+    -> HTML / JSON and archive homepage
     -> validation, inspection, git commit and push
     -> GitHub Actions deploys committed site/ and posts an Issue notification
 ```
@@ -102,8 +108,6 @@ Finalization validates before writing, merges analysis with the original metadat
 ```text
 data/reports/YYYY-MM-DD.json
 site/reports/YYYY-MM-DD/index.html
-site/reports/YYYY-MM-DD/math-DS-digest-YYYY-MM-DD.pdf
-site/reports/YYYY-MM-DD/math-DS-digest-YYYY-MM-DD.md
 site/reports/YYYY-MM-DD/report.json
 site/index.html
 site/assets/style.css
@@ -113,14 +117,14 @@ data/state.json
 
 State is updated **only after** every report and index file has been generated and promoted successfully. Rendering/index failures leave the archive and state intact. File replacement is atomic individually; a filesystem failure during promotion can leave some files updated, but leaves state unadvanced. Keep the pending and analysis files and rerun the same finalizer to recover. Do not prepare a different run while recovering. Run one preparation/analysis/finalization sequence at a time.
 
-Identical finalization preserves timestamps and file bytes, including the PDF and state. Missing report artifacts are regenerated. New papers found later on the same date are merged into that day's report; write the overview for the combined report after reading the existing report's titles/abstracts. Pending papers already recorded for a different date are rejected as stale.
+Identical finalization preserves timestamps and file bytes, including state. Missing or damaged required HTML/JSON artifacts are repaired; legacy PDF/Markdown files are never repaired or regenerated. New papers found later on the same date are merged into that day's report; write the overview for the combined report after reading the existing report's titles/abstracts. Pending papers already recorded for a different date are rejected as stale.
 
-The retained PDF uses the existing ReportLab layout and embeds typeset math as
-images, which are not included in plain-text extraction. HTML uses embedded
-vector math, with no client-side typesetter or remote script. Unknown author
+HTML uses embedded vector math, with no client-side typesetter or remote script. Unknown author
 macros retain their literal names with an explicit source note. Original JSON
 metadata is never rewritten by display formatting. Inspect mathematical
-notation before publishing; HTML, PDF, and Markdown rendering remain offline.
+notation before publishing; HTML rendering remains offline. Matplotlib and
+pylatexenc remain necessary for mathematical notation and author accents;
+ReportLab and pypdf are no longer runtime or test requirements.
 
 `data/pending_run.json`, `data/analysis_run.json`, `.venv/`, and `tmp/` are local and ignored. Keep `data/state.json`, `data/reports/`, and `site/` under version control. Research preferences and templates are preserved.
 
@@ -136,7 +140,7 @@ python -m src.notify --check-only --data-dir tmp/offline-demo/data --site-dir tm
 python -m src.finalize_run --analysis tmp/offline-demo/data/analysis_run.json --data-dir tmp/offline-demo/data --site-dir tmp/offline-demo/site
 ```
 
-The last command checks the normal rerun path. The fixture analysis is hand-authored for testing and must never be copied into a live digest. The test suite blocks HTTP requests, exercises the fixture and all three priority sections, checks output text/PDFs, and simulates rendering, publication, and state-write failures.
+The last command checks the normal rerun path. The fixture analysis is hand-authored for testing and must never be copied into a live digest. The test suite blocks HTTP requests, exercises all three priority sections, verifies HTML/JSON-only output and unchanged legacy files, and simulates rendering, publication, and state-write failures. See [VALIDATION.md](VALIDATION.md) for the normal and no-new-papers demonstration.
 
 Start preparation with a fresh demo data directory. If this demonstration already
 ran, rerun only the finalizer, or choose a different empty demo directory in both
@@ -150,8 +154,8 @@ In GitHub, enable Issues and select **Settings > Pages > Build and deployment > 
 
 [.github/workflows/daily.yml](.github/workflows/daily.yml) runs only on pushes to `main` changing `data/reports/**` or `site/**`, or manual `workflow_dispatch` on `main`. It checks committed artifacts, uploads the committed `site/` directory, deploys Pages, and then calls the notifier. It never fetches arXiv, runs a model, renders a report, commits, or pushes. The Pages steps use the [official Pages upload action](https://github.com/actions/upload-pages-artifact) and [deployment action](https://github.com/actions/deploy-pages).
 
-The notifier finds the latest dated JSON in committed `data/reports/` and its corresponding committed PDF. It does not use `run_metadata.json`. It creates or reopens the persistent **Daily math.DS Digest notifications** Issue and adds one comment per report date, updating that comment when content changes. Pagination prevents duplicate notifications as the archive grows. An empty archive deploys the starter page and skips notification; an incomplete latest report fails the check.
+The notifier finds the latest dated JSON in committed `data/reports/` and checks its matching published JSON, dated HTML, and archive homepage. Notifications link to the dated HTML report and permanent archive; local digest PDF/Markdown files are neither required nor advertised. It does not use `run_metadata.json`. It creates or reopens the persistent **Daily math.DS Digest notifications** Issue and adds one comment per report date, updating that comment when content changes. Pagination prevents duplicate notifications as the archive grows. An empty archive deploys the starter page and skips notification; an incomplete latest report fails the check.
 
-GitHub Issue notifications are enabled by default. Subscribe to the persistent Issue and choose your GitHub notification preferences to receive GitHub-managed email or mobile alerts. Direct email is off by default and its credential-based sender has been removed. The existing email template is retained as an unused design reference.
+GitHub Issue notifications are enabled by default. Subscribe to the persistent Issue and choose your GitHub notification preferences to receive GitHub-managed email or mobile alerts. Direct email is off by default; its credential-based sender and unused email template have been removed.
 
 If Pages or Issue posting is denied, check Pages configuration, repository Issues, and organization Actions permissions. A failed notification can be retried with manual dispatch without regenerating a report. Actual deployment and notification require a future authorized push and are not exercised by the offline test suite.

@@ -9,6 +9,11 @@ and the research profile in `config.yaml` before analyzing anything. Preserve th
 existing English report templates. Use `tests/fixtures/math_ds.xml` for all tests.
 Run `pytest -q` after pipeline changes.
 
+New daily reports generate HTML and backend JSON only. The permanent homepage
+lists all dates; dated HTML is the primary public report. Preserve existing
+legacy PDF/Markdown files exactly, and link them only where they already exist.
+Never regenerate those formats during finalization or HTML rebuilding.
+
 Base mathematical claims only on supplied titles/abstracts. Preserve hypotheses,
 qualifications, notation, and the distinction between proven results, conjectures,
 examples, and numerical evidence. Never invent missing information.

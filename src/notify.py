@@ -5,7 +5,7 @@ import argparse
 import os
 from pathlib import Path
 from typing import Any, Iterator
-from urllib.parse import quote, urljoin
+from urllib.parse import urljoin
 
 import requests
 
@@ -20,7 +20,7 @@ class NotificationError(RuntimeError):
     pass
 
 
-def latest_report(data_dir: Path, site_dir: Path) -> tuple[DailyReport, Path] | None:
+def latest_report(data_dir: Path, site_dir: Path) -> DailyReport | None:
     paths = sorted((data_dir / "reports").glob("*.json"), reverse=True)
     if not paths:
         return None
@@ -29,15 +29,13 @@ def latest_report(data_dir: Path, site_dir: Path) -> tuple[DailyReport, Path] | 
     if path.stem != report.report_date:
         raise NotificationError("Committed report filename and report_date differ")
     folder = site_dir / "reports" / report.report_date
-    pdfs = list(folder.glob("*.pdf"))
-    markdown = list(folder.glob("*.md"))
     required = (folder / "index.html", folder / "report.json", site_dir / "index.html")
-    if not all(item.is_file() for item in required) or len(pdfs) != 1 or len(markdown) != 1:
+    if not all(item.is_file() and item.stat().st_size > 0 for item in required):
         raise NotificationError(f"Latest committed report is incomplete: {folder}")
     published = DailyReport.model_validate_json((folder / "report.json").read_text(encoding="utf-8"))
-    if published != report or not pdfs[0].read_bytes().startswith(b"%PDF"):
-        raise NotificationError("Published JSON/PDF does not match a complete committed report")
-    return report, pdfs[0]
+    if published != report:
+        raise NotificationError("Published JSON does not match the committed report")
+    return report
 
 
 def _github_request(method: str, endpoint: str, token: str,
@@ -65,9 +63,9 @@ def _pages(endpoint: str, token: str, **params: Any) -> Iterator[dict[str, Any]]
         page += 1
 
 
-def notification_body(report: DailyReport, page_url: str, pdf_name: str) -> str:
-    report_url = urljoin(ensure_relative_url_base(page_url), f"reports/{report.report_date}/")
-    pdf_url = urljoin(report_url, quote(pdf_name))
+def notification_body(report: DailyReport, page_url: str) -> str:
+    archive_url = ensure_relative_url_base(page_url)
+    report_url = urljoin(archive_url, f"reports/{report.report_date}/")
     return "\n".join([
         f"<!-- math-ds-digest:{report.report_date} -->",
         f"## math.DS digest - {report.report_date}", "",
@@ -75,7 +73,7 @@ def notification_body(report: DailyReport, page_url: str, pdf_name: str) -> str:
         f"**{report.counts.get('RELATED / POSSIBLY INTERESTING', 0)} related** · "
         f"**{report.counts.get('LOW PRIORITY', 0)} low priority**", "",
         report.overview, "",
-        f"[Read the HTML report]({report_url}) · [Download the PDF]({pdf_url})",
+        f"[Read the HTML report]({report_url}) · [Browse all report dates]({archive_url})",
     ])
 
 
@@ -121,7 +119,7 @@ def main() -> int:
     if latest is None:
         print("No committed reports yet; notification skipped.")
         return 0
-    report, pdf = latest
+    report = latest
     if args.check_only:
         print(f"Committed report {report.report_date} is complete.")
         return 0
@@ -132,7 +130,7 @@ def main() -> int:
         return 0
     if not args.page_url.strip():
         raise NotificationError("The GitHub Pages deployment URL is missing")
-    body = notification_body(report, args.page_url.strip(), pdf.name)
+    body = notification_body(report, args.page_url.strip())
     if args.dry_run:
         print(body)
     else:

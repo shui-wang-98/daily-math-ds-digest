@@ -21,15 +21,16 @@ def report():
 
 
 def test_notification_links_preserve_project_base(report):
-    body = notifier.notification_body(report, "https://example.github.io/digest", "daily report.pdf")
+    body = notifier.notification_body(report, "https://example.github.io/digest")
     assert "https://example.github.io/digest/reports/2026-09-04/" in body
-    assert "https://example.github.io/digest/reports/2026-09-04/daily%20report.pdf" in body
+    assert "[Browse all report dates](https://example.github.io/digest/)" in body
+    assert ".pdf" not in body and ".md" not in body
 
 
 @pytest.mark.parametrize("existing_body,expected", [(None, "POST"), ("old", "PATCH"), ("same", None)])
 def test_persistent_issue_paginates_and_upserts(report, monkeypatch, existing_body, expected):
     config = load_config(ROOT / "config.yaml")
-    body = notifier.notification_body(report, "https://example.github.io/digest", "report.pdf")
+    body = notifier.notification_body(report, "https://example.github.io/digest")
     marker = "<!-- math-ds-digest:2026-09-04 -->"
     mutations = []
     pages = []
@@ -78,6 +79,28 @@ def test_incomplete_committed_report_is_rejected(tmp_path, report):
     atomic_write_json(tmp_path / "data/reports/2026-09-04.json", report)
     with pytest.raises(notifier.NotificationError, match="incomplete"):
         notifier.latest_report(tmp_path / "data", tmp_path / "site")
+
+
+def test_html_only_notification_checks_json_and_ignores_legacy_downloads(tmp_path, report):
+    data, site = tmp_path/'data', tmp_path/'site'
+    dated = site/'reports'/report.report_date
+    atomic_write_json(data/'reports'/f'{report.report_date}.json', report)
+    atomic_write_json(dated/'report.json', report)
+    (dated/'index.html').write_text('<html>Daily report</html>', encoding='utf-8')
+    (site/'index.html').write_text('<html>Archive</html>', encoding='utf-8')
+    assert notifier.latest_report(data, site) == report
+    legacy = dated/'legacy.pdf'
+    legacy.write_bytes(b'historical bytes are irrelevant to HTML publication checks')
+    before = (legacy.read_bytes(), legacy.stat().st_mtime_ns)
+    assert notifier.latest_report(data, site) == report
+    assert (legacy.read_bytes(), legacy.stat().st_mtime_ns) == before
+    atomic_write_json(dated/'report.json', report.model_copy(update={'overview': 'Mismatched overview'}))
+    with pytest.raises(notifier.NotificationError, match='Published JSON does not match'):
+        notifier.latest_report(data, site)
+    atomic_write_json(dated/'report.json', report)
+    (dated/'index.html').write_text('', encoding='utf-8')
+    with pytest.raises(notifier.NotificationError, match='incomplete'):
+        notifier.latest_report(data, site)
 
 
 def test_schema_export_matches_pydantic():

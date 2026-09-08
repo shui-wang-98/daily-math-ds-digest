@@ -6,13 +6,19 @@
 本地 Codex 定时任务
     -> prepare_run 获取论文元数据
     -> Codex 阅读标题和摘要，写入 analysis_run.json
-    -> finalize_run 验证并生成 HTML / PDF / Markdown / JSON
+    -> finalize_run 验证并生成 HTML / JSON 和固定归档主页
     -> 本地测试和人工式逐项检查
     -> git commit 和 push
     -> GitHub Actions 发布已提交的 site/ 并发送 Issue 通知
 ```
 
 **不需要 OpenAI API key、OpenAI Python SDK、OpenAI API 计费或其他付费 AI API。** Python 脚本不调用模型。分析由桌面应用中的 Codex 完成，使用已有 ChatGPT 登录和相应账户使用额度；这不表示 Codex 订阅无限或免费。
+
+**HTML 是今后唯一新生成的供人阅读的报告格式。** 固定主页 `site/index.html`
+按日期从新到旧列出全部报告和优先级数量；每个日期通过 “Open report” 打开
+`site/reports/YYYY-MM-DD/index.html` 完整报告。历史 PDF 和 Markdown 文件原样保留，
+仅在文件实际存在时显示次要下载链接。今后的运行不再生成本地摘要 PDF 或 Markdown。
+仍可通过浏览器 **Ctrl+P → Save as PDF** 手动保存 HTML；打印样式会展开原始摘要并隐藏导航。
 
 ## 本地准备
 
@@ -37,10 +43,11 @@ python -m src.notify --check-only --data-dir tmp/offline-demo/data --site-dir tm
 python -m src.finalize_run --analysis tmp/offline-demo/data/analysis_run.json --data-dir tmp/offline-demo/data --site-dir tmp/offline-demo/site
 ```
 
-- [ ] 打开演示 HTML、PDF、Markdown、JSON 和主页，确认三种优先级与链接。
+- [ ] 打开演示 HTML、JSON 和主页，确认三种优先级、日期顺序与链接，并检查窄屏布局。
 - [ ] LOW PRIORITY 仅显示标题、作者、arXiv 编号。
 - [ ] HIGH PRIORITY 和 RELATED 保留完整英文摘要分析和原始摘要。
-- [ ] PDF 延续 ReportLab 排版，将 LaTeX 转为可读文本；复杂公式必须逐项检查，不能假定等同于 TeX 排版。
+- [ ] 确认新日期只有 HTML 和 JSON，没有本地摘要 PDF 或 Markdown；保留外部 arXiv 原论文 PDF 链接。
+- [ ] 检查 HTML 中的数学符号、Unicode、原始摘要的 details/summary 展开功能和归档主页导航。
 - [ ] 最后一次重复 finalization 保持文件内容和状态不变。
 
 如果该演示已经执行过，只重跑 finalizer，或在准备和完成命令中统一换用新的空演示目录。重复 preparation 会按已有状态过滤已完成的测试论文。
@@ -72,7 +79,7 @@ python -m src.notify --check-only
 - [ ] 工作流只验证已提交产物、发布 Pages、发 Issue 通知，不重新生成或修改摘要。
 - [ ] 打开固定 **Daily math.DS Digest notifications** Issue 并点击 **Subscribe**。
 - [ ] 如需 GitHub 管理的邮件或手机通知，在个人 GitHub 通知设置中选择。
-- [ ] 确认通知中的最新 HTML 和 PDF 链接可用。最新报告来自已提交 JSON/PDF，不依赖本地 `run_metadata.json`。
+- [ ] 确认通知中的最新日期 HTML 和固定归档主页链接可用。最新报告来自已提交 JSON，验证配套 HTML/JSON 和主页；不要求本地摘要 PDF/Markdown，也不依赖 `run_metadata.json`。
 
 Issue 通知默认开启；直接邮件默认关闭，SMTP/Resend 发件实现已移除，无需邮件账号或密钥。GitHub Actions 自动提供作业令牌。首次尚无报告时只发布初始主页，不发送通知；最新报告文件不全时停止发布。
 
@@ -83,7 +90,7 @@ Issue 通知默认开启；直接邮件默认关闭，SMTP/Resend 发件实现�
 - [ ] 选择本地仓库，并让任务严格执行 `DAILY_AUTOMATION.md`。
 - [ ] 到运行时，电脑必须开机且保持唤醒，连接网络，ChatGPT/Codex 桌面应用必须运行。
 - [ ] 项目目录保持可用，并允许任务在该目录运行所需的命令。
-- [ ] 只有验证、测试以及 HTML/Markdown/PDF/JSON 检查全部成功后，将来的任务才可提交并推送生成文件。
+- [ ] 只有验证、测试以及完整 HTML/JSON 和归档主页检查全部成功后，将来的任务才可提交并推送预期的状态、JSON、HTML 和共享资源文件；不得改写或删除历史 PDF/Markdown。
 - [ ] 不把 fixture 演示报告、pending、analysis、虚拟环境或 `tmp/` 提交为真实报告。
 
 桌面本地任务的运行条件见 [OpenAI 官方定时任务文档](https://learn.chatgpt.com/docs/automations?surface=app)。

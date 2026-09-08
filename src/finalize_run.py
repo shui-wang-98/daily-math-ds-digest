@@ -74,11 +74,12 @@ def finalize_run(
     with TemporaryDirectory(prefix=".finalize-", dir=data_dir) as temporary:
         staging = Path(temporary)
         staged_site = staging / "site"
-        # Deterministic PDF output and write-if-different promotion preserve
-        # identical files while also applying template fixes and repairing damage.
-        render_report_files(report, config, ROOT / "templates", staged_site)
+        # Discover legacy downloads in the published tree, not the empty staging
+        # tree. They are linked only; promotion never includes those files.
+        render_report_files(report, config, ROOT / "templates", staged_site, legacy_site_dir=site_dir)
         all_reports = [item for item in reports if item.report_date != report.report_date] + [report]
-        render_site_index(all_reports, config, ROOT / "templates", ROOT / "static", staged_site)
+        render_site_index(all_reports, config, ROOT / "templates", ROOT / "static", staged_site,
+                          legacy_site_dir=site_dir)
         atomic_write_json(staging / "report.json", report)
         for source in sorted(staged_site.rglob("*")):
             if source.is_file():
@@ -112,7 +113,7 @@ def main() -> int:
     args = parser.parse_args()
     report = finalize_run(args.analysis, config_path=args.config,
                           data_dir=args.data_dir, site_dir=args.site_dir)
-    print(f"Finalized {report.report_date}: {len(report.papers)} papers; HTML, Markdown, PDF, JSON and index ready.")
+    print(f"Finalized {report.report_date}: {len(report.papers)} papers; HTML, JSON and archive homepage ready.")
     return 0
 
 

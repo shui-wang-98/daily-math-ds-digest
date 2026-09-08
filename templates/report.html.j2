@@ -12,7 +12,9 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="archive-home" href="../../">← All report dates</a>
-      <nav class="downloads" aria-label="Alternative report formats"><a href="{{ pdf_filename }}">Download PDF</a> <a href="{{ markdown_filename }}">Markdown</a></nav>
+      {% if legacy_downloads %}
+      <nav class="downloads" aria-label="Historical report downloads">{% for download in legacy_downloads %}<a href="{{ download.href }}" title="{{ download.filename }}">{{ download.label }}</a>{% endfor %}</nav>
+      {% endif %}
     </div>
   </header>
 

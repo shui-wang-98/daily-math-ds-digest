@@ -1,10 +1,9 @@
 from pathlib import Path
 
 import pytest
-from pypdf import PdfReader
 
 from src.finalize_run import finalize_run
-from src.math_render import _formula, display_text, pdf_paragraph
+from src.math_render import _formula, _svg_formula, html_text
 from src.models import AnalysisRun
 from src.prepare_run import prepare_run
 from src.utils import atomic_write_json
@@ -14,13 +13,14 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_fraction_and_symbols_are_typeset_instead_of_flattened():
     source = r"1-\frac{1}{d+1}\quad\mathbb{R}^{d}\quad\Pi_1^0"
-    normalized, unknown, png, width, height, depth = _formula(source)
+    normalized, unknown = _formula(source)
+    svg, width, depth = _svg_formula(normalized)
     assert normalized == source
     assert not unknown
-    assert png.startswith(b"\x89PNG")
-    assert width > 0 and height > 0 and depth >= 0
-    paragraph = pdf_paragraph(r"Bound: \(" + source + r"\).")
-    assert '<img src="data:image/png;base64,' in paragraph
+    assert svg
+    assert width > 0 and depth >= 0
+    paragraph = html_text(r"Bound: \(" + source + r"\).")
+    assert 'src="data:image/svg+xml;base64,' in paragraph
     assert "1-1/d+1" not in paragraph
 
 
@@ -30,15 +30,15 @@ def test_undefined_macros_are_retained_with_explicit_source_note():
     assert set(unknown) == {"Hau", "IP"}
     assert r"\backslash\mathrm{Hau}" in normalized
     assert r"\backslash\mathrm{IP}" in normalized
-    text = display_text("Original: $" + source + "$.")
+    text = html_text("Original: $" + source + "$.")
     assert "does not define the macros Hau, IP" in text
 
 
 def test_author_accents_and_undelimited_rss_math():
-    assert display_text(r"Sebasti\\'an Barbieri") == "Sebastián Barbieri"
-    result = display_text(r"space SL_n\mathbb{R}/\Gamma, n\ge 5, under the assumption")
-    assert r"\(SL_n\mathbb{R}/\Gamma,\)" in result
-    assert r"\(n\geq 5,\)" in result
+    assert html_text(r"Sebasti\\'an Barbieri") == "Sebastián Barbieri"
+    result = html_text(r"space SL_n\mathbb{R}/\Gamma, n\ge 5, under the assumption")
+    assert r'alt="SL_n\mathbb{R}/\Gamma,"' in result
+    assert r'alt="n\ge 5,"' in result
     assert "Source notation" not in result
     assert result.endswith("under the assumption")
 
@@ -65,7 +65,7 @@ def test_math_render_failure_keeps_state_and_archive_unchanged(tmp_path):
     assert not (data / "reports").exists()
 
 
-def test_pdf_math_images_keep_metadata_and_are_repeatable(tmp_path):
+def test_html_math_images_keep_metadata_and_are_repeatable(tmp_path):
     data, site = tmp_path / "data", tmp_path / "site"
     pending = prepare_run(data_dir=data, local_feed=ROOT / "tests/fixtures/math_ds.xml", report_date="2026-09-04")
     payload = AnalysisRun.model_validate_json((ROOT / "tests/fixtures/analysis_run.json").read_text(encoding="utf-8"))
@@ -73,8 +73,8 @@ def test_pdf_math_images_keep_metadata_and_are_repeatable(tmp_path):
     atomic_write_json(data / "analysis_run.json", payload)
     report = finalize_run(data / "analysis_run.json", data_dir=data, site_dir=site)
     assert report.papers[0].paper == pending.papers[0]
-    pdf = site / "reports/2026-09-04/math-DS-digest-2026-09-04.pdf"
-    original = pdf.read_bytes()
-    assert sum(len(page.images) for page in PdfReader(pdf).pages) >= 2
+    html = site / "reports/2026-09-04/index.html"
+    original = html.read_bytes()
+    assert original.count(b"data:image/svg+xml;base64,") >= 2
     finalize_run(data / "analysis_run.json", data_dir=data, site_dir=site)
-    assert pdf.read_bytes() == original
+    assert html.read_bytes() == original
