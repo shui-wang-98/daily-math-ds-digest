@@ -23,7 +23,7 @@ from reportlab.platypus import (
 )
 
 from .models import AnalyzedPaper, DailyReport
-from .math_render import display_text, pdf_paragraph
+from .math_render import display_text, html_text, pdf_paragraph
 from .utils import atomic_write_bytes, atomic_write_text
 
 
@@ -32,14 +32,16 @@ PRIORITY_RELATED = "RELATED / POSSIBLY INTERESTING"
 PRIORITY_LOW = "LOW PRIORITY"
 
 
-def _jinja_environment(template_dir: str | Path) -> Environment:
-    return Environment(
+def _jinja_environment(template_dir: str | Path, *, html: bool = False) -> Environment:
+    environment = Environment(
         loader=FileSystemLoader(str(template_dir)),
-        autoescape=select_autoescape(["html", "xml"]),
+        autoescape=True if html else select_autoescape(["html", "xml"]),
         trim_blocks=True,
         lstrip_blocks=True,
-        finalize=lambda value: display_text(value) if isinstance(value, str) else value,
+        finalize=None if html else lambda value: display_text(value) if isinstance(value, str) else value,
     )
+    environment.filters["render_text"] = html_text
+    return environment
 
 
 def split_sections(report: DailyReport) -> dict[str, list[AnalyzedPaper]]:
@@ -414,24 +416,13 @@ def render_pdf(
     )
 
 
-def render_report_files(
-    report: DailyReport,
-    config: dict[str, Any],
-    template_dir: str | Path,
-    site_dir: str | Path,
-) -> dict[str, str]:
-    site_root = Path(site_dir)
-    destination = site_root / "reports" / report.report_date
-    destination.mkdir(parents=True, exist_ok=True)
-
+def _report_context(report: DailyReport, config: dict[str, Any]) -> dict[str, Any]:
     pdf_name, markdown_name = report_filenames(report.report_date, config)
-    sections = split_sections(report)
-    counts = simple_counts(report)
-    environment = _jinja_environment(template_dir)
-    common = {
+    return {
         "report": report,
-        "sections": sections,
-        "counts": counts,
+        "sections": split_sections(report),
+        "counts": simple_counts(report),
+        "total": len(report.papers),
         "site_title": config["site"]["title"],
         "include_original_abstract": bool(
             config["report"].get("include_original_abstract_for_full_entries", True)
@@ -441,9 +432,34 @@ def render_report_files(
         "generated_label": report.generated_at.strftime("%Y-%m-%d %H:%M UTC"),
     }
 
-    html_content = environment.get_template("report.html.j2").render(**common)
+
+def render_report_html(
+    report: DailyReport,
+    config: dict[str, Any],
+    template_dir: str | Path,
+    site_dir: str | Path,
+) -> Path:
+    destination = Path(site_dir) / "reports" / report.report_date / "index.html"
+    environment = _jinja_environment(template_dir, html=True)
+    content = environment.get_template("report.html.j2").render(**_report_context(report, config))
+    atomic_write_text(destination, content)
+    return destination
+
+
+def render_report_files(
+    report: DailyReport,
+    config: dict[str, Any],
+    template_dir: str | Path,
+    site_dir: str | Path,
+) -> dict[str, str]:
+    destination = Path(site_dir) / "reports" / report.report_date
+    destination.mkdir(parents=True, exist_ok=True)
+    pdf_name, markdown_name = report_filenames(report.report_date, config)
+    environment = _jinja_environment(template_dir)
+    common = _report_context(report, config)
+
+    render_report_html(report, config, template_dir, site_dir)
     markdown_content = environment.get_template("report.md.j2").render(**common)
-    atomic_write_text(destination / "index.html", html_content)
     atomic_write_text(destination / markdown_name, markdown_content)
     atomic_write_text(
         destination / "report.json",
@@ -483,17 +499,16 @@ def render_site_index(
             {
                 "report_date": report.report_date,
                 "counts": report.counts,
-                "overview": report.overview,
+                "total": len(report.papers),
                 "pdf_filename": pdf_name,
                 "markdown_filename": markdown_name,
             }
         )
 
-    environment = _jinja_environment(template_dir)
+    environment = _jinja_environment(template_dir, html=True)
     content = environment.get_template("index.html.j2").render(
         site_title=config["site"]["title"],
         subtitle=config["site"].get("subtitle", ""),
         reports=entries,
-        latest=entries[0] if entries else None,
     )
     atomic_write_text(site_root / "index.html", content)

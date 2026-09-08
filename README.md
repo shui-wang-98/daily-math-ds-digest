@@ -2,6 +2,36 @@
 
 A personalized, English-only research digest from the official arXiv math.DS RSS feed. Codex in the desktop app reads the titles and abstracts and writes the analysis. The Python code fetches metadata, validates that analysis, and renders the reports locally.
 
+## Read reports on GitHub Pages
+
+**HTML is the primary reading format.** The permanent GitHub Pages homepage is
+generated at `site/index.html`. It lists every available report date, newest
+first, with the three priority counts and the total number of papers. Each date
+has a prominent **Open report** link to `site/reports/YYYY-MM-DD/index.html`.
+Days with no unseen papers remain in the archive as **No new papers.**
+
+Daily pages use a continuous academic reading layout, section navigation, and
+native collapsible original abstracts. They adapt to desktop, tablet, and mobile
+screens. Navigation and mathematical notation work without JavaScript, external
+fonts, or a CDN: formulas are embedded SVG images with their source notation as
+alternative text. Their vector shapes also remain sharp in browser printing.
+
+Use **Ctrl+P → Save as PDF** to print a daily page. Print CSS hides navigation,
+reveals closed original abstracts, and keeps short headings with following
+content where practical. PDF and Markdown downloads are temporarily retained
+as secondary formats; JSON archives and seen-paper state are unchanged.
+
+To apply presentation updates to historical HTML without fetching papers,
+reanalyzing them, or changing state or existing PDF/Markdown/JSON files, run:
+
+```powershell
+.\.venv\Scripts\python.exe -m src.rebuild_site
+```
+
+This uses the same HTML templates and renderer as daily finalization, reading
+the version-controlled metadata in `data/reports/`. It rebuilds the homepage,
+dated HTML pages, and shared site assets. It never deletes historical files.
+
 **No OpenAI API key, OpenAI Python SDK, OpenAI API billing, or other paid AI API is required.** The local scripts never call a model. Codex uses your existing ChatGPT sign-in and applicable account usage limits; this does not imply an unlimited or free Codex subscription.
 
 ```text
@@ -85,7 +115,12 @@ State is updated **only after** every report and index file has been generated a
 
 Identical finalization preserves timestamps and file bytes, including the PDF and state. Missing report artifacts are regenerated. New papers found later on the same date are merged into that day's report; write the overview for the combined report after reading the existing report's titles/abstracts. Pending papers already recorded for a different date are rejected as stale.
 
-The PDF retains the existing ReportLab layout and converts LaTeX to readable text; it is not a full TeX typesetter. Prefer formula-free English when it preserves the abstract's meaning. Inspect formula-rich PDFs for loss of mathematical notation before publishing. HTML supports MathJax, which loads from a public CDN when viewed; the Python tests and PDF generation are offline.
+The retained PDF uses the existing ReportLab layout and embeds typeset math as
+images, which are not included in plain-text extraction. HTML uses embedded
+vector math, with no client-side typesetter or remote script. Unknown author
+macros retain their literal names with an explicit source note. Original JSON
+metadata is never rewritten by display formatting. Inspect mathematical
+notation before publishing; HTML, PDF, and Markdown rendering remain offline.
 
 `data/pending_run.json`, `data/analysis_run.json`, `.venv/`, and `tmp/` are local and ignored. Keep `data/state.json`, `data/reports/`, and `site/` under version control. Research preferences and templates are preserved.
 

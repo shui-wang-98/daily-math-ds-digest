@@ -3,62 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personalized arXiv reports for Dynamical Systems">
+  <meta name="description" content="Personalized reports on newly announced arXiv math.DS papers">
   <title>{{ site_title }}</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to reports</a>
   <header class="site-header">
     <div class="container header-inner">
-      <span class="site-name">{{ site_title }}</span>
-      <span class="subtitle">{{ subtitle }}</span>
+      <span class="site-name">arXiv · Dynamical Systems</span>
+      <span class="subtitle">Personal research archive</span>
     </div>
   </header>
 
-  <main class="container home">
-    <section class="home-hero">
-      <p class="eyebrow">Personal research feed · arXiv math.DS</p>
-      <h1>Daily Dynamical Systems Reports</h1>
-      <p>Weekday reports classified for entropy, thermodynamic formalism, mean dimension, fractal geometry, topological and symbolic dynamics, and group actions.</p>
-    </section>
+  <main id="main" class="container home">
+    <header class="home-intro">
+      <h1>{{ site_title }}</h1>
+      <p>Daily reports on newly announced and newly cross-listed arXiv papers in math.DS, classified according to a personalized research profile.</p>
+      <p class="reading-note">Choose a date to read the full report online. PDF and Markdown downloads remain available.</p>
+    </header>
 
-    {% if latest %}
-    <section class="latest-card">
-      <p class="eyebrow">Latest report</p>
-      <h2><a href="reports/{{ latest.report_date }}/">{{ latest.report_date }}</a></h2>
-      <div class="count-row">
-        <span class="count high"><strong>{{ latest.counts['HIGH PRIORITY'] }}</strong> high</span>
-        <span class="count related"><strong>{{ latest.counts['RELATED / POSSIBLY INTERESTING'] }}</strong> related</span>
-        <span class="count low"><strong>{{ latest.counts['LOW PRIORITY'] }}</strong> low</span>
-      </div>
-      <p>{{ latest.overview }}</p>
-      <p class="paper-links">
-        <a href="reports/{{ latest.report_date }}/">Read report</a>
-        <a href="reports/{{ latest.report_date }}/{{ latest.pdf_filename }}">Download PDF</a>
-      </p>
-    </section>
-    {% else %}
-    <section class="latest-card"><p>No report has been generated yet.</p></section>
-    {% endif %}
-
-    <section class="archive">
-      <h2>Archive</h2>
+    <section class="archive" aria-labelledby="archive-heading">
+      <h2 id="archive-heading">Report archive</h2>
       {% if reports %}
-      <div class="archive-table" role="table">
+      <p class="section-note">Newest first · {{ reports | length }} report{{ '' if reports | length == 1 else 's' }}</p>
+      <ol class="archive-list">
         {% for item in reports %}
-        <div class="archive-row" role="row">
-          <a role="cell" class="archive-date" href="reports/{{ item.report_date }}/">{{ item.report_date }}</a>
-          <span role="cell">{{ item.counts['HIGH PRIORITY'] }} high · {{ item.counts['RELATED / POSSIBLY INTERESTING'] }} related · {{ item.counts['LOW PRIORITY'] }} low</span>
-          <span role="cell" class="archive-links"><a href="reports/{{ item.report_date }}/{{ item.pdf_filename }}">PDF</a> <a href="reports/{{ item.report_date }}/{{ item.markdown_filename }}">MD</a></span>
-        </div>
+        <li class="archive-row">
+          <div class="archive-heading">
+            <h3><a class="archive-date" href="reports/{{ item.report_date }}/"><time datetime="{{ item.report_date }}">{{ item.report_date }}</time></a></h3>
+            {% if loop.first %}<span class="latest-label">Latest report</span>{% endif %}
+            <a class="open-report" href="reports/{{ item.report_date }}/" aria-label="Open report for {{ item.report_date }}">Open report <span aria-hidden="true">→</span></a>
+          </div>
+          <dl class="report-counts">
+            <div><dt>HIGH PRIORITY</dt><dd>{{ item.counts.get('HIGH PRIORITY', 0) }}</dd></div>
+            <div><dt>RELATED / POSSIBLY INTERESTING</dt><dd>{{ item.counts.get('RELATED / POSSIBLY INTERESTING', 0) }}</dd></div>
+            <div><dt>LOW PRIORITY</dt><dd>{{ item.counts.get('LOW PRIORITY', 0) }}</dd></div>
+            <div><dt>TOTAL PAPERS</dt><dd>{{ item.total }}</dd></div>
+          </dl>
+          {% if item.total == 0 %}<p class="no-papers">No new papers.</p>{% endif %}
+          <p class="archive-downloads"><span>Also available:</span> <a href="reports/{{ item.report_date }}/{{ item.pdf_filename }}">PDF</a> <a href="reports/{{ item.report_date }}/{{ item.markdown_filename }}">Markdown</a></p>
+        </li>
         {% endfor %}
-      </div>
+      </ol>
       {% else %}
-      <p>No reports yet.</p>
+      <p class="empty-archive">No reports have been generated yet.</p>
       {% endif %}
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container">Generated automatically from the official arXiv math.DS RSS feed.</div></footer>
+  <footer class="site-footer"><div class="container">Source: official arXiv math.DS RSS feed. Classification reflects research relevance.</div></footer>
 </body>
 </html>

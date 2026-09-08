@@ -1,37 +1,34 @@
-<article class="paper-card {{ 'fallback' if item.analysis_status == 'fallback' else '' }}">
-  <div class="paper-heading">
-    <div>
-      <p class="paper-meta">{{ item.paper.announce_type }} · arXiv:{{ item.paper.arxiv_id }}</p>
-      <h3><a href="{{ item.paper.abstract_url }}">{{ item.paper.title }}</a></h3>
-      <p class="authors">{{ item.paper.authors | join(', ') }}</p>
-    </div>
-    <span class="confidence">{{ item.analysis.confidence }} confidence</span>
-  </div>
+<article class="paper-card {{ 'fallback' if item.analysis_status == 'fallback' else '' }}" aria-labelledby="paper-{{ item.paper.arxiv_id }}">
+  <header class="paper-heading">
+    <p class="paper-meta">arXiv:{{ item.paper.arxiv_id }} · {{ item.paper.announce_type }} <span class="confidence">· {{ item.analysis.confidence }} confidence</span></p>
+    <h3 id="paper-{{ item.paper.arxiv_id }}"><a href="{{ item.paper.abstract_url }}">{{ item.paper.title | render_text }}</a></h3>
+    <p class="authors">{{ item.paper.authors | join(', ') | render_text }}</p>
+  </header>
 
   {% if item.analysis_status == 'fallback' %}
   <p class="warning">This archived entry uses a legacy fallback classification; consult the original abstract.</p>
   {% endif %}
 
   <dl class="digest-fields">
-    <div><dt>Relevance</dt><dd>{{ item.analysis.relevance_note }}</dd></div>
-    <div><dt>TL;DR</dt><dd>{{ item.analysis.tldr }}</dd></div>
-    <div><dt>Problem</dt><dd>{{ item.analysis.problem }}</dd></div>
-    <div><dt>Main result</dt><dd>{{ item.analysis.main_result }}</dd></div>
-    <div><dt>Methods / framework</dt><dd>{% if item.analysis.methods %}{{ item.analysis.methods | join(' · ') }}{% else %}Not specified in the abstract.{% endif %}</dd></div>
-    <div><dt>Context</dt><dd>{{ item.analysis.context }}</dd></div>
-    <div><dt>Prerequisites</dt><dd>{% if item.analysis.prerequisites %}{{ item.analysis.prerequisites | join(' · ') }}{% else %}Not specified in the abstract.{% endif %}</dd></div>
-    <div><dt>Keywords</dt><dd>{% if item.analysis.keywords %}{{ item.analysis.keywords | join(' · ') }}{% else %}Not specified in the abstract.{% endif %}</dd></div>
+    <div><dt>Relevance</dt><dd>{{ item.analysis.relevance_note | render_text }}</dd></div>
+    <div><dt>TL;DR</dt><dd>{{ item.analysis.tldr | render_text }}</dd></div>
+    <div><dt>Problem</dt><dd>{{ item.analysis.problem | render_text }}</dd></div>
+    <div><dt>Main result</dt><dd>{{ item.analysis.main_result | render_text }}</dd></div>
+    <div><dt>Methods / framework</dt><dd>{{ (item.analysis.methods | join(' · ') if item.analysis.methods else 'Not specified in the abstract.') | render_text }}</dd></div>
+    <div><dt>Context</dt><dd>{{ item.analysis.context | render_text }}</dd></div>
+    <div><dt>Prerequisites</dt><dd>{{ (item.analysis.prerequisites | join(' · ') if item.analysis.prerequisites else 'Not specified in the abstract.') | render_text }}</dd></div>
+    <div><dt>Keywords</dt><dd>{{ (item.analysis.keywords | join(' · ') if item.analysis.keywords else 'Not specified in the abstract.') | render_text }}</dd></div>
   </dl>
 
-  <div class="paper-links">
-    <a href="{{ item.paper.abstract_url }}">Abstract page</a>
-    <a href="{{ item.paper.pdf_url }}">Original PDF</a>
-  </div>
+  <p class="paper-links">
+    <a href="{{ item.paper.abstract_url }}">arXiv abstract</a>
+    <a href="{{ item.paper.pdf_url }}">Original arXiv PDF</a>
+  </p>
 
   {% if include_original_abstract %}
-  <details>
+  <details class="original-abstract">
     <summary>Original abstract</summary>
-    <p class="abstract">{{ item.paper.abstract }}</p>
+    <p class="abstract">{{ item.paper.abstract | render_text }}</p>
   </details>
   {% endif %}
 </article>

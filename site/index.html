@@ -3,52 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personalized arXiv reports for Dynamical Systems">
+  <meta name="description" content="Personalized reports on newly announced arXiv math.DS papers">
   <title>Daily math.DS Digest</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to reports</a>
   <header class="site-header">
     <div class="container header-inner">
-      <span class="site-name">Daily math.DS Digest</span>
-      <span class="subtitle">Personalized arXiv reports for Dynamical Systems</span>
+      <span class="site-name">arXiv · Dynamical Systems</span>
+      <span class="subtitle">Personal research archive</span>
     </div>
   </header>
 
-  <main class="container home">
-    <section class="home-hero">
-      <p class="eyebrow">Personal research feed · arXiv math.DS</p>
-      <h1>Daily Dynamical Systems Reports</h1>
-      <p>Weekday reports classified for entropy, thermodynamic formalism, mean dimension, fractal geometry, topological and symbolic dynamics, and group actions.</p>
-    </section>
+  <main id="main" class="container home">
+    <header class="home-intro">
+      <h1>Daily math.DS Digest</h1>
+      <p>Daily reports on newly announced and newly cross-listed arXiv papers in math.DS, classified according to a personalized research profile.</p>
+      <p class="reading-note">Choose a date to read the full report online. PDF and Markdown downloads remain available.</p>
+    </header>
 
-    <section class="latest-card">
-      <p class="eyebrow">Latest report</p>
-      <h2><a href="reports/2026-09-07/">2026-09-07</a></h2>
-      <div class="count-row">
-        <span class="count high"><strong>6</strong> high</span>
-        <span class="count related"><strong>8</strong> related</span>
-        <span class="count low"><strong>4</strong> low</span>
-      </div>
-      <p>The live math.DS feed contains 18 unseen announcements: six high priority, eight related, and four low priority. The closest matches concern subshifts of finite type on groups, Hausdorff measure and dimension, self-similar measures, transfer operators, and measure and orbit equivalence. Related entries include topological classification, centralizer rigidity, complex dynamics, and geometric or operator-algebraic questions about groups. Every digest is based only on the supplied title and abstract; claims of proofs and constructions are attributed to the authors, and numerical evidence is identified separately.</p>
-      <p class="paper-links">
-        <a href="reports/2026-09-07/">Read report</a>
-        <a href="reports/2026-09-07/math-DS-digest-2026-09-07.pdf">Download PDF</a>
-      </p>
-    </section>
-
-    <section class="archive">
-      <h2>Archive</h2>
-      <div class="archive-table" role="table">
-        <div class="archive-row" role="row">
-          <a role="cell" class="archive-date" href="reports/2026-09-07/">2026-09-07</a>
-          <span role="cell">6 high · 8 related · 4 low</span>
-          <span role="cell" class="archive-links"><a href="reports/2026-09-07/math-DS-digest-2026-09-07.pdf">PDF</a> <a href="reports/2026-09-07/math-DS-digest-2026-09-07.md">MD</a></span>
-        </div>
-      </div>
+    <section class="archive" aria-labelledby="archive-heading">
+      <h2 id="archive-heading">Report archive</h2>
+      <p class="section-note">Newest first · 1 report</p>
+      <ol class="archive-list">
+        <li class="archive-row">
+          <div class="archive-heading">
+            <h3><a class="archive-date" href="reports/2026-09-07/"><time datetime="2026-09-07">2026-09-07</time></a></h3>
+<span class="latest-label">Latest report</span>            <a class="open-report" href="reports/2026-09-07/" aria-label="Open report for 2026-09-07">Open report <span aria-hidden="true">→</span></a>
+          </div>
+          <dl class="report-counts">
+            <div><dt>HIGH PRIORITY</dt><dd>6</dd></div>
+            <div><dt>RELATED / POSSIBLY INTERESTING</dt><dd>8</dd></div>
+            <div><dt>LOW PRIORITY</dt><dd>4</dd></div>
+            <div><dt>TOTAL PAPERS</dt><dd>18</dd></div>
+          </dl>
+          <p class="archive-downloads"><span>Also available:</span> <a href="reports/2026-09-07/math-DS-digest-2026-09-07.pdf">PDF</a> <a href="reports/2026-09-07/math-DS-digest-2026-09-07.md">Markdown</a></p>
+        </li>
+      </ol>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container">Generated automatically from the official arXiv math.DS RSS feed.</div></footer>
+  <footer class="site-footer"><div class="container">Source: official arXiv math.DS RSS feed. Classification reflects research relevance.</div></footer>
 </body>
 </html>

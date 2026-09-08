@@ -6,73 +6,68 @@
   <meta name="description" content="Personalized daily arXiv digest for math.DS">
   <title>{{ site_title }} - {{ report.report_date }}</title>
   <link rel="stylesheet" href="../../assets/style.css">
-  <script>
-    window.MathJax = {
-      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
-      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
-    };
-  </script>
-  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to report</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="site-name" href="../../">{{ site_title }}</a>
-      <nav><a href="{{ pdf_filename }}">Download PDF</a> <a href="{{ markdown_filename }}">Markdown</a></nav>
+      <a class="archive-home" href="../../">← All report dates</a>
+      <nav class="downloads" aria-label="Alternative report formats"><a href="{{ pdf_filename }}">Download PDF</a> <a href="{{ markdown_filename }}">Markdown</a></nav>
     </div>
   </header>
 
-  <main class="container report">
-    <section class="report-hero">
-      <p class="eyebrow">arXiv {{ report.category }} · {{ report.report_date }}</p>
+  <main id="main" class="container report">
+    <header class="report-intro">
+      <p class="eyebrow">arXiv {{ report.category }} · <time datetime="{{ report.report_date }}">{{ report.report_date }}</time></p>
       <h1>Dynamical Systems Research Digest</h1>
-      <div class="count-row" aria-label="Paper counts">
-        <span class="count high"><strong>{{ counts.high }}</strong> high priority</span>
-        <span class="count related"><strong>{{ counts.related }}</strong> related</span>
-        <span class="count low"><strong>{{ counts.low }}</strong> low priority</span>
-      </div>
-      <p class="overview">{{ report.overview }}</p>
-      <p class="scope-note">Only new and newly cross-listed papers are included. Replacement-only submissions are excluded. Mathematical claims in the digest are constrained to the title and abstract.</p>
-    </section>
+      <dl class="report-counts" aria-label="Paper counts">
+        <div><dt>HIGH PRIORITY</dt><dd>{{ counts.high }}</dd></div>
+        <div><dt>RELATED / POSSIBLY INTERESTING</dt><dd>{{ counts.related }}</dd></div>
+        <div><dt>LOW PRIORITY</dt><dd>{{ counts.low }}</dd></div>
+        <div><dt>TOTAL PAPERS</dt><dd>{{ total }}</dd></div>
+      </dl>
+      <p class="overview">{{ report.overview | render_text }}</p>
+      <p class="scope-note">Only new and newly cross-listed papers are included. Replacement-only submissions are excluded. Mathematical claims in the digest are constrained to the supplied title and abstract.</p>
+    </header>
 
-    {% if sections.high %}
-    <section class="priority-section">
-      <h2>High Priority</h2>
-      {% for item in sections.high %}
+    <nav class="section-nav" aria-label="Report sections">
+      <a href="#high-priority">High Priority</a>
+      <a href="#related">Related / Possibly Interesting</a>
+      <a href="#low-priority">Low Priority</a>
+    </nav>
+
+    {% for key, heading, anchor in [('high', 'High Priority', 'high-priority'), ('related', 'Related / Possibly Interesting', 'related')] %}
+    <section class="priority-section" aria-labelledby="{{ anchor }}">
+      <h2 id="{{ anchor }}">{{ heading }}</h2>
+      {% for item in sections[key] %}
       {% include "paper_card.html.j2" %}
+      {% else %}
+      <p class="section-note">No papers in this section.</p>
       {% endfor %}
     </section>
-    {% endif %}
+    {% endfor %}
 
-    {% if sections.related %}
-    <section class="priority-section">
-      <h2>Related / Possibly Interesting</h2>
-      {% for item in sections.related %}
-      {% include "paper_card.html.j2" %}
-      {% endfor %}
-    </section>
-    {% endif %}
-
-    <section class="priority-section low-section">
-      <h2>Low Priority / Probably Not of Interest</h2>
+    <section class="priority-section low-section" aria-labelledby="low-priority">
+      <h2 id="low-priority">Low Priority</h2>
       {% if sections.low %}
       <ol class="compact-paper-list">
         {% for item in sections.low %}
         <li>
-          <a href="{{ item.paper.abstract_url }}">{{ item.paper.title }}</a>
-          <span class="authors">{{ item.paper.authors | join(', ') }}</span>
+          <a href="{{ item.paper.abstract_url }}">{{ item.paper.title | render_text }}</a>
+          <span class="authors">{{ item.paper.authors | join(', ') | render_text }}</span>
           <span class="paper-meta">arXiv:{{ item.paper.arxiv_id }}</span>
         </li>
         {% endfor %}
       </ol>
       {% else %}
-      <p>No papers were classified as low priority.</p>
+      <p class="section-note">No papers in this section.</p>
       {% endif %}
     </section>
+    <p class="archive-return"><a class="archive-home" href="../../">← Back to all report dates</a></p>
   </main>
 
   <footer class="site-footer">
-    <div class="container">Generated {{ generated_label }} · AI summaries may contain errors; verify all mathematical statements against the original abstract and paper.</div>
+    <div class="container">Generated {{ generated_label }} · AI summaries may contain errors; verify mathematical statements against the original source.</div>
   </footer>
 </body>
 </html>
