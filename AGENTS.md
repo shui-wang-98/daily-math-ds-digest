@@ -10,9 +10,10 @@ the day a backlog happens to be processed. Mark inputs processed only after
 successful finalization, together with the existing seen-paper state.
 No model API, SDK, AI API credential, or direct email credential belongs in this pipeline.
 
-Read `author_watchlist.yaml` as well. Cloud capture supplements math.DS RSS with
-official arXiv author-search Atom metadata across all subjects for that list.
-Raw pages and the watchlist snapshot belong to the immutable inbox bundle.
+Read `author_watchlist.yaml` as well. Match its names only against authors in
+the existing math.DS RSS input, including newly cross-listed math.DS papers.
+Do not query an author API or search other categories. Freeze the watchlist and
+matches in pending so interrupted analysis can resume consistently.
 Followed-author matches in pending must receive HIGH PRIORITY, a full digest,
 and the IMPORTANT author marker; do not infer identity from initials or topics.
 Keep one report entry per arXiv ID and use the existing Issue notification.

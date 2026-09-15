@@ -186,7 +186,7 @@ def download_feed(feed_url: str, timeout_seconds: int = 45,
             timeout=timeout_seconds,
             headers={
                 "User-Agent": user_agent,
-                "Accept": "application/atom+xml, application/rss+xml, application/xml;q=0.9, */*;q=0.1",
+                "Accept": "application/rss+xml, application/xml;q=0.9, */*;q=0.1",
             },
         )
         response.raise_for_status()

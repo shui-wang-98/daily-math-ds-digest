@@ -62,8 +62,6 @@ def finalize_run(
         if (source != original or pending.report_date != source.feed_date
                 or pending.feed_build_at != source.feed_build_at or pending.category != source.category):
             raise InputNotReady("Pending run does not match its immutable inbox input")
-        if source.author_feed and pending.author_watchlist != source.author_feed.watchlist:
-            raise InputNotReady("Pending watchlist differs from the immutable author capture")
         original_by_id = {}
         for paper in feed.papers:
             original_by_id.setdefault(paper.arxiv_id, paper)

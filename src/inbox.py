@@ -11,8 +11,7 @@ import xml.etree.ElementTree as ET
 from zoneinfo import ZoneInfo
 
 from .fetch_arxiv import ArxivFeedError, FeedResult, parse_feed
-from .models import ArxivPaper, AuthorFeedInput, FeedInput
-from .author_watch import validate_author_bundle
+from .models import ArxivPaper, FeedInput
 from .utils import atomic_write_bytes, atomic_write_json, base_arxiv_id
 
 SOURCE_URL = "https://rss.arxiv.org/rss/math.DS"
@@ -94,7 +93,7 @@ def read_input(folder: Path) -> tuple[FeedInput, FeedResult]:
     try:
         source = FeedInput.model_validate_json((folder / "manifest.json").read_bytes())
         raw = (folder / "feed.xml").read_bytes()
-        if f"{folder.parent.name}/{folder.name}" != source.input_id:
+        if folder.name != source.sha256 or folder.parent.name != source.feed_date:
             raise InputNotReady("Input directory does not match its manifest")
         if len(raw) != source.byte_length or hashlib.sha256(raw).hexdigest() != source.sha256:
             raise InputNotReady("RSS byte length or SHA-256 mismatch")
@@ -103,17 +102,6 @@ def read_input(folder: Path) -> tuple[FeedInput, FeedResult]:
         if (feed_date != source.feed_date or published != source.feed_published_at
                 or feed.build_at != source.feed_build_at):
             raise InputNotReady("RSS timestamps do not match the manifest")
-        if source.author_feed:
-            if source.author_feed.fetched_at != source.fetched_at:
-                raise InputNotReady("Author and RSS capture times differ")
-            raw_pages = {page.filename: (folder / page.filename).read_bytes()
-                         for page in source.author_feed.pages}
-            author_papers = validate_author_bundle(source.author_feed, raw_pages)
-            # Prefer original RSS metadata when the same paper occurs in both.
-            by_id = {paper.arxiv_id: paper for paper in feed.papers}
-            for paper in author_papers:
-                by_id.setdefault(paper.arxiv_id, paper)
-            feed = FeedResult(feed.title, feed.build_at, list(by_id.values()))
         return source, feed
     except (OSError, ValueError) as exc:
         raise InputNotReady(f"Input not ready at {folder}: {exc}") from exc
@@ -131,21 +119,13 @@ def read_inbox(inbox_dir: Path) -> list[tuple[FeedInput, FeedResult]]:
 
 
 def persist_input(raw: bytes, *, inbox_dir: Path, fetched_at: datetime,
-                  capture_run_url: str | None = None,
-                  author_feed: AuthorFeedInput | None = None,
-                  author_pages: dict[str, bytes] | None = None) -> tuple[FeedInput, Path]:
+                  capture_run_url: str | None = None) -> tuple[FeedInput, Path]:
     """Validate before writing; promote a complete pair and never replace a capture."""
     feed, published, feed_date = validate_rss(raw, fetched_at)
-    if author_feed:
-        if author_feed.fetched_at != fetched_at:
-            raise InputNotReady("Author and RSS capture times differ")
-        validate_author_bundle(author_feed, author_pages or {})
-    elif author_pages:
-        raise InputNotReady("Author files require a validated manifest")
     source = FeedInput(source_url=SOURCE_URL, fetched_at=fetched_at,
                        feed_published_at=published, feed_build_at=feed.build_at,
                        feed_date=feed_date, sha256=hashlib.sha256(raw).hexdigest(),
-                       byte_length=len(raw), capture_run_url=capture_run_url, author_feed=author_feed)
+                       byte_length=len(raw), capture_run_url=capture_run_url)
     destination = inbox_dir / source.input_id
     if destination.exists():
         existing, _ = read_input(destination)
@@ -154,8 +134,6 @@ def persist_input(raw: bytes, *, inbox_dir: Path, fetched_at: datetime,
     with TemporaryDirectory(prefix=".capture-", dir=destination.parent) as temporary:
         staging = Path(temporary)
         atomic_write_bytes(staging / "feed.xml", raw)
-        for filename, content in (author_pages or {}).items():
-            atomic_write_bytes(staging / filename, content)
         atomic_write_json(staging / "manifest.json", source)
         staging.rename(destination)
     return source, destination

@@ -10,12 +10,12 @@
 
 ## 作者关注与栏目更新
 
-- `author_watchlist.yaml` 首批名单：Ruxi Shi、Masaki Tsukamoto；默认覆盖全部学科。
-- 云端同时查询官方 arXiv 作者元数据，从名单配置的首次提交日期起持续去重；本地仍不联网。
-- 原始 Atom 页面和名单快照随 RSS 一起保存，缺失或无效时明确停止。
+- `author_watchlist.yaml` 首批名单：Ruxi Shi、Masaki Tsukamoto；仅覆盖 math.DS，包括新交叉列入的论文。
+- 使用现有 RSS 中的作者信息在本地匹配，不查询作者 API，不增加抓取来源；本地仍不联网。
+- 名单及匹配结果保存在 pending 中；失败恢复时沿用快照，不丢失已有分析。
 - 命中作者的论文必须完整分析，置于 HIGH PRIORITY 最前并显示 IMPORTANT 标记，沿用现有 Issue 推送。
 - Subjects 直接显示 arXiv 分类；保留 Keywords，移除 Prerequisites。历史 JSON 和 PDF/Markdown 不重写。
-- 变更名单后，需要一次包含新名单的成功云端抓取；不修改每日任务或全局权限来代替。
+- 名单变更在下一次新建 pending 时生效；不回溯重分类历史报告，不修改每日任务或全局权限。
 
 ## 部署前
 

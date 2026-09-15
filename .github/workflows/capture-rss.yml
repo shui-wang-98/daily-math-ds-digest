@@ -29,14 +29,14 @@ jobs:
           python-version: '3.12'
       - name: Install capture dependencies
         run: python -m pip install 'pydantic>=2.7,<3' 'PyYAML>=6.0,<7' 'requests>=2.31,<3' tzdata
-      - name: Download and validate RSS and followed-author metadata
+      - name: Download and validate immutable input
         id: capture
         run: python -m src.capture_feed --github-output "$GITHUB_OUTPUT"
       - name: Commit only this validated capture
         env:
           INPUT_DIR: ${{ steps.capture.outputs.input_dir }}
         run: |
-          git add -- "$INPUT_DIR"
+          git add -- "$INPUT_DIR/feed.xml" "$INPUT_DIR/manifest.json"
           if git diff --cached --quiet; then
             echo 'Identical input already archived; no commit needed.'
             exit 0

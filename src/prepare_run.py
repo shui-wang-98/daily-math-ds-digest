@@ -52,21 +52,9 @@ def prepare_run(
         if not remaining:
             if not inputs or inputs[-1][0].feed_date != expected_feed_date(now):
                 raise InputNotReady(f"Input not ready: no unprocessed input; expected announcement date {expected_feed_date(now)}")
-            if (watchlist.scope == "all" and watchlist.authors and inputs[-1][0].feed_date >= watchlist.start_date
-                    and (inputs[-1][0].author_feed is None
-                         or inputs[-1][0].author_feed.watchlist != watchlist)):
-                raise InputNotReady("Input not ready: current author watchlist has not been captured in the cloud")
             raise InboxUpToDate("All available current inputs are already finalized; no files changed")
         source, feed = remaining[0]
         report_date = source.feed_date
-        if source.author_feed:
-            watchlist = source.author_feed.watchlist
-        elif watchlist.scope == "all" and watchlist.authors and report_date >= watchlist.start_date:
-            # Finish older RSS-only captures without losing backlog, but only
-            # after a complete author capture covering that period is available.
-            if not any(item.author_feed and item.author_feed.watchlist == watchlist
-                       and item.feed_date >= report_date for item, _ in inputs):
-                raise InputNotReady("Input not ready: author metadata is missing; wait for the cloud capture")
     seen = {base_arxiv_id(key) for key in state["seen"]}
     # Collapse repeated announcements of the same base ID in feed order.
     unseen = {}

@@ -4,9 +4,6 @@
     <p class="important-author">IMPORTANT · Followed author: {{ item.followed_authors | join(', ') }}</p>
     {% endif %}
     <p class="paper-meta">arXiv:{{ item.paper.arxiv_id }} · {{ item.paper.announce_type }} <span class="confidence">· {{ item.analysis.confidence }} confidence</span></p>
-    {% if item.paper.submitted_at %}
-    <p class="paper-meta">First submitted: {{ item.paper.submitted_at.strftime('%Y-%m-%d') }} · Discovered in this report's author search</p>
-    {% endif %}
     <h3 id="paper-{{ item.paper.arxiv_id }}"><a href="{{ item.paper.abstract_url }}">{{ item.paper.title | render_text }}</a></h3>
     <p class="authors">{{ item.paper.authors | join(', ') | render_text }}</p>
   </header>

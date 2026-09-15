@@ -60,15 +60,10 @@ must inspect the synced input, never assume the cloud job has finished.
    Missing announcements, including exceptional holidays, require a later
    successful capture; do not guess a holiday calendar or publish an empty day.
 
-   Bundles may also contain original `authors-*.xml` pages from the official
-   arXiv author API, a watchlist snapshot and per-page URL/size/SHA-256 values.
-   Cloud capture searches all subjects from the watchlist's UTC first-submission
-   `start_date`; it does not download papers. An `author-watch` entry has its
-   actual `submitted_at`, with no invented announcement timestamp. The report
-   date still follows its math.DS bulletin. Old unseen author results are caught
-   on later successful captures without relabeling their submission date.
-   Missing, stale, partial or damaged author metadata is input-not-ready,
-   never evidence that the followed authors have no new work.
+   Author watching uses only the existing math.DS RSS metadata. No author API,
+   extra capture file or cross-subject query is required. The same announcement
+   filters and seen-ID state apply to followed authors: replacement-only items
+   are excluded, and previously finalized papers are not reported again.
 
 ## Research classification
 
@@ -213,7 +208,7 @@ These steps apply only to an explicitly authorized daily task, not maintenance.
    generated files, use the exact existing allowed prefix:
    `git add -- data/state.json data/reports site`.
    Inspect the staged file list and diff again before committing. Do not stage
-   cloud inbox inputs locally; the capture workflow commits only its validated bundle.
+   cloud inbox inputs locally; the capture workflow commits only its own pair.
 2. Only after tests, schema validation, artifact checks, and visual/mathematical
    inspection all succeed, use exactly
    `git commit -m "Add daily math.DS digest"`, then `git push origin main` with

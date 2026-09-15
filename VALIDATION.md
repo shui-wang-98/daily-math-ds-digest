@@ -315,59 +315,58 @@ reprocess September 15 or publish a synthetic report to manufacture that test.
 
 ## Subjects and followed authors: 2026-09-15
 
-The user requested replacing Prerequisites with Subjects and following new
-papers by named authors, initially Ruxi Shi and Masaki Tsukamoto. Implementation
-is on `codex/subjects-author-watchlist`; this section does not claim that the
-new feature has been deployed or exercised by the scheduled task.
+The user requested replacing Prerequisites with Subjects and following Ruxi Shi
+and Masaki Tsukamoto. The final confirmed scope is **math.DS only**, including
+new cross-listings into math.DS. Work is on `codex/subjects-author-watchlist`;
+this section does not claim deployment or scheduled-task acceptance.
 
-- Baseline command `.venv/Scripts/python.exe -m pytest -q`: **98 passed in 13.86s**.
-- The unchanged earlier suite also passed after the initial implementation:
-  **98 passed in 17.62s**.
-- Targeted author/Git transport checks: **19 passed in 4.13s**.
-- Full updated suite: `.venv/Scripts/python.exe -m pytest -q`,
-  **116 passed in 21.36s**, exit 0. `git diff --check` passed.
-- New `author_watchlist.yaml` stores the two names, all-subject scope and the
-  UTC first-submission start date 2026-09-15. Official arXiv Atom author queries
-  run only in cloud capture, with pagination, exact normalized-name matching,
-  three-second serial page spacing, validated dates/metadata/links and immutable
-  original bytes. No model API, key, local network grant or task change is used.
-- Raw author pages and their watchlist/URL/hash metadata join the existing
-  RSS bundle. RSS-only historical IDs stay stable. Both inputs reuse the same
-  offline preparation, seen-ID deduplication, analysis schema and finalization.
-  Missing author input fails explicitly; a complete later bundle lets older
-  RSS-only backlog finish without silently dropping it.
-- Matched authors require full HIGH PRIORITY analysis, appear first with an
-  IMPORTANT marker and are listed in the existing Issue notification. This is
-  an explicit user preference, not a change to the mathematical research profile.
-- Subjects comes from original category metadata. Prerequisites is absent from
-  new schema/output and HTML. Historical JSON and unfinished legacy analysis
-  remain readable. Existing JSON, state and PDF/Markdown are not migrated.
-- Regression tests derive synthetic Atom records from the existing RSS fixture.
-  They cover invalid/empty/missing/stale/partial data, immutable hashes, complete
-  pagination, full-name versus initial/substring matching, offline HTTP/socket
-  blocking, duplicate IDs, same-day preservation, priority enforcement, retry,
-  original submission dates, HTML/JSON, notification content, archive compatibility,
-  and Git autocrlf preservation of author XML. Tests protect production bytes
-  and timestamps. No synthetic input or report belongs in production.
+- `author_watchlist.yaml` contains the two complete names and `scope: math.DS`.
+  Only that scope is accepted. Matching uses the existing RSS metadata locally,
+  normalizing Unicode, case and whitespace without guessing initials or identity
+  from topics. The pending snapshot preserves an interrupted run's preference.
+- Matched papers require full HIGH PRIORITY analysis, appear first with an
+  IMPORTANT marker, and are listed in the existing Issue notification body.
+  The same new/cross/replace-cross filtering and seen-ID deduplication apply;
+  replacement-only submissions remain excluded even for a followed author.
+- Subjects is original arXiv category metadata; Keywords remains authored.
+  Prerequisites is removed from new schema/output and HTML. Historical JSON and
+  unfinished legacy analysis remain readable without rewriting archived files.
+- The cloud capture workflow, RSS manifest/hash identity and inbox reader remain
+  identical to main. There is no author API, Atom pagination, additional input
+  source, API key, local network grant or scheduled-task change.
+- Baseline `.venv/Scripts/python.exe -m pytest -q`: **98 passed in 13.86s**.
+  Final math.DS-only suite: **108 passed in 21.21s**, exit 0; `git diff --check`
+  passed. An initial new test omitted the existing parser's required
+  `include_types` argument (1 failed, 9 passed); fixing that test call resolved
+  it before the full run. No runtime failure was hidden.
+- New regression coverage includes the exact two names, case/Unicode and
+  partial-name handling, scope rejection, only one RSS capture request,
+  HTTP/socket-blocked local preparation/finalization, new/cross/replace-cross,
+  replacement exclusion, priority enforcement before state changes, retry
+  snapshots, tampered matches, same-day empty-input preservation, HTML/JSON,
+  notification contents and legacy schema compatibility. Existing tests cover
+  backlog, duplicate IDs, corrupt/stale/missing inbox and legacy file retention.
 
-First feature CI on `ee23703`,
-[34982174463](https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/34982174463),
-ran **116 tests successfully in 11.08s**. Actual downloaded logs show RSS passed
-and the author query failed after repeated HTTP 429 responses from
-`export.arxiv.org`. No bundle, report or notification was published. This is
-real remote rate-limit evidence, not a local networking or quoting failure.
+Earlier experimental cross-subject CI runs
+[34982174463](https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/34982174463)
+and [34982884908](https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/34982884908)
+passed their tests and downloaded RSS, but the author endpoint returned HTTP
+429; downloaded logs confirmed it, including no Retry-After on the second run.
+The user then explicitly limited scope to math.DS. That endpoint and its entire
+capture/parsing path have been removed, so its availability is no longer a
+dependency. These earlier runs remain failures, not evidence of live success.
+The useful RSS retry fix remains: wait at least three seconds, respect longer
+Retry-After, and expose the final status when retries are exhausted, consistent
+with the [official shared rate limits](https://info.arxiv.org/help/api/tou.html#rate-limits).
 
-Review of the official [shared API rate limits](https://info.arxiv.org/help/api/tou.html#rate-limits)
-identified a request-spacing gap: the initial author request immediately followed
-RSS, and the inherited first HTTP retry could also have zero delay. Both now
-wait at least three seconds, including a shorter Retry-After response; longer
-server waits are preserved. Exhaustion reports the final HTTP status and
-Retry-After. This fixes the documented spacing requirement but does not establish
-that the gap was the sole cause of the runner's 429 responses. Two regressions
-cover retry waiting and the surfaced status. Full local suite after this fix:
-**118 passed in 20.04s**, exit 0; `git diff --check` passed.
+The initial isolated historical preview showed 39 Subjects, 39 Keywords,
+no Prerequisites, 26 compact LOW entries and unchanged 12/27/26 counts.
+Eleven of 39 abstract disclosures were opened before a browser batch timed out;
+the browser was recovered. This does not claim another full visual inspection
+of all historical abstracts. Updated math.DS-only preview and CI evidence will
+be appended after actual execution.
 
-Actual browser inspection of the isolated September 15 preview found 39 Subjects
-rows, 39 Keywords rows, no Prerequisites rows and 26 compact LOW entries, with
-unchanged 12/27/26 counts. Subjects/Keywords separation was visually inspected.
-Further CI and responsive author-marker evidence will follow actual execution.
+Production state, inbox, reports, site, research profile, project permissions,
+publication workflow and scheduled-task configuration remain unchanged.
+Synthetic previews and diagnostic logs are isolated under ignored `tmp/`.
+Do not merge or deploy this feature until validation and user approval.

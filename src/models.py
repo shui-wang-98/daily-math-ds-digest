@@ -1,8 +1,6 @@
 from __future__ import annotations
 
 from datetime import date, datetime
-import hashlib
-import json
 import unicodedata
 from typing import Annotated, Any, Literal
 
@@ -35,8 +33,7 @@ class ArxivPaper(BaseModel):
     abstract: str
     announce_type: str
     categories: list[str]
-    announced_at: datetime | None
-    submitted_at: datetime | None = None
+    announced_at: datetime
     abstract_url: str
     pdf_url: str
 
@@ -122,8 +119,7 @@ class AuthorWatchlist(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     schema_version: Literal[1] = 1
-    scope: Literal["all", "math.DS"] = "all"
-    start_date: ReportDate
+    scope: Literal["math.DS"] = "math.DS"
     authors: list[str] = Field(max_length=100)
 
     @field_validator("authors")
@@ -132,34 +128,12 @@ class AuthorWatchlist(BaseModel):
         normalized = []
         for name in names:
             name = " ".join(unicodedata.normalize("NFKC", name).split())
-            if len(name) < 3 or len(name) > 120 or any(char in name for char in '\\"[]():'):
-                raise ValueError("Use complete author names without query operators")
+            if len(name) < 3 or len(name) > 120:
+                raise ValueError("Use complete author names (3-120 characters)")
             if name.casefold() in {item.casefold() for item in normalized}:
                 raise ValueError("Duplicate author name in watchlist")
             normalized.append(name)
         return normalized
-
-
-class AuthorFeedPage(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-    start: int = Field(ge=0)
-    source_url: str
-    sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
-    byte_length: int = Field(gt=0)
-
-    @property
-    def filename(self) -> str:
-        return f"authors-{self.start:05d}.xml"
-
-
-class AuthorFeedInput(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-    watchlist: AuthorWatchlist
-    fetched_at: AwareDatetime
-    query_end_date: ReportDate
-    pages: list[AuthorFeedPage] = Field(min_length=1)
 
 
 class FeedInput(BaseModel):
@@ -177,17 +151,10 @@ class FeedInput(BaseModel):
     sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
     byte_length: int = Field(gt=0)
     capture_run_url: str | None = None
-    author_feed: AuthorFeedInput | None = None
 
     @property
     def input_id(self) -> str:
-        digest = self.sha256
-        if self.author_feed:
-            # Retrieval time is provenance, not content identity. Keep the old
-            # RSS-only IDs stable and identify new bundles by all original bytes.
-            content = [self.sha256, self.author_feed.model_dump(mode="json", exclude={"fetched_at"})]
-            digest = hashlib.sha256(json.dumps(content, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
-        return f"{self.feed_date}/{digest}"
+        return f"{self.feed_date}/{self.sha256}"
 
 
 class PendingRun(BaseModel):

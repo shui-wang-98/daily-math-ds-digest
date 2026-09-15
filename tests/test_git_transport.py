@@ -1,14 +1,12 @@
 """The cloud-to-Windows Git hop must preserve immutable RSS bytes."""
 import subprocess
 from pathlib import Path
-import pytest
 
 
-@pytest.mark.parametrize('filename', ['feed.xml', 'authors-00000.xml'])
-def test_raw_rss_survives_autocrlf_checkout(tmp_path, filename):
+def test_raw_rss_survives_autocrlf_checkout(tmp_path):
     root = Path(__file__).resolve().parents[1]
     (tmp_path / '.gitattributes').write_bytes((root / '.gitattributes').read_bytes())
-    path = tmp_path / 'data/inbox/2026-09-04/test' / filename
+    path = tmp_path / 'data/inbox/2026-09-04/test/feed.xml'
     path.parent.mkdir(parents=True)
     original = (root / 'tests/fixtures/math_ds.xml').read_bytes().replace(b'\r\n', b'\n')
     path.write_bytes(original)
