@@ -363,10 +363,39 @@ The initial isolated historical preview showed 39 Subjects, 39 Keywords,
 no Prerequisites, 26 compact LOW entries and unchanged 12/27/26 counts.
 Eleven of 39 abstract disclosures were opened before a browser batch timed out;
 the browser was recovered. This does not claim another full visual inspection
-of all historical abstracts. Updated math.DS-only preview and CI evidence will
-be appended after actual execution.
+of all historical abstracts.
+
+Final nonpublishing CI on runtime commit `ee0c40d`,
+[34985033414](https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/34985033414),
+is **success**: **108 tests in 6.58s**, official RSS download, HTTP-blocked
+preparation, production-data protection and artifact upload all passed.
+Downloaded logs and artifact `10403008102` (`validated-live-rss`) were inspected.
+The validated source is `https://rss.arxiv.org/rss/math.DS`, announcement/report
+date **2026-09-15**, **65 unique papers**, SHA-256
+`c2ead384a44e73215e6b26a60449e1dc3fbca5cfc22a4cfeea11a9ac47ae2441`.
+The prepared snapshot contains exactly the two requested authors with math.DS
+scope; this particular live feed has **no followed-author matches**. Positive
+matches are covered by fixtures, not claimed from today's real feed. Reading
+the downloaded bundle again locally with HTTP blocked verified its hash,
+metadata, paper IDs, announcement types and deterministic author matches.
+No report, website or Issue notification was published by CI.
+
+Final isolated demonstrations under `tmp/subjects-watch-preview/` include:
+`ds-demo` (2 followed-author HIGH, 1 RELATED), `ds-empty` (all counts zero), and
+`archive` (unchanged historical counts and existing legacy download links).
+The demo substitutes names solely for testing; each displayed digest uses its
+own fixture title/abstract, not a claim about an actual paper by those authors.
+Actual desktop and 390-by-844 browser screenshots confirm readable IMPORTANT
+markers, distinct Subjects/Keywords and no horizontal overflow. The empty page,
+homepage date links and historical report were inspected. The historical page
+has 39 Subjects and 39 Keywords, no Prerequisites and 288 successfully loaded
+math images. One original abstract was opened in this final pass and its
+formulas visually checked. Temporary viewport overrides were reset.
 
 Production state, inbox, reports, site, research profile, project permissions,
 publication workflow and scheduled-task configuration remain unchanged.
 Synthetic previews and diagnostic logs are isolated under ignored `tmp/`.
 Do not merge or deploy this feature until validation and user approval.
+The evidence-only follow-up commit uses `[skip ci]`; no runtime changes follow
+the successful `ee0c40d` validation. Deployment and an actual future followed
+paper in the daily task remain unverified until this feature is approved.
