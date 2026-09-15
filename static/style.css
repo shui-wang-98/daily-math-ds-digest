@@ -76,6 +76,7 @@ summary { cursor: pointer; font: 600 .82rem/1.6 var(--sans); padding-block: .2re
 .compact-paper-list li { padding-left: .2rem; margin-bottom: 1.5rem; }
 .compact-paper-list > li > a { font-weight: 600; }
 .compact-paper-list .paper-meta { display: block; margin-top: .25rem; }
+.important-author { font: 700 .78rem/1.6 var(--sans); color: #785017; background: #fff3da; padding: .45rem .7rem; border-left: 3px solid #bd862b; }
 .archive-return { border-top: 1px solid var(--line); padding-top: 1.5rem; margin-top: 2.7rem; font: .85rem/1.6 var(--sans); }
 .site-footer { font-family: var(--sans); font-size: .7rem; padding-block: 1.5rem 2rem; }
 .skip-link { position: absolute; left: 16px; top: -120px; background: #fff; padding: 12px; z-index: 1; }

@@ -124,7 +124,8 @@ def test_daily_native_details_full_fields_and_compact_low(tmp_path, report):
     cards = doc.find('article')
     assert len(cards) == 2
     for card, item in zip(cards, [p for p in report.papers if p.analysis.priority != 'LOW PRIORITY'], strict=True):
-        assert [dt.text() for dt in card.find('dt')] == ['Relevance', 'TL;DR', 'Problem', 'Main result', 'Methods / framework', 'Context', 'Prerequisites', 'Keywords']
+        assert [dt.text() for dt in card.find('dt')] == ['Relevance', 'TL;DR', 'Problem', 'Main result', 'Methods / framework', 'Context', 'Subjects', 'Keywords']
+        assert ' · '.join(item.paper.categories) in card.text()
         assert item.analysis.main_result in card.text()
         details = card.find('details')
         assert len(details) == 1

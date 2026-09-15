@@ -29,7 +29,8 @@ def _jinja_environment(template_dir: str | Path) -> Environment:
 
 def split_sections(report: DailyReport) -> dict[str, list[AnalyzedPaper]]:
     return {
-        "high": [p for p in report.papers if p.analysis.priority == PRIORITY_HIGH],
+        "high": sorted([p for p in report.papers if p.analysis.priority == PRIORITY_HIGH],
+                       key=lambda paper: not bool(paper.followed_authors)),
         "related": [p for p in report.papers if p.analysis.priority == PRIORITY_RELATED],
         "low": [p for p in report.papers if p.analysis.priority == PRIORITY_LOW],
     }

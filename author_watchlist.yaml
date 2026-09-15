@@ -1,0 +1,9 @@
+# Use complete arXiv author names. Matching ignores case and repeated spaces,
+# but does not guess initials, aliases or identities from the subject area.
+# Add other published spellings as separate names if needed.
+schema_version: 1
+scope: all
+start_date: "2026-09-15"
+authors:
+  - Ruxi Shi
+  - Masaki Tsukamoto

@@ -6,6 +6,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from .config import load_config
+from .author_watch import load_watchlist, matched_authors
 from .fetch_arxiv import fetch_feed
 from .inbox import INCLUDE_TYPES, InboxUpToDate, InputNotReady, expected_feed_date, read_inbox
 from .models import PendingRun
@@ -20,12 +21,14 @@ def prepare_run(
     local_feed: str | Path | None = None,
     report_date: str | None = None,
     inbox_dir: str | Path | None = None,
+    watchlist_path: str | Path = ROOT / "author_watchlist.yaml",
 ) -> PendingRun:
     config = load_config(config_path)
     data_dir = Path(data_dir)
     state = read_json(data_dir / "state.json", {"seen": {}})
     now = utc_now()
     source = None
+    watchlist = load_watchlist(watchlist_path)
     if local_feed is not None:
         if data_dir.resolve() == (ROOT / "data").resolve():
             raise ValueError("--local-feed requires an isolated --data-dir; never use fixtures in production")
@@ -49,9 +52,21 @@ def prepare_run(
         if not remaining:
             if not inputs or inputs[-1][0].feed_date != expected_feed_date(now):
                 raise InputNotReady(f"Input not ready: no unprocessed input; expected announcement date {expected_feed_date(now)}")
+            if (watchlist.scope == "all" and watchlist.authors and inputs[-1][0].feed_date >= watchlist.start_date
+                    and (inputs[-1][0].author_feed is None
+                         or inputs[-1][0].author_feed.watchlist != watchlist)):
+                raise InputNotReady("Input not ready: current author watchlist has not been captured in the cloud")
             raise InboxUpToDate("All available current inputs are already finalized; no files changed")
         source, feed = remaining[0]
         report_date = source.feed_date
+        if source.author_feed:
+            watchlist = source.author_feed.watchlist
+        elif watchlist.scope == "all" and watchlist.authors and report_date >= watchlist.start_date:
+            # Finish older RSS-only captures without losing backlog, but only
+            # after a complete author capture covering that period is available.
+            if not any(item.author_feed and item.author_feed.watchlist == watchlist
+                       and item.feed_date >= report_date for item, _ in inputs):
+                raise InputNotReady("Input not ready: author metadata is missing; wait for the cloud capture")
     seen = {base_arxiv_id(key) for key in state["seen"]}
     # Collapse repeated announcements of the same base ID in feed order.
     unseen = {}
@@ -64,6 +79,9 @@ def prepare_run(
         category=config["project"]["category"],
         research_profile=config["research_profile"], papers=list(unseen.values()),
         source_input=source,
+        author_watchlist=watchlist,
+        followed_authors={paper.arxiv_id: names for paper in unseen.values()
+                          if (names := matched_authors(paper, watchlist))},
     )
     atomic_write_json(data_dir / "pending_run.json", pending)
     return pending
@@ -76,10 +94,12 @@ def main() -> int:
     parser.add_argument("--local-feed", help="Offline RSS XML fixture")
     parser.add_argument("--report-date", help="Fixture date only; inbox reports use the RSS announcement date")
     parser.add_argument("--inbox-dir", help="Synced inbox path (default: DATA_DIR/inbox)")
+    parser.add_argument("--watchlist", default=str(ROOT / "author_watchlist.yaml"))
     args = parser.parse_args()
     try:
         pending = prepare_run(config_path=args.config, data_dir=args.data_dir, inbox_dir=args.inbox_dir,
-                              local_feed=args.local_feed, report_date=args.report_date)
+                              local_feed=args.local_feed, report_date=args.report_date,
+                              watchlist_path=args.watchlist)
     except InputNotReady as exc:
         print(f"INPUT NOT READY: {exc}")
         return 2

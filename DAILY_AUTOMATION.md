@@ -14,7 +14,7 @@ must inspect the synced input, never assume the cloud job has finished.
 1. Work only inside this repository. Use the configured local Python environment.
    Do not use a model API, AI SDK, AI API credential, paid AI API, direct email
    service, or a full-paper fetch. You, Codex in the desktop task, do the analysis.
-2. Read `AGENTS.md`, `config.yaml`, `src/models.py`,
+2. Read `AGENTS.md`, `config.yaml`, `author_watchlist.yaml`, `src/models.py`,
    `schemas/analysis_run.schema.json`, and both files in `prompts/`.
    The research profile in `config.yaml` is authoritative; the prompt files
    supplement these instructions and do not authorize API calls.
@@ -60,10 +60,28 @@ must inspect the synced input, never assume the cloud job has finished.
    Missing announcements, including exceptional holidays, require a later
    successful capture; do not guess a holiday calendar or publish an empty day.
 
+   Bundles may also contain original `authors-*.xml` pages from the official
+   arXiv author API, a watchlist snapshot and per-page URL/size/SHA-256 values.
+   Cloud capture searches all subjects from the watchlist's UTC first-submission
+   `start_date`; it does not download papers. An `author-watch` entry has its
+   actual `submitted_at`, with no invented announcement timestamp. The report
+   date still follows its math.DS bulletin. Old unseen author results are caught
+   on later successful captures without relabeling their submission date.
+   Missing, stale, partial or damaged author metadata is input-not-ready,
+   never evidence that the followed authors have no new work.
+
 ## Research classification
 
 Classify **every** pending paper from its supplied title and abstract only.
 Use the full existing profile in `config.yaml` and its snapshot in pending.
+
+The explicit author-watch preference takes precedence over topic relevance:
+every ID in pending `followed_authors` must be HIGH PRIORITY with a full digest.
+Mention the matched author in its relevance note. The renderer puts these
+papers first in High Priority and marks them IMPORTANT. Keep the existing three
+priority classes, with each ID appearing once; do not invent a fourth priority.
+The name match is identification metadata, never evidence for a theorem or quality
+judgment. Use the pending watchlist snapshot for retry consistency.
 
 - **HIGH PRIORITY**: a strongest interest is central: entropy theory;
   thermodynamic formalism; topological pressure; variational principles;
@@ -129,14 +147,18 @@ followed by atomic replacement. Match the Pydantic `AnalysisRun` model exactly:
 - Top level: `report_date`, `overview`, `papers`.
 - Exactly one entry for each pending arXiv ID, no duplicate or extra IDs.
 - Every paper entry: `arxiv_id`, `priority`, `confidence`, `relevance_note`,
-  `tldr`, `problem`, `main_result`, `methods`, `context`, `prerequisites`, `keywords`.
-- The three list fields are arrays of strings. All other entry fields are strings.
+  `tldr`, `problem`, `main_result`, `methods`, `context`, `keywords`.
+- The two list fields, methods and keywords, are arrays of strings. All other entry fields are strings.
   Do not add title, authors, abstract, or metadata to analysis entries: the
   finalizer obtains those from pending.
+- Do not write Prerequisites. Subjects is the original `paper.categories`
+  metadata displayed in full entries; it is not an AI-inferred field. Continue
+  writing concise, supported Keywords. Legacy analysis can be resumed without
+  retaining its retired Prerequisites field in new output.
 - For HIGH PRIORITY and RELATED, fill every digest field with supported content
   or the prescribed missing-information phrase. Do not leave required prose empty.
 - For LOW PRIORITY, supply a short relevance note, empty `tldr`, `problem`,
-  `main_result`, and `context` strings, and empty methods/prerequisites/keywords
+  `main_result`, and `context` strings, and empty methods/keywords
   lists. Rendering will show only title, authors, and arXiv identifier.
 - Write an English overview with the total and priority counts, and only themes
   supported by the supplied titles/abstracts. If a report already exists for the
@@ -191,7 +213,7 @@ These steps apply only to an explicitly authorized daily task, not maintenance.
    generated files, use the exact existing allowed prefix:
    `git add -- data/state.json data/reports site`.
    Inspect the staged file list and diff again before committing. Do not stage
-   cloud inbox inputs locally; the capture workflow commits only its own pair.
+   cloud inbox inputs locally; the capture workflow commits only its validated bundle.
 2. Only after tests, schema validation, artifact checks, and visual/mathematical
    inspection all succeed, use exactly
    `git commit -m "Add daily math.DS digest"`, then `git push origin main` with

@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 from datetime import date, datetime
+import hashlib
+import json
+import unicodedata
 from typing import Annotated, Any, Literal
 
 from pydantic import AfterValidator, AwareDatetime, BaseModel, ConfigDict, Field, field_validator, model_validator
@@ -32,7 +35,8 @@ class ArxivPaper(BaseModel):
     abstract: str
     announce_type: str
     categories: list[str]
-    announced_at: datetime
+    announced_at: datetime | None
+    submitted_at: datetime | None = None
     abstract_url: str
     pdf_url: str
 
@@ -55,7 +59,6 @@ class PaperAnalysis(BaseModel):
     main_result: str
     methods: list[str]
     context: str
-    prerequisites: list[str]
     keywords: list[str]
 
     @field_validator(
@@ -91,6 +94,15 @@ class AnalysisRun(BaseModel):
     overview: str = Field(min_length=1)
     papers: list[PaperAnalysisInput]
 
+    @field_validator("papers", mode="before")
+    @classmethod
+    def resume_legacy_analysis(cls, value):
+        # Permit recovery of an analysis prepared before the field was retired.
+        if isinstance(value, list):
+            return [{k: v for k, v in item.items() if k != "prerequisites"}
+                    if isinstance(item, dict) else item for item in value]
+        return value
+
     @field_validator("overview")
     @classmethod
     def check_overview(cls, value: str) -> str:
@@ -104,6 +116,50 @@ class AnalysisRun(BaseModel):
         if len(ids) != len(set(ids)):
             raise ValueError("Duplicate arXiv IDs in analysis")
         return self
+
+
+class AuthorWatchlist(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    schema_version: Literal[1] = 1
+    scope: Literal["all", "math.DS"] = "all"
+    start_date: ReportDate
+    authors: list[str] = Field(max_length=100)
+
+    @field_validator("authors")
+    @classmethod
+    def validate_names(cls, names):
+        normalized = []
+        for name in names:
+            name = " ".join(unicodedata.normalize("NFKC", name).split())
+            if len(name) < 3 or len(name) > 120 or any(char in name for char in '\\"[]():'):
+                raise ValueError("Use complete author names without query operators")
+            if name.casefold() in {item.casefold() for item in normalized}:
+                raise ValueError("Duplicate author name in watchlist")
+            normalized.append(name)
+        return normalized
+
+
+class AuthorFeedPage(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    start: int = Field(ge=0)
+    source_url: str
+    sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
+    byte_length: int = Field(gt=0)
+
+    @property
+    def filename(self) -> str:
+        return f"authors-{self.start:05d}.xml"
+
+
+class AuthorFeedInput(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    watchlist: AuthorWatchlist
+    fetched_at: AwareDatetime
+    query_end_date: ReportDate
+    pages: list[AuthorFeedPage] = Field(min_length=1)
 
 
 class FeedInput(BaseModel):
@@ -121,10 +177,17 @@ class FeedInput(BaseModel):
     sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
     byte_length: int = Field(gt=0)
     capture_run_url: str | None = None
+    author_feed: AuthorFeedInput | None = None
 
     @property
     def input_id(self) -> str:
-        return f"{self.feed_date}/{self.sha256}"
+        digest = self.sha256
+        if self.author_feed:
+            # Retrieval time is provenance, not content identity. Keep the old
+            # RSS-only IDs stable and identify new bundles by all original bytes.
+            content = [self.sha256, self.author_feed.model_dump(mode="json", exclude={"fetched_at"})]
+            digest = hashlib.sha256(json.dumps(content, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+        return f"{self.feed_date}/{digest}"
 
 
 class PendingRun(BaseModel):
@@ -138,6 +201,8 @@ class PendingRun(BaseModel):
     research_profile: dict[str, Any]
     papers: list[ArxivPaper]
     source_input: FeedInput | None = None
+    followed_authors: dict[str, list[str]] = Field(default_factory=dict)
+    author_watchlist: AuthorWatchlist | None = None
 
     @model_validator(mode="after")
     def unique_papers(self) -> PendingRun:
@@ -154,6 +219,16 @@ class AnalyzedPaper(BaseModel):
     analysis: PaperAnalysis
     analysis_status: Literal["ok", "fallback"] = "ok"
     analysis_error: str | None = None
+    followed_authors: list[str] = Field(default_factory=list)
+
+    @field_validator("analysis", mode="before")
+    @classmethod
+    def read_legacy_prerequisites(cls, value):
+        # Archived JSON remains intact; the retired field is never rendered or
+        # requested in new analysis. Other unexpected fields still fail validation.
+        if isinstance(value, dict):
+            value = {key: item for key, item in value.items() if key != "prerequisites"}
+        return value
 
 
 class DailyReport(BaseModel):

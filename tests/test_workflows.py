@@ -12,7 +12,8 @@ def workflow(name):
 
 def test_inbox_only_push_does_not_trigger_report_publication_or_notification():
     publish = workflow('daily.yml')
-    paths = ['data/inbox/2026-09-04/abcd/feed.xml', 'data/inbox/2026-09-04/abcd/manifest.json']
+    paths = ['data/inbox/2026-09-04/abcd/feed.xml', 'data/inbox/2026-09-04/abcd/manifest.json',
+             'data/inbox/2026-09-04/abcd/authors-00000.xml']
     assert publish['on']['push']['branches'] == ['main']
     assert not any(fnmatchcase(path, pattern) for path in paths for pattern in publish['on']['push']['paths'])
     assert publish['jobs']['deploy-notify']['if'] == "github.ref == 'refs/heads/main'"
@@ -26,7 +27,7 @@ def test_capture_schedule_scope_and_generated_file_staging():
     assert capture['if'] == "github.ref == 'refs/heads/main'"
     assert capture['permissions'] == {'contents': 'write'}
     commands = '\n'.join(step.get('run', '') for step in capture['steps'])
-    assert 'git add -- "$INPUT_DIR/feed.xml" "$INPUT_DIR/manifest.json"' in commands
+    assert 'git add -- "$INPUT_DIR"' in commands
     for prohibited in ['src.finalize_run', 'src.notify', 'data/state.json', 'git add .', 'git add -A', '--force']:
         assert prohibited not in commands
 

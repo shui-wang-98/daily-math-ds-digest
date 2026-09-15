@@ -8,6 +8,15 @@
 不使用模型 API、AI SDK、付费 AI 服务或新密钥，不生成新的 PDF/Markdown，
 不改写历史下载文件。详细实现与日期语义见 [README.md](README.md)。
 
+## 作者关注与栏目更新
+
+- `author_watchlist.yaml` 首批名单：Ruxi Shi、Masaki Tsukamoto；默认覆盖全部学科。
+- 云端同时查询官方 arXiv 作者元数据，从名单配置的首次提交日期起持续去重；本地仍不联网。
+- 原始 Atom 页面和名单快照随 RSS 一起保存，缺失或无效时明确停止。
+- 命中作者的论文必须完整分析，置于 HIGH PRIORITY 最前并显示 IMPORTANT 标记，沿用现有 Issue 推送。
+- Subjects 直接显示 arXiv 分类；保留 Keywords，移除 Prerequisites。历史 JSON 和 PDF/Markdown 不重写。
+- 变更名单后，需要一次包含新名单的成功云端抓取；不修改每日任务或全局权限来代替。
+
 ## 部署前
 
 - [ ] 阅读 AGENTS.md、DAILY_AUTOMATION.md 和 VALIDATION.md 的真实验证记录。

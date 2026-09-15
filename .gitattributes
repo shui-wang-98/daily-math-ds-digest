@@ -1,2 +1,3 @@
 # Raw RSS must retain the exact downloaded bytes used by its manifest SHA-256.
 data/inbox/**/feed.xml -text
+data/inbox/**/authors-*.xml -text

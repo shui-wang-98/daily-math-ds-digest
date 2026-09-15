@@ -22,7 +22,7 @@ running; see the [official task documentation](https://learn.chatgpt.com/docs/au
 
 ## Cloud capture
 
-[capture-rss.yml](.github/workflows/capture-rss.yml) downloads only
+[capture-rss.yml](.github/workflows/capture-rss.yml) downloads
 `https://rss.arxiv.org/rss/math.DS`. It validates RSS structure, math.DS category,
 timestamps, announcement types, metadata, URL/ID correspondence and freshness
 before saving anything. Raw XML response bytes are preserved without reserialization;
@@ -35,7 +35,11 @@ data/inbox/ANNOUNCEMENT-DATE/SHA256/manifest.json
 
 The manifest includes source URL, fetch time, feed publication/build timestamps,
 announcement date, byte count, SHA-256, and the capture CI URL when available.
-Only a complete pair is promoted. Existing captures, including processed inputs,
+With author watching enabled, `authors-*.xml` pages and their provenance are
+part of the same bundle. The directory hash covers RSS and author content;
+the manifest retains each original file's own SHA-256. Historical RSS-only
+directory IDs remain unchanged. Only a complete validated bundle is promoted.
+Existing captures, including processed inputs,
 are never overwritten; identical bytes create no additional commit.
 
 Freshness means the announcement date equals the capture day's latest weekday
@@ -49,9 +53,45 @@ GitHub officially supports an IANA `timezone` beside `cron`, follows daylight
 saving, can delay scheduled jobs, and uses the default branch:
 [official schedule documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
 The capture job uses only built-in GITHUB_TOKEN with `contents: write`, stages
-only its XML/manifest pair, and does not analyze, change state, deploy or notify.
+only its validated input directory, and does not analyze, change state, deploy or notify.
 Concurrent main updates can reject its ordinary push; retry the failed job,
 never force-push or add a new secret.
+
+## Followed authors and Subjects
+
+Edit [author_watchlist.yaml](author_watchlist.yaml) to maintain the name list.
+It initially contains **Ruxi Shi** and **Masaki Tsukamoto**, with `scope: all`
+and first-submission start date **2026-09-15 UTC**. The cloud job queries the
+official `https://export.arxiv.org/api/query` endpoint across all subjects,
+preserves original Atom pages, validates freshness and complete pagination,
+and spaces serial page requests by three seconds. This is public arXiv metadata,
+not a model API; no API key or local network permission is added.
+See the [official API manual](https://info.arxiv.org/help/api/user-manual.html).
+
+The query keeps covering the configured date range, so a delayed capture does
+not skip unseen papers. Existing seen-ID state prevents another notification
+for a revision or a paper present in both RSS and author results. Newly discovered
+author entries display their first-submission date; their report date follows
+the current math.DS bulletin, not an invented author announcement date. A valid
+empty author result is accepted; failed/stale/partial input stops the pipeline.
+
+Matching uses complete author names after Unicode, case and whitespace
+normalization. It does not infer initials, spelling variants or identity from
+research topics. Add other confirmed arXiv spellings explicitly; identical
+names alone cannot distinguish different people. The frozen watchlist in each
+capture/pending run keeps retries stable.
+
+Matched papers require a full **HIGH PRIORITY** digest, appear first in that
+section with **IMPORTANT · Followed author**, and are listed prominently in the
+existing Issue notification. There are still three priority classes and one
+entry per paper. `scope: math.DS` disables cross-subject API capture if desired.
+The list affects new preparation; it does not reclassify historical archives.
+
+Full paper cards display **Subjects** from the original arXiv category codes
+and retain **Keywords**. **Prerequisites** is retired from new analysis and
+presentation. Historical JSON with that field remains readable; HTML-only
+rebuilding can apply the presentation change without rewriting state, JSON or
+legacy PDF/Markdown. LOW entries keep their compact title/authors/ID layout.
 
 ## Local preparation and analysis
 

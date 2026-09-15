@@ -1,6 +1,12 @@
 <article class="paper-card {{ 'fallback' if item.analysis_status == 'fallback' else '' }}" aria-labelledby="paper-{{ item.paper.arxiv_id }}">
   <header class="paper-heading">
+    {% if item.followed_authors %}
+    <p class="important-author">IMPORTANT · Followed author: {{ item.followed_authors | join(', ') }}</p>
+    {% endif %}
     <p class="paper-meta">arXiv:{{ item.paper.arxiv_id }} · {{ item.paper.announce_type }} <span class="confidence">· {{ item.analysis.confidence }} confidence</span></p>
+    {% if item.paper.submitted_at %}
+    <p class="paper-meta">First submitted: {{ item.paper.submitted_at.strftime('%Y-%m-%d') }} · Discovered in this report's author search</p>
+    {% endif %}
     <h3 id="paper-{{ item.paper.arxiv_id }}"><a href="{{ item.paper.abstract_url }}">{{ item.paper.title | render_text }}</a></h3>
     <p class="authors">{{ item.paper.authors | join(', ') | render_text }}</p>
   </header>
@@ -16,7 +22,7 @@
     <div><dt>Main result</dt><dd>{{ item.analysis.main_result | render_text }}</dd></div>
     <div><dt>Methods / framework</dt><dd>{{ (item.analysis.methods | join(' · ') if item.analysis.methods else 'Not specified in the abstract.') | render_text }}</dd></div>
     <div><dt>Context</dt><dd>{{ item.analysis.context | render_text }}</dd></div>
-    <div><dt>Prerequisites</dt><dd>{{ (item.analysis.prerequisites | join(' · ') if item.analysis.prerequisites else 'Not specified in the abstract.') | render_text }}</dd></div>
+    <div><dt>Subjects</dt><dd>{{ item.paper.categories | join(' · ') }}</dd></div>
     <div><dt>Keywords</dt><dd>{{ (item.analysis.keywords | join(' · ') if item.analysis.keywords else 'Not specified in the abstract.') | render_text }}</dd></div>
   </dl>
 

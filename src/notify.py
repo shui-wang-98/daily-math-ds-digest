@@ -66,6 +66,14 @@ def _pages(endpoint: str, token: str, **params: Any) -> Iterator[dict[str, Any]]
 def notification_body(report: DailyReport, page_url: str) -> str:
     archive_url = ensure_relative_url_base(page_url)
     report_url = urljoin(archive_url, f"reports/{report.report_date}/")
+    important = [item for item in report.papers if item.followed_authors]
+    followed_lines = []
+    if important:
+        followed_lines = ["**IMPORTANT — followed authors**", ""] + [
+            f"- {', '.join(item.followed_authors)}: {item.paper.title} "
+            f"([arXiv:{item.paper.arxiv_id}]({item.paper.abstract_url}))"
+            for item in important
+        ] + [""]
     return "\n".join([
         f"<!-- math-ds-digest:{report.report_date} -->",
         f"## math.DS digest - {report.report_date}", "",
@@ -73,6 +81,7 @@ def notification_body(report: DailyReport, page_url: str) -> str:
         f"**{report.counts.get('RELATED / POSSIBLY INTERESTING', 0)} related** · "
         f"**{report.counts.get('LOW PRIORITY', 0)} low priority**", "",
         report.overview, "",
+        *followed_lines,
         f"[Read the HTML report]({report_url}) · [Browse all report dates]({archive_url})",
     ])
 

@@ -48,13 +48,6 @@
           "title": "Context",
           "type": "string"
         },
-        "prerequisites": {
-          "items": {
-            "type": "string"
-          },
-          "title": "Prerequisites",
-          "type": "array"
-        },
         "keywords": {
           "items": {
             "type": "string"
@@ -76,7 +69,6 @@
         "main_result",
         "methods",
         "context",
-        "prerequisites",
         "keywords",
         "arxiv_id"
       ],

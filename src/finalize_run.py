@@ -7,6 +7,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 from .config import load_config
+from .author_watch import matched_authors
 from .inbox import InputNotReady, read_input, validate_paper_links
 from .models import AnalysisRun, AnalyzedPaper, DailyReport, PaperAnalysis, PendingRun
 from .prepare_run import ROOT
@@ -24,6 +25,13 @@ def validate_analysis(pending: PendingRun, analysis: AnalysisRun) -> None:
     if expected != actual:
         raise ValueError(f"Paper IDs do not match: missing={sorted(expected - actual)}, "
                          f"unexpected={sorted(actual - expected)}")
+    followed = {paper.arxiv_id: names for paper in pending.papers
+                if pending.author_watchlist and (names := matched_authors(paper, pending.author_watchlist))}
+    if followed != pending.followed_authors:
+        raise ValueError("Pending followed-author matches differ from the supplied author names")
+    for entry in analysis.papers:
+        if entry.arxiv_id in followed and entry.priority != "HIGH PRIORITY":
+            raise ValueError("Followed-author papers require HIGH PRIORITY and a complete digest")
 
 
 def finalize_run(
@@ -54,6 +62,8 @@ def finalize_run(
         if (source != original or pending.report_date != source.feed_date
                 or pending.feed_build_at != source.feed_build_at or pending.category != source.category):
             raise InputNotReady("Pending run does not match its immutable inbox input")
+        if source.author_feed and pending.author_watchlist != source.author_feed.watchlist:
+            raise InputNotReady("Pending watchlist differs from the immutable author capture")
         original_by_id = {}
         for paper in feed.papers:
             original_by_id.setdefault(paper.arxiv_id, paper)
@@ -75,6 +85,7 @@ def finalize_run(
         combined[paper.arxiv_id] = AnalyzedPaper(
             paper=paper,
             analysis=PaperAnalysis.model_validate(by_id[paper.arxiv_id].model_dump(exclude={"arxiv_id"})),
+            followed_authors=pending.followed_authors.get(paper.arxiv_id, []),
         )
     papers = list(combined.values())
     sources = list(existing.source_inputs) if existing else []

@@ -312,3 +312,42 @@ inside a subsequent task invocation, unattended new-input analysis and Git
 add/commit/push, and weekday 12:00 scheduling punctuality. A real future input
 is required for the remaining publication acceptance; do not reset state,
 reprocess September 15 or publish a synthetic report to manufacture that test.
+
+## Subjects and followed authors: 2026-09-15
+
+The user requested replacing Prerequisites with Subjects and following new
+papers by named authors, initially Ruxi Shi and Masaki Tsukamoto. Implementation
+is on `codex/subjects-author-watchlist`; this section does not claim that the
+new feature has been deployed or exercised by the scheduled task.
+
+- Baseline command `.venv/Scripts/python.exe -m pytest -q`: **98 passed in 13.86s**.
+- The unchanged earlier suite also passed after the initial implementation:
+  **98 passed in 17.62s**.
+- Targeted author/Git transport checks: **19 passed in 4.13s**.
+- Full updated suite: `.venv/Scripts/python.exe -m pytest -q`,
+  **116 passed in 21.36s**, exit 0. `git diff --check` passed.
+- New `author_watchlist.yaml` stores the two names, all-subject scope and the
+  UTC first-submission start date 2026-09-15. Official arXiv Atom author queries
+  run only in cloud capture, with pagination, exact normalized-name matching,
+  three-second serial page spacing, validated dates/metadata/links and immutable
+  original bytes. No model API, key, local network grant or task change is used.
+- Raw author pages and their watchlist/URL/hash metadata join the existing
+  RSS bundle. RSS-only historical IDs stay stable. Both inputs reuse the same
+  offline preparation, seen-ID deduplication, analysis schema and finalization.
+  Missing author input fails explicitly; a complete later bundle lets older
+  RSS-only backlog finish without silently dropping it.
+- Matched authors require full HIGH PRIORITY analysis, appear first with an
+  IMPORTANT marker and are listed in the existing Issue notification. This is
+  an explicit user preference, not a change to the mathematical research profile.
+- Subjects comes from original category metadata. Prerequisites is absent from
+  new schema/output and HTML. Historical JSON and unfinished legacy analysis
+  remain readable. Existing JSON, state and PDF/Markdown are not migrated.
+- Regression tests derive synthetic Atom records from the existing RSS fixture.
+  They cover invalid/empty/missing/stale/partial data, immutable hashes, complete
+  pagination, full-name versus initial/substring matching, offline HTTP/socket
+  blocking, duplicate IDs, same-day preservation, priority enforcement, retry,
+  original submission dates, HTML/JSON, notification content, archive compatibility,
+  and Git autocrlf preservation of author XML. Tests protect production bytes
+  and timestamps. No synthetic input or report belongs in production.
+
+Cloud CI and browser evidence will be recorded after actual execution.

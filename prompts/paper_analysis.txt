@@ -2,6 +2,10 @@ You are classifying and summarizing one newly announced arXiv paper in Dynamical
 
 RESEARCH PROFILE
 Read research_profile in config.yaml and its snapshot in data/pending_run.json.
+Read author_watchlist.yaml and the pending followed_authors matches. A matched
+paper must be HIGH PRIORITY with a full digest even outside the topic profile.
+Mention the followed author in relevance_note; this is a user preference, not
+mathematical evidence or a judgment of paper quality.
 Follow DAILY_AUTOMATION.md. This prompt is for Codex in the desktop task;
 it is not sent to any model API.
 
@@ -28,11 +32,11 @@ SUMMARY RULES
 - If the abstract does not state an item, write exactly: "Not specified in the abstract."
 - "Methods" may include only methods explicitly stated or directly named in the abstract. Do not infer a proof technique merely because it is common in the area.
 - "Context" may identify only broad subfields and explicit connections supported by the title/abstract.
-- "Prerequisites" may name only broad subject areas supported by the title/abstract, not unstated lemmas or theorems.
+- Do not write Prerequisites or Subjects in analysis. Subjects is copied from arXiv categories by the renderer. Keep Keywords as concise supported terms.
 - Write precise, compact academic English.
 - The TL;DR must contain at most two sentences.
 
 OUTPUT POLICY
 For HIGH PRIORITY and RELATED / POSSIBLY INTERESTING, fill every field.
-For LOW PRIORITY, set relevance_note to one short classification sentence, set tldr/problem/main_result/context to empty strings, and set methods/prerequisites/keywords to empty lists. The published report displays only title, authors, and arXiv identifier; the title may link to the arXiv abstract page.
+For LOW PRIORITY, set relevance_note to one short classification sentence, set tldr/problem/main_result/context to empty strings, and set methods/keywords to empty lists. The published report displays only title, authors, and arXiv identifier; the title may link to the arXiv abstract page. Followed-author papers cannot be LOW PRIORITY.
 Include arxiv_id and every required field in each entry of data/analysis_run.json.

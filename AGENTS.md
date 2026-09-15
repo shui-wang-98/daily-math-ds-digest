@@ -10,6 +10,16 @@ the day a backlog happens to be processed. Mark inputs processed only after
 successful finalization, together with the existing seen-paper state.
 No model API, SDK, AI API credential, or direct email credential belongs in this pipeline.
 
+Read `author_watchlist.yaml` as well. Cloud capture supplements math.DS RSS with
+official arXiv author-search Atom metadata across all subjects for that list.
+Raw pages and the watchlist snapshot belong to the immutable inbox bundle.
+Followed-author matches in pending must receive HIGH PRIORITY, a full digest,
+and the IMPORTANT author marker; do not infer identity from initials or topics.
+Keep one report entry per arXiv ID and use the existing Issue notification.
+Subjects comes directly from paper categories; Keywords remains authored analysis.
+Do not request or render Prerequisites. Historical JSON with that field remains
+readable and must not be rewritten merely to remove it.
+
 For a daily digest run, read and follow [DAILY_AUTOMATION.md](DAILY_AUTOMATION.md)
 and the research profile in `config.yaml` before analyzing anything. Preserve the
 existing English report templates. Use `tests/fixtures/math_ds.xml` for all tests.
