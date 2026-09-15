@@ -103,6 +103,7 @@ def test_invalid_or_incomplete_author_input_never_persists(tmp_path, raw):
 
 
 def test_capture_validates_all_sources_before_persisting_and_keeps_original_bytes(tmp_path, monkeypatch):
+    monkeypatch.setattr(watch.time, 'sleep', lambda seconds: None)
     monkeypatch.setattr(capture, 'utc_now', lambda: NOW)
     monkeypatch.setattr(capture, 'download_feed', lambda *args: RAW)
     path = config_file(tmp_path)
@@ -134,7 +135,7 @@ def test_pagination_is_serial_complete_and_hash_checked(monkeypatch):
     monkeypatch.setattr(watch, 'download_feed', download)
     monkeypatch.setattr(watch.time, 'sleep', waits.append)
     source, files = watch.download_author_feeds(WATCH, fetched_at=NOW, timeout=45, user_agent='test')
-    assert waits == [3] and len(calls) == 2
+    assert waits == [3, 3] and len(calls) == 2
     assert [p.arxiv_id for p in watch.validate_author_bundle(source, files)] == ['2609.00001', '2609.00002']
     files['authors-00001.xml'] += b' '
     with pytest.raises(ValueError, match='SHA-256'):
@@ -237,3 +238,26 @@ def test_empty_author_feed_is_valid_but_cannot_erase_same_day_report(tmp_path, m
     assert not second.papers
     repeated = finalize_run(analysis_file(tmp_path, second), data_dir=tmp_path, site_dir=tmp_path/'site')
     assert repeated.papers == report.papers and repeated.overview == report.overview
+
+
+def test_http_retries_respect_server_wait_and_shared_minimum_interval(monkeypatch):
+    from urllib3.response import HTTPResponse
+    from src.fetch_arxiv import ArxivRetry
+    waits = []
+    monkeypatch.setattr(watch.time, 'sleep', waits.append)
+    retry = ArxivRetry(total=4, backoff_factor=1.5)
+    retry.sleep(HTTPResponse(status=429))
+    retry.sleep(HTTPResponse(status=429, headers={'Retry-After': '20'}))
+    retry.sleep(HTTPResponse(status=429, headers={'Retry-After': '1'}))
+    assert waits == [3, 20, 3]
+
+
+def test_exhausted_http_limit_reports_actual_status_and_retry_after(monkeypatch):
+    from src.fetch_arxiv import ArxivFeedError, download_feed
+    response = requests.Response()
+    response.status_code = 429
+    response.headers['Retry-After'] = '30'
+    response.url = watch.API_URL
+    monkeypatch.setattr(requests.Session, 'get', lambda *args, **kwargs: response)
+    with pytest.raises(ArxivFeedError, match='HTTP 429; Retry-After=30'):
+        download_feed(watch.API_URL)

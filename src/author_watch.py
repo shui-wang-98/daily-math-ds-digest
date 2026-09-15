@@ -131,8 +131,9 @@ def download_author_feeds(watchlist: AuthorWatchlist, *, fetched_at: datetime,
     pages, raw_pages = [], {}
     start, expected_total = 0, None
     while True:
-        if start:
-            time.sleep(3)  # Official arXiv API guidance: one serial request per three seconds.
+        # The limit covers RSS and API together, including this first request
+        # after RSS capture. HTTP retries also enforce it in ArxivRetry.
+        time.sleep(3)
         url = query_url(watchlist, end, start)
         raw = download_feed(url, timeout, user_agent)
         _, total, count = parse_author_page(raw, watchlist=watchlist, fetched_at=fetched_at, start=start)

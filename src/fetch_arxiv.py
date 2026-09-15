@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import time
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -25,6 +26,14 @@ _ABSTRACT_RE = re.compile(r"Abstract:\s*(.*)", flags=re.IGNORECASE | re.DOTALL)
 
 class ArxivFeedError(RuntimeError):
     pass
+
+
+class ArxivRetry(Retry):
+    """Respect the shared RSS/API rate limit, including the first retry."""
+
+    def sleep(self, response=None):
+        retry_after = self.get_retry_after(response) if response is not None else None
+        time.sleep(max(3, retry_after or 0, self.get_backoff_time()))
 
 
 @dataclass(frozen=True)
@@ -157,7 +166,7 @@ def download_feed(feed_url: str, timeout_seconds: int = 45,
                   user_agent: str = "daily-math-ds-digest/1.0") -> bytes:
     """Cloud capture transport; preserve response bytes rather than reserialize XML."""
 
-    retry = Retry(
+    retry = ArxivRetry(
         total=4,
         connect=4,
         read=4,
@@ -166,6 +175,7 @@ def download_feed(feed_url: str, timeout_seconds: int = 45,
         status_forcelist=(429, 500, 502, 503, 504),
         allowed_methods=frozenset({"GET"}),
         respect_retry_after_header=True,
+        raise_on_status=False,
     )
     session = requests.Session()
     session.mount("https://", HTTPAdapter(max_retries=retry))
@@ -176,12 +186,17 @@ def download_feed(feed_url: str, timeout_seconds: int = 45,
             timeout=timeout_seconds,
             headers={
                 "User-Agent": user_agent,
-                "Accept": "application/rss+xml, application/xml;q=0.9, */*;q=0.1",
+                "Accept": "application/atom+xml, application/rss+xml, application/xml;q=0.9, */*;q=0.1",
             },
         )
         response.raise_for_status()
     except requests.RequestException as exc:
-        raise ArxivFeedError(f"Could not fetch arXiv RSS feed: {exc}") from exc
+        response = exc.response
+        if response is not None:
+            retry_after = response.headers.get("Retry-After", "not supplied")
+            raise ArxivFeedError(f"arXiv metadata request failed: HTTP {response.status_code}; "
+                                 f"Retry-After={retry_after}; URL={feed_url}") from exc
+        raise ArxivFeedError(f"Could not fetch arXiv metadata: {exc}") from exc
     finally:
         session.close()
 

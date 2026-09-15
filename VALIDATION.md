@@ -350,4 +350,24 @@ new feature has been deployed or exercised by the scheduled task.
   and Git autocrlf preservation of author XML. Tests protect production bytes
   and timestamps. No synthetic input or report belongs in production.
 
-Cloud CI and browser evidence will be recorded after actual execution.
+First feature CI on `ee23703`,
+[34982174463](https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/34982174463),
+ran **116 tests successfully in 11.08s**. Actual downloaded logs show RSS passed
+and the author query failed after repeated HTTP 429 responses from
+`export.arxiv.org`. No bundle, report or notification was published. This is
+real remote rate-limit evidence, not a local networking or quoting failure.
+
+Review of the official [shared API rate limits](https://info.arxiv.org/help/api/tou.html#rate-limits)
+identified a request-spacing gap: the initial author request immediately followed
+RSS, and the inherited first HTTP retry could also have zero delay. Both now
+wait at least three seconds, including a shorter Retry-After response; longer
+server waits are preserved. Exhaustion reports the final HTTP status and
+Retry-After. This fixes the documented spacing requirement but does not establish
+that the gap was the sole cause of the runner's 429 responses. Two regressions
+cover retry waiting and the surfaced status. Full local suite after this fix:
+**118 passed in 20.04s**, exit 0; `git diff --check` passed.
+
+Actual browser inspection of the isolated September 15 preview found 39 Subjects
+rows, 39 Keywords rows, no Prerequisites rows and 26 compact LOW entries, with
+unchanged 12/27/26 counts. Subjects/Keywords separation was visually inspected.
+Further CI and responsive author-marker evidence will follow actual execution.
