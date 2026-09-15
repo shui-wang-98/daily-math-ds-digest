@@ -159,3 +159,28 @@ The 2026-09-08 HTML-only migration recorded 62 passing tests and isolated browse
 checks. The 2026-09-07 migration recorded 44 passing tests for the retired
 multi-format pipeline. Those are historical results, not evidence that this new
 architecture or an unattended production run has passed.
+# Production acceptance: 2026-09-15
+
+After explicit deployment approval, main was fast-forwarded to `3dd2f3d`.
+The first production capture succeeded in
+[run 34975423235](https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/34975423235),
+committing only the immutable RSS/manifest pair as `c46db2f`. It did not start
+the publisher. Capture time: `2026-09-15T13:30:34.547632Z`; announcement date:
+`2026-09-15`; raw size: 122704 bytes; SHA-256:
+`c2ead384a44e73215e6b26a60449e1dc3fbca5cfc22a4cfeea11a9ac47ae2441`.
+
+The real Git-to-Windows hop exposed a failure absent from artifact testing:
+`core.autocrlf=true` changed RSS line endings and correctly caused input hash
+validation to fail. State and reports were untouched. `.gitattributes` now sets
+`data/inbox/**/feed.xml -text`, preserving original bytes in every checkout.
+`test_raw_rss_survives_autocrlf_checkout` exercises an actual temporary Git index
+and checkout with autocrlf enabled. Rechecking out the affected cloud input
+restored its exact manifest hash; no input content was regenerated or changed.
+
+The source-less pending/analysis pair left from 2026-09-07 was verified against
+all 18 archived paper records, analysis fields, and seen-state entries. Exact
+copies remain in ignored `tmp/offline-input-validation/completed-legacy-2026-09-07/`.
+The completed pending file was retired only after those checks. Production
+preparation then found 65 unseen papers while HTTP and socket calls were blocked,
+with state bytes unchanged. Further publication acceptance is recorded below
+when executed; these observations alone do not verify an unattended task run.
