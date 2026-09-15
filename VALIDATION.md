@@ -3,8 +3,9 @@
 Current status (2026-09-15): production deployment was approved and completed;
 the real cloud capture, local offline analysis, fixed-message Git publication,
 Pages and Issue notification passed. The existing local task is ACTIVE with
-updated inbox instructions, but its unattended execution remains unverified.
-Detailed production evidence is in the last section. Earlier sections record
+updated inbox instructions. Its actual already-finalized retry passed; its
+unattended analysis and publication of new input remain unverified.
+Detailed production and task evidence is below. Earlier sections record
 the pre-approval repair branch `fix/offline-arxiv-input` and its historical
 checks, not the current task/deployment status. All fixtures and diagnostics
 remain under ignored `tmp/`.
@@ -152,13 +153,15 @@ identical SHA-256 hashes at that stage.
 
 ## Outstanding unattended acceptance
 
-Production publication is verified below. Inspect a real Scheduled Task run/log
-to establish unattended operation under the task's own permissions. Interactive
-success and CI success cannot substitute for that run. The enabled automation
-tool supports update/view but exposes no run-now operation; native app control
-is unavailable in this session. Do not use a follow-up chat message or a changed
-schedule as pretend scheduler evidence. Request only one necessary actual run
-or its log. No fixture report or test Issue notification is authorized.
+Production publication and the actual task's already-finalized retry are verified
+below. That retry correctly skipped analysis, finalization, tests, commit and
+push, so it does not establish unattended publication of new input. Inspect the
+next real task run with new input to close that remaining gap. Interactive
+success and CI success cannot substitute for it. The enabled automation tool
+exposes no run-now operation; native app control is unavailable. Do not use a
+follow-up chat message, changed schedule or artificially reset state as pretend
+scheduler evidence. Another empty retry is unnecessary. No fixture report or
+test Issue notification is authorized.
 
 ## Historical context
 
@@ -259,7 +262,53 @@ with state bytes unchanged.
   kind, target task, name and weekday 12:00 Europe/Warsaw cadence were preserved.
   It now follows the current offline/retry/publication procedure. No new task,
   global configuration, credential or broad permission was created.
-- **Not yet verified:** a real resumed Scheduled Task run, its unattended Git
-  permissions, and schedule punctuality. All local production work above ran
-  in this interactive session. The user needs only one actual task run/log to
-  close that remaining acceptance gap; today's repeat should exit 3 safely.
+- The local production generation/publication above ran in the interactive
+  session. The subsequent real task retry is recorded below; unattended Git
+  writes with new input and schedule punctuality remain unverified.
+
+## Actual task retry and PowerShell exit-code diagnosis: 2026-09-15
+
+The user supplied the completed task result. The task API and its actual local
+session log were inspected, including command arguments, outputs and exit codes:
+
+- Task: `Daily local math.DS report`, ID
+  `01a0a4a6-b788-7770-afa6-a658962a4a6b`.
+- Turn: `01a0a55f-1f13-7e71-b368-a60578423cad`, started
+  `2026-09-15T14:01:09Z`, completed `2026-09-15T14:02:39Z`
+  (16:01-16:02 Europe/Warsaw). The log includes the actual automation heartbeat
+  invocation, not a substitute follow-up chat prompt.
+- `git pull --ff-only origin main`: exit 0, `Already up to date.`
+  The task checked `main`, a clean working tree and no commits ahead of origin.
+- `.\.venv\Scripts\python.exe -m src.prepare_run`: printed
+  `All available current inputs are already finalized; no files changed`.
+  Its `pwsh.exe -Command` wrapper reported exit 1. The task inspected the
+  handler returning 3 and stopped without rewriting or republishing reports.
+- Existing report date 2026-09-15, counts 12/27/26, all four output paths and
+  digest commit `dd98b65a7dfe4c87876944ecb8dfbcea37eef737` were confirmed.
+  Analysis, finalization, tests, commit, push and notification checks were
+  correctly skipped. The task also saved its run memory successfully.
+
+The exit discrepancy was then reproduced with actual terminal-tool calls in
+the same checkout. A plain `.\.venv\Scripts\python.exe -m src.prepare_run`
+returned tool exit **1**. Adding an immediate `exit $LASTEXITCODE` in the same
+PowerShell call returned tool exit **3**, with identical already-finalized output
+and no repository changes. This is documented
+[PowerShell -Command behavior](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pwsh?view=powershell-7.5#-command---c):
+the shell normalizes native nonzero codes unless explicitly propagated.
+It is not an application or arXiv network failure.
+
+`DAILY_AUTOMATION.md` now requires that exact two-line invocation and handling
+of the preserved status. README and the deployment checklist point to the same
+procedure. The existing task reads those instructions at every invocation;
+no task configuration, permission rule or application-code change is needed.
+This follow-up changes only those three documents and this evidence file, with
+`git diff --check` used for validation. The full suite was not rerun for this
+documentation-only correction; the most recent runtime result remains 98 passed.
+No source, tests, workflow, inbox, analysis, state, report or site file changed.
+
+Verified scope: actual task Git pull, offline inbox preparation and safe
+already-finalized stopping. Still unverified: the corrected exit propagation
+inside a subsequent task invocation, unattended new-input analysis and Git
+add/commit/push, and weekday 12:00 scheduling punctuality. A real future input
+is required for the remaining publication acceptance; do not reset state,
+reprocess September 15 or publish a synthetic report to manufacture that test.

@@ -13,7 +13,8 @@ Cloud capture (weekdays 11:15 Europe/Warsaw) -> committed inbox -> local Git syn
 
 The existing local task targets weekdays **12:00 Europe/Warsaw** and was updated
 and resumed after production approval on 2026-09-15. The real cloud-input through
-Pages/Issue path has passed; an actual unattended task run remains unverified.
+Pages/Issue path has passed. The actual task's already-finalized retry also
+passed; its unattended analysis and publication of new input remain unverified.
 See [VALIDATION.md](VALIDATION.md) for evidence and follow
 [DAILY_AUTOMATION.md](DAILY_AUTOMATION.md). Editing repository instructions does
 not itself change or trigger the task. Local execution requires the computer awake and the desktop app
@@ -75,6 +76,10 @@ There is no HTTP request or network fallback.
 - Exit 0: pending metadata is ready, including a valid input with no unseen papers.
 - Exit 2: **INPUT NOT READY**; inspect the missing/stale/corrupt input, never write an empty report.
 - Exit 3: current captured inputs were already finalized; no files changed.
+
+For a PowerShell command-runner invocation, immediately follow preparation with
+`exit $LASTEXITCODE` in the same call, as shown in
+[DAILY_AUTOMATION.md](DAILY_AUTOMATION.md#scope-and-start), to preserve these codes.
 
 Unfinished pending/analysis survives a preparation retry. Finish it before
 processing the next oldest capture. Report date follows channel pubDate in

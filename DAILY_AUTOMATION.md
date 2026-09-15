@@ -3,7 +3,8 @@
 These are the reusable instructions for the local scheduled task, intended for
 Monday-Friday at 12:00 Europe/Warsaw. The user approved production deployment
 on 2026-09-15; the existing local task was updated and resumed. Its actual
-unattended run still requires acceptance evidence in VALIDATION.md. Reading or
+already-finalized retry passed; unattended publication of new input still
+requires acceptance evidence in VALIDATION.md. Reading or
 editing this file does not change or trigger that task. Cloud capture targets weekdays
 11:15 Europe/Warsaw; a scheduled capture can be delayed or fail. Local preparation
 must inspect the synced input, never assume the cloud job has finished.
@@ -33,6 +34,19 @@ must inspect the synced input, never assume the cloud job has finished.
    were already finalized: stop without changing or republishing anything.
    Exit 0 supplies pending metadata, including a genuinely empty valid input.
    If a prior finalization failed, retain and recover its pending/analysis pair.
+
+   In a PowerShell command-runner call, preserve the Python exit code explicitly:
+
+   ```powershell
+   .\.venv\Scripts\python.exe -m src.prepare_run
+   exit $LASTEXITCODE
+   ```
+
+   Run these two lines together in their own terminal-tool invocation. The
+   `exit` must immediately follow Python; run subsequent checks in separate
+   calls. `pwsh -Command` otherwise converts native exit 2 or 3 into shell
+   exit 1. Interpret the preserved code using the policy above; do not turn
+   unknown failures into success or rely on the printed message alone.
 5. Read the complete `data/pending_run.json`. Its `report_date` is the exact date
    to copy to the analysis. It includes every unseen `new`, `cross`, and
    `replace-cross` announcement and excludes replacement-only announcements.
