@@ -107,6 +107,15 @@ path filters exclude inbox-only changes; tests enforce that separation.
   downloaded logs confirm **89 passed in 5.93s** and successful real capture
   plus HTTP-blocked preparation. The item-date hardening is tested in the
   subsequent final-code run recorded below.
+- Final runtime-code CI:
+  [run 34967661474](https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/34967661474),
+  commit `7d4074baa733a615d59e4335b8950b7715a0b533`, **success**.
+  Downloaded logs confirm **90 passed in 6.02s**, real official RSS capture
+  at 2026-09-15 12:14:20.822666 UTC, the same 122704-byte XML/SHA-256 recorded
+  below, and successful HTTP-blocked preparation of 65 IDs. Inspection artifact
+  ID: `10395707966`. All steps succeeded, with no publication permissions or
+  actions. The follow-up commit recording this evidence changes documentation
+  only; it does not change the validated runtime code or workflows.
 - Artifact `validated-live-rss`, ID `10394859604`, was downloaded and checked.
   Raw XML is 122704 bytes; SHA-256:
   `c2ead384a44e73215e6b26a60449e1dc3fbca5cfc22a4cfeea11a9ac47ae2441`.
