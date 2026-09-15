@@ -16,8 +16,7 @@ from matplotlib.font_manager import FontProperties
 from matplotlib.mathtext import MathTextParser
 from matplotlib import rc_context
 from markupsafe import Markup
-from pylatexenc.latex2text import LatexNodes2Text
-from pylatexenc.latexwalker import get_default_latex_context_db
+from pylatexenc.latex2text import LatexNodes2Text, get_default_latex_context_db
 
 _MATH = re.compile(
     r"\\begin\{(?P<env>equation\*?|displaymath)\}(?P<body>.*?)\\end\{(?P=env)\}"
@@ -25,7 +24,7 @@ _MATH = re.compile(
 # Some RSS abstracts omit math delimiters around a formula. Recognize contiguous
 # formula tokens with explicit math commands; never infer symbols from prose.
 _BARE_MATH = re.compile(
-    r"[A-Za-z0-9_^{}()/]*\\(?:mathbb|mathcal|mathfrak|Gamma|geq?|leq?)(?![A-Za-z])"
+    r"[A-Za-z0-9_^{}()/]*\\(?:mathbb|mathcal|mathfrak|Gamma|tau|geq?|leq?)(?![A-Za-z])"
     r"(?:\\[A-Za-z]+|[A-Za-z0-9_^{}()/,.+\-])*(?:\s+[0-9]+[,.]?)?"
 )
 _PARSER = MathTextParser("path")
@@ -133,6 +132,8 @@ def _html_plain(value: str, unknown: set[str] | None = None) -> str:
     # Unknown author macros outside delimiters must not silently disappear.
     def retain_macro(match):
         name = match[1]
+        if name == 'and':
+            return ' and '
         if _LATEX_CONTEXT.get_macro_spec(name) is not None:
             return match[0]
         if unknown is not None:

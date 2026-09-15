@@ -76,6 +76,9 @@ def test_unknown_prose_macro_cannot_silently_delete_the_named_property():
 
 def test_author_accents_and_undelimited_rss_math():
     assert html_text(r"Sebasti\\'an Barbieri") == "Sebastián Barbieri"
+    assert html_text(r"Pawe\l{} D\l{}otko \and B") == "Paweł Dłotko  and  B"
+    tau = html_text(r'Robustness of {\tau}-tipping')
+    assert 'class="math-formula"' in tau and 'Source notation' not in tau
     result = html_text(r"space SL_n\mathbb{R}/\Gamma, n\ge 5, under the assumption")
     assert r'alt="SL_n\mathbb{R}/\Gamma,"' in result
     assert r'alt="n\ge 5,"' in result
