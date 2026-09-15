@@ -256,3 +256,22 @@ def test_missing_input_cli_has_distinct_nonzero_result(tmp_path):
     assert proc.returncode == 2
     assert 'INPUT NOT READY' in proc.stdout
     assert not list(tmp_path.iterdir())
+
+
+def test_fixture_finalization_cannot_accidentally_use_default_production_site(tmp_path):
+    preparer.prepare_run(data_dir=tmp_path, local_feed=ROOT / 'tests/fixtures/math_ds.xml',
+                         report_date='2026-09-04')
+    with pytest.raises(inbox.InputNotReady, match='both be isolated'):
+        finalizer.finalize_run(ROOT / 'tests/fixtures/analysis_run.json', data_dir=tmp_path)
+    assert not (tmp_path / 'state.json').exists()
+
+
+def test_backlog_order_follows_announcement_dates_not_capture_insertion(tmp_path):
+    later, _ = archive(tmp_path, rss('2026-09-07'), NOW + timedelta(days=3))
+    earlier, _ = archive(tmp_path)
+    pending = preparer.prepare_run(data_dir=tmp_path)
+    assert pending.source_input == earlier
+    finalizer.finalize_run(write_analysis(tmp_path, pending), data_dir=tmp_path, site_dir=tmp_path / 'site')
+    pending = preparer.prepare_run(data_dir=tmp_path)
+    assert pending.source_input == later
+    assert not pending.papers  # Repeated IDs are seen, but this input still needs finalization.

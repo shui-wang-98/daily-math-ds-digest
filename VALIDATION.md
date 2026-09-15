@@ -62,10 +62,63 @@ artifact. It does not publish, notify, commit or change production state.
 The main-only capture job stages only its validated pair. The existing publisher's
 path filters exclude inbox-only changes; tests enforce that separation.
 
-## Outstanding acceptance
+## Executed local, visual and cloud validation
 
-Final local test/diff results, demonstrations, visual inspection and real CI
-results will be added here only after execution.
+- Final local command: `.venv/Scripts/python.exe -m pytest -q`:
+  **89 passed in 11.20s**, exit 0. Two additional regressions check reverse-order
+  inbox insertion and prevent a fixture finalizer accidentally targeting the
+  default production site when only data-dir was isolated.
+- `git diff --check`: exit 0. Existing CRLF checkout warnings are informational.
+- `codex execpolicy check --rules .codex/rules/math-ds.rules -- ...` returned
+  allow for all four documented daily Git commands. The fixed commit message
+  matches; no permission file or global setting was changed.
+- Executed `.venv/Scripts/python.exe tmp/offline-input-validation/demo.py`
+  with HTTP and socket calls blocked. All files are under
+  `tmp/offline-input-demo-livecheck/`: normal report 2026-09-04, one paper in
+  each priority; valid empty report 2026-09-07, all counts zero. Repeated
+  finalization preserved file bytes. New dated outputs contain HTML/JSON only.
+  The demo derives from the existing fixture and adds clearly labeled synthetic
+  notation to its temporary abstract solely for formula rendering inspection.
+- Actual in-app browser inspection at desktop width 1280 and mobile width 390:
+  homepage newest-first dates, both date links, normal/empty counts, full HIGH
+  and RELATED fields, both original abstract expanders, compact LOW entry,
+  vector fraction and indexed notation, and wrapping were checked. No horizontal
+  overflow was detected; browser warning/error log was empty. Viewport override
+  was reset after inspection. External arXiv links were not requested.
+- First real non-publishing CI:
+  [run 34966256476](https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/34966256476),
+  commit `c12dd265bd5fc525c42814e3afc2f1863b7fa6bf`, **success**.
+  Downloaded actual runner logs confirm **87 passed in 12.25s**, successful
+  official RSS capture, HTTP-blocked preparation, unchanged production data,
+  and inspection-artifact upload. No deployment or notification step ran.
+- Artifact `validated-live-rss`, ID `10394859604`, was downloaded and checked.
+  Raw XML is 122704 bytes; SHA-256:
+  `c2ead384a44e73215e6b26a60449e1dc3fbca5cfc22a4cfeea11a9ac47ae2441`.
+  Fetch time: 2026-09-15 11:59:50.826540 UTC; announcement:
+  2026-09-15 00:00:00 -04:00; feed build: 2026-09-15 04:00:23 UTC.
+  It contains 30 new, 20 cross, 15 replace-cross and 9 replacement-only entries.
+  The retained, unique pending set is **65** papers dated **2026-09-15**.
+- Executed `.venv/Scripts/python.exe tmp/offline-input-validation/inspect_artifact.py`
+  on Windows against that downloaded real artifact. Local preparation again
+  produced 65 papers with requests and socket connections blocked, using isolated
+  empty state under `tmp/offline-input-validation/real-local-prepared/`.
+  It did not analyze or publish real papers or use production seen state.
+
+## Changed files
+
+- Source: `src/capture_feed.py`, `src/inbox.py`, `src/fetch_arxiv.py`,
+  `src/prepare_run.py`, `src/finalize_run.py`, `src/models.py`.
+- Tests: `tests/test_inbox.py`, `tests/test_workflows.py`, `tests/conftest.py`.
+- Workflows: `.github/workflows/capture-rss.yml`, `.github/workflows/validate-offline.yml`.
+- Instructions/evidence: `AGENTS.md`, `DAILY_AUTOMATION.md`, `README.md`,
+  `SETUP_CHECKLIST.zh-CN.md`, `VALIDATION.md`.
+
+Research profile, analysis schema, requirements, templates/styles, existing
+publisher workflow, project permissions, production reports/state/site and
+legacy downloads are unchanged. The actual paused task and user-level Codex
+configuration are unchanged. Diagnostic scripts/logs are ignored, not committed.
+
+## Outstanding production acceptance
 
 After approved merge/deployment, verify real input committed to main, local Git
 sync, actual Codex English analysis, HTML/JSON, automatic daily commit/push,

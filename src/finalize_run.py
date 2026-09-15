@@ -45,8 +45,9 @@ def finalize_run(
     })
     normalized_seen = {base_arxiv_id(key): value for key, value in state["seen"].items()}
     source = pending.source_input
-    if source is None and data_dir.resolve() == (ROOT / "data").resolve():
-        raise InputNotReady("Production finalization requires a validated inbox input")
+    if source is None and (data_dir.resolve() == (ROOT / "data").resolve()
+                           or site_dir.resolve() == (ROOT / "site").resolve()):
+        raise InputNotReady("Production finalization requires a validated inbox input; fixture data and site must both be isolated")
     if source is not None:
         folder = (Path(inbox_dir) if inbox_dir is not None else data_dir / "inbox") / source.input_id
         original, feed = read_input(folder)
