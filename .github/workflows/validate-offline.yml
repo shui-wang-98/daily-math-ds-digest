@@ -1,0 +1,50 @@
+name: Validate offline pipeline and live RSS
+
+on:
+  push:
+    branches: [fix/offline-arxiv-input, 'codex/**']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - name: Run the complete offline test suite
+        run: pytest -q
+      - name: Download official RSS into an isolated inspection artifact
+        run: python -m src.capture_feed --inbox-dir tmp/ci-inbox
+      - name: Prepare the real captured input with HTTP blocked
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from unittest.mock import patch
+          from src.prepare_run import prepare_run
+          with patch('requests.sessions.Session.request', side_effect=AssertionError('Offline preparation attempted HTTP')):
+              pending = prepare_run(data_dir=Path('tmp/ci-prepared'), inbox_dir=Path('tmp/ci-inbox'))
+          print(f'Offline preparation: {pending.report_date}, {len(pending.papers)} unseen IDs')
+          PY
+      - name: Confirm production data was not modified
+        run: git diff --exit-code -- data site
+      - name: Upload inspection evidence only
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: validated-live-rss
+          path: |
+            tmp/ci-inbox/
+            tmp/ci-prepared/pending_run.json
+          if-no-files-found: warn
+          retention-days: 14

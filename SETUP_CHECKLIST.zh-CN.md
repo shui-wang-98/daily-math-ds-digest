@@ -1,96 +1,57 @@
-# 本地 Codex 每日摘要设置清单
+# 本地 Codex 每日摘要部署清单
 
-## 架构
+架构：GitHub Actions 下载并验证官方 math.DS RSS，归档原始 XML/manifest
+→ 本地 Git 同步 inbox → Codex 离线准备和英文分析 → HTML/JSON
+→ 验证后提交推送 → 现有 Pages 发布和日报 Issue 通知。
 
-```text
-本地 Codex 定时任务
-    -> prepare_run 获取论文元数据
-    -> Codex 阅读标题和摘要，写入 analysis_run.json
-    -> finalize_run 验证并生成 HTML / JSON 和固定归档主页
-    -> 本地测试和人工式逐项检查
-    -> git commit 和 push
-    -> GitHub Actions 发布已提交的 site/ 并发送 Issue 通知
-```
+研究画像、三级分类、数学可靠性规则、原始 abstract 和 HTML 设计保持不变。
+不使用模型 API、AI SDK、付费 AI 服务或新密钥，不生成新的 PDF/Markdown，
+不改写历史下载文件。详细实现与日期语义见 [README.md](README.md)。
 
-**不需要 OpenAI API key、OpenAI Python SDK、OpenAI API 计费或其他付费 AI API。** Python 脚本不调用模型。分析由桌面应用中的 Codex 完成，使用已有 ChatGPT 登录和相应账户使用额度；这不表示 Codex 订阅无限或免费。
+## 部署前
 
-**HTML 是今后唯一新生成的供人阅读的报告格式。** 固定主页 `site/index.html`
-按日期从新到旧列出全部报告和优先级数量；每个日期通过 “Open report” 打开
-`site/reports/YYYY-MM-DD/index.html` 完整报告。历史 PDF 和 Markdown 文件原样保留，
-仅在文件实际存在时显示次要下载链接。今后的运行不再生成本地摘要 PDF 或 Markdown。
-仍可通过浏览器 **Ctrl+P → Save as PDF** 手动保存 HTML；打印样式会展开原始摘要并隐藏导航。
+- [ ] 阅读 AGENTS.md、DAILY_AUTOMATION.md 和 VALIDATION.md 的真实验证记录。
+- [ ] 审阅修复分支，获得确认后才合并 main、部署正式工作流。
+- [ ] 保持本地每日任务暂停；修改仓库文档不会修改、恢复或触发任务。
+- [ ] 不改变全局 Codex 配置，不扩大成整个 Git 或整台电脑的权限。
 
-## 本地准备
+## 云端抓取
 
-- [ ] 安装 Python 3.12 或更新版本，保留本地 Git 仓库。
-- [ ] 在仓库根目录运行 `python -m venv .venv`。
-- [ ] PowerShell 运行 `.\.venv\Scripts\Activate.ps1`。如果激活受限，直接使用虚拟环境里的可执行文件。
-- [ ] 运行 `python -m pip install -r requirements.txt`。
-- [ ] 运行 `pytest -q`。测试只使用本地 RSS fixture，不访问 arXiv。
-- [ ] 阅读并保留 `config.yaml` 中的研究画像，以及现有英文报告模板。
-- [ ] 阅读 [DAILY_AUTOMATION.md](DAILY_AUTOMATION.md) 和 [README.md](README.md)。
-- [ ] 用已有 Git 登录配置验证今后的推送权限；不要为本项目新建 AI 或邮件密钥。
+- [ ] capture-rss.yml：工作日 11:15 Europe/Warsaw，自动跟随夏令时，可手动触发。
+- [ ] GitHub 官方已支持 cron 旁的 timezone；但定时任务可能延迟。
+- [ ] 仅用内置 GITHUB_TOKEN 的 contents:write 提交本次 XML/manifest，不添加密钥。
+- [ ] 输入按公告日期/SHA256 追加且可追溯，不能覆盖已处理输入。
+- [ ] 下载失败、XML/分类/日期/校验失败明确停止，不伪装成空日报。
+- [ ] 抓取不改 state、不分析、不部署、不发通知。
 
-## 离线演示
+公告日期在抓取时必须是 Europe/Warsaw 最近的工作日；周末取周五。
+更新延迟和特殊节假日需要等待真实输入，不猜测节日日历。
 
-以下命令全部在仓库根目录执行。输出位于被 Git 忽略的 `tmp/offline-demo/`，不会污染真实 `data/state.json` 或发布目录。测试论文是虚构样本。
+## 本地正式路径
 
-```powershell
-python -m src.prepare_run --local-feed tests/fixtures/math_ds.xml --report-date 2026-09-04 --data-dir tmp/offline-demo/data
-Copy-Item tests/fixtures/analysis_run.json tmp/offline-demo/data/analysis_run.json
-python -m src.finalize_run --analysis tmp/offline-demo/data/analysis_run.json --data-dir tmp/offline-demo/data --site-dir tmp/offline-demo/site
-python -m src.notify --check-only --data-dir tmp/offline-demo/data --site-dir tmp/offline-demo/site
-python -m src.finalize_run --analysis tmp/offline-demo/data/analysis_run.json --data-dir tmp/offline-demo/data --site-dir tmp/offline-demo/site
-```
+- [ ] 使用仓库 .venv 中的 Python；无需依赖激活或 PATH。
+- [ ] 使用已有 Git 认证执行 git pull --ff-only origin main。
+- [ ] python -m src.prepare_run 只读本地 inbox，无 HTTP 或联网回退。
+- [ ] 退出码 0 表示准备成功；2 表示 INPUT NOT READY；3 表示当前输入已全部完成。
+- [ ] 先恢复未完成 pending/analysis，再按公告日期处理积压，不能跳过未开机时留下的输入。
+- [ ] 报告日期来自 feed；抓取、公告、准备、生成时间分别保存，不把旧公告改成今天。
+- [ ] 每篇论文按原 schema 分析，不能将 fixture 用于正式数据或恢复。
+- [ ] 所有 HTML/JSON 和首页成功生成后，才同时更新 seen 和 processed_inputs。
+- [ ] 失败保留分析并重试；同日空结果不得覆盖非空日报。
+- [ ] 外部链接仅做本地 URL/arXiv ID 对应检查，不访问 arXiv。
+- [ ] 完整测试和显示检查通过后，使用固定说明 Add daily math.DS digest 提交。
+- [ ] 日常 Git 命令遵循 DAILY_AUTOMATION.md，与现有 .codex 规则一致，不扩大规则。
 
-- [ ] 打开演示 HTML、JSON 和主页，确认三种优先级、日期顺序与链接，并检查窄屏布局。
-- [ ] LOW PRIORITY 仅显示标题、作者、arXiv 编号。
-- [ ] HIGH PRIORITY 和 RELATED 保留完整英文摘要分析和原始摘要。
-- [ ] 确认新日期只有 HTML 和 JSON，没有本地摘要 PDF 或 Markdown；保留外部 arXiv 原论文 PDF 链接。
-- [ ] 检查 HTML 中的数学符号、Unicode、原始摘要的 details/summary 展开功能和归档主页导航。
-- [ ] 最后一次重复 finalization 保持文件内容和状态不变。
+测试只使用忽略的临时目录，显式指定 data/site/inbox 路径，不污染正式 state、
+报告、inbox 或网站。
 
-如果该演示已经执行过，只重跑 finalizer，或在准备和完成命令中统一换用新的空演示目录。重复 preparation 会按已有状态过滤已完成的测试论文。
+## 发布及无人值守验收
 
-## 将来的真实运行
+- [ ] Pages 来源选择 GitHub Actions，Issues 启用。
+- [ ] daily.yml 只发布真实报告/site；inbox-only 提交不通知“日报完成”。
+- [ ] 本地任务目标时间保持工作日 12:00 Europe/Warsaw；本次只准备新指令，不改暂停任务。
+- [ ] 正式部署获准后验收：真实云端输入 → Git 同步 → 离线分析 → HTML/JSON → 自动提交推送 → Pages 与通知。
+- [ ] 必须检查真正 Scheduled Task 的运行和日志；交互式成功或 CI 通过不能替代。
+- [ ] 若工具无法触发或查看任务，只请求一次必要的真实运行或日志。
 
-```powershell
-python -m src.prepare_run
-# Codex 按 DAILY_AUTOMATION.md 写入 data/analysis_run.json
-python -m src.finalize_run --analysis data/analysis_run.json
-pytest -q
-python -m src.notify --check-only
-```
-
-准备阶段包括 `new`、`cross`、`replace-cross`，排除纯 `replace`，不会标记已读。默认报告日期是 Europe/Warsaw 的本地运行日期。分析必须逐一覆盖 pending 中的全部论文，日期一致，不得有重复、缺失或额外 ID。以 [Pydantic 模型](src/models.py) 和 [JSON Schema](schemas/analysis_run.schema.json) 为准。
-
-所有输出和主页成功生成后才更新状态。失败时保留 pending 和 analysis，修复后重跑 finalizer；不要先准备别的运行。每次只运行一条完整流程。单个文件使用原子替换，多个文件之间不是一个数据库事务；磁盘写入中途失败时，状态不会提前更新，重跑可恢复。
-
-无新论文时仍写入当前日期、简短英文 overview 和空 `papers` 列表，生成 no-new-papers 报告。同日重跑不会抹去当天已有报告；同日新增论文会合并到已有报告。
-
-## GitHub 设置
-
-- [ ] 用户审阅本次修改后自行提交、推送；本次迁移不执行这些操作。
-- [ ] **Settings > Pages > Build and deployment > Source** 选择 **GitHub Actions**。
-- [ ] **Settings > General > Features > Issues** 已启用。
-- [ ] 允许工作流发布 Pages 和写入 Issues；无需添加自定义 Secret。
-- [ ] 将来推送 `main` 中已生成的 `data/reports/**` 或 `site/**` 后，检查 **Publish math.DS digest** 工作流。
-- [ ] 也可在 `main` 手动执行 `workflow_dispatch`；没有 GitHub cron 定时器。
-- [ ] 工作流只验证已提交产物、发布 Pages、发 Issue 通知，不重新生成或修改摘要。
-- [ ] 打开固定 **Daily math.DS Digest notifications** Issue 并点击 **Subscribe**。
-- [ ] 如需 GitHub 管理的邮件或手机通知，在个人 GitHub 通知设置中选择。
-- [ ] 确认通知中的最新日期 HTML 和固定归档主页链接可用。最新报告来自已提交 JSON，验证配套 HTML/JSON 和主页；不要求本地摘要 PDF/Markdown，也不依赖 `run_metadata.json`。
-
-Issue 通知默认开启；直接邮件默认关闭，SMTP/Resend 发件实现已移除，无需邮件账号或密钥。GitHub Actions 自动提供作业令牌。首次尚无报告时只发布初始主页，不发送通知；最新报告文件不全时停止发布。
-
-## 以后再设置桌面定时任务
-
-**计划：周一至周五 11:00，Europe/Warsaw，按当地夏令时变化。定时任务本身稍后在桌面应用中配置，本次不创建。**
-
-- [ ] 选择本地仓库，并让任务严格执行 `DAILY_AUTOMATION.md`。
-- [ ] 到运行时，电脑必须开机且保持唤醒，连接网络，ChatGPT/Codex 桌面应用必须运行。
-- [ ] 项目目录保持可用，并允许任务在该目录运行所需的命令。
-- [ ] 只有验证、测试以及完整 HTML/JSON 和归档主页检查全部成功后，将来的任务才可提交并推送预期的状态、JSON、HTML 和共享资源文件；不得改写或删除历史 PDF/Markdown。
-- [ ] 不把 fixture 演示报告、pending、analysis、虚拟环境或 `tmp/` 提交为真实报告。
-
-桌面本地任务的运行条件见 [OpenAI 官方定时任务文档](https://learn.chatgpt.com/docs/automations?surface=app)。
+可复用诊断证据、CI 链接、视觉检查与未验收项目统一记录在 VALIDATION.md。

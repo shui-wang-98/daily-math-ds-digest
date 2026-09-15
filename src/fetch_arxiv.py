@@ -104,7 +104,7 @@ def _parse_item(item: ET.Element) -> ArxivPaper:
     )
 
 
-def parse_feed(xml_text: str, include_types: Iterable[str]) -> FeedResult:
+def parse_feed(xml_text: str | bytes, include_types: Iterable[str]) -> FeedResult:
     try:
         root = ET.fromstring(xml_text)
     except ET.ParseError as exc:
@@ -147,8 +147,15 @@ def fetch_feed(
     local_xml: str | Path | None = None,
 ) -> FeedResult:
     if local_xml is not None:
-        xml_text = Path(local_xml).read_text(encoding="utf-8")
+        xml_text = Path(local_xml).read_bytes()
         return parse_feed(xml_text, include_types)
+
+    return parse_feed(download_feed(feed_url, timeout_seconds, user_agent), include_types)
+
+
+def download_feed(feed_url: str, timeout_seconds: int = 45,
+                  user_agent: str = "daily-math-ds-digest/1.0") -> bytes:
+    """Cloud capture transport; preserve response bytes rather than reserialize XML."""
 
     retry = Retry(
         total=4,
@@ -178,4 +185,4 @@ def fetch_feed(
     finally:
         session.close()
 
-    return parse_feed(response.text, include_types)
+    return response.content

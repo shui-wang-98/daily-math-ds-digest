@@ -5,11 +5,14 @@ from pathlib import Path
 
 @pytest.fixture(scope="session", autouse=True)
 def preserve_production_state():
-    path = Path(__file__).resolve().parents[1] / "data/state.json"
-    before = (path.read_bytes(), path.stat().st_mtime_ns) if path.exists() else None
+    root = Path(__file__).resolve().parents[1]
+    def snapshot():
+        return {path: (path.read_bytes(), path.stat().st_mtime_ns)
+                for folder in (root / 'data', root / 'site')
+                for path in folder.rglob('*') if path.is_file()}
+    before = snapshot()
     yield
-    after = (path.read_bytes(), path.stat().st_mtime_ns) if path.exists() else None
-    assert after == before, "Offline tests must not modify production state"
+    assert snapshot() == before, "Offline tests must not modify production state, inbox, reports, or site"
 
 
 @pytest.fixture(autouse=True)

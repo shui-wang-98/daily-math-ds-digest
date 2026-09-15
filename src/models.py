@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import date, datetime
 from typing import Annotated, Any, Literal
 
-from pydantic import AfterValidator, BaseModel, ConfigDict, Field, field_validator, model_validator
+from pydantic import AfterValidator, AwareDatetime, BaseModel, ConfigDict, Field, field_validator, model_validator
 
 from .utils import base_arxiv_id
 
@@ -106,6 +106,27 @@ class AnalysisRun(BaseModel):
         return self
 
 
+class FeedInput(BaseModel):
+    """Provenance of an immutable, validated cloud capture (never AI analysis)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    schema_version: Literal[1] = 1
+    source_url: Literal["https://rss.arxiv.org/rss/math.DS"]
+    category: Literal["math.DS"] = "math.DS"
+    fetched_at: AwareDatetime
+    feed_published_at: AwareDatetime
+    feed_build_at: AwareDatetime
+    feed_date: ReportDate
+    sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
+    byte_length: int = Field(gt=0)
+    capture_run_url: str | None = None
+
+    @property
+    def input_id(self) -> str:
+        return f"{self.feed_date}/{self.sha256}"
+
+
 class PendingRun(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -116,6 +137,7 @@ class PendingRun(BaseModel):
     category: str
     research_profile: dict[str, Any]
     papers: list[ArxivPaper]
+    source_input: FeedInput | None = None
 
     @model_validator(mode="after")
     def unique_papers(self) -> PendingRun:
@@ -148,3 +170,4 @@ class DailyReport(BaseModel):
     overview: str
     papers: list[AnalyzedPaper]
     counts: dict[str, int]
+    source_inputs: list[FeedInput] = Field(default_factory=list)

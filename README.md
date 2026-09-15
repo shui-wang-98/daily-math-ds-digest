@@ -1,101 +1,95 @@
 # Daily math.DS Digest
 
-A personalized, English-only research digest from the official arXiv math.DS RSS feed. Codex in the desktop app reads the titles and abstracts and writes the analysis. The Python code fetches metadata, validates that analysis, and renders the reports locally.
+An English research digest from official arXiv math.DS titles and abstracts.
+GitHub Actions captures raw RSS; local Codex synchronizes it through Git and
+writes the analysis. Python validates and renders locally. No model API, AI SDK,
+paid AI service, new key, or direct email credential is used.
 
-## Read reports on GitHub Pages
+## Architecture and schedules
 
-**HTML is the sole newly generated human-readable report format.** The permanent GitHub Pages homepage is
-generated at `site/index.html`. It lists every available report date, newest
-first, with the three priority counts and the total number of papers. Each date
-has a prominent **Open report** link to `site/reports/YYYY-MM-DD/index.html`.
-Days with no unseen papers remain in the archive as **No new papers.**
+Cloud capture (weekdays 11:15 Europe/Warsaw) -> committed inbox -> local Git sync
+-> offline preparation -> Codex analysis -> HTML/JSON -> validated Git commit/push
+-> existing Pages workflow and persistent Issue notification.
 
-Daily pages use a continuous academic reading layout, section navigation, and
-native collapsible original abstracts. They adapt to desktop, tablet, and mobile
-screens. Navigation and mathematical notation work without JavaScript, external
-fonts, or a CDN: formulas are embedded SVG images with their source notation as
-alternative text. Their vector shapes also remain sharp in browser printing.
+The prepared local-task instructions target weekdays **12:00 Europe/Warsaw**.
+The actual task remains paused; editing this repository does not modify or
+trigger it. Follow [DAILY_AUTOMATION.md](DAILY_AUTOMATION.md) when separately
+authorized. Local execution requires the computer awake and the desktop app
+running; see the [official task documentation](https://learn.chatgpt.com/docs/automations?surface=app).
 
-Use **Ctrl+P → Save as PDF** to print a daily page. Print CSS hides navigation,
-reveals closed original abstracts, and keeps short headings with following
-content where practical. This manually saves a PDF through the browser; the
-pipeline does not generate local digest PDFs or Markdown reports. Historical
-PDF and Markdown files remain unchanged and are linked only where they already
-exist. JSON archives and seen-paper state remain part of the pipeline.
+## Cloud capture
 
-To apply presentation updates to historical HTML without fetching papers,
-reanalyzing them, or changing state or existing PDF/Markdown/JSON files, run:
-
-```powershell
-.\.venv\Scripts\python.exe -m src.rebuild_site
-```
-
-This uses the same HTML templates and renderer as daily finalization, reading
-the version-controlled metadata in `data/reports/`. It rebuilds the homepage,
-dated HTML pages, and shared site assets. It never deletes historical files or
-regenerates legacy PDF/Markdown files. Unchanged bytes and timestamps are retained.
-Legacy downloads are discovered from actual nonempty files in each dated folder,
-including filenames containing spaces; old filename-pattern configuration is
-ignored. Rebuilding uses the published directory for discovery while staging HTML.
-
-**No OpenAI API key, OpenAI Python SDK, OpenAI API billing, or other paid AI API is required.** The local scripts never call a model. Codex uses your existing ChatGPT sign-in and applicable account usage limits; this does not imply an unlimited or free Codex subscription.
+[capture-rss.yml](.github/workflows/capture-rss.yml) downloads only
+`https://rss.arxiv.org/rss/math.DS`. It validates RSS structure, math.DS category,
+timestamps, announcement types, metadata, URL/ID correspondence and freshness
+before saving anything. Raw XML response bytes are preserved without reserialization:
 
 ```text
-local Codex scheduled task
-    -> python -m src.prepare_run
-    -> Codex writes data/analysis_run.json
-    -> python -m src.finalize_run --analysis data/analysis_run.json
-    -> HTML / JSON and archive homepage
-    -> validation, inspection, git commit and push
-    -> GitHub Actions deploys committed site/ and posts an Issue notification
+data/inbox/ANNOUNCEMENT-DATE/SHA256/feed.xml
+data/inbox/ANNOUNCEMENT-DATE/SHA256/manifest.json
 ```
 
-## Local setup
+The manifest includes source URL, fetch time, feed publication/build timestamps,
+announcement date, byte count, SHA-256, and the capture CI URL when available.
+Only a complete pair is promoted. Existing captures, including processed inputs,
+are never overwritten; identical bytes create no additional commit.
 
-Use Python 3.12 or newer and an existing Git checkout. From the repository root:
+Freshness means the announcement date equals the capture day's latest weekday
+in Europe/Warsaw (Friday on weekends). Future/inconsistent feed timestamps fail.
+Delayed announcements and exceptional holidays are **input not ready**, not
+empty days. The pipeline does not guess a holiday calendar. Previously validated
+inputs remain eligible for backlog processing even when the computer was offline.
+
+The workflow provides manual dispatch and weekdays 11:15 Europe/Warsaw.
+GitHub officially supports an IANA `timezone` beside `cron`, follows daylight
+saving, can delay scheduled jobs, and uses the default branch:
+[official schedule documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
+The capture job uses only built-in GITHUB_TOKEN with `contents: write`, stages
+only its XML/manifest pair, and does not analyze, change state, deploy or notify.
+Concurrent main updates can reject its ordinary push; retry the failed job,
+never force-push or add a new secret.
+
+## Local preparation and analysis
+
+Use Python 3.12+ and the repository's virtual environment:
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-pytest -q
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pytest -q
 ```
 
-On macOS/Linux activate with `source .venv/bin/activate`. If PowerShell blocks activation, use `.venv\Scripts\python.exe` and `.venv\Scripts\pytest.exe` directly. No `.env` file or user-created secret is needed. The `tzdata` dependency supplies timezone data on Windows.
+Use executables directly if activation/PATH is unavailable. No global permission
+change is needed; tzdata supplies Windows timezone data.
 
-The future schedule is **Monday-Friday at 11:00 Europe/Warsaw**, respecting daylight saving time. **The schedule will be configured later in the desktop app; this repository does not create it.** Select this local project and use the instructions in [DAILY_AUTOMATION.md](DAILY_AUTOMATION.md).
+After synchronizing the intended clean main checkout with
+`git pull --ff-only origin main`, run `python -m src.prepare_run`.
+The formal path reads only the oldest unfinished validated local inbox input,
+using the existing parser, normalized IDs and seen state. It includes new,
+cross and replace-cross announcements and excludes replacement-only submissions.
+There is no HTTP request or network fallback.
 
-For local scheduled tasks, the computer must be on, awake, connected to the internet, and the ChatGPT/Codex desktop app must be running at the scheduled time. The project must remain available on disk. See the [official scheduled-task documentation](https://learn.chatgpt.com/docs/automations?surface=app).
+- Exit 0: pending metadata is ready, including a valid input with no unseen papers.
+- Exit 2: **INPUT NOT READY**; inspect the missing/stale/corrupt input, never write an empty report.
+- Exit 3: current captured inputs were already finalized; no files changed.
 
-## Preparation and analysis
+Unfinished pending/analysis survives a preparation retry. Finish it before
+processing the next oldest capture. Report date follows channel pubDate in
+America/New_York; cloud fetch time, feed timestamps and local preparation/generation
+times remain separate. Old backlog must never be relabeled as today's news.
 
-```powershell
-python -m src.prepare_run
-```
+`--inbox-dir PATH` selects an isolated inbox. Existing `--local-feed PATH`
+remains available for fixtures, requires a non-production `--data-dir`, and
+is the only mode accepting `--report-date`. Its compatibility default remains
+the local run date. Never use fixtures for production recovery.
 
-Preparation fetches `https://rss.arxiv.org/rss/math.DS`. It includes `new`, `cross`, and `replace-cross`, excludes replacement-only entries, normalizes versioned arXiv IDs, and compares them with `data/state.json`. Duplicate feed IDs are collapsed. A malformed feed fails without silently dropping papers.
+Codex reads every supplied title and abstract and writes the unchanged
+[analysis schema](schemas/analysis_run.schema.json). Follow the full research
+profile in [config.yaml](config.yaml), [AGENTS.md](AGENTS.md), and
+[DAILY_AUTOMATION.md](DAILY_AUTOMATION.md). Missing information must be
+“Not specified in the abstract.” Do not invent mathematical claims or proof methods.
 
-It atomically writes `data/pending_run.json`: report date, preparation time, feed build time, category, a snapshot of the research profile, and every unseen paper's title, authors, original abstract, categories, announcement type, IDs, arXiv URL (`abstract_url`), and PDF URL. It never changes state or marks papers seen.
-
-The default report date is the **run date in Europe/Warsaw**, even for a stale feed. `--report-date YYYY-MM-DD` provides an explicit date for a fixture or a deliberate backfill. `--local-feed PATH` reads local XML without a network request. `--data-dir PATH` isolates preparation state and pending data for demonstrations.
-
-Codex must read [config.yaml](config.yaml), the pending file, and [DAILY_AUTOMATION.md](DAILY_AUTOMATION.md), then write `data/analysis_run.json`. There is no automatic keyword fallback. The authoritative Pydantic schema is in [src/models.py](src/models.py); its machine-readable export is [schemas/analysis_run.schema.json](schemas/analysis_run.schema.json).
-
-The top-level keys are `report_date`, `overview`, and `papers`. Every paper entry must explicitly contain:
-
-| Field | Type / allowed values |
-| --- | --- |
-| `arxiv_id` | arXiv identifier; normalized before matching |
-| `priority` | `HIGH PRIORITY`, `RELATED / POSSIBLY INTERESTING`, or `LOW PRIORITY` |
-| `confidence` | `high`, `medium`, or `low` |
-| `relevance_note`, `tldr`, `problem`, `main_result`, `context` | strings |
-| `methods`, `prerequisites`, `keywords` | lists of strings |
-
-Unknown fields, missing fields, duplicate IDs (including version aliases), invalid priorities/confidences/dates, missing papers, unexpected papers, and mismatched report dates are rejected. Full digest text must be nonempty. Use **“Not specified in the abstract.”** for unsupported information. Low-priority entries still require every field; use empty digest strings and lists, with a short relevance note. Their rendered cards contain only title, authors, and arXiv identifier. High-priority and related entries retain the full English digest and original abstract.
-
-For no unseen papers, supply the pending date, an overview such as `No new papers.`, and `"papers": []`. Finalization produces the same report formats. A same-day rerun preserves an existing nonempty report instead of erasing it.
-
-## Finalization, recovery, and output
+## Finalization, reports and recovery
 
 ```powershell
 python -m src.finalize_run --analysis data/analysis_run.json
@@ -103,7 +97,8 @@ pytest -q
 python -m src.notify --check-only
 ```
 
-Finalization validates before writing, merges analysis with the original metadata, and stages all rendering and the updated index inside the data directory. It produces:
+Finalization verifies the immutable input and its pending metadata, retains
+contributing manifests in report `source_inputs`, and produces only:
 
 ```text
 data/reports/YYYY-MM-DD.json
@@ -115,47 +110,71 @@ site/.nojekyll
 data/state.json
 ```
 
-State is updated **only after** every report and index file has been generated and promoted successfully. Rendering/index failures leave the archive and state intact. File replacement is atomic individually; a filesystem failure during promotion can leave some files updated, but leaves state unadvanced. Keep the pending and analysis files and rerun the same finalizer to recover. Do not prepare a different run while recovering. Run one preparation/analysis/finalization sequence at a time.
+Only after all outputs are promoted does one atomic state write record both
+seen IDs and `processed_inputs`. Rendering failures leave the archive intact.
+A disk error during individual file promotion can leave partial artifacts,
+but never advances state. Keep pending/analysis and rerun the finalizer.
+Identical reruns preserve bytes/timestamps; same-day additions merge, and empty
+reruns cannot erase a nonempty report. Completed analysis remains in archive JSON.
 
-Identical finalization preserves timestamps and file bytes, including state. Missing or damaged required HTML/JSON artifacts are repaired; legacy PDF/Markdown files are never repaired or regenerated. New papers found later on the same date are merged into that day's report; write the overview for the combined report after reading the existing report's titles/abstracts. Pending papers already recorded for a different date are rejected as stale.
+The existing English design, responsive layout, native original-abstract
+expanders, research profile, three priorities and mathematical reliability rules
+are preserved. HIGH/RELATED have all digest fields and original abstracts;
+LOW shows only title, authors and arXiv ID. Formulas are embedded SVG, with no
+remote scripts/fonts/CDN. Validate external URLs against IDs locally, without HTTP.
 
-HTML uses embedded vector math, with no client-side typesetter or remote script. Unknown author
-macros retain their literal names with an explicit source note. Original JSON
-metadata is never rewritten by display formatting. Inspect mathematical
-notation before publishing; HTML rendering remains offline. Matplotlib and
-pylatexenc remain necessary for mathematical notation and author accents;
-ReportLab and pypdf are no longer runtime or test requirements.
+The permanent homepage lists all dates newest first, with counts and links.
+New human-readable output is HTML only. Existing PDF/Markdown files are preserved
+and linked only when present. Browser Ctrl+P -> Save as PDF remains optional.
+`python -m src.rebuild_site` rebuilds HTML/assets from archived metadata without
+changing state, JSON, or historical PDF/Markdown.
 
-`data/pending_run.json`, `data/analysis_run.json`, `.venv/`, and `tmp/` are local and ignored. Keep `data/state.json`, `data/reports/`, and `site/` under version control. Research preferences and templates are preserved.
+## Testing and isolated demonstrations
 
-## Fully offline demonstration
-
-The fixture papers are synthetic. Run these commands from the repository root with the virtual environment active; all demo state and generated files remain under ignored `tmp/offline-demo/`:
+Fixtures are synthetic. Use fresh ignored data/site/inbox paths under `tmp/`,
+never production. For the compatible fixture route:
 
 ```powershell
-python -m src.prepare_run --local-feed tests/fixtures/math_ds.xml --report-date 2026-09-04 --data-dir tmp/offline-demo/data
-Copy-Item tests/fixtures/analysis_run.json tmp/offline-demo/data/analysis_run.json
-python -m src.finalize_run --analysis tmp/offline-demo/data/analysis_run.json --data-dir tmp/offline-demo/data --site-dir tmp/offline-demo/site
-python -m src.notify --check-only --data-dir tmp/offline-demo/data --site-dir tmp/offline-demo/site
-python -m src.finalize_run --analysis tmp/offline-demo/data/analysis_run.json --data-dir tmp/offline-demo/data --site-dir tmp/offline-demo/site
+python -m src.prepare_run --local-feed tests/fixtures/math_ds.xml --report-date 2026-09-04 --data-dir tmp/offline-input-demo/data
+Copy-Item tests/fixtures/analysis_run.json tmp/offline-input-demo/data/analysis_run.json
+python -m src.finalize_run --analysis tmp/offline-input-demo/data/analysis_run.json --data-dir tmp/offline-input-demo/data --site-dir tmp/offline-input-demo/site
 ```
 
-The last command checks the normal rerun path. The fixture analysis is hand-authored for testing and must never be copied into a live digest. The test suite blocks HTTP requests, exercises all three priority sections, verifies HTML/JSON-only output and unchanged legacy files, and simulates rendering, publication, and state-write failures. See [VALIDATION.md](VALIDATION.md) for the normal and no-new-papers demonstration.
+Tests block HTTP, exercise inbox and fixture routes, simulate failures and
+assert production data/inbox/state/reports/site remain untouched.
+[VALIDATION.md](VALIDATION.md) records actual test, visual and CI evidence.
 
-Start preparation with a fresh demo data directory. If this demonstration already
-ran, rerun only the finalizer, or choose a different empty demo directory in both
-commands: its existing state correctly excludes papers that were already finalized.
+[validate-offline.yml](.github/workflows/validate-offline.yml) runs on repair
+branch pushes and pull requests with only `contents: read`. It tests, captures
+real official RSS under `tmp/ci-inbox`, prepares it with HTTP blocked, and uploads
+inspection artifacts. It never publishes, notifies, commits, or updates production
+state. Branch push is intentional: a new workflow cannot rely on dispatch before
+it exists on the default branch.
 
-## GitHub publication and notifications
+## Publication and permissions
 
-When you are ready, review and commit the repository changes yourself. This migration does not commit, push, or create a scheduled task.
+The authorized daily task uses the existing exact command prefixes:
 
-In GitHub, enable Issues and select **Settings > Pages > Build and deployment > Source > GitHub Actions**. Use existing local Git authentication for future pushes. No email credentials, AI credentials, or custom Actions secret is required. GitHub supplies the job's short-lived token automatically; the workflow grants `contents: read`, `pages: write`, `id-token: write`, and `issues: write`.
+```text
+git pull --ff-only origin main
+git add -- data/state.json data/reports site
+git commit -m "Add daily math.DS digest"
+git push origin main
+```
 
-[.github/workflows/daily.yml](.github/workflows/daily.yml) runs only on pushes to `main` changing `data/reports/**` or `site/**`, or manual `workflow_dispatch` on `main`. It checks committed artifacts, uploads the committed `site/` directory, deploys Pages, and then calls the notifier. It never fetches arXiv, runs a model, renders a report, commits, or pushes. The Pages steps use the [official Pages upload action](https://github.com/actions/upload-pages-artifact) and [deployment action](https://github.com/actions/deploy-pages).
+Inspect the full generated diff before staging, then inspect the staged diff.
+Never stage inbox inputs locally, unrelated changes, pending/analysis, fixtures,
+temporary outputs or modifications to legacy downloads. Do not use a dated
+commit message, broad permission rule, global setting change or force push.
 
-The notifier finds the latest dated JSON in committed `data/reports/` and checks its matching published JSON, dated HTML, and archive homepage. Notifications link to the dated HTML report and permanent archive; local digest PDF/Markdown files are neither required nor advertised. It does not use `run_metadata.json`. It creates or reopens the persistent **Daily math.DS Digest notifications** Issue and adds one comment per report date, updating that comment when content changes. Pagination prevents duplicate notifications as the archive grows. An empty archive deploys the starter page and skips notification; an incomplete latest report fails the check.
+The unchanged [daily.yml](.github/workflows/daily.yml) triggers only for main
+report/site changes or manual main dispatch. Its path filters exclude inbox-only
+pushes; capture never dispatches the publisher. It checks committed artifacts,
+deploys the site and creates/updates one persistent Issue comment per report date.
+Pages must use GitHub Actions; Issues must be enabled. The publisher's built-in
+token has contents:read, pages:write, id-token:write and issues:write.
+Subscribe to the Issue for GitHub-managed alerts; do not send a local duplicate.
 
-GitHub Issue notifications are enabled by default. Subscribe to the persistent Issue and choose your GitHub notification preferences to receive GitHub-managed email or mobile alerts. Direct email is off by default; its credential-based sender and unused email template have been removed.
-
-If Pages or Issue posting is denied, check Pages configuration, repository Issues, and organization Actions permissions. A failed notification can be retried with manual dispatch without regenerating a report. Actual deployment and notification require a future authorized push and are not exercised by the offline test suite.
+Maintenance is validated on a repair branch. Merge/deployment requires user
+confirmation. Interactive or CI success does not prove unattended Scheduled Task
+execution; that real production acceptance remains separate.

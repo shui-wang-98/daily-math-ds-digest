@@ -1,9 +1,11 @@
 # Daily Codex automation instructions
 
-These are the reusable instructions for the future local scheduled task.
-The intended schedule is Monday-Friday at 11:00 Europe/Warsaw. Configure that
-schedule later in the desktop app; reading this file does not create a task or
-authorize a maintenance session to commit or push.
+These are the reusable instructions for the local scheduled task, intended for
+Monday-Friday at 12:00 Europe/Warsaw. The task remains paused until the user
+authorizes its configuration and execution. Reading or editing this file does
+not change or trigger that task. The separate cloud capture targets weekdays
+11:15 Europe/Warsaw; a scheduled capture can be delayed or fail. Local preparation
+must inspect the synced input, never assume the cloud job has finished.
 
 ## Scope and start
 
@@ -20,13 +22,28 @@ authorize a maintenance session to commit or push.
    changes, inspect them and retain the pending/analysis pair for recovery.
    If clean, synchronize with `git pull --ff-only origin main` using existing
    local authentication. Stop and report a conflict; never force-push.
-4. Run only one daily sequence at a time. If an earlier finalization failed,
-   recover that run using its existing pending and analysis before preparing
-   another. Otherwise run `python -m src.prepare_run`.
+4. Run only one daily sequence at a time. Run `python -m src.prepare_run` to
+   prepare the oldest unfinished validated `data/inbox/` input or resume the
+   existing unfinished pending run without overwriting its analysis. This is
+   strictly offline: never call `src.capture_feed` locally and never fall back
+   to live arXiv, full papers, or fixture data. Exit 2 means **INPUT NOT READY**
+   (missing, stale, or damaged input): report the specific failure and do not
+   write an empty analysis/report. Exit 3 means all available current inputs
+   were already finalized: stop without changing or republishing anything.
+   Exit 0 supplies pending metadata, including a genuinely empty valid input.
+   If a prior finalization failed, retain and recover its pending/analysis pair.
 5. Read the complete `data/pending_run.json`. Its `report_date` is the exact date
    to copy to the analysis. It includes every unseen `new`, `cross`, and
    `replace-cross` announcement and excludes replacement-only announcements.
-   Preparation has not marked any paper seen. Never manually edit state.
+   Preparation has not marked any paper seen or any input processed. Never
+   manually edit state. `source_input` records source URL, cloud fetch time,
+   announcement/build timestamps, byte count, and SHA-256. `report_date` is the
+   RSS announcement date in America/New_York, including for old backlog inputs;
+   it is not today's execution date or the UTC cloud fetch date. Never override
+   it. A feed must have been current when captured: its announcement date must
+   equal that day's latest weekday in Europe/Warsaw (Friday on weekends).
+   Missing announcements, including exceptional holidays, require a later
+   successful capture; do not guess a holiday calendar or publish an empty day.
 
 ## Research classification
 
@@ -129,21 +146,24 @@ followed by atomic replacement. Match the Pydantic `AnalysisRun` model exactly:
    and check desktop and narrow/mobile widths when available.
    Verify counts, all pending IDs exactly once, metadata fidelity, original
    abstracts in native details/summary elements, every full digest field, compact
-   LOW entries, the archive-home link, and working external arXiv abstract and
-   original-paper PDF links. Verify every archive date, newest-first ordering,
+   LOW entries and the archive-home link. Validate external arXiv abstract/PDF
+   URL structure and ID correspondence locally; do not request those URLs.
+   Verify every archive date, newest-first ordering,
    and its relative HTML link. Legacy digest PDF/Markdown links may appear only
    when the corresponding files already exist; new dates must not have them.
    Do not regenerate or inspect local digest PDF/Markdown outputs as a daily
    requirement. Check line wrapping, clipping, fonts, and mathematical notation;
    if conversion changes mathematical meaning, fix the rendering or stop.
-4. Confirm that state includes newly finalized papers only after all artifacts
-   exist. Rerun the finalizer once and verify no content changes for identical
+4. Confirm that state includes newly finalized papers and the completed input's
+   `processed_inputs` entry only after all artifacts exist. The report's
+   `source_inputs` must retain every contributing capture, including same-day
+   additions. Rerun the finalizer once and verify no content changes for identical
    inputs. Never publish an incomplete output set or a report with unresolved
    mathematical or rendering errors.
 
 ## Publish only after all validation succeeds
 
-These steps apply to the future authorized daily task, not the migration session.
+These steps apply only to an explicitly authorized daily task, not maintenance.
 
 1. Inspect `git diff --check`, `git status --short`, and the full generated diff.
    Stage only `data/state.json`, `data/reports/YYYY-MM-DD.json`,
@@ -152,10 +172,17 @@ These steps apply to the future authorized daily task, not the migration session
    `site/.nojekyll`) belonging to the validated run. Preserve legacy PDF and
    Markdown files; never stage their modification or deletion. Never stage
    pending, analysis, fixtures, `tmp/`, `.venv/`, secrets, or unrelated changes.
-   Do not use `git add .`.
+   Do not use `git add .`. After verifying the complete diff contains only those
+   generated files, use the exact existing allowed prefix:
+   `git add -- data/state.json data/reports site`.
+   Inspect the staged file list and diff again before committing. Do not stage
+   cloud inbox inputs locally; the capture workflow commits only its own pair.
 2. Only after tests, schema validation, artifact checks, and visual/mathematical
-   inspection all succeed, commit the generated files with a dated digest message
-   and push to `origin main` using existing Git authentication. If there is no
+   inspection all succeed, use exactly
+   `git commit -m "Add daily math.DS digest"`, then `git push origin main` with
+   existing Git authentication. Do not substitute a dated commit message.
+   These commands and `git pull --ff-only origin main` match `.codex/rules/math-ds.rules`.
+   Do not broaden the permission rules or change global settings. If there is no
    generated diff, do not make an empty commit. If a prior validated commit has
    not been pushed, inspect that commit and retry the push rather than reanalyzing.
 3. If a push fails due to concurrent changes, stop and report the conflict;
@@ -166,3 +193,8 @@ These steps apply to the future authorized daily task, not the migration session
    Issue notification. Do not send direct email or post a second notification
    from the local task. Report the date, counts, validation outcome, and push
    outcome; identify any failure or required user action accurately.
+5. After completing publication of one input, repeat the same sequence for the
+   next captured unfinished input. Process backlog oldest first, with each
+   report retaining its own announcement date. Stop on input-not-ready or
+   already-finalized status. A missing current input must not erase or relabel
+   valid older reports. Never prepare the next input while recovering a failure.
