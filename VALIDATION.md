@@ -25,6 +25,11 @@ inputs, demonstrations and diagnostics remain under ignored `tmp/`.
 - Third run: **87 passed in 9.36s**, exit 0. Command:
   `.venv/Scripts/python.exe -m pytest -q --tb=short`.
   Actual logs are under ignored `tmp/offline-input-validation/`.
+- Final review reproduced another boundary failure: an item without pubDate
+  was accepted, allowing the legacy parser's current-time fallback to make its
+  metadata unstable across retries. The targeted regression initially failed
+  (DID NOT RAISE). Capture now requires each item's announcement date to match
+  the feed date; the compatibility parser itself remains unchanged.
 
 ## Design and reproducible checks
 
@@ -65,9 +70,11 @@ path filters exclude inbox-only changes; tests enforce that separation.
 ## Executed local, visual and cloud validation
 
 - Final local command: `.venv/Scripts/python.exe -m pytest -q`:
-  **89 passed in 11.20s**, exit 0. Two additional regressions check reverse-order
+  **90 passed in 10.96s**, exit 0. Additional regressions check reverse-order
   inbox insertion and prevent a fixture finalizer accidentally targeting the
-  default production site when only data-dir was isolated.
+  default production site when only data-dir was isolated, and reject missing
+  item announcement dates before persistence. The earlier isolation run passed
+  89 tests in 11.20s.
 - `git diff --check`: exit 0. Existing CRLF checkout warnings are informational.
 - `codex execpolicy check --rules .codex/rules/math-ds.rules -- ...` returned
   allow for all four documented daily Git commands. The fixed commit message
@@ -85,12 +92,21 @@ path filters exclude inbox-only changes; tests enforce that separation.
   vector fraction and indexed notation, and wrapping were checked. No horizontal
   overflow was detected; browser warning/error log was empty. Viewport override
   was reset after inspection. External arXiv links were not requested.
+  The temporary HTTP server logged only a non-blocking missing favicon request
+  (404); HTML and stylesheet requests succeeded. The test tab and server were
+  closed after inspection.
 - First real non-publishing CI:
   [run 34966256476](https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/34966256476),
   commit `c12dd265bd5fc525c42814e3afc2f1863b7fa6bf`, **success**.
   Downloaded actual runner logs confirm **87 passed in 12.25s**, successful
   official RSS capture, HTTP-blocked preparation, unchanged production data,
   and inspection-artifact upload. No deployment or notification step ran.
+- Second real CI:
+  [run 34967193024](https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/34967193024),
+  commit `47f83af5d8b695515897dcd77a78c7e0ef423d44`, **success**;
+  downloaded logs confirm **89 passed in 5.93s** and successful real capture
+  plus HTTP-blocked preparation. The item-date hardening is tested in the
+  subsequent final-code run recorded below.
 - Artifact `validated-live-rss`, ID `10394859604`, was downloaded and checked.
   Raw XML is 122704 bytes; SHA-256:
   `c2ead384a44e73215e6b26a60449e1dc3fbca5cfc22a4cfeea11a9ac47ae2441`.
@@ -117,6 +133,7 @@ Research profile, analysis schema, requirements, templates/styles, existing
 publisher workflow, project permissions, production reports/state/site and
 legacy downloads are unchanged. The actual paused task and user-level Codex
 configuration are unchanged. Diagnostic scripts/logs are ignored, not committed.
+All 15 initially snapshotted protected files retain identical SHA-256 hashes.
 
 ## Outstanding production acceptance
 

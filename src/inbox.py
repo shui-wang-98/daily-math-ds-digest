@@ -71,6 +71,10 @@ def validate_rss(raw: bytes, fetched_at: datetime) -> tuple[FeedResult, datetime
             raise InputNotReady(f"Stale RSS: announcement date {feed_date}; expected {expected_feed_date(fetched_at)}")
         if max(published, built) > fetched_at + timedelta(minutes=15) or built < published:
             raise InputNotReady("Inconsistent or future RSS timestamps")
+        for item in channel.findall("item"):
+            announced = _date(item, "pubDate")
+            if announced.astimezone(ZoneInfo("America/New_York")).date().isoformat() != feed_date:
+                raise InputNotReady("Item pubDate does not match the feed announcement date")
         all_papers = parse_feed(raw, ALL_TYPES)
         if len(all_papers.papers) != len(channel.findall("item")):
             raise InputNotReady("Unknown announcement type; refusing to silently drop an item")

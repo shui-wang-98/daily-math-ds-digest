@@ -275,3 +275,12 @@ def test_backlog_order_follows_announcement_dates_not_capture_insertion(tmp_path
     pending = preparer.prepare_run(data_dir=tmp_path)
     assert pending.source_input == later
     assert not pending.papers  # Repeated IDs are seen, but this input still needs finalization.
+
+
+def test_missing_item_announcement_date_is_rejected_before_archiving(tmp_path):
+    root = ET.fromstring(RAW)
+    item = root.find('channel/item')
+    item.remove(item.find('pubDate'))
+    with pytest.raises(inbox.InputNotReady, match='pubDate'):
+        archive(tmp_path, ET.tostring(root))
+    assert not (tmp_path / 'inbox').exists()
