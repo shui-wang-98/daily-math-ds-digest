@@ -1,0 +1,78 @@
+# Project-local publication command prefixes. No general Git or shell grants.
+# Prefix rules can also match trailing arguments; explicit forbidden rules win.
+# These rules authorize matching commands outside the sandbox without opening
+# GitHub access to other sandboxed commands.
+
+prefix_rule(
+    pattern = ["git", "pull", "--ff-only", "origin", "main"],
+    decision = "allow",
+    justification = "Allow the daily task to fast-forward the local main branch from origin/main.",
+    match = ["git pull --ff-only origin main"],
+    not_match = [
+        "git pull origin main",
+        "git pull --rebase origin main",
+        "git pull --ff-only origin another-branch",
+    ],
+)
+
+prefix_rule(
+    pattern = ["git", "add", "--", "data/state.json", "data/reports", "site"],
+    decision = "allow",
+    justification = "Allow the daily task to stage its state, report archive, and generated site paths.",
+    match = ["git add -- data/state.json data/reports site"],
+    not_match = [
+        "git add .",
+        "git add -A",
+        "git add data/state.json data/reports site",
+        "git add -- src tests",
+    ],
+)
+
+prefix_rule(
+    pattern = ["git", "commit", "-m", "Add daily math.DS digest"],
+    decision = "allow",
+    justification = "Allow the daily task to commit validated report outputs with the approved fixed message.",
+    match = ['git commit -m "Add daily math.DS digest"'],
+    not_match = [
+        "git commit --amend",
+        'git commit -m "Unrelated change"',
+        'git commit -m "Add math.DS digest 2026-09-15"',
+    ],
+)
+
+prefix_rule(
+    pattern = ["git", "push", "origin", "main"],
+    decision = "allow",
+    justification = "Allow the daily task to publish the local main branch to origin/main after validation.",
+    match = ["git push origin main"],
+    not_match = [
+        "git push origin another-branch",
+        "git push --force origin main",
+        "git push --force-with-lease origin main",
+        "git push -f origin main",
+    ],
+)
+
+prefix_rule(
+    pattern = ["git", "push", "origin", "main", "--force"],
+    decision = "forbidden",
+    justification = "Do not rewrite published history with --force; use git push origin main.",
+    match = ["git push origin main --force"],
+    not_match = ["git push origin main", "git push origin main --force-with-lease"],
+)
+
+prefix_rule(
+    pattern = ["git", "push", "origin", "main", "--force-with-lease"],
+    decision = "forbidden",
+    justification = "Do not rewrite published history with --force-with-lease; use git push origin main.",
+    match = ["git push origin main --force-with-lease"],
+    not_match = ["git push origin main", "git push origin main --force"],
+)
+
+prefix_rule(
+    pattern = ["git", "push", "origin", "main", "-f"],
+    decision = "forbidden",
+    justification = "Do not rewrite published history with -f; use git push origin main.",
+    match = ["git push origin main -f"],
+    not_match = ["git push origin main", "git push -f origin main"],
+)

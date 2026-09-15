@@ -1,0 +1,19 @@
+# Project-local permissions for the daily math.DS automation.
+default_permissions = "math-ds-automation"
+
+[features]
+network_proxy = true
+
+[permissions.math-ds-automation]
+description = "Workspace access with only the configured public arXiv RSS host."
+# Inherit normal workspace boundaries, including protected .git and .codex paths.
+extends = ":workspace"
+
+[permissions.math-ds-automation.network]
+enabled = true
+allow_local_binding = false
+
+[permissions.math-ds-automation.network.domains]
+# config.yaml -> src.prepare_run -> src.fetch_arxiv.fetch_feed.
+# Paper links and XML namespace URLs are metadata, not additional fetch targets.
+"rss.arxiv.org" = "allow"
