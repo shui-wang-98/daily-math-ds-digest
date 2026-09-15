@@ -1,9 +1,10 @@
 # Daily Codex automation instructions
 
 These are the reusable instructions for the local scheduled task, intended for
-Monday-Friday at 12:00 Europe/Warsaw. The task remains paused until the user
-authorizes its configuration and execution. Reading or editing this file does
-not change or trigger that task. The separate cloud capture targets weekdays
+Monday-Friday at 12:00 Europe/Warsaw. The user approved production deployment
+on 2026-09-15; the existing local task was updated and resumed. Its actual
+unattended run still requires acceptance evidence in VALIDATION.md. Reading or
+editing this file does not change or trigger that task. Cloud capture targets weekdays
 11:15 Europe/Warsaw; a scheduled capture can be delayed or fail. Local preparation
 must inspect the synced input, never assume the cloud job has finished.
 

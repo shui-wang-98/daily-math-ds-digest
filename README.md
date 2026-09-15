@@ -11,10 +11,12 @@ Cloud capture (weekdays 11:15 Europe/Warsaw) -> committed inbox -> local Git syn
 -> offline preparation -> Codex analysis -> HTML/JSON -> validated Git commit/push
 -> existing Pages workflow and persistent Issue notification.
 
-The prepared local-task instructions target weekdays **12:00 Europe/Warsaw**.
-The actual task remains paused; editing this repository does not modify or
-trigger it. Follow [DAILY_AUTOMATION.md](DAILY_AUTOMATION.md) when separately
-authorized. Local execution requires the computer awake and the desktop app
+The existing local task targets weekdays **12:00 Europe/Warsaw** and was updated
+and resumed after production approval on 2026-09-15. The real cloud-input through
+Pages/Issue path has passed; an actual unattended task run remains unverified.
+See [VALIDATION.md](VALIDATION.md) for evidence and follow
+[DAILY_AUTOMATION.md](DAILY_AUTOMATION.md). Editing repository instructions does
+not itself change or trigger the task. Local execution requires the computer awake and the desktop app
 running; see the [official task documentation](https://learn.chatgpt.com/docs/automations?surface=app).
 
 ## Cloud capture
@@ -22,7 +24,8 @@ running; see the [official task documentation](https://learn.chatgpt.com/docs/au
 [capture-rss.yml](.github/workflows/capture-rss.yml) downloads only
 `https://rss.arxiv.org/rss/math.DS`. It validates RSS structure, math.DS category,
 timestamps, announcement types, metadata, URL/ID correspondence and freshness
-before saving anything. Raw XML response bytes are preserved without reserialization:
+before saving anything. Raw XML response bytes are preserved without reserialization;
+`.gitattributes` disables Git line-ending conversion for inbox XML, including Windows checkouts:
 
 ```text
 data/inbox/ANNOUNCEMENT-DATE/SHA256/feed.xml

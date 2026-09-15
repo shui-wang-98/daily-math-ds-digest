@@ -1,8 +1,13 @@
 # Offline inbox migration: acceptance evidence
 
-Repair branch: `fix/offline-arxiv-input`. Production merge/deployment and
-changes to the paused local task require separate user approval. All fixture
-inputs, demonstrations and diagnostics remain under ignored `tmp/`.
+Current status (2026-09-15): production deployment was approved and completed;
+the real cloud capture, local offline analysis, fixed-message Git publication,
+Pages and Issue notification passed. The existing local task is ACTIVE with
+updated inbox instructions, but its unattended execution remains unverified.
+Detailed production evidence is in the last section. Earlier sections record
+the pre-approval repair branch `fix/offline-arxiv-input` and its historical
+checks, not the current task/deployment status. All fixtures and diagnostics
+remain under ignored `tmp/`.
 
 ## Baseline and diagnosis
 
@@ -16,7 +21,7 @@ inputs, demonstrations and diagnostics remain under ignored `tmp/`.
   This is not evidence of an arXiv network root cause.
 - Previously reported WinError 10013 is not diagnosed from commands that
   failed to parse. The new local path avoids HTTP; global permissions and
-  the paused task are unchanged.
+  the paused task were unchanged during that pre-approval repair phase.
 - First implementation run: **14 failed, 48 passed**. A file-loop variable
   shadowed the provenance variable in finalization; its traceback identified
   the failure and the loop variable was renamed.
@@ -48,7 +53,7 @@ cannot erase nonempty reports. Tests block requests and sockets on the local
 path and protect production data/inbox/state/reports/site.
 
 Cloud capture targets weekdays 11:15 Europe/Warsaw. Prepared local instructions
-target weekdays 12:00; the actual paused task is unchanged. Daily Git commands
+target weekdays 12:00; the task was kept paused during the repair phase. Daily Git commands
 use the existing narrow rules and fixed message `Add daily math.DS digest`.
 
 Official references checked:
@@ -140,18 +145,20 @@ path filters exclude inbox-only changes; tests enforce that separation.
 
 Research profile, analysis schema, requirements, templates/styles, existing
 publisher workflow, project permissions, production reports/state/site and
-legacy downloads are unchanged. The actual paused task and user-level Codex
-configuration are unchanged. Diagnostic scripts/logs are ignored, not committed.
-All 15 initially snapshotted protected files retain identical SHA-256 hashes.
+legacy downloads were unchanged during pre-approval validation. The task and
+user-level Codex configuration were unchanged then. Diagnostic scripts/logs are
+ignored, not committed. All 15 initially snapshotted protected files retained
+identical SHA-256 hashes at that stage.
 
-## Outstanding production acceptance
+## Outstanding unattended acceptance
 
-After approved merge/deployment, verify real input committed to main, local Git
-sync, actual Codex English analysis, HTML/JSON, automatic daily commit/push,
-Pages deployment and the persistent Issue update. Inspect a real Scheduled Task
-run/log. Interactive success and CI success do not establish unattended operation.
-If the product cannot trigger or inspect that task, request only the necessary
-real run or log. Do not publish fixture reports or test notifications.
+Production publication is verified below. Inspect a real Scheduled Task run/log
+to establish unattended operation under the task's own permissions. Interactive
+success and CI success cannot substitute for that run. The enabled automation
+tool supports update/view but exposes no run-now operation; native app control
+is unavailable in this session. Do not use a follow-up chat message or a changed
+schedule as pretend scheduler evidence. Request only one necessary actual run
+or its log. No fixture report or test Issue notification is authorized.
 
 ## Historical context
 
@@ -159,7 +166,7 @@ The 2026-09-08 HTML-only migration recorded 62 passing tests and isolated browse
 checks. The 2026-09-07 migration recorded 44 passing tests for the retired
 multi-format pipeline. Those are historical results, not evidence that this new
 architecture or an unattended production run has passed.
-# Production acceptance: 2026-09-15
+## Production acceptance: 2026-09-15
 
 The first production finalization also exposed valid source-TeX spellings not
 accepted by the vector renderer: unbraced bold Greek arguments and compact
@@ -194,5 +201,65 @@ all 18 archived paper records, analysis fields, and seen-state entries. Exact
 copies remain in ignored `tmp/offline-input-validation/completed-legacy-2026-09-07/`.
 The completed pending file was retired only after those checks. Production
 preparation then found 65 unseen papers while HTTP and socket calls were blocked,
-with state bytes unchanged. Further publication acceptance is recorded below
-when executed; these observations alone do not verify an unattended task run.
+with state bytes unchanged.
+
+### Completed production results
+
+- Deployment fixes: `bf690bb` adds `.gitattributes` and `tests/test_git_transport.py`;
+  `fd454c7` updates `src/math_render.py` and its tests; `41c6aac` preserves
+  standard author accents/separators and undelimited tau notation. No research
+  profile, dependency, permission file, publisher workflow or template/style changed.
+- Final complete local command: `.venv/Scripts/python.exe -m pytest -q`,
+  **98 passed in 12.73s**, exit 0. `git diff --check` passed. Earlier final-code
+  runs passed 98 tests in 16.03s and 16.78s. The post-finalization suite protects
+  production file bytes and timestamps. `src.notify --check-only` passed.
+- Final code CI on `41c6aac`:
+  [34977828842](https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/34977828842),
+  **success**, downloaded logs confirm **98 passed in 6.79s**, live official
+  capture and HTTP-blocked preparation. Inspection artifact: `10400306277`.
+- Codex read all 65 supplied titles/abstracts and authored English analysis:
+  **12 HIGH PRIORITY, 27 RELATED, 26 LOW PRIORITY**. Report/announcement date:
+  **2026-09-15**. All 30 new, 20 cross and 15 replace-cross entries appear once;
+  all 9 replacement-only entries are excluded. No API/AI service or full-paper
+  access was used. Static arXiv URL/ID checks made no arXiv requests.
+- Actual default production finalization succeeded. Output paths:
+  `data/reports/2026-09-15.json`, `site/reports/2026-09-15/index.html`,
+  `site/reports/2026-09-15/report.json`, `site/index.html`, `data/state.json`.
+  The state records the 65 seen IDs and immutable input only after output
+  promotion. Prior failed attempts changed no state/archive bytes.
+- Full metadata/abstract equality, schema/coverage/counts, static links,
+  provenance, original abstract HTML, LOW empty-field policy, and every prior
+  report/legacy download hash were checked by an ignored inspection script.
+  Re-finalization with HTTP/socket blocked preserved every data/site byte.
+  A subsequent `src.prepare_run` returned **exit 3**, already finalized, with
+  no file changes. No new PDF/Markdown was generated and none was rewritten.
+- Actual browser inspection covered the homepage and dated report at desktop
+  and 390-pixel width. All 39 original abstracts were expanded; formula images
+  loaded successfully and no horizontal overflow occurred. All 26 LOW list
+  items had exactly title link, authors, and identifier, with no digest/abstract.
+  Date links list 2026-09-15 then 2026-09-07; only the historical date links
+  legacy downloads. Standard author accents and source-notation handling were
+  corrected during this inspection. Undefined source macros remain literal
+  with explicit notes, without guessing definitions.
+- Daily publication commit **`dd98b65a7dfe4c87876944ecb8dfbcea37eef737`** used
+  exactly **`Add daily math.DS digest`**, staging only the five files above.
+  `git push origin main` succeeded. Inbox was not staged locally.
+- Production publisher
+  [34977929875](https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/34977929875)
+  **succeeded**, including Pages and Issue notification. Actual logs were read.
+  The [homepage](https://shui-wang-98.github.io/daily-math-ds-digest/),
+  [HTML report](https://shui-wang-98.github.io/daily-math-ds-digest/reports/2026-09-15/)
+  and [published JSON](https://shui-wang-98.github.io/daily-math-ds-digest/reports/2026-09-15/report.json)
+  returned HTTP 200 and matched local bytes exactly. Exactly one date-marked
+  [Issue comment](https://github.com/shui-wang-98/daily-math-ds-digest/issues/1#issuecomment-5681352998)
+  contains 12/27/26 and the correct public links. Inbox-only capture did not
+  create a publisher run or completion notification.
+- Existing automation `daily-local-math-ds-report`, name `Daily local math.DS report`,
+  was updated via the product tool and verified ACTIVE. Its existing heartbeat
+  kind, target task, name and weekday 12:00 Europe/Warsaw cadence were preserved.
+  It now follows the current offline/retry/publication procedure. No new task,
+  global configuration, credential or broad permission was created.
+- **Not yet verified:** a real resumed Scheduled Task run, its unattended Git
+  permissions, and schedule punctuality. All local production work above ran
+  in this interactive session. The user needs only one actual task run/log to
+  close that remaining acceptance gap; today's repeat should exit 3 safely.
