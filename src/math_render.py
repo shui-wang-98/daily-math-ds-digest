@@ -17,8 +17,11 @@ from matplotlib.mathtext import MathTextParser
 from matplotlib import rc_context
 from markupsafe import Markup
 from pylatexenc.latex2text import LatexNodes2Text
+from pylatexenc.latexwalker import get_default_latex_context_db
 
-_MATH = re.compile(r"(?<!\\)(\$\$.*?\$\$|\$[^$]*?\$)|\\\(.*?\\\)|\\\[.*?\\\]", re.S)
+_MATH = re.compile(
+    r"\\begin\{(?P<env>equation\*?|displaymath)\}(?P<body>.*?)\\end\{(?P=env)\}"
+    r"|(?<!\\)(\$\$.*?\$\$|\$[^$]*?\$)|\\\(.*?\\\)|\\\[.*?\\\]", re.S)
 # Some RSS abstracts omit math delimiters around a formula. Recognize contiguous
 # formula tokens with explicit math commands; never infer symbols from prose.
 _BARE_MATH = re.compile(
@@ -26,6 +29,7 @@ _BARE_MATH = re.compile(
     r"(?:\\[A-Za-z]+|[A-Za-z0-9_^{}()/,.+\-])*(?:\s+[0-9]+[,.]?)?"
 )
 _PARSER = MathTextParser("path")
+_LATEX_CONTEXT = get_default_latex_context_db()
 
 
 def _plain(text: str) -> str:
@@ -39,8 +43,19 @@ def _segments(text: str, plain_converter=_plain):
     for match in _MATH.finditer(text):
         yield from _plain_segments(text[end:match.start()], plain_converter)
         source = match.group()
-        delimiter = 2 if source.startswith(("$$", r"\(", r"\[")) else 1
-        yield True, source[delimiter:-delimiter]
+        if match.group('env'):
+            formula = match.group('body')
+        else:
+            delimiter = 2 if source.startswith(("$$", r"\(", r"\[")) else 1
+            formula = source[delimiter:-delimiter]
+        # An outer text block can legitimately contain inline mathematics.
+        # Render its inner spans separately, preserving words and punctuation.
+        text_block = re.fullmatch(r"\s*\\text\{(.*)\}([,.;]?)\s*", formula, re.S)
+        if text_block and '$' in text_block[1]:
+            yield from _segments(text_block[1], plain_converter)
+            yield False, text_block[2]
+        else:
+            yield True, formula
         end = match.end()
     yield from _plain_segments(text[end:], plain_converter)
 
@@ -58,6 +73,11 @@ def _plain_segments(text: str, plain_converter=_plain):
 def _formula(source: str):
     # Equivalent spelling accepted by the vector math renderer.
     normalized = source.replace(r"\textrm", r"\mathrm")
+    normalized = re.sub(r"\\[dt]frac(?![A-Za-z])", lambda _: r"\frac", normalized)
+    # TeX permits single-token arguments without braces; mathtext requires them.
+    normalized = re.sub(r"\\frac\s*([0-9])\s*([0-9])", r"\\frac{\1}{\2}", normalized)
+    normalized = re.sub(r"\\boldsymbol\s+(\\[A-Za-z]+|[A-Za-z])",
+                        lambda m: r"\boldsymbol{" + m[1] + "}", normalized)
     aliases = {"ge": "geq", "le": "leq", "ne": "neq"}
     normalized = re.sub(r"\\(ge|le|ne)(?![A-Za-z])", lambda m: "\\" + aliases[m[1]], normalized)
     normalized = re.sub(r"\\(mathbb|mathcal|mathfrak|mathrm)\s+([A-Za-z])",
@@ -108,15 +128,24 @@ def _svg_formula(normalized: str):
     return base64.b64encode(buffer.getvalue()).decode("ascii"), width / size, depth / size
 
 
-def _html_plain(value: str) -> str:
+def _html_plain(value: str, unknown: set[str] | None = None) -> str:
     # In RSS prose these are literal punctuation, not TeX alignment/comments.
+    # Unknown author macros outside delimiters must not silently disappear.
+    def retain_macro(match):
+        name = match[1]
+        if _LATEX_CONTEXT.get_macro_spec(name) is not None:
+            return match[0]
+        if unknown is not None:
+            unknown.add(name)
+        return r"\textbackslash{}" + name + " "
+    value = re.sub(r"\\([A-Za-z]+)", retain_macro, value)
     return _plain(re.sub(r"(?<!\\)([%&])", r"\\\1", value))
 
 
 def html_text(value: str) -> Markup:
     """Escape prose and typeset math; never change the archived source strings."""
     result, unknown = [], set()
-    for is_math, text in _segments(value, _html_plain):
+    for is_math, text in _segments(value, lambda part: _html_plain(part, unknown)):
         if is_math:
             normalized, names, *_ = _formula(text)
             unknown.update(names)

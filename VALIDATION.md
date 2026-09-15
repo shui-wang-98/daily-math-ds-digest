@@ -161,6 +161,18 @@ multi-format pipeline. Those are historical results, not evidence that this new
 architecture or an unattended production run has passed.
 # Production acceptance: 2026-09-15
 
+The first production finalization also exposed valid source-TeX spellings not
+accepted by the vector renderer: unbraced bold Greek arguments and compact
+fractions. An original abstract also used an equation environment, and another
+used a text block containing inline mathematics. The renderer now handles
+these forms without modifying archived source text; regression tests check
+formula grouping and intervening prose. The failed finalization left every
+preexisting report/site/state byte unchanged. This was an actual rendering
+failure, not evidence about network access.
+Inspection also reproduced silent removal of an undefined macro naming a
+property in prose. Such macros now retain their literal names and an explicit
+source-notation note rather than deleting the property from the sentence.
+
 After explicit deployment approval, main was fast-forwarded to `3dd2f3d`.
 The first production capture succeeded in
 [run 34975423235](https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/34975423235),

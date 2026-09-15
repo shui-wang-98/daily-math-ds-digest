@@ -3,12 +3,45 @@ from pathlib import Path
 import pytest
 
 from src.finalize_run import finalize_run
-from src.math_render import _formula, _svg_formula, html_text
+from src.math_render import _formula, _svg_formula, _segments, html_text
 from src.models import AnalysisRun
 from src.prepare_run import prepare_run
 from src.utils import atomic_write_json
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+@pytest.mark.parametrize('source', [r'\frac12', r'\tfrac{1}{2}', r'\dfrac{1}{2}'])
+def test_standard_fraction_spellings(source):
+    normalized, unknown = _formula(source)
+    assert normalized == r'\frac{1}{2}'
+    assert not unknown
+
+
+def test_unbraced_bold_greek_is_typeset_without_undefined_macro_note():
+    normalized, unknown = _formula(r'{\boldsymbol \Pi}^0_4')
+    assert normalized == r'{\boldsymbol{\Pi}}^0_4'
+    assert not unknown
+    assert 'data:image/svg+xml;base64,' in html_text(r'\({\boldsymbol \Pi}^0_4\)')
+
+
+def test_equation_environment_keeps_complete_formula_together():
+    formula = r'\lim_{N\to\infty}\frac{1}{N}\sum_{n=1}^N x_n=0'
+    source = 'Before ' + r'\begin{equation*}' + formula + r'\end{equation*}' + ' after.'
+    assert list(_segments(source)) == [(False, 'Before '), (True, formula), (False, ' after.')]
+    assert html_text(source).count('class="math-formula"') == 1
+
+
+def test_text_block_with_nested_inline_math_preserves_words_and_formulas():
+    source = r'$$\text{$a=\frac12$ if and only if $b>2$},$$'
+    spans = list(_segments(source))
+    assert (True, r'a=\frac12') in spans
+    assert (False, ' if and only if ') in spans
+    assert (True, 'b>2') in spans
+    rendered = html_text(source)
+    assert rendered.count('class="math-formula"') == 2
+    assert ' if and only if ' in rendered
+    assert rendered.endswith(',')
 
 
 def test_fraction_and_symbols_are_typeset_instead_of_flattened():
@@ -32,6 +65,13 @@ def test_undefined_macros_are_retained_with_explicit_source_note():
     assert r"\backslash\mathrm{IP}" in normalized
     text = html_text("Original: $" + source + "$.")
     assert "does not define the macros Hau, IP" in text
+
+
+def test_unknown_prose_macro_cannot_silently_delete_the_named_property():
+    result = html_text(r'It does not have \STRP. A \blue{group} appears.')
+    assert r'\STRP' in result
+    assert r'\blue' in result and 'group' in result
+    assert 'does not define the macros STRP, blue' in result
 
 
 def test_author_accents_and_undelimited_rss_math():
