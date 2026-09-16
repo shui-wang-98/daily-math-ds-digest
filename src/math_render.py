@@ -72,6 +72,13 @@ def _plain_segments(text: str, plain_converter=_plain):
 def _formula(source: str):
     # Equivalent spelling accepted by the vector math renderer.
     normalized = source.replace(r"\textrm", r"\mathrm")
+    # Mathtext incorrectly requires a word boundary after the TeX control
+    # symbol \#. Group it when a letter follows; the glyph and spacing stay
+    # unchanged. Text blocks already accept this spelling and must be preserved.
+    # The original source remains in JSON and image alt text.
+    normalized = re.sub(
+        r"(?P<text>\\text\s*\{(?:\\.|[^\\}])*\})|(?<!\\)\\#(?=[A-Za-z])",
+        lambda m: m[0] if m['text'] is not None else r"{\#}", normalized)
     normalized = re.sub(r"\\[dt]frac(?![A-Za-z])", lambda _: r"\frac", normalized)
     # TeX permits single-token arguments without braces; mathtext requires them.
     normalized = re.sub(r"\\frac\s*([0-9])\s*([0-9])", r"\\frac{\1}{\2}", normalized)

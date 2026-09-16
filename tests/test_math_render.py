@@ -1,4 +1,6 @@
+import base64
 from pathlib import Path
+import xml.etree.ElementTree as ET
 
 import pytest
 
@@ -9,6 +11,30 @@ from src.prepare_run import prepare_run
 from src.utils import atomic_write_json
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+@pytest.mark.parametrize(('source', 'reference'), [
+    (r'\#P_f=4', r'\# P_f=4'),
+    (r'\#A+\#B', r'\# A+\# B'),
+    (r'x=\#O_k', r'x=\# O_k'),
+    (r'\text{\#P}', r'\text{\#P}'),
+    (r'\#P=\text{\#P}', r'\# P=\text{\#P}'),
+])
+def test_cardinality_before_letters_keeps_glyph_and_original_source(source, reference):
+    normalized, unknown = _formula(source)
+    assert not unknown
+    # Whitespace terminates the control symbol without adding math spacing.
+    svg, width, depth = _svg_formula(normalized)
+    reference_svg, reference_width, reference_depth = _svg_formula(reference)
+    assert (width, depth) == (reference_width, reference_depth)
+    # XML parsing omits the source-spelling comment; compare actual glyph paths
+    # and positions so a successful parse cannot conceal changed notation.
+    assert ET.tostring(ET.fromstring(base64.b64decode(svg))) == ET.tostring(
+        ET.fromstring(base64.b64decode(reference_svg)))
+    rendered = html_text(r'\(' + source + r'\)')
+    assert rendered.count('class="math-formula"') == 1
+    assert f'alt="{source}"' in rendered
+    assert 'Source notation' not in rendered
 
 
 @pytest.mark.parametrize('source', [r'\frac12', r'\tfrac{1}{2}', r'\dfrac{1}{2}'])
@@ -113,6 +139,8 @@ def test_html_math_images_keep_metadata_and_are_repeatable(tmp_path):
     pending = prepare_run(data_dir=data, local_feed=ROOT / "tests/fixtures/math_ds.xml", report_date="2026-09-04")
     payload = AnalysisRun.model_validate_json((ROOT / "tests/fixtures/analysis_run.json").read_text(encoding="utf-8"))
     payload.papers[0].main_result = r"Test notation: \(\Pi_1^0\) and \(1-\frac{1}{d+1}\)."
+    pending.papers[0].abstract += r" Cardinality notation: \(\#P_f=4\)."
+    atomic_write_json(data / "pending_run.json", pending)
     atomic_write_json(data / "analysis_run.json", payload)
     report = finalize_run(data / "analysis_run.json", data_dir=data, site_dir=site)
     assert report.papers[0].paper == pending.papers[0]
