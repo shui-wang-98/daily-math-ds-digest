@@ -426,6 +426,36 @@ abstracts, and no Prerequisites. Local URL/ID and archive date-link checks
 passed without arXiv requests. Changes are HTML, shared CSS and instructions;
 no task configuration, permission profile, workflow or source input was changed.
 
-Production Pages and notification verification will be recorded after the
-authorized main push and actual deployment finish. Future positive author
-matches in a real daily task remain distinct from fixture coverage.
+Publication commit `ce9abc9` was pushed normally to main. Its actual push-triggered
+[Pages run 35073230768](https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/35073230768)
+completed **successfully**, including report checks, deployment and the existing
+Issue notification step. The workflow logs were downloaded and inspected.
+
+Read-only HTTP verification returned 200 and exact committed bytes for the
+homepage, stylesheet, both dated HTML pages and both site JSON files. The
+first comparison against working-tree CSS reported a mismatch: Windows had
+124 CRLF line endings (7,963 bytes), while Git and Pages stored LF (7,839 bytes).
+Normalizing only those line endings matched exactly. The verification was
+corrected to compare against `git show HEAD:site/...`, not platform-dependent
+working-tree text; all six published files then passed. No application or
+deployed file needed a correction.
+
+Actual online browser inspection confirmed September 15 has 39 Subjects,
+39 Keywords, no Prerequisites, 39 full entries and 26 compact LOW entries.
+The first original abstract was expanded, mathematical images loaded, and its
+notation was visually inspected. Desktop and 390-by-844 mobile views had no
+horizontal overflow; temporary viewport settings were reset. The homepage
+retains both dates and only the existing historical download links.
+
+Issue #1 still has exactly one September 15 comment
+[5681352998](https://github.com/shui-wang-98/daily-math-ds-digest/issues/1#issuecomment-5681352998),
+with its original creation/update timestamp `2026-09-15T13:53:34Z`. This layout
+deployment did not duplicate or resend a daily notification. The final evidence
+commit changes documentation only and does not trigger another Pages publish.
+
+The feature is now deployed on main: future math.DS preparations use the two-name
+watchlist and enforce full HIGH PRIORITY analysis for matches. This maintenance
+did not modify or manually trigger the existing local task, run new daily
+analysis, or claim a positive author match from today's feed. Actual future
+followed-author publication in the unattended task remains distinct from
+fixture coverage and successful interactive deployment.
