@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "source_url": "https://rss.arxiv.org/rss/math.DS",
+  "category": "math.DS",
+  "fetched_at": "2026-09-16T09:26:10.419205Z",
+  "feed_published_at": "2026-09-16T00:00:00-04:00",
+  "feed_build_at": "2026-09-16T04:00:15Z",
+  "feed_date": "2026-09-16",
+  "sha256": "8df7a3bdde2f041834edf300a78f5d69945d981d4dc0d720da23ec27a6c171d1",
+  "byte_length": 66283,
+  "capture_run_url": "https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/35079376420"
+}
