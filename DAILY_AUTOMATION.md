@@ -115,8 +115,8 @@ judgment. Use the pending watchlist snapshot for retry consistency.
   If the abstract refers to an unnamed hypothesis, say that it is not specified;
   do not supply a plausible hypothesis yourself.
 - Methods may contain only explicitly stated or named methods. A subject area
-  in a title is not evidence of a proof technique. Context and prerequisite
-  subject areas must be supported by title/abstract terminology; do not infer
+  in a title is not evidence of a proof technique. Context subject areas
+  must be supported by title/abstract terminology; do not infer
   specific lemmas, technical requirements, or comparisons.
 - Write compact academic English. Keep each TL;DR to at most two sentences.
   Prefer faithful prose to unnecessary formulas. Include original abstracts

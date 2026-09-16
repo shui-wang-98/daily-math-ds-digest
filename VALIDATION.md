@@ -399,3 +399,33 @@ Do not merge or deploy this feature until validation and user approval.
 The evidence-only follow-up commit uses `[skip ci]`; no runtime changes follow
 the successful `ee0c40d` validation. Deployment and an actual future followed
 paper in the daily task remain unverified until this feature is approved.
+
+## Approved Subjects/watchlist deployment: 2026-09-16
+
+The user explicitly approved merging and using the math.DS-only feature.
+The clean main checkout was synchronized with `git pull --ff-only origin main`
+(already current), then fast-forwarded to the validated feature tip `dfb5109`.
+`python -m src.rebuild_site` rebuilt the two existing dated HTML reports and
+homepage using Subjects. No new daily report was analyzed or finalized.
+
+An initial full test run overlapped the authorized HTML rebuild: all 108 tests
+passed, but the session-level production-file guard correctly failed because
+the separate rebuild changed site files during its snapshot window. This was
+an orchestration error, not a passing suite. After the rebuild ended, the suite
+was rerun on a stable tree: `.venv/Scripts/python.exe -m pytest -q` returned
+**108 passed in 8.53s**, exit 0. Keep rebuilding and this test suite sequential.
+`python -m src.notify --check-only` and `git diff --check` also passed.
+
+Before/after SHA-256 and modification-time snapshots verified all 12 protected
+files unchanged: production data (including pending/analysis/state/inbox),
+archived/site JSON, historical PDF/Markdown and the research configuration.
+Both rebuilt reports retain all their IDs and original counts: September 7
+**6 HIGH / 8 RELATED / 4 LOW**, September 15 **12 HIGH / 27 RELATED / 26 LOW**.
+Their 14 and 39 full entries respectively have Subjects, Keywords and original
+abstracts, and no Prerequisites. Local URL/ID and archive date-link checks
+passed without arXiv requests. Changes are HTML, shared CSS and instructions;
+no task configuration, permission profile, workflow or source input was changed.
+
+Production Pages and notification verification will be recorded after the
+authorized main push and actual deployment finish. Future positive author
+matches in a real daily task remain distinct from fixture coverage.
