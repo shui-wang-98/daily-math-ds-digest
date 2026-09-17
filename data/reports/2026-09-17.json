@@ -1,0 +1,1122 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-09-17",
+  "generated_at": "2026-09-17T10:13:37.435866Z",
+  "feed_build_at": "2026-09-17T04:00:13Z",
+  "category": "math.DS",
+  "analysis_source": "Codex desktop",
+  "overview": "The report contains 27 unseen announcements: 9 HIGH PRIORITY, 8 RELATED / POSSIBLY INTERESTING, and 10 LOW PRIORITY. The strongest matches concern entropy and ray-graph translation length, Fourier decay of invariant measures, hyperbolic and nonsingular group dynamics, historic behavior and emergence, and multifractal von Koch functions. Topological linear dynamics and surface topology also feature prominently. Related entries cover invariant manifolds, geometric flows, natural extensions, and other possible connections; no followed-author matches occur in this input.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2609.17687",
+        "versioned_id": "2609.17687v1",
+        "title": "Geometric Hybrid Dynamical Systems: Part I - Modeling and Stability",
+        "authors": [
+          "Piyush P. Jirwankar",
+          "Daniel E. Ochoa",
+          "Ricardo G. Sanfelice"
+        ],
+        "abstract": "We present a framework for the modeling and analysis of geometric hybrid dynamical systems as hybrid inclusions on $C^1$-manifolds. Using tools from nonsmooth and set-valued analysis on manifolds, we derive coordinate-independent sufficient conditions for the existence of nontrivial solutions to this type of systems. We present geometric notions of uniform stability and attractivity of compact sets, and establish their equivalence to metric-based stability notions when the manifold is endowed with a Riemannian structure. We also introduce nonsmooth Lyapunov functions and a hybrid Lyapunov theorem providing sufficient conditions for uniform global asymptotic stability of compact sets. Finally, by characterizing $\\omega$-limit sets of precompact solutions, we derive a hybrid invariance principle for geometric hybrid dynamical systems. The results are demonstrated through several running examples.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "cs.SY",
+          "eess.SY",
+          "math.DG"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.17687",
+        "pdf_url": "https://arxiv.org/pdf/2609.17687"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Invariant compact sets, limit sets, and coordinate-independent stability offer a possible connection to topological and geometric dynamics; entropy and dimension are not central in the abstract.",
+        "tldr": "The authors develop hybrid inclusions on continuously differentiable manifolds and establish coordinate-independent sufficient conditions for nontrivial solutions. They also give a hybrid Lyapunov theorem and an invariance principle.",
+        "problem": "Modeling geometric hybrid systems and formulating stability and attractivity of compact sets intrinsically on a manifold.",
+        "main_result": "For hybrid inclusions on \\(C^1\\)-manifolds, the authors derive sufficient conditions for nontrivial solutions. Their geometric uniform stability and attractivity notions agree with metric-based notions when a Riemannian structure is supplied. Nonsmooth Lyapunov functions give sufficient conditions for uniform global asymptotic stability of compact sets, and a characterization of \\(\\omega\\)-limit sets of precompact solutions yields an invariance principle. The precise solution-existence and Lyapunov hypotheses: Not specified in the abstract.",
+        "methods": [
+          "Nonsmooth and set-valued analysis on manifolds",
+          "Nonsmooth Lyapunov functions",
+          "Characterization of limit sets of precompact solutions"
+        ],
+        "context": "Geometric hybrid dynamics and stability of invariant sets.",
+        "keywords": [
+          "hybrid inclusions",
+          "manifolds",
+          "Lyapunov stability",
+          "invariance principle"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.17743",
+        "versioned_id": "2609.17743v1",
+        "title": "Fourier Decay of SRB Measures for Skew Products",
+        "authors": [
+          "Ga\\'etan Leclerc",
+          "Haojie Ren"
+        ],
+        "abstract": "We study Fourier decay of natural invariant measures for real analytic skew products $T(x,y)=(f(x),g(x,y))$ on $\\mathbb{S}^1 \\times [-1,1]$, where $f$ is expanding and $0<|\\partial_y g(x,y)|<1$. Let $\\mathcal S$ denote the associated solenoidal attractor. We prove a dichotomy: either $\\mathcal S$ is a single horizontal graph, or both the SRB measure and the measure of maximal entropy have polynomial Fourier decay. No transversality assumption is imposed.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.17743",
+        "pdf_url": "https://arxiv.org/pdf/2609.17743"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Measures of maximal entropy, SRB measures, and solenoidal attractors directly connect entropy theory with invariant-measure geometry.",
+        "tldr": "The authors prove a dichotomy for real analytic skew products with an expanding base and contracting fibers: the solenoidal attractor is a single horizontal graph, or both the SRB measure and the measure of maximal entropy have polynomial Fourier decay. No transversality assumption is imposed.",
+        "problem": "Fourier decay of natural invariant measures for real analytic expanding-base, contracting-fiber skew products.",
+        "main_result": "Consider \\(T(x,y)=(f(x),g(x,y))\\) on \\(\\mathbb S^1\\times[-1,1]\\), with real analytic data, expanding \\(f\\), and \\(0<|\\partial_y g(x,y)|<1\\). The authors show that either the associated solenoidal attractor is a single horizontal graph, or both its SRB measure and its measure of maximal entropy have polynomial Fourier decay. Transversality is not assumed. A quantitative decay exponent: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Skew-product dynamics, invariant measures, and Fourier decay.",
+        "keywords": [
+          "SRB measures",
+          "maximal entropy measures",
+          "Fourier decay",
+          "solenoidal attractors"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.17879",
+        "versioned_id": "2609.17879v1",
+        "title": "Entropy and Translation Length in the Ray Graph",
+        "authors": [
+          "Juliette Bavard",
+          "Danny Calegari",
+          "Alden Walker"
+        ],
+        "abstract": "Let $\\Gamma$ be the mapping class group of the plane minus a Cantor set, acting on the ray graph $\\mathcal{R}$, and for $\\gamma \\in \\Gamma$ let $\\tau(\\gamma)$ denote the translation length of $\\gamma$ on $\\mathcal{R}$. We prove that $\\tau(\\gamma) \\le h(f)/\\log(2)$ for every $C^\\infty$ diffeomorphism $f$ of $S^2$ representing $\\gamma$, where $h$ denotes topological entropy. The proof falls into two parts: a combinatorial argument bounding distance between two rays in $\\mathcal{R}$ by the logarithm of the geometric intersection number; and a geometric argument that promotes geometric control (coarse length of iterates of a fixed ray) to combinatorial control (geometric intersection number). We conjecture that the $C^\\infty$ hypothesis on $f$ can be removed.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GR",
+          "math.GT"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.17879",
+        "pdf_url": "https://arxiv.org/pdf/2609.17879"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The theorem directly relates topological entropy to a translation-length invariant of a mapping-class-group action.",
+        "tldr": "The authors bound translation length on the ray graph by topological entropy for smooth sphere diffeomorphisms representing mapping classes of the plane minus a Cantor set. Removing the smoothness hypothesis is stated as a conjecture.",
+        "problem": "Relating the action of the mapping class group of the plane minus a Cantor set on the ray graph to the entropy of a representing diffeomorphism.",
+        "main_result": "For a mapping class \\(\\gamma\\), the authors prove \\(\\tau(\\gamma)\\leq h(f)/\\log(2)\\) for every \\(C^\\infty\\) diffeomorphism \\(f\\) of \\(S^2\\) representing \\(\\gamma\\), where \\(\\tau\\) is ray-graph translation length and \\(h\\) is topological entropy. They conjecture that the \\(C^\\infty\\) hypothesis can be removed; the abstract does not claim this extension is proved.",
+        "methods": [
+          "Combinatorial bound on ray distance by the logarithm of geometric intersection number",
+          "Geometric comparison of coarse lengths of iterated rays with intersection numbers"
+        ],
+        "context": "Topological entropy, mapping class groups, and ray-graph geometry.",
+        "keywords": [
+          "topological entropy",
+          "translation length",
+          "ray graph",
+          "mapping class groups"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.18010",
+        "versioned_id": "2609.18010v1",
+        "title": "Torus Bifurcation in the Hopf-Langford type system through Averaging Theory",
+        "authors": [
+          "Gustavo Domingues"
+        ],
+        "abstract": "We study the existence of periodic solutions and invariant tori bifurcating from a zero-Hopf equilibrium in a Hopf-Langford type system. Using second-order averaging theory, we establish explicit parameter conditions under which the system admits a periodic solution near the origin, together with its stability. We then apply recent results relating invariant tori to Neimark-Sacker bifurcations of the associated Poincar\\'e map to obtain a smooth bifurcation curve along which a unique invariant torus surrounds the periodic solution. The relevant first Lyapunov coefficient is computed explicitly as a power series in the perturbation parameter, and we show that, under the conditions considered, this coefficient is always positive; consequently, whenever it exists, the bifurcating torus is unstable, regardless of the specific parameter values chosen within our hypotheses. This provides a structural obstruction to the existence of asymptotically stable tori in this family of systems. We illustrate our results with two numerical examples, one exhibiting an isolated asymptotically stable periodic solution with no bifurcating torus, and another exhibiting a periodic solution surrounded by an unstable invariant torus, the latter also illustrated through its Poincar\\'e map.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.18010",
+        "pdf_url": "https://arxiv.org/pdf/2609.18010"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Invariant tori and periodic-orbit stability offer a possible connection to smooth dynamics, although the work is centered on a specific bifurcation family.",
+        "tldr": "The author obtains periodic solutions and a unique surrounding invariant torus near a zero-Hopf equilibrium of a Hopf–Langford type system under parameter conditions. Within those hypotheses, the bifurcating torus is always unstable.",
+        "problem": "Existence and stability of periodic solutions and invariant tori bifurcating near the origin in a Hopf–Langford type system.",
+        "main_result": "The author gives parameter conditions for a periodic solution and its stability, then obtains a smooth bifurcation curve along which a unique invariant torus surrounds the periodic solution. A computed first Lyapunov coefficient is positive under the considered hypotheses, so any such bifurcating torus is unstable. This conclusion is restricted to that bifurcation and its hypotheses. The explicit parameter conditions and bifurcation curve: Not specified in the abstract. Two numerical examples illustrate the analytical results.",
+        "methods": [
+          "Second-order averaging",
+          "Neimark–Sacker bifurcation of the Poincaré map",
+          "Power-series computation of the first Lyapunov coefficient"
+        ],
+        "context": "Smooth bifurcation theory for periodic solutions and invariant tori.",
+        "keywords": [
+          "zero-Hopf equilibrium",
+          "invariant tori",
+          "averaging",
+          "Neimark–Sacker bifurcation"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.18053",
+        "versioned_id": "2609.18053v1",
+        "title": "On fluctuations of the drift in hyperbolic groups",
+        "authors": [
+          "Gil Jos\\'e Astudillo Hernandez",
+          "Manuel Stadlbauer"
+        ],
+        "abstract": "Let $\\Gamma$ refer to a convex-cocompact group of isometries of a CAT($-1$) space $X$ and $Y \\to X/\\Gamma$ to a Galois cover with a word-hyperbolic group of deck transformations. We show that, for almost every geodesic $\\xi$ with respect to the Bowen-Margulis-Sullivan measure on the lift of $X/\\Gamma$, there exist $\\mathfrak{m}, \\sigma > 0$ and a standard Brownian motion $B_s$ such that, for any $\\lambda > 1/4$, \\[ d(p(g_s (\\xi)), \\mathbf{o}) = \\mathfrak{m}s + \\sigma B_s + o(s^\\lambda), \\] with $g_s$ referring to the geodesic flow acting on the geodesics of $Y$ and $p(g_s)$ to the canonical projection to $Y$. The result is a consequence of an almost sure invariance principle for random walks on hyperbolic groups with dependent increments, whose proof makes use of a new Ruelle operator theorem for skew products and Martin boundary techniques for random walks with dependent increments.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.18053",
+        "pdf_url": "https://arxiv.org/pdf/2609.18053"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Hyperbolic group dynamics and a Ruelle-operator theorem provide direct connections with group actions and thermodynamic methods.",
+        "tldr": "The authors establish a Brownian approximation for geodesic displacement in certain Galois covers with word-hyperbolic deck groups. The result follows from an almost sure invariance principle for hyperbolic-group random walks with dependent increments.",
+        "problem": "Drift fluctuations of lifted geodesics over a convex-cocompact quotient of a negatively curved metric space.",
+        "main_result": "Let \\(\\Gamma\\) be a convex-cocompact group of isometries of a \\(\\operatorname{CAT}(-1)\\) space \\(X\\), and let \\(Y\\to X/\\Gamma\\) be a Galois cover with a word-hyperbolic deck group. The authors show that for almost every geodesic with respect to the stated lifted Bowen–Margulis–Sullivan measure, there exist \\(\\mathfrak m,\\sigma>0\\) and a standard Brownian motion \\(B_s\\) giving displacement \\(\\mathfrak m s+\\sigma B_s+o(s^\\lambda)\\) for every \\(\\lambda>1/4\\). This follows from their almost sure invariance principle for random walks with dependent increments.",
+        "methods": [
+          "Almost sure invariance principle for dependent-increment random walks",
+          "Ruelle-operator theorem for skew products",
+          "Martin boundary techniques"
+        ],
+        "context": "Geodesic flows, hyperbolic groups, and probabilistic limit theorems.",
+        "keywords": [
+          "geodesic flow",
+          "hyperbolic groups",
+          "drift fluctuations",
+          "Ruelle operator",
+          "invariance principle"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.18061",
+        "versioned_id": "2609.18061v1",
+        "title": "Bounded chaining in measurable dynamics",
+        "authors": [
+          "Anush Tserunyan",
+          "Jenna Zomback"
+        ],
+        "abstract": "We introduce a one-parameter family of notions between double ergodicity and metric ergodicity for measure-class preserving (i.e., nonsingular) actions of countable groups on standard probability spaces, providing infinitely many new invariants distinguishing weakly mixing actions. We call these properties (essentially) $k$-chaining, for $k \\in \\mathbb{N}$. We apply this framework to study boundary actions of free groups of finite rank $r \\ge 1$, where the boundary is equipped with a stationary Markov measure. We prove that in this context, weak mixing is equivalent to $(2r-1)$-chaining, as well as to strict irreducibility of the transition matrix of the Markov measure.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.18061",
+        "pdf_url": "https://arxiv.org/pdf/2609.18061"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "New invariants of nonsingular group actions and a characterization of weak mixing directly match the group-action profile.",
+        "tldr": "The authors introduce a family of chaining properties between double ergodicity and metric ergodicity for nonsingular countable-group actions. For free-group boundary actions with stationary Markov measures, they characterize weak mixing by chaining and strict irreducibility.",
+        "problem": "Distinguishing weakly mixing nonsingular actions and understanding weak mixing for stationary Markov measures on free-group boundaries.",
+        "main_result": "The authors define essentially \\(k\\)-chaining, for \\(k\\in\\mathbb N\\), for measure-class-preserving actions of countable groups on standard probability spaces, obtaining infinitely many invariants distinguishing weakly mixing actions. For boundary actions of free groups of finite rank \\(r\\geq1\\) equipped with a stationary Markov measure, they prove equivalence of weak mixing, \\((2r-1)\\)-chaining, and strict irreducibility of the transition matrix. The definition of chaining: Not specified in the abstract.",
+        "methods": [
+          "Framework of essentially bounded chaining properties"
+        ],
+        "context": "Measurable group dynamics and boundary actions with stationary measures.",
+        "keywords": [
+          "nonsingular actions",
+          "weak mixing",
+          "chaining",
+          "free-group boundaries",
+          "stationary Markov measures"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.18185",
+        "versioned_id": "2609.18185v1",
+        "title": "Weak Averaging Principle and Weak Pullback Attractors for Mckean--Vlasov Stochastic Navier--Stokes Equations",
+        "authors": [
+          "Honglei Chen (School of Mathematical Sciences",
+          "Dalian University of Technology)",
+          "Zhenxin Liu (School of Mathematical Sciences",
+          "Dalian University of Technology)"
+        ],
+        "abstract": "We establish three weak averaging principles for distribution-dependent stochastic Navier--Stokes equations with rapidly oscillating coefficients on the torus $\\T^2$. First, solution laws are relatively compact on finite time intervals, and every limit point as $\\var\\to0$ is the path law of a variational martingale solution of the averaged equation. Under a dissipative condition, we can choose bounded complete variational solution laws of the original and averaged equations so that every sequence with $\\var\\to0$ has a subsequence converging weakly to a bounded complete variational solution law of the averaged equation. At the level of probability laws, the original nonautonomous equation admits a family of weak pullback attractors, while the averaged equation has a weak global attractor. The weak pullback attractors converge upper semicontinuously to the weak global attractor of the averaged equation, uniformly with respect to the coefficient hull.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.18185",
+        "pdf_url": "https://arxiv.org/pdf/2609.18185"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Attractors in spaces of probability laws and convergence uniformly over a coefficient hull offer a possible dynamical connection, although the focus is a stochastic partial differential equation.",
+        "tldr": "The authors establish weak averaging principles for distribution-dependent stochastic Navier–Stokes equations with rapidly oscillating coefficients on a two-dimensional torus. They also prove upper-semicontinuous convergence of weak pullback attractors to the averaged equation’s weak global attractor.",
+        "problem": "Weak averaging on finite and complete time intervals, and its effect on attractors at the level of solution laws.",
+        "main_result": "Finite-time solution laws are relatively compact, and every limit point as the averaging parameter tends to zero is the path law of a variational martingale solution of the averaged equation. Under a dissipative condition, bounded complete solution laws can be chosen with subsequential weak convergence to a bounded complete averaged solution law. The authors obtain weak pullback attractors for the nonautonomous equation and a weak global attractor for the averaged equation, with upper-semicontinuous convergence uniform over the coefficient hull. The dissipative condition and precise coefficient assumptions: Not specified in the abstract.",
+        "methods": [
+          "Weak averaging at the level of probability laws",
+          "Variational martingale solutions",
+          "Weak compactness"
+        ],
+        "context": "Random and nonautonomous dynamics in spaces of solution laws.",
+        "keywords": [
+          "weak averaging",
+          "pullback attractors",
+          "McKean–Vlasov equations",
+          "Navier–Stokes equations"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.18231",
+        "versioned_id": "2609.18231v1",
+        "title": "The Role of Bifurcations in Parameter Estimation: A UQ Analysis of the Non-spatial Klausmeier Model",
+        "authors": [
+          "Lisa Beer",
+          "Christian Kuehn",
+          "Chiara Piazzola"
+        ],
+        "abstract": "We employ uncertainty quantification methods to investigate how parameter identifiability changes in the vicinity of a bifurcation point. We perform numerical experiments on the non-spatial Klausmeier vegetation model with random coefficients, which describes biomass-water interactions and exhibits a fold bifurcation. We partition the domain around the bifurcation into regions with distinct convergence behaviors. In each region, we follow a UQ workflow that includes sensitivity analysis, Bayesian inference, and Fisher information evaluation to assess parameter identifiability. The results show that proximity to the bifurcation point is decisive for parameter estimation. Reliable joint inference of both model parameters is not possible when the system exhibits bistability. Furthermore, we can reconstruct the model's bifurcation pattern by Fisher information heatmaps, presenting a practical tool for bifurcation detection. Lastly, we highlight the importance of transient data for successful parameter estimation.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "cs.NA",
+          "math.NA"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.18231",
+        "pdf_url": "https://arxiv.org/pdf/2609.18231"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Numerical parameter-identifiability analysis in a vegetation model has no central entropy, dimension, symbolic, or group-action component.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.18236",
+        "versioned_id": "2609.18236v1",
+        "title": "Existence and Regularity of Stable Resonant Spectral Submanifolds and Linearization Maps",
+        "authors": [
+          "Florian Kogelbauer",
+          "Rafael de la Llave"
+        ],
+        "abstract": "We prove the existence of $C^{r,1-}$-regular stable invariant manifolds and linear conjugacies for analytic maps near a hyperbolic fixed point in the presence of resonances. The regularity exponent $r$ depends on the minimal resonant index, while the H\\\"older exponent can be chosen arbitrarily close to $1$, i.e., $1-\\varepsilon$ for any $\\varepsilon>0$. As a consequence, we obtain the stable version of the Hartman conjecture for analytic systems with semisimple linearization: in the fully stable case the local conjugacy can be chosen $C^{1,1-\\varepsilon}$ for every $\\varepsilon>0$.\\\\ Our approach introduces a new class of functional expansions based on logarithmic polynomials, which enables the invariance equation to be solved explicitly and algorithmically to arbitrary order. The existence results are obtained via a fixed-point argument in a suitable Banach space. We further present several analytic examples that both illustrate the applicability of the theorem while demonstrating the necessity of its assumptions.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.18236",
+        "pdf_url": "https://arxiv.org/pdf/2609.18236"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Hyperbolic fixed points, invariant manifolds, and regularity of conjugacies are substantially related to smooth and hyperbolic dynamics.",
+        "tldr": "The authors prove existence of stable invariant manifolds and linear conjugacies with near-Lipschitz Hölder regularity for analytic maps near a hyperbolic fixed point with resonances. In the fully stable semisimple case, they obtain the stable version of the Hartman conjecture.",
+        "problem": "Regularity of stable resonant spectral submanifolds and local linearization maps for analytic dynamics near a hyperbolic fixed point.",
+        "main_result": "The authors obtain \\(C^{r,1-}\\)-regular stable invariant manifolds and linear conjugacies, with \\(r\\) depending on the minimal resonant index and Hölder exponent arbitrarily close to one. For fully stable analytic systems with semisimple linearization, the local conjugacy can be chosen \\(C^{1,1-\\varepsilon}\\) for every \\(\\varepsilon>0\\), as stated in the abstract. Logarithmic-polynomial expansions solve the invariance equation explicitly and algorithmically to arbitrary order, and a Banach-space fixed-point argument yields existence. The precise index-to-regularity formula and complete theorem hypotheses: Not specified in the abstract.",
+        "methods": [
+          "Functional expansions based on logarithmic polynomials",
+          "Fixed-point argument in a Banach space"
+        ],
+        "context": "Local hyperbolic dynamics, resonance, and differentiable linearization.",
+        "keywords": [
+          "stable invariant manifolds",
+          "resonances",
+          "linear conjugacy",
+          "Hartman conjecture"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.18253",
+        "versioned_id": "2609.18253v1",
+        "title": "Anosov Diffeomorphisms of Finite-Type Surfaces",
+        "authors": [
+          "Ra\\'ul Ures",
+          "Tongyao Yu"
+        ],
+        "abstract": "We prove that a complete surface of finite topological type satisfying Condition A is homeomorphic to the two-torus. More generally, we show that an isolated planar end of a complete open surface satisfying Condition A cannot be periodic under the induced action on the space of ends. Condition A includes dense periodic points, a uniformly hyperbolic splitting into one-dimensional subbundles for a complete metric, and invariant line fields that uniquely integrate to transverse stable and unstable foliations. These results give a partial answer to the question of whether a complete surface satisfying Condition A must be compact.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.18253",
+        "pdf_url": "https://arxiv.org/pdf/2609.18253"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The topology of surfaces and their end dynamics under hyperbolic assumptions is central to the topological-dynamics profile.",
+        "tldr": "The authors prove that a complete surface of finite topological type satisfying Condition A is homeomorphic to the two-torus. More generally, an isolated planar end of a complete open surface satisfying Condition A cannot be periodic under the induced end action.",
+        "problem": "Whether complete surfaces satisfying a specified hyperbolic dynamical condition must be compact, and what their end dynamics can be.",
+        "main_result": "The authors prove the two-torus conclusion under completeness, finite topological type, and Condition A. They also rule out periodic isolated planar ends for complete open surfaces satisfying that condition. The abstract says Condition A includes dense periodic points, a uniformly hyperbolic splitting into one-dimensional subbundles for a complete metric, and invariant line fields uniquely integrating to transverse stable and unstable foliations. A complete formulation of Condition A: Not specified in the abstract. These results are presented as a partial answer to the general compactness question.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Topology and hyperbolic dynamics of finite-type and open surfaces.",
+        "keywords": [
+          "Anosov diffeomorphisms",
+          "surface topology",
+          "periodic ends",
+          "hyperbolic splitting"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.18509",
+        "versioned_id": "2609.18509v1",
+        "title": "The Problem of Stochastic System Prediction in Gait Biomechanics Applications",
+        "authors": [
+          "S. S. Gavryushin",
+          "I. A. Meshchihin",
+          "S. S. Minkov"
+        ],
+        "abstract": "This paper analyzes the stochastic dynamics of a two-link pendulum that models lower limb segments (the thigh and shank) during the swing phase of the gait cycle. We describe the model using a system of non-linear Ito stochastic differential equations in a four-dimensional phase space under both external and internal random perturbations.We perform a spectral analysis of the discrete Kolmogorov operator, compute the stationary invariant measure, and estimate diffusion parameters using Neural Stochastic Differential Equations (Neural SDEs).",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.18509",
+        "pdf_url": "https://arxiv.org/pdf/2609.18509"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The computation of an invariant measure is part of an applied gait-prediction model without a substantial stated connection to the central research themes.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.18561",
+        "versioned_id": "2609.18561v1",
+        "title": "Cyclicity of sliding cycles in regularizations of piecewise linear two-folds",
+        "authors": [
+          "Renato Huzak",
+          "Kristian Uldall Kristiansen",
+          "Otavio Henrique Perez",
+          "Andr\\'e Luis Martins Tomaz da Silva"
+        ],
+        "abstract": "We study limit cycles produced by Sotomayor-Teixeira regularizations of piecewise linear vector fields with generic two-fold singularities. We focus on the visible-visible and visible-invisible cases where sliding cycles occur, treating cycles from both sides of the switching manifold in a unified way. In further details, by relating the cyclicity of sliding cycles and zeros of the slow divergence integral, we prove that the cyclicity of compact families of sliding cycles is bounded by two when such integral does not vanish identically. In contrast to previous works, we do not perform a case-by-base study, but instead relate zeros of slow divergence integrals to crossing limit cycles of a suitably defined auxiliary piecewise linear system. For visible folds, we provide necessary and sufficient conditions that assure the existence of a unique simple zero of the slow divergence integral, which implies the existence of two limit cycles. We also show that, when a hyperbolic singularity of the sliding vector field lies at the boundary of the sliding segment, then the cyclicity is bounded by one.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.18561",
+        "pdf_url": "https://arxiv.org/pdf/2609.18561"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Cyclicity bounds for local sliding bifurcations are primarily ordinary-differential-equation theory without a substantial connection to the central profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.18705",
+        "versioned_id": "2609.18705v1",
+        "title": "Dynamics of planar integrable Kepler billiards with a focused hyperbolic branch",
+        "authors": [
+          "Daniel Jaud",
+          "Lei Zhao"
+        ],
+        "abstract": "We consider the integrable dynamics of a planar Kepler billiard in the plane bounded by a branch of a hyperbola focused at the Kepler center. As a sequel to our previous work \\cite{JZ2}, we use the existence of the foci-caustic circle to identify an elliptic curve on which the dynamics is linearized and we analyze Cayley's condition on $n$-periodic orbits in this setting. By taking various limits also we discuss the dynamics of planar Kepler billiards with boundary being a focused parabolic arc, as well as a straight line. In this last case, our approach offers a different way to deduce the elliptic curve as in \\cite{Felder}.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MG",
+          "math.MP",
+          "physics.class-ph"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.18705",
+        "pdf_url": "https://arxiv.org/pdf/2609.18705"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Linearization on an elliptic curve and conditions for periodic billiard orbits provide a substantial connection to geometric dynamics.",
+        "tldr": "The authors linearize a planar integrable Kepler billiard on an elliptic curve using a foci-caustic circle. They analyze periodic-orbit conditions and discuss parabolic and straight-line boundaries through limits.",
+        "problem": "Integrable dynamics of a planar Kepler billiard bounded by a hyperbolic branch focused at the Kepler center.",
+        "main_result": "Using the foci-caustic circle, the authors identify an elliptic curve on which the billiard dynamics is linearized and analyze Cayley’s condition for \\(n\\)-periodic orbits. Limits give discussions of focused parabolic-arc and straight-line boundaries. The explicit elliptic curve, linearizing map, and periodicity condition: Not specified in the abstract.",
+        "methods": [
+          "Foci-caustic circle",
+          "Linearization on an elliptic curve",
+          "Cayley’s periodicity condition",
+          "Limiting boundary geometries"
+        ],
+        "context": "Integrable billiards, algebraic curves, and periodic-orbit geometry.",
+        "keywords": [
+          "Kepler billiards",
+          "elliptic curves",
+          "Cayley condition",
+          "periodic orbits"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.18845",
+        "versioned_id": "2609.18845v1",
+        "title": "High-order discrete differential and integral calculus and Galerkin variational integrators",
+        "authors": [
+          "Jacky Cresson (LMAP)",
+          "Khaled Hariz-Belgacem Khaled Hariz-Belgacem (UPB)",
+          "Anna Szafranska (GUT)"
+        ],
+        "abstract": "We define high-order discrete differential and integral calculus following the discrete embedding formalism strategy. Using this framework, we define high-order discrete Lagrangian functionals and the corresponding calculus of variations. This provides a new derivation of Galerkin variational integrators.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.18845",
+        "pdf_url": "https://arxiv.org/pdf/2609.18845"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "High-order variational integrators and discrete calculus focus on numerical methodology rather than thermodynamic variational principles or another central theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.18979",
+        "versioned_id": "2609.18979v1",
+        "title": "Full-measure historic behavior and emergence in simplex dynamics",
+        "authors": [
+          "Farrukh Mukhamedov"
+        ],
+        "abstract": "We give a finite-dimensional boundary-residence mechanism for Takens-type historic behavior. For a class of continuous self-maps of a simplex, a multiplicative Lyapunov drift toward the boundary, combined with cyclic residence near separated boundary regions, forces every non-fixed interior orbit to have non-convergent Ces\\`aro averages and non-convergent empirical measures. Thus the historic set has full relative Lebesgue measure. The mechanism is independent of hyperbolic specification, wandering domains and positive entropy: in fact, for the maps considered here the topological entropy is carried entirely by the boundary restriction. The non-convergence persists under all positive powers and, more generally, under multiplicatively thick sampling times. The abstract criterion applies to Stein--Ulam and Lotka--Volterra type stochastic operators once the model-specific cyclic coding and logarithmic residence estimates are verified. In explicit cyclic-collar models we identify the full weak-* accumulation set of empirical measures; this accumulation set is a non-trivial circle of probability measures and yields polynomial pointwise emergence of order \\(\\varepsilon^{-1}\\). We also obtain examples with positive-dimensional omega-limit sets by combining the mechanism with a Bara\\'nski--Misiurewicz type boundary-tracing construction.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.18979",
+        "pdf_url": "https://arxiv.org/pdf/2609.18979"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Historic behavior, empirical-measure accumulation, emergence, and topological entropy directly match orbit-complexity and topological-dynamics interests.",
+        "tldr": "The author gives a boundary-residence criterion forcing historic behavior for every non-fixed interior orbit in a class of continuous simplex maps. Explicit models have a circle of empirical-measure accumulation points and polynomial pointwise emergence.",
+        "problem": "Producing full-measure historic behavior and describing the complexity of empirical-measure accumulation in finite-dimensional simplex dynamics.",
+        "main_result": "A multiplicative Lyapunov drift to the boundary, together with cyclic residence near separated boundary regions, forces nonconvergence of Cesàro averages and empirical measures for every non-fixed interior orbit in the stated class; the historic set has full relative Lebesgue measure. The author shows that topological entropy is carried by the boundary restriction and that nonconvergence persists under positive powers and multiplicatively thick sampling. Application to Stein–Ulam and Lotka–Volterra type operators requires model-specific cyclic coding and logarithmic residence estimates. Explicit cyclic-collar models have a nontrivial circle of weak-* accumulation measures and pointwise emergence of order \\(\\varepsilon^{-1}\\); further examples have positive-dimensional omega-limit sets.",
+        "methods": [
+          "Multiplicative Lyapunov drift and cyclic boundary residence",
+          "Cyclic coding and logarithmic residence estimates",
+          "Barański–Misiurewicz type boundary-tracing construction"
+        ],
+        "context": "Historic behavior, empirical measures, and emergence in topological dynamics.",
+        "keywords": [
+          "historic behavior",
+          "pointwise emergence",
+          "empirical measures",
+          "simplex maps",
+          "topological entropy"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.19115",
+        "versioned_id": "2609.19115v1",
+        "title": "Singularity of harmonic measure for finitely supported random walks",
+        "authors": [
+          "Petr Kosenko",
+          "Giulio Tiozzo"
+        ],
+        "abstract": "In this paper we affirmatively resolve the singularity conjecture for finitely supported non-degenerate random walks on cocompact Fuchsian groups. The method we use is based on constructing a pair of geodesic currents, one for the Lebesgue measure and one for the random walk measure, and checking that they are different by using Fourier analysis on the boundary.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.19115",
+        "pdf_url": "https://arxiv.org/pdf/2609.19115"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Harmonic measures of random walks on Fuchsian groups and boundary analysis directly connect to the group-action interests.",
+        "tldr": "The authors affirmatively resolve the singularity conjecture for finitely supported non-degenerate random walks on cocompact Fuchsian groups. Their method compares geodesic currents associated with Lebesgue measure and the random walk measure.",
+        "problem": "Singularity of harmonic measure for finitely supported non-degenerate random walks on cocompact Fuchsian groups.",
+        "main_result": "For this class of random walks, the authors report an affirmative resolution of the singularity conjecture. The stated method constructs a geodesic current for Lebesgue measure and another for the random walk measure, then distinguishes them using boundary Fourier analysis. The precise definition of non-degeneracy: Not specified in the abstract.",
+        "methods": [
+          "Construction and comparison of geodesic currents",
+          "Fourier analysis on the boundary"
+        ],
+        "context": "Random walks on Fuchsian groups and harmonic-measure singularity.",
+        "keywords": [
+          "harmonic measure",
+          "Fuchsian groups",
+          "singularity",
+          "geodesic currents"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.17712",
+        "versioned_id": "2609.17712v1",
+        "title": "Range Failure, Resolvent Growth, and Resonance in Partially Dissipative Systems",
+        "authors": [
+          "Boris Muha",
+          "Sebastian Schwarzacher",
+          "Justin T. Webster"
+        ],
+        "abstract": "We introduce several notions of resonance for systems exhibiting weak or partial dissipation: $\\dot u=Au+f(t)$, with $A$ the generator of a strongly stable semigroup $S(t)$ on a Hilbert space $H$. We refer to resonance as the phenomenon where a time-periodic $f$ may yield an unbounded $u$, classically occurring when $A$ has imaginary eigenvalues. In infinite dimensions, however, unbounded growth may depend on topological choices, and several sorts of``resonance\" may occur. Classically, existence of $T$-periodic $u$ under $T$-periodic $f$ is equivalent to a range condition: $\\mathcal{R}(I-S(T))=H$. Consequently, its failure permits unbounded solution growth and we elucidate that connection through properties of $S(t)$. We describe a hierarchy of range failures, and provide an associated resonance taxonomy. The growth rate of ~$||(A-\\lambda I)^{-1}||_H$ on ~$i\\R$ dictates a regularity gap between $u$ and $f$, and, for rapid growth in $\\lambda$, that gap can be infinite. In said case, we demonstrate implications for periodic solvability, and a mechanism for constructing smooth resonant forces. The theory developed here is motivated by (and demonstrated for) a hyperbolic-parabolic system, where the latter component provides the only system dissipation. Such dynamics are a simplification of fluid-structure phenomena, which demonstrate strong stability but do not support unconditional periodic well-posedness. Though point-spectral resonance is ruled out, we note that $\\mathcal R(I-S(T))\\neq H$. Our main result here shows that, for a carefully constructed geometry, a classical heat-wave system possesses periods $T$ which yield infinite derivative loss and, via supporting results, yield resonance with smooth forcing.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math.CA",
+          "math.DS",
+          "math.FA"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.17712",
+        "pdf_url": "https://arxiv.org/pdf/2609.17712"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Semigroup resolvent growth and resonance in partially dissipative partial differential equations lack a central connection to the stated dynamical interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.17874",
+        "versioned_id": "2609.17874v1",
+        "title": "Hypercyclicity and Lipschitz-free operators",
+        "authors": [
+          "Christian Cobollo",
+          "Romuald Ernst",
+          "Quentin Menet",
+          "Alfred Peris"
+        ],
+        "abstract": "We study linearizations of dynamical systems and some of its topological properties. Special attention is paid to the case of Lipschitz-free operators, and they are shown to model the dynamics of very general linearizations. We provide a new criterion, called the targeting property, for the (weakly) mixing property in a linear dynamical system through a (possibly) non-linear restriction of it. We then apply this criterion to the linearization $T_f$ of a Lipschitz map $f\\colon M\\to M$, where $M$ is a metric space and the operator $T_f$ is defined on the corresponding Lipschitz-free space $\\mathcal F (M)$---the so-called Lipschitz-free operators. We show that, under some natural assumptions on the distance considered in $M$, the operator $T_f$ is hypercyclic if and only if the map $f$ has the targeting property.",
+        "announce_type": "cross",
+        "categories": [
+          "math.FA",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.17874",
+        "pdf_url": "https://arxiv.org/pdf/2609.17874"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Hypercyclicity and topological mixing of linearized systems directly match topological dynamics.",
+        "tldr": "The authors introduce the targeting property as a criterion for weak mixing or mixing of a linear system through a possibly nonlinear restriction. Under assumptions on the metric, a Lipschitz-free operator is hypercyclic exactly when the underlying map has this property.",
+        "problem": "How topological dynamical properties of a nonlinear map or restriction govern its linearizations, especially on Lipschitz-free spaces.",
+        "main_result": "The authors show that Lipschitz-free operators model very general linearizations and give a targeting-property criterion for the stated mixing behavior of linear systems. Applied to a Lipschitz map \\(f:M\\to M\\) and its linearization \\(T_f\\) on \\(\\mathcal F(M)\\), they prove, under natural assumptions on the metric of \\(M\\), that \\(T_f\\) is hypercyclic if and only if \\(f\\) has the targeting property. The metric assumptions and definition of the targeting property: Not specified in the abstract.",
+        "methods": [
+          "Targeting-property criterion",
+          "Linearization on Lipschitz-free spaces"
+        ],
+        "context": "Topological dynamics of linear operators and Lipschitz maps.",
+        "keywords": [
+          "hypercyclicity",
+          "Lipschitz-free operators",
+          "targeting property",
+          "mixing"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.17997",
+        "versioned_id": "2609.17997v1",
+        "title": "The Attention Within: Consensus Dynamics in Selective State Space Models",
+        "authors": [
+          "Jo\\~ao Pedro Silvestre",
+          "\\'Alvaro Rodr\\'iguez Abella",
+          "Paulo Tabuada"
+        ],
+        "abstract": "Selective state space models (SSMs) have recently emerged as a compelling alternative to transformers, combining competitive performance with substantially improved inference efficiency. At each SSM layer, a sequence of hidden states are propagated by a recurrence, mixing information of different tokens. Despite using a different mechanism, this mixing plays a role analogous to attention in transformers. In fact, recent works have shown that the two architectures may be closer than they first appear, as this recurrence admits a formulation akin to linear attention. In transformers, attention is known to drive the tokens to cluster, i.e., to reach consensus, collapsing in the limit to a single direction. Thus, we ask: does the recurrence at the core of SSMs drive the tokens to consensus, as attention does in transformers? To answer this question, we take a dynamical systems perspective on SSMs, modeling the evolution of tokens across layers as an ordinary differential equation. By exploiting input-to-state stability arguments, we establish local exponential stability of the consensus equilibria and characterize their domain of attraction for time-varying weight matrices, a setting not addressed by previous results. We thereby show that the resemblance between SSMs and transformers does run deeper: the recurrence at the core of SSMs aggregates tokens just as attention does. Numerical experiments on a pretrained Mamba-2 model point to the output gate as the component that regulates the extent of this consensus, preventing the tokens from reaching it in full.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.LG",
+          "cs.AI",
+          "cs.SY",
+          "eess.SY",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.17997",
+        "pdf_url": "https://arxiv.org/pdf/2609.17997"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Consensus analysis of machine-learning architectures is primarily applied stability theory outside the central research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.18367",
+        "versioned_id": "2609.18367v1",
+        "title": "Generating Functions and the Minimum Spectral Radius in Strongly Connected Digraphs with $m+2$ Edges",
+        "authors": [
+          "Rostislav Klech"
+        ],
+        "abstract": "We study the minimum adjacency spectral radius in the class $\\mathcal{SC}_{m+2}(m)$ of strongly connected digraphs with $m$ vertices and $m+2$ edges. Using generating functions for directed paths, we associate with the relevant digraphs topological polynomials whose smallest positive roots determine the corresponding spectral radii. Based on an ear decomposition, we obtain a complete structural classification of $\\mathcal{SC}_{m+2}(m)$ by showing that every digraph in this class can be obtained from a butterfly digraph by attaching a single ear. This reduces the extremal problem to the optimization and comparison of finitely many polynomial families subject to their realizability conditions. We prove that the minimum spectral radius is determined by the polynomial $P_{\\min}(z)=1-2z^{m-1}-z^m$. If $R_m\\in(0,1)$ denotes its unique root, then $\\min_{G\\in\\mathcal{SC}_{m+2}(m)}\\rho(G)=R_m^{-1}$. For $m\\geq4$, the minimum is attained, up to isomorphism, uniquely by the cross-chorded cycle $\\mathcal{C}_m^\\times$. For $m=3$, there are exactly two non-isomorphic minimizers, both with spectral radius $(1+\\sqrt5)/2$. Finally, we establish the bounds $2^{1/(m-1)}<\\rho\\left(\\mathcal{C}_m^\\times\\right)<3^{1/(m-1)}$.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CO",
+          "math.DS",
+          "math.SP"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.18367",
+        "pdf_url": "https://arxiv.org/pdf/2609.18367"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Directed-path counting and adjacency spectral radii offer a possible combinatorial connection to symbolic complexity; the abstract does not state a dynamical application.",
+        "tldr": "The author determines the minimum adjacency spectral radius among strongly connected digraphs with two more edges than vertices. Generating functions and an ear decomposition reduce the problem to finitely many polynomial families.",
+        "problem": "Minimizing adjacency spectral radius over strongly connected digraphs with \\(m\\) vertices and \\(m+2\\) edges.",
+        "main_result": "The author proves that the minimum is \\(R_m^{-1}\\), where \\(R_m\\in(0,1)\\) is the unique root in that interval of \\(1-2z^{m-1}-z^m\\). For \\(m\\geq4\\), the minimizer is uniquely, up to isomorphism, the cross-chorded cycle; for \\(m=3\\), there are two non-isomorphic minimizers, both with spectral radius \\((1+\\sqrt{5})/2\\). The structural classification obtains every graph in the class from a butterfly digraph by attaching one ear. The abstract also gives upper and lower spectral-radius bounds for the cross-chorded cycles.",
+        "methods": [
+          "Generating functions for directed paths",
+          "Ear decomposition",
+          "Optimization and comparison of polynomial families under realizability conditions"
+        ],
+        "context": "Directed graph combinatorics and spectral-radius extremal problems.",
+        "keywords": [
+          "strongly connected digraphs",
+          "spectral radius",
+          "generating functions",
+          "ear decomposition"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.19008",
+        "versioned_id": "2609.19008v1",
+        "title": "Non-rotationally invariant generalised geodesics in the disc",
+        "authors": [
+          "Maja Gwozdz"
+        ],
+        "abstract": "We study Brenier's relaxed least-action problem in the unit disc $D:=\\{x\\in\\mathbb{R}^2:\\ |x|<1\\}$ at the critical time $T=\\pi$, with the endpoint pair $i_D$ (the identity on $D$) and $-i_D$. We prove that the critical energy shell \\[ S^3=\\{(x,v)\\in\\mathbb{R}^2\\times\\mathbb{R}^2: |x|^2+|v|^2=1\\} \\] supports stationary action-minimising generalised incompressible flows that are not invariant under physical rotations. This answers the question posed by Bernot, Figalli, and Santambrogio. Our construction relies on the normalised surface measure $\\sigma$ on $S^3$ and the Hopf quotient \\[ \\Pi=(N,M,L):S^3\\to\\mathbb S^2_{1/2}, \\qquad \\mathbb S^2_{1/2}:=\\{(n,m,\\ell)\\in\\mathbb{R}^3: n^2+m^2+\\ell^2=1/4\\}. \\] Here, \\[ N=\\frac12(x_1^2+v_1^2-x_2^2-v_2^2),\\quad M=x_1x_2+v_1v_2,\\quad L=x_1v_2-x_2v_1 . \\] This quotient is a first integral of the harmonic-oscillator flow. Let $\\tau:=\\Pi_\\#\\sigma$, let $g$ be a bounded Borel function on $\\mathbb S^2_{1/2}$ whose $L^\\infty(\\tau)$-class is odd under $(n,m,\\ell)\\mapsto(n,m,-\\ell)$, and let $\\delta\\in\\mathbb{R}$. If $1+\\delta g\\circ\\Pi\\ge0$ $\\sigma$-a.e., then \\[ d\\mu_{\\delta,g}=\\pi(1+\\delta g\\circ\\Pi)\\,d\\sigma \\] has Lebesgue spatial marginal and is stationary. The induced path measure is then minimising. We also determine exactly which members of this tilted family are rotationally invariant. If $\\delta\\ne0$, this is equivalent to axisymmetry of the $L^\\infty(\\tau)$-class of $g$, modulo $\\tau$-null sets. In particular, taking $g(n,m,\\ell)=\\ell m$ with $0<|\\delta|<8$ gives strictly positive non-rotationally invariant minimisers.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.19008",
+        "pdf_url": "https://arxiv.org/pdf/2609.19008"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Stationary flow measures, a first-integral quotient, and rotational symmetry provide a substantial connection to geometric dynamics and invariant measures.",
+        "tldr": "The author constructs stationary action-minimizing generalized incompressible flows in the disc that are not invariant under physical rotations. These flows solve the specified critical-time endpoint problem and arise from tilted measures on an energy shell.",
+        "problem": "Rotational symmetry of minimizers of Brenier’s relaxed least-action problem in the unit disc at time \\(T=\\pi\\), with endpoints the identity and its negative.",
+        "main_result": "The author constructs minimizers on the critical shell \\(S^3=\\{(x,v):|x|^2+|v|^2=1\\}\\), using normalized surface measure \\(\\sigma\\) and the Hopf quotient \\(\\Pi=(N,M,L)\\), a first integral of harmonic-oscillator flow. If \\(g\\) is bounded Borel on the quotient sphere, odd in its last coordinate modulo \\(\\tau\\)-null sets for \\(\\tau=\\Pi_\\#\\sigma\\), and \\(1+\\delta g\\circ\\Pi\\geq0\\) almost everywhere, then \\(\\pi(1+\\delta g\\circ\\Pi)\\,d\\sigma\\) has Lebesgue spatial marginal and is stationary, with a minimizing induced path measure. For \\(\\delta\\ne0\\), rotational invariance is equivalent to axisymmetry of the class of \\(g\\). The choice \\(g(n,m,\\ell)=\\ell m\\), \\(0<|\\delta|<8\\), gives strictly positive non-rotationally invariant examples.",
+        "methods": [
+          "Hopf quotient as a harmonic-oscillator first integral",
+          "Tilting normalized surface measure on the critical energy shell"
+        ],
+        "context": "Generalized incompressible flows, least action, and symmetry of stationary measures.",
+        "keywords": [
+          "generalized geodesics",
+          "incompressible flows",
+          "Hopf quotient",
+          "stationary measures"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2503.10190",
+        "versioned_id": "2503.10190v2",
+        "title": "The multifractal nature of a parametrized family of von Koch functions",
+        "authors": [
+          "Zolt\\'an Buczolich (ELTE)",
+          "Yann Demichel (UPN SEGMI",
+          "MODAL'X)",
+          "St\\'ephane Seuret (UPEC UP12)"
+        ],
+        "abstract": "In a famous paper published in 1904, Helge von Koch introduced the curve that still serves nowadays as an iconic representation of fractal shapes. In fact, von Koch's main goal was the construction of a continuous but nowhere differentiable function, very similar to the snowflake, using elementary geometric procedures, and not analytical formulae. We prove that a parametrized family of functions (including and) generalizing von Koch's example enjoys a rich multifractal behavior, thus enriching the class of historical mathematical objects having surprising regularity properties. The analysis relies on the study of the orbits of an underlying dynamical system and on the introduction of self-similar measures and non-trivial iterated functions systems adapted to the problem.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.CA",
+          "math.DS",
+          "math.FA"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2503.10190",
+        "pdf_url": "https://arxiv.org/pdf/2503.10190"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Multifractal analysis, self-similar measures, and adapted iterated function systems directly match the strongest interests.",
+        "tldr": "The authors prove multifractal behavior for a parameterized family of functions that includes and generalizes von Koch’s example. Their analysis uses an underlying dynamical system and adapted self-similar constructions.",
+        "problem": "Regularity and multifractal behavior of a family extending von Koch’s continuous nowhere-differentiable example.",
+        "main_result": "The authors establish rich multifractal behavior for a parameterized family containing and generalizing von Koch’s function. They analyze orbits of an underlying dynamical system and introduce self-similar measures and adapted iterated function systems. The parameter range, pointwise regularity statements, and explicit multifractal spectrum: Not specified in the abstract.",
+        "methods": [
+          "Orbit analysis of an underlying dynamical system",
+          "Self-similar measures",
+          "Adapted iterated function systems"
+        ],
+        "context": "Multifractal regularity of classical fractal functions.",
+        "keywords": [
+          "multifractal analysis",
+          "von Koch functions",
+          "self-similar measures",
+          "iterated function systems"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2510.04478",
+        "versioned_id": "2510.04478v4",
+        "title": "Overlapping Schwarz Scheme for Linear-Quadratic Programs in Continuous Time",
+        "authors": [
+          "Hongli Zhao",
+          "Mihai Anitescu",
+          "Sen Na"
+        ],
+        "abstract": "We present an optimize-then-discretize framework for solving linear-quadratic optimal control problems (OCP) governed by time-inhomogeneous ordinary differential equations (ODEs). Our method employs a modified overlapping Schwarz decomposition based on the Pontryagin Minimum Principle, partitioning the temporal domain into overlapping intervals and independently solving Hamiltonian systems in continuous time. We demonstrate that the convergence is ensured by appropriately updating the boundary conditions of the individual Hamiltonian dynamics. The cornerstone of our analysis is to prove that the exponential decay of sensitivity (EDS) exhibited in discrete-time OCPs carries over to the continuous-time setting. Unlike the discretize-then-optimize approach, our method can flexibly incorporate different numerical integration methods for solving the resulting Hamiltonian two-point boundary-value subproblems, including adaptive-time integrators. A numerical experiment on a linear-quadratic OCP illustrates the practicality of our approach in broad scientific applications.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.OC",
+          "cs.CE",
+          "cs.DC",
+          "cs.NA",
+          "math.DS",
+          "math.NA"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2510.04478",
+        "pdf_url": "https://arxiv.org/pdf/2510.04478"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Domain decomposition for linear-quadratic optimal control is a numerical control topic outside the central interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2603.12107",
+        "versioned_id": "2603.12107v3",
+        "title": "Social Distancing Equilibria in Games under Conventional SI Dynamics",
+        "authors": [
+          "Connor D Olson",
+          "Timothy C Reluga"
+        ],
+        "abstract": "The mathematical characterization of social-distancing games in classical epidemic theory remains an important question, for their applications to both infectious-disease theory and memetic theory. We consider a special case of the dynamic finite-duration SI social-distancing game where payoffs are accounted using Markov decision theory without discounting, while distancing is constrained by threshold-linear running-costs, and the running-cost of perfect-distancing is finite. In this special case, we are able construct strategic equilibria satisfying the Nash best-response condition explicitly by integration. Our constructions are obtained using a new change of variables which simplifies the geometry and analysis. As it turns out, there are no singular solutions, and a time-dependent bang-bang strategy consisting of a wait-and-see phase followed by a lock-down phase is always the unique strategic equilibrium. We also show that in a delay strategy space the bang-bang Nash equilibrium is an ESS, and that the optimal public policy exactly corresponds with the game equilibrium. Social distancing only turns out to be a valuable tool in reducing outbreak burden when the outbreak response delay falls in a Goldilocks zone, determined by the speed of outbreak detection and the relative rolling cost of social distancing.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cs.GT",
+          "math.DS",
+          "q-bio.PE"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2603.12107",
+        "pdf_url": "https://arxiv.org/pdf/2603.12107"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Epidemic social-distancing games and policy equilibria lack a central connection to entropy, fractal geometry, symbolic dynamics, or group actions.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2604.05967",
+        "versioned_id": "2604.05967v2",
+        "title": "On Dominant Manifolds in Reservoir Computing Networks",
+        "authors": [
+          "Noa Kaplan",
+          "Alberto Padoan",
+          "Anastasia Bizyaeva"
+        ],
+        "abstract": "Understanding how training shapes the geometry of recurrent network dynamics is a central problem in time-series modeling. We study the emergence of low-dimensional dominant manifolds in the training of Reservoir Computing (RC) networks for temporal forecasting tasks. For a general linear continuous-time reservoir in the infinite-data limit, we show that the training data generate an invariant subspace of the trained reservoir, whose dimension equals the number of dominant modes. We then specialize to a simplified diagonal linear reservoir, where we link the dominant eigenvalues and eigenvectors to the spectrum of a backward Dynamic Mode Decomposition matrix, which yields a finite-dimensional approximation of the backward-time Koopman operator of the system generating the training data. We illustrate the emergence of these dominant modes during training in simulation, and discuss how the analysis may be extended to nonlinear RC via tangent dynamics and differential p-dominance.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cs.LG",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2604.05967",
+        "pdf_url": "https://arxiv.org/pdf/2604.05967"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Dominant linear subspaces in reservoir training concern model reduction and forecasting; their finite-dimensional algebraic dimension is not a fractal or mean-dimension result.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2606.28014",
+        "versioned_id": "2606.28014v2",
+        "title": "The Natural Extension for the Triangle Map (a Multi-dimensional Continued Fraction) with An Internal Symmetry from Young Conjugation",
+        "authors": [
+          "Joe Fox",
+          "Thomas Garrity"
+        ],
+        "abstract": "The natural extension of the triangle map (a type of multi-dimensional continued fraction algorithm) is completely described in all possible dimensions. The motivation and inspiration for this natural extension stems from the triangle map's recent link to the classical study of integer partitions. Inspired by Young conjugation for integer partitions, we show that the natural extension has an internal symmetry and allows the natural extension to be subdivided into four natural subdomains. This appears to be new even for the classical case of the natural extension for continued fractions, namely for both the classical Gauss map and the classical Farey map.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2606.28014",
+        "pdf_url": "https://arxiv.org/pdf/2606.28014"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Natural extensions of continued-fraction maps and their internal symmetries provide a substantial connection to the structure of dynamical systems.",
+        "tldr": "The authors describe the natural extension of the triangle map in all possible dimensions. Inspired by Young conjugation of integer partitions, they identify an internal symmetry and a subdivision into four natural subdomains.",
+        "problem": "Natural extensions and internal symmetries of the triangle map, a multidimensional continued-fraction algorithm.",
+        "main_result": "The authors give a complete description of the triangle map’s natural extension in all possible dimensions and show that a symmetry inspired by Young conjugation permits a subdivision into four natural subdomains. They say this appears new even for the classical Gauss and Farey natural extensions; this is a qualified novelty claim. The explicit extension, symmetry, and subdomain formulas: Not specified in the abstract.",
+        "methods": [
+          "Young conjugation for integer partitions as inspiration for the symmetry"
+        ],
+        "context": "Continued-fraction dynamics, natural extensions, and integer partitions.",
+        "keywords": [
+          "triangle map",
+          "natural extension",
+          "continued fractions",
+          "Young conjugation"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.12004",
+        "versioned_id": "2609.12004v2",
+        "title": "Learning Interaction Kernels from Collective Steady States",
+        "authors": [
+          "Baoli Hao",
+          "Mauro Maggioni",
+          "Ming Zhong"
+        ],
+        "abstract": "We propose a learning procedure for system identification in interacting particle systems from single-snapshot observations of collective behaviors, unlike existing approaches that rely on observations of trajectories. This setting leads to a fundamentally ill-posed inverse problem, which we solve by using a regularization strategy based on the empirical distribution of observed configurations, drawn from different, unobserved initial conditions. We test our learning procedure on a variety of representative models with steady-state and quasi-stationary patterns, where collective behaviors encode implicit information about the interaction mechanisms, demonstrating that our approach enables stable and accurate recovery of the underlying interaction laws, leading to faithful reproduction of the collective behavior, and in many cases even of the dynamics leading up to it.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "stat.ML",
+          "cs.LG",
+          "cs.NA",
+          "math.DS",
+          "math.NA",
+          "nlin.AO"
+        ],
+        "announced_at": "2026-09-17T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.12004",
+        "pdf_url": "https://arxiv.org/pdf/2609.12004"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Learning interaction laws from particle snapshots is an applied inverse problem without a central profile connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 9,
+    "RELATED / POSSIBLY INTERESTING": 8,
+    "LOW PRIORITY": 10
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-09-17T09:26:37.429457Z",
+      "feed_published_at": "2026-09-17T00:00:00-04:00",
+      "feed_build_at": "2026-09-17T04:00:13Z",
+      "feed_date": "2026-09-17",
+      "sha256": "ddfe38c6bc56ac77d3aa8c846eb464d4dcb49706ff4a710017c13fa28002cbde",
+      "byte_length": 47062,
+      "capture_run_url": "https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/35205128170"
+    }
+  ]
+}
