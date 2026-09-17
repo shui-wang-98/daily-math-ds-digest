@@ -6,6 +6,7 @@
   <meta name="description" content="Personalized reports on newly announced arXiv math.DS papers">
   <title>{{ site_title }}</title>
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/favorites.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to reports</a>
@@ -22,6 +23,28 @@
       <p>Daily reports on new and newly cross-listed arXiv papers in math.DS. Classification reflects a personalized research profile, with priority given to followed authors.</p>
       <p class="reading-note">Choose a date to read the full report online. Historical PDF and Markdown downloads are linked where available.</p>
     </header>
+
+    <section id="favorites" class="favorites" aria-labelledby="favorites-heading">
+      <h2 id="favorites-heading" tabindex="-1">Favorites <span class="favorites-count" data-favorites-count hidden></span></h2>
+      <p class="section-note">Saved in this browser, without an account. Clearing this site's browser data removes your favorites.</p>
+      <p class="section-note" data-favorites-loading hidden>Loading favorites…</p>
+      <p class="favorites-status section-note" role="status" aria-live="polite"></p>
+      <p class="favorites-empty" data-favorites-empty hidden>No favorites yet. Select a star beside a paper in any report to save it here.</p>
+      <noscript><p class="section-note">Enable JavaScript to save and view your favorites.</p></noscript>
+      <ol class="favorites-list" data-favorites-list></ol>
+      <template id="favorites-catalog">
+        {% for item in favorite_papers %}
+        <li class="favorite-item" data-favorite-id="{{ item.paper.arxiv_id }}">
+          <div class="paper-title-row">
+            <h3><a class="favorite-title" href="reports/{{ item.report_date }}/#{{ item.anchor }}">{{ item.paper.title | render_text }}</a></h3>
+            {% with favorite_id=item.paper.arxiv_id %}{% include "favorite_button.html.j2" %}{% endwith %}
+          </div>
+          <p class="authors">{{ item.paper.authors | join(', ') | render_text }}</p>
+          <p class="paper-meta"><a href="{{ item.paper.abstract_url }}">arXiv:{{ item.paper.arxiv_id }}</a> · <a href="reports/{{ item.report_date }}/#{{ item.anchor }}">Report <time datetime="{{ item.report_date }}">{{ item.report_date }}</time></a></p>
+        </li>
+        {% endfor %}
+      </template>
+    </section>
 
     <section class="archive" aria-labelledby="archive-heading">
       <h2 id="archive-heading">Report archive</h2>

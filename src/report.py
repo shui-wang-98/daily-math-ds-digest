@@ -107,7 +107,8 @@ def render_site_index(
     legacy_site_dir: str | Path | None = None,
 ) -> None:
     site_root = Path(site_dir)
-    atomic_write_bytes(site_root / "assets/style.css", (Path(static_dir) / "style.css").read_bytes())
+    for filename in ("style.css", "favorites.js"):
+        atomic_write_bytes(site_root / "assets" / filename, (Path(static_dir) / filename).read_bytes())
     atomic_write_text(site_root / ".nojekyll", "")
     entries = [
         {
@@ -120,7 +121,17 @@ def render_site_index(
         }
         for report in sorted(reports, key=lambda item: item.report_date, reverse=True)
     ]
+    # Keep trusted, already-rendered metadata on the page. Browser storage holds
+    # only IDs and save times; it never supplies HTML or URLs for favorite rows.
+    favorites = {}
+    for report in sorted(reports, key=lambda item: item.report_date, reverse=True):
+        for item in report.papers:
+            favorites.setdefault(item.paper.arxiv_id, {
+                "paper": item.paper,
+                "report_date": report.report_date,
+                "anchor": quote("paper-" + item.paper.arxiv_id, safe=""),
+            })
     content = _jinja_environment(template_dir).get_template("index.html.j2").render(
-        site_title=config["site"]["title"], reports=entries,
+        site_title=config["site"]["title"], reports=entries, favorite_papers=favorites.values(),
     )
     atomic_write_text(site_root / "index.html", content)

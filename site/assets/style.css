@@ -10,10 +10,11 @@
   font-size: 18px;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 body { margin: 0; line-height: 1.7; }
 a { color: var(--link); text-underline-offset: .18em; text-decoration-thickness: .06em; }
 a:hover { text-decoration-thickness: .12em; }
-a:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+a:focus-visible, summary:focus-visible, button:focus-visible, #favorites-heading:focus { outline: 2px solid var(--link); outline-offset: 4px; }
 .container { width: min(100% - 64px, 880px); margin-inline: auto; }
 .site-header { border-bottom: 1px solid var(--line); font-family: var(--sans); font-size: .8rem; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 70px; }
@@ -31,6 +32,24 @@ p { margin: .75rem 0; }
 .home-intro > p:first-of-type { font-size: 1.08rem; }
 .reading-note, .section-note, .scope-note, .site-footer { color: var(--muted); font-size: .86rem; }
 .archive { border-top: 2px solid var(--ink); padding-top: 1.6rem; }
+.favorites { border-top: 2px solid var(--ink); padding-top: 1.6rem; margin-bottom: 2.8rem; }
+.favorites > h2 { margin-bottom: .35rem; }
+.favorites-count { color: var(--muted); font: .85rem/1.5 var(--sans); margin-left: .4rem; }
+.favorites-list { list-style: none; padding: 0; margin: 1.2rem 0 0; }
+.favorite-item { border-top: 1px solid var(--line); padding-block: 1.2rem; }
+.favorite-item:last-child { border-bottom: 1px solid var(--line); }
+.favorite-item h3 { font-size: 1.08rem; }
+.favorite-item .authors { font-size: .86rem; }
+.favorite-item .paper-meta { margin-bottom: 0; }
+.favorites-empty { color: var(--muted); font-size: .9rem; padding-block: .6rem; }
+.favorites-status:empty { display: none; }
+.paper-title-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: start; }
+.paper-title-row h3, .paper-title-row > a { overflow-wrap: anywhere; }
+.favorite-toggle { display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: #fff; color: var(--muted); font: 1.45rem/1 var(--sans); cursor: pointer; }
+.favorite-toggle:hover { border-color: #966319; background: #fff7e7; }
+.favorite-toggle[aria-pressed="true"] { color: #8a5800; border-color: #bd862b; background: #fff7e7; }
+.favorite-toggle:disabled { cursor: not-allowed; opacity: .5; }
+.favorite-title { color: var(--ink); }
 .archive > h2 { margin-bottom: .35rem; }
 .archive-list { list-style: none; padding: 0; margin: 1.2rem 0 0; }
 .archive-row { border-top: 1px solid var(--line); padding: 1.5rem 0; }
@@ -74,7 +93,8 @@ summary { cursor: pointer; font: 600 .82rem/1.6 var(--sans); padding-block: .2re
 .math-formula { display: inline-block; height: auto; max-width: 100%; }
 .compact-paper-list { padding-left: 1.3rem; }
 .compact-paper-list li { padding-left: .2rem; margin-bottom: 1.5rem; }
-.compact-paper-list > li > a { font-weight: 600; }
+.compact-paper-list .paper-title-row > a { font-weight: 600; }
+.compact-paper-list > li, .paper-heading h3 { scroll-margin-top: 24px; }
 .compact-paper-list .paper-meta { display: block; margin-top: .25rem; }
 .important-author { font: 700 .78rem/1.6 var(--sans); color: #785017; background: #fff3da; padding: .45rem .7rem; border-left: 3px solid #bd862b; }
 .archive-return { border-top: 1px solid var(--line); padding-top: 1.5rem; margin-top: 2.7rem; font: .85rem/1.6 var(--sans); }
@@ -103,6 +123,8 @@ summary { cursor: pointer; font: 600 .82rem/1.6 var(--sans); padding-block: .2re
   .report, .home { padding: 0; }
   .site-header, .site-footer, .skip-link, .section-nav, .archive-return,
   .paper-links, .archive-downloads, .open-report { display: none !important; }
+  .favorite-toggle, .favorites-home, .favorites-status, [data-favorites-loading], noscript { display: none !important; }
+  .paper-title-row { display: block; }
   a { color: inherit; text-decoration: none; }
   h1 { font-size: 24pt; }
   h2, h3, summary { break-after: avoid; page-break-after: avoid; }

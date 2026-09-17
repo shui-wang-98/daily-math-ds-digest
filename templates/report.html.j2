@@ -6,12 +6,14 @@
   <meta name="description" content="Personalized daily arXiv digest for math.DS">
   <title>{{ site_title }} - {{ report.report_date }}</title>
   <link rel="stylesheet" href="../../assets/style.css">
+  <script src="../../assets/favorites.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to report</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="archive-home" href="../../">← All report dates</a>
+      <a class="favorites-home" href="../../#favorites">☆ Favorites</a>
       {% if legacy_downloads %}
       <nav class="downloads" aria-label="Historical report downloads">{% for download in legacy_downloads %}<a href="{{ download.href }}" title="{{ download.filename }}">{{ download.label }}</a>{% endfor %}</nav>
       {% endif %}
@@ -37,6 +39,8 @@
       <a href="#related">Related / Possibly Interesting</a>
       <a href="#low-priority">Low Priority</a>
     </nav>
+    <p class="favorites-status section-note" role="status" aria-live="polite"></p>
+    <noscript><p class="section-note">Enable JavaScript to save favorites in this browser.</p></noscript>
 
     {% for key, heading, anchor in [('high', 'High Priority', 'high-priority'), ('related', 'Related / Possibly Interesting', 'related')] %}
     <section class="priority-section" aria-labelledby="{{ anchor }}">
@@ -54,8 +58,11 @@
       {% if sections.low %}
       <ol class="compact-paper-list">
         {% for item in sections.low %}
-        <li>
-          <a href="{{ item.paper.abstract_url }}">{{ item.paper.title | render_text }}</a>
+        <li id="paper-{{ item.paper.arxiv_id }}">
+          <div class="paper-title-row">
+            <a href="{{ item.paper.abstract_url }}">{{ item.paper.title | render_text }}</a>
+            {% with favorite_id=item.paper.arxiv_id %}{% include "favorite_button.html.j2" %}{% endwith %}
+          </div>
           <span class="authors">{{ item.paper.authors | join(', ') | render_text }}</span>
           <span class="paper-meta">arXiv:{{ item.paper.arxiv_id }}</span>
         </li>

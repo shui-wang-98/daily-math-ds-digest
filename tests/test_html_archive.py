@@ -117,7 +117,10 @@ def test_archive_all_dates_counts_no_new_and_future_links(tmp_path, report):
 def test_daily_native_details_full_fields_and_compact_low(tmp_path, report):
     render_report_files(report, load_config(ROOT/'config.yaml'), ROOT/'templates', tmp_path)
     doc = document(tmp_path/f'reports/{report.report_date}/index.html')
-    assert not doc.find('script')
+    scripts = doc.find('script')
+    assert len(scripts) == 1
+    assert scripts[0].attrs == {'src': '../../assets/favorites.js', 'defer': None}
+    assert not scripts[0].text()
     assert [h.text() for h in doc.find('h2')] == ['High Priority', 'Related / Possibly Interesting', 'Low Priority']
     assert all(a.attrs['href'] == '../../' for a in doc.find('a', 'archive-home'))
     assert len(doc.find('a', 'archive-home')) == 2
@@ -135,12 +138,69 @@ def test_daily_native_details_full_fields_and_compact_low(tmp_path, report):
         assert item.paper.pdf_url in [a.attrs['href'] for a in card.find('a')]
     low = doc.find('ol', 'compact-paper-list')[0].find('li')
     assert len(low) == 1
-    assert [c.tag for c in low[0].children if isinstance(c, Element)] == ['a', 'span', 'span']
+    assert [c.tag for c in low[0].children if isinstance(c, Element)] == ['div', 'span', 'span']
     low_item = next(p for p in report.papers if p.analysis.priority == 'LOW PRIORITY')
     assert low[0].find('a')[0].text() == low_item.paper.title
     assert low[0].find('span', 'authors')[0].text() == ', '.join(low_item.paper.authors)
     assert low_item.paper.abstract not in doc.text()
     assert low_item.analysis.relevance_note not in doc.text()
+
+
+def test_favorites_cover_all_priorities_with_accessible_buttons_and_anchors(tmp_path, report):
+    config = load_config(ROOT/'config.yaml')
+    render_report_files(report, config, ROOT/'templates', tmp_path)
+    render_site_index([report], config, ROOT/'templates', ROOT/'static', tmp_path)
+    doc = document(tmp_path/f'reports/{report.report_date}/index.html')
+    buttons = doc.find('button', 'favorite-toggle')
+    assert {button.attrs['data-favorite-id'] for button in buttons} == {p.paper.arxiv_id for p in report.papers}
+    assert len(buttons) == len(report.papers)
+    for button in buttons:
+        paper_id = button.attrs['data-favorite-id']
+        assert button.attrs['type'] == 'button'
+        assert button.attrs['aria-pressed'] == 'false'
+        assert button.attrs['aria-label'] == f'Favorite arXiv:{paper_id}'
+        assert 'hidden' in button.attrs
+        assert button.find('span')[0].attrs['aria-hidden'] == 'true'
+    anchors = [n.attrs['id'] for tag in ('h3', 'li') for n in doc.find(tag) if 'id' in n.attrs]
+    assert sorted(anchors) == sorted('paper-' + p.paper.arxiv_id for p in report.papers)
+    assert doc.find('a', 'favorites-home')[0].attrs['href'] == '../../#favorites'
+    assert (tmp_path/'assets/favorites.js').read_bytes() == (ROOT/'static/favorites.js').read_bytes()
+    home = document(tmp_path/'index.html')
+    assert home.find('script')[0].attrs['src'] == 'assets/favorites.js'
+    assert home.find('ol', 'favorites-list')[0].text() == ''
+    template = home.find('template')[0]
+    assert template.attrs['id'] == 'favorites-catalog'
+    assert len(template.find('li', 'favorite-item')) == len(report.papers)
+    assert 'Saved in this browser, without an account.' in home.text()
+
+
+def test_favorites_catalog_deduplicates_ids_and_preserves_safe_title_math(tmp_path, report):
+    older = report.model_copy(deep=True)
+    older.report_date = '2026-09-03'
+    paper = report.papers[0].paper
+    paper.arxiv_id = 'math/1234567'
+    paper.versioned_id = 'math/1234567v1'
+    paper.abstract_url = 'https://arxiv.org/abs/math/1234567'
+    paper.pdf_url = 'https://arxiv.org/pdf/math/1234567'
+    paper.title = r'Title with \(\sqrt{5}\) </template><script>alert(1)</script>'
+    older.papers[0].paper = paper.model_copy(deep=True)
+    older.papers[0].paper.title = 'Older title for the same paper'
+    config = load_config(ROOT/'config.yaml')
+    render_report_files(report, config, ROOT/'templates', tmp_path)
+    render_site_index([older, report], config, ROOT/'templates', ROOT/'static', tmp_path)
+    home = document(tmp_path/'index.html')
+    assert len(home.find('script')) == 1
+    template = home.find('template')[0]
+    rows = template.find('li', 'favorite-item')
+    assert len(rows) == len(report.papers)
+    row = next(row for row in rows if row.attrs['data-favorite-id'] == paper.arxiv_id)
+    title = row.find('a', 'favorite-title')[0]
+    assert title.attrs['href'] == 'reports/2026-09-04/#paper-math%2F1234567'
+    assert title.find('img')[0].attrs['alt'] == r'\sqrt{5}'
+    assert '</template><script>alert(1)</script>' in title.text()
+    assert 'Older title' not in template.text()
+    report_doc = document(tmp_path/'reports/2026-09-04/index.html')
+    assert any(n.attrs.get('id') == 'paper-math/1234567' for n in report_doc.find('h3'))
 
 
 def test_math_is_safe_embedded_vector_and_repeatable():

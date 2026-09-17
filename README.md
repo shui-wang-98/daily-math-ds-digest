@@ -142,6 +142,7 @@ site/reports/YYYY-MM-DD/index.html
 site/reports/YYYY-MM-DD/report.json
 site/index.html
 site/assets/style.css
+site/assets/favorites.js
 site/.nojekyll
 data/state.json
 ```
@@ -165,6 +166,20 @@ and linked only when present. Browser Ctrl+P -> Save as PDF remains optional.
 `python -m src.rebuild_site` rebuilds HTML/assets from archived metadata without
 changing state, JSON, or historical PDF/Markdown.
 
+## Favorites
+
+Select the star beside any paper to save it; select it again to remove it.
+The homepage's **Favorites** section lists saved papers, most recently saved
+first, with links back to their report entries. All priority classes and
+archived reports support favorites. This changes neither classifications nor
+the report contents.
+
+Favorites are private to the current browser and site. They survive reloads
+and new daily reports but do not sync across devices. Clearing this site's
+browser data removes them. No account, backend, external script, or network
+request is needed. Reports remain readable with JavaScript disabled; saving
+favorites requires JavaScript and available browser storage.
+
 ## Testing and isolated demonstrations
 
 Fixtures are synthetic. Use fresh ignored data/site/inbox paths under `tmp/`,
@@ -178,6 +193,8 @@ python -m src.finalize_run --analysis tmp/offline-input-demo/data/analysis_run.j
 
 Tests block HTTP, exercise inbox and fixture routes, simulate failures and
 assert production data/inbox/state/reports/site remain untouched.
+When Node.js is on PATH, pytest also runs the dependency-free favorites behavior
+tests. Run them directly with `node --test tests/favorites.test.cjs`.
 [VALIDATION.md](VALIDATION.md) records actual test, visual and CI evidence.
 
 [validate-offline.yml](.github/workflows/validate-offline.yml) runs on repair
