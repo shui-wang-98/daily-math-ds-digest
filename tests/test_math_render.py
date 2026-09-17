@@ -44,6 +44,36 @@ def test_standard_fraction_spellings(source):
     assert not unknown
 
 
+@pytest.mark.parametrize(('source', 'reference'), [
+    (r'(1+\sqrt5)/2', r'(1+\sqrt{5})/2'),
+    (r'\sqrt12', r'\sqrt{1}2'),
+    (r'\sqrt x^2', r'\sqrt{x}^2'),
+    (r'\sqrt[3]5', r'\sqrt[3]{5}'),
+    (r'\sqrt[n+1] xy', r'\sqrt[n+1]{x}y'),
+    (r'\sqrt{12}+\sqrt[3]{x+1}', r'\sqrt{12}+\sqrt[3]{x+1}'),
+    (r'\text{\sqrt5}', r'\text{\sqrt5}'),
+    (r'\sqrt5+\text{\sqrt5}', r'\sqrt{5}+\text{\sqrt5}'),
+])
+def test_unbraced_roots_keep_glyphs_and_original_source(source, reference):
+    normalized, unknown = _formula(source)
+    assert not unknown
+    svg, width, depth = _svg_formula(normalized)
+    reference_svg, reference_width, reference_depth = _svg_formula(reference)
+    assert (width, depth) == (reference_width, reference_depth)
+    assert ET.tostring(ET.fromstring(base64.b64decode(svg))) == ET.tostring(
+        ET.fromstring(base64.b64decode(reference_svg)))
+    rendered = html_text(r'\(' + source + r'\)')
+    assert rendered.count('class="math-formula"') == 1
+    assert f'alt="{source}"' in rendered
+    assert 'Source notation' not in rendered
+
+
+@pytest.mark.parametrize('source', [r'\sqrt', r'\sqrt{}', r'\sqrtx'])
+def test_incomplete_roots_and_other_control_words_are_not_reinterpreted(source):
+    with pytest.raises(ValueError, match='Cannot faithfully render math'):
+        _formula(source)
+
+
 def test_unbraced_bold_greek_is_typeset_without_undefined_macro_note():
     normalized, unknown = _formula(r'{\boldsymbol \Pi}^0_4')
     assert normalized == r'{\boldsymbol{\Pi}}^0_4'
@@ -140,6 +170,7 @@ def test_html_math_images_keep_metadata_and_are_repeatable(tmp_path):
     payload = AnalysisRun.model_validate_json((ROOT / "tests/fixtures/analysis_run.json").read_text(encoding="utf-8"))
     payload.papers[0].main_result = r"Test notation: \(\Pi_1^0\) and \(1-\frac{1}{d+1}\)."
     pending.papers[0].abstract += r" Cardinality notation: \(\#P_f=4\)."
+    pending.papers[0].abstract += r" Root notation: \((1+\sqrt5)/2\)."
     atomic_write_json(data / "pending_run.json", pending)
     atomic_write_json(data / "analysis_run.json", payload)
     report = finalize_run(data / "analysis_run.json", data_dir=data, site_dir=site)

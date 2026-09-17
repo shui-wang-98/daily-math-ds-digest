@@ -82,6 +82,15 @@ def _formula(source: str):
     normalized = re.sub(r"\\[dt]frac(?![A-Za-z])", lambda _: r"\frac", normalized)
     # TeX permits single-token arguments without braces; mathtext requires them.
     normalized = re.sub(r"\\frac\s*([0-9])\s*([0-9])", r"\\frac{\1}{\2}", normalized)
+    # Only group one literal token: \sqrt12 means \sqrt{1}2, not \sqrt{12}.
+    # Keep text literal, control-word boundaries, and already-braced roots intact.
+    # Optional indices here exclude nested TeX syntax rather than guessing it.
+    normalized = re.sub(
+        r"(?P<text>\\text\s*\{(?:\\.|[^\\}])*\})"
+        r"|(?<!\\)(?P<root>\\sqrt(?![A-Za-z])(?:\s*\[[^\\{}\[\]]*\])?)"
+        r"\s*(?P<radicand>[A-Za-z0-9])",
+        lambda m: m[0] if m['text'] is not None
+        else m['root'] + "{" + m['radicand'] + "}", normalized)
     normalized = re.sub(r"\\boldsymbol\s+(\\[A-Za-z]+|[A-Za-z])",
                         lambda m: r"\boldsymbol{" + m[1] + "}", normalized)
     aliases = {"ge": "geq", "le": "leq", "ne": "neq"}
