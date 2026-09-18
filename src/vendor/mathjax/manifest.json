@@ -1,0 +1,14 @@
+{
+  "mathjax": "4.1.3",
+  "font": "@mathjax/mathjax-tex-font@4.1.3",
+  "esbuild": "0.28.2",
+  "sha256": "fefaefb88218b825fed5ce8f27ef3c6bd43f3a69176958690f3f4cd5f2aabe2d",
+  "bytes": 2835374,
+  "externalImports": [
+    {
+      "path": "node:readline",
+      "kind": "import-statement",
+      "external": true
+    }
+  ]
+}

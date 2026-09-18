@@ -459,3 +459,44 @@ did not modify or manually trigger the existing local task, run new daily
 analysis, or claim a positive author match from today's feed. Actual future
 followed-author publication in the unattended task remains distinct from
 fixture coverage and successful interactive deployment.
+
+
+## 2026-09-18: Offline MathJax renderer maintenance
+
+Replaced Matplotlib Mathtext and its source-rewriting regex patches with pinned
+MathJax 4.1.3, bundled TeX font data, and a local Node.js JSON-lines worker.
+Standard TeX/AMS commands, explicit inline/display modes, nested text mathematics,
+and aligned/matrix/cases environments are now handled by the TeX parser.
+Unrecognized commands are rendered literally with an accurate diagnostic, not
+misrepresented as undefined author macros. Original JSON and source alt text remain unchanged.
+
+Validation performed locally with the existing repository Python and Node24:
+
+- Complete offline suite: **261 passed in 10.88s**, exit0. Used a new isolated
+  `tmp/pytest-mathjax-final-20260918` base directory and disabled pytest's cache
+  provider because existing test/cache directories have Windows ACL restrictions.
+  No permissions or global configuration changed.
+- Actual source corpus: **2,414 fields, 540 unique formulas, zero render errors**
+  across four archived reports, current pending input and authored analysis.
+  The remaining unrecognized commands are C, Hau, IP, R, T, real and var; no
+  mathematical definitions were inferred for them.
+- Full Sep18 finalization succeeded in an isolated copy of real inputs/state:
+  **22 papers:4 HIGH,8 RELATED,10 LOW**. An identical second finalization changed
+  no bytes. The production pending/analysis pair and processing state are retained.
+- Rebuilt the four existing production HTML reports and homepage locally. Hash
+  comparisons confirmed all production data, state, inbox, report JSON and legacy
+  PDF/Markdown files remained unchanged.
+- Inspected a rasterized SVG contact sheet: modulo/bracket sizing, both sides of
+  inequalities, literal TeX root arguments, fractions, limits, script fonts,
+  cardinality, aligned equations, cases/matrices and nested text math.
+- The browser preview tool failed to initialize with a Windows sandbox helper
+  error. Full desktop/mobile browser inspection and external deployment were
+  therefore not verified in this maintenance turn.
+- Resource and recovery regressions cover external SVG paint URLs, unsafe XML,
+  formula-local definitions, malformed/recursive input, layout and output bounds,
+  worker timeout/crash recovery, missing Node, bundle checksum and fresh-process
+  deterministic output. Engine startup verifies the committed bundle hash.
+
+No task/schedule, source feed, research profile or Git permissions were changed.
+No commit or push was performed. The publisher workflow remains unchanged; the
+separate offline-validation workflow now explicitly supplies Node24.

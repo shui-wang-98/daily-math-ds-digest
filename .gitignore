@@ -8,3 +8,4 @@ run_metadata.json
 data/pending_run.json
 data/analysis_run.json
 tmp/
+node_modules/

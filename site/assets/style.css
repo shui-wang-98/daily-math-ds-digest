@@ -91,6 +91,9 @@ p { margin: .75rem 0; }
 summary { cursor: pointer; font: 600 .82rem/1.6 var(--sans); padding-block: .2rem; }
 .abstract { font-size: .94rem; overflow-wrap: anywhere; }
 .math-formula { display: inline-block; height: auto; max-width: 100%; }
+.math-display { display: block; max-width: 100%; overflow-x: auto; padding: .7em 0; text-align: center; }
+.math-display .math-formula { max-width: none; }
+@media print { .math-display .math-formula { max-width: 100%; } }
 .compact-paper-list { padding-left: 1.3rem; }
 .compact-paper-list li { padding-left: .2rem; margin-bottom: 1.5rem; }
 .compact-paper-list .paper-title-row > a { font-weight: 600; }

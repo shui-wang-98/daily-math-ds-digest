@@ -1,0 +1,10 @@
+{
+  "name": "daily-math-ds-renderer-build",
+  "private": true,
+  "scripts": {"build": "node build.mjs"},
+  "devDependencies": {
+    "@mathjax/src": "4.1.3",
+    "@mathjax/mathjax-tex-font": "4.1.3",
+    "esbuild": "0.28.2"
+  }
+}

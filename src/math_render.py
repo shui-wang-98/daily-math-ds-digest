@@ -1,62 +1,27 @@
-"""Render self-contained vector mathematics for HTML and browser printing."""
+"""Render standard TeX through bundled MathJax into self-contained SVG."""
 from __future__ import annotations
 
 import base64
 from functools import lru_cache
 from html import escape as html_escape
-from io import BytesIO
-import os
-from pathlib import Path
 import re
 
-# Keep the font cache inside the repository, including in a desktop scheduled run.
-os.environ.setdefault("MPLCONFIGDIR", str(Path(__file__).resolve().parents[1] / "tmp/matplotlib"))
-
-from matplotlib.font_manager import FontProperties
-from matplotlib.mathtext import MathTextParser
-from matplotlib import rc_context
 from markupsafe import Markup
 from pylatexenc.latex2text import LatexNodes2Text, get_default_latex_context_db
+from .math_spans import spans
+from .mathjax_renderer import render
 
-_MATH = re.compile(
-    r"\\begin\{(?P<env>equation\*?|displaymath)\}(?P<body>.*?)\\end\{(?P=env)\}"
-    r"|(?<!\\)(\$\$.*?\$\$|\$[^$]*?\$)|\\\(.*?\\\)|\\\[.*?\\\]", re.S)
-# Some RSS abstracts omit math delimiters around a formula. Recognize contiguous
-# formula tokens with explicit math commands; never infer symbols from prose.
+_LATEX_CONTEXT = get_default_latex_context_db()
 _BARE_MATH = re.compile(
     r"[A-Za-z0-9_^{}()/]*\\(?:mathbb|mathcal|mathfrak|Gamma|tau|geq?|leq?)(?![A-Za-z])"
     r"(?:\\[A-Za-z]+|[A-Za-z0-9_^{}()/,.+\-])*(?:\s+[0-9]+[,.]?)?"
 )
-_PARSER = MathTextParser("path")
-_LATEX_CONTEXT = get_default_latex_context_db()
-
 
 def _plain(text: str) -> str:
     # arXiv author strings can contain doubled backslashes before TeX accents.
     text = re.sub(r"\\+(?=['\"`^~])", lambda _: "\\", text)
     return LatexNodes2Text().latex_to_text(text)
 
-
-def _segments(text: str, plain_converter=_plain):
-    end = 0
-    for match in _MATH.finditer(text):
-        yield from _plain_segments(text[end:match.start()], plain_converter)
-        source = match.group()
-        if match.group('env'):
-            formula = match.group('body')
-        else:
-            delimiter = 2 if source.startswith(("$$", r"\(", r"\[")) else 1
-            formula = source[delimiter:-delimiter]
-        # An outer text block can legitimately contain inline mathematics.
-        # Render its inner spans separately, preserving words and punctuation.
-        text_block = re.fullmatch(r"\s*\\text\{(.*)\}([,.;]?)\s*", formula, re.S)
-        if text_block and '$' in text_block[1]:
-            yield from _segments(text_block[1], plain_converter)
-            yield False, text_block[2]
-        else:
-            yield True, formula
-        end = match.end()
-    yield from _plain_segments(text[end:], plain_converter)
 
 
 def _plain_segments(text: str, plain_converter=_plain):
@@ -68,79 +33,31 @@ def _plain_segments(text: str, plain_converter=_plain):
     yield False, plain_converter(text[end:])
 
 
-@lru_cache(maxsize=512)
-def _formula(source: str):
-    # Equivalent spelling accepted by the vector math renderer.
-    normalized = source.replace(r"\textrm", r"\mathrm")
-    # Mathtext incorrectly requires a word boundary after the TeX control
-    # symbol \#. Group it when a letter follows; the glyph and spacing stay
-    # unchanged. Text blocks already accept this spelling and must be preserved.
-    # The original source remains in JSON and image alt text.
-    normalized = re.sub(
-        r"(?P<text>\\text\s*\{(?:\\.|[^\\}])*\})|(?<!\\)\\#(?=[A-Za-z])",
-        lambda m: m[0] if m['text'] is not None else r"{\#}", normalized)
-    normalized = re.sub(r"\\[dt]frac(?![A-Za-z])", lambda _: r"\frac", normalized)
-    # TeX permits single-token arguments without braces; mathtext requires them.
-    normalized = re.sub(r"\\frac\s*([0-9])\s*([0-9])", r"\\frac{\1}{\2}", normalized)
-    # Only group one literal token: \sqrt12 means \sqrt{1}2, not \sqrt{12}.
-    # Keep text literal, control-word boundaries, and already-braced roots intact.
-    # Optional indices here exclude nested TeX syntax rather than guessing it.
-    normalized = re.sub(
-        r"(?P<text>\\text\s*\{(?:\\.|[^\\}])*\})"
-        r"|(?<!\\)(?P<root>\\sqrt(?![A-Za-z])(?:\s*\[[^\\{}\[\]]*\])?)"
-        r"\s*(?P<radicand>[A-Za-z0-9])",
-        lambda m: m[0] if m['text'] is not None
-        else m['root'] + "{" + m['radicand'] + "}", normalized)
-    normalized = re.sub(r"\\boldsymbol\s+(\\[A-Za-z]+|[A-Za-z])",
-                        lambda m: r"\boldsymbol{" + m[1] + "}", normalized)
-    aliases = {"ge": "geq", "le": "leq", "ne": "neq"}
-    normalized = re.sub(r"\\(ge|le|ne)(?![A-Za-z])", lambda m: "\\" + aliases[m[1]], normalized)
-    normalized = re.sub(r"\\(mathbb|mathcal|mathfrak|mathrm)\s+([A-Za-z])",
-                        lambda m: "\\" + m[1] + "{" + m[2] + "}", normalized)
-    unknown = []
-    while True:
-        try:
-            _PARSER.parse("$" + normalized + "$", dpi=72,
-                          prop=FontProperties(size=16, math_fontfamily="stix"))
-            break
-        except ValueError as exc:
-            match = re.search(r"Unknown symbol: \\([A-Za-z]+)", str(exc))
-            if not match or match[1] in unknown:
-                raise ValueError(f"Cannot faithfully render math: {source!r}") from exc
-            name = match[1]
-            unknown.append(name)
-            # Definitions of author macros are unavailable in RSS. Show the
-            # literal command name, with its backslash, rather than guessing an
-            # expansion or dropping it. A source-notation note accompanies it.
-            normalized = re.sub(r"\\" + name + r"(?![A-Za-z])",
-                                lambda _: r"{\backslash\mathrm{" + name + "}}", normalized)
-    return normalized, tuple(unknown)
+def _segments(text: str, plain_converter=_plain):
+    """Compatibility iterator; html_text retains the richer display mode."""
+    for mode, part in spans(text):
+        if mode == 'text':
+            yield from _plain_segments(part, plain_converter)
+        else:
+            yield True, part
+
+
+def _formula(source: str, display: bool = False):
+    # The TeX engine parses the original tokens, without regex substitutions.
+    return source, render(source, display)[3]
+
+
+@lru_cache(maxsize=128)
+def _svg_formula(source: str, display: bool = False):
+    svg, width, depth, _ = render(source, display)
+    return base64.b64encode(svg.encode('utf-8')).decode('ascii'), width, depth
 
 
 def _source_note(names: set[str]) -> str:
     if not names:
-        return ""
-    return (" [Source notation: the supplied abstract does not define the macros "
-            + ", ".join(sorted(names)) + "; their literal command names are retained.]")
-
-
-@lru_cache(maxsize=512)
-def _svg_formula(normalized: str):
-    """Self-contained vector math for HTML and browser printing, without JS."""
-    from matplotlib.figure import Figure
-
-    size = 16
-    prop = FontProperties(size=size, math_fontfamily="stix")
-    expression = "$" + normalized + "$"
-    width, height, depth, *_ = MathTextParser("path").parse(expression, dpi=72, prop=prop)
-    buffer = BytesIO()
-    # Fixed IDs and no creation date keep repeated rendering byte-identical.
-    with rc_context({"svg.hashsalt": "daily-math-ds-digest", "svg.fonttype": "path",
-                     "text.usetex": False}):
-        figure = Figure(figsize=(width / 72, height / 72))
-        figure.text(0, depth / height, expression, fontproperties=prop, color="#202124")
-        figure.savefig(buffer, format="svg", transparent=True, metadata={"Date": None})
-    return base64.b64encode(buffer.getvalue()).decode("ascii"), width / size, depth / size
+        return ''
+    return (' [Source notation: unrecognized commands ' + ', '.join(sorted(names))
+            + '; their literal command names are retained; no definitions are inferred.]')
 
 
 def _html_plain(value: str, unknown: set[str] | None = None) -> str:
@@ -160,18 +77,20 @@ def _html_plain(value: str, unknown: set[str] | None = None) -> str:
 
 
 def html_text(value: str) -> Markup:
-    """Escape prose and typeset math; never change the archived source strings."""
+    """Typeset unchanged source locally; unknown notation remains explicit."""
     result, unknown = [], set()
-    for is_math, text in _segments(value, lambda part: _html_plain(part, unknown)):
-        if is_math:
-            normalized, names, *_ = _formula(text)
-            unknown.update(names)
-            svg, width, depth = _svg_formula(normalized)
-            result.append(
-                f'<img class="math-formula" src="data:image/svg+xml;base64,{svg}" '
-                f'alt="{html_escape(text, quote=True)}" '
-                f'style="width:{width:.4f}em;vertical-align:-{depth:.4f}em">'
-            )
+    def formula(text, display=False):
+        _, names = _formula(text, display)
+        unknown.update(names)
+        svg, width, depth = _svg_formula(text, display)
+        image = (f'<img class="math-formula" src="data:image/svg+xml;base64,{svg}" '
+                 f'alt="{html_escape(text, quote=True)}" '
+                 f'style="width:{width:.4f}em;vertical-align:{-depth:.4f}em">')
+        return f'<span class="math-display">{image}</span>' if display else image
+    for mode, part in spans(value):
+        if mode != 'text':
+            result.append(formula(part, mode == 'display'))
         else:
-            result.append(html_escape(text))
-    return Markup("".join(result) + html_escape(_source_note(unknown)))
+            for is_math, text in _plain_segments(part, lambda p: _html_plain(p, unknown)):
+                result.append(formula(text) if is_math else html_escape(text))
+    return Markup(''.join(result) + html_escape(_source_note(unknown)))

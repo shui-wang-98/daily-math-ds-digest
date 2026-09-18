@@ -83,7 +83,9 @@ legacy PDF/Markdown. LOW entries keep their compact title/authors/ID layout.
 
 ## Local preparation and analysis
 
-Use Python 3.12+ and the repository's virtual environment:
+Use Python 3.12+, Node.js 18+ on PATH, and the repository's virtual environment.
+MathJax and its font data are bundled in the repository; ordinary report runs
+do not install packages or download a math library:
 
 ```powershell
 python -m venv .venv
@@ -158,7 +160,18 @@ The existing English design, responsive layout, native original-abstract
 expanders, research profile, three priorities and mathematical reliability rules
 are preserved. HIGH/RELATED have all digest fields and original abstracts;
 LOW shows only title, authors and arXiv ID. Formulas are embedded SVG, with no
-remote scripts/fonts/CDN. Validate external URLs against IDs locally, without HTTP.
+remote scripts/fonts/CDN. The pinned MathJax engine parses standard TeX and AMS
+notation locally, replacing the previous plotting-oriented Mathtext subset.
+Both inline and display formulas retain their original source in image alt text;
+long display formulas can be scrolled horizontally on narrow screens.
+Unrecognized commands remain visible with an explicit note; their meanings are
+never guessed. Malformed source aborts generation before state is advanced.
+Each formula has isolated macro/label state and bounded input, expansion,
+execution time and SVG output. Validate external URLs against IDs locally, without HTTP.
+
+Renderer upgrades are maintenance work: see [tools/mathjax/README.md](tools/mathjax/README.md).
+The bundled engine is verified against its SHA-256 manifest on startup. No
+npm/pnpm installation is needed for daily runs, offline tests, or HTML rebuilds.
 
 The permanent homepage lists all dates newest first, with counts and links.
 New human-readable output is HTML only. Existing PDF/Markdown files are preserved

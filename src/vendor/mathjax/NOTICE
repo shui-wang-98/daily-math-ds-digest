@@ -1,0 +1,13 @@
+MathJax 4.1.3, https://github.com/mathjax/MathJax-src
+Copyright (c) MathJax Consortium and contributors. Apache-2.0.
+
+MathJax TeX font 4.1.3, https://github.com/mathjax/MathJax-fonts
+Apache-2.0, as declared by @mathjax/mathjax-tex-font package metadata.
+
+The MathJax SVG module also imports default font data from
+@mathjax/mathjax-newcm-font 4.1.3 (Apache-2.0). These transitive data are bundled;
+the configured output font is MathJax TeX and requires no dynamic font loads.
+
+Build sources, exact versions and lockfile: tools/mathjax/.
+This project adds an offline JSON-lines interface, isolated per-formula parsing,
+resource limits and explicit unrecognized-command diagnostics.
