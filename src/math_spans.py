@@ -15,7 +15,7 @@ MAX_NESTING = 64
 # theorem or quote) are prose, not implicit evidence of a mathematical formula.
 _MATH_ENVIRONMENTS = frozenset({
     "equation", "equation*", "displaymath",
-    "align", "align*", "alignat", "alignat*", "aligned", "alignedat",
+    "align", "align*", "alignat", "alignat*", "flalign", "flalign*", "aligned", "alignedat",
     "gather", "gather*", "gathered", "multline", "multline*", "split",
     "eqnarray", "eqnarray*", "matrix", "pmatrix", "bmatrix", "Bmatrix",
     "vmatrix", "Vmatrix", "smallmatrix", "cases", "array", "subarray",
@@ -101,7 +101,7 @@ def _math_end(text: str, start: int, delimiter: str | None,
     raise _error(f"unterminated math span; expected {expected}", start)
 
 
-def spans(text: str) -> Iterator[tuple[str, str]]:
+def spans(text: str, *, protected_command=None) -> Iterator[tuple[str, str]]:
     """Yield ``(text|inline|display, value)`` spans without rewriting source.
 
     Dollar and backslash delimiters are removed. The outer equation,
@@ -125,6 +125,13 @@ def spans(text: str) -> Iterator[tuple[str, str]]:
         environment = None
         keep_wrapper = False
         if char == "\\":
+            # A prose citation can itself contain math in its optional notes.
+            # Let its renderer consume the complete command before splitting.
+            if protected_command is not None:
+                stop = protected_command(text, i)
+                if stop > i:
+                    i = stop
+                    continue
             match = _ENVIRONMENT.match(text, i)
             if match and match[2] in _MATH_ENVIRONMENTS:
                 if match[1] == "end":

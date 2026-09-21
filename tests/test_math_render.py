@@ -1,4 +1,5 @@
 import base64
+import json
 from html.parser import HTMLParser
 from pathlib import Path
 import subprocess
@@ -380,6 +381,11 @@ def test_html_math_images_keep_metadata_and_are_repeatable(tmp_path):
         r" Standard notation: \(Q\Big(\sum_{p\in I}p\Big)\in U\pmod1\)."
         r" Limit notation: \(\lim\limits_{n\to\infty}a_n=0\)."
     )
+    pending.papers[0].abstract += (
+        r" Equation \eqref{fixture} follows. "
+        r"\begin{equation}\label{fixture}x=1\tag{$\ast$}\end{equation}"
+        r" This answers \cite[Question 8.2 (iii)]{Kl}."
+    )
     atomic_write_json(data / "pending_run.json", pending)
     atomic_write_json(data / "analysis_run.json", payload)
     report = finalize_run(data / "analysis_run.json", data_dir=data, site_dir=site)
@@ -388,5 +394,9 @@ def test_html_math_images_keep_metadata_and_are_repeatable(tmp_path):
     original = html.read_bytes()
     assert original.count(b"data:image/svg+xml;base64,") >= 5
     assert b"unrecognized commands" not in original
+    assert b'[Kl, Question 8.2 (iii)]' in original
+    assert b'&lt;ref&gt;' not in original and b'&lt;cit.' not in original
+    assert b'no equation numbers' not in original
+    assert json.loads((html.parent / 'report.json').read_text(encoding='utf-8'))['papers'][0]['paper']['abstract'] == pending.papers[0].abstract
     finalize_run(data / "analysis_run.json", data_dir=data, site_dir=site)
     assert html.read_bytes() == original

@@ -10,8 +10,10 @@ from markupsafe import Markup
 from pylatexenc.latex2text import LatexNodes2Text, get_default_latex_context_db
 from .math_spans import spans
 from .mathjax_renderer import render
+from .tex_references import ProseReferences, argument_source, explicit_labels
 
 _LATEX_CONTEXT = get_default_latex_context_db()
+_MAX_HTML_FIELD = 8_000_000
 _BARE_MATH = re.compile(
     r"[A-Za-z0-9_^{}()/]*\\(?:mathbb|mathcal|mathfrak|Gamma|tau|geq?|leq?)(?![A-Za-z])"
     r"(?:\\[A-Za-z]+|[A-Za-z0-9_^{}()/,.+\-])*(?:\s+[0-9]+[,.]?)?"
@@ -76,9 +78,32 @@ def _html_plain(value: str, unknown: set[str] | None = None) -> str:
     return _plain(re.sub(r"(?<!\\)([%&])", r"\\\1", value))
 
 
-def html_text(value: str) -> Markup:
+def html_text(value: str, *, _labels=None, _depth=0) -> Markup:
     """Typeset unchanged source locally; unknown notation remains explicit."""
+    if _depth > 32:
+        raise ValueError('Source reference nesting limit exceeded')
+    references = ProseReferences()
+    parts = list(spans(value, protected_command=references.command_end))
+    labels = explicit_labels(parts) if _labels is None else _labels
     result, unknown = [], set()
+    fragments, unresolved = [], False
+    rendered_size = 0
+
+    def bounded(fragment):
+        nonlocal rendered_size
+        rendered_size += len(fragment)
+        if rendered_size > _MAX_HTML_FIELD:
+            raise ValueError('Rendered text exceeds the per-field output limit')
+        return fragment
+    # These tokens are internal placeholders, never accepted from source text.
+    # Substitution is a single pass after escaping the surrounding prose.
+    prefix = '\ue000DigestReference'
+    # TeX grouping can manufacture a token absent from the raw source, e.g.
+    # Digest{}Reference. Check converted prose as well as the original input.
+    plain_source = ''.join(_html_plain(part) for mode, part in parts if mode == 'text')
+    while prefix in value or prefix in plain_source:
+        prefix += 'X'
+
     def formula(text, display=False):
         _, names = _formula(text, display)
         unknown.update(names)
@@ -87,10 +112,43 @@ def html_text(value: str) -> Markup:
                  f'alt="{html_escape(text, quote=True)}" '
                  f'style="width:{width:.4f}em;vertical-align:{-depth:.4f}em">')
         return f'<span class="math-display">{image}</span>' if display else image
-    for mode, part in spans(value):
-        if mode != 'text':
-            result.append(formula(part, mode == 'display'))
+
+    def reference(node):
+        nonlocal unresolved
+        source = node.latex_verbatim()
+        args = node.nodeargd.argnlist
+        key = argument_source(args[-1])
+        title = html_escape(source, quote=True)
+        tag = labels.get(key)
+        if node.macroname in {'ref', 'eqref'} and tag is not None:
+            # Explicit tags use TeX text mode, with nested math left intact.
+            content = '(' + tag + ')' if node.macroname == 'eqref' else tag
+            rendered = formula(r'\text{' + content + '}')
+        elif node.macroname in {'cite', 'citep', 'citet', 'citealp', 'citealt'}:
+            def note(arg):
+                return str(html_text(argument_source(arg), _labels=labels, _depth=_depth + 1))
+            first, second = args[1:3]
+            before = note(first) + ' ' if first is not None and second is not None else ''
+            after = note(second if second is not None else first)
+            rendered = '[' + before + html_escape(key) + (', ' + after if after else '') + ']'
         else:
+            # No bibliography, page numbers or auto-numbering is supplied by
+            # an abstract. Retain unresolved calls rather than fabricate them.
+            unresolved = True
+            rendered = html_escape(source)
+        token = prefix + str(len(fragments)) + '\ue001'
+        fragments.append(bounded(f'<span class="source-reference" title="{title}">{rendered}</span>'))
+        return token
+
+    for mode, part in parts:
+        if mode != 'text':
+            result.append(bounded(formula(part, mode == 'display')))
+        else:
+            part = references.replace(part, reference)
             for is_math, text in _plain_segments(part, lambda p: _html_plain(p, unknown)):
-                result.append(formula(text) if is_math else html_escape(text))
-    return Markup(''.join(result) + html_escape(_source_note(unknown)))
+                result.append(bounded(formula(text) if is_math else html_escape(text)))
+    rendered = re.sub(re.escape(prefix) + r'(\d+)\ue001',
+                      lambda match: fragments[int(match[1])], ''.join(result))
+    note = (' [Source references: unresolved calls are retained as supplied; '
+            'no equation numbers or bibliography details are inferred.]') if unresolved else ''
+    return Markup(rendered + html_escape(_source_note(unknown) + note))

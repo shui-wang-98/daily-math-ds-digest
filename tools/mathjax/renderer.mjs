@@ -2,6 +2,7 @@
 import {mathjax} from '@mathjax/src/mjs/mathjax.js';
 import {TeX} from '@mathjax/src/mjs/input/tex.js';
 import {SVG} from '@mathjax/src/mjs/output/svg.js';
+import {SvgMtable} from '@mathjax/src/mjs/output/svg/Wrappers/mtable.js';
 import {liteAdaptor} from '@mathjax/src/mjs/adaptors/liteAdaptor.js';
 import {RegisterHTMLHandler} from '@mathjax/src/mjs/handlers/html.js';
 import {MathJaxTexFont} from '@mathjax/mathjax-tex-font/mjs/svg.js';
@@ -41,20 +42,47 @@ Configuration.create('source-notation', {
   }}
 });
 const forbidden = /\\(?:require|input|include|includegraphics|href|url|htmlClass|htmlId|htmlStyle|htmlData|cssId|style|class)(?![A-Za-z])/;
+// MathJax's normal top-level equation tags use percentage-width nested SVGs
+// and page CSS. An SVG used as an image has neither that layout context nor
+// those styles. Keep the engine's measured body, label widths, row baselines,
+// and minimum label spacing, but place them in one fixed coordinate system.
+class StandaloneTable extends SvgMtable {
+  topTable(svg, labels, side) {
+    const {w, L, R} = this.getBBox();
+    const width = L + (this.pWidth || w) + R;
+    const labelWidth = this.getTableData().L;
+    // The inherited top-table label group anticipates an extra SVG y-flip.
+    // Our labels share the body's coordinates and need no second flip.
+    this.adaptor.removeAttribute(labels, 'transform');
+    this.place(side === 'left' ? -L : width - L - labelWidth, 0, labels);
+    this.adaptor.append(svg, labels);
+  }
+}
+class StandaloneSVG extends SVG {
+  createRoot(wrapper) {
+    if (!this.table?.isTop || !this.table.hasLabels) return super.createRoot(wrapper);
+    const {h, d, w} = wrapper.getOuterBBox();
+    this.standaloneLabels = true;
+    return this.createSVG(h, d, w);
+  }
+}
 function convert(source, display) {
   // Fresh input/output objects prevent definitions, labels and IDs leaking
   // across formulas. All fonts are compiled into this bundle.
   const tex = new TeX({packages, maxBuffer: 16384, maxMacros: 1000,
     maxTemplateSubtitutions: 1000, tags: 'none',
     formatError(_jax, error) { throw error; }});
-  const output = new SVG({fontData: new MathJaxTexFont(), fontCache: 'none', linebreaks: {inline:false},
+  const output = new StandaloneSVG({fontData: new MathJaxTexFont(), fontCache: 'none', linebreaks: {inline:false},
     mtextInheritFont: false, merrorInheritFont: false});
+  output.factory.setNodeClass('mtable', StandaloneTable);
   const doc = mathjax.document('', {InputJax: tex, OutputJax: output});
   const container = doc.convert(source, {display, em:16, ex:8, containerWidth:1280});
   const svg = adaptor.firstChild(container);
+  // The host image can now scale body and tags together on narrow screens.
+  if (output.standaloneLabels) adaptor.setStyle(svg, 'min-width', '');
   const serialized = adaptor.serializeXML(svg);
   if (/data-mml-node="merror"/.test(serialized)) throw Error('MathJax returned an error node');
-  const viewBox = adaptor.getAttribute(svg,'viewBox').split(/\s+/).map(Number);
+  const viewBox = (adaptor.getAttribute(svg,'viewBox') || '').trim().split(/\s+/).map(Number);
   if (viewBox.length !== 4 || !viewBox.every(Number.isFinite)) throw Error('Invalid SVG dimensions');
   if (viewBox[2] < 0 || viewBox[2] > 256000 || viewBox[3] < 0 || viewBox[3] > 128000 ||
       Math.abs(viewBox[1]) > 128000 || Math.abs(viewBox[1]+viewBox[3]) > 128000)

@@ -22,6 +22,22 @@ splitting, so each image contains the whole formula including both sides of
 relations. `fontCache: none` gives independent SVG paths and repeatable output.
 Package options are strict: unsupported options fail instead of warning.
 
+Explicit equation tags use a fixed-coordinate SVG adapter. MathJax's measured
+body, tag widths, spacing and row baselines are retained without the nested
+percentage-width SVG layout that normally relies on page CSS. Both the formula
+and its tag therefore scale together when embedded as an image.
+
+Prose references resolve only unambiguous explicit label/tag pairs within the
+same text field, including forward references and separately tagged alignment
+rows. Automatic equation or page numbers are never inferred. Unresolved calls
+remain visible with a source note. Citations retain their source keys and all
+optional notes; the exact command remains in the HTML title, and no missing
+bibliography entry is invented. Regression tests check visible glyphs and text,
+source metadata, field isolation, and repeatable finalization.
+Fields with local macro definitions retain unresolved references rather than
+rendering their tags without those definitions. Expanded HTML is bounded to
+eight million characters per field, including repeated references and notes.
+
 Before accepting an upgrade, run all offline tests and render the actual
 archived metadata plus pending input and analysis without fetching paper URLs.
 Inspect desktop/mobile output. Preserve JSON, source abstracts, state, inbox,
