@@ -1,0 +1,2672 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-09-22",
+  "generated_at": "2026-09-22T10:17:55.326903Z",
+  "feed_build_at": "2026-09-22T04:00:37Z",
+  "category": "math.DS",
+  "analysis_source": "Codex desktop",
+  "overview": "This report covers 67 previously unreported math.DS announcements: 15 HIGH PRIORITY, 25 RELATED / POSSIBLY INTERESTING, and 27 LOW PRIORITY. High-priority themes include amenable comparison and almost finiteness, fractal separation and dimension drop, symbolic descriptions, minimal sets, orbit equivalence, and group-action invariants. Related papers address hyperbolic rigidity, empirical measures, complex and Hamiltonian dynamics, and Diophantine and spectral questions. The full entries explicitly flag an inconsistent sampling-exponent range and an incomplete formulation in the supplied abstracts; these source claims are not silently repaired.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2609.22373",
+        "versioned_id": "2609.22373v1",
+        "title": "Selections of Set-Valued Maps under Stieltjes Clocks: Regularity, Variation, and Atomic Structure",
+        "authors": [
+          "Serkan \\.Ilter",
+          "H\\\"ulya Duru",
+          "Seyit Koca"
+        ],
+        "abstract": "A Stieltjes clock allows effective time to advance continuously, remain unchanged over intervals, or jump. We study whether a compact-valued set-valued map evolving relative to a Stieltjes clock admits a single-valued selection that passes through a prescribed graph point while retaining the regularity and variation of the multifunction. For g-H\\\"older exponents $\\alpha \\geq 1$, we prove that regularity can be preserved without increasing the g-H\\\"older seminorm, with no monotonicity assumption on g. If g is additionally nondecreasing, one prescribed-point selection preserves both this regularity and the Hausdorff variation on every subinterval. The same selection consequently preserves all finite Riesz p-variations associated with nondecreasing external clocks. For $\\alpha>1$, the structure becomes jump-driven. For left-continuous nondecreasing Stieltjes clocks, continuous clock evolution cannot generate variation: all variation is carried by jumps. We obtain exact jump decompositions for both the set-valued map and its selection, together with explicit atomic formulas for Riesz p-variation. Examples show that the principal regularity, variation, and jump bounds are attained. For compact-convex Euclidean-valued maps, we also examine the case $0<\\alpha<1$. In this setting, the H\\\"older exponent can still be preserved, but preservation of the same constant through a prescribed point holds in one dimension and can fail in higher dimensions. Finally, without a quantitative H\\\"older bound, we characterize exactly when every compact-valued Hausdorff g-continuous map admits a prescribed-point g-continuous selection: precisely when the clock image is zero-dimensional.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GN"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.22373",
+        "pdf_url": "https://arxiv.org/pdf/2609.22373"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "The zero-dimensional clock-image criterion gives a topological connection, although the main focus is selection regularity rather than dynamics.",
+        "tldr": "Prescribed-point selections preserve several forms of Stieltjes-clock regularity and variation. The authors also characterize when clock-continuous selections always exist.",
+        "problem": "Determine which regularity and variation properties of compact-valued multifunctions can be retained by selections through a prescribed graph point.",
+        "main_result": "For clock-Hölder exponent \\(\\alpha\\geq1\\), a selection preserves the seminorm without requiring a monotone clock. For a nondecreasing clock, a single selection also preserves Hausdorff variation on every subinterval and the stated finite Riesz variations. For a left-continuous nondecreasing clock and \\(\\alpha>1\\), the authors give atomic jump formulas. For compact convex Euclidean values and \\(0<\\alpha<1\\), the exponent is preserved, but preservation of the prescribed-point constant can fail above dimension one. The qualitative selection property holds exactly when the clock image is zero-dimensional.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The abstract includes sharpness examples and distinguishes quantitative regularity from the qualitative topological selection criterion.",
+        "keywords": [
+          "set-valued selections",
+          "Stieltjes clocks",
+          "variation",
+          "zero-dimensional spaces"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.22571",
+        "versioned_id": "2609.22571v1",
+        "title": "Trace formula for billiard flow on surfaces with concave boundary",
+        "authors": [
+          "Alain Kangabire"
+        ],
+        "abstract": "We study grazing closed trajectories of the billiard flow $\\varphi^t$ on a compact surface $(\\Sigma,g)$ with concave boundary. Under a non-degeneracy condition, which is satisfied for example when $(\\Sigma,g)$ has negative sectional curvature, we compute the trace of a regularized pullback $E_{\\epsilon}(\\varphi^t)^* E_{\\epsilon}$ near a closed trajectory grazing once, which is an analogue of the Atiyah--Bott--Guillemin trace formula for closed billiard trajectories.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.22571",
+        "pdf_url": "https://arxiv.org/pdf/2609.22571"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "A trace formula for billiard flow, with negative curvature supplying an example of the nondegeneracy condition, connects to hyperbolic and geometric dynamics.",
+        "tldr": "The author derives a local trace formula near a closed billiard trajectory with one grazing interaction.",
+        "problem": "Compute the trace of a regularized pullback for billiard flow on a compact surface with concave boundary.",
+        "main_result": "Under a nondegeneracy assumption, the trace of \\(E_\\epsilon(\\varphi^t)^*E_\\epsilon\\) is computed near a closed trajectory grazing the boundary once. The assumption is satisfied, for example, for negatively curved surfaces. Its exact formulation and the trace expression are not supplied. Not specified in the abstract.",
+        "methods": [
+          "Regularization of the flow pullback."
+        ],
+        "context": "The result is presented as an analogue of the Atiyah–Bott–Guillemin trace formula.",
+        "keywords": [
+          "billiard flow",
+          "grazing trajectories",
+          "trace formula"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.22740",
+        "versioned_id": "2609.22740v1",
+        "title": "Sierpi\\'{n}ski carpet Julia sets of transcendental entire functions",
+        "authors": [
+          "Weiwei Su",
+          "Fei Yang"
+        ],
+        "abstract": "We prove that Sierpi\\'{n}ski carpet parameters are dense in the bifurcation loci of some natural families of finite type transcendental entire functions having exactly one active critical orbit. Moreover, some specific transcendental entire functions with Sierpi\\'{n}ski carpet Julia sets are constructed such that they contain either an attracting basin, a parabolic basin, a Siegel disk or wandering domains. The proofs are mainly based on applying the polynomial-like renormalization and some results on the local connectivity of transcendental Julia sets obtained before.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.22740",
+        "pdf_url": "https://arxiv.org/pdf/2609.22740"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Sierpiński carpet Julia sets place fractal geometry at the center of this complex-dynamics paper.",
+        "tldr": "The authors prove density of carpet parameters in specified transcendental families and construct examples with several types of Fatou behavior.",
+        "problem": "Locate Sierpiński carpet Julia sets in parameter spaces of transcendental entire functions and construct explicit examples.",
+        "main_result": "Carpet parameters are dense in the bifurcation loci of some natural finite-type transcendental families with exactly one active critical orbit. The authors also construct entire functions with carpet Julia sets exhibiting attracting basins, parabolic basins, Siegel disks, or wandering domains. The exact families are not identified. Not specified in the abstract.",
+        "methods": [
+          "Polynomial-like renormalization.",
+          "Previously established local-connectivity results."
+        ],
+        "context": "The conclusions concern both parameter-space density and examples with different Fatou components.",
+        "keywords": [
+          "Sierpiński carpets",
+          "Julia sets",
+          "transcendental dynamics",
+          "local connectivity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.22779",
+        "versioned_id": "2609.22779v1",
+        "title": "Variational Nonlinearities and Wave Selection at an $O(2)$-Hopf Bifurcation",
+        "authors": [
+          "Taylan \\c{S}eng\\\"ul"
+        ],
+        "abstract": "At an $O(2)$-equivariant Hopf bifurcation, the real parts $\\zeta_R$ and $\\xi_R$ of the two cubic normal-form coefficients govern selection between traveling and standing waves. In a fourth-order regularized $p$-system, $\\xi_R$ was observed to vanish and the cubic nonlinearity to shift only frequencies. We show that both observations are structural: variational nonlinearities enforce them even when the linear part is dissipative and non-Hamiltonian. We consider a class of two-component PDEs on the circle whose quadratic and cubic nonlinearities are generated by reflection-invariant local Hamiltonians of the fields and finitely many of their spatial derivatives, through a common constant-coefficient Poisson operator. Then $\\xi_R=0$ for every admissible linear part, while $\\zeta_R$ depends only on the quadratic nonlinearity. For variational nonlinearities the direct cubic terms are purely imaginary. The mixed cascade term loses its real part because its second harmonic has zero temporal frequency and the resolvent keeps its parity, while the self-cascade at the doubled critical frequency keeps a real part. When $\\zeta_R\\ne0$, the bifurcating traveling waves are saddles, while the standing waves are supercritical and orbitally asymptotically stable for $\\zeta_R<0$ and subcritical and unstable for $\\zeta_R>0$. When the nonlinearities are the Poisson operator applied to polynomials in the fields alone, and its symbol does not vanish at the critical and second-harmonic wavenumbers, cancellation for every admissible linear part conversely characterizes variationality. In a dissipatively regularized Boussinesq family, as dissipation tends to zero, $\\zeta_R$ vanishes linearly off resonance and diverges inversely at the 2:1 resonance. The Hamiltonian limit of the cubic coefficient is therefore singular.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.AP",
+          "nlin.PS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.22779",
+        "pdf_url": "https://arxiv.org/pdf/2609.22779"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The central topic is wave selection in a PDE Hopf bifurcation; the variational nonlinearities here are not an entropy or thermodynamic variational principle.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23174",
+        "versioned_id": "2609.23174v1",
+        "title": "Sofic systems and extreme points of self-affine limit sets",
+        "authors": [
+          "Stefano Silvestri",
+          "Rodrigo A. P\\'erez"
+        ],
+        "abstract": "Given any iterated function system (IFS) on the plane whose affine transformations share the same contracting matrix $T$, we characterize the set of extreme points of the attractor $A$ (along the convex hull $\\operatorname{conv}(A)$) in terms of a directed graph on the edges of $\\operatorname{conv}(A)$. This graph corresponds to a sofic system on the coding space associated to the IFS. When $T$ is proper orthogonal or purely real, we give conditions for $\\operatorname{conv}(A)$ to be a finite polygon and, under additional symmetry of the transformations, we give conditions for $A$ itself to coincide with $\\operatorname{conv}(A)$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23174",
+        "pdf_url": "https://arxiv.org/pdf/2609.23174"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Sofic coding of extreme points directly combines symbolic dynamics and self-affine geometry.",
+        "tldr": "The authors encode extreme points of a planar self-affine attractor by a sofic system and study when its convex hull is a polygon.",
+        "problem": "Describe the extreme points and convexity properties of planar affine iterated-function-system attractors sharing one contracting linear part.",
+        "main_result": "For an attractor \\(A\\) whose affine maps share the contracting matrix \\(T\\), a directed graph on the edges of the convex hull yields a sofic coding of extreme points. Under the abstract's stated matrix alternatives, “proper orthogonal or purely real,” the authors give conditions for the convex hull to be a finite polygon. With additional transformation symmetries they give conditions for \\(A=\\operatorname{conv}(A)\\). The matrix terminology and the precise conditions are not defined in the abstract. Not specified in the abstract.",
+        "methods": [
+          "A directed graph on convex-hull edges.",
+          "Sofic coding of extreme points."
+        ],
+        "context": "The abstract links symbolic descriptions to polygonality and equality of the attractor with its convex hull.",
+        "keywords": [
+          "self-affine sets",
+          "sofic systems",
+          "extreme points",
+          "convex hulls"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23276",
+        "versioned_id": "2609.23276v1",
+        "title": "A Novel Hyperchaotic System Derived from Asymmetric Bidirectional Coupling of Two Lorenz Oscillators: Synchronization Analysis and Cryptographic Applications",
+        "authors": [
+          "Mimoun Hamdi",
+          "Mohamed Karim Hamdani",
+          "Kamel Abboudi"
+        ],
+        "abstract": "This paper investigates a six-dimensional coupled Lorenz system obtained through bidirectional asymmetric diffusive coupling of two identical Lorenz oscillators. The proposed model is analyzed from both dynamical and synchronization perspectives. Dissipativity conditions, equilibrium points, local stability properties, and Lyapunov spectra are systematically examined. The results reveal wide regions of chaotic and hyperchaotic behavior, with up to three positive Lyapunov exponents depending on the coupling parameters. These findings provide a practical framework for selecting coupling configurations that guarantee hyperchaotic dynamics while preserving the simplicity of the classical Lorenz structure. \\\\ A Lyapunov-based synchronization analysis is then developed. By exploiting effective attractor bounds obtained from the actual system trajectories rather than conservative worst-case estimates, a less restrictive sufficient synchronization condition is derived. Under the classical Lorenz parameters, synchronization is guaranteed for $\\alpha_1+\\alpha_2>15.1$. \\\\ The synchronization performance is further evaluated through a parametric analysis of the synchronization time. Numerical results show that increasing the coupling strength significantly accelerates convergence toward the synchronization manifold. For a broad range of admissible coupling values, synchronization times below $0.5$ second are achieved, whereas previously reported Lorenz-based synchronization schemes typically require approximately $5$ seconds.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23276",
+        "pdf_url": "https://arxiv.org/pdf/2609.23276"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The paper centers on coupled Lorenz oscillators, synchronization and cryptographic applications without a central profile topic.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23613",
+        "versioned_id": "2609.23613v1",
+        "title": "Functional equations in branched covering maps",
+        "authors": [
+          "Fedor Pakovich"
+        ],
+        "abstract": "We study the functional equation $ f \\circ p = g \\circ q,$ where $ f,$ $g,$ $p,$ $q$ are branched covering maps between closed surfaces. In particular, we extend results on semiconjugate holomorphic maps between compact Riemann surfaces to this broader setting. As an application, we present an alternative proof of the fact that every quotient of a torus endomorphism has a parabolic orbifold, along with some extensions of this result.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23613",
+        "pdf_url": "https://arxiv.org/pdf/2609.23613"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Semiconjugacy and branched covering maps provide a substantive connection to topological and complex dynamics.",
+        "tldr": "The author studies functional equations between branched coverings and applies the results to quotients of torus endomorphisms.",
+        "problem": "Understand the equation \\(f\\circ p=g\\circ q\\) for branched covering maps between closed surfaces.",
+        "main_result": "The results extend earlier statements for semiconjugate holomorphic maps between compact Riemann surfaces. They give an alternative proof that every quotient of a torus endomorphism has a parabolic orbifold, together with extensions. The exact hypotheses of those extensions are not supplied. Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The abstract explicitly relates the covering-map setting to holomorphic semiconjugacy and torus quotients.",
+        "keywords": [
+          "branched coverings",
+          "functional equations",
+          "semiconjugacy",
+          "parabolic orbifolds"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23702",
+        "versioned_id": "2609.23702v1",
+        "title": "Comparison and Almost Finiteness for Actions of Amenable Groups",
+        "authors": [
+          "Eli Glasner",
+          "Chunlin Liu"
+        ],
+        "abstract": "We prove that every action of a countably infinite discrete amenable group on a nonempty compact Hausdorff zero-dimensional space has dynamical comparison, without assuming minimality, freeness, or metrizability. More precisely, strict inequalities under all invariant probability measures imply comparison in the clopen type semigroup with an order-unit remainder. For minimal Cantor actions, the clopen type semigroup is cancellative and almost unperforated, and its canonical map onto the positive cone of the coinvariant group is an isomorphism of ordered monoids. These results answer Melleray's cancellation question and the amenable case of his comparison question. For minimal Cantor actions, we also prove goodness of the associated affine evaluation map, answering a question of the first author, and obtain a minimal homeomorphism of the same Cantor space with exactly the same invariant probability measures. We then identify the precise obstruction to recovering clopen equidecomposability from affine evaluation alone. This obstruction is given by the infinitesimal subgroup: for every nonempty proper clopen set $A$, it parametrizes the topological-full-group orbits of clopen sets having the same affine evaluation as $A$. Combining comparison with the theorems of Kerr and Szab\\'o, we prove that every free action of a countably infinite discrete amenable group on a nonempty compact metrizable space with the topological small boundary property is almost finite. In particular, every free action on a finite-dimensional compact metrizable space is almost finite, settling the almost-finiteness conjecture stated by Naryshkin. If the action is also minimal, its reduced crossed product is $\\mathcal Z$-stable, has nuclear dimension at most one, and satisfies all the regularity conditions in the Toms--Winter conjecture.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.OA"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23702",
+        "pdf_url": "https://arxiv.org/pdf/2609.23702"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Amenable group actions, dynamical comparison, almost finiteness and invariant measures are central profile topics.",
+        "tldr": "The authors establish comparison for all actions of countably infinite discrete amenable groups on nonempty zero-dimensional compact Hausdorff spaces. They derive almost finiteness for free compact metrizable actions with the topological small boundary property.",
+        "problem": "Determine the scope of dynamical comparison and almost finiteness for amenable group actions, and describe the associated type semigroups.",
+        "main_result": "The comparison result requires neither minimality, freeness nor metrizability; strict inequalities for all invariant probability measures give comparison with an order-unit remainder in the clopen type semigroup. For minimal Cantor actions, that semigroup is cancellative and almost unperforated and identifies with the positive cone of the coinvariant group. Combining the comparison result with Kerr–Szabó yields almost finiteness for free actions on nonempty compact metrizable spaces with the topological small boundary property, including free actions on finite-dimensional compact metrizable spaces. With minimality additionally imposed, the stated crossed products are \\(\\mathcal Z\\)-stable and have nuclear dimension at most one.",
+        "methods": [
+          "Clopen type semigroups and coinvariant groups.",
+          "Combination with the stated Kerr–Szabó result."
+        ],
+        "context": "The abstract reports answers to comparison and cancellation questions, a description of full-group orbits of clopen sets through infinitesimals, and a minimal Cantor homeomorphism with the same invariant probability measures.",
+        "keywords": [
+          "amenable group actions",
+          "dynamical comparison",
+          "almost finiteness",
+          "type semigroups",
+          "invariant measures"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23719",
+        "versioned_id": "2609.23719v1",
+        "title": "Long-time stability of hierarchical point vortex configurations",
+        "authors": [
+          "Slim Ibrahim",
+          "Shengyi Shen"
+        ],
+        "abstract": "In this paper, we investigate the dynamics and long-time stability of hierarchical configurations in an $N$-point vortex system on $\\mathbb{R}^2$ and in simply connected domains, without the Cantor-set restriction inherent in KAM theory. Since the Hamiltonian perturbation lacks a standard power-series expansion in the usual normalized variables, we develop a modified Birkhoff normal form based on successive ratios of adjacent variables, tailored to the hierarchical structure. A key feature is the preservation of the resulting natural exponent structure throughout the normal form procedure. Consequently, for $n$ sufficiently large, the hierarchical configuration persists for times of order at least $\\varepsilon^{-\\left(n-2(N-1)\\right)}$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23719",
+        "pdf_url": "https://arxiv.org/pdf/2609.23719"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Hierarchical Hamiltonian dynamics and normal forms offer a possible technical connection; no entropy or dimension result is stated.",
+        "tldr": "The authors prove long-time stability of hierarchical point-vortex configurations without restricting to KAM Cantor sets.",
+        "problem": "Control hierarchical configurations of point vortices in the plane or simply connected domains.",
+        "main_result": "For \\(N\\) vortices and sufficiently large \\(n\\), the stated stability time is at least of order \\(\\varepsilon^{-(n-2(N-1))}\\). The construction avoids a KAM Cantor-set restriction. The precise hierarchy assumptions and definitions of the parameters are not supplied. Not specified in the abstract.",
+        "methods": [
+          "A modified Birkhoff normal form in ratios of adjacent variables.",
+          "Preservation of the Hamiltonian perturbation's natural exponent structure."
+        ],
+        "context": "The abstract contrasts the method with ordinary power-series normal forms, which do not directly fit this perturbation.",
+        "keywords": [
+          "point vortices",
+          "hierarchical configurations",
+          "Birkhoff normal forms",
+          "long-time stability"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23743",
+        "versioned_id": "2609.23743v1",
+        "title": "Exponential separation of self-conformal systems",
+        "authors": [
+          "Antti K\\\"aenm\\\"aki"
+        ],
+        "abstract": "On the real line, B\\'ar\\'any, Kolossv\\'ary, and Troscheit [5] made exponential separation of analytic self-conformal systems checkable through a dual iterated function system on a space of analytic functions. The quantity their condition separates is the pre-Schwarzian derivative, and this observation lets us carry the construction to conformal iterated function systems in every dimension, where the pre-Schwarzian is $T_f=\\nabla\\log\\|Df\\|$. A pointwise separation of the pre-Schwarzian cocycle implies the strong exponential separation condition, and in dimensions one and two separation of the Schwarzian cocycle implies the same condition modulo M\\\"obius maps. Each hypothesis is equivalent to a uniform gap condition, and these are $\\mathcal{C}^2$-open. On the line they are also dense, so both separation conditions are $\\mathcal{C}^2$-generic there; this sharpens the genericity theorem of B\\'ar\\'any, Kolossv\\'ary, and Troscheit, whose open and dense set carries only the plain condition. In the plane they are dense on Jordan domains with simply connected extension domains, and both separation conditions are $\\mathcal{C}^2$-generic there too. In dimensions at least three every conformal map is M\\\"obius, so no system satisfies the condition modulo M\\\"obius maps, and the pre-Schwarzian hypothesis becomes a pole-separation condition, dense when the generators contract strongly enough and stay away from the similarities, but not dense in general. On Jordan domains, the planar genericity and a theorem of Feng and Rapaport [13] settle the dimension drop conjecture for $\\mathcal{C}^2$-generic planar systems with injective generators.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CA",
+          "math.MG"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23743",
+        "pdf_url": "https://arxiv.org/pdf/2609.23743"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Separation conditions and dimension drop for self-conformal systems directly match fractal geometry and dimension theory.",
+        "tldr": "Cocycle separation gives robust strong exponential separation for self-conformal systems. The authors obtain generic results on the line and plane, while identifying limitations in higher dimensions.",
+        "problem": "Find stable and generic separation criteria for self-conformal iterated function systems and consequences for dimension drop.",
+        "main_result": "Using \\(T_f=\\nabla\\log\\|Df\\|\\), pointwise pre-Schwarzian cocycle separation implies strong exponential separation. In dimensions one and two, Schwarzian cocycle separation yields the corresponding conclusion modulo Möbius maps; the stated conditions are equivalent to uniform gaps and are \\(C^2\\)-open. Density holds on the line and in the specified planar Jordan setting with simply connected extension domains. In dimensions at least three, the modulo-Möbius condition is impossible, and the pole-separation version is dense under the stated strong-contraction restriction away from similarities, not in general. The planar result gives the dimension-drop conjecture \\(C^2\\)-generically for the specified injective-generator systems.",
+        "methods": [
+          "Pre-Schwarzian and Schwarzian cocycles.",
+          "Uniform-gap criteria and pole separation.",
+          "Application of the stated Feng–Rapaport result."
+        ],
+        "context": "The abstract strengthens earlier generic plain exponential separation and carefully distinguishes low- and higher-dimensional behavior.",
+        "keywords": [
+          "self-conformal systems",
+          "exponential separation",
+          "dimension drop",
+          "Schwarzian cocycles"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23762",
+        "versioned_id": "2609.23762v1",
+        "title": "A finite Livshits theorem and local length spectrum rigidity",
+        "authors": [
+          "Jonathan DeWitt",
+          "Spencer Durham",
+          "James Marshall Reber",
+          "Thomas Aloysius O'Hare"
+        ],
+        "abstract": "We show that for closed negatively curved Riemannian manifolds whose length spectrum is exponentially separated, the length spectrum is a local isometry invariant. In particular, this holds for a dense set of negatively curved metrics. The main tool used in the proof is a finitary version of the Livshits theorem with an exponential tail.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.DG"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23762",
+        "pdf_url": "https://arxiv.org/pdf/2609.23762"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Length-spectrum rigidity and a finite Livshits theorem are directly relevant to hyperbolic and geodesic dynamics.",
+        "tldr": "An exponentially separated length spectrum gives local rigidity for closed negatively curved Riemannian manifolds.",
+        "problem": "Determine when the length spectrum is a local isometry invariant for a negatively curved metric.",
+        "main_result": "The authors prove local length-spectrum rigidity under exponential separation of the length spectrum. The conclusion holds for a dense set of negatively curved metrics. The exact separation condition and topology of the local statement are not supplied. Not specified in the abstract.",
+        "methods": [
+          "A finitary Livshits theorem with an exponential tail."
+        ],
+        "context": "The finite cohomological theorem is the stated main tool for the geometric rigidity result.",
+        "keywords": [
+          "Livshits theorem",
+          "length spectrum",
+          "negative curvature",
+          "local rigidity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23834",
+        "versioned_id": "2609.23834v1",
+        "title": "A new proof of no-wandering domain theorems without quasiconformal techniques",
+        "authors": [
+          "Zihao Ye"
+        ],
+        "abstract": "In one complex dimension, we use hyperbolic area to prove the absence of wandering Fatou components for rational maps of degree at least two and for transcendental entire functions whose singular sets are compact and have all their accumulation points in the Fatou set. As corollaries, we recover Sullivan's theorem for rational maps and the theorem of Eremenko--Lyubich and Goldberg--Keen for entire functions with finitely many singular values. The proof uses neither quasiconformal deformation nor Teichm\\\"uller theory.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CV"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23834",
+        "pdf_url": "https://arxiv.org/pdf/2609.23834"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "The topology of Fatou components provides a connection to complex and topological dynamics.",
+        "tldr": "The author gives a hyperbolic-area proof of no-wandering-domain results without quasiconformal techniques.",
+        "problem": "Exclude wandering Fatou components for rational maps and a stated class of transcendental entire functions.",
+        "main_result": "The proof applies to rational maps of degree at least two and to transcendental entire functions whose singular set is compact and whose singular-set accumulation points lie in the Fatou set. The abstract says this recovers Sullivan's theorem and the finite-singular-value results of Eremenko–Lyubich and Goldberg–Keen.",
+        "methods": [
+          "Hyperbolic area."
+        ],
+        "context": "The abstract explicitly avoids quasiconformal deformation and Teichmüller theory.",
+        "keywords": [
+          "Fatou components",
+          "wandering domains",
+          "hyperbolic area",
+          "complex dynamics"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23972",
+        "versioned_id": "2609.23972v1",
+        "title": "Minimal sets for torus homeomorphisms with an irrational circle factor",
+        "authors": [
+          "Xiao-Chuan Liu"
+        ],
+        "abstract": "We study minimal sets of torus homeomorphisms admitting an irrational circle factor whose fibres are thin essential annular continua. For totally irrational pseudo-rotations and homeomorphisms in a nontrivial Dehn-twist class, we prove uniqueness of the minimal set when the fibres are Jordan curves on a residual set of base parameters. The same conclusion holds if the fibre cores are Jordan curves, or if the fibres are locally connected, on a nonmeagre set of parameters. The residual hypothesis cannot be replaced by a full-measure hypothesis, even under area preservation and topological transitivity. For every totally irrational rotation vector, we construct such a map with Jordan-curve fibres almost everywhere and uncountably many pairwise disjoint uniquely ergodic minimal Cantor sets. We also construct examples in every nontrivial Dehn-twist class, with prescribed irrational vertical rotation number and bounded deviations. In both families, the Jordan-curve parameters form a meagre set of full Lebesgue measure.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23972",
+        "pdf_url": "https://arxiv.org/pdf/2609.23972"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Minimal sets, circle factors and category-versus-measure distinctions are central topological dynamics.",
+        "tldr": "The author proves uniqueness criteria for minimal sets of torus homeomorphisms with an irrational circle factor and constructs examples showing that full measure cannot replace residuality.",
+        "problem": "Relate the topology of circle-factor fibres to uniqueness of minimal sets for torus homeomorphisms.",
+        "main_result": "The setting has thin essential annular continuum fibres. For the stated totally irrational pseudo-rotations and nontrivial Dehn-twist classes, Jordan fibres on a residual set of base parameters imply uniqueness; the abstract also gives variants using Jordan fibre cores or local connectivity on a nonmeagre set. Full measure alone does not suffice: the author constructs area-preserving, topologically transitive examples with uncountably many disjoint uniquely ergodic minimal Cantor sets. Examples are available for every totally irrational rotation vector and in all nontrivial Dehn-twist classes with prescribed vertical irrational rotation and bounded deviations; their Jordan-fibre parameter sets are meagre and have full Lebesgue measure.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The examples distinguish topological largeness from measure-theoretic largeness in factor-fibre hypotheses.",
+        "keywords": [
+          "torus homeomorphisms",
+          "minimal sets",
+          "irrational circle factors",
+          "Cantor sets",
+          "Dehn twists"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24070",
+        "versioned_id": "2609.24070v1",
+        "title": "Morse Index, Stability and Spectral Bounds for Periodic Orbits in Reversible Lagrangian Systems",
+        "authors": [
+          "Alessandro Portaluri",
+          "Li Wu"
+        ],
+        "abstract": "We prove quantitative stability and instability estimates for reversible periodic solutions of strictly Legendre-convex Lagrangian systems. If the configuration dimension is $n$, the fixed-period Morse index is $k$, and $k_D,\\nu_D$ are the Dirichlet index and nullity on a half-period, set \\[ \\widetilde k=k-2k_D-\\nu_D. \\] Then the algebraic number $\\nu_+$ of positive real Floquet multipliers satisfies \\[ \\nu_+\\ge 2n-2\\widetilde k, \\] and we obtain corresponding bounds for the positive real spectrum away from $1$, allowing arbitrary Jordan chains at the unit multiplier. Hence at most $2\\widetilde k$ Floquet multipliers can lie outside the positive real axis. In particular, when $k=0$ we recover the positive-real-spectrum theorem for reversible minimizers, while for nonconstant autonomous brake orbits the bounds improve by two. If, moreover, $n\\ge2$ and the algebraic multiplicity of $1$ is two, an index-one brake orbit is transversely hyperbolic, with $n-1$ stable and $n-1$ unstable directions. Decoupled oscillators show that the refined bounds can be sharp even when the estimate based on $k$ alone is vacuous, and the H\\'enon--Heiles straight-line orbit provides a nonlinear illustration of the half-period mechanism.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24070",
+        "pdf_url": "https://arxiv.org/pdf/2609.24070"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Floquet bounds and transverse hyperbolicity connect periodic-orbit index theory to hyperbolic dynamics.",
+        "tldr": "The authors bound Floquet multipliers of reversible periodic orbits using Morse and half-period Dirichlet indices.",
+        "problem": "Relate variational indices to stability and spectral location for periodic orbits of strictly Legendre-convex reversible Lagrangian systems.",
+        "main_result": "With configuration dimension \\(n\\), fixed-period Morse index \\(k\\), half-period Dirichlet index \\(k_D\\) and nullity \\(\\nu_D\\), set \\(\\widetilde{k}=k-2k_D-\\nu_D\\). The number of positive real Floquet multipliers, counted algebraically, satisfies \\(\\nu_+\\geq2n-2\\widetilde{k}\\), leaving at most \\(2\\widetilde{k}\\) outside the positive real axis. The abstract allows arbitrary Jordan chains at one and improves bounds by two for nonconstant autonomous brake orbits. For \\(n\\geq2\\), index-one brake orbits with multiplier-one multiplicity two are transversely hyperbolic, with \\(n-1\\) stable and \\(n-1\\) unstable directions.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The abstract recovers positivity for index-zero minimizers, gives sharp decoupled examples, and includes a Hénon–Heiles illustration.",
+        "keywords": [
+          "Morse index",
+          "Floquet multipliers",
+          "reversible systems",
+          "brake orbits",
+          "hyperbolicity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24217",
+        "versioned_id": "2609.24217v1",
+        "title": "Asymptotically Autonomous Maps: Heteroclinic connections, Splitting and Phase-induced tipping",
+        "authors": [
+          "Jes\\'us Due\\~nas",
+          "Arturo Vieiro"
+        ],
+        "abstract": "We consider discrete-time dynamical systems generated by the iteration of asymptotically autonomous maps, whose asymptotic behavior may be either conservative or dissipative. These systems are of particular interest in the modeling of complex phenomena with time-dependent parameter variation. With an appropriate time compactification, the past and future infinity become normally hyperbolic invariant hyperplanes, and thus the plausible asymptotic states of the system can be determined by considering the appropriate fibers of the stable and unstable foliations or suitable sections of the asymptotic manifolds to their compact invariant subsets. In this context, we explore how tipping induced by a change of phase--namely, how a phase shift affects the evolution of the system--is encoded in the unstable manifolds of compact invariant subsets of the past equation. We further connect the tipping phenomenon to the splitting of invariant manifolds and identify certain system reversibilities able to prevent tipping. The theoretical framework we use clarifies the relationships among the various notions of tipping induced by phase-change introduced in the literature.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24217",
+        "pdf_url": "https://arxiv.org/pdf/2609.24217"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Normally hyperbolic invariant sets and stable/unstable foliations are explicit connections to hyperbolic dynamics.",
+        "tldr": "The authors use time compactification to describe heteroclinic connections and phase-induced tipping for asymptotically autonomous maps.",
+        "problem": "Characterize states and tipping in discrete systems with conservative or dissipative limiting dynamics.",
+        "main_result": "Past and future infinity become normally hyperbolic invariant hyperplanes after time compactification. Fibres and sections of stable and unstable foliations associated with compact invariant subsets characterize the relevant states. Unstable manifolds from past invariant sets encode phase-shift tipping; the authors connect this to splitting and identify reversibilities preventing tipping. Exact assumptions on the maps and reversibilities are not supplied. Not specified in the abstract.",
+        "methods": [
+          "Time compactification.",
+          "Stable and unstable foliations.",
+          "Analysis of splitting and reversibility."
+        ],
+        "context": "The abstract presents the framework as unifying several descriptions of asymptotically autonomous behavior.",
+        "keywords": [
+          "asymptotically autonomous maps",
+          "heteroclinic connections",
+          "normal hyperbolicity",
+          "phase-induced tipping"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24437",
+        "versioned_id": "2609.24437v1",
+        "title": "On the Topological Transitivity of Interval Extensions of Anosov Diffeomorphisms",
+        "authors": [
+          "Wenchao Li",
+          "Mingyang Xia"
+        ],
+        "abstract": "We establish topological transitivity for a class of analytic partially hyperbolic diffeomorphisms on thickened nilmanifolds. These systems take the form of skew products, constructed as interval extensions of Anosov diffeomorphisms on nilmanifolds. Specifically, we develop a mechanism for topological transitivity allowing arbitrary finite-order parabolic degeneracies in the central direction.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24437",
+        "pdf_url": "https://arxiv.org/pdf/2609.24437"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Topological transitivity of partially hyperbolic skew products is a direct profile match.",
+        "tldr": "The authors give a transitivity mechanism for analytic interval extensions of Anosov diffeomorphisms.",
+        "problem": "Establish topological transitivity in a class of analytic partially hyperbolic systems on thickened nilmanifolds.",
+        "main_result": "The systems are skew products with interval fibres over Anosov diffeomorphisms of nilmanifolds. The transitivity mechanism accommodates arbitrary finite-order central parabolic degeneracies. The precise class assumptions and mechanism are not described. Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The abstract emphasizes that central parabolic degeneracy of any finite order is allowed within the stated class.",
+        "keywords": [
+          "topological transitivity",
+          "Anosov diffeomorphisms",
+          "interval extensions",
+          "partial hyperbolicity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24449",
+        "versioned_id": "2609.24449v1",
+        "title": "Marker endomorphisms for complex H\\'enon maps",
+        "authors": [
+          "Ivan Cuezva"
+        ],
+        "abstract": "This paper investigates some properties of the compound marker endomorphisms appearing in the study of the monodromy action of H\\'enon maps. The main result is to present a computable criterion for checking the bijectivity of a single marker endomorphism. Some direct corollaries are also developed, keeping in mind the H\\'enon dynamical aspect. Another point of the paper is the reformulation of compound marker endomorphisms in terms of permutive functions, which have been introduced by Hedlund. This reformulation allows to directly apply some of his results.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24449",
+        "pdf_url": "https://arxiv.org/pdf/2609.24449"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Marker endomorphisms, monodromy and permutive functions provide a symbolic connection; the abstract does not spell out the underlying coding system.",
+        "tldr": "The author studies compound marker endomorphisms and gives a computable bijectivity criterion for a single marker endomorphism.",
+        "problem": "Understand marker endomorphisms arising in the monodromy action for complex Hénon maps.",
+        "main_result": "A computable criterion decides bijectivity of single marker endomorphisms, with stated corollaries for Hénon dynamics. Compound marker endomorphisms are reformulated using Hedlund's permutive functions. The criterion and the corollaries are not stated explicitly. Not specified in the abstract.",
+        "methods": [
+          "Reformulation through Hedlund's permutive functions."
+        ],
+        "context": "The reformulation allows the author to use results about permutive functions in the marker-endomorphism setting.",
+        "keywords": [
+          "marker endomorphisms",
+          "Hénon maps",
+          "monodromy",
+          "permutive functions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24553",
+        "versioned_id": "2609.24553v1",
+        "title": "A Proof of the Global Attractor Conjecture in a Special Case",
+        "authors": [
+          "Carsten Wiuf"
+        ],
+        "abstract": "We prove the Global Attractor Conjecture for complex balanced mass-action reaction networks whose reachable siphons satisfy two structural conditions, allowing multiple linkage classes. The proof proceeds in two steps. A structural condition relating the stoichiometric space to the reactions active within a boundary face ensures that a stoichiometric compatibility class contains at most one boundary equilibrium with any prescribed zero set. Finiteness of the possible zero sets and connectedness of the $\\omega$-limit set then imply that any boundary limit set consists of a single equilibrium. To exclude convergence to such an equilibrium, we consider the embedded reaction network obtained by projecting onto the vanishing species and freezing the concentrations of the surviving species at a positive limit. The structural condition guarantees complex balance of this embedded network, while a further condition on its minimal active linkage classes ensures that an explicit Chetaev function is strictly increasing near the boundary. This excludes the boundary point as an accumulation point whenever the surviving concentrations converge. Consequently, every positive trajectory converges to the unique positive equilibrium in its stoichiometric compatibility class. Examples illustrate the hypotheses and their relation to strong endotacticity.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "q-bio.MN"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24553",
+        "pdf_url": "https://arxiv.org/pdf/2609.24553"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The main result is convergence in complex-balanced reaction networks under structural siphon conditions, without a central entropy, symbolic or dimension theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24587",
+        "versioned_id": "2609.24587v1",
+        "title": "Complete classification of algebraically primitive Teichm\\\"uller curves in $\\Omega\\mathcal{M}_g(g-1,g-1)^{\\mathrm{hyp}}$",
+        "authors": [
+          "Myeongjae Lee"
+        ],
+        "abstract": "We give a complete classification of algebraically primitive Teichm\\\"uller curves in $\\Omega\\mathcal M_g(g-1,g-1)^{\\mathrm{hyp}}$ for $g>2$. These curves are precisely those generated by the Veech $2p$-gons, where $p=2g+1$ is prime.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.AG",
+          "math.GT"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24587",
+        "pdf_url": "https://arxiv.org/pdf/2609.24587"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Teichmüller-curve classification provides a geometric-dynamics connection.",
+        "tldr": "The author classifies algebraically primitive Teichmüller curves in the stated hyperelliptic strata.",
+        "problem": "Determine all algebraically primitive Teichmüller curves in the hyperelliptic strata with two equal-order zeros.",
+        "main_result": "For \\(g>2\\), the curves in \\(\\Omega\\mathcal M_g(g-1,g-1)^{\\mathrm{hyp}}\\) are precisely those generated by Veech \\(2p\\)-gons with \\(p=2g+1\\) prime.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The scope is restricted to algebraic primitivity and the specified hyperelliptic strata.",
+        "keywords": [
+          "Teichmüller curves",
+          "hyperelliptic strata",
+          "algebraic primitivity",
+          "Veech polygons"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24623",
+        "versioned_id": "2609.24623v1",
+        "title": "From Dimension Drop to Aperiodic Order",
+        "authors": [
+          "Natalia Jurga",
+          "Dmytro Karvatskyi"
+        ],
+        "abstract": "We consider the parametrised family of sets $$ E(x,y)=\\left\\{\\sum_{n=1}^{\\infty}\\frac{\\varepsilon_n}{4^n}: (\\varepsilon_n) \\in \\{0,x,y,x+y\\}^{\\mathbb{N}}\\right\\} $$ for $(x,y) \\in \\mathbb{N}^2$. This family can be viewed through three lenses: (a) as homogeneous self-similar sets; (b) as achievement sets of bi-geometric series; or (c) as the set of `rational' orthogonal projections of the four-corner Cantor set. We synthesise these three perspectives to obtain a complete topological classification of $E(x,y)$ for $(x,y) \\in \\mathbb{N}^2$. Next, we collapse this topological classification to a binary one according to whether or not $E(x,y)$ has interior. When this binary classification is visualised, it reveals a two-colour tiling $T$ of the lattice $\\mathbb N^2$, which, despite being visibly structured, turns out to be aperiodic; indeed, we prove it has no non-trivial translational symmetries. Due to the rigidity of our model, this same binary classification simultaneously captures several dichotomies. Most notably, when the family $\\{E(x,y)\\}_{(x,y) \\in \\mathbb{N}^2}$ is viewed through the theory of self-similar sets, $T$ can be seen to describe the emergence of dimension drop within the family. Finally we examine the mechanism underlying the tiling's aperiodic order. By considering the number-theoretic properties of the tiling, we characterise its substitution structure, and discover that $T$ is a factor of a substitution tiling on four ``hidden'' arithmetically defined states.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.MG",
+          "math.NT"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24623",
+        "pdf_url": "https://arxiv.org/pdf/2609.24623"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Dimension drop, self-similar sets and substitution tilings directly combine fractal and symbolic dynamics.",
+        "tldr": "The authors connect a complete topological classification of a self-similar family to an aperiodic arithmetic tiling that also detects dimension drop.",
+        "problem": "Describe the topology and dimension-drop pattern of self-similar sets generated by four integer digits.",
+        "main_result": "For \\((x,y)\\in\\mathbb N^2\\), the family is \\(E(x,y)=\\{\\sum_{n\\geq1}\\varepsilon_n/4^n:(\\varepsilon_n)\\in\\{0,x,y,x+y\\}^{\\mathbb N}\\}\\). The interior/noninterior classification defines a two-colour tiling of \\(\\mathbb N^2\\) with no nontrivial translational symmetry, and the same binary pattern captures dimension drop. The authors characterize substitutions producing this pattern as a factor of a four-state arithmetic substitution tiling.",
+        "methods": [
+          "Synthesis of the topological classification.",
+          "Number-theoretic structure and substitution tilings."
+        ],
+        "context": "The abstract identifies the family also as bigeometric achievement sets and rational orthogonal projections of the four-corner Cantor set.",
+        "keywords": [
+          "dimension drop",
+          "self-similar sets",
+          "aperiodic order",
+          "substitution tilings",
+          "Cantor projections"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24695",
+        "versioned_id": "2609.24695v1",
+        "title": "Sectorial normalisation of one resonant biholomorphisms near a fixed point",
+        "authors": [
+          "Maxime Chatal (CNRS",
+          "UniCA)",
+          "Laurent Stolovitch (CNRS",
+          "UniCA)"
+        ],
+        "abstract": "In this article, we prove the existence of a sectorial transformation to a polynomial normal form a a non-degenerate 1-resonant biholomorphism in ${\\mathbb C}^n$ . We also give their holomorphic classification.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24695",
+        "pdf_url": "https://arxiv.org/pdf/2609.24695"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Local holomorphic classification is potentially relevant to complex dynamics, although no entropy or fractal statement is supplied.",
+        "tldr": "The authors obtain sectorial polynomial normal forms and holomorphic classification for nondegenerate one-resonant biholomorphisms.",
+        "problem": "Normalize a nondegenerate one-resonant biholomorphism near a fixed point.",
+        "main_result": "In \\(\\mathbb C^n\\), a sectorial transformation to a polynomial normal form exists for the stated nondegenerate one-resonant class. The authors also give a holomorphic classification. The nondegeneracy condition and classification invariants are not supplied. Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The conclusions are local near a fixed point and concern a specified resonance class.",
+        "keywords": [
+          "holomorphic dynamics",
+          "sectorial normalization",
+          "resonance",
+          "local classification"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24752",
+        "versioned_id": "2609.24752v1",
+        "title": "Density of almost squares of horospherical orbits in non-uniform quotients of $\\operatorname{SL}_2(\\mathbb{R})\\times\\operatorname{SL}_2(\\mathbb{R})$",
+        "authors": [
+          "Konstantin Andritsch"
+        ],
+        "abstract": "Let $\\Gamma\\subset\\operatorname{SL}_2(\\mathbb{R})\\times\\operatorname{SL}_2(\\mathbb{R})$ be an irreducible, non-uniform lattice and define the space $X = \\operatorname{SL}_2(\\mathbb{R})\\times\\operatorname{SL}_2(\\mathbb{R})/\\Gamma$. Let $U$ be the standard horospherical subgroup in $\\operatorname{SL}_2(\\mathbb{R})\\times\\operatorname{SL}_2(\\mathbb{R})$. We show that for every $\\delta>0$ and $x\\in X$ with dense $U$-orbit, the $U$-orbit evaluated at almost squares, $\\{(u_{(n^{2-\\delta},m^{2-\\delta})}~:~n,m\\in\\mathbb{N}\\}\\cdot x$, is dense in $X$. The main idea of the proof is to shadow large periodic $U$-orbits and reduce the statement to a density statement within the periodic $U$-orbit, i.e. a statement for the $2$-torus $\\mathbb{T}^2$. This then follows from an effective version of Weyl's inequality to deduce the result. The effective shadowing of periodic $U$-orbits is achieved using tools from homogeneous dynamics, namely quantitative non-divergence of horospherical subgroups, recurrence under the diagonal flow and effective equidistribution of expanding horospherical subgroups. Our approach follows the strategy of the work \\cite{KR25} of \\citeauthor{KR25} who established density of almost squares of the horocycle flow for non-uniform lattices in $\\operatorname{SL}_2(\\mathbb{R})$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24752",
+        "pdf_url": "https://arxiv.org/pdf/2609.24752"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Horospherical group orbits and sparse sampling strongly match the profile, but the abstract's unrestricted exponent quantifier needs clarification.",
+        "tldr": "The author presents a density argument for almost-square samples of dense horospherical orbits. The stated range of the sampling exponent cannot be accepted literally as written.",
+        "problem": "Determine when sparse samples of a dense horospherical orbit remain dense in a quotient by an irreducible non-uniform lattice.",
+        "main_result": "For an irreducible non-uniform lattice in \\(\\operatorname{SL}_2(\\mathbb R)\\times\\operatorname{SL}_2(\\mathbb R)\\), the abstract claims density of samples \\(u_{(n^{2-\\delta},m^{2-\\delta})}x\\), with \\(n,m\\in\\mathbb N\\), whenever the full horospherical orbit is dense and \\(\\delta>0\\). There is a source-level qualification problem: at \\(\\delta=2\\), all these samples equal \\(u_{(1,1)}x\\), so the unrestricted claim cannot hold. A corrected admissible range is not supplied. Not specified in the abstract.",
+        "methods": [
+          "Effective shadowing of large periodic horospherical orbits.",
+          "Reduction to density on the two-dimensional torus and an effective Weyl inequality.",
+          "Quantitative non-divergence, diagonal-flow recurrence and effective equidistribution."
+        ],
+        "context": "The abstract follows a prior strategy for the horocycle flow on non-uniform quotients. The source reference does not provide its authors' names, and the exponent caveat limits what can be concluded from this abstract.",
+        "keywords": [
+          "horospherical orbits",
+          "sparse sampling",
+          "homogeneous dynamics",
+          "effective equidistribution"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24753",
+        "versioned_id": "2609.24753v1",
+        "title": "Angular maps for visualizing rotational dynamics",
+        "authors": [
+          "Wolf-J\\\"urgen Beyn",
+          "Thorsten H\\\"uls"
+        ],
+        "abstract": "We develop and analyze angular maps as a numerical tool for visualizing and detecting rotational dynamics in nonlinear, nonautonomous dynamical systems in discrete and continuous time. An angular map assigns to each initial point the angular spectrum of the variational equation along the corresponding trajectory. This spectrum describes the long-time average rotation of subspaces transported by the linearized dynamics, measured by maximal principal angles. Building on the theory of angular spectra, we develop efficient numerical algorithms based on forward and backward subspace iteration. We prove that these algorithms asymptotically provide angular spectral values for subspaces that are dominant in either forward or backward time. Applications to H\\'enon maps, a planar flow, and the Lorenz system illustrate how angular maps reveal rotational features across phase space. For continuous-time systems, we prove that suitably rescaled angular spectra of exact time-step maps converge to the continuous angular spectrum in the Hausdorff metric as the step size tends to zero. For autonomous systems, we also justify a simplified algorithm that uses successive trajectory points to approximate the angular range associated with the flow direction.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24753",
+        "pdf_url": "https://arxiv.org/pdf/2609.24753"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is numerical visualization of rotation and convergence of angular-spectrum algorithms, without a central entropy, coding or dimension result.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24820",
+        "versioned_id": "2609.24820v1",
+        "title": "Quantitative orbit equivalence for rank-one systems",
+        "authors": [
+          "Corentin Correia",
+          "Spyridon Petrakos"
+        ],
+        "abstract": "We prove that any two rank-one systems are sub-$L^1$ orbit equivalent, fully clarifying quantitative orbit equivalence for a generic class of transformations. As a corollary, we establish unconditional optimality of Belinskaya's theorem.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24820",
+        "pdf_url": "https://arxiv.org/pdf/2609.24820"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Quantitative orbit equivalence is a direct match to orbit-complexity and dynamical equivalence interests.",
+        "tldr": "The authors prove subintegrable orbit equivalence between any two rank-one systems and deduce optimality of Belinskaya's theorem.",
+        "problem": "Determine the quantitative orbit-equivalence relation among rank-one systems.",
+        "main_result": "Any two rank-one systems are sub-\\(L^1\\) orbit equivalent. The authors deduce unconditional optimality of Belinskaya's theorem. The exact integrability convention and the formulation of optimality are not supplied. Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The abstract describes rank-one systems as a generic class of transformations.",
+        "keywords": [
+          "rank-one systems",
+          "quantitative orbit equivalence",
+          "integrability",
+          "Belinskaya theorem"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24828",
+        "versioned_id": "2609.24828v1",
+        "title": "Sparse empirical measures for non-statistical interval maps with two neutral fixed points",
+        "authors": [
+          "Farrukh Mukhamedov"
+        ],
+        "abstract": "We consider balanced doubly intermittent full-branch interval maps with two neutral fixed points. Although the ordinary empirical measures fail to converge for Lebesgue-almost every initial point, we show that this non-statistical behavior persists under a broad class of deterministic observation schemes: if the sampling sequence is block-dominating, then both endpoint Dirac masses are accumulation points of the sparse empirical measures for Lebesgue-almost every orbit. This class includes sampling sequences of positive lower density, arithmetic and polynomial sequences, and finite-index regularly varying sequences. We also prove that every map in the balanced class has the strong natural-measure property, including at the boundary exponent $\\beta=1$: the pushforwards of every absolutely continuous initial probability converge to a distinguished endpoint mixture $\\nu_*$. Abstract consequences of this one-time limit include annealed convergence along every deterministic sampling sequence, the existence of arbitrarily sparse sequences with almost-sure convergence, and an almost-sure convergence criterion based on a power-saving variance bound. For the symmetric quadratic map $g_1\\in\\mathfrak F_*$, we verify the dyadic covariance condition on a countable uniformly dense endpoint-flat family: the double covariance sum is $O_\\phi(n\\log(n+2))$. Consequently its dyadic empirical measures converge for Lebesgue-almost every initial point to $\\tfrac12(\\delta_{-1}+\\delta_1)$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24828",
+        "pdf_url": "https://arxiv.org/pdf/2609.24828"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Empirical-measure accumulation, invariant endpoint measures and intermittent maps connect to ergodic and measure-theoretic dynamics.",
+        "tldr": "The authors show persistence of non-statistical behavior for many sparse observation schemes, while proving natural-measure and special sparse convergence results.",
+        "problem": "Understand which deterministic sampling schemes preserve or suppress failure of empirical-measure convergence for balanced doubly intermittent full-branch interval maps.",
+        "main_result": "For block-dominating sampling sequences, both endpoint Dirac measures accumulate for Lebesgue-almost every orbit; the class includes positive-lower-density, arithmetic, polynomial and finite-index regularly varying sequences. Every map in the balanced class has the strong natural-measure property, including at \\(\\beta=1\\): pushforwards of absolutely continuous initial probabilities converge to a distinguished endpoint mixture \\(\\nu_*\\). Consequences include annealed convergence for every deterministic sequence and the existence of arbitrarily sparse almost-surely convergent sequences. For the symmetric quadratic map \\(g_1\\in\\mathfrak F_*\\), a covariance sum of order \\(O_\\phi(n\\log(n+2))\\) on the stated test family implies almost-sure dyadic empirical convergence to \\(\\tfrac12(\\delta_{-1}+\\delta_1)\\).",
+        "methods": [
+          "Block-dominating sampling schemes.",
+          "Consequences of a one-time pushforward limit.",
+          "Power-saving variance and dyadic covariance estimates."
+        ],
+        "context": "The abstract distinguishes orbitwise nonconvergence from convergence of transported initial distributions; the dyadic result is for the specified symmetric quadratic map.",
+        "keywords": [
+          "intermittent maps",
+          "empirical measures",
+          "sparse sampling",
+          "natural measures",
+          "covariance bounds"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.22279",
+        "versioned_id": "2609.22279v1",
+        "title": "Geometric index theorems for holomorphic foliations and curves",
+        "authors": [
+          "C\\'esar Camacho",
+          "Rudy Rosas"
+        ],
+        "abstract": "Let $M$ be a complex surface endowed with a holomorphic projective connection and let $C \\subset M$ be a compact smooth holomorphic curve. Given two singular holomorphic foliations $\\mathcal{F}$ and $\\mathcal{G}$ near $C$, with $C$ not $\\mathcal{G}$-invariant, we attach to every point $p \\in C$ an index $\\mathrm{Ind}(\\mathcal{F},\\mathcal{G},C,p) \\in \\mathbb{C}$ of $\\mathcal{F}$ relative to the reference $\\mathcal{G}$, and we prove that these indices add up to $T\\mathcal{G} \\cdot C$. When $C$ is $\\mathcal{F}$-invariant the index is the Camacho--Sad index corrected by the order of tangency of $\\mathcal{G}$ with $C$, and the index formula reduces to the Camacho--Sad formula. The main applications are two contact formulas. At a tangency point $p$ of $\\mathcal{G}$ with $C$, let $k(\\mathcal{G},C,p)$ be the ratio of the curvatures at $p$ of the leaf of $\\mathcal{G}$ and of the curve; it is a projective invariant, although each curvature separately depends on a choice of metric. If $\\mathcal{G}$ has no singular points on $C$ and only simple tangencies with $C$, then $$ \\sum_{p} \\frac{1}{1 - k(\\mathcal{G},C,p)} = \\frac{2}{3}\\left( C \\cdot C + g - 1 \\right), $$ where $g$ is the genus of $C$: the number of tangencies depends on $\\mathcal{G}$, but this weighted count does not. For a pencil of lines in the projective plane it is the Pl\\\"ucker formula for the class of a plane curve. The second formula asserts that, for a curve in general position with respect to $\\mathcal{F}$ and $\\mathcal{G}$ which is not a geodesic, the total index of the tangencies of $\\mathcal{F}$ with $\\mathcal{G}$ along $C$ equals the number of tangencies of $\\mathcal{G}$ with $C$ minus one third of the number of inflection points of $C$; in particular, it does not depend on $\\mathcal{F}$.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CV",
+          "math.AG",
+          "math.DG",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.22279",
+        "pdf_url": "https://arxiv.org/pdf/2609.22279"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The main results are geometric index and contact formulas for holomorphic foliations and curves, without an explicit central dynamics-profile connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.22499",
+        "versioned_id": "2609.22499v1",
+        "title": "Conditional Stable Laws and Rare-Event Limits for Absorbing Markov Chains",
+        "authors": [
+          "Bernat Bassols Cornudella",
+          "Matheus M Castro"
+        ],
+        "abstract": "We establish conditional limit theorems, pointwise in the initial state, for absorbing Markov chains on a compact metric space $M$. We assume $L^1(M,\\rho)$-continuous transition densities, irreducibility and aperiodicity. For the observable $f_\\beta(x)=d_M(x,x_0)^{-\\beta}$, with suitable $x_0$ satisfying $\\rho(B_r(x_0))\\sim C_d(x_0)r^d$, we prove that the point-process of normalised observations converges to a Poisson random measure. This yields totally right-skewed $\\alpha$-stable laws for $\\alpha=d/\\beta\\in(0,2)$ and, at the boundary value $\\alpha=2$, a Gaussian limit with the non-standard normalisation $\\sqrt{n\\log n}$. We also establish a conditional central limit theorem for $L^2$ observables, exponential deviation bounds for bounded observables and a conditional Poisson law for visits to shrinking targets.",
+        "announce_type": "cross",
+        "categories": [
+          "math.PR",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.22499",
+        "pdf_url": "https://arxiv.org/pdf/2609.22499"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Shrinking targets and rare-event statistics have a plausible ergodic-theory connection; the stated model is an absorbing Markov chain.",
+        "tldr": "The authors establish conditional rare-event and stable-law limits, pointwise in the initial state, for absorbing chains on compact metric spaces.",
+        "problem": "Obtain conditional limit laws for singular and regular observables of absorbing Markov chains.",
+        "main_result": "Assume \\(L^1(M,\\rho)\\)-continuous transition densities, irreducibility and aperiodicity on a compact metric space \\(M\\). For suitable \\(x_0\\) with \\(\\rho(B_r(x_0))\\sim C_d(x_0)r^d\\), normalized observations of \\(f_\\beta(x)=d_M(x,x_0)^{-\\beta}\\) converge as a point process to a Poisson random measure. This yields totally right-skewed stable laws for \\(\\alpha=d/\\beta\\in(0,2)\\), and a Gaussian limit with normalization \\(\\sqrt{n\\log n}\\) at \\(\\alpha=2\\). Conditional central limits for \\(L^2\\) observables, exponential deviations for bounded observables and a shrinking-target Poisson law are also stated. Further suitability requirements on \\(x_0\\): Not specified in the abstract.",
+        "methods": [
+          "Point-process convergence to a Poisson random measure."
+        ],
+        "context": "The results are conditional and pointwise in the initial state; the abstract does not provide all centering or conditioning conventions. Not specified in the abstract.",
+        "keywords": [
+          "absorbing Markov chains",
+          "stable laws",
+          "rare events",
+          "shrinking targets",
+          "conditional limits"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.22689",
+        "versioned_id": "2609.22689v1",
+        "title": "Efficient Rigorous Continuation via Chebyshev Series Expansion I",
+        "authors": [
+          "Maxime Breden",
+          "Olivier H\\'{e}not"
+        ],
+        "abstract": "We study the global continuation of solution manifolds arising in dynamical systems. We present a rigorous continuation method based on a Chebyshev series expansion of the solution manifold. The branch is first approximated by a high-order Chebyshev interpolation polynomial, and an explicit error bound is then obtained by verifying the contraction of a quasi-Newton operator near this approximation. The contraction is formulated on a weighted $\\ell^1$ space, giving a finer control than the typical $C^0$-error bound obtained from the uniform contraction theorem. In fact, the latter follows directly from our contraction operator. Furthermore, we discuss how our strategy applies naturally to pseudo-arclength continuation, where the continuation parameter fails to provide a valid local coordinate, and extends to multi-parameter continuation. Lastly, we detail two applications in which we compute a two-parameter family of steady-states for the Cahn--Hilliard equation, and a one-parameter family of steady-states undergoing saddle-node bifurcations for the Shigesada--Kawasaki--Teramoto system.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NA",
+          "cs.NA",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.22689",
+        "pdf_url": "https://arxiv.org/pdf/2609.22689"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The main contribution is rigorous numerical continuation and PDE steady-state computation rather than the profile's entropy, symbolic or fractal themes.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.22737",
+        "versioned_id": "2609.22737v1",
+        "title": "Special valuations and automorphisms of affine log Calabi--Yau varieties",
+        "authors": [
+          "Yuchen Liu"
+        ],
+        "abstract": "Let $U$ be an affine log Calabi--Yau variety. Although special and finitely generated valuations are defined using a log CY-Fano compactification of $U$, we prove that the corresponding skeleta in the dual complex are independent of this choice, and hence invariant under $\\mathrm{Aut}(U)$. We also show that a finitely generated valuation is special if and only if it is maximal with respect to a natural partial order induced by regular functions on $U$. We then consider the affine log Calabi--Yau threefold obtained as the complement of the Markov cubic surface in $\\mathbb{A}^3$. We describe the action of the three Vieta involutions on the special skeleton and relate it to the $(\\infty,\\infty,\\infty)$-triangle reflection group on the hyperbolic plane. We also show that, for every finite triangulation of the dual complex, the special skeleton fails to be locally closed on some simplex. Via the cone construction, this provides a counterexample to a conjecture of the author and Xu.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AG",
+          "math.AC",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.22737",
+        "pdf_url": "https://arxiv.org/pdf/2609.22737"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Automorphism actions on skeleta and a relation to a hyperbolic reflection group provide a substantive group-action connection.",
+        "tldr": "The author proves intrinsicness of valuation skeleta and describes Vieta involutions on a particular affine log Calabi–Yau threefold.",
+        "problem": "Understand the dependence of special and finitely generated valuation skeleta on compactification and their behavior under automorphisms.",
+        "main_result": "For an affine log Calabi–Yau variety \\(U\\), the relevant skeleta are independent of the chosen log CY-Fano compactification and hence invariant under \\(\\mathrm{Aut}(U)\\). A finitely generated valuation is special exactly when it is maximal for the stated regular-function order. For the complement of the Markov cubic surface in \\(\\mathbb A^3\\), the three Vieta involutions act on the special skeleton in relation to the \\((\\infty,\\infty,\\infty)\\)-triangle reflection group. For every finite triangulation of the dual complex, that special skeleton is not locally closed on some simplex.",
+        "methods": [
+          "The cone construction for the stated counterexample."
+        ],
+        "context": "The last property yields a counterexample to a conjecture of the author and Xu, as stated in the abstract.",
+        "keywords": [
+          "valuation skeleta",
+          "automorphism actions",
+          "Vieta involutions",
+          "reflection groups"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.22800",
+        "versioned_id": "2609.22800v1",
+        "title": "Jordan-Block Degeneracy and Cubic-Order Bifurcating Periodic Orbits in Minimum-Energy Optimal Control of Hamiltonian Equilibria",
+        "authors": [
+          "Mai Bando",
+          "Ayano Tsuruta",
+          "Shanshan Pan",
+          "Daniel J. Scheeres"
+        ],
+        "abstract": "Equilibria of the Hamiltonian system associated with Pontryagin's minimum principle exhibit an exact doubling of the natural spectrum and, under a simple pairing condition, a Jordan block at every simple purely imaginary eigenvalue. Consequently, the classical Lyapunov Center Theorem does not apply to the augmented system, and no periodic orbit with nonzero optimal control bifurcates at linear order. We establish this mechanism in general and show that an optimal-control-induced periodic family emerges at cubic order in a Lindstedt--Poincar\\'e expansion. The mechanism is illustrated in closed form for the pendulum and evaluated numerically for the planar $L_2$ equilibrium of Hill's restricted three-body problem, where the third-order approximation is validated against an independently computed family of periodic orbits.",
+        "announce_type": "cross",
+        "categories": [
+          "nlin.CD",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.22800",
+        "pdf_url": "https://arxiv.org/pdf/2609.22800"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The paper focuses on optimal-control-induced periodic orbits and cubic-order bifurcation calculations, without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.22801",
+        "versioned_id": "2609.22801v1",
+        "title": "Hypersensitivity and Turnpikes in Optimal Control of Inverted Pendulum: A Dynamical Systems Perspective",
+        "authors": [
+          "Mai Bando",
+          "Yuzuru Sato"
+        ],
+        "abstract": "The hypersensitivity and turnpike phenomena in the optimal control of an inverted pendulum are investigated from a dynamical-systems perspective. We show that, for a fixed terminal time and a fixed terminal state optimal control problem, (1) the hypersensitivity originates from the fractal structure of the set of initial adjoint variables in the associated Hamiltonian dynamics, (2) the turnpike arises from slow dynamics in the vicinity of a degenerate center manifold, and (3) the escape channels are formed by normally hyperbolic invariant manifolds (NHIMs). As a consequence, small perturbations in the initial adjoint variables lead to qualitatively distinct extremal trajectories, resulting in severe numerical instability in trajectory optimization. Both the fractal structure and the invariant sets are characterized numerically and analytically.",
+        "announce_type": "cross",
+        "categories": [
+          "nlin.CD",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.22801",
+        "pdf_url": "https://arxiv.org/pdf/2609.22801"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Fractal initial-adjoint geometry and normally hyperbolic invariant manifolds connect this control problem to the profile; no dimension theorem is stated.",
+        "tldr": "The authors explain hypersensitivity, turnpikes and escape channels in an inverted-pendulum optimal control problem through phase-space geometry.",
+        "problem": "Identify the dynamical origins of hypersensitivity and turnpike behavior with fixed terminal time and terminal state.",
+        "main_result": "For the stated optimal control problem, the authors attribute hypersensitivity to the fractal set of initial adjoint variables, turnpikes to slow motion near a degenerate center manifold, and escape channels to normally hyperbolic invariant manifolds. Small adjoint perturbations can therefore select qualitatively different extremal trajectories. The abstract reports both numerical and analytical characterization but gives no quantitative fractal invariant.",
+        "methods": [
+          "Numerical and analytical characterization of fractal structure and invariant sets."
+        ],
+        "context": "The conclusions explain numerical instability in trajectory optimization for the stated pendulum problem.",
+        "keywords": [
+          "fractal geometry",
+          "optimal control",
+          "turnpikes",
+          "normally hyperbolic invariant manifolds"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.22808",
+        "versioned_id": "2609.22808v1",
+        "title": "Almost-sure quenched KAM tori for cubic NLS with a spatial white-noise potential",
+        "authors": [
+          "Yingdu Dong",
+          "Wenwen Jian",
+          "Xiaoping Yuan"
+        ],
+        "abstract": "Let \\[ A_\\omega=-\\partial_x^2+\\rho\\dot B_x(\\omega), \\qquad \\rho\\ne0, \\] be the Dirichlet Schr\\\"odinger operator on $(0,\\pi)$ with a spatial Gaussian white-noise potential, realized pathwise via quasi-derivatives. Here $\\dot B_x$ denotes the distributional derivative of Brownian motion with respect to the spatial variable $x$. For $\\kappa\\ne0$, we consider the cubic nonlinear Schr\\\"odinger equation \\[ i u_t=A_\\omega u+\\kappa |u|^2u. \\] We first prove a zero-set theorem for locally real-analytic functions on classical Wiener space. As a consequence, on a single event of probability one, no nontrivial finitely supported integer combination of the random eigenvalues vanishes, and the quartic twist matrix is nonsingular for every finite tangential set. After fixing a path in this event, we combine these qualitative nondegeneracy properties with a partial quartic Birkhoff normal form adapted to the KAM scheme. For every finite nonempty tangential set \\(J\\) of cardinality \\(b\\), we obtain a Cantor family of linearly stable, real-analytic, small-amplitude invariant \\(b\\)-tori. The family is parametrized by a Cantor subset of \\([\\nu,2\\nu]^b\\) whose relative measure tends to one as \\(\\nu\\to0\\).",
+        "announce_type": "cross",
+        "categories": [
+          "math.PR",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.22808",
+        "pdf_url": "https://arxiv.org/pdf/2609.22808"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Invariant tori and quenched nondegeneracy provide a possible Hamiltonian-dynamics connection, though the central equation is a random-potential PDE.",
+        "tldr": "The authors construct small-amplitude linearly stable KAM tori for cubic nonlinear Schrödinger dynamics after fixing almost any white-noise realization.",
+        "problem": "Obtain finite-dimensional invariant tori for a Dirichlet Schrödinger equation with spatial Gaussian white-noise potential.",
+        "main_result": "On \\((0,\\pi)\\), let \\(A_\\omega=-\\partial_x^2+\\rho\\dot B_x(\\omega)\\), with \\(\\rho\\ne0\\), and consider \\(iu_t=A_\\omega u+\\kappa|u|^2u\\), with \\(\\kappa\\ne0\\). On a single probability-one event, all nontrivial finitely supported integer eigenvalue combinations are nonzero and every finite tangential-set quartic twist matrix is nonsingular. For each fixed path in that event and each finite nonempty tangential set of cardinality \\(b\\), there is a Cantor family of real-analytic, linearly stable invariant \\(b\\)-tori. Its parameter set in \\([\\nu,2\\nu]^b\\) has relative measure tending to one as \\(\\nu\\to0\\).",
+        "methods": [
+          "Pathwise quasi-derivative realization.",
+          "A zero-set theorem for locally real-analytic functions on Wiener space.",
+          "Partial quartic Birkhoff normal form and a KAM scheme."
+        ],
+        "context": "The probability-one event is shared by all the stated finite tangential sets; the KAM construction is then carried out for a fixed realization.",
+        "keywords": [
+          "KAM tori",
+          "spatial white noise",
+          "nonlinear Schrödinger equation",
+          "Birkhoff normal form"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.22986",
+        "versioned_id": "2609.22986v1",
+        "title": "On a Closed-Loop Controller for the Coevolutionary Model of Actions and Opinions via Broadcasting Information",
+        "authors": [
+          "Roberta Raineri",
+          "Mengbin Ye",
+          "Lorenzo Zino"
+        ],
+        "abstract": "We deal with controlling a complex social network in which agents have actions and opinions that coevolve, mutually influencing one another. We consider an input consisting in broadcasting information to a target set of agents with the objective of steering the population, initially at a consensus, to a different consensus. For a constant input, we derive a monotone convergence result, building on which we design an algorithm that determines whether a target set is sufficient to achieve the objective and an effective heuristic to optimize the target set. Then, we introduce a feedback control law that, using information on the state of the system, dynamically revises the target set, reducing the effort needed to achieve the objective while guaranteeing convergence to the desired consensus state.",
+        "announce_type": "cross",
+        "categories": [
+          "eess.SY",
+          "cs.SY",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.22986",
+        "pdf_url": "https://arxiv.org/pdf/2609.22986"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The main topic is broadcasting feedback control for social consensus and target-set optimization.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23119",
+        "versioned_id": "2609.23119v1",
+        "title": "Long time stability of low--frequency packets of modes at finite total energy",
+        "authors": [
+          "Dario Bambusi",
+          "Antonio Ponno"
+        ],
+        "abstract": "We consider the FPUT $\\alpha$-model with $N$ particles and initial data with small total energy $E$, independent of $N$. In particular, we prove that if the energy is initially given to Fourier modes of wave number $\\pi k/N\\leq \\theta_*$, then it does not flow to modes of wave number larger than $\\theta_*$ up to long times of order $E^{-(1-\\epsilon/2)}$, $\\theta_*$ and $\\epsilon$ being small numbers. The proof relies on the closeness of the Toda lattice to the FPUT system. Unlike previous approaches, we do not make use of the action-angle variables of the Toda system, but we exploit the Flaschka integrals of the latter. Actually, we find a suitable recombination of the Flaschka integrals whose quadratic part is used to control the packet, the higher order part fulfilling very good estimates.",
+        "announce_type": "cross",
+        "categories": [
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23119",
+        "pdf_url": "https://arxiv.org/pdf/2609.23119"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The main result concerns energy confinement in FPUT mode packets using Toda integrals, without an explicit entropy, dimension or topological-dynamics component.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23370",
+        "versioned_id": "2609.23370v1",
+        "title": "Solvent Inertia Changes Product Probability by Relocating the Phase-Space Reactivity Boundary",
+        "authors": [
+          "Stephen Wiggins"
+        ],
+        "abstract": "Changing solvent inertia changes the kinetic part of a molecular Hamiltonian and hence its flow in phase space, without requiring a change in the potential energy surface (PES). We study how this affects product probability in a solute-solvent model with two degrees of freedom. Initial conditions are chosen at the same total energy for each solvent mass. For this family, the deterministic outcome changes from reaching products to returning to reactants at a threshold mass. The initial condition at that mass belongs to the stable manifold of the transition-state periodic orbit. Weak Gaussian forcing of the solvent momentum replaces the abrupt change in outcome by a continuous change in product probability over a mass interval proportional to the square root of the noise strength. The deterministic threshold and a linear response calculation predict the position and width of this probability change without fitting the stochastic simulations. Monte Carlo results at three noise strengths agree with the prediction within sampling uncertainty. The calculation connects solvent inertia to product probability through the geometry of the full Hamiltonian flow, rather than through a change in the PES.",
+        "announce_type": "cross",
+        "categories": [
+          "physics.chem-ph",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23370",
+        "pdf_url": "https://arxiv.org/pdf/2609.23370"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The paper centers on solvent-mass-dependent product probabilities in a molecular model and their noisy transition, rather than a central research-profile topic.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23464",
+        "versioned_id": "2609.23464v1",
+        "title": "Existence of a Hall ray in higher dimensional Lagrange spectra",
+        "authors": [
+          "Yitwah Cheung",
+          "Zhijing Wendy Wang",
+          "Ruichong Zhang"
+        ],
+        "abstract": "Given any norm $\\|\\cdot\\|_{\\mathbb R^2}$ on $\\mathbb R^2$, we prove that the Lagrange spectrum for $2$-vectors contains a Hall ray. Equivalently, every sufficiently small $\\rho\\ge0$ occurs as $\\liminf_{q\\to\\infty}q^{1/2}\\min_{p\\in\\mathbb Z^2}\\|qx-p\\|_{\\mathbb R^2} $ for some $x\\in\\mathbb R^2\\setminus\\mathbb Q^2$. Combined with a recent result of Kleinbock \\cite{Kleinbock}, this implies that the $2$-dimensional Lagrange spectrum is either a ray, mirroring the behavior for Dirichlet spectra, or a ray preceded by a dense part.",
+        "announce_type": "cross",
+        "categories": [
+          "math.SP",
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23464",
+        "pdf_url": "https://arxiv.org/pdf/2609.23464"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Lagrange spectra offer a potential Diophantine-dynamics connection, although the abstract does not specify a group-action or fractal method.",
+        "tldr": "The authors prove a Hall ray for two-dimensional Lagrange spectra for every norm.",
+        "problem": "Determine whether higher-dimensional approximation spectra contain a full ray.",
+        "main_result": "For every norm on \\(\\mathbb R^2\\), the Lagrange spectrum of two-vectors contains a Hall ray. Equivalently, every sufficiently small \\(\\rho\\geq0\\) is realized as \\(\\liminf_{q\\to\\infty}q^{1/2}\\min_{p\\in\\mathbb Z^2}\\|qx-p\\|_{\\mathbb R^2}\\) for some \\(x\\in\\mathbb R^2\\setminus\\mathbb Q^2\\). Combined with the cited result of Kleinbock, the two-dimensional spectrum is either a ray or a ray preceded by a dense part.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The norm is arbitrary; the abstract does not specify a ray endpoint or a proof construction.",
+        "keywords": [
+          "Lagrange spectrum",
+          "Hall ray",
+          "Diophantine approximation"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23467",
+        "versioned_id": "2609.23467v1",
+        "title": "Dry Ten Martini Problem in the Subcritical Type I Regime",
+        "authors": [
+          "Xianzhe Li"
+        ],
+        "abstract": "We establish a resolvent factorization of the hyperbolic projection associated with the finite-range dual operators, by a kernel with exponential off-diagonal decay. As an application, we prove that, for every irrational frequency and every analytic potential, each subcritical Type I energy satisfying the gap-labelling condition is an endpoint of an open spectral gap. This confirms the conjecture of Ge--Jitomirskaya--You [GJY,You] in the subcritical regime.",
+        "announce_type": "cross",
+        "categories": [
+          "math.SP",
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23467",
+        "pdf_url": "https://arxiv.org/pdf/2609.23467"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Hyperbolic projections and irrational-frequency spectral structure provide a connection to hyperbolic and quasiperiodic dynamics.",
+        "tldr": "The author proves gap opening for subcritical Type I energies satisfying gap labelling, for every irrational frequency and analytic potential.",
+        "problem": "Resolve the dry Ten Martini statement in the subcritical Type I regime.",
+        "main_result": "For every irrational frequency and every analytic potential, each subcritical Type I energy satisfying the gap-labelling condition is an endpoint of an open spectral gap. The result uses a resolvent factorization of the hyperbolic projection for the finite-range dual operators by a kernel with exponential off-diagonal decay. Definitions of Type I and the precise gap-labelling condition are not supplied. Not specified in the abstract.",
+        "methods": [
+          "Resolvent factorization of the hyperbolic projection.",
+          "An exponentially decaying kernel."
+        ],
+        "context": "The abstract states that this confirms the Ge–Jitomirskaya–You conjecture in the subcritical regime.",
+        "keywords": [
+          "spectral gaps",
+          "irrational frequency",
+          "hyperbolic projection",
+          "resolvent factorization"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23851",
+        "versioned_id": "2609.23851v1",
+        "title": "Stability of Slow-Fast Nonlinear Dynamics: Moving Equilibrium Case",
+        "authors": [
+          "G. Q. Bao Tran",
+          "Daniel Liberzon",
+          "Hyungbo Shim"
+        ],
+        "abstract": "We study the stability of nonlinear systems subject to both slow and fast time variations. Both can have discontinuities, covering switched systems as a special case. The fast variation is assumed to be periodic; thus, we rely on averaging to construct an average system. Importantly, the equilibrium of the average system depends on the slow variation and is assumed to be exponentially stable when this slow input is frozen. Using perturbation and Lyapunov analyses, we establish a practical stability result showing that the system state remains within a neighborhood of the moving equilibrium when the total variation (flows and jumps) of the slow variation is appropriately bounded and the fast input varies sufficiently fast. The result is illustrated via a nonlinear switched system with slow-fast switching and a mode-dependent equilibrium.",
+        "announce_type": "cross",
+        "categories": [
+          "eess.SY",
+          "cs.SY",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23851",
+        "pdf_url": "https://arxiv.org/pdf/2609.23851"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is practical stability of slowly and rapidly varying control systems under averaging and Lyapunov estimates.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23918",
+        "versioned_id": "2609.23918v1",
+        "title": "Quasi-Static Fault-Tolerant Feedback Control of a Quadrotor under Rotor Failure with Provable Safety Guarantees",
+        "authors": [
+          "Mohamed Al Lawati",
+          "Adeel Akhtar"
+        ],
+        "abstract": "This paper presents a nonlinear control law for a quadrotor unmanned aerial vehicle (UAV) under single-rotor failure that guarantees set stabilization via quasi-static feedback (QSF). Given a geometric curve in three-dimensional space, we characterize and stabilize the zero-dynamics manifold, also known as the path-following manifold, which represents all feasible motions along the path. Stabilizing this manifold ensures path-invariance: a UAV with a failed rotor initialized on the path with an appropriate orientation remains on the path for all future time. Furthermore, local exponential convergence to the manifold is guaranteed under certain conditions, implying that, under the stated assumptions, rotor failure during flight does not cause transverse deviation from the path. The proposed controller thus provides theoretical safety guarantees, which are validated through numerical experiments in the Drake physics-based simulation engine. The code is publicly available at https://gradslab.github.io/quasistatic-ftc/.",
+        "announce_type": "cross",
+        "categories": [
+          "eess.SY",
+          "cs.SY",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23918",
+        "pdf_url": "https://arxiv.org/pdf/2609.23918"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The main contribution is fault-tolerant quadrotor path-following control with conditional safety guarantees.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.23927",
+        "versioned_id": "2609.23927v1",
+        "title": "Time-uniform accuracy of ensemble Kalman filters with localization",
+        "authors": [
+          "Xiaoou Cheng",
+          "Daniel Sanz-Alonso",
+          "Nathan Waniorek"
+        ],
+        "abstract": "This paper establishes time-uniform accuracy guarantees for deterministic square-root ensemble Kalman filters in linear--Gaussian state-space models under perfect-model dynamics. For hyperbolic, detectable systems, we prove that the ensemble means and covariances approximate their Kalman filter counterparts uniformly in time, with high probability and without inflation or resampling. The required ensemble size depends on the effective rank of the initial covariance and the dimension of the unstable subspace, rather than on the ambient state dimension. We also analyze a localized square-root ensemble Kalman filter for weakly coupled spatial systems. We show that the stabilizing Kalman covariance inherits spatial decay from the dynamics and derive accuracy bounds that separate sampling error from localization bias. For the localized filter, the required ensemble size depends on the local intrinsic dimension and only logarithmically on the number of spatial blocks, while the localization bias scales with the interaction strength. Our analysis combines stability and forgetting for possibly singular Riccati recursions, nonasymptotic covariance concentration, and perturbation estimates for localized covariance dynamics.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NA",
+          "cs.NA",
+          "math.DS",
+          "math.OC",
+          "math.ST",
+          "stat.TH"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.23927",
+        "pdf_url": "https://arxiv.org/pdf/2609.23927"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The central problem is numerical filtering accuracy and localization for linear–Gaussian state-space models; effective rank is not a dynamical fractal-dimension result.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24008",
+        "versioned_id": "2609.24008v1",
+        "title": "Solving non-oscillatory solutions of the Hill equation via the Tumura--Clunie method",
+        "authors": [
+          "Yueyang Zhang"
+        ],
+        "abstract": "We consider the Hill equation $f''-(\\sum_{i=-\\mathbf{l}}^{\\mathbf{k}}b_{i}e^{iz})f=0$ ($\\dag$), where $\\mathbf{k}\\geq 1$ and $\\mathbf{l}\\geq 0$ are integers and $b_{-\\mathbf{l}}$, $\\cdots$, $b_{\\mathbf{k}}$ are constants such that $b_{\\mathbf{k}}\\not=0$. We point out that there is a full correspondence between the class of non-oscillatory solutions such that $\\lambda(f)<\\infty$ of equation ($\\dag$) and the class of Liouvillian solutions of equation $x^2u''-(\\sum_{i=-\\mathbf{l}}^{\\mathbf{k}}b_{i}x^{i})u=0$ ($\\ddag$). Then this paper has twofold purposes. First, parallel to Kovacic's algorithms to find the Liouvillian solutions of equation ($\\ddag$), we develop the Tumura--Clunie method to find the non-oscillatory solutions of a higher order version of the Hill equation. Second, for the particular Hill equation $f''-(b_{\\mathbf{k}}e^{\\mathbf{k}z}+b_{\\mathbf{s}}e^{\\mathbf{s}z}+b_0)f=0$, where $\\mathbf{k}>\\mathbf{s}\\geq 1$ are integers and $b_{\\mathbf{k}}b_{\\mathbf{s}}\\not=0$, we use the Tumura--Clunie method to determine the non-oscillatory solution $f$ with an additional zero property.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CV",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24008",
+        "pdf_url": "https://arxiv.org/pdf/2609.24008"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The work centers on non-oscillatory solutions of a complex differential equation and Liouvillian solvability, without a central dynamics-profile topic.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24032",
+        "versioned_id": "2609.24032v1",
+        "title": "Selection of critical solutions in non-monotone vanishing discount problems",
+        "authors": [
+          "Panrui Ni",
+          "Jun Yan",
+          "Maxime Zavidovique"
+        ],
+        "abstract": "We study a generalized vanishing discount problem for Hamilton--Jacobi equations without assuming monotonicity either pointwise or in the averaged sense with respect to all Mather measures. Specifically, we consider \\[ \\lambda a(x)u(x)+H\\big(x,Du(x)\\big)=c_0, \\] and assume that, for every sufficiently small $\\lambda>0$, this equation admits a strict subsolution bounded from below uniformly with respect to $\\lambda$. We prove that, under a smallness assumption on the Mather quotient, the maximal viscosity solution converges uniformly as $\\lambda\\to 0^+$ under a sign condition on the discount coefficient $a(x)$ determined by a prescribed part of the Aubry set. The limit is characterized explicitly in terms of the Peierls barrier and the selected Mather measures. As an application, the elementary solution of the critical Hamilton--Jacobi equation \\[ H\\big(x,Du(x)\\big)=c_0 \\] associated with any isolated static class can be realized as the vanishing discount limit. This provides the first mechanism for selecting multiple critical solutions in vanishing discount problems beyond the classical monotonicity framework, showing that different families of Mather measures yield different limiting critical solutions. We finally propose a variant of the discounted problems for which the strict subsolution hypothesis is automatically verified and hence applies to more general Hamiltonians $H$ and functions $a$.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24032",
+        "pdf_url": "https://arxiv.org/pdf/2609.24032"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Mather measures, Aubry sets and Peierls barriers give a clear variational-dynamics connection.",
+        "tldr": "The authors give conditional selection of critical Hamilton–Jacobi solutions in non-monotone vanishing-discount problems.",
+        "problem": "Determine which critical solutions arise as discount vanishes without pointwise or Mather-measure-averaged monotonicity.",
+        "main_result": "For \\(\\lambda a(x)u(x)+H(x,Du(x))=c_0\\), assume strict subsolutions exist for all sufficiently small positive \\(\\lambda\\) with a uniform lower bound. Under the stated smallness condition on the Mather quotient and a sign condition determined by a prescribed part of the Aubry set, maximal viscosity solutions converge uniformly as \\(\\lambda\\to0^+\\). The limit is expressed using the Peierls barrier and selected Mather measures. Elementary critical solutions associated with isolated static classes can be realized in this way; different selected measure families can give different limits. Exact smallness and sign conditions are not supplied. Not specified in the abstract.",
+        "methods": [
+          "Characterization through the Peierls barrier and selected Mather measures.",
+          "A variant discount problem with automatic strict subsolutions."
+        ],
+        "context": "The abstract goes beyond classical monotonicity assumptions while retaining explicit conditional hypotheses.",
+        "keywords": [
+          "vanishing discount",
+          "Mather measures",
+          "Aubry set",
+          "Peierls barrier",
+          "viscosity solutions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24154",
+        "versioned_id": "2609.24154v1",
+        "title": "Exponential polynomials with Baker omitted value",
+        "authors": [
+          "Sukanta Das",
+          "Subhasis Ghora",
+          "Tarakanta Nayak"
+        ],
+        "abstract": "We consider exponential polynomials of the form $F_l(z)=P_1(z)\\exp(Q_1(z))+P_2(z)\\exp(Q_2(z))+\\cdots+P_{l-1}(z)\\exp(Q_{l-1}(z))+P_l(z)$, where $l\\geq2$, each $Q_i$ is a non-constant polynomial and each $P_i$, $i=1,2,\\ldots,l-1$, is a polynomial (possibly constant), while $P_l$ is a non-constant polynomial. This article studies the topology of the preimages under $F_l$ of neighborhoods of the essential singularity at infinity. We prove that for each neighbourhood $D$ of infinity, the set $F_l ^{-1} (D) $ is connected, and in fact is an infinitely connected domain with all its boundary components bounded. In such a situation, the point at $\\infty$ is called the Baker omitted value of the function. Our methods significantly extend those developed by Das and Nayak (in Complex Var. Elliptic Equ. 70:1831-1847, 2025), providing a broader framework for the study of this phenomenon. We further show that these functions do not admit any Baker wandering domain and hence every Fatou component is simply connected. Finally, we conclude by posing some problems arising out of this work.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CV",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24154",
+        "pdf_url": "https://arxiv.org/pdf/2609.24154"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Connectivity of preimages and Fatou components provides a direct topological connection within complex dynamics.",
+        "tldr": "The authors study Baker omitted values for a class of exponential polynomials and rule out Baker wandering domains.",
+        "problem": "Describe preimages of neighborhoods of infinity and the connectivity of Fatou components for the specified exponential polynomials.",
+        "main_result": "For \\(F_l=\\sum_{i=1}^{l-1}P_i\\exp(Q_i)+P_l\\), with \\(l\\geq2\\), nonconstant polynomial \\(Q_i\\), polynomial \\(P_i\\) for \\(i<l\\), and nonconstant polynomial \\(P_l\\), the abstract states that the preimage of every neighborhood of infinity is an infinitely connected domain with all boundary components bounded. Infinity is thus a Baker omitted value in the terminology used. The functions admit no Baker wandering domain, and every Fatou component is simply connected.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The abstract says the methods extend earlier work of Das and Nayak and ends with further problems, whose statements are not supplied.",
+        "keywords": [
+          "exponential polynomials",
+          "Baker omitted value",
+          "Fatou components",
+          "connectivity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24355",
+        "versioned_id": "2609.24355v1",
+        "title": "Rolls and Snaking in a Swift-Hohenberg Equation with Non-smooth Nonlinearity",
+        "authors": [
+          "L\\\"utfiye Masur",
+          "Jens D. M. Rademacher"
+        ],
+        "abstract": "We study rolls and homoclinic snaking in a variation of the one-dimensional Swift-Hohenberg equation, whose standard forms are prototypical order-parameter models for pattern formation in the sciences. Motivated by classes of differential equation models that involve continuous non-smooth low order nonlinear terms, we replace the standard quadratic-cubic nonlinearity by $\\nu |u|^\\alpha-u^3$, $\\alpha \\in [1,2]$ with $\\nu > 0$. In the vicinity of zero, for $\\alpha<2$ this nonlinearity falls outside the scope of classical Taylor expansion and bifurcation analysis. Our partially analytical and partially numerical results highlight that the non-smooth term modifies the criticality of pattern-forming bifurcations and alters the associated branches of solutions. In particular, $\\alpha\\in(1,2)$ implies subcriticality of roll bifurcations for any $\\nu>0$. At $\\alpha=1$ differentiability is lost, which has a strong impact on the bifurcations of sign-changing rolls including the disappearance of homoclinic snaking. Homoclinic snaking thus emerges non-smoothly as $\\alpha$ increases from $\\alpha=1$, and persists when retaining an additional, e.g., quadratic term.",
+        "announce_type": "cross",
+        "categories": [
+          "nlin.PS",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24355",
+        "pdf_url": "https://arxiv.org/pdf/2609.24355"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is analytical and numerical pattern bifurcation and homoclinic snaking in a nonsmooth Swift–Hohenberg PDE.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24506",
+        "versioned_id": "2609.24506v1",
+        "title": "Proactive Incentive Regulation in Multi-Agent Systems with Environmental Feedback",
+        "authors": [
+          "Xinyang Cao",
+          "Shijia Hua",
+          "Linjie Liu"
+        ],
+        "abstract": "In environmental feedback systems, self-interested behaviors of rational agents often undermine cooperation and environmental sustainability. Although punitive incentive mechanisms are widely recognized as effective in addressing such social dilemmas, the timing of their implementation under different environmental conditions remains insufficiently understood. In this paper, we develop a multi-agent environmental feedback game framework with coupled incentive intensities across resource states. We investigate how system dynamics vary with incentive intensity under both resource-abundant and resource-scarce conditions. Theoretical analysis shows that imposing penalties in resource-abundant states can transform the system from a tragedy of the commons into a bistable regime that supports full cooperation. In contrast, imposing penalties in resource-scarce states leads to complex dynamical behaviors, including interior stability, heteroclinic cycles, and Hopf bifurcations, which hinder the emergence of stable cooperation. These results highlight the importance of timing in incentive regulation. Proactive intervention under favorable environmental conditions is more effective in sustaining cooperation than delayed enforcement after environmental degradation.",
+        "announce_type": "cross",
+        "categories": [
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24506",
+        "pdf_url": "https://arxiv.org/pdf/2609.24506"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The work studies incentives, cooperation and environmental feedback through an applied multi-agent game model.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24665",
+        "versioned_id": "2609.24665v1",
+        "title": "On Normality Preserving Operations",
+        "authors": [
+          "Chokri Manai"
+        ],
+        "abstract": "We study arithmetic operations and maps which preserve normality. Revisiting a recent argument of Dayan, Ganguly and Weiss, we give a streamlined, self-contained presentation of the probabilistic proof that the non-zero rationals are exactly the multiplicative normality preserving numbers in a fixed integer base. We also include the extension to all bases simultaneously, using the theorem of Hochman and Shmerkin. In the additive case, we extend Rauzy's characterization of deterministic numbers in a fixed integer base to absolutely normal numbers. Namely, a translation preserves absolute normality if and only if its parameter is deterministic in every integer base. We prove this extension by a sparse random perturbation argument. Finally, we show that all locally $C^2$ normality preserving maps need to be affine-linear. The regularity assumption cannot be weakened to $C^{1,1}$: we construct a non-affine $C^{1,1}$ diffeomorphism which preserves normality in every integer base, and hence absolute normality.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24665",
+        "pdf_url": "https://arxiv.org/pdf/2609.24665"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Normality-preserving arithmetic operations connect to digit-distribution dynamics; the abstract does not state an entropy or coding theorem.",
+        "tldr": "The author characterizes arithmetic and smooth maps preserving normality and gives a sharp regularity counterexample.",
+        "problem": "Determine which multipliers, translations and smooth maps preserve fixed-base or absolute normality.",
+        "main_result": "The nonzero rationals are exactly the multiplicative normality-preserving numbers in a fixed integer base, with an extension to all bases simultaneously. A translation preserves absolute normality exactly when its parameter is deterministic in every integer base. Every locally \\(C^2\\) normality-preserving map must be affine-linear, but a non-affine \\(C^{1,1}\\) diffeomorphism can preserve normality in every integer base and hence absolute normality.",
+        "methods": [
+          "A probabilistic proof following Dayan, Ganguly and Weiss.",
+          "The stated Hochman–Shmerkin theorem.",
+          "Sparse random perturbation."
+        ],
+        "context": "The abstract extends Rauzy's fixed-base additive characterization to absolute normality and demonstrates a regularity boundary.",
+        "keywords": [
+          "normality",
+          "absolute normality",
+          "deterministic numbers",
+          "normality-preserving maps"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24671",
+        "versioned_id": "2609.24671v1",
+        "title": "Frequency bursts in adaptive delay-coupled oscillators",
+        "authors": [
+          "Yu Wang",
+          "Jan Sieber",
+          "Jinde Cao",
+          "J\\\"urgen Kurth",
+          "Serhiy Yanchuk"
+        ],
+        "abstract": "We report on frequency bursting oscillations in a system of phase oscillators with adaptive and delayed coupling. Adaptation of the coupling strengths is considered slow and depends on the phase shift between the oscillators. We find due to the combined chain of adaptation, collective dynamics, and time delays, the system robustly achieves a state in which the oscillator's frequencies are nearly synchronized but detuned by an integer number of small adaptation frequencies. We demonstrate that this quantization of the detuning is caused by alternating slow and fast transitions. Moreover, the observed motions take the form of bursts of instantaneous frequency, and the number of spikes in each burst corresponds to the quantization level of the detuning. We provide a fast-slow analysis of this phenomenon and explain the mechanisms behind the emergence of bursts. Our findings indicate that these frequency bursting oscillations are robust and exist stably within finite parameter regions.",
+        "announce_type": "cross",
+        "categories": [
+          "nlin.AO",
+          "math.DS",
+          "nlin.PS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24671",
+        "pdf_url": "https://arxiv.org/pdf/2609.24671"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The central results concern frequency bursting and synchronization in adaptive delay-coupled oscillator models.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24701",
+        "versioned_id": "2609.24701v1",
+        "title": "Exceptional maps and abelian points in backward orbits",
+        "authors": [
+          "Zhuchao Ji",
+          "Jiarui Song",
+          "Junyi Xie"
+        ],
+        "abstract": "Consider a number field $K$, a polarized endomorphism $f:X\\to X$ on a normal projective variety, and a non-exceptional point $\\alpha$ for $f$. We show that the extension $K(f^{-\\infty}(\\alpha))/K$ generated by the backward orbit of $\\alpha$ is virtually abelian if and only if $f$ is an exceptional map with CM and $\\alpha$ is $f$-preperiodic. This answers a conjecture of Andrews and Petsche and extends it to higher dimensions. To this end, we develop the theory of exceptional maps on normal projective varieties over $\\mathbb{C}$ and prove that commuting polarized endomorphisms of multiplicatively independent degrees are exceptional.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.AG",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24701",
+        "pdf_url": "https://arxiv.org/pdf/2609.24701"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Backward orbits and commuting endomorphisms provide an algebraic-dynamics connection, though the main invariant is arithmetic.",
+        "tldr": "The authors characterize virtually abelian backward-orbit extensions using exceptional maps with complex multiplication and preperiodic points.",
+        "problem": "Determine when the field generated by a backward orbit has a virtually abelian extension over the ground number field.",
+        "main_result": "For a number field \\(K\\), a polarized endomorphism \\(f:X\\to X\\) of a normal projective variety, and a non-exceptional point \\(\\alpha\\), the extension \\(K(f^{-\\infty}(\\alpha))/K\\) is virtually abelian exactly when \\(f\\) is exceptional with CM and \\(\\alpha\\) is preperiodic. The authors also prove that commuting polarized endomorphisms of multiplicatively independent degrees are exceptional.",
+        "methods": [
+          "Development of exceptional-map theory on normal projective varieties over the complex numbers."
+        ],
+        "context": "The abstract states that the result answers the Andrews–Petsche conjecture and extends it to higher dimensions; definitions of exceptional maps and CM are not supplied.",
+        "keywords": [
+          "backward orbits",
+          "exceptional maps",
+          "polarized endomorphisms",
+          "preperiodic points"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.24901",
+        "versioned_id": "2609.24901v1",
+        "title": "Rayleigh-Residual Flow I: Normal Matrices",
+        "authors": [
+          "Eric Shen"
+        ],
+        "abstract": "We study the squared Rayleigh-residual functional on complex projective space and its negative gradient flow. For an arbitrary complex matrix, every positive-residual critical point has a strictly descending tangent direction; consequently, the local minima are precisely the eigenlines. For normal matrices, we describe the critical set in terms of circles through spectral points and identify the amplitude dynamics with a replicator equation whose payoff matrix has rank at most four. This gives explicit logarithmic first integrals and a reduced representation of interior trajectories. We compute transverse escape rates near critical components and analyze how polynomial reweighting changes unstable coordinates. Finally, we distinguish local saddle trapping from concentration of Haar-distributed initial states and derive the density of the filtered ensemble. Numerical examples with random spectra and a Jordan block illustrate convergence, nonmonotone Rayleigh motion, and the improvement of finite-time spectral exploration by low-degree random polynomial filters.",
+        "announce_type": "cross",
+        "categories": [
+          "math.FA",
+          "cs.NA",
+          "math.DS",
+          "math.NA"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.24901",
+        "pdf_url": "https://arxiv.org/pdf/2609.24901"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The main focus is eigenline computation and spectral exploration through a gradient flow and numerical filters.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2003.06935",
+        "versioned_id": "2003.06935v5",
+        "title": "Control of chaos with minimal information transfer",
+        "authors": [
+          "Christoph Kawan"
+        ],
+        "abstract": "This paper studies set-invariance and stabilization of hyperbolic sets over rate-limited channels. Our main results reveal a phenomenon which cannot be seen from a linearized analysis: the smallest data rate above which a hyperbolic set $Q$ can be made invariant is bounded below by the difference between two measures of instability: the first one describing the total instability on $Q$, and the second one describing the intrinsic instability which does not lead to exit from $Q$. In rigorous terms, these two quantities are the sum of unstable Lyapunov exponents and the metric entropy of an associated bundle random dynamical system, respectively. The gap between the two is well-known in dynamical systems and is often related to escape rates. A vanishing gap corresponds to the existence of a strange attractor inside $Q$ supporting an SRB measure. In this case, no information transfer to the controller is necessary, because the attractor already guarantees invariance. We prove that our lower bound is tight in two extreme cases, the one just described and the one without intrinsic instability. Furthermore, we apply our techniques to the problem of local uniform stabilization to a hyperbolic set and discuss an example built on the H\\'enon horseshoe.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.OC",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2003.06935",
+        "pdf_url": "https://arxiv.org/pdf/2003.06935"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Metric entropy, unstable Lyapunov exponents and information-rate bounds are central, despite the control setting.",
+        "tldr": "The author relates the information needed to keep a hyperbolic set invariant to the gap between total and intrinsic instability.",
+        "problem": "Determine minimal communication rates for set invariance and stabilization of hyperbolic sets over rate-limited channels.",
+        "main_result": "For a hyperbolic set \\(Q\\), the minimum data rate for invariance is bounded below by a gap described through unstable Lyapunov exponents and the metric entropy of an associated bundle random dynamical system. A vanishing gap corresponds to an SRB-supporting strange attractor inside \\(Q\\), in which case no information transfer is required for invariance. The lower bound is sharp in that case and in the case without intrinsic instability. The abstract also treats local uniform stabilization and a Hénon-horseshoe example; the exact bound and all technical hypotheses are not given. Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The abstract relates this entropy–Lyapunov gap to escape rates and emphasizes a phenomenon absent from linearized analysis.",
+        "keywords": [
+          "metric entropy",
+          "Lyapunov exponents",
+          "hyperbolic sets",
+          "information rate",
+          "SRB measures"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2402.09339",
+        "versioned_id": "2402.09339v4",
+        "title": "Robust quasi-isometric embeddings inapproximable by Anosov representations",
+        "authors": [
+          "Konstantinos Tsouvalas"
+        ],
+        "abstract": "Let $\\mathbb{K}=\\mathbb{R}$ or $\\mathbb{C}$. For all but finitely many $m\\in \\mathbb{N}$, we exhibit the first examples of non-locally rigid, Zariski dense, robust quasi-isometric embeddings of hyperbolic groups in $\\mathsf{SL}_m(\\mathbb{K})$ which are not limits of Anosov representations. As a consequence, we show that higher rank analogues of Sullivan's structural stabilty theorem and of the density theorem for Kleinian groups fail for Anosov representations in $\\mathsf{SL}_m(\\mathbb{C}), m\\geq 30$.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.GR",
+          "math.DS",
+          "math.GT"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2402.09339",
+        "pdf_url": "https://arxiv.org/pdf/2402.09339"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Hyperbolic groups, representations and structural stability connect to geometric group actions and hyperbolicity.",
+        "tldr": "The author constructs robust quasi-isometric embeddings that cannot be approximated by Anosov representations.",
+        "problem": "Test higher-rank analogues of structural stability and density for Anosov representations.",
+        "main_result": "For \\(\\mathbb K=\\mathbb R\\) or \\(\\mathbb C\\) and all but finitely many positive integers \\(m\\), the author constructs non-locally rigid, Zariski-dense, robust quasi-isometric embeddings of hyperbolic groups into \\(\\mathsf{SL}_m(\\mathbb K)\\) that are not limits of Anosov representations. Consequences include failure of the stated higher-rank analogues of Sullivan's structural stability and the Kleinian density theorem in \\(\\mathsf{SL}_m(\\mathbb C)\\) for \\(m\\geq30\\).",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The abstract distinguishes robust quasi-isometric embeddings from approximability by Anosov representations.",
+        "keywords": [
+          "hyperbolic groups",
+          "Anosov representations",
+          "quasi-isometric embeddings",
+          "structural stability"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2406.00912",
+        "versioned_id": "2406.00912v3",
+        "title": "Definable convolution and idempotent Keisler measures III. Generic stability, generic transitivity, and revised Newelski's conjecture",
+        "authors": [
+          "Artem Chernikov",
+          "Kyle Gannon",
+          "Krzysztof Krupi\\'nski"
+        ],
+        "abstract": "We study idempotent measures and the structure of the convolution semigroups of measures over definable groups. We isolate the property of generic transitivity and demonstrate that it is sufficient to develop stable group theory localizing on a generically transitive type. We establish generic transitivity of generically stable idempotent types in important new cases, including abelian groups in arbitrary theories and arbitrary groups in rosy theories, and characterize them as generics of connected type-definable subgroups. Using tools from Keisler's randomization theory, we generalize some of these results from types to generically stable Keisler measures, and classify idempotent generically stable measures in abelian groups as (unique) translation-invariant measures on type-definable fsg subgroups. This provides a partial definable counterpart to the classical work of Rudin, Cohen and Pym for locally compact topological groups. Finally, we provide an explicit construction of a minimal left ideal in the convolution semigroup of measures for an arbitrary countable NIP group, from a minimal left ideal in the corresponding semigroup on types and a canonical measure constructed on its ideal subgroup. In order to achieve it, we in particular prove the revised Ellis group conjecture of Newelski for countable NIP groups.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.LO",
+          "math.DS",
+          "math.GN",
+          "math.GR"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2406.00912",
+        "pdf_url": "https://arxiv.org/pdf/2406.00912"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Ellis groups, minimal ideals and invariant measures of definable groups directly connect to topological group dynamics.",
+        "tldr": "The authors analyze generically transitive idempotents and construct minimal ideals in convolution semigroups for countable NIP groups.",
+        "problem": "Describe idempotent types and measures, and relate their semigroup structure to definable group dynamics.",
+        "main_result": "Generic transitivity supports a localized stable group theory. The authors establish it for generically stable idempotent types in abelian groups in arbitrary theories and in arbitrary groups in rosy theories, identifying these types with generics of connected type-definable subgroups. In abelian groups, idempotent generically stable measures are the unique translation-invariant measures on type-definable fsg subgroups. For countable NIP groups, they explicitly construct a minimal left ideal of the measure-convolution semigroup from a corresponding type-semigroup ideal and a canonical measure, proving the revised Ellis group conjecture of Newelski in this setting.",
+        "methods": [
+          "Keisler's randomization theory.",
+          "Construction from a minimal left ideal on types and a canonical measure on its ideal subgroup."
+        ],
+        "context": "The abstract presents part of the measure classification as a definable counterpart to work of Rudin, Cohen and Pym on locally compact groups.",
+        "keywords": [
+          "Ellis groups",
+          "idempotent measures",
+          "definable groups",
+          "minimal ideals",
+          "generic transitivity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2411.19270",
+        "versioned_id": "2411.19270v2",
+        "title": "Kirchhoff's analogy for a planar deformable ferromagnetic rod",
+        "authors": [
+          "G. R. Krishna Chand Avatar",
+          "Vivekanand Dabade"
+        ],
+        "abstract": "Kirchhoff's kinetic analogy relates the equilibrium solutions of an elastic rod or strip to the motion of a spinning top. In this analogy, time is replaced by the arc length parameter in the phase portrait to determine the equilibrium configurations of the rod. Predicted equilibrium solutions from the phase portrait for specific boundary value problems, as well as certain localized solutions, have been experimentally observed. In this study, we employ the kinetic analogy to investigate the equilibrium solutions of planar soft ferromagnetic rods subjected to transverse and longitudinal external magnetic fields. Our analysis reveals a subcritical pitchfork bifurcation in the phase portrait of a ferromagnetic rod subjected to transverse external magnetic field as the axial load is decreased continuously from a large compressive load. Similarly, a supercritical pitchfork bifurcation is observed in the case of longitudinal external magnetic field. We predict equilibrium configurations for a free-standing soft ferromagnetic elastic rod and the same subjected to canonical boundary conditions. Furthermore, we observe novel localized equilibrium solutions arising from homoclinic and heteroclinic orbits, which are absent in the phase portraits of purely elastic rods.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cond-mat.mtrl-sci",
+          "cond-mat.soft",
+          "math-ph",
+          "math.AP",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2411.19270",
+        "pdf_url": "https://arxiv.org/pdf/2411.19270"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The main topic is equilibrium shapes and bifurcations of magnetoelastic rods using a kinetic analogy.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2506.12940",
+        "versioned_id": "2506.12940v3",
+        "title": "The Kuramoto model on the Sierpinski Gasket II: Twisted states",
+        "authors": [
+          "Georgi S. Medvedev",
+          "Matthew S. Mizuhara"
+        ],
+        "abstract": "We study the Kuramoto model (KM) of coupled phase oscillators on graphs approximating the Sierpinski gasket (SG). As the size of the graph tends to infinity, the limit points of the sequence of stable equilibria in the KM correspond to the minima of the Dirichlet energy, i.e., to harmonic maps from the SG to the circle. We provide a complete description of the stable equilibria of the continuum limit of the KM on graphs approximating the SG, under both Dirichlet and free boundary conditions. We show that there is a unique stable equilibrium in each homotopy class of continuous functions from the SG to the circle. These equilibria serve as generalizations of the classical twisted states on ring networks. Furthermore, we extend the analysis to the KM on post-critically finite fractals. The results of this work reveal the link between self-similar organization and network dynamics.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math-ph",
+          "math.AP",
+          "math.DS",
+          "math.MP",
+          "nlin.AO"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2506.12940",
+        "pdf_url": "https://arxiv.org/pdf/2506.12940"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Dynamics on self-similar fractals and classification by homotopy class make fractal geometry central.",
+        "tldr": "The authors classify stable continuum Kuramoto equilibria on the Sierpiński gasket through harmonic circle-valued maps.",
+        "problem": "Describe stable equilibria in graph approximations of the Sierpiński gasket and their continuum limit.",
+        "main_result": "As graph size tends to infinity, limit points of stable Kuramoto equilibria correspond to minima of Dirichlet energy, or harmonic maps from the gasket to the circle. The authors give a complete description of stable continuum equilibria under Dirichlet and free boundary conditions, with a unique stable equilibrium in each homotopy class of continuous circle-valued functions. They also extend the analysis to post-critically finite fractals; the scope of that extension is not detailed. Not specified in the abstract.",
+        "methods": [
+          "Correspondence with Dirichlet-energy minima and harmonic maps."
+        ],
+        "context": "These equilibria generalize twisted states on ring networks and connect self-similar geometry to network dynamics.",
+        "keywords": [
+          "Sierpiński gasket",
+          "Kuramoto model",
+          "harmonic maps",
+          "twisted states",
+          "post-critically finite fractals"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2511.03671",
+        "versioned_id": "2511.03671v2",
+        "title": "Final state sensitivity and fractal basin boundaries from coupled Chialvo neurons",
+        "authors": [
+          "Bennett Lamb",
+          "Brandon B. Le"
+        ],
+        "abstract": "We investigate and quantify the basin geometry and extreme final state uncertainty of two identical electrically asymmetrically coupled Chialvo neurons. The system's diverse behaviors are presented, along with the mathematical reasoning behind its chaotic and nonchaotic dynamics as determined by the structure of the coupled equations. The system is found to be multistable with two qualitatively different attractors. Although each neuron is individually nonchaotic, the chaotic basin takes up the vast majority of the coupled system's state space, but the nonchaotic basin stretches to infinity due to chance synchronization. The boundary between the basins is found to be fractal, leading to extreme final state sensitivity. This uncertainty and its potential effect on the synchronization of biological neurons may have implications for understanding neuronal biology.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "nlin.CD",
+          "math.DS",
+          "physics.bio-ph",
+          "q-bio.NC"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2511.03671",
+        "pdf_url": "https://arxiv.org/pdf/2511.03671"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "medium",
+        "relevance_note": "Fractal basin geometry and final-state uncertainty are central even though the example comes from neuronal modeling; the abstract does not state a dimension theorem.",
+        "tldr": "The authors find fractal basin boundaries and strong final-state sensitivity in two coupled Chialvo neurons.",
+        "problem": "Understand basin geometry and uncertainty when two individually nonchaotic neurons are coupled asymmetrically.",
+        "main_result": "The coupled system has two qualitatively different attractors. The authors report that the chaotic basin occupies most of the state space, while the nonchaotic basin reaches infinity through chance synchronization. They find a fractal boundary between the basins and associated extreme sensitivity of the final state. Quantitative fractal dimensions, parameter ranges and a distinction between numerical and proved parts of these findings are not supplied. Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Possible implications for biological synchronization are presented as possibilities, not demonstrated biological conclusions.",
+        "keywords": [
+          "fractal basin boundaries",
+          "final-state sensitivity",
+          "multistability",
+          "Chialvo neurons"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2512.12862",
+        "versioned_id": "2512.12862v5",
+        "title": "A no-go theorem for irreversibility in arbitrary realizations of the collapse dynamics",
+        "authors": [
+          "A. Della Corte",
+          "L. Guglielmi",
+          "M. Farotti"
+        ],
+        "abstract": "We study finite dimensional quantum systems with arbitrary collapse events, establishing a structural no-go for operational irreversibility along arbitrary realizations of the collapse dynamics. More precisely, we prove that, for every choice of a physically admissible trajectory (i.e., collapse outcomes having nonzero Born weight) assigned to each state, there exists a nonempty topologically closed subset of the projective state space within which any two states can be connected with arbitrarily fine Fubini-Study precision and arbitrarily small integrated energetic cost. This shows that the preservation of information along observed realizations of outcomes guarantees islands of quasi-reversibility, while genuine irreversibility requires additional ingredients such as non-compactness or information erasure.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2512.12862",
+        "pdf_url": "https://arxiv.org/pdf/2512.12862"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Closed subsets of state space and arbitrarily fine reachability suggest a topological-dynamics connection, although the application is quantum collapse.",
+        "tldr": "The authors prove a conditional no-go result for operational irreversibility in finite-dimensional collapse dynamics.",
+        "problem": "Determine whether arbitrary physically admissible realizations of collapse events can be operationally irreversible everywhere.",
+        "main_result": "For every assignment of a physically admissible trajectory to each state, with collapse outcomes of nonzero Born weight, there is a nonempty closed subset of projective state space within which every pair of states can be connected to arbitrarily fine Fubini–Study precision with arbitrarily small integrated energetic cost. This supplies islands of quasi-reversibility in the finite-dimensional setting.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The abstract says that genuine irreversibility requires additional ingredients such as noncompactness or information erasure; it does not claim these ingredients alone are sufficient.",
+        "keywords": [
+          "collapse dynamics",
+          "quasi-reversibility",
+          "projective state space",
+          "reachability"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2512.13232",
+        "versioned_id": "2512.13232v2",
+        "title": "An abstract framework for a class of nonlocal structured population models: existence, uniqueness and stability of steady states",
+        "authors": [
+          "J\\'er\\^ome Coville (BioSP",
+          "ICJ",
+          "MMCS)",
+          "L\\'eo Girardin (CNRS",
+          "ICJ",
+          "MMCS)"
+        ],
+        "abstract": "This paper is concerned with the study of a class of nonlinear nonlocal functional evolution problems defined in an abstract Banach algebra. We introduce an abstract functional setting that encompasses a wide range of structured population models appearing in biomathematical literature. Within this framework, we analyze the well-posedness of the Cauchy problem and the existence of stationary solutions in the positive cone of the Banach algebra. By reviewing a large number of approaches, we also derive conditions for the local and global stability of these stationary solutions. Additionally, we explore the limits of these conditions by exhibiting explicit counterexamples. In particular, for mutation--selection models with symmetric mutation operators, we uncover both sufficient conditions for existence, uniqueness and stability, and counterexamples to existence or stability.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2512.13232",
+        "pdf_url": "https://arxiv.org/pdf/2512.13232"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The paper develops well-posedness and steady-state stability for structured population evolution models in a Banach algebra.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2603.21568",
+        "versioned_id": "2603.21568v2",
+        "title": "Stability and Bifurcation Analysis of Nonlinear PDEs via Random Projection-based PINNs: A Krylov-Arnoldi Approach",
+        "authors": [
+          "Gianluca Fabiani",
+          "Michail E. Kavousanakis",
+          "Constantinos Siettos",
+          "Ioannis G. Kevrekidis"
+        ],
+        "abstract": "We present a numerical framework for the stability and bifurcation analysis of nonlinear partial differential equations (PDEs) in which the solutions are sought in the function space spanned by physics-informed random projection neural networks (PI-RPNNs), and discretized via a collocation approach. These are shallow, single-hidden-layer networks with randomly sampled and fixed a priori hidden-layer weights; only the linear output layer weights are optimized, reducing training to a single least-squares solve. This linear output structure enables the explicit generalized eigenvalue formulation governing the linear stability of stationary solutions, separating the physical domain interior dynamics from the algebraic constraints imposed by boundary conditions (BCs), at no additional training cost and without requiring additional PDE solves. However, the random projection collocation matrix is inherently numerically rank-deficient, rendering naive eigenvalue computation unreliable and contaminating the true eigenvalue spectrum with spurious near-zero modes. To overcome this limitation, we introduce a matrix-free shift-invert Krylov-Arnoldi method that operates directly in weight space, avoiding explicit inversion of the numerically rank-deficient collocation matrix and enabling the reliable computation of several leading eigenpairs of the physical Jacobian - the discretized Frechet derivative of the PDE operator with respect to the solution field, whose eigenvalue spectrum determines linear stability. We further prove that the PI-RPNN-based generalized eigenvalue problem is almost surely regular, guaranteeing solvability with standard eigensolvers, and that the singular values of the random projection collocation matrix decay exponentially for analytic activation functions, rigorously explaining the observed ill-conditioning.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NA",
+          "cs.LG",
+          "cs.NA",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2603.21568",
+        "pdf_url": "https://arxiv.org/pdf/2603.21568"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The central contribution is a numerical neural-network collocation framework for PDE stability and bifurcation eigenproblems.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2603.22460",
+        "versioned_id": "2603.22460v3",
+        "title": "Data-Driven Synthesis of Robust Positively Invariant Sets from Noisy Data",
+        "authors": [
+          "Chi Wang (Imperial College London)",
+          "David Angeli (Imperial College London)"
+        ],
+        "abstract": "This paper develops a method to construct robust positively invariant (RPI) tube sets from finite noisy input-state data of an unknown linear time-invariant (LTI) system, yielding tubes that can be directly embedded in tube-based robust data-driven predictive control. Data-consistency uncertainty sets are constructed under process/measurement noise with polytopic/ellipsoidal bounds. In the measurement-noise case, we provide a deterministic and data-consistent procedure to certify the induced residual bound from data. Based on these sets, a robustly stabilizing state-feedback gain is certified via a common quadratic contraction, which in turn enables constructive polyhedral/ellipsoidal RPI tube computation. Numerical examples quantify the conservatism induced by noisy data and the employed certification step.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "eess.SY",
+          "cs.SY",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2603.22460",
+        "pdf_url": "https://arxiv.org/pdf/2603.22460"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The work constructs robust invariant tubes for data-driven predictive control of unknown linear systems from noisy measurements.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2604.13790",
+        "versioned_id": "2604.13790v2",
+        "title": "Spatial deformation of a ferromagnetic elastic rod",
+        "authors": [
+          "G. R. Krishna Chand Avatar",
+          "Vivekanand Dabade"
+        ],
+        "abstract": "Ferromagnetic elastic slender structures offer the potential for large actuation displacements under modest external magnetic fields, due to the magneto-mechanical coupling. This paper investigates the phase portraits of the Hamiltonian governing the three-dimensional deformation of inextensible ferromagnetic elastic rods subjected to combined terminal tension and twisting moment in the presence of a longitudinal magnetic field. The total energy functional is formulated by combining the Kirchhoff elastic strain energy with micromagnetic energy contributions appropriate to soft and hard ferromagnetic materials: magnetostatic (demagnetization) energy for the former, and exchange and Zeeman energies for the latter. Exploiting the circular cross-sectional symmetry and the integrable structure of the governing equations, conserved Casimir invariants are identified and the Hamiltonian is reduced to a single-degree-of-freedom system in the Euler polar angle. Analysis of the resulting phase portraits reveals that purely elastic and hard ferromagnetic rods undergo a supercritical Hamiltonian Hopf pitchfork bifurcation, whereas soft ferromagnetic rods exhibit this bifurcation only within a restricted range of the magnetoelastic parameter, $0<\\tilde{K}_{dM}<1/8$. Both helical and localized post-buckling configurations are analyzed, and the corresponding load-deformation relationships are systematically characterized across a range of loading scenarios. Localized buckling modes, corresponding to homoclinic orbits in the Hamiltonian phase space, are constructed numerically. In contrast to the purely elastic case, the localized configurations of soft ferromagnetic rods exhibit non-collinear extended straight segments, a geometrically distinctive feature arising directly from the magnetoelastic coupling.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cond-mat.mtrl-sci",
+          "cond-mat.soft",
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2604.13790",
+        "pdf_url": "https://arxiv.org/pdf/2604.13790"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The main focus is magnetoelastic rod deformation, phase portraits and buckling configurations.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2604.21065",
+        "versioned_id": "2604.21065v2",
+        "title": "On the dynamic behavior of the network SIRS epidemic model",
+        "authors": [
+          "Giulia Gatti",
+          "Giacomo Como"
+        ],
+        "abstract": "We study the Suscectible-Infected-Recovered-Susceptible (SIRS) epidemic model on deterministic networks. For connected but otherwise general interaction patterns and heterogeneous recovery and loss-of-immunity rates, we identify a fundamental parameter R_0 (the basic reproduction number), which fully characterizes the qualitative dynamic behavior of the system. This parameter is the dominant eigenvalue of a rescaled version of the interaction matrix, whose rows are normalized by the corresponding recovery rates. We prove that a transcritical bifurcation occurs as R_0 crosses the threshold value 1. Specifically, we show that, if R_0 does not exceed 1, then the disease-free equilibrium is globally asymptotically stable, whereas, if R_0 is larger than 1, then the disease-free equilibrium is unstable and there exists a unique endemic equilibrium, which is asymptotically stable. As a byproduct of our analysis, we also identify key monotonicity properties of the dependence of the endemic equilibrium on the model parameters (the interaction matrix as well as the recovery rates and the loss-of-immunity rates) and obtain a distributed iterative algorithm for its computation, with provable convergence guarantees. Our results extend existing ones available in the literature for network SIRS epidemic models with rank-one interaction matrices and homogeneous recovery rates (including the single homogeneous population SIRS epidemic model).",
+        "announce_type": "replace-cross",
+        "categories": [
+          "eess.SY",
+          "cs.SY",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2604.21065",
+        "pdf_url": "https://arxiv.org/pdf/2604.21065"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The paper centers on threshold behavior, endemic equilibria and computation for a network epidemic model.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2606.12573",
+        "versioned_id": "2606.12573v2",
+        "title": "Implementation of Linear Regression and Linear Interpolation using Reaction Networks",
+        "authors": [
+          "Aryan Kumar",
+          "Amey Choudhary",
+          "Jiaxin Jin",
+          "Chittaranjan Hens",
+          "Abhishek Deshpande"
+        ],
+        "abstract": "Statistical inference is a fundamental component of data science. In this work, we focus on two classical inference techniques: regression and interpolation. We propose a reaction-network-based framework for implementing linear regression, including both univariate and multivariate settings, as well as linear interpolation. Our approach encodes the outputs of these inference techniques in the steady-state concentrations of species within the reaction network. A key ingredient of the construction is a novel generalized division module capable of handling division involving negative numbers. We validate the proposed framework through in silico implementations on standard synthetic datasets and obtain the expected regression and interpolation outputs.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "q-bio.MN",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2606.12573",
+        "pdf_url": "https://arxiv.org/pdf/2606.12573"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The paper implements regression and interpolation with reaction networks; no central dynamical profile topic is stated.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2607.24994",
+        "versioned_id": "2607.24994v2",
+        "title": "Diffusion stabilises time-periodic solutions in conservation laws coupled to a relaxation oscillator",
+        "authors": [
+          "Julien Barr\\'e",
+          "Nils Berglund",
+          "Hiroshi Horii"
+        ],
+        "abstract": "We study a viscous one-dimensional conservation law, coupled to a fast ordinary differential equation. For a vanishing viscosity, the system has an infinite-dimensional family of time-periodic solutions, corresponding to relaxation oscillations. We show that for symmetric initial conditions, a small positive viscosity selects a unique periodic solution, which we prove to be linearly stable. The proof exploits the slow-fast structure through an averaging strategy, as well as spectral-theoretic methods. The results are illustrated by numerical simulations.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2607.24994",
+        "pdf_url": "https://arxiv.org/pdf/2607.24994"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The result concerns viscosity selection and linear stability of periodic solutions in a PDE–ODE relaxation-oscillator model.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2608.11602",
+        "versioned_id": "2608.11602v2",
+        "title": "Quantitative Unique Continuation on Simplex and $\\mathbb{Z}^n$",
+        "authors": [
+          "Shihe Liu",
+          "Yunfeng Shi",
+          "Zhifei Zhang"
+        ],
+        "abstract": "In this work, we establish the quantitative unique continuation on both $n$-dimensional simplex lattice $\\Delta^{(n)}_{N}$ and $\\mathbb{Z}^n$ for arbitrary $n\\geq 3$.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.AP",
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2608.11602",
+        "pdf_url": "https://arxiv.org/pdf/2608.11602"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The abstract states quantitative unique continuation on lattices but does not supply a connection to the profile's central dynamics themes.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2608.20472",
+        "versioned_id": "2608.20472v2",
+        "title": "Free Burnside groups of large odd exponent have cost 1",
+        "authors": [
+          "Miguel Donoso-Echenique",
+          "Eduardo Silva"
+        ],
+        "abstract": "We prove that for every non-elementary torsion-free hyperbolic group $H$ and sufficiently large odd $n>1$, the quotient $H/H^n$ has cost $1$. In particular, when $H$ is the free group of rank $m\\ge 2$, we obtain that the free Burnside group $B(m,n)$ has cost $1$ for every odd exponent $n\\geq 665$. It follows that $B(m,n)$ is anti-treeable, and that its first $\\ell^2$-Betti number $\\beta_1^{(2)}(B(m,n))$ vanishes. The latter recovers and extends a result of Feldkamp and Kionke [Proc. Amer. Math. Soc., 2023], who proved that $\\beta_1^{(2)}(B(m,p))=0$ for all sufficiently large prime exponents $p$.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.GR",
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2608.20472",
+        "pdf_url": "https://arxiv.org/pdf/2608.20472"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Cost, anti-treeability and group invariants directly match group-action and orbit-complexity interests.",
+        "tldr": "The authors prove cost one for specified large odd-exponent quotients of hyperbolic groups, including free Burnside groups.",
+        "problem": "Determine cost and related invariants for large-exponent torsion quotients.",
+        "main_result": "For every non-elementary torsion-free hyperbolic group \\(H\\) and sufficiently large odd \\(n>1\\), the quotient \\(H/H^n\\) has cost one. For the free group of rank \\(m\\geq2\\), the conclusion holds for \\(B(m,n)\\) for every odd \\(n\\geq665\\). It follows that these free Burnside groups are anti-treeable and have \\(\\beta_1^{(2)}(B(m,n))=0\\).",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The Betti-number conclusion recovers and extends the cited result of Feldkamp and Kionke for sufficiently large prime exponents. The abstract does not assert a numerical threshold for every hyperbolic group.",
+        "keywords": [
+          "cost",
+          "Burnside groups",
+          "anti-treeability",
+          "hyperbolic groups",
+          "Betti numbers"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2608.29855",
+        "versioned_id": "2608.29855v2",
+        "title": "Growth of Simple Closed Geodesics in Finite-Volume Hyperbolic Manifolds",
+        "authors": [
+          "Xiaolong Hans Han",
+          "Bohan Yang"
+        ],
+        "abstract": "Let $M$ be a finite-volume hyperbolic $d$-manifold with $d\\ge3$. We prove that the number of primitive nonsimple closed geodesics has exponential growth rate strictly smaller than $d-1$. Consequently, asymptotically almost every primitive closed geodesic in $M$ is simple. In contrast, we show that on an arithmetic hyperbolic manifold of type~I, the unit vectors tangent to nonsimple closed geodesics are dense in the unit tangent bundle.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.GT",
+          "math.DG",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2608.29855",
+        "pdf_url": "https://arxiv.org/pdf/2608.29855"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Exponential growth of closed geodesics and the contrast with tangent-orbit density directly concern orbit complexity and topological dynamics.",
+        "tldr": "In finite-volume hyperbolic manifolds of dimension at least three, the authors show that asymptotically almost every primitive closed geodesic is simple. On arithmetic hyperbolic manifolds of type I, nonsimple closed geodesics nevertheless have dense tangent directions.",
+        "problem": "Compare counting growth and topological density of nonsimple closed geodesics in higher-dimensional finite-volume hyperbolic manifolds.",
+        "main_result": "For a finite-volume hyperbolic \\(d\\)-manifold with \\(d\\geq3\\), primitive nonsimple closed geodesics have exponential growth rate strictly below \\(d-1\\). Consequently, asymptotically almost every primitive closed geodesic is simple. On an arithmetic hyperbolic manifold of type I, however, unit vectors tangent to nonsimple closed geodesics are dense in the unit tangent bundle.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The arithmetic type-I hypothesis belongs to the density assertion, whereas the counting statement applies to all manifolds in the stated finite-volume class.",
+        "keywords": [
+          "closed geodesics",
+          "exponential growth",
+          "hyperbolic manifolds",
+          "topological density"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.07921",
+        "versioned_id": "2609.07921v2",
+        "title": "Some observations on transitivity of Lipschitz operators",
+        "authors": [
+          "Christian Bargetz",
+          "Leon K\\\"ugler"
+        ],
+        "abstract": "The universal property of the Lipschitz-free spaces allows for the linearisation of a base point preserving Lipschitz map $f\\colon M\\to M$ to a bounded linear operator $T_f\\colon \\mathcal{F}(M) \\to \\mathcal{F}(M)$. While it is known that the operator $T_f$ is weakly mixing whenever $f$ has this property, it is open whether a similar inheritance result for topological transitivity holds. Motivated by this question we investigate properties of $T_f$ under the assumption that $f$ is topologically transitive. In particular we prove Kitai's theorem for Lipschitz operators, i.e. we show that every connected component of the complex variant of $T_f$ intersects the unit circle if $f$ is topologically transitive.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.FA",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-22T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.07921",
+        "pdf_url": "https://arxiv.org/pdf/2609.07921"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "medium",
+        "relevance_note": "Topological transitivity and weak mixing under Lipschitz-free linearization directly match the profile, but the last abstract sentence leaves the set whose connected components are intended implicit.",
+        "tldr": "The authors study consequences of transitivity for Lipschitz-free linearizations and state a Kitai-type unit-circle condition.",
+        "problem": "Determine what topological transitivity of a pointed Lipschitz map implies for its induced linear operator.",
+        "main_result": "A base-point-preserving Lipschitz map \\(f:M\\to M\\) induces \\(T_f:\\mathcal F(M)\\to\\mathcal F(M)\\). Weak mixing is known to pass from \\(f\\) to \\(T_f\\), but analogous inheritance of topological transitivity remains open in the abstract. Assuming \\(f\\) is topologically transitive, the authors state a Kitai-type conclusion that every connected component of the “complex variant” of \\(T_f\\) intersects the unit circle. The abstract does not identify the set whose connected components are intended, so a precise formulation cannot be supplied. Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The stated result addresses consequences of transitivity; it is not claimed to solve the open transitivity-inheritance question.",
+        "keywords": [
+          "topological transitivity",
+          "Lipschitz-free spaces",
+          "linearization",
+          "weak mixing",
+          "Kitai theorem"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 15,
+    "RELATED / POSSIBLY INTERESTING": 25,
+    "LOW PRIORITY": 27
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-09-22T09:25:01.582780Z",
+      "feed_published_at": "2026-09-22T00:00:00-04:00",
+      "feed_build_at": "2026-09-22T04:00:37Z",
+      "feed_date": "2026-09-22",
+      "sha256": "a4438d686f24d6c7976059d2cd26dd9806ce61dd1ec3e4478fa08c33b30a2aac",
+      "byte_length": 135813,
+      "capture_run_url": "https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/35710229695"
+    }
+  ]
+}
