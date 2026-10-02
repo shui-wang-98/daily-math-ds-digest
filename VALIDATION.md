@@ -500,3 +500,51 @@ Validation performed locally with the existing repository Python and Node24:
 No task/schedule, source feed, research profile or Git permissions were changed.
 No commit or push was performed. The publisher workflow remains unchanged; the
 separate offline-validation workflow now explicitly supplies Node24.
+
+## 2026-10-02: RSS notation and metadata fidelity repair
+
+Reproduced all three September 24 rendering failures from the immutable inbox:
+the undelimited Teichmuller-stratum title (2609.26903), a prose href in an
+abstract (2609.27970), and an unescaped terminal numeric percentage (2609.27962).
+
+- Replaced partial regex extraction of bare math with a bounded, lossless
+  token/group scanner. Text formatting that crosses an explicit math fragment
+  remains supported; malformed mathematical arguments still fail validation.
+- Prose href/url commands retain their complete label and destination as inert
+  text. URL punctuation does not open math spans, and no source URL is fetched.
+- RSS fields have a separate rendering filter that displays a terminal numeric
+  percentage literally and annotates that interpretation. Original JSON and
+  formula alt text are retained. Authored analysis keeps strict TeX validation.
+- Code review also found HTML cleanup could delete mathematical inequalities
+  and double-decode entities. Cleanup now protects math and decodes one layer
+  of complete known entities. Local arXiv URL checks now reject noncanonical
+  path suffixes such as nested URLs and abstract paths with PDF extensions.
+- The cleanup defect affected source abstract 2609.20397 in the September 18
+  archive and 2610.00627 in the unprocessed October 2 input. Restored the former
+  directly from its recorded immutable capture in the two JSON copies only.
+  It is a LOW PRIORITY entry, so its abstract is not in the public HTML. Its
+  classification and all other metadata are unchanged; future preparation of
+  the latter now retains the complete source hypotheses.
+
+Validation with the existing virtual environment:
+
+- Full offline suite: **384 passed in 23.91s**, exit 0, with a fresh isolated
+  `tmp/pytest-render-fix-20261002-full` base directory.
+- All 14 immutable inputs: **502 eligible paper records, 1,506 source fields,
+  zero rendering exceptions** with the source rendering filter.
+- All seven provenance-bearing historical reports: **264 paper metadata
+  records agree exactly** with their recorded inputs; backend and public JSON
+  copies agree byte for byte. The older report without capture provenance was
+  not claimed as source-verified.
+- Production hash and modification-time checks: only the two corrected
+  September 18 JSON files changed. State, pending/analysis, inbox, HTML, shared
+  assets and all legacy PDF/Markdown remained unchanged.
+- Fixture finalization covers source notation in dated HTML and the homepage,
+  unchanged metadata, and byte/mtime idempotence. Strict malformed-math rejection
+  and unchanged-state-on-render-failure regressions remain passing.
+- `src.notify --check-only` and `git diff --check` passed. No notification was
+  sent. The in-app browser twice timed out attaching its preview, so desktop
+  and mobile screenshots were not verified. The temporary local server stopped.
+
+No new daily reports, commit, push, deployment, task changes, dependency
+installation, live arXiv requests, or configuration/permission changes occurred.

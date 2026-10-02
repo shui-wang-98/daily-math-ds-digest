@@ -7,16 +7,19 @@ from __future__ import annotations
 
 import re
 from collections import defaultdict
+from dataclasses import dataclass
 
 from pylatexenc.latexwalker import (
     LatexEnvironmentNode, LatexMacroNode, LatexWalker,
     LatexWalkerParseError, get_default_latex_context_db,
 )
 from pylatexenc.macrospec import MacroSpec
+from .math_spans import MAX_NESTING
 
 REFERENCES = frozenset({'ref', 'eqref', 'pageref', 'autoref', 'cref', 'Cref'})
 CITATIONS = frozenset({'cite', 'citep', 'citet', 'citealp', 'citealt',
                        'citeauthor', 'citeyear', 'citeyearpar'})
+LINKS = frozenset({'href', 'url', 'nolinkurl'})
 _COMMAND = re.compile(r'\\([A-Za-z]+)')
 _DEFINITIONS = re.compile(
     r'\\(?:[A-Za-z]*(?:def|command|environment|tagform)|let|futurelet|'
@@ -41,6 +44,56 @@ def argument_source(node) -> str:
     return source[1:-1] if getattr(node, 'delimiters', None) else source
 
 
+@dataclass(frozen=True)
+class SourceLink:
+    """Literal URL and optional TeX label; never fetched or made active HTML."""
+    source: str
+    target: str
+    label: str | None
+    end: int
+
+
+def _link_group(text: str, position: int, opening='{', closing='}'):
+    while position < len(text) and text[position].isspace():
+        position += 1
+    if position >= len(text) or text[position] != opening:
+        raise ValueError('Malformed source link: expected a braced argument')
+    start = position + 1
+    stack = [closing]
+    i = start
+    while i < len(text):
+        char = text[i]
+        if char == '\\':
+            # URLs contain literal percent signs, query strings and TeX escapes.
+            # Do not interpret them as comments or mathematics.
+            i += 2
+            continue
+        if char == '{' or (opening == '[' and char == '['):
+            stack.append('}' if char == '{' else ']')
+            if len(stack) > MAX_NESTING:
+                raise ValueError('Source link nesting limit exceeded')
+        elif char == stack[-1]:
+            stack.pop()
+            if not stack:
+                return text[start:i], i + 1
+        i += 1
+    raise ValueError('Malformed source link: unclosed argument')
+
+
+def _source_link(text: str, position: int, match) -> SourceLink:
+    end = match.end()
+    if match[1] == 'href':
+        while end < len(text) and text[end].isspace():
+            end += 1
+        if text[end:end + 1] == '[':
+            _, end = _link_group(text, end, '[', ']')
+    target, end = _link_group(text, end)
+    label = None
+    if match[1] == 'href':
+        label, end = _link_group(text, end)
+    return SourceLink(text[position:end], target, label, end)
+
+
 class ProseReferences:
     """Cache reference nodes while math-span scanning skips their arguments."""
     def __init__(self):
@@ -48,10 +101,13 @@ class ProseReferences:
 
     def command_end(self, text: str, position: int) -> int:
         match = _COMMAND.match(text, position)
-        if not match or match[1] not in REFERENCES | CITATIONS:
+        if not match or match[1] not in REFERENCES | CITATIONS | LINKS:
             return position
         key = (text, position)
         if key not in self.nodes:
+            if match[1] in LINKS:
+                self.nodes[key] = _source_link(text, position, match)
+                return self.nodes[key].end
             try:
                 nodes, _, _ = LatexWalker(
                     text, latex_context=_CONTEXT, tolerant_parsing=False,
@@ -62,7 +118,7 @@ class ProseReferences:
                 raise ValueError('Invalid source reference or citation')
             self.nodes[key] = nodes[0]
         node = self.nodes[key]
-        return node.pos + node.len
+        return node.end if isinstance(node, SourceLink) else node.pos + node.len
 
     def replace(self, text, replacement):
         pieces, end, i = [], 0, 0

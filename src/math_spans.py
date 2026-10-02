@@ -39,7 +39,7 @@ def _error(message: str, offset: int) -> ValueError:
 
 
 def _math_end(text: str, start: int, delimiter: str | None,
-              environment: str | None = None) -> tuple[int, int]:
+              environment: str | None = None, *, rss_percentages=False) -> tuple[int, int]:
     """Return the outer closing marker's start and end offsets."""
     environments = [environment] if environment is not None else []
     braces = 0
@@ -47,6 +47,15 @@ def _math_end(text: str, start: int, delimiter: str | None,
     while i < len(text):
         char = text[i]
         if char == "%":
+            # RSS abstracts sometimes contain a number followed by an unescaped
+            # percent immediately before the math closer. This narrowly scoped
+            # source-text policy must not change ordinary TeX comment parsing.
+            before = text[start:i].rstrip(' \t')
+            after = text[i + 1:].lstrip(' \t')
+            if (rss_percentages and delimiter and not environments and not braces
+                    and before[-1:].isdigit() and after.startswith(delimiter)):
+                i += 1
+                continue
             # TeX comments can contain apparent delimiters. Keep their bytes,
             # but ignore them until the next line when finding the boundary.
             newlines = [pos for char in ("\r", "\n")
@@ -101,7 +110,7 @@ def _math_end(text: str, start: int, delimiter: str | None,
     raise _error(f"unterminated math span; expected {expected}", start)
 
 
-def spans(text: str, *, protected_command=None) -> Iterator[tuple[str, str]]:
+def spans(text: str, *, protected_command=None, rss_percentages=False) -> Iterator[tuple[str, str]]:
     """Yield ``(text|inline|display, value)`` spans without rewriting source.
 
     Dollar and backslash delimiters are removed. The outer equation,
@@ -112,6 +121,10 @@ def spans(text: str, *, protected_command=None) -> Iterator[tuple[str, str]]:
     A malformed explicit delimiter/environment, excessive field length, or
     nesting deeper than MAX_NESTING raises ValueError. Ordinary brackets and
     prose environments do not open math mode.
+
+    rss_percentages permits only terminal numeric percentages in delimited
+    source math. Expression bytes remain unchanged; the caller must display
+    that percent literally. Authored analysis uses the default strict policy.
     """
     if not isinstance(text, str):
         raise TypeError("Math span source must be a string")
@@ -157,7 +170,8 @@ def spans(text: str, *, protected_command=None) -> Iterator[tuple[str, str]]:
         else:
             i += 1
             continue
-        close_start, close_end = _math_end(text, body_start, delimiter, environment)
+        close_start, close_end = _math_end(text, body_start, delimiter, environment,
+                                         rss_percentages=rss_percentages)
         if i > plain_start:
             yield "text", text[plain_start:i]
         yield kind, text[i:close_end] if keep_wrapper else text[body_start:close_start]

@@ -8,16 +8,13 @@ import re
 
 from markupsafe import Markup
 from pylatexenc.latex2text import LatexNodes2Text, get_default_latex_context_db
+from .bare_math import bare_math_spans
 from .math_spans import spans
 from .mathjax_renderer import render
-from .tex_references import ProseReferences, argument_source, explicit_labels
+from .tex_references import ProseReferences, SourceLink, argument_source, explicit_labels
 
 _LATEX_CONTEXT = get_default_latex_context_db()
 _MAX_HTML_FIELD = 8_000_000
-_BARE_MATH = re.compile(
-    r"[A-Za-z0-9_^{}()/]*\\(?:mathbb|mathcal|mathfrak|Gamma|tau|geq?|leq?)(?![A-Za-z])"
-    r"(?:\\[A-Za-z]+|[A-Za-z0-9_^{}()/,.+\-])*(?:\s+[0-9]+[,.]?)?"
-)
 
 def _plain(text: str) -> str:
     # arXiv author strings can contain doubled backslashes before TeX accents.
@@ -27,12 +24,8 @@ def _plain(text: str) -> str:
 
 
 def _plain_segments(text: str, plain_converter=_plain):
-    end = 0
-    for match in _BARE_MATH.finditer(text):
-        yield False, plain_converter(text[end:match.start()])
-        yield True, match.group()
-        end = match.end()
-    yield False, plain_converter(text[end:])
+    for is_math, source in bare_math_spans(text):
+        yield is_math, source if is_math else plain_converter(source)
 
 
 def _segments(text: str, plain_converter=_plain):
@@ -78,15 +71,21 @@ def _html_plain(value: str, unknown: set[str] | None = None) -> str:
     return _plain(re.sub(r"(?<!\\)([%&])", r"\\\1", value))
 
 
-def html_text(value: str, *, _labels=None, _depth=0) -> Markup:
+def html_source_text(value: str) -> Markup:
+    """Render immutable RSS metadata, with a narrow numeric-percent policy."""
+    return html_text(value, _rss=True)
+
+
+def html_text(value: str, *, _labels=None, _depth=0, _rss=False) -> Markup:
     """Typeset unchanged source locally; unknown notation remains explicit."""
     if _depth > 32:
         raise ValueError('Source reference nesting limit exceeded')
     references = ProseReferences()
-    parts = list(spans(value, protected_command=references.command_end))
+    parts = list(spans(value, protected_command=references.command_end, rss_percentages=_rss))
     labels = explicit_labels(parts) if _labels is None else _labels
     result, unknown = [], set()
     fragments, unresolved = [], False
+    percentage = False
     rendered_size = 0
 
     def bounded(fragment):
@@ -100,14 +99,21 @@ def html_text(value: str, *, _labels=None, _depth=0) -> Markup:
     prefix = '\ue000DigestReference'
     # TeX grouping can manufacture a token absent from the raw source, e.g.
     # Digest{}Reference. Check converted prose as well as the original input.
-    plain_source = ''.join(_html_plain(part) for mode, part in parts if mode == 'text')
+    plain_source = ''.join(_html_plain(references.replace(part, lambda node: ''))
+                           for mode, part in parts if mode == 'text')
     while prefix in value or prefix in plain_source:
         prefix += 'X'
 
     def formula(text, display=False):
-        _, names = _formula(text, display)
+        nonlocal percentage
+        rendered_text = text
+        if _rss:
+            rendered_text = re.sub(r'(?<=\d)([ \t]*)%([ \t]*)\Z',
+                                   lambda m: m[1] + r'\%' + m[2], text)
+            percentage |= rendered_text != text
+        _, names = _formula(rendered_text, display)
         unknown.update(names)
-        svg, width, depth = _svg_formula(text, display)
+        svg, width, depth = _svg_formula(rendered_text, display)
         image = (f'<img class="math-formula" src="data:image/svg+xml;base64,{svg}" '
                  f'alt="{html_escape(text, quote=True)}" '
                  f'style="width:{width:.4f}em;vertical-align:{-depth:.4f}em">')
@@ -115,6 +121,17 @@ def html_text(value: str, *, _labels=None, _depth=0) -> Markup:
 
     def reference(node):
         nonlocal unresolved
+        if isinstance(node, SourceLink):
+            # Display labels and URLs as inert text, never executable links.
+            target = html_escape(re.sub(r'\\([%&#_{}])', r'\1', node.target))
+            label = (str(html_text(node.label, _labels=labels, _depth=_depth + 1, _rss=_rss))
+                     if node.label is not None else '')
+            rendered = label + ' (' + target + ')' if node.label is not None else target
+            token = prefix + str(len(fragments)) + '\ue001'
+            fragments.append(bounded('<span class="source-reference" title="'
+                                     + html_escape(node.source, quote=True) + '">'
+                                     + rendered + '</span>'))
+            return token
         source = node.latex_verbatim()
         args = node.nodeargd.argnlist
         key = argument_source(args[-1])
@@ -126,7 +143,8 @@ def html_text(value: str, *, _labels=None, _depth=0) -> Markup:
             rendered = formula(r'\text{' + content + '}')
         elif node.macroname in {'cite', 'citep', 'citet', 'citealp', 'citealt'}:
             def note(arg):
-                return str(html_text(argument_source(arg), _labels=labels, _depth=_depth + 1))
+                return str(html_text(argument_source(arg), _labels=labels, _depth=_depth + 1,
+                                     _rss=_rss))
             first, second = args[1:3]
             before = note(first) + ' ' if first is not None and second is not None else ''
             after = note(second if second is not None else first)
@@ -151,4 +169,7 @@ def html_text(value: str, *, _labels=None, _depth=0) -> Markup:
                       lambda match: fragments[int(match[1])], ''.join(result))
     note = (' [Source references: unresolved calls are retained as supplied; '
             'no equation numbers or bibliography details are inferred.]') if unresolved else ''
+    if percentage:
+        note += (' [Source notation: a terminal numeric percent is displayed literally; '
+                 'the original source is retained.]')
     return Markup(rendered + html_escape(_source_note(unknown) + note))

@@ -36,10 +36,10 @@
         {% for item in favorite_papers %}
         <li class="favorite-item" data-favorite-id="{{ item.paper.arxiv_id }}">
           <div class="paper-title-row">
-            <h3><a class="favorite-title" href="reports/{{ item.report_date }}/#{{ item.anchor }}">{{ item.paper.title | render_text }}</a></h3>
+            <h3><a class="favorite-title" href="reports/{{ item.report_date }}/#{{ item.anchor }}">{{ item.paper.title | render_source }}</a></h3>
             {% with favorite_id=item.paper.arxiv_id %}{% include "favorite_button.html.j2" %}{% endwith %}
           </div>
-          <p class="authors">{{ item.paper.authors | join(', ') | render_text }}</p>
+          <p class="authors">{{ item.paper.authors | join(', ') | render_source }}</p>
           <p class="paper-meta"><a href="{{ item.paper.abstract_url }}">arXiv:{{ item.paper.arxiv_id }}</a> · <a href="reports/{{ item.report_date }}/#{{ item.anchor }}">Report <time datetime="{{ item.report_date }}">{{ item.report_date }}</time></a></p>
         </li>
         {% endfor %}

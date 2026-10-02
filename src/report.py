@@ -6,7 +6,7 @@ from urllib.parse import quote
 
 from jinja2 import Environment, FileSystemLoader
 
-from .math_render import html_text
+from .math_render import html_source_text, html_text
 from .models import AnalyzedPaper, DailyReport, validate_report_date
 from .utils import atomic_write_bytes, atomic_write_json, atomic_write_text
 
@@ -24,6 +24,7 @@ def _jinja_environment(template_dir: str | Path) -> Environment:
         lstrip_blocks=True,
     )
     environment.filters["render_text"] = html_text
+    environment.filters["render_source"] = html_source_text
     return environment
 
 

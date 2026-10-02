@@ -60,10 +60,10 @@
         {% for item in sections.low %}
         <li id="paper-{{ item.paper.arxiv_id }}">
           <div class="paper-title-row">
-            <a href="{{ item.paper.abstract_url }}">{{ item.paper.title | render_text }}</a>
+            <a href="{{ item.paper.abstract_url }}">{{ item.paper.title | render_source }}</a>
             {% with favorite_id=item.paper.arxiv_id %}{% include "favorite_button.html.j2" %}{% endwith %}
           </div>
-          <span class="authors">{{ item.paper.authors | join(', ') | render_text }}</span>
+          <span class="authors">{{ item.paper.authors | join(', ') | render_source }}</span>
           <span class="paper-meta">arXiv:{{ item.paper.arxiv_id }}</span>
         </li>
         {% endfor %}

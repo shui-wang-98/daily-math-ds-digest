@@ -5,10 +5,10 @@
     {% endif %}
     <p class="paper-meta">arXiv:{{ item.paper.arxiv_id }} · {{ item.paper.announce_type }} <span class="confidence">· {{ item.analysis.confidence }} confidence</span></p>
     <div class="paper-title-row">
-      <h3 id="paper-{{ item.paper.arxiv_id }}"><a href="{{ item.paper.abstract_url }}">{{ item.paper.title | render_text }}</a></h3>
+      <h3 id="paper-{{ item.paper.arxiv_id }}"><a href="{{ item.paper.abstract_url }}">{{ item.paper.title | render_source }}</a></h3>
       {% with favorite_id=item.paper.arxiv_id %}{% include "favorite_button.html.j2" %}{% endwith %}
     </div>
-    <p class="authors">{{ item.paper.authors | join(', ') | render_text }}</p>
+    <p class="authors">{{ item.paper.authors | join(', ') | render_source }}</p>
   </header>
 
   {% if item.analysis_status == 'fallback' %}
@@ -34,7 +34,7 @@
   {% if include_original_abstract %}
   <details class="original-abstract">
     <summary>Original abstract</summary>
-    <p class="abstract">{{ item.paper.abstract | render_text }}</p>
+    <p class="abstract">{{ item.paper.abstract | render_source }}</p>
   </details>
   {% endif %}
 </article>

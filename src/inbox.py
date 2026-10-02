@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import re
 from datetime import datetime, timedelta
 from email.utils import parsedate_to_datetime
 from pathlib import Path
@@ -17,6 +18,7 @@ from .utils import atomic_write_bytes, atomic_write_json, base_arxiv_id
 SOURCE_URL = "https://rss.arxiv.org/rss/math.DS"
 INCLUDE_TYPES = ("new", "cross", "replace-cross")
 ALL_TYPES = (*INCLUDE_TYPES, "replace")
+_ARXIV_PATH_ID = re.compile(r"(?:\d{4}\.\d{4,5}|[A-Za-z][A-Za-z.\-]*/\d{7})(?:v[1-9]\d*)?")
 
 
 class InputNotReady(ValueError):
@@ -38,9 +40,12 @@ def validate_paper_links(paper: ArxivPaper) -> None:
     """Check arXiv URL/ID correspondence locally; never probe the remote links."""
     for value, prefix in ((paper.abstract_url, "/abs/"), (paper.pdf_url, "/pdf/")):
         url = urlsplit(value)
+        identifier = url.path[len(prefix):] if url.path.startswith(prefix) else ""
+        if prefix == "/pdf/":
+            identifier = identifier.removesuffix(".pdf")
         if (url.scheme != "https" or url.netloc != "arxiv.org" or url.query or url.fragment
-                or not url.path.startswith(prefix)
-                or base_arxiv_id(url.path[len(prefix):]) != paper.arxiv_id):
+                or not _ARXIV_PATH_ID.fullmatch(identifier)
+                or base_arxiv_id(identifier) != paper.arxiv_id):
             raise InputNotReady(f"Invalid arXiv URL/ID correspondence: {paper.arxiv_id}")
 
 

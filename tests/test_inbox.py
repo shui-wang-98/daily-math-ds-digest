@@ -284,3 +284,29 @@ def test_missing_item_announcement_date_is_rejected_before_archiving(tmp_path):
     with pytest.raises(inbox.InputNotReady, match='pubDate'):
         archive(tmp_path, ET.tostring(root))
     assert not (tmp_path / 'inbox').exists()
+
+
+@pytest.mark.parametrize('field,url', [
+    ('abstract_url', 'https://arxiv.org/abs/https://arxiv.org/abs/2609.00001'),
+    ('abstract_url', 'https://arxiv.org/abs/arXiv:2609.00001'),
+    ('abstract_url', 'https://arxiv.org/abs/2609.00001.pdf'),
+    ('abstract_url', 'https://arxiv.org/abs/2609.00001v0'),
+    ('pdf_url', 'https://arxiv.org/pdf/https://arxiv.org/pdf/2609.00001'),
+    ('pdf_url', 'https://arxiv.org/pdf/oai:arxiv.org:2609.00001'),
+])
+def test_paper_urls_require_canonical_id_paths(field, url):
+    paper = inbox.validate_rss(RAW, NOW)[0].papers[0]
+    with pytest.raises(inbox.InputNotReady, match='URL/ID'):
+        inbox.validate_paper_links(paper.model_copy(update={field: url}))
+
+
+@pytest.mark.parametrize('identifier', ['2609.00001', 'math/0301234'])
+@pytest.mark.parametrize('version', ['', 'v12'])
+@pytest.mark.parametrize('pdf_extension', ['', '.pdf'])
+def test_paper_urls_allow_modern_and_legacy_ids(identifier, version, pdf_extension):
+    paper = inbox.validate_rss(RAW, NOW)[0].papers[0]
+    inbox.validate_paper_links(paper.model_copy(update={
+        'arxiv_id': identifier,
+        'abstract_url': f'https://arxiv.org/abs/{identifier}{version}',
+        'pdf_url': f'https://arxiv.org/pdf/{identifier}{version}{pdf_extension}',
+    }))

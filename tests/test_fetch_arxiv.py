@@ -1,4 +1,5 @@
 from pathlib import Path
+import xml.etree.ElementTree as ET
 
 import pytest
 
@@ -40,6 +41,56 @@ def test_normalize_ids(value, expected):
 
 def test_xml_cleanup_preserves_inequalities():
     assert clean_xml_text(r"<p>Assume \(a &lt; b\) and \(c &gt; d\).</p>") == r"Assume \(a < b\) and \(c > d\)."
+
+
+@pytest.mark.parametrize("formula", [
+    "$a<b$ and $c>d$", "$a<p>b$", "$$a<p>b$$",
+    r"\(a<p>b\)", r"\[a<p>b\]",
+    r"\begin{equation}a<p>b\end{equation}",
+    r"\(\begin{matrix}a<p>b\end{matrix}\)",
+])
+def test_xml_cleanup_preserves_tag_shaped_math_and_removes_real_wrappers(formula):
+    assert clean_xml_text(f'<p class="abstract"><b>Result:</b> {formula}<br /></p>') == f"Result: {formula}"
+
+
+def test_xml_cleanup_respects_escaped_delimiters():
+    assert clean_xml_text(r"<p>A \$5 cost. <b>Result:</b> \(a<p>b\).</p>") == r"A \$5 cost. Result: \(a<p>b\)."
+
+
+@pytest.mark.parametrize("source,expected", [
+    (r"\begin{aligned}a&not\end{aligned}", r"\begin{aligned}a&not\end{aligned}"),
+    ("$a&notit;b$", "$a&notit;b$"),
+    ("$a&lt;b$ and &#945; &amp; &#x3B2;", "$a<b$ and \u03b1 & \u03b2"),
+])
+def test_xml_cleanup_only_decodes_complete_known_entities(source, expected):
+    assert clean_xml_text(source) == expected
+
+
+@pytest.mark.parametrize("encoded,expected", [
+    ("$a&lt;b$ and $c&gt;d$", "$a<b$ and $c>d$"),
+    ("$a&amp;lt;b$", "$a&lt;b$"),
+    ("$a<p>b$", "$a<p>b$"),
+    ("$1<p<m$ and $\\sigma>0$", "$1<p<m$ and $\\sigma>0$"),
+    ("$0<a_j<b_j<b<1$. If $b_j^m<a_j$ for all $j>0$",
+     "$0<a_j<b_j<b<1$. If $b_j^m<a_j$ for all $j>0$"),
+])
+@pytest.mark.parametrize("cdata", [False, True])
+def test_feed_abstract_is_cleaned_once_without_losing_math(encoded, expected, cdata):
+    root = ET.fromstring(FIXTURE.read_bytes())
+    item = root.find("channel/item")
+    item.find("description").text = (
+        "<p>arXiv:2609.00001v1 Announce Type: new<br/>"
+        f"Abstract: We prove {encoded}.</p>"
+    )
+    raw = ET.tostring(root, encoding="unicode")
+    if cdata:
+        # ElementTree normally escapes the HTML layer; CDATA is an equivalent
+        # RSS representation and must preserve the same mathematical source.
+        first = raw.index("<description>") + len("<description>")
+        last = raw.index("</description>", first)
+        raw = raw[:first] + "<![CDATA[" + item.findtext("description") + "]]>" + raw[last:]
+    paper = parse_feed(raw, ["new"]).papers[0]
+    assert paper.abstract == f"We prove {expected}."
 
 
 def test_bad_item_is_not_silently_dropped():

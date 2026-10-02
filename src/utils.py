@@ -10,7 +10,19 @@ from pathlib import Path
 from typing import Any
 
 
-_TAG_RE = re.compile(r"</?(?:a|p|br|div|span|b|i|em|strong|sub|sup)\b[^>]*>", re.I)
+# RSS descriptions contain HTML wrappers alongside literal TeX. Match actual
+# tag syntax, not a comparison such as ``a<b$ and $c>d``. TeX tokens are also
+# recognized so even tag-shaped mathematics (for example ``$a<p>b$``) survives.
+_HTML_TAG = (
+    r"</?(?:a|p|br|div|span|b|i|em|strong|sub|sup)"
+    r'''(?:\s+[A-Za-z_:][A-Za-z0-9_:.-]*(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s<>'"=]+))?)*\s*/?>'''
+)
+_XML_TOKEN_RE = re.compile(
+    r"(?P<environment>\\(?P<action>begin|end)\s*\{(?P<name>[^{}]+)\})"
+    r"|(?P<control>\\(?:[A-Za-z]+|[\s\S]))|(?P<dollar>\$\$|\$)"
+    rf"|(?P<tag>{_HTML_TAG})", re.I,
+)
+_HTML_ENTITY_RE = re.compile(r"&(?:\#[xX][0-9A-Fa-f]+|\#[0-9]+|[A-Za-z][A-Za-z0-9]+);")
 _SPACE_RE = re.compile(r"\s+")
 _VERSION_RE = re.compile(r"v\d+$", flags=re.IGNORECASE)
 
@@ -18,8 +30,42 @@ _VERSION_RE = re.compile(r"v\d+$", flags=re.IGNORECASE)
 def clean_xml_text(value: str | None) -> str:
     if not value:
         return ""
-    value = _TAG_RE.sub(" ", value)
-    value = html.unescape(value)
+    # This is source cleanup, not TeX validation. Incomplete math
+    # conservatively retains its remaining text for the renderer to diagnose.
+    parts = []
+    cursor = 0
+    closer = None
+    environments = []
+    for match in _XML_TOKEN_RE.finditer(value):
+        token = match.group()
+        parts.append(value[cursor:match.start()])
+        if match.group("tag"):
+            parts.append(token if closer or environments else " ")
+        else:
+            parts.append(token)
+            if match.group("environment"):
+                if match.group("action") == "begin":
+                    environments.append(match.group("name"))
+                elif environments and environments[-1] == match.group("name"):
+                    environments.pop()
+            elif not environments:
+                if closer == token:
+                    closer = None
+                elif closer is None:
+                    closer = {r"\(": r"\)", r"\[": r"\]", "$": "$", "$$": "$$"}.get(token)
+        cursor = match.end()
+    parts.append(value[cursor:])
+    # Decode one HTML layer only, after stripping wrappers. A decoded comparison
+    # must never be interpreted as markup by a second cleanup pass.
+    # html.unescape alone also recognizes semicolonless prefixes: the TeX
+    # alignment source ``a&not`` would become ``a\u00ac``. Decode complete known
+    # entities only; unknown names and literal TeX alignment text remain exact.
+    value = _HTML_ENTITY_RE.sub(
+        lambda match: html.unescape(match.group())
+        if match.group().startswith("&#") or match.group()[1:] in html.entities.html5
+        else match.group(),
+        "".join(parts),
+    )
     return _SPACE_RE.sub(" ", value).strip()
 
 

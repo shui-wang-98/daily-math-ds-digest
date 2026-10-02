@@ -84,7 +84,9 @@ def _parse_item(item: ET.Element) -> ArxivPaper:
     announce_type = announce_type.lower()
 
     abstract_match = _ABSTRACT_RE.search(description)
-    abstract = clean_xml_text(abstract_match.group(1) if abstract_match else description)
+    # Description is already cleaned and decoded. Repeating that operation can
+    # reinterpret literal mathematical comparisons or entity spellings as HTML.
+    abstract = (abstract_match.group(1) if abstract_match else description).strip()
 
     creator = item.find(f"{{{DC_NS}}}creator")
     authors = _parse_authors(creator.text if creator is not None and creator.text else "")
