@@ -1,0 +1,808 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-09-30",
+  "generated_at": "2026-10-05T15:04:12.570721Z",
+  "feed_build_at": "2026-09-30T04:00:30Z",
+  "category": "math.DS",
+  "analysis_source": "Codex desktop",
+  "overview": "This report covers 22 unseen announcements: 1 HIGH PRIORITY, 0 RELATED / POSSIBLY INTERESTING, and 21 LOW PRIORITY. For this one-time backlog release covering 243 papers announced from 2026-09-24 through 2026-10-05, the main selection is limited to ten papers across all eight reports. The full entry concerns extender entropy and entropy dimension of multidimensional subshifts. All remaining entries are retained in compact form under this reading-budget cap; their placement does not imply a judgment about research quality or lack of topical relevance.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2609.36035",
+        "versioned_id": "2609.36035v1",
+        "title": "Absolutely Continuous Convolutions and Projections of Fractal Measures",
+        "authors": [
+          "Amir Algom",
+          "Federico Rodriguez Hertz",
+          "Zhiren Wang"
+        ],
+        "abstract": "We develop a general criterion for establishing absolute continuity of convolutions of fractal measures on the line, and more generally of prescribed line projections of fractal measures in the plane. The crucial new ingredient is exact scaling covariance of the \\(L^1\\)-norm of Littlewood-Paley pieces of the projected measure, under affine renormalization. We apply this criterion in three key settings. First, we show that the convolution of two measures on the line is absolutely continuous whenever their dimensions sum to more than one, provided one is a self-conformal measure whose defining IFS is not \\(C^2\\)-conjugate to linear, and the other is either self-conformal or Ahlfors--David regular. Second, we show that every line projection of a planar complex-analytic self-conformal measure of dimension greater than one is absolutely continuous, under natural nonlinearity and nondegeneracy assumptions. Finally, we show that every line projection of a planar self-affine measure is absolutely continuous, under natural irreducibility and proximality assumptions, whenever the correlation dimension of the measure and the Frostman dimension of its Furstenberg measure sum to more than two.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CA"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.36035",
+        "pdf_url": "https://arxiv.org/pdf/2609.36035"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Dimension thresholds for fractal-measure convolutions and projections directly match fractal geometry interests; compact if outside the one-time batch cap.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.36105",
+        "versioned_id": "2609.36105v1",
+        "title": "Quantitative Dynamics of complex H\\'enon maps",
+        "authors": [
+          "Henry de Th\\'elin",
+          "Tien-Cuong Dinh",
+          "Lucas Kaufmann"
+        ],
+        "abstract": "Let $f$ be a H\\'enon map of $\\mathbb C^2$. We provide quantitative versions of several results involving dynamical objects associated to $f$. Our results can be interpreted as a quantitative version of Pesin theory with geometric control. As an application we show that the perdiodic points of period $n$ of $f$ equidistribute towards its equilibrium measure exponentially fast as $n$ tends to infinity.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CV"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.36105",
+        "pdf_url": "https://arxiv.org/pdf/2609.36105"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Quantitative equidistribution toward a Henon equilibrium measure connects invariant measures and complex dynamics; compact in this capped batch.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.36377",
+        "versioned_id": "2609.36377v1",
+        "title": "Equipotentials and folds for quasiregular Mandelbrot sets",
+        "authors": [
+          "Alastair N. Fletcher"
+        ],
+        "abstract": "It is well-known that Douady and Hubbard proved that the Mandelbrot set is connected by constructing a uniformizing holomorphic map for its complement from the B\\\"ottcher coordinates. This strategy has a clear analogue in the setting of quasiregular Mandelbrot sets. In this paper, we show that the natural generalization of the Douady-Hubbard uniformizing map is quasiconformal in a neighbourhood of infinity, as well as, in fact, outside a certain neighbourhood of the quasiregular Mandelbrot set. On the other hand, we also show that this uniformizing map can reverse orientation at some parameters, which forces it to have folds and, in particular, prevents it from being injective. This feature cannot happen in the holomorphic setting. The connectivity of the quasiregular Mandelbrot sets therefore cannot be established along the Douady-Hubbard route, and remains open.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CV"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.36377",
+        "pdf_url": "https://arxiv.org/pdf/2609.36377"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Quasiregular Mandelbrot topology and uniformizing-map folds connect complex and topological dynamics; compact in this capped batch.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.36397",
+        "versioned_id": "2609.36397v1",
+        "title": "IC-rigidity for abelian actions",
+        "authors": [
+          "Adam Kanigowski",
+          "Kosma Kasprzak",
+          "Miriam Lorenzo-Laguno"
+        ],
+        "abstract": "Let $G$ be a group acting continuously on a compact metric space $X$. This naturally induces an action of $G$ on the space $\\mathcal{K}(X)$ of nonempty compact subsets of $X$. In [KS26], Kra and Schmieding define a system $(X,G)$ to be IC-rigid if the union of the supports of the $G$-invariant Borel probability measures on $\\mathcal{K}(X)$ is as small as possible. They leave open the question of existence of IC-rigid abelian systems. We show the existence of IC-rigid actions for three classes of abelian groups: mixing rank-one $\\mathbb{Z}$-actions, horocycle flows, and certain mixing actions on a Cantor space of $G=\\bigoplus_{n=1}^{\\infty}G_n$, where $(G_n)_n$ is any sequence of nontrivial finite abelian groups. In the course of proving these results, we introduce the notion of weakly asymptotic pairs and establish its close connection to topological minimal self-joinings.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.36397",
+        "pdf_url": "https://arxiv.org/pdf/2609.36397"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Invariant measures on hyperspaces and IC-rigidity of abelian actions directly match topological and group-action interests; compact if outside the one-time batch cap.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.36463",
+        "versioned_id": "2609.36463v1",
+        "title": "Moments of the Cross-Sectional Siegel-Veech Transfrom",
+        "authors": [
+          "Albert Artiles"
+        ],
+        "abstract": "We study the Siegel--Veech transform on the Poinca\\'e section for the horocycle flow consisting of lattice surfaces with a visible horizontal holonomy vector of length at most one. We compute its first moment and derive formulas for higher and factorial moments. We emphasize these formulas in the case of the square torus of unit area and, as an application, use its first moment formula to recover the Boca--Zaharescu pair-correlation density for Farey fractions.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.36463",
+        "pdf_url": "https://arxiv.org/pdf/2609.36463"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Siegel-Veech moments for a horocycle cross-section relate to homogeneous dynamics; compact in this capped batch.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.37341",
+        "versioned_id": "2609.37341v1",
+        "title": "Baker domains with arbitrarily slow controlled rate of escape",
+        "authors": [
+          "Benjamin Handsaker-Whetton"
+        ],
+        "abstract": "Rempe and Rippon gave a general result which enables the construction of a transcendental entire function with a Baker domain, in which the iterates tend to infinity at a prescribed arbitrarily slow rate. Here we construct a transcendental entire function with a Baker domain, in which the iterates are controlled from both above and below in a prescribed arbitrarily slow but regular manner. The proof uses distortion theorems for conformal mappings due to Ahlfors and Warschawski, and an approximation theorem due to Rempe and Rippon.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CV"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.37341",
+        "pdf_url": "https://arxiv.org/pdf/2609.37341"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Controlled escape in Baker domains concerns complex orbit behavior; compact in this capped batch.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.37383",
+        "versioned_id": "2609.37383v1",
+        "title": "Rigidity of the attractor of neutral renormalization",
+        "authors": [
+          "Dzmitry Dudko",
+          "Willie Rush Lim",
+          "Mikhail Lyubich"
+        ],
+        "abstract": "We prove combinatorial rigidity for the full renormalization attractor of neutral quadratic polynomials. More precisely, any two bi-infinite renormalization towers with the same combinatorics are conformally conjugate on neighborhoods of their Mother Hedgehogs. The rigidity theorem includes arbitrary irrational combinatorics and respective parabolic enrichments. The proof relies on a comprehensive analysis of neutral cascades, i.e. transcendental dynamical systems arising from the rescaled limits of the first return maps of neutral quadratic polynomials. We establish uniform butterfly bounds for neutral cascades and prove that any two combinatorially equivalent neutral cascades are affinely conjugate. We also prove rigidity for parabolic towers with equivalent backward combinatorics.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.37383",
+        "pdf_url": "https://arxiv.org/pdf/2609.37383"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Combinatorial rigidity of neutral renormalization connects complex dynamics and coding; compact in this capped batch.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.37695",
+        "versioned_id": "2609.37695v1",
+        "title": "Codimension-one holomorphic Anosov diffeomorphisms",
+        "authors": [
+          "Jiesong Zhang"
+        ],
+        "abstract": "We prove that every codimension-one holomorphic Anosov diffeomorphism of a compact connected complex manifold is biholomorphically conjugate to a hyperbolic automorphism of a complex torus. This verifies a conjecture of Ghys in the codimension-one case and, in particular, in complex dimension three.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CV",
+          "math.DG"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.37695",
+        "pdf_url": "https://arxiv.org/pdf/2609.37695"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Classification of holomorphic Anosov maps concerns hyperbolic conjugacy and topological structure; compact in this capped batch.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.37803",
+        "versioned_id": "2609.37803v1",
+        "title": "Myopic Best Response Replicates the Mean Curvature Flow",
+        "authors": [
+          "John S. McAlister",
+          "Nathan Burns"
+        ],
+        "abstract": "In a continuous coordination game, under myopic best response, players change strategies, and thus strategic communities change their shapes in time. We show that the boundaries of these strategic communities evolve according to Free Boundary Mean Curvature Flow in the continuous time limit. The convergence relies on an approximation scheme for the Mean Curvature Flow, which has previously been used to describe other threshold dynamics. With this equivalence, we can characterize Nash equilibria of the continuous coordination game as minimal surfaces and explore related consequences in biased versions of the same game.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.37803",
+        "pdf_url": "https://arxiv.org/pdf/2609.37803"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Coordination games and mean-curvature flow are primarily game-theoretic and PDE modeling.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.38013",
+        "versioned_id": "2609.38013v1",
+        "title": "Dynamics on projective K3 surfaces: Herman rings",
+        "authors": [
+          "Junyu Cao"
+        ],
+        "abstract": "We construct an automorphism of a smooth projective K3 surface with positive topological entropy and a non-empty Fatou set. The Fatou set contains invariant domains biholomorphic to products of two annuli. On each domain, the automorphism is holomorphically conjugate to a fixed-point-free irrational rotation. These domains are two-dimensional analogues of Herman rings. The construction answers a question posed by McMullen in 2002 and several questions posed by Cantat in his 2018 ICM address.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.AG",
+          "math.CV"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.38013",
+        "pdf_url": "https://arxiv.org/pdf/2609.38013"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Positive topological entropy coexisting with Herman-ring domains directly connects entropy and complex dynamics; compact in this capped batch.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.36230",
+        "versioned_id": "2609.36230v1",
+        "title": "The Role of Feed-Forward Layers in Transformer Dynamics",
+        "authors": [
+          "Thomas Jacob Maranzatto",
+          "Semih Akkoc",
+          "Sennur Ulukus"
+        ],
+        "abstract": "We study the dynamical behavior of tokens in transformers from a control-theoretic perspective. Our model includes the feed-forward layer present after the self-attention mechanism, with the self-attention mechanism interpreted as an interacting particle system and the feed-forward layer as an independent control. Our main theoretical result establishes that the feed-forward network can steer the tokens arbitrarily close to consensus regardless of the key, query, and value matrices. Our result are easily extended to convergence to many clusters and to multi-head attention. We conduct numerical experiments to verify our results, and compare thresholding behavior from our theory to real-world LLMs.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.LG",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.36230",
+        "pdf_url": "https://arxiv.org/pdf/2609.36230"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Transformer token control and consensus are machine-learning dynamics applications.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.36381",
+        "versioned_id": "2609.36381v1",
+        "title": "Su\\^etes: An end-to-end differentiable non-hydrostatic limited-area dynamical core",
+        "authors": [
+          "Tim Whittaker",
+          "Seth Taylor",
+          "Elsa Cardoso-Bihlo",
+          "Alejandro Di Luca",
+          "Alex Bihlo"
+        ],
+        "abstract": "We present Su\\^etes, a fully differentiable, non-hydrostatic, limited-area atmospheric dynamical core implemented in JAX. Su\\^etes includes both a semi-implicit semi-Lagrangian scheme and a Split-Explicit Runge-Kutta scheme with acoustic substepping, enabling applications from coarse regional simulations to convection-permitting dynamics. Its terrain-following geometry, spatial discretization, time integration, initial conditions, lateral boundary treatment, and included physical parameterizations are all compatible with reverse-mode automatic differentiation. A single reverse-mode pass can therefore compute sensitivities of forecast diagnostics to selected initial and boundary fields, physical parameters, topography, and computational geometry. We provide a series of numerical experiments---including a tracer-source inverse problem, a sensitivity analysis of a three-dimensional squall-line, adversarial perturbation construction an ERA5-driven downslope hurricane force wind event, topography optimization, and terrain-following coordinate optimization---demonstrating the versatility of Su\\^etes as a framework for gradient-based diagnosis and model development at regional and convection-permitting scale.",
+        "announce_type": "cross",
+        "categories": [
+          "physics.ao-ph",
+          "math.DS",
+          "physics.flu-dyn"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.36381",
+        "pdf_url": "https://arxiv.org/pdf/2609.36381"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "A differentiable atmospheric numerical core is outside the central mathematical research themes.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.36566",
+        "versioned_id": "2609.36566v1",
+        "title": "On the Lack of Periodicity of Walker Satellite Constellation Routing Tables",
+        "authors": [
+          "Chang-Sik Choi",
+          "Fran\\c{c}ois Baccelli"
+        ],
+        "abstract": "In a referential that rotates with Earth, the dynamics of the configurations of satellites in a Delta Walker constellation can be analyzed as a dynamical system as a function of a translation on the torus. This paper extends this type of analysis to routing over a Walker constellation, leveraging fixed ground relays. It considers any deterministic, time-invariant routing rule on such a collection of satellites and relays. The main object of interest is the routing table associated with this rule, which specifies, for all source-destination pairs, a route made of satellites and relays between them, for instance the shortest, together with angular information on next hop at each step of the route, which is essential for beamforming in this context. The main result is that, for each such routing rule, the routing table inherits the dichotomy of the torus flow: when the ratio of the Earth-spin and satellite angular speeds is rational, the routing table process is periodic with the same period as the constellation. When it is irrational, the table is non periodic but admits ergodic long-run averages which can be computed as ensemble averages w.r.t. an explicit invariant measure. Simulations with mixed satellite--gateway greedy routing illustrate these findings in terms of both temporal and spectral properties of the Walker routing table time series. The paper also discusses how to define metrics that cope with such non periodic fluctuations when present. This is illustrated by a comparison of the round-trip times between two far away cities as offered by a Walker constellation using greedy routing on one side, and by the currently available terrestrial fiber on the other side. It is shown how ergodicity can be used to make this comparison between the time varying instantaneous round trip times of the constellation and the constant round trip time of the fiber network meaningful.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.IT",
+          "cs.NI",
+          "math.DS",
+          "math.IT"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.36566",
+        "pdf_url": "https://arxiv.org/pdf/2609.36566"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Torus rotations and ergodic averages appear in an applied satellite-routing problem.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.37020",
+        "versioned_id": "2609.37020v1",
+        "title": "On random Binomial-Fibonacci sequences",
+        "authors": [
+          "Bernard Bercu",
+          "Fabrice Gamboa"
+        ],
+        "abstract": "Motivated by the pioneer work of Viswanath \\cite{VIS2000} on random Fibonacci sequences and the development of random Euclidean addition chains in cryptography, we introduce a new family of random Binomial-Fibonacci sequences. We study the asymptotic behavior of their finite-time Lyapunov exponents. In the special case of random Bernoulli-Fibonacci sequences, we show that they convergence almost surely to an explicit Lyapunov exponent and prove a central limit theorem with an explicit formula for the variance. We also show that they satisfy a large deviation principle.",
+        "announce_type": "cross",
+        "categories": [
+          "math.PR",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.37020",
+        "pdf_url": "https://arxiv.org/pdf/2609.37020"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Lyapunov exponents and limit laws for random recurrences are related ergodic questions; compact in this capped batch.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.37438",
+        "versioned_id": "2609.37438v1",
+        "title": "The Dry Ten Martini Problem for subcritical Type I operators",
+        "authors": [
+          "Lingrui Ge"
+        ],
+        "abstract": "We supply the details of the subcritical dry Ten Martini statement announced in [6, Remark 1.3]: for every irrational frequency, every subcritical Type I energy with resonant rotation number is an endpoint of an open spectral gap. The proof combines the all-frequency Puig argument developed there with quantitative almost reducibility. A different proof was recently given by Li [7].",
+        "announce_type": "cross",
+        "categories": [
+          "math.SP",
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.37438",
+        "pdf_url": "https://arxiv.org/pdf/2609.37438"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Quasiperiodic spectral gaps and almost reducibility connect cocycle dynamics and spectral theory; compact in this capped batch.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.37505",
+        "versioned_id": "2609.37505v1",
+        "title": "Reduced-Order Model Characterization of Nonlinear Sustained Oscillations",
+        "authors": [
+          "Kaiyang Huang",
+          "Dan Wilson",
+          "Kai Sun"
+        ],
+        "abstract": "Nonlinear sustained oscillations involving inverter-based resources can happen when device and network interactions produce an attracting limit cycle around an unstable equilibrium. A damping controller must then describe nonlinear dynamics over the region between the two invariant sets, where a local equilibrium linearization can be insufficient. In this paper, a controlled phase--isostable model is first developed on a two-dimensional invariant manifold connecting the equilibrium and the limit cycle. Dynamics on this surface are represented by phase and isostable coordinates, while physical states and control inputs are related to these coordinates through nonlinear reconstruction and response functions. The required functions are computed from connecting trajectories and periodic-orbit data. A control strategy is then designed to provide extra damping while limiting phase distortion. Case studies on a two-area system and an IEEE 39-bus system demonstrate more effective oscillation damping than the compared equilibrium-linearized designs under the same conditions.",
+        "announce_type": "cross",
+        "categories": [
+          "eess.SY",
+          "cs.SY",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.37505",
+        "pdf_url": "https://arxiv.org/pdf/2609.37505"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Reduced nonlinear oscillation models target power-system damping control.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.37506",
+        "versioned_id": "2609.37506v1",
+        "title": "Isostable-Based Nonlinear Model Reduction for Power System Oscillations",
+        "authors": [
+          "Kaiyang Huang",
+          "Dan Wilson",
+          "Kai Sun"
+        ],
+        "abstract": "Power systems are often represented by high-dimensional dynamic models, making nonlinear control design computationally expensive and limiting its practical application. Oscillation analysis and damping control therefore commonly rely on linearized models, which do not capture the nonlinear oscillatory behavior induced by large disturbances. This paper proposes an isostable-based model reduction method for nonlinear modal analysis of power systems. The method constructs an invariant manifold associated with a selected oscillatory mode and uses isostable coordinates to describe the mode with only two real state variables. The isostable formulation gives linear autonomous modal dynamics, with nonlinear state reconstruction and input response computed on the modal manifold. An optimal damping control problem is then formulated directly in the reduced coordinates. Case studies on the IEEE 39-bus system demonstrate the accuracy of the proposed model in describing nonlinear oscillations and show improved damping compared with control designed using a linear reduced model.",
+        "announce_type": "cross",
+        "categories": [
+          "eess.SY",
+          "cs.SY",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.37506",
+        "pdf_url": "https://arxiv.org/pdf/2609.37506"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Isostable reduction and damping control are power-system engineering topics.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.37752",
+        "versioned_id": "2609.37752v1",
+        "title": "On topologically transitive subsets of flag manifolds",
+        "authors": [
+          "Subhadip Dey",
+          "Sami Douba",
+          "Konstantinos Tsouvalas"
+        ],
+        "abstract": "We discuss some contexts in which the topological dynamics of certain Anosov subgroups of higher-rank Lie groups on \"bad\" subsets of flag manifolds can be analyzed using results from homogeneous dynamics in the infinite-covolume rank-one setting. For example, we show that a group of projective transformations dividing a strictly convex domain in projective space and intersecting Zariski-densely the stabilizer of an ellipsoid has a dense orbit in the complement of the domain, and acts minimally on the space of full projective flags tangent to the domain. This accounts for all known examples of divisible strictly convex domains in sufficiently high dimensions. We also provide examples of Zariski-dense groups that are Anosov in a partial flag manifold but such that the equivariant projection from the Benoist-Guivarc'h limit set in the Furstenberg boundary to the Anosov limit set is not a fibration.",
+        "announce_type": "cross",
+        "categories": [
+          "math.GT",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.37752",
+        "pdf_url": "https://arxiv.org/pdf/2609.37752"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Dense orbits and minimality for group actions on flag manifolds directly concern topological dynamics; compact in this capped batch.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.37944",
+        "versioned_id": "2609.37944v1",
+        "title": "Identifiability Guarantees for Drivers and Dynamics of Delayed Physical Systems",
+        "authors": [
+          "Julien Boussard",
+          "Antoine D\\'{e}bouchage",
+          "Th\\'{e}o Saulus"
+        ],
+        "abstract": "A wide range of methods have been proposed, including physics-informed neural networks, which are powerful but do not guarantee identifiability of the dynamics, symbolic regression, which requires a set of precomputed operations, and causal discovery, which is more principled but usually relies on strong assumptions that physical systems may violate. In this work, we develop a theory-grounded method and prove that under a set of permissive assumptions, the structural drivers and drift of stochastic delayed differential equations are identifiable. Our method outperforms others on a benchmark for driver identifiability, and on a second benchmark to evaluate physical consistency of the learned dynamics.",
+        "announce_type": "cross",
+        "categories": [
+          "stat.ML",
+          "cs.LG",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2609.37944",
+        "pdf_url": "https://arxiv.org/pdf/2609.37944"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Identifiability of delayed stochastic systems focuses on data-driven physical modeling.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2401.07549",
+        "versioned_id": "2401.07549v4",
+        "title": "Computability of extender sets in multidimensional subshifts: asymptotic growths, dynamical constraints",
+        "authors": [
+          "Antonin Callard",
+          "L\\'eo Paviet Salomon",
+          "Pascal Vanier"
+        ],
+        "abstract": "Subshifts are sets of colorings of $\\mathbb{Z}^d$ defined by families of forbidden patterns. In a given subshift, the extender set of a finite pattern is the set of all its admissible completions. Since soficity of $\\mathbb{Z}$ subshifts is equivalent to having a finite number of extender sets, it had been conjectured that the number of extender sets could provide a way to separate the classes of sofic and effective subshifts in higher dimensions. We investigate some computational characterizations of extender sets in multidimensional subshifts, and in particular their growth, in terms of extender entropies (arXiv:1711.07515) and extender entropy dimensions. We prove here that sofic and effective subshifts have the same possible extender entropies (exactly the $\\Pi_3$-computable real numbers of $[0,+\\infty)$) and extender entropy dimensions, and investigate the computational complexity of these growth-type quantities under various dynamical and combinatorial constraints.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cs.DM",
+          "cs.CC",
+          "cs.LO",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2401.07549",
+        "pdf_url": "https://arxiv.org/pdf/2401.07549"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Extender entropy and entropy dimension for multidimensional subshifts directly match symbolic dynamics and orbit-complexity interests; selected for the ten-paper main section.",
+        "tldr": "The authors prove that multidimensional sofic and effective subshifts have the same possible extender entropies and the same possible extender entropy dimensions. The possible extender entropies are exactly the \\(\\Pi_3\\)-computable real numbers in \\([0,+\\infty)\\).",
+        "problem": "For subshifts of \\(\\mathbb Z^d\\), an extender set records all admissible completions of a finite pattern. Investigate the computational characterizations and asymptotic growth of these sets, including whether their growth distinguishes sofic from effective subshifts in higher dimensions.",
+        "main_result": "Sofic and effective subshifts have the same possible extender entropies, precisely the \\(\\Pi_3\\)-computable real numbers of \\([0,+\\infty)\\), and the same possible extender entropy dimensions. The authors also investigate the computational complexity of these growth quantities under dynamical and combinatorial constraints; the individual constraints and corresponding conclusions: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Symbolic dynamics and computability of growth invariants for multidimensional subshifts. The abstract contrasts the higher-dimensional question with the characterization of sofic \\(\\mathbb Z\\) subshifts by finiteness of the number of extender sets.",
+        "keywords": [
+          "multidimensional subshifts",
+          "sofic subshifts",
+          "effective subshifts",
+          "extender entropy",
+          "extender entropy dimension",
+          "computability"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2509.06062",
+        "versioned_id": "2509.06062v3",
+        "title": "Dynamics of Two Species with Density-Dependent Interactions and Application to Mutualism",
+        "authors": [
+          "Chlo\\\"e Mian",
+          "Sylvain Billiard",
+          "Violaine Llaurens",
+          "Charline Smadi"
+        ],
+        "abstract": "Ecological interactions shape the dynamics of natural populations in the wild. Density-dependent processes are widespread and may change the respective effects of populations on one another, for instance by shifting interactions from mutualistic to parasitic relationships. Here, we develop a general deterministic model of two interacting populations, assuming density-dependent costs and benefits for the interacting individuals within and between species. This framework aims at generalizing pre-existing population dynamics models involving competition, predation, mutualism and parasitism, by allowing ecological interactions to transition when the respective densities of interacting species change. Through ordinary differential equations and phase portrait analysis, we derive general principles governing these systems, identifying constraints on the organization of equilibria and sufficient conditions for the emergence of certain dynamic behaviors. In particular, we show that equilibrium indices alternate along isoclines under broad geometric assumptions, and that limit cycles can arise when interactions include mutualistic and parasitic phases, while they cannot be generated locally in strictly mutualistic regions where the relevant interaction signs remain fixed. This framework provides a general approach for characterizing the population dynamics of interacting species and highlights the effect of the density-dependent transitions in ecological interactions.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "q-bio.PE",
+          "math.CA",
+          "math.DS"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2509.06062",
+        "pdf_url": "https://arxiv.org/pdf/2509.06062"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Density-dependent species interactions are ecological ODE modeling.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2509.22417",
+        "versioned_id": "2509.22417v2",
+        "title": "Uniform Hyperbolicity, Bandgaps and Edge Modes in Aperiodic Systems of Subwavelength Resonators",
+        "authors": [
+          "Habib Ammari",
+          "Clemens Thalhammer",
+          "Alexander Uhlmann"
+        ],
+        "abstract": "We aim to characterise the spectral distributions of bi-infinite, semi-infinite, and finite aperiodic one-dimensional arrays of subwavelength resonators, constructed by sampling from a finite library of building blocks. By adopting the modern formalism of uniform hyperbolicity, we are able to strengthen and rigorously prove a Saxon-Hutner-type result, characterising the spectral gaps of the composite bi-infinite aperiodic system in terms of its constituent blocks through a strict multicone criterion. Crucial to this approach is a change of basis from transfer matrices to propagation matrices, allowing for a block-level characterisation. This approach also enables an explicit characterisation of edge-induced eigenmodes in the semi-infinite setting. Finally, we leverage finite section methods for Jacobi operators to extend our results to finite systems -- providing strict bounds for their spectra in terms of their constituent blocks.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math-ph",
+          "cond-mat.dis-nn",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-09-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2509.22417",
+        "pdf_url": "https://arxiv.org/pdf/2509.22417"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Uniform hyperbolicity and aperiodic transfer systems give a symbolic connection, with the main application to resonator spectra.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 1,
+    "RELATED / POSSIBLY INTERESTING": 0,
+    "LOW PRIORITY": 21
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-09-30T09:28:55.655378Z",
+      "feed_published_at": "2026-09-30T00:00:00-04:00",
+      "feed_build_at": "2026-09-30T04:00:30Z",
+      "feed_date": "2026-09-30",
+      "sha256": "b8479b8d58bd917d0f8ef22c3d3c304babe24865f0e224c150fdb6b1fab3bbce",
+      "byte_length": 45858,
+      "capture_run_url": "https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/36696367696"
+    }
+  ]
+}

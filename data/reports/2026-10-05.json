@@ -1,0 +1,744 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-10-05",
+  "generated_at": "2026-10-05T15:05:46.060390Z",
+  "feed_build_at": "2026-10-05T04:00:23Z",
+  "category": "math.DS",
+  "analysis_source": "Codex desktop",
+  "overview": "This report covers 20 unseen announcements: 2 HIGH PRIORITY, 0 RELATED / POSSIBLY INTERESTING, and 18 LOW PRIORITY. For this one-time backlog release covering 243 papers announced from 2026-09-24 through 2026-10-05, the main selection is limited to ten papers across all eight reports. The full entries concern symbolic survivor systems with entropy and dimension, and Sturmian beta-shifts without typical periodic optimization. All remaining entries are retained in compact form under this reading-budget cap; their placement does not imply a judgment about research quality or lack of topical relevance.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2610.02335",
+        "versioned_id": "2610.02335v1",
+        "title": "A Lean~4 Framework for the Radii Polynomial Method",
+        "authors": [
+          "Fengyang Wang"
+        ],
+        "abstract": "Computer-assisted proofs in dynamics establish results about nonlinear systems by rigorous numerical computation. Their correctness rests on a trusted base of interval-arithmetic libraries and analytic estimates checked by hand. We formalize in Lean~4 a framework for the radii polynomial method, which certifies an exact solution near a numerical approximation by verifying four norm bounds and the resulting polynomial inequality. Weighted coefficient algebras provide the common setting for polynomial equations and initial value problems in Taylor and Chebyshev series. Their universal properties construct the bounded operators and the evaluation maps, and the universal property of the free commutative algebra makes polynomial substitution commute with evaluation. Finite/tail reductions turn the four norm bounds into finite rational inequalities, which are checked in Lean. The radii theorem then yields an exact coefficient solution, and realization theorems carry it to a solution of the original equation. The worked examples are a square-root branch given by a convergent power series and polynomial initial value problems, among them the Lorenz system, for which the library proves existence, uniqueness within the trajectory ball, and analyticity of the function-level solution.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.02335",
+        "pdf_url": "https://arxiv.org/pdf/2610.02335"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Formal verification of numerical existence proofs is useful methodology but outside the ten closest topic selections.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.02637",
+        "versioned_id": "2610.02637v1",
+        "title": "Higher-Order Kolmogorov-Arnold Networks for Dynamics",
+        "authors": [
+          "Kevin Slote",
+          "Jeremie Fish"
+        ],
+        "abstract": "The ability to derive the governing equations of a dynamical system from data is essential for prediction and control across many scientific fields. Two challenges, however, are the expansion of candidate terms when reducing higher-order equations to first-order form and noise from estimating derivatives. We propose Higher-Order-KANDy, which addresses both problems by using delay and derivative (\"jet\") embeddings of the original data with derivative-ordered Kolmogorov-Arnold Networks for Dynamics (KANDy) layers stacked into a machine learning architecture. Compared with SINDy and WSINDy on noisy data, Higher-Order-KANDy learns governing equations without a candidate library (e.g., recovering the full-period $-\\sin(u)$ with nothing named in advance), natively for higher-order systems, and holds the correct term structure as noise grows, selecting the exact active set on every seed at noise levels up to 7.5% where an oracle weak-form regression admits a spurious term, though the oracle remains the more accurate coefficient estimator. We leverage the relationship between delay and differential embeddings, along with the Kolmogorov-Arnold representation theorem, to construct a delay-to-jet map and learn it as a Kolmogorov-Arnold network to preserve derivative structure and provide meaningful terms that appear in the governing equation. In our synthetic benchmarks, this construction recovers equations in the presence of coarse sampling and noise.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.02637",
+        "pdf_url": "https://arxiv.org/pdf/2610.02637"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Learning governing equations from data is peripheral to the core research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.02686",
+        "versioned_id": "2610.02686v1",
+        "title": "Asymptotic approximation of sensitivities in finite dimensional continuous data assimilation with application to parameter estimation",
+        "authors": [
+          "Joshua Newey",
+          "Jared P. Whitehead"
+        ],
+        "abstract": "We develop a rigorous justification for a parameter estimation algorithm which couples continuous data assimilation to generic optimization. For finite dimensional systems, we provide a rigorous justification of an asymptotic approximation of the sensitivity for the underlying modeled dynamical system, prove that the $L^2$ loss function satisfies an approximate Polyak-Lojasiewicz inequality, and use that result to justify convergence of gradient descent for the proposed algorithm. Numerical examples are provided that demonstrate the precision of the rigorous results.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.02686",
+        "pdf_url": "https://arxiv.org/pdf/2610.02686"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Data-assimilation parameter estimation is peripheral to the core research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.03004",
+        "versioned_id": "2610.03004v1",
+        "title": "Some open billiards with distinct top Lyapunov exponents",
+        "authors": [
+          "Amal Al Dowais",
+          "Luchezar Stoyanov"
+        ],
+        "abstract": "We study open billiard flows in $\\mathbb{R}^3$ generated by reflections in the exterior of at least three ellipsoids with $C^3$ boundaries. Each obstacle is congruent to $$\\tilde{K} = \\{(x,y,z)\\in \\mathbb{R}^3 : x^2+y^2+(\\beta z)^2 \\leq r^2\\},$$ with parameter $\\beta>1$, small radii, and centers $O_i$ lying in the plane $\\Gamma=\\{z=0\\}$. The configuration satisfies the no-eclipse condition (H). For any Gibbs measure on the non-wandering set of the billiard ball map, we prove that if $\\beta>1/c_1^2$, for some constant $c_1>0$ determined by the geometry of the configuration, the two positive Lyapunov exponents are distinct and positive: $\\lambda_1(\\beta)>\\lambda_2(\\beta)>0$. Moreover, $\\lambda_2$ is independent of $\\beta$ and corresponds to the restriction of the billiard flow to the plane $\\Gamma$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.03004",
+        "pdf_url": "https://arxiv.org/pdf/2610.03004"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Gibbs measures and Lyapunov exponents in billiards are relevant, but retained compactly under the ten-paper cap.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.03229",
+        "versioned_id": "2610.03229v1",
+        "title": "Non-freezing of the proximity digraph and non-pseudostable convergence in heterogeneous Hegselmann--Krause models: Counterexamples to conjectures and results of Mirtabatabaei and Bullo",
+        "authors": [
+          "Peter Hegarty",
+          "Damiano Ognissanti",
+          "Edvin Wedin"
+        ],
+        "abstract": "In 2012, Mirtabatabaei and Bullo studied heterogeneous Hegselmann--Krause models of opinion dynamics, where different agents may have different confidence or influence bounds. They conjectured that opinion vectors always converge, a fundamental problem that remains open. In support of this main conjecture they gave some partial results and made some auxiliary conjectures. Here we give counterexamples to two of these auxiliary conjectures, and even to one theorem in their paper. We explain why these disproved conjectures and false theorem nevertheless likely remain valid for almost all initial opinion vectors. In the last section (Section 7), we describe the role of AI in the production of the results in this paper.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CO"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.03229",
+        "pdf_url": "https://arxiv.org/pdf/2610.03229"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Opinion-dynamics convergence counterexamples are peripheral to the core research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.03299",
+        "versioned_id": "2610.03299v1",
+        "title": "Weakly non-linear analysis of phototaxis-induced bioconvection in an isotropic scattering algal suspension under normal and oblique collimated irradiation",
+        "authors": [
+          "S. K. Rajput",
+          "A. Rathi"
+        ],
+        "abstract": "We investigate the weakly nonlinear evolution of phototaxis-induced bioconvection in an absorbing and isotropically scattering algal suspension subjected to oblique and normal collimated irradiation. Two hydrodynamic configurations are considered, a rigid lower boundary with either a stress-free or a rigid upper surface. A multiple-scales expansion is carried to third order, and the Fredholm solvability condition yields a Stuart--Landau equation for the amplitude of the critical mode. Oblique irradiation affects the onset threshold in opposite ways in the two configurations. It progressively lowers the critical Rayleigh number beneath a stress-free surface and progressively raises it beneath a rigid surface. Beneath a stress-free surface the onset remains stationary, but the pitchfork bifurcation changes from supercritical to subcritical and becomes strongly subcritical at large incidence angles, where the preferred pattern wavelength also increases markedly. Beneath a rigid surface the critical mode changes from stationary to oscillatory at moderate obliquity, giving a supercritical Hopf bifurcation, and returns to stationary at large obliquity, where the pitchfork bifurcation becomes subcritical.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.03299",
+        "pdf_url": "https://arxiv.org/pdf/2610.03299"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Bioconvection bifurcation analysis is peripheral to the core research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.03327",
+        "versioned_id": "2610.03327v1",
+        "title": "Open dynamical systems in topologically expansive decreasing Lorenz maps",
+        "authors": [
+          "Yiming Ding",
+          "Wolfgang Steiner",
+          "Yun Sun"
+        ],
+        "abstract": "We develop a parity-sensitive admissibility theory for topologically expansive decreasing Lorenz maps. By embedding them into the standard circle map $m_{-2}$, we realize every decreasing-admissible pair. We then study the negative doubling map $T_{-2}$ with a hole $(a,b)$, where $0<a\\leq1/2\\leq b<1$. Using the alternating lexicographic order, we classify plateaux of the symbolic survivor spaces. Under weak admissibility and strict shifted ordering, the boundary subshifts are realized as kneading spaces of decreasing Lorenz maps. We also establish entropy correspondences across countable itinerary discrepancies in completed survivor systems. For fixed $a$, we prove that $b\\mapsto\\dim_{\\mathrm H}S_{-2}(a,b)$ is a devil's staircase, possibly constant. Under the pullback-null condition~(P), we obtain the corresponding survivor-entropy result for expansive decreasing Lorenz maps. We verify this condition for the piecewise-linear family in Example 5.1.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.03327",
+        "pdf_url": "https://arxiv.org/pdf/2610.03327"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The combination of symbolic survivor spaces, kneading subshifts, entropy and Hausdorff dimension is exceptionally close to the core research profile; selected among the ten full digests in this backlog batch.",
+        "tldr": "The authors develop admissibility and symbolic-survivor theory for topologically expansive decreasing Lorenz maps and the negative doubling map with a hole. They obtain entropy correspondences and a possibly constant devil's staircase for survivor-set Hausdorff dimension, with an additional pullback-null condition for the Lorenz survivor-entropy conclusion.",
+        "problem": "Understand admissible itineraries, symbolic survivor-space plateaux, entropy and survivor-set dimension in open systems associated with decreasing Lorenz maps.",
+        "main_result": "The abstract states that every decreasing-admissible pair is realized by embedding into the standard circle map \\(m_{-2}\\). For the negative doubling map with a hole \\((a,b)\\), where \\(0<a\\leq 1/2\\leq b<1\\), it classifies symbolic survivor-space plateaux. Under weak admissibility and strict shifted ordering, the boundary subshifts are realized as kneading spaces. Entropy correspondences hold across countable itinerary discrepancies in completed survivor systems. For fixed \\(a\\), the function \\(b\\mapsto\\dim_{\\mathrm H}S_{-2}(a,b)\\) is a devil's staircase, possibly constant. The corresponding survivor-entropy statement for expansive decreasing Lorenz maps assumes the pullback-null condition \\((P)\\), which the authors verify for a piecewise-linear family. The precise condition and family are not described: Not specified in the abstract.",
+        "methods": [
+          "Embedding decreasing Lorenz maps into the standard circle map \\(m_{-2}\\).",
+          "Alternating lexicographic order and parity-sensitive admissibility."
+        ],
+        "context": "Open dynamical systems, symbolic coding, Lorenz kneading theory, topological entropy and Hausdorff dimension of survivor sets.",
+        "keywords": [
+          "decreasing Lorenz maps",
+          "survivor subshifts",
+          "kneading spaces",
+          "entropy",
+          "Hausdorff dimension",
+          "devil's staircase"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.03619",
+        "versioned_id": "2610.03619v1",
+        "title": "Sturmian beta-shifts do not have typical periodic optimization",
+        "authors": [
+          "Wen Huang",
+          "Oliver Jenkinson",
+          "Leiye Xu",
+          "Yiwei Zhang"
+        ],
+        "abstract": "A shift space is said to have typical periodic optimization (TPO) if the set of Lipschitz functions whose unique maximizing measure is supported on a periodic orbit contains an open dense subset of the space of Lipschitz functions. We show that beta-shifts whose lexicographically largest point is a Sturmian sequence do not have TPO: on each such beta-shift there is a non-empty open set of Lipschitz functions, all of which have the Sturmian measure as their unique maximizing measure. These are the first known examples of beta-shifts without TPO, and, since they have the specification property, the first known examples of shift spaces with specification but without TPO. The corresponding beta-transformations do not have TPO in any space of H\\\"older functions on the interval. The main ingredient in the proof of these results is a rigidity property of Sturmian subshifts: modulo constants and Lipschitz coboundaries, the space of Lipschitz functions on such a subshift is one-dimensional.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.03619",
+        "pdf_url": "https://arxiv.org/pdf/2610.03619"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Sturmian subshifts, specification, ergodic optimization and maximizing measures directly match the strongest symbolic-dynamics interests; selected among the ten full digests in this backlog batch.",
+        "tldr": "Beta-shifts whose lexicographically largest point is Sturmian fail typical periodic optimization despite having specification. Each admits a nonempty open set of Lipschitz potentials with the Sturmian measure as the unique maximizing measure.",
+        "problem": "Determine whether typical periodic optimization holds for Sturmian beta-shifts, and whether specification suffices for this property. Here typical periodic optimization means that Lipschitz potentials with a unique periodic-orbit maximizing measure contain an open dense subset of the Lipschitz function space.",
+        "main_result": "For each beta-shift whose lexicographically largest point is a Sturmian sequence, the authors exhibit a nonempty open set of Lipschitz functions, all having the Sturmian measure as their unique maximizing measure. They describe these as the first known beta-shifts without typical periodic optimization and the first known shift spaces with specification but without this property. The corresponding beta-transformations fail typical periodic optimization in every space of Hölder functions on the interval. The key rigidity statement is that Lipschitz functions on a Sturmian subshift, modulo constants and Lipschitz coboundaries, form a one-dimensional space.",
+        "methods": [
+          "Rigidity of Lipschitz functions on Sturmian subshifts modulo constants and Lipschitz coboundaries."
+        ],
+        "context": "Ergodic optimization on beta-shifts and beta-transformations, specification, Sturmian symbolic dynamics and cohomology of Lipschitz potentials.",
+        "keywords": [
+          "Sturmian subshifts",
+          "beta-shifts",
+          "specification",
+          "ergodic optimization",
+          "maximizing measures",
+          "Lipschitz coboundaries"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.02348",
+        "versioned_id": "2610.02348v1",
+        "title": "Arithmetic growth in partially commutative semigroups of endomorphisms",
+        "authors": [
+          "Wade Hindes"
+        ],
+        "abstract": "We establish asymptotics for the degree and height growth rate functions of partially commutative semigroups of endomorphisms of varieties, i.e., semigroups where the only relations between generators, if any, are commuting ones. To do this, we prove a general result connecting the growth rates of two abstract functions, one multiplicative and one simply nonnegative, subject to a Tate telescoping hypothesis and a sufficiently nice normal form on the underlying semigroup. Finally, we construct several new families of endomorphisms on which our asymptotics apply. To do this, we generalize the standard ping-pong lemma for elements to a ping-pong lemma for subsemigroups.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.02348",
+        "pdf_url": "https://arxiv.org/pdf/2610.02348"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Arithmetic growth of endomorphism semigroups is related, but outside this batch's ten closest selections.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.02564",
+        "versioned_id": "2610.02564v1",
+        "title": "Learning Closure of Dynamical Systems with Kernel Ridge Regression",
+        "authors": [
+          "Evan Habbershaw",
+          "John Harlim",
+          "Senwei Liang"
+        ],
+        "abstract": "We develop a closure modeling framework for identifying missing components of dynamical systems using Kernel Ridge Regression (KRR). The framework addresses two classes of closure problems: difference-equation closures arising in ODE and PDE settings, and algebraic closures arising from moment closure in kinetic equations. For the first class, we derive an error bound in an ODE setting that quantifies contributions from time integration, approximation of unresolved scales, and interpolation required to couple unresolved-scale effects to the resolved solver. Numerical experiments on the Lorenz-63 system and the Kuramoto-Sivashinsky equation demonstrate accurate long-horizon predictions and substantial improvements over an LSTM-based closure model. For the second class, we consider moment closure for a one-dimensional kinetic equation by modeling discrepancies between kinetic and macroscopic fluxes as a function of the resolved macroscopic variables. We compare global KRR models based on PCA coordinates with spatially local models. While the global model performs well for unimodal initial conditions, its accuracy deteriorates for bimodal initial conditions. Spatially local models with appropriate modeling inputs improve robustness and achieve higher predictive accuracy.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NA",
+          "cs.LG",
+          "cs.NA",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.02564",
+        "pdf_url": "https://arxiv.org/pdf/2610.02564"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Machine-learned dynamical closure models are peripheral to the core research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.02807",
+        "versioned_id": "2610.02807v1",
+        "title": "Categorical Dynamics of Abelian Varieties",
+        "authors": [
+          "Yu-Wei Fan"
+        ],
+        "abstract": "We establish several general results on the categorical dynamics of abelian varieties. (1) We prove the exponential and polynomial Gromov--Yomdin equalities for every autoequivalence of the derived category of an arbitrary abelian variety. The exponential equality extends earlier results of Kikuta for elliptic curves and of Yoshioka for abelian surfaces and simple abelian varieties. (2) We prove the categorical polynomial entropy of every autoequivalence is bounded above by $g^2$, where $g$ is the dimension of the abelian variety. This gives a categorical generalization of the polynomial log-volume growth of Lin--Oguiso--Zhang and recovers their upper bound as a direct consequence. (3) We identify the shifting number of every autoequivalence of an abelian variety with the pullback of the normalized Barge--Ghys symplectic translation number on the universal cover of $\\text{Sp}(4g,\\mathbb{R})$. (4) We prove that the set of reduced shifting numbers is finite if and only if the nef cone is rational polyhedral. Moreover, when this set is infinite, there exists an autoequivalence with transcendental shifting number. In particular, this gives a negative answer to a question of Dimitrov--Haiden--Katzarkov--Kontsevich concerning the algebraicity of categorical entropy functions.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AG",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.02807",
+        "pdf_url": "https://arxiv.org/pdf/2610.02807"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Categorical entropy is conceptually related, but its algebraic setting falls outside this batch's ten closest selections.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.02950",
+        "versioned_id": "2610.02950v1",
+        "title": "Memory-Dependent Interval Markov Chain Abstractions of Stochastic Dynamics",
+        "authors": [
+          "Menno van Zutphen",
+          "Adrien Banse",
+          "Domagoj Herceg",
+          "Giannis Delimpaltadakis",
+          "Duarte Antunes"
+        ],
+        "abstract": "Finite-state interval Markov-chain (IMC) abstractions provide sound verification and performance bounds for continuous-state stochastic systems by enclosing cell-to-cell transition probabilities and costs in intervals. Finite-state Markovian abstractions are generally lossy, as state aggregation often destroys the Markov property. Recently, memory-dependent Markov-chain (MC) abstractions of stochastic systems have been developed to mitigate this by recording recently visited cells. In this paper, we develop the memory-dependent extension of IMC abstractions. Building on the insight that memory narrows the family of state distributions that could occur inside the current cell, we prove that memory tightens the local intervals, at the price of a larger abstraction. We also formulate no-memory IMC abstractions, tightening classic IMC abstraction intervals without enlarging the state space. To characterize spatial refinement relative to memory, we derive two cost-guarantee tightness upper bounds. The bounds depend, respectively, on cell size, and on the worst-case remaining distributional ambiguity after filtering over the remembered past. We then specialize our result to linear-Gaussian systems, for which we derive a closed-form upper bound on this ambiguity. Numerical examples show that the memory-dependent and no-memory constructions can produce tighter expected-cost intervals than comparable partition refined models.",
+        "announce_type": "cross",
+        "categories": [
+          "eess.SY",
+          "cs.SY",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.02950",
+        "pdf_url": "https://arxiv.org/pdf/2610.02950"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Markov abstractions for stochastic-system verification are peripheral to the core research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.03275",
+        "versioned_id": "2610.03275v1",
+        "title": "How suboptimal is my stochastic network controller allowed to be? Completion certificates with application to power grids hosting AI data centers",
+        "authors": [
+          "Michael Chertkov"
+        ],
+        "abstract": "Power grids are beginning to host AI data centers whose demand can change abruptly and in a correlated way, and operators and planners must decide whether existing controllers can absorb the resulting transients and where new flexibility is worth installing. We cast this as a question in stochastic control: how far from optimal is an implementable controller? For controlled diffusions with affine, state-independent actuation, additive and possibly degenerate noise and quadratic control cost, any Hamilton-Jacobi-Bellman (HJB) subsolution bounds the optimal cost from below and simulation bounds the deployed cost from above, so their gap certifies the permissible suboptimality. We construct subsolutions from path-integral control by completing the control geometry: enlarging the control Gramian until it matches the physical noise makes the problem linearly solvable, and its Feynman-Kac value is an automatic lower bound whose HJB residual is exactly the energy of the fictitious control. A dual noise-deflation construction can be tighter but requires a curvature condition. The geometry yields planning rules: price control authority in proportion to local noise variance, and use shadow values to guide sparse reinforcement. For nonlinear stochastic swing dynamics of the IEEE 118-bus system after a severe load loss, a simple generator controller is certified within 2.8% of optimal under homogeneous forcing; under heterogeneous forcing the gap is 39% with uniform prices and 1.2% once the same total authority is repriced, before any hardware is added.",
+        "announce_type": "cross",
+        "categories": [
+          "eess.SY",
+          "cs.SY",
+          "math.DS",
+          "physics.soc-ph"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.03275",
+        "pdf_url": "https://arxiv.org/pdf/2610.03275"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Power-grid stochastic control is peripheral to the core research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.03281",
+        "versioned_id": "2610.03281v1",
+        "title": "Efficiently and Reliably Measuring Information Processing Capacity in Dynamical Systems via Kernels",
+        "authors": [
+          "Alessio Benavoli",
+          "Felix Binder",
+          "Cangxiong Chen"
+        ],
+        "abstract": "Information Processing Capacity (IPC) is a powerful system-agnostic metric for quantifying a dynamical system's computational capability and is widely used in quantum reservoir computing. However, standard IPC suffers from severe computational limitations. Computing IPC involves estimating how well the system can reconstruct, via linear regression, an (in principle) infinite family of orthogonal polynomial functions of delayed inputs. In practice, this evaluation must be made finite, so we need only to consider polynomials up to a chosen maximum degree. Moreover, the computational complexity for computing IPC grows combinatorially with the considered maximum degree and delay. Here, we introduce Kernel-IPC (KIPC), a scalable framework that uses kernel methods to compute the total IPC without explicitly enumerating basis functions. This allows us to account for the full (infinite) basis (without degree truncation). We also provide a null-hypothesis test for statistically comparing the KIPC of two dynamical systems. We validate KIPC on an echo state network and demonstrate its utility for quantum reservoir computing on a disordered spin chain.",
+        "announce_type": "cross",
+        "categories": [
+          "quant-ph",
+          "cs.IT",
+          "math.DS",
+          "math.IT"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.03281",
+        "pdf_url": "https://arxiv.org/pdf/2610.03281"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Reservoir-computing capacity estimation is peripheral to the core research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.03561",
+        "versioned_id": "2610.03561v1",
+        "title": "Differential inclusions and the chattering phenomenon",
+        "authors": [
+          "Martin Ivanov"
+        ],
+        "abstract": "This is a very first draft of a manuscript about existence of solutions of differential inclusions involving chattering.",
+        "announce_type": "cross",
+        "categories": [
+          "math.OC",
+          "math.CA",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.03561",
+        "pdf_url": "https://arxiv.org/pdf/2610.03561"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Differential-inclusion existence with chattering is peripheral to the core research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2408.11781",
+        "versioned_id": "2408.11781v2",
+        "title": "Visiting early at prime times",
+        "authors": [
+          "Tony Haddad",
+          "Sun-Kai Leung",
+          "Cihan Sabuncu"
+        ],
+        "abstract": "Given an integer $m \\geqslant 2$ and a sufficiently large $q$, we prove that there always exists an arithmetic progression with common difference $q$ for which the $m$-th least prime in such progression is $\\ll q \\exp(3.8075 m)$. This is obtained using a minorant for the indicator of primes in the Maynard--Tao sieve, in parallel with Baker--Irving and Stadlmann's work on bounded gaps between primes. The dependence on $q$ is best possible. Furthermore, we generalize our result to dynamical systems. The quality of the result depends crucially on the first return time, which we illustrate in the case of Diophantine approximation.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2408.11781",
+        "pdf_url": "https://arxiv.org/pdf/2408.11781"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Prime-time recurrence has a dynamical connection, but remains compact under the ten-paper cap.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2601.15411",
+        "versioned_id": "2601.15411v3",
+        "title": "Asymptotic behaviour of coupled random dynamical systems with multiscale aspects",
+        "authors": [
+          "D. Russell Luke",
+          "Johannes-Carl Schnebel",
+          "Mathias Staudigl",
+          "Juan Peypouquet",
+          "Siqi Qu"
+        ],
+        "abstract": "We examine a class of stochastic differential inclusions involving multiscale effects designed to solve a class of generalized variational inequalities. This class of problems contains constrained convex non-smooth optimization problems, constrained saddle-point problems and various equilibrium problems in economics and engineering. In order to respect constraints we adopt a penalty approach, introducing an explicit time-dependency into the evolution system. The resulting dynamics are described in terms of a non-autonomous stochastic evolution equation governed by maximally monotone operators in the drift and perturbed by a Brownian motion. We study the asymptotic behavior, as well as finite time convergence rates in terms of gap functions. The condition we use to prove convergence involves a Legendre transform of the function describing the set constrained domain, a condition first used by Attouch and Czarnecki (J. Differ. Equations, Vol. 248, Issue 6, 2010) in the context of deterministic evolution equations. We also establish a large deviations principle showing that individual trajectories exhibit exponential concentration around the solution set. Finally we show how our continuous-time approach relates to penalty-regulated algorithms of forward-backward type after performing a suitable Euler-Maruyama discretization.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.OC",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2601.15411",
+        "pdf_url": "https://arxiv.org/pdf/2601.15411"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Stochastic multiscale optimization dynamics are peripheral to the core research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2602.02562",
+        "versioned_id": "2602.02562v2",
+        "title": "A Distinct Communication Strategies Model of the Double Empathy Problem",
+        "authors": [
+          "Enrique Calderoli",
+          "Tiago Figueiredo",
+          "Maria Cristina Varriale",
+          "Fl\\'avio Kapczinski"
+        ],
+        "abstract": "The double empathy problem reframes social difficulties between autistic and non-autistic people as reciprocal rather than as deficits located exclusively within the autistic individual. While there has been ample discussion about communicative compatibility, interaction cost, and affective resonance in cross-neurotype interactions, no mechanistic model of how these processes interact has been proposed. Here we build a feedback-loop mathematical model that would theoretically reproduce the empathy degradation observed during communication in neurotypical-autistic pairs solely due to differences in communication preferences of each neurotype. Numerical simulations of dyadic interactions show the model, whose mechanism is based solely on channel preferences, can illustrate the breakdown of empathic bonding observed clinically. This mathematical model presents testable predictions regarding the verbal dimension of dyadic empathic bonding and represents a promising step towards a formal account of a broader framework of social interaction dynamics of neurodivergent individuals and possible mitigation strategies for the double empathy problem.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "physics.soc-ph",
+          "math.DS",
+          "q-bio.NC"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2602.02562",
+        "pdf_url": "https://arxiv.org/pdf/2602.02562"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Communication-preference modeling is peripheral to the core research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2602.16258",
+        "versioned_id": "2602.16258v2",
+        "title": "A zero-one law for improvements to Dirichlet's theorem in arbitrary dimension",
+        "authors": [
+          "Andreas Str\\\"ombergsson",
+          "Shucheng Yu"
+        ],
+        "abstract": "Let $\\psi$ be a continuous decreasing function defined for all sufficiently large positive real numbers. We say that a real $m\\times n$ matrix $A$ is $\\psi$-Dirichlet if for every sufficiently large real number $t$, one can find $\\mathbf{p} \\in \\mathbb{Z}^m$, $\\mathbf{q} \\in \\mathbb{Z}^n\\setminus\\{\\mathbf{0}\\}$ satisfying $\\|A\\mathbf{q}-\\mathbf{p}\\|^m< \\psi({t})$ and $\\|\\mathbf{q}\\|^n<t$. By removing a technical condition from a partial zero-one law proved by Kleinbock-Str\\\"ombergsson-Yu, we prove a zero-one law for the Lebesgue measure of the set of $\\psi$-Dirichlet matrices provided that $\\psi(t)<1/t$ and $t\\psi(t)$ is increasing. In fact, we prove the zero-one law in a more general situation with the monotonicity assumption on $t\\psi(t)$ replaced by a weaker condition. Our proof follows the dynamical approach of Kleinbock-Str\\\"ombergsson-Yu by reducing the question to a shrinking target problem in the space of lattices. The key new ingredient is a family of carefully chosen subsets of the shrinking targets studied by Kleinbock-Str\\\"ombergsson-Yu, together with a geometric disjointness argument controlling the short-range correlations for the associated hitting events. Our method also works for the analogous weighted problem where the relevant supremum norms are replaced by certain weighted quasi-norms.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2602.16258",
+        "pdf_url": "https://arxiv.org/pdf/2602.16258"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Diophantine shrinking-target methods are related, but outside this batch's ten closest selections.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2607.26572",
+        "versioned_id": "2607.26572v2",
+        "title": "Near full groups of bounded type, II",
+        "authors": [
+          "Zheng Kuang"
+        ],
+        "abstract": "Containment of the AF alternating group of the tail groupoid is the AF input in our full-group completion theorem for groups satisfying the finite singular germ condition. We give a sufficient criterion for this containment, in which selectors separate inherited diagonal actions, and an exact criterion for finite regular coverings. We then identify a class of fragmentations that produce the required selectors. In the covering case, the intersection with the AF alternating group is the centralizer of the subgroup of deck transformations commuting with the adjoined AF permutations. This yields finitely generated examples with minimal actions and identical groupoids of germs but different intersections with the AF alternating group. Consequently, containment of the AF alternating group is not determined by the groupoid of germs alone. As an application, we show that a fragmentation group of the modified Fabrykowski--Gupta group contains the AF alternating group and, by the completion theorem, has index four in its topological full group.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.GR",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-05T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2607.26572",
+        "pdf_url": "https://arxiv.org/pdf/2607.26572"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Topological full groups and minimal actions are relevant, but retained compactly under the ten-paper cap.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 2,
+    "RELATED / POSSIBLY INTERESTING": 0,
+    "LOW PRIORITY": 18
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-10-05T09:32:52.702091Z",
+      "feed_published_at": "2026-10-05T00:00:00-04:00",
+      "feed_build_at": "2026-10-05T04:00:23Z",
+      "feed_date": "2026-10-05",
+      "sha256": "8d1063ad92d5e7c437d79358817db2216035d0fac2d3f41a64a79e3c0555f0f8",
+      "byte_length": 46182,
+      "capture_run_url": "https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/37290737644"
+    }
+  ]
+}
