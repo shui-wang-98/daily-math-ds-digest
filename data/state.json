@@ -1872,10 +1872,190 @@
       "versioned_id": "2508.01132v2",
       "announce_type": "replace-cross",
       "analysis_status": "ok"
+    },
+    "2609.28664": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.28664v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.28748": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.28748v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.28797": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.28797v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.28817": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.28817v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.28833": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.28833v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.29107": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29107v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.29159": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29159v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.29188": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29188v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.29301": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29301v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.29439": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29439v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.29577": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29577v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.29628": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29628v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.29778": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29778v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.29834": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29834v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.30067": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.30067v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.30103": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.30103v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.30204": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.30204v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.28666": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.28666v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.28714": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.28714v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.29033": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29033v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.29242": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29242v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.29567": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29567v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.29642": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29642v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.29659": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29659v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.29877": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.29877v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.30209": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.30209v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.30235": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2609.30235v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2505.11241": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2505.11241v2",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2507.08909": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2507.08909v3",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2608.17025": {
+      "first_seen_report": "2026-09-25",
+      "versioned_id": "2608.17025v3",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
     }
   },
-  "last_feed_build": "2026-09-24T04:00:35+00:00",
-  "updated_at": "2026-10-05T14:42:48.034562+00:00",
+  "last_feed_build": "2026-09-25T04:00:20+00:00",
+  "updated_at": "2026-10-05T14:48:32.065947+00:00",
   "processed_inputs": {
     "2026-09-15/c2ead384a44e73215e6b26a60449e1dc3fbca5cfc22a4cfeea11a9ac47ae2441": {
       "report_date": "2026-09-15",
@@ -1908,6 +2088,10 @@
     "2026-09-24/1237802c659145fa40e965d27f1e78dd55783f90ab0d12399d024959255bdcf7": {
       "report_date": "2026-09-24",
       "sha256": "1237802c659145fa40e965d27f1e78dd55783f90ab0d12399d024959255bdcf7"
+    },
+    "2026-09-25/da00a0b24b033d90c71862abf405c3c02510b01f796373fae4ed5b7d90b2d8d7": {
+      "report_date": "2026-09-25",
+      "sha256": "da00a0b24b033d90c71862abf405c3c02510b01f796373fae4ed5b7d90b2d8d7"
     }
   }
 }
