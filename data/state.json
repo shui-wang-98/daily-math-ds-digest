@@ -1692,10 +1692,190 @@
       "versioned_id": "2609.05546v2",
       "announce_type": "replace-cross",
       "analysis_status": "ok"
+    },
+    "2609.26903": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.26903v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.27012": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27012v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.27071": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27071v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.27102": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27102v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.27125": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27125v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.27270": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27270v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.27305": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27305v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.27313": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27313v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.27484": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27484v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.27790": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27790v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.28059": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.28059v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.28264": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.28264v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.28279": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.28279v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.28384": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.28384v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2609.26837": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.26837v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.26906": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.26906v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.26954": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.26954v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.27237": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27237v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.27377": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27377v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.27458": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27458v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.27851": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27851v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.27962": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27962v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.27966": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27966v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.27970": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27970v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.27989": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.27989v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.28010": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.28010v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.28015": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.28015v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.28207": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.28207v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2609.28373": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2609.28373v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2508.01132": {
+      "first_seen_report": "2026-09-24",
+      "versioned_id": "2508.01132v2",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
     }
   },
-  "last_feed_build": "2026-09-23T04:00:30+00:00",
-  "updated_at": "2026-09-23T10:09:46.810120+00:00",
+  "last_feed_build": "2026-09-24T04:00:35+00:00",
+  "updated_at": "2026-10-05T14:42:48.034562+00:00",
   "processed_inputs": {
     "2026-09-15/c2ead384a44e73215e6b26a60449e1dc3fbca5cfc22a4cfeea11a9ac47ae2441": {
       "report_date": "2026-09-15",
@@ -1724,6 +1904,10 @@
     "2026-09-23/9bafe53d6c5b9a3de7a2a8b86da0582324cfed05d261072a012b86e97886ea0d": {
       "report_date": "2026-09-23",
       "sha256": "9bafe53d6c5b9a3de7a2a8b86da0582324cfed05d261072a012b86e97886ea0d"
+    },
+    "2026-09-24/1237802c659145fa40e965d27f1e78dd55783f90ab0d12399d024959255bdcf7": {
+      "report_date": "2026-09-24",
+      "sha256": "1237802c659145fa40e965d27f1e78dd55783f90ab0d12399d024959255bdcf7"
     }
   }
 }
