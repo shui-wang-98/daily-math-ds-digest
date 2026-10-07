@@ -1,0 +1,988 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-10-07",
+  "generated_at": "2026-10-07T10:26:27.832277Z",
+  "feed_build_at": "2026-10-07T04:00:36Z",
+  "category": "math.DS",
+  "analysis_source": "Codex desktop",
+  "overview": "This report covers 24 unseen announcements: 8 HIGH PRIORITY, 9 RELATED / POSSIBLY INTERESTING, and 7 LOW PRIORITY. Core themes include entropy and mean dimension of open covers, entropy-dimension rigidity, fractal dimension bounds, shadowing, interval-map rigidity, and groupoid comparison. Related work concerns random cocycles and attractors, mixing, homogeneous and noncommutative dynamics, and topological conjugacy for a PDE semiflow. Conclusions are restricted to the supplied abstracts, with unspecified formulas, hypotheses, and methods identified explicitly.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2610.06895",
+        "versioned_id": "2610.06895v1",
+        "title": "Analytical solutions of one class of Volterra quadratic stochastic operators of a two-sex population with continuous time",
+        "authors": [
+          "Rasulov Xaydar Raupovich"
+        ],
+        "abstract": "This paper investigates analytical solutions of a continuous analogue of a class of Volterra quadratic stochastic operators of a two-sex population using the homotopy analysis method. The positive invariance of the state space of the system is established. By means of Lyapunov functions, inclusions for the $\\omega$-limit sets are obtained, together with exponential decay estimates for individual components of the trajectories under the corresponding conditions on the coefficients of the system. Sufficient conditions are obtained for the coincidence of the $\\omega$-limit sets of the discrete and continuous models. For the diagonal invariant subset, sufficient conditions are established for the periodicity of all interior non-equilibrium trajectories. By means of a majorant series, a sufficient condition for the absolute and uniform convergence of the homotopy series on $[0,+\\infty)$ is obtained under the Hurwitz stability of the reduced Jacobian of the system. In addition, explicit analytical solutions of the Cauchy problem are found for special relations between the heredity coefficients. Computational experiments show a rapid decay of the terms of the homotopy series and good approximation accuracy already when using the first few terms of the expansion.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.06895",
+        "pdf_url": "https://arxiv.org/pdf/2610.06895"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Analytical and numerical solution of a population-model system is central, without a stated entropy, fractal-dimension, symbolic, or group-action connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.06904",
+        "versioned_id": "2610.06904v1",
+        "title": "Nonlocal Hamiltonian Dynamics on Sparse L\\'evy Graphs: Spectral Analysis and Multimodal Sampling",
+        "authors": [
+          "Miaolei Zheng",
+          "Ting Gao",
+          "Jinqiao Duan"
+        ],
+        "abstract": "We develop a sparse graph method for transporting probability mass toward multimodal target distributions through damped nonlocal Hamiltonian dynamics. The formulation combines logarithmic-mean mobility with symmetric L\\'evy-type interaction weights, coupling the evolving density to an edge momentum field. A graph constructed from nearest-neighbor connections and sampled long-range edges provides direct mass exchange between spatially separated regions. Once the graph is constructed, the density evolution is deterministic, and each update costs linear in the number of nodes and the long-range sampling budget. Linearization around the target distribution yields a damped oscillator governed by a weighted graph Laplacian. Its spectrum characterizes the interaction between nonlocal connectivity and inertia, with the L\\'evy exponent alpha tuning the nonlocal connectivity: the spectral gap determines the optimal asymptotic damping, while the largest eigenvalue governs the time-step stability. Experiments on synthetic multimodal distributions demonstrate improved mode balance and more stable mode coverage relative to first-order and MCMC baselines. The resulting framework provides a sparse implementation of nonlocal inertial density transport for sampling problems with low-dimensional spatial structure.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "cs.LG"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.06904",
+        "pdf_url": "https://arxiv.org/pdf/2610.06904"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "This paper develops a sparse computational sampling method; its spectral analysis does not state a central entropy or dimensional result for the research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.06907",
+        "versioned_id": "2610.06907v1",
+        "title": "Lyapunov Positivity and Monodromy Criteria for Moving-Law Random--Quasiperiodic Cocycles",
+        "authors": [
+          "Zhongmin Liu",
+          "Dengdi Chen",
+          "Yan Zheng"
+        ],
+        "abstract": "We study moving-law random-environment matrix cocycles whose one-step quasiperiodic cocycle law varies stationarily along an ergodic environment orbit. Two fixed-law structures then cease to suffice: a single stationary projective measure does not record transport between successive environment fibers, and pooling the moving supports may create products that are not dynamically admissible along any environment orbit. We replace the first by environment-indexed stationary projective families and prove an environment-wise Furstenberg formula. When the top Lyapunov exponent vanishes, averaged stationarity upgrades to exact equivariance at the support level, \\(g_*\\eta^\\omega=\\eta^{\\Theta\\omega}\\), which forces either an environment-wise compact reduction or a finite support-invariant family of nonzero proper measurable subbundles. Environment-wise noncompactness and environment-wise strong irreducibility therefore imply positivity. To address the second obstruction, we compare admissible products along matched environment segments with equal total torus translation. Thus their quotients are genuine returns on a common vector fiber and generate environment-matched monodromy groups. Stable noncompactness and stable strong irreducibility of these groups verify the cocycle-level hypotheses. Applied to stationarily varying random--quasiperiodic Schr\\\"odinger cocycles, the framework yields strict positivity of the top Lyapunov exponent at every real energy under the stated assumptions.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.06907",
+        "pdf_url": "https://arxiv.org/pdf/2610.06907"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Random quasiperiodic cocycles, projective invariant structures, and Lyapunov positivity connect to the related ergodic and hyperbolic dynamics interests.",
+        "tldr": "Environment-indexed projective families yield a Furstenberg formula and a criterion for positive top Lyapunov exponent. Environment-matched monodromy avoids products that are not dynamically admissible.",
+        "problem": "Establish Lyapunov positivity when the one-step quasiperiodic cocycle law varies stationarily along an ergodic environment orbit.",
+        "main_result": "The authors prove an environment-wise Furstenberg formula. When the top Lyapunov exponent vanishes, averaged stationarity upgrades to support-level equivariance \\(g_*\\eta^\\omega=\\eta^{\\Theta\\omega}\\), forcing either an environment-wise compact reduction or a finite support-invariant family of nonzero proper measurable subbundles. Environment-wise noncompactness and strong irreducibility therefore imply positivity. Stable versions of these conditions for the environment-matched monodromy groups verify the cocycle-level hypotheses. The stated random-quasiperiodic Schrodinger application gives positivity at every real energy under its assumptions; their full formulation: Not specified in the abstract.",
+        "methods": [
+          "Environment-indexed stationary projective families.",
+          "Comparison of admissible products along matched environment segments with equal total torus translation.",
+          "Environment-matched monodromy groups."
+        ],
+        "context": "The abstract explains why a single stationary measure and pooled moving supports fail to capture transport and admissibility in a changing environment.",
+        "keywords": [
+          "random cocycles",
+          "Lyapunov positivity",
+          "Furstenberg formula",
+          "monodromy"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.06908",
+        "versioned_id": "2610.06908v1",
+        "title": "Heteroclinic cycles and long-time behavior in a singularly perturbed three-species Lotka--Volterra system",
+        "authors": [
+          "Arnaud Ducrot",
+          "Quentin Griette",
+          "Quang-Vinh Tran"
+        ],
+        "abstract": "We study a three-species competitive Lotka--Volterra system with cyclic dominance, motivated by rock--paper--scissors interactions in ecological communities. The model contains a singularly strong interaction coefficient of order $1/\\epsilon$, representing a regime in which one species exerts a much stronger competitive pressure on another. We show that, despite this strong asymmetry, the cyclic dominance mechanism persists. Our main result is a quantitative description of one complete dominance pattern in the singular regime $0<\\epsilon\\ll 1$. Starting near the state where the third species dominates, we prove that the solution successively passes near the dominance states of the second and first species before returning to a comparable configuration. We obtain logarithmic estimates for the return time and for the population densities at the return section. In particular, although one species becomes extremely small at the beginning and at the end of each pattern, it recovers to an order-one density during the cycle. We then prove that this pattern repeats indefinitely and that the omega-limit set is composed of three heteroclinic orbits on the boundary of the positive orthant, connecting the three single-species equilibria. Thus the long-time behavior is cyclic but aperiodic, with increasingly long excursions near successive single-species states.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.06908",
+        "pdf_url": "https://arxiv.org/pdf/2610.06908"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is singularly perturbed ecological Lotka--Volterra dynamics and heteroclinic cycling, without a stated central entropy, dimension, or symbolic connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.07076",
+        "versioned_id": "2610.07076v1",
+        "title": "Random Pullback Attractors and Numerical Approximation for Nonlocal Lattice Delay Equations Driven by Rough Noise",
+        "authors": [
+          "Lijuan Zhang",
+          "Jiangwei Zhang",
+          "Jianhua Huang"
+        ],
+        "abstract": "We investigate the pathwise asymptotic dynamics of a nonlocal lattice equation with fixed delay on $\\ell^2(\\mathbb Z)$ driven by an infinite-dimensional stationary weakly geometric rough path. Using a rough-flow Doss-Sussmann transformation and the method of steps, we establish global well-posedness in the controlled-path framework and construct a continuous random dynamical system. We further construct a tempered pullback absorbing family and use a spatially localized Lyapunov-Krasovskii functional, together with a sewing estimate for the spatial tails of the driving rough path, to prove that the lattice tails vanish uniformly. The existence of a unique random pullback attractor is then established by combining this lattice-tail estimate with an Arzel\\`a--Ascoli compactness argument. Finally, for the delay-compatible compensated Euler schemes and finite-dimensional lattice truncations, we establish uniform absorbing and lattice-tail estimates, which yield the existence of the approximate random pullback attractors and their joint upper semicontinuity, without a coupling condition between the time step and the spatial truncation level.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.07076",
+        "pdf_url": "https://arxiv.org/pdf/2610.07076"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Random attractors and their upper semicontinuity give a plausible topological-dynamics connection, although the main setting is a rough lattice delay equation.",
+        "tldr": "The authors construct a unique random pullback attractor for a nonlocal lattice delay equation and prove joint upper semicontinuity of attractors of time and space approximations.",
+        "problem": "Establish pathwise asymptotic dynamics and stable attractor approximation for a delayed lattice equation driven by rough noise.",
+        "main_result": "For the stated equation on \\(\\ell^2(\\mathbb{Z})\\) driven by an infinite-dimensional stationary weakly geometric rough path, the authors obtain global well-posedness and a continuous random dynamical system. A tempered pullback absorbing family and uniformly vanishing lattice tails yield a unique random pullback attractor. Delay-compatible compensated Euler schemes and finite lattice truncations admit approximate attractors with joint upper semicontinuity, without coupling the time step to the truncation level. Full coefficient and noise assumptions: Not specified in the abstract.",
+        "methods": [
+          "Rough-flow Doss--Sussmann transformation and the method of steps.",
+          "A spatially localized Lyapunov--Krasovskii functional and a sewing estimate for rough-path tails.",
+          "Arzela--Ascoli compactness and uniform absorbing/tail estimates for approximations."
+        ],
+        "context": "The work links rough random dynamics and lattice-tail compactness to attractor approximation.",
+        "keywords": [
+          "random pullback attractors",
+          "rough paths",
+          "lattice delay equations",
+          "upper semicontinuity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.07317",
+        "versioned_id": "2610.07317v1",
+        "title": "Rudolph-Johnson without dynamics: endomorphic rigidity on the circle",
+        "authors": [
+          "Peter Burton",
+          "Kate Juschenko"
+        ],
+        "abstract": "We prove that entropy alone, with no invariance hypothesis, forces a Borel probability measure on the circle toward Lebesgue measure under every sublacunary set of multiplicative endomorphisms $x \\mapsto mx$. Here, we refer to an infinite set of multipliers $m$ as sublacunary if its consecutive ratios tend to $1$. Examples of such sets include the primes following perfect cubes, the range of the partition function, the integers $\\lfloor n^{\\log n} \\rfloor$ and the semigroup generated by $2$ and $3$ which is the classical case of Furstenberg's conjecture. Specifically, we show that every measure $\\mu$ has a weak-star limit of endomorphs which dominates Lebesgue measure scaled by the upper entropy dimension of $\\mu$. These theorems are effective at finite entropy resolutions, and we provide the associated bounds for the primes and the perfect powers. The semigroup case may be interpreted as an invariance-free form of the Rudolph-Johnson theorem. We also show that an analog of Lyons' conjecture at full entropy dimension for every sublacunary multiplier set while failing by an arbitrarily large factor for the lacunary semigroup of powers of $3$. The proofs combine Fourier analysis with the algebraic structure of the multiplicative endomorphisms.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.07317",
+        "pdf_url": "https://arxiv.org/pdf/2610.07317"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Entropy dimension and rigidity of multiplicative circle endomorphisms are directly central to the entropy profile.",
+        "tldr": "Without assuming invariance, upper entropy dimension controls how much Lebesgue measure is dominated by a weak-star limit of multiplicative images along any sublacunary multiplier set.",
+        "problem": "Determine whether entropy alone forces a Lebesgue component in limits of circle measures under multiplicative endomorphisms.",
+        "main_result": "For any Borel probability measure \\(\\mu\\) on the circle and any infinite multiplier set whose consecutive ratios tend to \\(1\\), the authors show that a weak-star limit of endomorphs of \\(\\mu\\) dominates Lebesgue measure scaled by the upper entropy dimension of \\(\\mu\\). They also give finite-resolution versions and bounds for primes and perfect powers. Exact quantitative bounds: Not specified in the abstract. The stated conclusion is existence of such a limit, not convergence of every multiplicative image to Lebesgue measure.",
+        "methods": [
+          "Fourier analysis.",
+          "The algebraic structure of multiplicative endomorphisms."
+        ],
+        "context": "The semigroup generated by \\(2\\) and \\(3\\) is among the examples; the abstract interprets that case as an invariance-free form of Rudolph--Johnson rigidity.",
+        "keywords": [
+          "entropy dimension",
+          "circle endomorphisms",
+          "measure rigidity",
+          "sublacunary multipliers"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.07347",
+        "versioned_id": "2610.07347v1",
+        "title": "Mixing of the BCZ Map",
+        "authors": [
+          "Albert Artiles",
+          "Andrew Best",
+          "Matteo Bordignon"
+        ],
+        "abstract": "We prove that the Boca--Cobeli--Zaharescu (BCZ) map is strongly mixing with respect to normalized Lebesgue measure on the BCZ triangle.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.07347",
+        "pdf_url": "https://arxiv.org/pdf/2610.07347"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Strong mixing with respect to a specified invariant measure is relevant ergodic background; the brief abstract gives no explicit entropy or dimension connection.",
+        "tldr": "The authors prove strong mixing of the Boca--Cobeli--Zaharescu map with respect to normalized Lebesgue measure on its triangle.",
+        "problem": "Establish strong mixing of the BCZ map for normalized Lebesgue measure.",
+        "main_result": "The BCZ map is strongly mixing with respect to normalized Lebesgue measure on the BCZ triangle.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The title and abstract concern measure-theoretic mixing for a specified dynamical map; additional context: Not specified in the abstract.",
+        "keywords": [
+          "BCZ map",
+          "strong mixing",
+          "Lebesgue measure"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.07435",
+        "versioned_id": "2610.07435v1",
+        "title": "Period spectrum and rigidity of interval maps",
+        "authors": [
+          "Gabriel Fuhrmann",
+          "Maik Gr\\\"oger",
+          "Alejandro Passeggi"
+        ],
+        "abstract": "We study the extent to which periodic orbits determine a one-dimensional dynamical system. In particular, we show that they determine every topologically mixing interval map. More generally, for a non-mixing interval map $f$ with dense periodic points, the periodic orbits need not determine $f$, but they always do so for $f^2$. Finally, for maps on compact intervals, we obtain a local version of this rigidity: for each basic set $B$ arising in the spectral decomposition of an interval map $f$, there exists an iterate $f^q$ whose restriction to $B$ is determined by the periodic orbits of $f$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.07435",
+        "pdf_url": "https://arxiv.org/pdf/2610.07435"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Periodic-orbit rigidity for interval maps is directly central to topological dynamics.",
+        "tldr": "Periodic orbits determine topologically mixing interval maps. For non-mixing maps with dense periodic points, rigidity can fail for the map but holds for its square.",
+        "problem": "Determine to what extent periodic orbits specify a one-dimensional dynamical system.",
+        "main_result": "The authors prove that periodic orbits determine every topologically mixing interval map. If an interval map \\(f\\) is non-mixing but has dense periodic points, those orbits need not determine \\(f\\), but do determine \\(f^2\\). For each basic set \\(B\\) in the spectral decomposition of a map \\(f\\) on a compact interval, some iterate \\(f^q\\) restricted to \\(B\\) is determined by the periodic orbits of \\(f\\). The precise meaning of determination beyond the abstract's wording: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The work connects periodic-orbit data, mixing, and spectral decomposition in interval dynamics; it does not state determination from the set of period lengths alone.",
+        "keywords": [
+          "interval maps",
+          "periodic orbits",
+          "topological rigidity",
+          "spectral decomposition"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.07950",
+        "versioned_id": "2610.07950v1",
+        "title": "Upper box dimension of inhomogeneous attractors of $C^1$ iterated function systems",
+        "authors": [
+          "Yu-Feng Wu"
+        ],
+        "abstract": "We prove that the upper box dimension of an inhomogeneous attractor of a $C^1$ iterated function system in $\\mathbb{R}^d$ is bounded above by the maximum of the singularity dimension of the system and the upper box dimension of the condensation set. This extends the upper bound of Burrell and Fraser (2020) for inhomogeneous self-affine sets to the $C^1$ setting. The covering argument of Burrell and Fraser does not apply directly to nonlinear compositions. We overcome this difficulty by combining their approach with an extension of the recursive covering estimate of Feng and Simon (2023). We also obtain the corresponding bound for orbital sets driven by arbitrary compact subshifts.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.07950",
+        "pdf_url": "https://arxiv.org/pdf/2610.07950"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Upper box dimension, inhomogeneous iterated function systems, and subshift-driven orbital sets directly match the fractal and symbolic interests.",
+        "tldr": "The upper box dimension of an inhomogeneous attractor of a \\(C^1\\) iterated function system is bounded by the maximum of its singularity dimension and the condensation set's upper box dimension.",
+        "problem": "Extend the known inhomogeneous self-affine upper dimension bound to nonlinear continuously differentiable systems.",
+        "main_result": "For the stated \\(C^1\\) iterated function systems in \\(\\mathbb{R}^d\\), the author proves the asserted maximum upper bound for the inhomogeneous attractor. A corresponding upper bound also holds for orbital sets driven by arbitrary compact subshifts. The abstract does not claim equality or give a matching lower bound.",
+        "methods": [
+          "The covering approach of Burrell and Fraser.",
+          "An extension of Feng and Simon's recursive covering estimate to handle nonlinear compositions."
+        ],
+        "context": "The result extends the Burrell--Fraser bound for inhomogeneous self-affine sets to the \\(C^1\\) setting.",
+        "keywords": [
+          "upper box dimension",
+          "inhomogeneous attractors",
+          "singularity dimension",
+          "compact subshifts"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.08426",
+        "versioned_id": "2610.08426v1",
+        "title": "Shadowing and Topological Stability via Generalized Pseudo-Hyperbolicity in Autonomous and Nonautonomous Linear Dynamics",
+        "authors": [
+          "Davor Dragicevic",
+          "Mihaly Pituk"
+        ],
+        "abstract": "Although generalized hyperbolicity has proved to be a fundamental notion in linear dynamics, recent results show that it is too restrictive to characterize the shadowing property of invertible bounded linear operators on Banach spaces. This motivates the introduction of generalized pseudo-hyperbolicity, a weaker notion formulated through continuous homogeneous maps generating exponentially decaying Green families. We prove that, for arbitrary sequences of invertible bounded linear operators on Banach spaces, generalized pseudo-hyperbolicity is equivalent to both shadowing and topological stability. In the autonomous setting, this yields the equivalence between shadowing and topological stability, removing additional assumptions from previous results. We also prove robustness of shadowing and topological stability for sequences of invertible bounded linear operators.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.FA"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.08426",
+        "pdf_url": "https://arxiv.org/pdf/2610.08426"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Shadowing and topological stability are central topological-dynamics properties.",
+        "tldr": "Generalized pseudo-hyperbolicity characterizes both shadowing and topological stability for arbitrary sequences of invertible bounded linear operators on Banach spaces.",
+        "problem": "Find a weaker replacement for generalized hyperbolicity that characterizes shadowing in linear dynamics.",
+        "main_result": "The authors prove equivalence of generalized pseudo-hyperbolicity, shadowing, and topological stability for arbitrary sequences of invertible bounded linear operators on Banach spaces. In the autonomous case, this gives shadowing if and only if topological stability without the additional assumptions of prior results. They also prove robustness of both properties; the precise perturbation topology and quantitative bounds: Not specified in the abstract.",
+        "methods": [
+          "Continuous homogeneous maps generating exponentially decaying Green families."
+        ],
+        "context": "The abstract states that generalized hyperbolicity is too restrictive to characterize shadowing and introduces generalized pseudo-hyperbolicity to address that obstruction.",
+        "keywords": [
+          "shadowing",
+          "topological stability",
+          "linear dynamics",
+          "generalized pseudo-hyperbolicity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.08465",
+        "versioned_id": "2610.08465v1",
+        "title": "Dimension properties of a family of random self-similar iterated function systems",
+        "authors": [
+          "Vilma Orgov\\'anyi",
+          "K\\'aroly Simon"
+        ],
+        "abstract": "In this note we present a dimension formula for certain randomized self-similar sets. The self-similar sets we are considering are $d$-dimensional generalizations of rational projections of inhomogeneous sponges: they have overlaps, but the overlapping structure is in some sense well-organized. The randomization happens according to a labelled Galton-Watson tree corresponding to the cylinders of the IFS, for example as in the case of the Mandelbrot percolation set. The dimension formula is given in terms of a pressure function corresponding to the expectation matrices, which describes the overlapping structure and the randomness of the system.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.08465",
+        "pdf_url": "https://arxiv.org/pdf/2610.08465"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Random fractal dimensions and a pressure formula are directly central.",
+        "tldr": "For a structured family of overlapping randomized self-similar sets, the authors give a dimension formula in terms of pressure of expectation matrices.",
+        "problem": "Determine dimension for randomized self-similar sets with a well-organized overlap structure.",
+        "main_result": "The sets considered are \\(d\\)-dimensional generalizations of rational projections of inhomogeneous sponges, randomized through a labelled Galton--Watson tree corresponding to iterated-function-system cylinders. A pressure function for expectation matrices captures overlaps and randomness and gives a dimension formula for this family. The dimension notion, exact formula, precise overlap hypotheses, and any probabilistic qualifications: Not specified in the abstract.",
+        "methods": [
+          "Randomization along a labelled Galton--Watson tree.",
+          "Pressure associated with expectation matrices."
+        ],
+        "context": "The abstract relates the randomization to constructions such as Mandelbrot percolation while restricting its claim to the stated structured overlapping family.",
+        "keywords": [
+          "random self-similar sets",
+          "dimension formula",
+          "pressure",
+          "Galton--Watson trees"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.08511",
+        "versioned_id": "2610.08511v1",
+        "title": "Groupoid strict comparison for Ample Groupoids: Fiberwise Supramenability and Topological Amenability",
+        "authors": [
+          "Chunlin Liu",
+          "Xin Ma",
+          "Jianchao Wu"
+        ],
+        "abstract": "In this paper, we first introduce fiberwise supramenability for locally compact Hausdorff \\'{e}tale groupoids with compact unit space. Then, for such a minimal ample groupoid $\\mathcal{G}$, we show that if $\\mathcal{G}$ is fiberwise supramenable or topologically amenable, then the clopen type semigroup $S(\\mathcal{G})$ is almost unperforated. Consequently, if $\\mathcal{G}$ is $\\sigma$-compact, then it has groupoid strict comparison. We then present several applications, including Matui's AH conjecture and pure infiniteness for groupoids and groupoid $C^*$-algebras.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.OA"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.08511",
+        "pdf_url": "https://arxiv.org/pdf/2610.08511"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Amenable groupoids, comparison, and clopen type semigroups directly match the topological group-action interests.",
+        "tldr": "Fiberwise supramenability or topological amenability implies almost unperforation of the clopen type semigroup for the stated minimal ample groupoids.",
+        "problem": "Find amenability conditions that yield groupoid strict comparison.",
+        "main_result": "For a minimal ample, locally compact Hausdorff etale groupoid \\(\\mathcal{G}\\) with compact unit space, the authors prove that fiberwise supramenability or topological amenability makes \\(S(\\mathcal{G})\\) almost unperforated. If \\(\\mathcal{G}\\) is also \\(\\sigma\\)-compact, it has groupoid strict comparison. Applications include Matui's AH conjecture and pure infiniteness for groupoids and their \\(C^*\\)-algebras; the exact application statements: Not specified in the abstract.",
+        "methods": [
+          "The introduced notion of fiberwise supramenability.",
+          "Analysis of the clopen type semigroup."
+        ],
+        "context": "The abstract links groupoid amenability to comparison and identifies applications to groupoid algebra structure without asserting an unrestricted solution of Matui's conjecture.",
+        "keywords": [
+          "ample groupoids",
+          "strict comparison",
+          "fiberwise supramenability",
+          "type semigroups"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.08625",
+        "versioned_id": "2610.08625v1",
+        "title": "An Entropy Bound for Mean Dimension of Open Covers",
+        "authors": [
+          "Tal Barak"
+        ],
+        "abstract": "We establish a counterpart, for individual finite open covers, of the global entropy-mean-dimension comparison of Lindenstrauss and Weiss. More precisely, the mean dimension of a finite open cover is quantitatively bounded in terms of its topological entropy and cardinality. In particular, a finite open cover with zero entropy has zero mean dimension. The same comparison holds for actions of countable amenable groups and in the sofic setting. It follows that every mean dimension pair is an entropy pair and, in particular, that uniformly positive mean dimension (UPMD) implies uniformly positive entropy (UPE). The cover and pair implications answer Questions 2.27 and 4.9 of Garc\\'ia-Ramos and Gutman, respectively. The proof associates a polytope to a minimal subcover and combines the Lindenstrauss-Weiss compression argument with Maurey's empirical method to estimate the volumes of its coordinate projections.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.08625",
+        "pdf_url": "https://arxiv.org/pdf/2610.08625"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The comparison between entropy and mean dimension at the cover and pair levels is directly central to the strongest research interests.",
+        "tldr": "A finite open cover's mean dimension is bounded using its entropy and cardinality. The comparison extends to countable amenable actions and the sofic setting and implies that every mean dimension pair is an entropy pair.",
+        "problem": "Obtain a cover-level counterpart of the global entropy--mean-dimension comparison and its consequences for dynamical pairs.",
+        "main_result": "The author proves a quantitative upper bound on the mean dimension of an individual finite open cover in terms of its topological entropy and cardinality; the explicit formula: Not specified in the abstract. In particular, zero entropy of the cover implies zero mean dimension. The same comparison holds for actions of countable amenable groups and in the sofic setting. Every mean dimension pair is an entropy pair, so uniformly positive mean dimension implies uniformly positive entropy.",
+        "methods": [
+          "A polytope associated with a minimal subcover.",
+          "The Lindenstrauss--Weiss compression argument.",
+          "Maurey's empirical method to estimate volumes of coordinate projections."
+        ],
+        "context": "The abstract gives a counterpart to the global Lindenstrauss--Weiss comparison and states that the cover and pair implications answer questions of Garcia-Ramos and Gutman.",
+        "keywords": [
+          "mean dimension",
+          "topological entropy",
+          "finite open covers",
+          "amenable and sofic actions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.08725",
+        "versioned_id": "2610.08725v1",
+        "title": "Bifurcation of limit cycles in piecewise holomorphic systems separated by two external circles",
+        "authors": [
+          "Carlos Vin\\'icius das Neves Silva",
+          "Paulo Ricardo da Silva"
+        ],
+        "abstract": "This work investigates the number of limit cycles bifurcating from the periodic orbits of a linear center when it is perturbed by piecewise holomorphic systems with three zones separated by two external circles. We analyze how different geometric configurations of these zones influence the number of limit cycles. Moreover, we show the existence of at least sixteen limit cycles in fourth-degree piecewise polynomial holomorphic systems under certain configurations.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.08725",
+        "pdf_url": "https://arxiv.org/pdf/2610.08725"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The paper counts limit cycles in piecewise holomorphic ODE systems, without a stated central entropy, fractal-dimension, symbolic, or group-action connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.07293",
+        "versioned_id": "2610.07293v1",
+        "title": "Boundary Algorithms for Thompson Groups",
+        "authors": [
+          "Ayberk Zeytin"
+        ],
+        "abstract": "We construct a deterministic Farey-boundary algorithm converting a cyclic prefix table for an element of $\\mathsf T$ into a word in addressed boundary flips. The reduction uses rational boundary pairs and cyclic order, with a marked edge determining the residual modular correction. Its unmarked stage uses at most twice the minimum number of diagonal exchanges. For input size $s$, the complete output has $O(s)$ factors, encoded length $O(s^2)$, and running time $O(s^3)$. Adjoining shuffles extends the construction to $\\mathsf V$ with polynomial bounds. We also give explicit boundary generating sets and their local flip--shuffle relations. Changes of generators in the Lochak--Schneps and Bleak--Quick presentations yield a two-flip presentation of $\\mathsf T$ and a presentation of $\\mathsf V$ with two flips, one shuffle, and nine relations.",
+        "announce_type": "cross",
+        "categories": [
+          "math.GR",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.07293",
+        "pdf_url": "https://arxiv.org/pdf/2610.07293"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Boundary coding and constructive descriptions of Thompson groups plausibly connect to symbolic and group-action interests, although the stated results are algorithmic rather than entropy or dimension theorems.",
+        "tldr": "Deterministic boundary reductions convert prefix tables into words in flips and shuffles and give explicit generating sets and presentations.",
+        "problem": "Construct efficient boundary algorithms and presentations for Thompson groups.",
+        "main_result": "For input size \\(s\\), the Farey-boundary algorithm for \\(\\mathsf T\\) outputs \\(O(s)\\) factors, with encoded length \\(O(s^2)\\) and running time \\(O(s^3)\\). Its unmarked stage uses at most twice the minimum number of diagonal exchanges. Adding shuffles extends the construction to \\(\\mathsf V\\) with polynomial bounds. The author also obtains a two-flip presentation of \\(\\mathsf T\\) and a presentation of \\(\\mathsf V\\) using two flips, one shuffle, and nine relations.",
+        "methods": [
+          "Rational boundary pairs and cyclic order, with a marked edge fixing the residual modular correction.",
+          "Addressed boundary flips and shuffles.",
+          "Changes of generators in the Lochak--Schneps and Bleak--Quick presentations."
+        ],
+        "context": "The abstract connects cyclic prefix tables, boundary combinatorics, and constructive group presentations.",
+        "keywords": [
+          "Thompson groups",
+          "boundary algorithms",
+          "prefix tables",
+          "flips and shuffles"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.07471",
+        "versioned_id": "2610.07471v1",
+        "title": "Gaps theorems for linear forms with cubic coefficients",
+        "authors": [
+          "Alan Haynes"
+        ],
+        "abstract": "Let $1,\\alpha_1,\\alpha_2$ be a basis for a cubic number field $K\\subset\\mathbb{R}$, and for $\\tau_1,\\tau_2\\ge 1$ let $G(\\mathbf{\\alpha},\\mathbf{\\tau})$ denote the number of distinct gaps between the fractional parts of the numbers $m_1\\alpha_1+m_2\\alpha_2$, with $m_1,m_2\\in\\mathbb{Z}$, $0\\le m_1<\\tau_1$ and $0\\le m_2<\\tau_2$. We show that $G(\\mathbf{\\alpha},\\mathbf{\\tau})$ is unbounded as $\\mathbf{\\tau}$ varies. When $K$ is totally real this is deduced from a density theorem of Shapira for orbits of the diagonal group on the space of lattices. When $K$ has a complex embedding we give an explicit construction, which also shows that there are constants $c,\\kappa>0$ for which $G(\\mathbf{\\alpha},\\mathbf{\\tau})\\ge c(\\log\\max\\{\\tau_1,\\tau_2\\})^{\\kappa}$ for infinitely many $\\mathbf{\\tau}\\in\\mathbb{N}^2$.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.07471",
+        "pdf_url": "https://arxiv.org/pdf/2610.07471"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "The proof's diagonal-group orbit-density component gives a substantial homogeneous-dynamics connection to the Diophantine problem.",
+        "tldr": "The number of distinct gaps for rectangular samples of a cubic-field linear form is unbounded. In the complex-embedding case, infinitely many integer rectangles satisfy a logarithmic-power lower bound.",
+        "problem": "Study gap counts between fractional parts of linear forms whose coefficients, together with one, form a basis of a cubic number field embedded in the real numbers.",
+        "main_result": "Let \\(1,\\alpha_1,\\alpha_2\\) be a basis of a cubic field \\(K\\subset\\mathbb{R}\\), and let \\(G(\\boldsymbol{\\alpha},\\boldsymbol{\\tau})\\) count gaps between the fractional parts of \\(m_1\\alpha_1+m_2\\alpha_2\\) for integers \\(0\\le m_i<\\tau_i\\), where \\(\\tau_i\\ge1\\). The author proves unboundedness as \\(\\boldsymbol{\\tau}\\) varies. If \\(K\\) has a complex embedding, there are \\(c,\\kappa>0\\) such that \\(G(\\boldsymbol{\\alpha},\\boldsymbol{\\tau})\\ge c(\\log\\max\\{\\tau_1,\\tau_2\\})^\\kappa\\) for infinitely many \\(\\boldsymbol{\\tau}\\in\\mathbb{N}^2\\).",
+        "methods": [
+          "Shapira's density theorem for diagonal-group orbits on the space of lattices in the totally real case.",
+          "An explicit construction in the complex-embedding case."
+        ],
+        "context": "The paper connects arithmetic gap statistics with homogeneous orbit density and separates the two possible cubic-field embedding cases.",
+        "keywords": [
+          "gap theorems",
+          "cubic number fields",
+          "diagonal group actions",
+          "spaces of lattices"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.08032",
+        "versioned_id": "2610.08032v1",
+        "title": "A noncommutative transfer principle",
+        "authors": [
+          "Louis E Labuschagne",
+          "Claud Steyn"
+        ],
+        "abstract": "We extend the generalised Calderon Transfer Principle as presented in \\cite{dBL} to the setting of trace preserving group actions of $\\sigma$-compact locally compact Hausdorff groups on semifinite von Neumann algebras $\\M$. At its essence the transfer principle consists of showing that a large class of regular operators in the group context may be translated to operators in the algebra context by means of this group action. The end result is a protocol for proving ergodic convergence results for group actions on noncommutative Orlicz space of semifinite von Neumann algebras. We start with proving the existence of the transferred operator in the noncommutative context. Two tools are developed for the purpose of actually proving convergence results: (1) a theory of what may be called 2-variable decreasing rearrangements for the algebra $L^\\infty \\overline{\\otimes} \\M$ (where ($\\Gamma,\\nu$) is a Radon measure space) and (2) a concepts of maximal operators suited to the present context. These tools are then used to lift the ergodic convergence results presented in \\cite{dBL} to the noncommutative setting. In closing we present examples illustrating the application of the tools",
+        "announce_type": "cross",
+        "categories": [
+          "math.OA",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.08032",
+        "pdf_url": "https://arxiv.org/pdf/2610.08032"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Trace-preserving group actions and ergodic convergence provide a substantial adjacent connection, though the main focus is noncommutative analysis rather than entropy.",
+        "tldr": "A noncommutative transfer principle transports regular operators from groups to algebras and provides tools for ergodic convergence in noncommutative Orlicz spaces.",
+        "problem": "Extend a generalized Calderon transfer principle to trace-preserving actions on semifinite von Neumann algebras.",
+        "main_result": "For trace-preserving actions of \\(\\sigma\\)-compact locally compact Hausdorff groups on semifinite von Neumann algebras, the authors establish transferred operators in the noncommutative setting. They develop two-variable decreasing rearrangements and suitable maximal operators, then use them to transfer the cited ergodic convergence results to noncommutative Orlicz spaces. The exact operator class and convergence modes: Not specified in the abstract.",
+        "methods": [
+          "The generalized Calderon transfer principle.",
+          "Two-variable decreasing rearrangements for the stated tensor-product algebra.",
+          "Maximal operators adapted to the noncommutative setting."
+        ],
+        "context": "The abstract links group-based operator estimates with ergodic convergence for group actions on operator algebras and includes examples of the framework.",
+        "keywords": [
+          "transfer principles",
+          "group actions",
+          "noncommutative Orlicz spaces",
+          "ergodic convergence"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.08058",
+        "versioned_id": "2610.08058v1",
+        "title": "A Hartman-Grobman Theorem for the Navier-Stokes Equation on $\\mathbb T^3$",
+        "authors": [
+          "Rongchang Liu",
+          "Kening Lu",
+          "Lin Shi"
+        ],
+        "abstract": "We prove a local Hartman-Grobman theorem at zero for the unforced Navier-Stokes equation on the three-dimensional torus in the strong topology of $H^s$ for every $s>7/2$. More precisely, we construct a homeomorphism between open positively invariant neighborhoods of zero that conjugates the Navier-Stokes semiflow to the heat semigroup. We develop an infinite-dimensional boundary-time scheme built on a nested hierarchy of exact asymptotic dynamical factors. Their fiber geometry yields Sobolev block coordinates with autonomous finite-dimensional factor systems, on which boundary-time topological conjugacies can be constructed at every finite level and then assembled on a common neighborhood into the desired $H^s$ conjugacy. The infinite-dimensional assembly relies on new spectral estimates for the divergence-free transport structure, which control derivative loss and the blockwise tails of the finite-level conjugacies and their inverses without an additional spectral-gap assumption.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.08058",
+        "pdf_url": "https://arxiv.org/pdf/2610.08058"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "A topological conjugacy theorem for a PDE semiflow directly connects to the related smooth and topological dynamics profile.",
+        "tldr": "Near zero, the unforced Navier--Stokes semiflow on \\(\\mathbb{T}^3\\) is homeomorphically conjugate to the heat semigroup in strong \\(H^s\\) topology for every \\(s>7/2\\).",
+        "problem": "Establish a local Hartman--Grobman theorem in a strong Sobolev topology for an infinite-dimensional fluid equation.",
+        "main_result": "For every \\(s>7/2\\), the authors construct a homeomorphism between open positively invariant neighborhoods of zero that conjugates the unforced Navier--Stokes semiflow on the three-dimensional torus to the heat semigroup in \\(H^s\\). The construction assembles finite-level conjugacies and their inverses on a common neighborhood without an additional spectral-gap assumption. This is a local topological result, not a global regularity claim.",
+        "methods": [
+          "An infinite-dimensional boundary-time scheme and nested exact asymptotic dynamical factors.",
+          "Sobolev block coordinates with autonomous finite-dimensional factor systems.",
+          "Spectral estimates for divergence-free transport controlling derivative loss and blockwise tails."
+        ],
+        "context": "The abstract extends local topological linearization to the stated Navier--Stokes semiflow in strong Sobolev topology.",
+        "keywords": [
+          "Hartman--Grobman theorem",
+          "topological conjugacy",
+          "Navier--Stokes semiflow",
+          "Sobolev topology"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.08623",
+        "versioned_id": "2610.08623v1",
+        "title": "Liouvillian first integrals of differential equations: A Galoisian approach",
+        "authors": [
+          "Partha Kumbhakar",
+          "Chitrarekha Sahu",
+          "Varadharaj R. Srinivasan"
+        ],
+        "abstract": "Using differential Galois theory---specifically, Magid's theory of the complete Picard-Vessiot closure---we show that a system of first-order differential equations in $n$ variables admits a Liouvillian first integral if and only if it admits a first integral in a Liouvillian Picard-Vessiot extension, if and only if it admits a first integral in its Picard-Vessiot ring. Consequently, a system with a Liouvillian first integral admits one in a differential field obtained from the field of rational functions by first taking a finite algebraic extension, then adjoining an exponential of an integral, and then an integral. This yields a new proof of Singer's theorem on Liouvillian first integrals of autonomous planar systems (Trans.\\ Amer.\\ Math.\\ Soc.\\ 333, 1992) and of its recent extension to autonomous systems in $n$ variables by Aziz et al. (arXiv:2512.15522). Our results hold over any differential field of characteristic zero with an algebraically closed field of constants; in particular, they apply to non-autonomous systems. Finally, we exhibit a system that admits a first integral in a non-Liouvillian Picard-Vessiot extension but none in its Picard-Vessiot ring and thus establishing that the Liouvillian hypothesis cannot be dropped.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AC",
+          "math.CA",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.08623",
+        "pdf_url": "https://arxiv.org/pdf/2610.08623"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The central results concern differential Galois theory and algebraic integrability, without a stated entropy, fractal-dimension, or topological group-action connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.08646",
+        "versioned_id": "2610.08646v1",
+        "title": "Distributed Model-Free Turbine Repositioning for Wake Overlap Minimization in Floating Offshore Wind Farms",
+        "authors": [
+          "Zekai Chen",
+          "Ryozo Nagamune"
+        ],
+        "abstract": "This paper presents a model-free method for turbine repositioning control in floating offshore wind farms. The method uses a distributed online optimization framework to mitigate the wake effect. Conventional approaches rely on centralized, model-based control architectures, which suffer from poor practical feasibility. To overcome this limitation and address nonconvexity and inaccessible gradient information, we incorporate physics-informed knowledge of wake dynamics into the control system design. We demonstrate the effectiveness of the proposed method by comparing it with a centralized, model-based baseline in mid-fidelity simulations. Results indicate that the proposed method achieves slightly better performance while significantly reducing computational cost.",
+        "announce_type": "cross",
+        "categories": [
+          "eess.SY",
+          "cs.SY",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.08646",
+        "pdf_url": "https://arxiv.org/pdf/2610.08646"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Distributed turbine repositioning and wake-minimization control are outside the central research themes.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2311.10417",
+        "versioned_id": "2311.10417v5",
+        "title": "Analytic and topological realizations of the invariant Thom-Smale complex",
+        "authors": [
+          "Hao Zhuang"
+        ],
+        "abstract": "For a Morse function, its associated Thom-Smale cochain complex admits an analytic realization initiated by Witten. However, due to the unboundedness of the eigenvalues of the deformed Hodge Laplacian along the critical submanifold, the analytic realization of the Thom-Smale complex associated with a Morse-Bott function is a long time open question. In this paper, we give an analytic realization in a case where a compact connected Lie group $G$ acts on a closed oriented manifold $M$. Our construction is not repeating the $G$-equivariant complex, but is actually a $G$-invariant complex computing the de Rham cohomology of $M$. The $G$-invariance is the key to resolve the unboundedness of the eigenvalues along the critical orbits. First, we fix a $G$-invariant Morse-Bott function $f$ on $M$ whose critical set consists of finitely many $G$-orbits, and whose Hessian in the normal direction of each critical orbit is nondegenerate. Second, on the topological side, we simplify the topological Thom-Smale cochain complex associated with $f$ into a $G$-invariant version given by $G$-invariant forms on critical orbits. Third, on the analytic side, we construct the $G$-invariant Witten instanton cochain complex after restricting the deformed Hodge Laplacian on $G$-invariant forms on $M$. As the main results, we prove that both $G$-invariant cochain complexes compute the Betti numbers of $M$, and that there is a cochain isomorphism between these two complexes. Thus, the $G$-invariant Witten instanton cochain complex is the analytic realization that we need.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.DG",
+          "math.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2311.10417",
+        "pdf_url": "https://arxiv.org/pdf/2311.10417"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Group-invariant Morse--Bott and Thom--Smale constructions connect topology with group actions, although the main goal is analytic cohomological realization.",
+        "tldr": "Under the stated compact-group and Morse--Bott hypotheses, invariant topological and Witten instanton complexes are cochain isomorphic and compute the manifold's Betti numbers.",
+        "problem": "Construct an analytic realization of an invariant Thom--Smale complex in a Morse--Bott setting.",
+        "main_result": "Let a compact connected Lie group \\(G\\) act on a closed oriented manifold \\(M\\), and let \\(f\\) be a \\(G\\)-invariant Morse--Bott function whose critical set consists of finitely many \\(G\\)-orbits with nondegenerate normal Hessian at each orbit. The author constructs a \\(G\\)-invariant topological Thom--Smale complex and a \\(G\\)-invariant Witten instanton complex, proves both compute the Betti numbers of \\(M\\), and establishes a cochain isomorphism between them. These are invariant complexes for ordinary de Rham cohomology, not a replacement by equivariant cohomology.",
+        "methods": [
+          "Invariant forms on critical orbits.",
+          "Restriction of the deformed Hodge Laplacian to invariant forms.",
+          "A group-invariant Witten instanton cochain complex."
+        ],
+        "context": "The abstract uses invariance to address unbounded eigenvalues along critical orbits in the analytic realization problem.",
+        "keywords": [
+          "Morse--Bott theory",
+          "Thom--Smale complex",
+          "group-invariant forms",
+          "Witten deformation"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2603.08404",
+        "versioned_id": "2603.08404v3",
+        "title": "Instanton construction of the mapping cone Thom-Smale complex",
+        "authors": [
+          "Hao Zhuang"
+        ],
+        "abstract": "The cup product structure on the topological side of the classical Thom-Smale complex leads to the topological side of the mapping cone Thom-Smale complex. Following the spirit of Witten's analytic Morse theory, we ask whether the mapping cone Thom-Smale complex has the analytic side. However, due to the missing cup product structure on the analytic side of the classical Thom-Smale complex, it seems that we can only have a hybrid analytic-topological construction of the mapping cone Thom-Smale complex. In this paper, we overcome the cup product issue and give the purely analytic construction of the mapping cone Thom-Smale complex. More precisely, for a Morse function with the transversality condition on a closed oriented Riemannian manifold, we construct an instanton cochain complex using the eigenspaces of the mapping cone Laplacian deformed by the Morse function and two parameters. One parameter gives the classical Witten deformation. The other parameter overcomes the cup product obstacle by suppressing the norm of the given differential form. As the main result, we prove that our instanton complex is cochain isomorphic to the topologically constructed mapping cone Thom-Smale complex, and therefore it is the purely analytic construction that we need.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.DG",
+          "math-ph",
+          "math.DS",
+          "math.MP",
+          "math.SG"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2603.08404",
+        "pdf_url": "https://arxiv.org/pdf/2603.08404"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "The Thom--Smale and Morse-theoretic topological setting offers a possible connection to smooth dynamics; entropy and dimensional consequences are not stated.",
+        "tldr": "A two-parameter deformation yields a purely analytic instanton realization of the mapping cone Thom--Smale complex.",
+        "problem": "Overcome the missing analytic cup-product structure in constructing a mapping cone Thom--Smale complex.",
+        "main_result": "For a Morse function satisfying transversality on a closed oriented Riemannian manifold, the author constructs an instanton complex from eigenspaces of a mapping cone Laplacian deformed by the function and two parameters. One parameter implements Witten deformation; the other suppresses the norm of the given differential form. The resulting complex is cochain isomorphic to the topologically constructed mapping cone Thom--Smale complex.",
+        "methods": [
+          "Two-parameter deformation of the mapping cone Laplacian.",
+          "Eigenspace construction of an instanton complex.",
+          "Norm suppression of the given differential form to address the cup-product obstruction."
+        ],
+        "context": "The paper follows Witten's analytic Morse theory and replaces a potentially hybrid analytic-topological realization with a purely analytic one.",
+        "keywords": [
+          "mapping cone",
+          "Thom--Smale complex",
+          "analytic Morse theory",
+          "instanton complexes"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2606.26497",
+        "versioned_id": "2606.26497v2",
+        "title": "Learning Probabilistic Filters with Strictly Proper Scoring Rules",
+        "authors": [
+          "Eviatar Bach",
+          "Ricardo Baptista",
+          "Jochen Br\\\"ocker",
+          "Bohan Chen",
+          "Andrew Stuart"
+        ],
+        "abstract": "Bayesian filtering of partially and noisily observed dynamical systems seeks to infer the evolving conditional distribution of the state of a dynamical system given observations, in an online fashion. This Bayesian filtering distribution is rarely available as a supervised learning target. However, one can often use the forecast model to generate synthetic trajectories, with corresponding synthetic observations. We introduce the proper scoring ensemble filter (PSEF), an ensemble data assimilation method trained using only synthetic trajectories. The analysis step is represented as a permutation-equivariant, transformer-based map. Training is based on strictly proper scoring rules---with the energy score used in our implementation---so that probabilistic accuracy is rewarded over the whole probability distribution. Under a realizability assumption, the population mean-field objective is minimized by the true Bayesian filtering distribution. Our methodology allows the same learned parameters to be shared between different ensemble sizes, subject to an ensemble-dependent fine-tuning. Numerical experiments show that the learned filter accurately approximates challenging filtering distributions, including highly non-Gaussian and multi-modal posteriors, and achieves stronger performance in data assimilation tasks than classical methods or learning-based methods with mean-squared-error objectives.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cs.LG",
+          "math.DS",
+          "stat.ML"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2606.26497",
+        "pdf_url": "https://arxiv.org/pdf/2606.26497"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The paper develops and tests a learned Bayesian filtering method, without a stated central entropy, dimension, symbolic, or topological-dynamics result.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2608.30346",
+        "versioned_id": "2608.30346v2",
+        "title": "Classification complexity of homeomorphism group actions",
+        "authors": [
+          "Michal Hevessy",
+          "Benjamin Vejnar"
+        ],
+        "abstract": "In this paper, we study how the classification complexity of natural orbit equivalence relations changes when the full homeomorphism group of a compact metrizable space is replaced by a dense non-closed subgroup. For a compact space $X$ and a subgroup $G \\leq \\mathcal{H}(X)$, we consider three canonical actions: the left shift action on $\\mathcal{H}(X)$, the induced hyperspace action on $\\mathcal{F}(X)$, and the conjugation action on $G$ We first analyze subgroups of the group $\\mathcal{H}^+([0,1])$ of increasing interval homeomorphisms, focusing on bi-Lipschitz homeomorphisms, diffeomorphisms, and bi-absolutely continuous homeomorphisms. We show that, in contrast to the behavior of closed subgroups, passing to these subgroups strictly increases the complexities of the associated classification problems or makes them incomparable with the corresponding full-group relations. In the second part, we investigate hyperspace actions of bi-absolutely continuous homeomorphisms on the Cantor space and the Hilbert cube with respect to some Borel probability measure and show that a similar behavior occurs on these spaces as well.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.LO",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-07T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2608.30346",
+        "pdf_url": "https://arxiv.org/pdf/2608.30346"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Homeomorphism-group actions, orbit equivalence relations, and classification complexity directly match the topological group-action interests.",
+        "tldr": "Passing from full homeomorphism groups to certain dense non-closed subgroups can increase classification complexity or make the associated relations incomparable.",
+        "problem": "Determine how restricting the acting homeomorphism group changes classification of natural orbit equivalence relations.",
+        "main_result": "For a compact metrizable space \\(X\\) and \\(G\\le\\mathcal{H}(X)\\), the authors consider the left shift action on \\(\\mathcal{H}(X)\\), the hyperspace action on \\(\\mathcal{F}(X)\\), and conjugation on \\(G\\). For the stated interval subgroups consisting of increasing bi-Lipschitz homeomorphisms, diffeomorphisms, or bi-absolutely continuous homeomorphisms, the associated classification problems become strictly more complex or incomparable with the full-group relations. Similar behavior occurs for hyperspace actions of bi-absolutely continuous homeomorphisms on Cantor space and the Hilbert cube with respect to a Borel probability measure. The precise complexity assignments and measure hypotheses: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "The abstract contrasts these dense non-closed subgroup actions with closed-subgroup behavior in descriptive classification.",
+        "keywords": [
+          "homeomorphism groups",
+          "orbit equivalence relations",
+          "classification complexity",
+          "hyperspace actions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 8,
+    "RELATED / POSSIBLY INTERESTING": 9,
+    "LOW PRIORITY": 7
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-10-07T09:30:17.689033Z",
+      "feed_published_at": "2026-10-07T00:00:00-04:00",
+      "feed_build_at": "2026-10-07T04:00:36Z",
+      "feed_date": "2026-10-07",
+      "sha256": "468fa5ae3f9d4bc022bd79ca42c660a07cd997562b9a3bd81fbcedf0200f030c",
+      "byte_length": 54294,
+      "capture_run_url": "https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/37601040854"
+    }
+  ]
+}
