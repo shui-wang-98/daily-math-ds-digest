@@ -1,7 +1,7 @@
 # Repository guidance
 
 This repository creates an English personalized arXiv math.DS digest. Python
-prepares metadata and validates/renders reports; Codex writes the analysis locally.
+prepares metadata and validates/renders reports; Codex writes the analysis.
 GitHub Actions captures official RSS into immutable, validated `data/inbox/`
 inputs. Local `src.prepare_run` reads the synced inbox without HTTP or a network
 fallback. Missing/stale/corrupt input is an error, never an empty digest. Process
@@ -22,15 +22,17 @@ Do not request or render Prerequisites. Historical JSON with that field remains
 readable and must not be rewritten merely to remove it.
 
 For a daily digest run, read and follow [DAILY_AUTOMATION.md](DAILY_AUTOMATION.md)
-and the research profile in `config.yaml` before analyzing anything. Preserve the
+and the research profile in `config.yaml` before analyzing anything. The authorized
+hosted cloud schedule also follows [CLOUD_AUTOMATION.md](CLOUD_AUTOMATION.md), which
+replaces the local execution and Git transport steps, not the research rules. Preserve the
 existing English report templates. Use `tests/fixtures/math_ds.xml` for all tests.
 Run `pytest -q` after pipeline changes.
 Fixtures and demonstrations require isolated temporary data/site/inbox paths;
 never place synthetic inputs in production. Validate arXiv URL/ID relationships
 locally, without fetching paper links. Cloud capture is scheduled for weekdays
-11:15 Europe/Warsaw, with recovery checks at 11:30 and 11:40; the local task
-instructions target weekdays 12:00 in that timezone. Maintenance does not change
-or trigger the local task without user authorization.
+11:15 Europe/Warsaw, with recovery checks at 11:30 and 11:40; the daily analysis
+schedule targets weekdays 12:00 in that timezone. Maintenance does not change
+or trigger a scheduled task without user authorization.
 
 New daily reports generate HTML and backend JSON only. The permanent homepage
 lists all dates; dated HTML is the primary public report. Preserve existing

@@ -109,6 +109,7 @@ def test_versioned_duplicate_is_rejected(run):
 def test_full_offline_outputs_and_idempotency(run):
     data, site, pending, _, _ = run
     report = finish(run)
+    assert report.analysis_source == "Codex"
     folder = site / "reports" / DATE
     assert (data / "reports" / f"{DATE}.json").is_file()
     assert (folder / "report.json").is_file()
@@ -125,6 +126,17 @@ def test_full_offline_outputs_and_idempotency(run):
     state = json.loads((data / "state.json").read_text(encoding="utf-8"))
     assert set(state["seen"]) == {p.arxiv_id for p in pending.papers}
     assert latest_report(data, site) == report
+    before = snapshot(data, site)
+    assert finish(run) == report
+    assert snapshot(data, site) == before
+
+
+@pytest.mark.parametrize("source", ["Codex desktop", "Codex cloud"])
+def test_retry_preserves_archived_analysis_source_and_all_artifact_bytes(run, source):
+    data, site = run[:2]
+    report = finish(run).model_copy(update={"analysis_source": source})
+    atomic_write_json(data / "reports" / f"{DATE}.json", report)
+    atomic_write_json(site / "reports" / DATE / "report.json", report)
     before = snapshot(data, site)
     assert finish(run) == report
     assert snapshot(data, site) == before
@@ -204,6 +216,7 @@ def test_no_new_papers_and_same_day_repreparation(run):
     atomic_write_json(path, {"report_date": pending.report_date, "overview": "No new papers.", "papers": []})
     report = finish(run)
     assert not report.papers
+    assert report.analysis_source == "Codex"
     assert set(report.counts.values()) == {0}
     folder = site / "reports/2026-09-07"
     assert "No new papers." in (folder / "index.html").read_text(encoding="utf-8")
@@ -216,15 +229,19 @@ def test_no_new_papers_and_same_day_repreparation(run):
 
 
 def test_same_day_additions_are_merged(run):
-    data, _, pending, payload, path = run
+    data, site, pending, payload, path = run
     first = pending.model_copy(update={"papers": pending.papers[:1]})
     atomic_write_json(data / "pending_run.json", first)
     atomic_write_json(path, {**payload, "papers": payload["papers"][:1]})
-    finish(run)
+    original = finish(run).model_copy(update={"analysis_source": "Codex desktop"})
+    atomic_write_json(data / "reports" / f"{DATE}.json", original)
+    atomic_write_json(site / "reports" / DATE / "report.json", original)
     next_run = preparer.prepare_run(data_dir=data, local_feed=FIXTURE, report_date=DATE)
     assert len(next_run.papers) == 2
     atomic_write_json(path, {**payload, "papers": payload["papers"][1:]})
-    assert len(finish(run).papers) == 3
+    combined = finish(run)
+    assert len(combined.papers) == 3
+    assert combined.analysis_source == "Codex desktop"
 
 
 def test_offline_cli(tmp_path):

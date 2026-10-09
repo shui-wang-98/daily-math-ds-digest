@@ -206,7 +206,7 @@ class DailyReport(BaseModel):
     generated_at: datetime
     feed_build_at: datetime | None
     category: str
-    analysis_source: str = "Codex desktop"
+    analysis_source: str = "Codex"
     # Read compatibility with previously committed reports; never selects a model.
     model: str | None = Field(default=None, exclude=True)
     overview: str

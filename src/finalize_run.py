@@ -97,6 +97,9 @@ def finalize_run(
                 for priority in PRIORITIES},
         source_inputs=sources,
     )
+    # A retry or same-day addition must retain the archived report's provenance.
+    if existing:
+        report.analysis_source = existing.analysis_source
     # A fresh preparation on the same day must never erase an existing digest.
     if existing and not pending.papers:
         report = existing.model_copy(update={"source_inputs": sources})
