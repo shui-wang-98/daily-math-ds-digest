@@ -101,6 +101,14 @@ state advanced before its complete output set.
    bytes as blobs (base64 is suitable); build one new tree with that existing
    tree as base, replacing only the allowlisted files. Preserve every other
    path. Inspect the resulting tree/change set against the base.
+   Transfer file bytes programmatically through the available tool orchestration,
+   not by asking the model to copy HTML: existing pages can exceed 900 KB. If
+   necessary, read bounded base64 chunks into an orchestration variable and
+   assemble the complete content there without printing it into model context.
+   Verify each returned Git blob SHA against the locally computed Git blob SHA
+   and verify readback bytes/hashes. Never upload truncated tool output or
+   hand-reconstructed content. If the cloud tools cannot transport the complete
+   file to the plugin, report BLOCKED and preserve the validated output.
 3. Create one commit with that tree, the unchanged base SHA as parent, and the
    exact message `Add daily math.DS digest`. Advance main using update_ref with
    expected_sha equal to the base SHA and force=false. This is the atomic
