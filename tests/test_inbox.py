@@ -103,6 +103,104 @@ def test_capture_download_failure_and_success(tmp_path, monkeypatch):
     assert (folder / 'feed.xml').read_bytes() == RAW
 
 
+@pytest.mark.parametrize('now,day', [
+    (NOW, '2026-09-04'),
+    (NOW + timedelta(days=1), '2026-09-04'),
+    (datetime(2026, 3, 29, 10, tzinfo=timezone.utc), '2026-03-27'),
+    (datetime(2026, 10, 25, 11, tzinfo=timezone.utc), '2026-10-23'),
+])
+def test_scheduled_capture_reuses_current_input_without_network_or_writes(tmp_path, monkeypatch, now, day):
+    fetched_at = datetime.fromisoformat(day + 'T09:15:00+00:00')
+    source, folder = archive(tmp_path, rss(day), fetched_at)
+    before = {p: (p.read_bytes(), p.stat().st_mtime_ns) for p in tmp_path.rglob('*') if p.is_file()}
+
+    def unexpected_download(*args):
+        raise AssertionError('Already captured input must not trigger an RSS request')
+
+    monkeypatch.setattr(capture, 'download_feed', unexpected_download)
+    monkeypatch.setattr(capture, 'utc_now', lambda: now)
+    assert capture.capture_feed(inbox_dir=tmp_path / 'inbox', if_missing=True) == (source, folder)
+    assert before == {p: (p.read_bytes(), p.stat().st_mtime_ns) for p in tmp_path.rglob('*') if p.is_file()}
+
+
+def test_scheduled_capture_with_only_old_input_downloads_current_day(tmp_path, monkeypatch):
+    old_source, old_folder = archive(tmp_path)
+    before = {p: (p.read_bytes(), p.stat().st_mtime_ns) for p in old_folder.iterdir()}
+    current_raw = rss('2026-09-07')
+    requests_made = []
+
+    def download(*args):
+        requests_made.append(args)
+        return current_raw
+
+    monkeypatch.setattr(capture, 'download_feed', download)
+    monkeypatch.setattr(capture, 'utc_now', lambda: NOW + timedelta(days=3))
+    source, folder = capture.capture_feed(inbox_dir=tmp_path / 'inbox', if_missing=True)
+    assert len(requests_made) == 1 and requests_made[0][0] == inbox.SOURCE_URL
+    assert source.feed_date == '2026-09-07'
+    assert (folder / 'feed.xml').read_bytes() == current_raw
+    assert before == {p: (p.read_bytes(), p.stat().st_mtime_ns) for p in old_folder.iterdir()}
+    assert {item.input_id for item, _ in inbox.read_inbox(tmp_path / 'inbox')} == {old_source.input_id, source.input_id}
+
+
+def test_scheduled_capture_still_rejects_a_stale_download(tmp_path, monkeypatch):
+    archive(tmp_path)
+    before = {p: (p.read_bytes(), p.stat().st_mtime_ns) for p in tmp_path.rglob('*') if p.is_file()}
+    monkeypatch.setattr(capture, 'download_feed', lambda *args: RAW)
+    monkeypatch.setattr(capture, 'utc_now', lambda: NOW + timedelta(days=3))
+    with pytest.raises(inbox.InputNotReady, match='Stale RSS'):
+        capture.capture_feed(inbox_dir=tmp_path / 'inbox', if_missing=True)
+    assert not (tmp_path / 'inbox/2026-09-07').exists()
+    assert before == {p: (p.read_bytes(), p.stat().st_mtime_ns) for p in tmp_path.rglob('*') if p.is_file()}
+
+
+@pytest.mark.parametrize('damage', ['missing_manifest', 'missing_feed', 'corrupt_feed', 'empty_capture'])
+def test_scheduled_capture_does_not_hide_a_damaged_current_pair(tmp_path, monkeypatch, damage):
+    archive(tmp_path)
+    _, damaged = archive(tmp_path, RAW + b'\n', NOW + timedelta(minutes=1))
+    if damage in {'missing_manifest', 'empty_capture'}:
+        (damaged / 'manifest.json').unlink()
+    if damage in {'missing_feed', 'empty_capture'}:
+        (damaged / 'feed.xml').unlink()
+    if damage == 'corrupt_feed':
+        (damaged / 'feed.xml').write_bytes(b'corrupt')
+    before = {p: (p.read_bytes(), p.stat().st_mtime_ns) for p in tmp_path.rglob('*') if p.is_file()}
+
+    def unexpected_download(*args):
+        raise AssertionError('Damaged archived input must fail before downloading')
+
+    monkeypatch.setattr(capture, 'download_feed', unexpected_download)
+    monkeypatch.setattr(capture, 'utc_now', lambda: NOW + timedelta(minutes=30))
+    with pytest.raises(inbox.InputNotReady):
+        capture.capture_feed(inbox_dir=tmp_path / 'inbox', if_missing=True)
+    assert before == {p: (p.read_bytes(), p.stat().st_mtime_ns) for p in tmp_path.rglob('*') if p.is_file()}
+
+
+def test_manual_capture_can_archive_a_same_day_update(tmp_path, monkeypatch):
+    original, original_folder = archive(tmp_path)
+    changed_raw = RAW + b'\n'
+    monkeypatch.setattr(capture, 'download_feed', lambda *args: changed_raw)
+    monkeypatch.setattr(capture, 'utc_now', lambda: NOW + timedelta(minutes=30))
+    source, folder = capture.capture_feed(inbox_dir=tmp_path / 'inbox')
+    assert source.feed_date == original.feed_date and source.input_id != original.input_id
+    assert (folder / 'feed.xml').read_bytes() == changed_raw
+    assert (original_folder / 'feed.xml').read_bytes() == RAW
+    assert len(inbox.read_inbox(tmp_path / 'inbox')) == 2
+
+
+def test_capture_cli_if_missing_reuses_validated_input(tmp_path, monkeypatch, capsys):
+    source, _ = archive(tmp_path)
+    monkeypatch.setattr(capture, 'utc_now', lambda: NOW)
+
+    def unexpected_download(*args):
+        raise AssertionError('CLI must honor --if-missing')
+
+    monkeypatch.setattr(capture, 'download_feed', unexpected_download)
+    monkeypatch.setattr(sys, 'argv', ['capture_feed', '--if-missing', '--inbox-dir', str(tmp_path / 'inbox')])
+    assert capture.main() == 0
+    assert source.input_id in capsys.readouterr().out
+
+
 def test_partial_capture_write_failure_does_not_publish_pair(tmp_path, monkeypatch):
     def fail(*args):
         raise OSError('manifest disk failure')

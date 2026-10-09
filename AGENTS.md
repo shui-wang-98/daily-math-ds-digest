@@ -28,8 +28,9 @@ Run `pytest -q` after pipeline changes.
 Fixtures and demonstrations require isolated temporary data/site/inbox paths;
 never place synthetic inputs in production. Validate arXiv URL/ID relationships
 locally, without fetching paper links. Cloud capture is scheduled for weekdays
-11:15 Europe/Warsaw; the local task instructions target weekdays 12:00 in that
-timezone. Maintenance does not change or trigger the local task without user authorization.
+11:15 Europe/Warsaw, with recovery checks at 11:30 and 11:40; the local task
+instructions target weekdays 12:00 in that timezone. Maintenance does not change
+or trigger the local task without user authorization.
 
 New daily reports generate HTML and backend JSON only. The permanent homepage
 lists all dates; dated HTML is the primary public report. Preserve existing

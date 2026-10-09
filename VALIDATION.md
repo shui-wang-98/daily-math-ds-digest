@@ -548,3 +548,44 @@ Validation with the existing virtual environment:
 
 No new daily reports, commit, push, deployment, task changes, dependency
 installation, live arXiv requests, or configuration/permission changes occurred.
+
+## 2026-10-09: Missed cloud-capture recovery and daily rerun
+
+At the local noon invocation, GitHub had no October 9 capture run or inbox
+input. The capture workflow was active; offline preparation correctly returned
+exit 2 instead of creating an empty report. GitHub's internal reason for the
+missing scheduled invocation is not exposed by the available run records.
+An authorized manual cloud dispatch succeeded as run `37915782471`; its validated
+input was synchronized in commit `8e50713`, without fetching arXiv locally.
+
+- Added weekday recovery checks at 11:30 and 11:40 Europe/Warsaw after 11:15.
+  Scheduled runs use `--if-missing`: all current-day captures must validate,
+  then an existing capture is reused without HTTP or file changes. Manual
+  dispatch retains the ability to archive a same-day updated feed.
+- Twelve new regression cases cover no-network/no-write reuse, a new day,
+  stale downloads, damaged and incomplete pairs, manual same-day updates,
+  command-line handling, weekends and daylight-saving transitions. Tests use
+  the existing fixture and isolated temporary paths only.
+- Full offline suite: **396 passed in 17.50s**, exit 0. An earlier run overlapped
+  production finalization and correctly tripped the production-snapshot guard
+  at teardown; the successful run was repeated after outputs were stable.
+- October 9 report: **37 papers: 11 HIGH, 14 RELATED, 12 LOW**. Source metadata
+  and abstracts match the validated inbox exactly; both report JSON copies
+  agree. The HTML has 25 full entries, 12 compact entries and 211 valid formula
+  SVGs. Three original abstracts retain explicit undefined-macro notices
+  (2610.11793, 2610.12072, 2610.10896); no definitions were inferred.
+- Independent title/abstract reviews checked all 37 analyses. Explicit
+  hypotheses, the precise special linear group and missing-information wording
+  were corrected before publication checks.
+- The state adds exactly 37 seen IDs and one input (665 IDs, 19 inputs total).
+  All 62 historical/shared files outside state and homepage retain identical
+  bytes and modification times. No legacy PDF or Markdown was regenerated.
+- Identical finalization preserved all 67 state/report/site file hashes and
+  modification times. `src.notify --check-only` and `git diff --check` passed.
+- Browser inspection at desktop and 390-pixel mobile width verified the dated
+  report and homepage, expanded original abstract, formulas, 20 archive dates
+  and relative links; no page overflow or broken formula image was observed.
+
+The local task, research profile, credentials, permissions and publisher were
+not changed. Recovery triggers reduce single-trigger dependence but cannot
+guarantee execution during an external outage or prolonged GitHub delay.

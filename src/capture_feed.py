@@ -7,18 +7,29 @@ from pathlib import Path
 
 from .config import load_config
 from .fetch_arxiv import download_feed
-from .inbox import SOURCE_URL, persist_input
+from .inbox import SOURCE_URL, InputNotReady, expected_feed_date, persist_input, read_input
 from .utils import utc_now
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def capture_feed(*, config_path: Path = ROOT / "config.yaml",
-                 inbox_dir: Path = ROOT / "data/inbox"):
+                 inbox_dir: Path = ROOT / "data/inbox", if_missing: bool = False):
     config = load_config(config_path)
     arxiv = config["arxiv"]
     if arxiv["feed_url"] != SOURCE_URL or config["project"]["category"] != "math.DS":
         raise ValueError("Capture only supports the configured official math.DS RSS endpoint")
+    if if_missing:
+        current_day = inbox_dir / expected_feed_date(utc_now())
+        if current_day.exists():
+            if not current_day.is_dir():
+                raise InputNotReady(f"Input date path is not a directory: {current_day}")
+            # Validate every pair before reusing any of them: a healthy capture
+            # must not conceal another incomplete or damaged capture that day.
+            sources = [read_input(folder)[0] for folder in sorted(current_day.iterdir())]
+            if sources:
+                source = max(sources, key=lambda item: (item.feed_build_at, item.fetched_at, item.sha256))
+                return source, inbox_dir / source.input_id
     raw = download_feed(SOURCE_URL, int(arxiv.get("request_timeout_seconds", 45)),
                         arxiv.get("user_agent", "daily-math-ds-digest/1.0"))
     run_url = None
@@ -32,8 +43,11 @@ def main() -> int:
     parser.add_argument("--config", type=Path, default=ROOT / "config.yaml")
     parser.add_argument("--inbox-dir", type=Path, default=ROOT / "data/inbox")
     parser.add_argument("--github-output", type=Path)
+    parser.add_argument("--if-missing", action="store_true",
+                        help="Reuse validated current-day input without downloading again")
     args = parser.parse_args()
-    source, folder = capture_feed(config_path=args.config, inbox_dir=args.inbox_dir)
+    source, folder = capture_feed(config_path=args.config, inbox_dir=args.inbox_dir,
+                                 if_missing=args.if_missing)
     print(f"Validated math.DS input {source.input_id}; fetched {source.fetched_at.isoformat()}; {source.byte_length} bytes.")
     if args.github_output:
         relative = folder.resolve().relative_to(ROOT).as_posix()

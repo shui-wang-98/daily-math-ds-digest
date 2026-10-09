@@ -7,7 +7,8 @@ paid AI service, new key, or direct email credential is used.
 
 ## Architecture and schedules
 
-Cloud capture (weekdays 11:15 Europe/Warsaw) -> committed inbox -> local Git sync
+Cloud capture (weekdays 11:15, with 11:30 and 11:40 recovery checks, Europe/Warsaw)
+-> committed inbox -> local Git sync
 -> offline preparation -> Codex analysis -> HTML/JSON -> validated Git commit/push
 -> existing Pages workflow and persistent Issue notification.
 
@@ -44,7 +45,13 @@ Delayed announcements and exceptional holidays are **input not ready**, not
 empty days. The pipeline does not guess a holiday calendar. Previously validated
 inputs remain eligible for backlog processing even when the computer was offline.
 
-The workflow provides manual dispatch and weekdays 11:15 Europe/Warsaw.
+The workflow provides manual dispatch and weekday triggers at 11:15, 11:30 and
+11:40 Europe/Warsaw. Scheduled runs validate and reuse an existing current-day
+capture without downloading again; the later triggers recover a missed or failed
+earlier capture. Damaged inputs still fail validation. Manual dispatch downloads
+the feed again, allowing a corrected same-day capture to be archived separately.
+These recovery opportunities reduce dependence on a single trigger; they do not
+guarantee execution during a GitHub outage or prolonged scheduling delay.
 GitHub officially supports an IANA `timezone` beside `cron`, follows daylight
 saving, can delay scheduled jobs, and uses the default branch:
 [official schedule documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).

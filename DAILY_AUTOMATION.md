@@ -6,8 +6,10 @@ on 2026-09-15; the existing local task was updated and resumed. Its actual
 already-finalized retry passed; unattended publication of new input still
 requires acceptance evidence in VALIDATION.md. Reading or
 editing this file does not change or trigger that task. Cloud capture targets weekdays
-11:15 Europe/Warsaw; a scheduled capture can be delayed or fail. Local preparation
-must inspect the synced input, never assume the cloud job has finished.
+11:15 Europe/Warsaw, with recovery checks at 11:30 and 11:40. Scheduled captures
+reuse a validated current-day input without another download; manual dispatch
+still allows a new capture. A scheduled capture can be delayed or fail. Local
+preparation must inspect the synced input, never assume the cloud job has finished.
 
 ## Scope and start
 
