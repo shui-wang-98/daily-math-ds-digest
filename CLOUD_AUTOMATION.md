@@ -6,6 +6,12 @@ scheduled production run is the end-to-end acceptance test; a saved schedule
 is not evidence that publication has succeeded. Do not run production early
 merely to test the migration.
 
+The existing GitHub capture workflow starts at 11:00 Europe/Warsaw on weekdays,
+with recovery checks at 11:15, 11:30 and 11:40. The hosted daily analysis remains
+at 12:00 in that timezone. Scheduled capture checks reuse validated current-day
+input without another download. These separate times provide a preparation
+buffer; they do not guarantee that GitHub will deliver every scheduled event.
+
 ## Authority and environment
 
 Use only hosted cloud tools, a disposable cloud checkout of

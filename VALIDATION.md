@@ -589,3 +589,32 @@ input was synchronized in commit `8e50713`, without fetching arXiv locally.
 The local task, research profile, credentials, permissions and publisher were
 not changed. Recovery triggers reduce single-trigger dependence but cannot
 guarantee execution during an external outage or prolonged GitHub delay.
+
+## 2026-10-12: Earlier capture before the noon cloud digest
+
+The user authorized starting collection at 11:00 Europe/Warsaw while keeping
+the hosted daily analysis at 12:00. The previous primary capture was 11:15;
+the existing capture workflow now includes 11:00 and retains 11:15, 11:30 and
+11:40 as recovery checks. Scheduled checks keep `--if-missing`, so an already
+validated current-day input is reused without another download. The IANA
+timezone is unchanged and follows daylight saving time. The existing hosted
+daily task was read back as enabled at weekdays 12:00 Europe/Warsaw; it did
+not need a schedule change or a new task.
+
+Validation used a clean disposable hosted Linux checkout of main
+`015cce0e554843b5ddb002dce719d3bec8d27203`, the isolated Python 3.12.14
+interpreter, and the existing Node 24.19.0. The updated existing workflow test
+and full offline suite returned **398 passed in 12.35s**, exit 0, with no skips
+and a separate absolute basetemp. `src.notify --check-only` and
+`git diff --check` passed. SHA-256 and modification-time comparisons verified
+all 105 production data/site files unchanged. Only the capture schedule,
+its existing test, and matching operational documentation changed; publisher
+behavior and repository permissions were not changed.
+
+This is a maintenance configuration change, not a production rerun. Today's
+noon invocation lacked the October 12 input. Earlier collection supplies a
+larger preparation buffer but cannot guarantee delivery of GitHub scheduled
+events. A future successful capture and complete hosted publication remain
+the production acceptance evidence; neither these tests nor saving the
+schedule is claimed as that evidence. Historical missing Issue markers are
+outside this timing change.

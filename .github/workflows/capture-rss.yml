@@ -2,7 +2,7 @@ name: Capture official math.DS RSS
 
 on:
   schedule:
-    - cron: '15,30,40 11 * * 1-5'
+    - cron: '0,15,30,40 11 * * 1-5'
       timezone: Europe/Warsaw
   workflow_dispatch:
 

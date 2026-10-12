@@ -21,7 +21,7 @@ def test_inbox_only_push_does_not_trigger_report_publication_or_notification():
 def test_capture_schedule_scope_and_generated_file_staging():
     job = workflow('capture-rss.yml')
     assert set(job['on']) == {'schedule', 'workflow_dispatch'}
-    assert job['on']['schedule'] == [{'cron': '15,30,40 11 * * 1-5', 'timezone': 'Europe/Warsaw'}]
+    assert job['on']['schedule'] == [{'cron': '0,15,30,40 11 * * 1-5', 'timezone': 'Europe/Warsaw'}]
     capture = job['jobs']['capture']
     assert capture['if'] == "github.ref == 'refs/heads/main'"
     assert capture['permissions'] == {'contents': 'write'}
