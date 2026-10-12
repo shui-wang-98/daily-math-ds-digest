@@ -1,0 +1,515 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-10-12",
+  "generated_at": "2026-10-12T10:58:07.873585Z",
+  "feed_build_at": "2026-10-12T04:00:20Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 12 unseen announcements: 6 HIGH PRIORITY, 4 RELATED / POSSIBLY INTERESTING, and 2 LOW PRIORITY. Central themes include equivariant Lipschitz embeddings, Hausdorff dimensions of attractors, stationary-measure dimensions for circle actions, self-similar measures, entropy-based Liouville averages and topological linear dynamics. Related papers concern random matrix Lyapunov exponents, uniform attractors and planar five-body central configurations. No followed-author matches occur in the supplied input.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2610.12678",
+        "versioned_id": "2610.12678v1",
+        "title": "Limit theorems for random matrix products with a simple top Lyapunov exponent",
+        "authors": [
+          "Pablo G. Barrientos",
+          "Dominique Malicet"
+        ],
+        "abstract": "We study products of independent, identically distributed random matrices with an exponential moment and a simple top Lyapunov exponent, without assuming irreducibility. Outside an exceptional invariant subspace called the equator, we establish contraction on average for a weighted projective distance and a spectral gap for the associated Markov operator. We obtain a central limit theorem, a Berry--Esseen bound, deviation estimates near the mean, and an almost sure invariance principle both for the growth of a fixed vector outside the equator and for the operator norm. For fixed vectors, a non-arithmeticity assumption also yields a local limit theorem and a renewal theorem. Our contraction criterion applies more generally to mostly contracting random maps on locally compact spaces with a Lyapunov function, including certain random interval maps.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-12T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.12678",
+        "pdf_url": "https://arxiv.org/pdf/2610.12678"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Random matrix dynamics, projective contraction and a Markov spectral gap give a substantial ergodic connection; entropy, pressure and dimension are not the stated focus.",
+        "tldr": "For independent identically distributed random matrices with an exponential moment and a simple top Lyapunov exponent, the authors establish several limit theorems without assuming irreducibility. Fixed-vector results apply outside an exceptional invariant subspace called the equator.",
+        "problem": "Establish projective contraction, a spectral gap and limit laws for random matrix products when irreducibility is not assumed.",
+        "main_result": "Outside the equator, the authors prove contraction on average for a weighted projective distance and a spectral gap for the associated Markov operator. They obtain a central limit theorem, a Berry--Esseen bound, deviation estimates near the mean and an almost sure invariance principle for both the growth of a fixed vector outside the equator and the operator norm. For fixed vectors, an additional non-arithmeticity assumption yields a local limit theorem and a renewal theorem. The contraction criterion also applies to mostly contracting random maps on locally compact spaces with a Lyapunov function, including certain random interval maps.",
+        "methods": [
+          "Average contraction for a weighted projective distance.",
+          "A spectral gap for the associated Markov operator.",
+          "A contraction criterion using a Lyapunov function for the broader random-map setting."
+        ],
+        "context": "Random matrix products, Lyapunov exponents and limit theorems for random dynamical systems.",
+        "keywords": [
+          "random matrix products",
+          "Lyapunov exponents",
+          "projective contraction",
+          "limit theorems"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.12698",
+        "versioned_id": "2610.12698v1",
+        "title": "Pointwise H\\\"older continuity of Lyapunov exponents of random matrix products",
+        "authors": [
+          "Pablo G. Barrientos"
+        ],
+        "abstract": "We prove that if the first Lyapunov exponent of a compactly supported random matrix product is simple, then it is pointwise H\\\"older continuous for the Wasserstein--Hausdorff distance. By passing to exterior powers, we obtain pointwise H\\\"older continuity of the first $k$ exponents whenever they are simple.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-12T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.12698",
+        "pdf_url": "https://arxiv.org/pdf/2610.12698"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Regularity of Lyapunov exponents is directly related to random dynamical systems, although no entropy or dimension theorem is stated.",
+        "tldr": "The author proves pointwise Hölder continuity of the first Lyapunov exponent of a compactly supported random matrix product when that exponent is simple. Exterior powers extend the conclusion to the first \\(k\\) exponents when they are simple.",
+        "problem": "Determine pointwise regularity of Lyapunov exponents as the random matrix product varies in the Wasserstein--Hausdorff distance.",
+        "main_result": "For compactly supported random matrix products, simplicity of the first Lyapunov exponent implies its pointwise Hölder continuity for the Wasserstein--Hausdorff distance. Passing to exterior powers gives pointwise Hölder continuity of the first \\(k\\) exponents whenever they are simple. The numerical Hölder exponent and quantitative modulus: Not specified in the abstract.",
+        "methods": [
+          "Passing to exterior powers."
+        ],
+        "context": "Lyapunov-exponent regularity for random matrix products.",
+        "keywords": [
+          "Lyapunov exponents",
+          "pointwise Hölder continuity",
+          "random matrix products",
+          "exterior powers"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.13068",
+        "versioned_id": "2610.13068v1",
+        "title": "Uniform Exponential Attractors for Non-Autonomous Dynamical Systems and an Application to the damped hyperbolic equation with sub-quintic growth",
+        "authors": [
+          "Chang Qingquan",
+          "Li Dandan"
+        ],
+        "abstract": "In this paper, we develop an abstract framework for the theory of uniform exponential attractors in non-autonomous dynamical systems. Our construction employs time-dependent absorbing sets while ensuring exponential attraction among the constructed sets. Moreover, we show that the resulting exponential attractors are uniform-that is, they remain stable under perturbations. As an application of this abstract theory, we study the weakly damped hyperbolic equation with sub-quintic nonlinearity. Using the proposed approach, we construct exponential attractors for the process generated by the Shatah-Struwe solution, which satisfies both energy and Strichartz estimates. Furthermore, we establish the Holder continuity of these exponential attractors with respect to the external forcing term.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.AP"
+        ],
+        "announced_at": "2026-10-12T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.13068",
+        "pdf_url": "https://arxiv.org/pdf/2610.13068"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Perturbation stability and Hölder continuity of attractors provide a possible connection to topological questions in dynamics; the abstract does not state an entropy or dimension result.",
+        "tldr": "The authors construct uniform exponential attractors using time-dependent absorbing sets. They apply the framework to a weakly damped hyperbolic equation with sub-quintic nonlinearity and establish Hölder continuity with respect to external forcing.",
+        "problem": "Construct exponential attractors for non-autonomous systems that retain exponential attraction and stability under perturbations.",
+        "main_result": "The abstract framework uses time-dependent absorbing sets and ensures exponential attraction among the constructed sets. The resulting exponential attractors are uniform in the stated sense of stability under perturbations. For the weakly damped hyperbolic equation with sub-quintic nonlinearity, the authors construct exponential attractors for the process generated by the Shatah--Struwe solution, which satisfies energy and Strichartz estimates, and prove Hölder continuity of these attractors with respect to the external forcing term. Further hypotheses and quantitative continuity bounds: Not specified in the abstract.",
+        "methods": [
+          "Construction with time-dependent absorbing sets and exponential attraction among those sets."
+        ],
+        "context": "Non-autonomous attractor theory and a damped hyperbolic PDE application.",
+        "keywords": [
+          "uniform exponential attractors",
+          "non-autonomous dynamics",
+          "perturbation stability",
+          "Hölder continuity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.13091",
+        "versioned_id": "2610.13091v1",
+        "title": "A Lipschitz refinement of the Bebutov-Kakutani dynamical embedding theorem for connected Lie group actions",
+        "authors": [
+          "Yonatan Gutman",
+          "Qiang Huo",
+          "Kangbo Ouyang"
+        ],
+        "abstract": "Let $G$ be a connected Lie group equipped with a compatible right-invariant metric and let $G$ act continuously on a compact metrizable space $X$. We prove that $X$ admits a $G$-equivariant embedding into the right argument shift action on the space of one-Lipschitz maps from $G$ to $[0,1]$ if and only if the set of fixed points topologically embeds into $[0,1]$. This generalizes a theorem proved by Gutman, Huo and Tsukamoto for $\\mathbb{R}^k$-flows.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-12T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.13091",
+        "pdf_url": "https://arxiv.org/pdf/2610.13091"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Equivariant embeddings of compact topological systems for connected Lie group actions are centrally aligned with topological dynamics and group actions. Tsukamoto is cited in the abstract but is not a supplied author, so this is not a followed-author match.",
+        "tldr": "The authors give a necessary and sufficient fixed-point condition for embedding a compact metrizable connected-Lie-group system into a shift space of one-Lipschitz maps. The theorem generalizes the stated earlier result for Euclidean flows.",
+        "problem": "Characterize when a continuous action of a connected Lie group \\(G\\) on a compact metrizable space \\(X\\) embeds equivariantly into the right argument shift action on one-Lipschitz maps \\(G\\to[0,1]\\).",
+        "main_result": "Let \\(G\\) be a connected Lie group with a compatible right-invariant metric, acting continuously on a compact metrizable space \\(X\\). The authors prove that \\(X\\) admits the stated \\(G\\)-equivariant embedding into the space of one-Lipschitz maps \\(G\\to[0,1]\\) if and only if the fixed-point set topologically embeds into \\([0,1]\\). This generalizes the theorem cited in the abstract for \\(\\mathbb{R}^k\\)-flows.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Dynamical embedding theorems, Lipschitz function spaces and connected Lie group actions.",
+        "keywords": [
+          "equivariant embedding",
+          "connected Lie groups",
+          "Lipschitz maps",
+          "topological dynamics"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.13099",
+        "versioned_id": "2610.13099v1",
+        "title": "Khintchine dichotomy for images of self-similar measures and almost random walks",
+        "authors": [
+          "Liyang Shao"
+        ],
+        "abstract": "Following the celebrated breakthrough in B\\'enard-He-Zhang, we prove Khintchine dichotomy for push-forwards of self-similar measures on $\\mathbb{R}^d$ under uniform $C^{1+\\alpha}$ maps. For this, we also study almost random walks on $\\mathrm{SL}(d+1,\\mathbb{R})/\\mathrm{SL}(d+1,\\mathbb{Z})$ and prove their effective equidistribution.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-10-12T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.13099",
+        "pdf_url": "https://arxiv.org/pdf/2610.13099"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Self-similar measures and homogeneous-space random walks give a strong connection to fractal geometry and group dynamics, although the abstract does not state a dimension formula.",
+        "tldr": "The author announces a Khintchine dichotomy for images of self-similar measures under the stated uniform differentiable maps. Effective equidistribution of almost random walks on a special-linear homogeneous space is developed for this purpose.",
+        "problem": "Establish a Khintchine dichotomy for push-forwards of self-similar measures and effective equidistribution for almost random walks.",
+        "main_result": "The author proves a Khintchine dichotomy for push-forwards of self-similar measures on \\(\\mathbb{R}^d\\) under maps described as uniform \\(C^{1+\\alpha}\\) maps. For this, the author studies almost random walks on \\(\\mathrm{SL}(d+1,\\mathbb{R})/\\mathrm{SL}(d+1,\\mathbb{Z})\\) and proves effective equidistribution. The precise uniformity condition, any further measure hypotheses, the dichotomy formulation and the equidistribution rate: Not specified in the abstract.",
+        "methods": [
+          "Study of almost random walks on \\(\\mathrm{SL}(d+1,\\mathbb{R})/\\mathrm{SL}(d+1,\\mathbb{Z})\\) and their effective equidistribution."
+        ],
+        "context": "Self-similar measures, Khintchine-type Diophantine questions and homogeneous dynamics.",
+        "keywords": [
+          "self-similar measures",
+          "Khintchine dichotomy",
+          "almost random walks",
+          "effective equidistribution"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.13100",
+        "versioned_id": "2610.13100v1",
+        "title": "Finiteness of planar central configurations of five bodies for all positive masses",
+        "authors": [
+          "Tejasvi Singh Tomar"
+        ],
+        "abstract": "We prove that for every choice of five positive masses the planar five-body problem has finitely many central configurations up to similarity. This settles Smale's sixth problem for five bodies in the plane. Albouy and Kaloshin proved it for masses outside a closed algebraic subset of codimension two. We follow their method. Infinitely many central configurations would give an algebraic curve of complex solutions. At the places at infinity of the curve the valuations of the mutual distances must balance. We determine the possible valuation vectors at all positive masses, together with the mass conditions under which each can occur. We treat limits in which four bodies form a cluster of zero potential energy by expanding the potential, which is constant along the curve, at a place. This excludes, at every positive mass, one of the two diagrams in which such clusters occur, and part of the other. The same expansion excludes one further diagram at every positive mass. What remains is an exact analysis, by computer algebra, of the sets of mass conditions that can hold together at positive masses. Exact rational certificates show that the balance fails under each of them, except on a few one-parameter families of masses, which we treat separately. On the rays through $(1,4,4,4,4)$ and $(1,1,4,4,4)$ the certificates do not apply. On the first ray they cannot apply: there the complex equations have a continuum of solutions, as Albouy and Kaloshin observed. On these rays we count the real central configurations: there are 306 and 294 up to orientation-preserving similarity. The certificates, the programs that check them and a proof of the theorem in the Lean proof assistant are available.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.AG",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-12T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.13100",
+        "pdf_url": "https://arxiv.org/pdf/2610.13100"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "The exact geometric finiteness problem for the planar five-body system provides a possible connection to smooth dynamics; entropy, pressure, symbolic coding and fractal dimension are not central in the abstract.",
+        "tldr": "The author claims finiteness, up to similarity, of planar central configurations for every choice of five positive masses. The abstract reports exact rational certificates, verification programs and a Lean formalization as available.",
+        "problem": "Prove finiteness of planar five-body central configurations for all positive masses, including the exceptional mass cases left by the comparison in the abstract.",
+        "main_result": "For every choice of five positive masses, the author proves that there are finitely many planar central configurations up to similarity and states that this settles Smale's sixth problem for five bodies in the plane. Exceptional mass families are treated separately. On the rays through \\((1,4,4,4,4)\\) and \\((1,1,4,4,4)\\), there are respectively 306 and 294 real central configurations up to orientation-preserving similarity; on the first ray the complex equations have a continuum of solutions. The abstract reports that certificates, checking programs and a Lean proof are available.",
+        "methods": [
+          "The Albouy--Kaloshin method: analysis of the algebraic curve of complex solutions that would arise from infinitely many central configurations, with valuation balance for mutual distances at places at infinity.",
+          "Expansion of the potential at a place, including limits with four-body clusters of zero potential energy.",
+          "Exact computer-algebra analysis of compatible mass conditions and exact rational certificates, with separate treatment of exceptional mass families."
+        ],
+        "context": "The planar five-body problem and algebraic analysis of central configurations.",
+        "keywords": [
+          "central configurations",
+          "five-body problem",
+          "valuation balance",
+          "exact rational certificates"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.13160",
+        "versioned_id": "2610.13160v1",
+        "title": "Hausdorff Dimension and Flexibility for Attractors of Non-Uniformly Hyperbolic Flows",
+        "authors": [
+          "Elias Rego",
+          "Paulo Varandas"
+        ],
+        "abstract": "We study the Hausdorff dimension of attracting sets of three-dimensional flows whose one-dimensional quotient dynamics is non-uniformly expanding. Our main assumption is that the quotient map admits a full-branch uniformly expanding Gibbs--Markov induced map. We first prove that every such attractor contains a hyperbolic horseshoe of Hausdorff dimension strictly larger than two. As a consequence, after an arbitrarily small $C^2$ perturbation, the associated dynamical Lagrange and Markov spectra have robustly non-empty interior for an open and dense set of $C^1$-observables. We then establish intermediate dimension properties. Every admissible intermediate Hausdorff dimension is realized by an ergodic invariant measure supported on the attractor. Moreover, every intermediate stable and unstable dimension is realized by a strictly ergodic hyperbolic subsystem. The approach extends the dimension theory previously developed for geometric Lorenz attractors to more general non-uniformly hyperbolic attractors including singular-hyperbolic attractors, Rovella attractors, and broad classes of skew-product suspension flows modeled by intermittent and Benedicks--Carleson maps.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-12T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.13160",
+        "pdf_url": "https://arxiv.org/pdf/2610.13160"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Hausdorff dimension, hyperbolic horseshoes and dimension realization by measures and subsystems directly match the dimension and fractal-dynamics profile.",
+        "tldr": "Under a full-branch Gibbs--Markov inducing assumption on the quotient, the authors obtain a horseshoe of Hausdorff dimension greater than two inside each attractor under study. They also establish perturbative spectral-interior conclusions and intermediate-dimension realization results.",
+        "problem": "Study Hausdorff dimension and dimension flexibility for attracting sets of three-dimensional flows with non-uniformly expanding one-dimensional quotient dynamics.",
+        "main_result": "The main assumption is that the quotient admits a full-branch uniformly expanding Gibbs--Markov induced map. Every such attractor contains a hyperbolic horseshoe of Hausdorff dimension strictly greater than two. After an arbitrarily small \\(C^2\\) perturbation, the associated dynamical Lagrange and Markov spectra have robustly non-empty interior for an open and dense set of \\(C^1\\)-observables. Every admissible intermediate Hausdorff dimension is realized by an ergodic invariant measure supported on the attractor, and every intermediate stable and unstable dimension is realized by a strictly ergodic hyperbolic subsystem. The precise admissible dimension ranges: Not specified in the abstract.",
+        "methods": [
+          "A full-branch uniformly expanding Gibbs--Markov induced map for the one-dimensional quotient."
+        ],
+        "context": "Dimension theory of non-uniformly hyperbolic attractors, extending the stated geometric Lorenz framework to the further classes named in the abstract.",
+        "keywords": [
+          "Hausdorff dimension",
+          "Gibbs--Markov inducing",
+          "hyperbolic horseshoes",
+          "intermediate dimensions",
+          "dynamical spectra"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.13254",
+        "versioned_id": "2610.13254v1",
+        "title": "Dimension theory of group actions by circle diffeomorphisms I: Stationary measures",
+        "authors": [
+          "Weikun He",
+          "Yuxiang Jiao",
+          "Disheng Xu"
+        ],
+        "abstract": "We establish a structure theorem for smooth random walks on the circle and study the dimensional properties of their stationary measures, including exact dimensionality and a Ledrappier-Young-type dimension formula. These results provide the technical tools needed for the main theorems in Part II \"Dimension theory of group actions by circle diffeomorphisms II: Minimal sets\". They also yield an approximation theorem in the spirit of Katok, Avila-Crovisier-Wilkinson, and Morris-Shmerkin, together with a time-reversal symmetry for circle actions: every semigroup $T$ contained in $\\mathrm{Diff}_+^{1+\\alpha}(\\mathbb{S}^1)$ without finite orbits has the same number of minimal sets as its inverse semigroup $T^{-1}$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-12T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.13254",
+        "pdf_url": "https://arxiv.org/pdf/2610.13254"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Exact dimensionality, stationary-measure dimension formulas and minimal sets of circle actions are centrally aligned with dimension theory and group dynamics.",
+        "tldr": "The authors establish a structure theorem for smooth circle random walks and dimensional results for stationary measures. They also prove a time-reversal symmetry for the number of minimal sets of the stated circle semigroups.",
+        "problem": "Describe smooth random walks on the circle, determine dimensional properties of their stationary measures and relate the minimal sets of a semigroup to those of its inverse.",
+        "main_result": "The authors obtain exact dimensionality and a Ledrappier--Young-type dimension formula for the stationary measures under study. The precise structure-theorem hypotheses and dimension formula: Not specified in the abstract. They also announce an approximation theorem; its detailed statement: Not specified in the abstract. Every semigroup \\(T\\subset\\mathrm{Diff}_+^{1+\\alpha}(\\mathbb{S}^1)\\) without finite orbits has the same number of minimal sets as \\(T^{-1}\\). The results also supply technical tools for the minimal-set theorems in the named Part II.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Stationary measures, smooth circle random walks and dimension theory of circle actions.",
+        "keywords": [
+          "circle actions",
+          "stationary measures",
+          "exact dimensionality",
+          "dimension formula",
+          "minimal sets"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.13518",
+        "versioned_id": "2610.13518v1",
+        "title": "Asymptotic Analysis of Discrete-Time Self-Attention Dynamics in Transformers",
+        "authors": [
+          "Claudio Altafini"
+        ],
+        "abstract": "In machine learning, a self-attention dynamics describes the attention mechanism of transformers, and is obtained treating the layer index of a transformer as time index. Even though naturally discrete-time, this dynamical system is most often studied in continuous-time. Scope of this paper is to provide a thorough investigation of the discrete-time version of the self-attention dynamics: a complete classification of its equilibria is given, and their stability properties are studied, in both the single-head and the multihead case. We show that in both cases the main attractor of the dynamics is a consensus equilibrium aligned with the principal eigenvector of the value matrix (in the single-head case, a corresponding matrix of weights in the multihead case), even though other locally asymptotically stable bipartite equilibria can be show to exist at least in the single-head situation. The behavior is confirmed by looking at the learned weight matrices of a real transformer.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "cs.LG",
+          "cs.SY",
+          "eess.SY"
+        ],
+        "announced_at": "2026-10-12T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.13518",
+        "pdf_url": "https://arxiv.org/pdf/2610.13518"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Focuses on transformer self-attention equilibria and stability, with no central entropy, dimension, symbolic or group-action result stated.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.13736",
+        "versioned_id": "2610.13736v1",
+        "title": "Adjoint-Based Stochastic Analysis for Fatigue of Aeroelastic and Frictional Systems",
+        "authors": [
+          "Justin H. Porter"
+        ],
+        "abstract": "As engineering systems are optimized to reduce weight and improve performance, vibration behavior, including nonlinear effects, is becoming increasingly important to analyze. While methods such as harmonic balance are popular for analyzing periodic nonlinear vibration behavior, these analyses often only consider deterministic loading. However, real applications experience additional noise in the excitation, and alternative approaches are frequently limited to smaller models. This work expands on a recent approach to calculate a time-varying covariance using a linearized system around a periodic nonlinear response. Specifically, numerical conditioning is addressed and improved for cases increasing from a few degrees of freedom to hundreds of degrees of freedom. The algorithm is then extended to capture correlations across both space and time via a period-spanning covariance matrix. Model reduction is proposed for this calculation to maintain computational efficiency. The period-spanning covariance matrix is used to sample full stochastic cycles and estimate fatigue-relevant statistics up to 1393 times faster than stochastic time integration. Importantly, the present methodology uses the same gradient information as stability analyses and continuation solutions, so it can easily be applied for many nonlinear analyses. The methodology is demonstrated for two beam systems: one with unsteady aerodynamic forces and another with a Bouc-Wen frictional tip force. For the aeroelastic model, statistics are accurately estimated via the present approach. For the frictional system, some errors are introduced compared to stochastic time integration and are attributed to the linear time-periodic nature of the system used in the present stochastic calculations. However, estimated stochastic statistics remain useful given the significant reduction in computation time.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-12T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.13736",
+        "pdf_url": "https://arxiv.org/pdf/2610.13736"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Focuses on numerical stochastic covariance and fatigue estimation for engineering vibration systems, without a central connection to the core profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.12869",
+        "versioned_id": "2610.12869v1",
+        "title": "Odd order cases of Chowla's averages over arbitrary rectangles",
+        "authors": [
+          "Qiang Huo",
+          "Zhengxing Lian",
+          "Kangbo Ouyang"
+        ],
+        "abstract": "Let $\\lambda$ be the Liouville function. In this paper we prove an average form of Chowla Conjecture for even $k $. that is, for every fixed even integer $k\\geq 2$, we prove that \\[ \\lim_{\\min\\{M,N\\}\\to \\infty}\\frac{1}{MN}\\sum_{m=1}^M\\sum_{n=1}^N\\lambda(m)\\lambda(m+a_1n)\\cdots\\lambda(m+a_kn)=0. \\] We construct a stationary model for both averaging variables, derive the finite conditional-entropy estimates. A comparison of overlapping intervals on the logarithmic axis then forces this function to vanish.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-12T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.12869",
+        "pdf_url": "https://arxiv.org/pdf/2610.12869"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Stationary models and finite conditional-entropy estimates are explicitly central to the argument, giving a direct entropy-based ergodic connection to the number-theoretic conclusion.",
+        "tldr": "The authors announce vanishing rectangular averages of Liouville correlations with an odd number of factors. The displayed statement uses a fixed even index, so its factor count agrees with the title.",
+        "problem": "Prove an average form of the Chowla conjecture over rectangles whose two side lengths tend independently to infinity.",
+        "main_result": "Writing \\(\\lambda\\) for the Liouville function, the abstract states that for every fixed even integer \\(k\\geq2\\), \\[\\lim_{\\min\\{M,N\\}\\to\\infty}\\frac{1}{MN}\\sum_{m=1}^{M}\\sum_{n=1}^{N}\\lambda(m)\\lambda(m+a_1n)\\cdots\\lambda(m+a_kn)=0.\\] There are \\(k+1\\) factors, an odd number. Assumptions on the coefficients \\(a_1,\\ldots,a_k\\): Not specified in the abstract.",
+        "methods": [
+          "A stationary model for both averaging variables.",
+          "Finite conditional-entropy estimates.",
+          "Comparison of overlapping intervals on the logarithmic axis."
+        ],
+        "context": "Liouville correlations and rectangular Chowla averages via stationary models and entropy estimates.",
+        "keywords": [
+          "Chowla averages",
+          "Liouville function",
+          "conditional entropy",
+          "stationary models",
+          "rectangular averages"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2506.04730",
+        "versioned_id": "2506.04730v2",
+        "title": "$J$-class weighted translations on locally compact groups",
+        "authors": [
+          "A. R. Imanzadeh Fard",
+          "M. R. Azimi",
+          "I. Akbarbaglu"
+        ],
+        "abstract": "A bounded linear operator $T$ on a Banach space $X$ (not necessarily separable) is said to be $J$-class operator whenever the extended limit set, say $J_T(x)$ equals $X$ for some vector $x\\in X$. Practically, the extended limit sets localize the dynamical behavior of operators. In this paper, using the extended limit sets we will examine the necessary and sufficient conditions for the weighted translation $T_{a,\\omega}$ to be $J$-class on a locally compact group $G$, within the setting of $ L^p$-spaces for $ 1 \\leq p < \\infty $. Precisely, we delineate the boundary between $J$-class and hypercyclic behavior for weighted translations. Then, we will show that for the torsion elements in locally compact groups, unlike the case of non-dense orbits of weighted translations, we have $J_{T_{a,\\omega}}(0)=L^p(G)$. Finally, we will provide some examples on which the weighted translation $ T_{a,\\omega}$ is $J$-class but it fails to be hypercyclic.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.FA",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-12T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2506.04730",
+        "pdf_url": "https://arxiv.org/pdf/2506.04730"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Extended limit sets and the distinction between \\(J\\)-class and hypercyclic weighted translations directly match topological linear dynamics and dynamics on locally compact groups.",
+        "tldr": "The authors study necessary and sufficient \\(J\\)-class conditions for weighted translations on spaces of integrable functions over locally compact groups. They distinguish \\(J\\)-class behavior from hypercyclicity and provide examples of the former without the latter.",
+        "problem": "Characterize \\(J\\)-class weighted translations \\(T_{a,\\omega}\\) on \\(L^p(G)\\), for a locally compact group \\(G\\) and \\(1\\leq p<\\infty\\), and compare them with hypercyclic translations.",
+        "main_result": "The authors announce necessary and sufficient \\(J\\)-class conditions, describe the boundary with hypercyclic behavior and give \\(J\\)-class examples that are not hypercyclic. The actual criterion: Not specified in the abstract. For torsion elements, the abstract asserts \\(J_{T_{a,\\omega}}(0)=L^p(G)\\); the required weight hypotheses: Not specified in the abstract. For a bounded linear operator \\(T\\) on a Banach space \\(X\\), not necessarily separable, the supplied definition says \\(J_T(x)=X\\) for some \\(x\\in X\\), without stating a nonzero-vector requirement; that formulation is retained here.",
+        "methods": [
+          "Extended limit sets."
+        ],
+        "context": "Weighted translations, extended limit sets and hypercyclic behavior on integrable-function spaces over locally compact groups.",
+        "keywords": [
+          "\\(J\\)-class operators",
+          "weighted translations",
+          "extended limit sets",
+          "hypercyclicity",
+          "locally compact groups"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 6,
+    "RELATED / POSSIBLY INTERESTING": 4,
+    "LOW PRIORITY": 2
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-10-12T10:50:01.732498Z",
+      "feed_published_at": "2026-10-12T00:00:00-04:00",
+      "feed_build_at": "2026-10-12T04:00:20Z",
+      "feed_date": "2026-10-12",
+      "sha256": "0e7a034e949b1612a386f30bcc625118f9191cbfa0c1a136acf479cad051ad9c",
+      "byte_length": 42036,
+      "capture_run_url": "https://github.com/shui-wang-98/daily-math-ds-digest/actions/runs/37915782471"
+    }
+  ]
+}
