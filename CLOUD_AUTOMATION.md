@@ -1,16 +1,20 @@
 # Hosted cloud daily digest
 
-The user authorized replacing the local daily schedule with a hosted cloud
-schedule on 2026-10-09. Run Monday-Friday at 12:00 Europe/Warsaw. The first
-scheduled production run is the end-to-end acceptance test; a saved schedule
-is not evidence that publication has succeeded. Do not run production early
-merely to test the migration.
+The user authorized replacing the local daily schedule with hosted cloud
+execution on 2026-10-09 and repairing capture/recovery on 2026-10-14. The primary
+run targets Monday-Friday at 12:00 Europe/Warsaw; a hosted recovery check targets
+20:00 on the same days. Both execute this identical idempotent procedure, in
+fresh disposable workspaces. Do not depend on earlier chat history; the current
+repository instructions and main state are authoritative. Keep the old local task paused.
+A saved schedule is not evidence that capture or publication has succeeded.
 
 The existing GitHub capture workflow starts at 11:00 Europe/Warsaw on weekdays,
-with recovery checks at 11:15, 11:30 and 11:40. The hosted daily analysis remains
-at 12:00 in that timezone. Scheduled capture checks reuse validated current-day
-input without another download. These separate times provide a preparation
-buffer; they do not guarantee that GitHub will deliver every scheduled event.
+with recovery checks at 11:15, 11:30 and 11:40. It is a prefetch opportunity,
+not a prerequisite for hosted analysis. The hosted run also archives missing
+current-day input before analysis using the same strict capture implementation.
+An existing valid input is reused without HTTP. Neither scheduler guarantees
+delivery during a platform outage; the 20:00 check provides another opportunity
+and must report remaining missing input or failed publication honestly.
 
 ## Authority and environment
 
@@ -21,7 +25,9 @@ executor, even as a fallback. If hosted execution or repository access is
 unavailable, report BLOCKED with the real reason.
 
 This procedure replaces the local-only environment, dependency-installation,
-and Git transport steps in DAILY_AUTOMATION.md. Read that file completely and
+input acquisition and Git transport steps in DAILY_AUTOMATION.md. The sole
+network acquisition exception is the hosted capture phase below; preparation
+and analysis remain offline. Read that file completely and
 retain all its research, coverage, mathematical, rendering, state, and
 publication-scope rules. Also read AGENTS.md, config.yaml, author_watchlist.yaml,
 src/models.py, schemas/analysis_run.schema.json, both prompts, requirements.txt,
@@ -45,14 +51,69 @@ Do not modify application code, tests, workflows, configuration, research
 preferences, these instructions, or schedules during a daily run. Temporary
 analysis/check scripts are allowed only in the disposable cloud workspace.
 
+## Secure the current input before processing backlog
+
+Do this at the start of every invocation, before potentially lengthy analysis.
+Only the official `https://rss.arxiv.org/rss/math.DS` feed may be fetched, by
+`src.capture_feed` in this hosted workspace. Never fetch paper links, other
+categories, author APIs, fixtures, or a local-computer fallback. Do not loosen
+validation or invent inputs for missing historical days after RSS has rolled on.
+
+1. Validate **all** existing captures first, including older processed inputs:
+   `python -c "from pathlib import Path; from src.inbox import read_inbox; print(len(read_inbox(Path('data/inbox'))))"`.
+   A corrupt or incomplete pair is a hard failure. Do not fetch another input
+   to conceal it. Record the paths and exact error and stop.
+2. Run `python -m src.capture_feed --if-missing --json`. Its JSON describes
+   the validated source, input ID, path base, exact two files and filtered paper
+   count. In the production checkout `path_base` must be `repository` and the
+   two files must be exactly `data/inbox/<input_id>/feed.xml` and
+   `data/inbox/<input_id>/manifest.json`. Zero papers is valid only after the
+   RSS, timestamps, date, content and hash checks succeed.
+3. If the pair was already present in the base tree, require unchanged bytes
+   and make no capture commit. Otherwise, inspect both files with `read_input`,
+   compare their source identity against the CLI output, and atomically publish
+   **only these two new files**. Use the Git-data blob/tree/commit/ref procedure
+   below with message `Capture math.DS RSS input`, the current base tree/parent,
+   `expected_sha=base_SHA` and `force=false`. Reject deletions, overwrites and
+   any other changed path. This capture commit must not contain state, reports,
+   pending or analysis. Verify remote hashes and bytes before continuing.
+4. On a capture lease rejection, refresh main and validate its inbox. If the
+   exact same input hash is already archived, reuse the remote pair unchanged
+   (especially its original fetched_at); do not overwrite it with local capture
+   metadata. For another concurrent update, obtain a fresh checkout and repeat
+   the check at most twice. Unknown outcomes require readback before retrying.
+   Stop on unresolved conflicts. Never bypass the lease or force a ref update.
+5. After a successful capture write, use a new clean checkout at the verified
+   remote main SHA for preparation. The earlier checkout's HEAD is stale.
+   For reuse without a write, recheck remote main and refresh if it advanced.
+6. A download error, stale feed or missing current-day feed is **INPUT NOT READY**,
+   not a zero-paper report. Preserve its actual error. Existing validated older
+   captures may still be processed by offline preparation in date order; do not
+   let a transient current-day download failure strand an already archived day.
+   Never create a current-day report without its validated input. End the run
+   with the capture stage failed/pending even if backlog publication succeeds.
+   Do not loop indefinitely or create a new schedule; the saved recovery task
+   checks again at its scheduled time.
+
 ## Generate and validate
+
+Before the first preparation or analysis, **both primary and recovery runs**
+must check publication of the latest committed report. Find the commit that
+actually introduced that report (current main may be a later capture commit),
+then verify its exact publisher run, public files and Issue marker as described
+below. If pending, wait with the bounded backoff; if still pending or failed,
+stop subsequent report generation and report the specific failed stage. This
+gate must not depend on prepare returning exit 3. An empty repository with no
+report has nothing to verify and may proceed.
 
 1. Run the checkout's `python -m src.prepare_run` with the isolated interpreter,
    preserving the actual exit code. This is offline and reads immutable
-   `data/inbox/` only. Never fetch arXiv, query authors, retrieve full papers, or
-   substitute fixtures. Exit 2 means INPUT NOT READY; report the cause without
+   `data/inbox/` only; this command must never make HTTP requests or substitute
+   fixtures. Exit 2 means INPUT NOT READY; report the cause without
    inventing an empty report. Exit 3 means NO NEW INPUT and requires no report
-   rewrite or publication. Exit 0 may legitimately contain zero papers.
+   rewrite or publication, but still check the latest committed report's
+   deployment/notification if a previous invocation left publication pending.
+   Exit 0 may legitimately contain zero papers.
 2. Process unfinished captures oldest first, using each pending report date,
    not the execution date. Preserve pending and analysis throughout retries
    within the run. If a previous run left a recovery attachment, inspect its
@@ -86,7 +147,8 @@ analysis/check scripts are allowed only in the disposable cloud workspace.
 
 ## Publish atomically with the connected GitHub plugin
 
-User authorization covers committing validated daily outputs to main and the
+User authorization covers the separately validated capture pair above,
+committing validated daily outputs to main and the
 existing GitHub publisher's deployment and persistent Issue notification.
 It does not authorize unrelated code changes, new credentials, new Issues, or
 additional notification channels.
@@ -96,7 +158,7 @@ credentials. Never copy plugin credentials into the shell. Do not publish
 files separately through create_file/update_file: readers must never observe
 state advanced before its complete output set.
 
-1. Allow only the validated run's data/state.json, dated JSON in data/reports/,
+1. For a **report** commit allow only the validated run's data/state.json, dated JSON in data/reports/,
    dated index.html/report.json in site/reports/, site/index.html, and required
    site/assets/ or site/.nojekyll. Reject every other changed path and any
    deletion, legacy PDF/Markdown modification, executable-mode change, symlink,
@@ -141,6 +203,11 @@ Verify the Publish math.DS digest job, public dated HTML/JSON and homepage, and
 the existing Issue's matching report-date marker/counts/links. Never request
 arXiv links during these checks.
 
+Recovery invocations first check any already committed latest report whose
+publisher is unfinished, instead of making another report commit. A queued
+publisher is pending; a failed publisher is a real failure requiring attention.
+Do not duplicate Issue comments or re-upload identical outputs to force a run.
+
 Wait reasonably with backoff for publication (up to 15 minutes per input).
 If queued, blocked, failed, or not triggered, report that actual status and run
 link. Do not change runners, billing, permissions, workflows, or schedules to
@@ -159,7 +226,8 @@ recovery data.
 
 Return a concise Chinese report with announcement date, all three class counts,
 output links, executed test count and exit codes, commit SHA, and separate
-PASS/FAIL/BLOCKED/PENDING results for cloud startup, real report generation,
+PASS/FAIL/BLOCKED/PENDING results for cloud startup, current-input capture,
+real report generation,
 GitHub writeback, Pages deployment, and Issue notification. The first scheduled
 production run must explicitly give this full acceptance result. If no new
 input is available, state that end-to-end publication remains untested for

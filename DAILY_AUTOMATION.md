@@ -2,14 +2,17 @@
 
 For the hosted cloud schedule authorized on 2026-10-09, read
 [CLOUD_AUTOMATION.md](CLOUD_AUTOMATION.md) as well. Its execution environment and
-atomic GitHub publication procedure supersede the local-only steps below;
+strict hosted input-acquisition and atomic GitHub publication procedures
+supersede the local-only steps below;
 all classification, mathematical reliability, rendering, validation, and
 publication scope requirements still apply. Editing either file does not itself
-change a schedule. The first production cloud run remains an acceptance test.
+change a schedule. Cloud runs use a noon primary and 20:00 recovery check on
+weekdays; the old local task remains paused. Actual capture and publication
+require execution evidence, not merely a saved schedule.
 
 These are the reusable instructions for the local scheduled task, intended for
 Monday-Friday at 12:00 Europe/Warsaw. The user approved production deployment
-on 2026-09-15; the existing local task was updated and resumed. Its actual
+on 2026-09-15; this local task was superseded by hosted execution on 2026-10-09. Its actual
 already-finalized retry passed; unattended publication of new input still
 requires acceptance evidence in VALIDATION.md. Reading or
 editing this file does not change or trigger that task. Cloud capture targets weekdays

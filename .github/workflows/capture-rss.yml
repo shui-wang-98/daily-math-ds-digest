@@ -21,6 +21,19 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Record scheduler and runner timing
+        env:
+          TRIGGER_EVENT: ${{ github.event_name }}
+          TRIGGER_SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          {
+            echo '## Capture timing'
+            printf 'Runner observed UTC: %s\n' "$(date -u +%FT%TZ)"
+            printf 'Event: %s; configured cron: %s; timezone: Europe/Warsaw\n' "$TRIGGER_EVENT" "$TRIGGER_SCHEDULE"
+            printf 'Run: %s; attempt: %s\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT"
+            echo 'Compare the run created_at and job started_at from Actions to distinguish trigger delay from runner delay.'
+            echo 'The cron expression does not identify a guaranteed delivery time or a missed event.'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
       - uses: actions/checkout@v7
         with:
           ref: main

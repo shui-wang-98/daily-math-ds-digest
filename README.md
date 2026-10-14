@@ -1,25 +1,32 @@
 # Daily math.DS Digest
 
 An English research digest from official arXiv math.DS titles and abstracts.
-GitHub Actions captures raw RSS; local Codex synchronizes it through Git and
-writes the analysis. Python validates and renders locally. No model API, AI SDK,
+GitHub Actions prefetches raw RSS. A hosted ChatGPT Work task obtains missing
+current-day RSS, writes the analysis, and runs Python validation/rendering in
+an isolated cloud workspace. No model API, AI SDK,
 paid AI service, new key, or direct email credential is used.
 
 ## Architecture and schedules
 
-Cloud capture (weekdays 11:15, with 11:30 and 11:40 recovery checks, Europe/Warsaw)
--> committed inbox -> local Git sync
--> offline preparation -> Codex analysis -> HTML/JSON -> validated Git commit/push
+GitHub prefetch (weekdays 11:00, 11:15, 11:30, 11:40 Europe/Warsaw)
+-> immutable committed inbox
+-> hosted coordinator (12:00 primary, 20:00 recovery): validate inbox,
+   capture/archive missing current input, then offline preparation
+-> Codex analysis -> HTML/JSON -> validated atomic GitHub commit
 -> existing Pages workflow and persistent Issue notification.
 
-The existing local task targets weekdays **12:00 Europe/Warsaw** and was updated
-and resumed after production approval on 2026-09-15. The real cloud-input through
-Pages/Issue path has passed. The actual task's already-finalized retry also
-passed; its unattended analysis and publication of new input remain unverified.
+The hosted primary and recovery tasks run on weekdays in **Europe/Warsaw**,
+following daylight saving time. Each run reads GitHub main as its durable state
+and starts in a fresh cloud workspace. The old local task remains paused;
+the user's computer and desktop app need not be running for hosted execution.
+Already finalized input is not analyzed or published again. Recovery checks
+also inspect unfinished publication of an already committed report.
 See [VALIDATION.md](VALIDATION.md) for evidence and follow
+[CLOUD_AUTOMATION.md](CLOUD_AUTOMATION.md) and its retained research rules in
 [DAILY_AUTOMATION.md](DAILY_AUTOMATION.md). Editing repository instructions does
-not itself change or trigger the task. Local execution requires the computer awake and the desktop app
-running; see the [official task documentation](https://learn.chatgpt.com/docs/automations?surface=app).
+not itself change or trigger a task. Cloud shell access, the connected GitHub
+plugin, and working platform schedules remain prerequisites; see the
+[official task documentation](https://learn.chatgpt.com/docs/automations).
 
 ## Cloud capture
 
@@ -45,13 +52,20 @@ Delayed announcements and exceptional holidays are **input not ready**, not
 empty days. The pipeline does not guess a holiday calendar. Previously validated
 inputs remain eligible for backlog processing even when the computer was offline.
 
-The workflow provides manual dispatch and weekday triggers at 11:15, 11:30 and
+The workflow provides manual dispatch and weekday triggers at 11:00, 11:15, 11:30 and
 11:40 Europe/Warsaw. Scheduled runs validate and reuse an existing current-day
 capture without downloading again; the later triggers recover a missed or failed
 earlier capture. Damaged inputs still fail validation. Manual dispatch downloads
 the feed again, allowing a corrected same-day capture to be archived separately.
 These recovery opportunities reduce dependence on a single trigger; they do not
 guarantee execution during a GitHub outage or prolonged scheduling delay.
+Therefore the hosted coordinator independently runs the same strict
+`src.capture_feed --if-missing --json` before analysis. It validates the full
+inbox first, atomically archives only a newly validated XML/manifest pair, and
+then obtains a fresh main checkout. The JSON output provides the exact pair
+paths, input identity, source provenance and eligible paper count. A corrupt
+archive is an error, never permission to replace it. Preparation stays offline;
+the cloud capture exception does not authorize local HTTP requests.
 GitHub officially supports an IANA `timezone` beside `cron`, follows daylight
 saving, can delay scheduled jobs, and uses the default branch:
 [official schedule documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).

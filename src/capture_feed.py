@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 from pathlib import Path
 
@@ -38,17 +39,40 @@ def capture_feed(*, config_path: Path = ROOT / "config.yaml",
     return persist_input(raw, inbox_dir=inbox_dir, fetched_at=utc_now(), capture_run_url=run_url)
 
 
+def capture_summary(folder: Path, *, inbox_dir: Path) -> dict:
+    """Describe the validated pair without exposing the execution host's paths."""
+    source, feed = read_input(folder)
+    try:
+        relative = folder.resolve().relative_to(ROOT.resolve())
+        path_base = "repository"
+    except ValueError:
+        relative = folder.resolve().relative_to(inbox_dir.resolve())
+        path_base = "inbox"
+    return {
+        "source": source.model_dump(mode="json"),
+        "input_id": source.input_id,
+        "path_base": path_base,
+        "files": [(relative / name).as_posix() for name in ("feed.xml", "manifest.json")],
+        "paper_count": len(feed.papers),
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, default=ROOT / "config.yaml")
     parser.add_argument("--inbox-dir", type=Path, default=ROOT / "data/inbox")
     parser.add_argument("--github-output", type=Path)
+    parser.add_argument("--json", action="store_true",
+                        help="Print a validated JSON summary with relative archive paths")
     parser.add_argument("--if-missing", action="store_true",
                         help="Reuse validated current-day input without downloading again")
     args = parser.parse_args()
     source, folder = capture_feed(config_path=args.config, inbox_dir=args.inbox_dir,
                                  if_missing=args.if_missing)
-    print(f"Validated math.DS input {source.input_id}; fetched {source.fetched_at.isoformat()}; {source.byte_length} bytes.")
+    if args.json:
+        print(json.dumps(capture_summary(folder, inbox_dir=args.inbox_dir), sort_keys=True))
+    else:
+        print(f"Validated math.DS input {source.input_id}; fetched {source.fetched_at.isoformat()}; {source.byte_length} bytes.")
     if args.github_output:
         relative = folder.resolve().relative_to(ROOT).as_posix()
         with args.github_output.open("a", encoding="utf-8") as handle:

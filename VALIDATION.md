@@ -618,3 +618,54 @@ events. A future successful capture and complete hosted publication remain
 the production acceptance evidence; neither these tests nor saving the
 schedule is claimed as that evidence. Historical missing Issue markers are
 outside this timing change.
+
+## 2026-10-14: Independent hosted capture and late-input recovery
+
+The October 13 capture was delayed before GitHub created a schedule run, not
+inside the Python downloader. Run `38432900036` was created at 16:43:56 UTC;
+the job started at 16:43:59, downloaded/validated RSS at 16:44:06-07, pushed
+capture `3b43e40` at 16:44:08, and finished successfully at 16:44:12.
+The executed revision already configured 11:00, 11:15, 11:30 and 11:40
+Europe/Warsaw. The workflow was active and its concurrency group did not share
+the publisher's lock. The noon hosted run had correctly returned INPUT NOT
+READY; no recovery invocation continued after the late input arrived.
+
+The public run records cannot identify which expected event was delayed or
+dropped, or GitHub's internal cause. GitHub documents that scheduled events may
+be delayed or dropped under load. The October 13 status incident at 20:42 UTC
+concerned log display, not delayed jobs, and is not evidence for this incident.
+The captured October 13 feed was a validated 900-byte, zero-item input; this
+does not by itself prove when the upstream HTTP endpoint became available.
+
+The repair gives the hosted coordinator its own narrowly scoped capture phase:
+validate the complete inbox, reuse today's valid pair or capture the official
+feed with the existing strict validator, atomically archive only that pair,
+refresh main, check the previous publisher, then analyze offline in announcement
+order. Capture and report commits remain separate and use expected-head leases.
+The documented noon primary and evening recovery use the same procedure.
+Local capture stays prohibited and the local schedule stays paused.
+
+`src.capture_feed --json` now reports revalidated provenance, exact relative
+pair paths, input identity and filtered paper count. Default CLI behavior is
+unchanged. Nine regression cases cover late recovery through finalization,
+genuine empty/replacement-only feeds, no-HTTP repeated capture, idempotent
+outputs/state, relative path contracts and rejection of corrupted backlog.
+The capture workflow now records trigger type/cron, runner-observed UTC and
+run attempt in its summary so future investigations can separate these stages.
+
+Validation with the existing local environment and isolated fixture paths:
+
+- Targeted inbox suite: **60 passed**, exit 0.
+- Full offline suite: **407 passed in 33.90s**, exit 0, fresh absolute basetemp
+  and cache provider disabled. No skipped tests.
+- `src.notify --check-only`: committed October 12 report is complete, exit 0.
+- `git diff --check`: passed; no production inbox/state/report/site changes.
+- Independent review found and resolved an ordering ambiguity: previous-report
+  publication is now an unconditional gate before any new analysis, using the
+  report's actual commit rather than a later capture-only main head.
+
+These offline tests prove the recovery logic with fixtures, not hosted RSS
+network access or a new cloud deployment. Saved task state, actual cloud fetch,
+GitHub writeback, Pages and Issue results must be verified separately. No local
+production rerun, live arXiv request, dependency installation, credential or
+permission change was used for this maintenance validation.

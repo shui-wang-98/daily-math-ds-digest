@@ -201,6 +201,133 @@ def test_capture_cli_if_missing_reuses_validated_input(tmp_path, monkeypatch, ca
     assert source.input_id in capsys.readouterr().out
 
 
+@pytest.mark.parametrize('path_base', ['repository', 'inbox'])
+def test_capture_json_identifies_exact_validated_pair(tmp_path, monkeypatch, capsys, path_base):
+    data = tmp_path / 'data'
+    source, folder = archive(data)
+    if path_base == 'repository':
+        monkeypatch.setattr(capture, 'ROOT', tmp_path)
+    else:
+        monkeypatch.setattr(capture, 'ROOT', tmp_path / 'other-repository')
+    monkeypatch.setattr(capture, 'utc_now', lambda: NOW)
+
+    def unexpected_download(*args):
+        raise AssertionError('JSON output must not download an archived input')
+
+    monkeypatch.setattr(capture, 'download_feed', unexpected_download)
+    monkeypatch.setattr(sys, 'argv', [
+        'capture_feed', '--json', '--if-missing', '--inbox-dir', str(data / 'inbox'),
+        '--config', str(ROOT / 'config.yaml'),
+    ])
+    assert capture.main() == 0
+    output = capsys.readouterr().out
+    summary = json.loads(output)
+    base = tmp_path if path_base == 'repository' else data / 'inbox'
+    assert summary == {
+        'source': source.model_dump(mode='json'),
+        'input_id': source.input_id,
+        'path_base': path_base,
+        'files': [(folder / name).relative_to(base).as_posix()
+                  for name in ('feed.xml', 'manifest.json')],
+        'paper_count': 3,  # The fixture also has one replacement-only item.
+    }
+    assert str(tmp_path) not in output
+    assert all(not Path(path).is_absolute() for path in summary['files'])
+    assert all((base / path).is_file() for path in summary['files'])
+
+
+def test_capture_json_revalidates_bytes_before_reporting_success(tmp_path, monkeypatch, capsys):
+    source, folder = archive(tmp_path)
+    (folder / 'feed.xml').write_bytes(b'corrupt')
+    monkeypatch.setattr(capture, 'capture_feed', lambda **kwargs: (source, folder))
+    monkeypatch.setattr(sys, 'argv', ['capture_feed', '--json', '--inbox-dir', str(tmp_path / 'inbox')])
+    with pytest.raises(inbox.InputNotReady, match='SHA-256'):
+        capture.main()
+    assert capsys.readouterr().out == ''
+
+
+@pytest.mark.parametrize('kind', ['papers', 'empty', 'replacement_only'])
+def test_late_capture_recovers_missing_input_and_repeated_run_is_idempotent(
+        tmp_path, monkeypatch, capsys, kind):
+    late = NOW + timedelta(hours=7)
+    raw = rss(empty=kind == 'empty', replacement_only=kind == 'replacement_only')
+    monkeypatch.setattr(capture, 'utc_now', lambda: late)
+    monkeypatch.setattr(preparer, 'utc_now', lambda: late)
+    with pytest.raises(inbox.InputNotReady, match='missing'):
+        preparer.prepare_run(data_dir=tmp_path)
+    assert not list(tmp_path.iterdir())
+
+    requests_made = []
+
+    def download(*args):
+        requests_made.append(args)
+        return raw
+
+    monkeypatch.setattr(capture, 'download_feed', download)
+    monkeypatch.setattr(sys, 'argv', [
+        'capture_feed', '--json', '--if-missing', '--inbox-dir', str(tmp_path / 'inbox'),
+    ])
+    assert capture.main() == 0
+    first_output = capsys.readouterr().out
+    summary = json.loads(first_output)
+    source, _ = inbox.read_input(tmp_path / 'inbox' / summary['input_id'])
+    assert source.fetched_at == late and source.feed_date == '2026-09-04'
+    assert summary['paper_count'] == (3 if kind == 'papers' else 0)
+    assert len(requests_made) == 1 and requests_made[0][0] == inbox.SOURCE_URL
+    assert not (tmp_path / 'state.json').exists()
+
+    pending = preparer.prepare_run(data_dir=tmp_path)
+    assert pending.source_input == source
+    analysis = write_analysis(tmp_path, pending)
+    report = finalizer.finalize_run(analysis, data_dir=tmp_path, site_dir=tmp_path / 'site')
+    assert report.report_date == source.feed_date
+    assert len(report.papers) == summary['paper_count']
+    dated_site = tmp_path / 'site/reports' / source.feed_date
+    assert {path.name for path in dated_site.iterdir()} == {'index.html', 'report.json'}
+    assert (tmp_path / 'reports' / f'{source.feed_date}.json').is_file()
+    state = json.loads((tmp_path / 'state.json').read_text())
+    assert set(state['processed_inputs']) == {source.input_id}
+    assert set(state['seen']) == {paper.arxiv_id for paper in pending.papers}
+    if not pending.papers:
+        assert 'No new papers.' in (dated_site / 'index.html').read_text(encoding='utf-8')
+
+    before = {p: (p.read_bytes(), p.stat().st_mtime_ns)
+              for p in tmp_path.rglob('*') if p.is_file()}
+    assert capture.main() == 0
+    assert capsys.readouterr().out == first_output
+    assert len(requests_made) == 1
+    finalizer.finalize_run(analysis, data_dir=tmp_path, site_dir=tmp_path / 'site')
+    with pytest.raises(inbox.InboxUpToDate):
+        preparer.prepare_run(data_dir=tmp_path)
+    assert before == {p: (p.read_bytes(), p.stat().st_mtime_ns) for p in before}
+
+
+@pytest.mark.parametrize('damage', ['missing_manifest', 'missing_feed', 'corrupt_feed'])
+def test_cloud_inbox_preflight_rejects_damaged_backlog_even_with_valid_current_input(
+        tmp_path, monkeypatch, damage):
+    _, old_folder = archive(tmp_path)
+    current, _ = archive(tmp_path, rss('2026-09-07'), NOW + timedelta(days=3))
+    if damage == 'missing_manifest':
+        (old_folder / 'manifest.json').unlink()
+    elif damage == 'missing_feed':
+        (old_folder / 'feed.xml').unlink()
+    else:
+        (old_folder / 'feed.xml').write_bytes(b'corrupt')
+    monkeypatch.setattr(preparer, 'utc_now', lambda: NOW + timedelta(days=3))
+    before = {p: (p.read_bytes(), p.stat().st_mtime_ns)
+              for p in tmp_path.rglob('*') if p.is_file()}
+    # The hosted procedure must perform this full inbox preflight before
+    # capture --if-missing; a healthy latest pair cannot hide damaged backlog.
+    with pytest.raises(inbox.InputNotReady):
+        inbox.read_inbox(tmp_path / 'inbox')
+    with pytest.raises(inbox.InputNotReady):
+        preparer.prepare_run(data_dir=tmp_path)
+    assert inbox.read_input(tmp_path / 'inbox' / current.input_id)[0] == current
+    assert not (tmp_path / 'pending_run.json').exists()
+    assert not (tmp_path / 'state.json').exists()
+    assert before == {p: (p.read_bytes(), p.stat().st_mtime_ns) for p in before}
+
+
 def test_partial_capture_write_failure_does_not_publish_pair(tmp_path, monkeypatch):
     def fail(*args):
         raise OSError('manifest disk failure')
