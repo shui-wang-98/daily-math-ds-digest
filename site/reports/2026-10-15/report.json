@@ -1,0 +1,1046 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-10-15",
+  "generated_at": "2026-10-15T10:10:48.218554Z",
+  "feed_build_at": "2026-10-15T04:00:25Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 24 unseen announcements: 12 HIGH PRIORITY, 8 RELATED / POSSIBLY INTERESTING, and 4 LOW PRIORITY. Central themes include packing and conformal dimensions, exact-dimensional Green measures, zero-temperature equilibrium states, shifts of finite type, solenoidal and monodromy group actions, and Bohr recurrence. Related papers concern analytic mixing, homogeneous equidistribution, arithmetic dynamics, Morse-flow coding, and holomorphic semigroup embeddings. No followed-author matches occur in the supplied input.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2610.18929",
+        "versioned_id": "2610.18929v1",
+        "title": "Packing intermediate dimensions of measures and applications",
+        "authors": [
+          "Nicolas Angelini"
+        ],
+        "abstract": "We introduce a spectrum of dimensions of measures, the \\emph{packing intermediate dimensions} $\\dim_{P,\\theta}\\mu$, $\\theta\\in(0,1]$, of a Borel probability measure $\\mu$ on $\\mathbb{R}^n$ and the \\emph{quasi-Hausdorff dimension} $\\dim_{qH}\\mu$. We show that this spectrum encodes the information on $\\mu$ that governs the packing dimension of its projections and H\\\"{o}lder images. First, $\\dim_{qH}\\mu$ is the exact threshold for the packing dimension profiles of Falconer and Howroyd: for every real $0<s\\leq n$, $\\dim_P^s\\mu=s$ if and only if $s\\leq\\dim_{qH}\\mu$. Second, we prove a lower bound for the profiles in terms of $\\dim_H\\mu$, $\\dim_{P,\\theta}\\mu$ and the Assouad dimension of $\\operatorname{supp}\\mu$, which improves the bound of Falconer and Mattila, the best previously known general lower bound for the packing dimension of projected measures. The improvement is strict whenever $\\dim_H\\mu<\\dim_P\\mu$ and $\\dim_A(\\operatorname{supp}\\mu)<n$, and when $\\dim_A(\\operatorname{supp}\\mu)=n$ it occurs exactly when $\\dim_{P,\\theta}\\mu$ exceeds an explicit universal lower bound for some $\\theta$ in an explicit range. We present examples of measures with $\\dim_H\\mu<\\dim_P\\mu<\\dim_A(\\operatorname{supp}\\mu)=n$ for which our bound gives the exact value $\\dim_P\\mu_V=\\min\\{\\dim_P\\mu,m\\}$ for almost every $m$-dimensional subspace $V$, whereas the bound of Falconer and Mattila is strictly smaller. As applications, for a large family of random $\\alpha$-H\\\"{o}lder maps $f_\\omega:\\mathbb{R}^n\\to\\mathbb{R}^m$, we prove that, for compactly supported $\\mu$, $\\dim_P\\mu_{f_\\omega}=m$ almost surely if and only if $\\alpha m\\leq\\dim_{qH}\\mu$, and that the packing analogue of Kahane's formula holds for fractional Brownian motions if and only if $\\dim_{qH}\\mu=\\dim_P\\mu$. Analogous results are obtained for analytic sets.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CA",
+          "math.PR"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.18929",
+        "pdf_url": "https://arxiv.org/pdf/2610.18929"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The new dimension spectra, projection dimensions, Hölder images, and Assouad-dimension bounds are directly central to the profile’s fractal-dimension interests.",
+        "tldr": "The paper introduces packing intermediate dimensions of measures and a quasi-Hausdorff dimension, then uses them to control packing dimensions of projections and Hölder images.",
+        "problem": "Identify measure-theoretic dimension data that determine packing-dimension profiles and sharpen general lower bounds for projected measures.",
+        "main_result": "For a Borel probability measure on Euclidean space, the quasi-Hausdorff dimension is characterized as the exact threshold at which every packing-dimension profile equals its parameter. The authors also give a lower bound involving Hausdorff dimension, packing intermediate dimensions, and the Assouad dimension of the support, together with strict-improvement criteria, exact examples, and applications to random Hölder maps and fractional Brownian motion.",
+        "methods": [
+          "Packing-dimension profiles",
+          "Packing intermediate dimensions",
+          "Quasi-Hausdorff dimension",
+          "Construction of exact examples"
+        ],
+        "context": "Fractal geometry of measures, projections, Hölder images, and random images.",
+        "keywords": [
+          "packing intermediate dimension",
+          "quasi-Hausdorff dimension",
+          "projections",
+          "Hölder images",
+          "Assouad dimension"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.19019",
+        "versioned_id": "2610.19019v1",
+        "title": "Mixing Rates for Analytic Observables: Toral Endomorphisms and Anosov Blaschke Deformations",
+        "authors": [
+          "Ekaterina Shchetka"
+        ],
+        "abstract": "We analyze exponential mixing for analytic observables and show that mixing at a double exponential rate occurs for genuinely nonlinear systems. Neither its presence nor its sharp exponent is stable under arbitrarily small area-preserving perturbations in the real-analytic topology. We construct two families of area-preserving Anosov Blaschke product diffeomorphisms that converge in the real-analytic topology to the same hyperbolic toral automorphism. For nonzero parameters, both deformations are topologically conjugate to the linear model but not $C^1$-conjugate. For all nonzero parameter values, the maps in the first family are mixing at a double exponential rate with the same sharp exponent, strictly smaller than that of the linear map. The sharp exponent is therefore not lower semicontinuous at the linear map. In the second family, mixing at a double exponential rate is lost altogether, although the maps remain exponentially mixing. We also establish double exponential bounds for every ergodic toral endomorphism and uniform bounds of the same type for totally ergodic higher-rank toral actions. Our method combines the Fourier escape argument with Koopman operator estimates from a Hilbert space of analytic functions to its dual space of hyperfunctions.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CV",
+          "math.FA"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.19019",
+        "pdf_url": "https://arxiv.org/pdf/2610.19019"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Sharp mixing rates for analytic observables in Anosov and toral systems provide a substantial hyperbolic and ergodic-theoretic connection.",
+        "tldr": "The paper exhibits double-exponential mixing for genuinely nonlinear analytic systems and shows that both its presence and sharp exponent can fail to persist under arbitrarily small analytic perturbations.",
+        "problem": "Determine sharp mixing rates for analytic observables and their stability under real-analytic, area-preserving perturbations.",
+        "main_result": "Two families of area-preserving Anosov Blaschke diffeomorphisms converge to the same hyperbolic toral automorphism. In one family every nonzero parameter has double-exponential mixing with a common sharp exponent strictly below that of the linear map; in the other family double-exponential mixing disappears while exponential mixing remains. Double-exponential bounds are also established for every ergodic toral endomorphism and uniformly for totally ergodic higher-rank toral actions.",
+        "methods": [
+          "Fourier escape argument",
+          "Koopman-operator estimates from an analytic-function Hilbert space to its hyperfunction dual"
+        ],
+        "context": "Analytic mixing in hyperbolic toral dynamics and higher-rank actions.",
+        "keywords": [
+          "mixing rates",
+          "Anosov diffeomorphisms",
+          "toral endomorphisms",
+          "Koopman operators",
+          "analytic observables"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.19340",
+        "versioned_id": "2610.19340v1",
+        "title": "Uniqueness of Limit Cycles for Abel Equations and Planar Systems",
+        "authors": [
+          "Jos\\'e Luis Bravo Trinidad",
+          "Renhao Tian",
+          "Yulin Zhao"
+        ],
+        "abstract": "We study positive limit cycles of the Abel equation $$\\dot{x}=A(t)x^{3}+B(t)x^{2},$$ where $A$ and $B$ are $2\\pi$-periodic functions. By developing a half-period convexity method, we establish a new criterion ensuring that the equation has at most one positive limit cycle. Moreover, if such a limit cycle exists, it is hyperbolic. As applications, we consider two classes of planar polynomial systems that can be reduced to Abel equations. For a subfamily of cubic rigid systems, we prove that there is at most one limit cycle, thereby giving a partial answer to the first problem in Gasull's list of 33 open problems. For quadratic systems, we derive a new uniqueness criterion for limit cycles surrounding the origin and provide explicit parameter regions under which the criterion is satisfied.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CA"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.19340",
+        "pdf_url": "https://arxiv.org/pdf/2610.19340"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The paper is centered on uniqueness and hyperbolicity of ODE limit cycles, without a stated entropy, symbolic, dimension, or topological-dynamics component.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.19360",
+        "versioned_id": "2610.19360v1",
+        "title": "Poincar\\'e compactifications of pullbacks of parallel vector fields under counterexamples to the real Jacobian conjecture",
+        "authors": [
+          "Francisco Braun",
+          "Paulo Machado"
+        ],
+        "abstract": "Let $F: \\mathbb{R}^2 \\to \\mathbb{R}^2$ be a polynomial map with nowhere zero Jacobian determinant. It is known that the global invertibility of $F$ is equivalent to the pullback of a parallel vector field being parallel. In this paper, we construct the phase portraits on the Poincar\\'e disc of the pullbacks of the canonical annular, radial, and strip vector fields under non-injective maps $F$ that have recently appeared in the literature. Our arguments use local and global properties of vector fields as well as local and global properties of functions, thereby connecting techniques from dynamical systems and singularity theory.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.19360",
+        "pdf_url": "https://arxiv.org/pdf/2610.19360"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The phase-portrait analysis of planar vector fields is not tied in the abstract to the profile’s central entropy, symbolic, dimension, or group-action themes.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.19546",
+        "versioned_id": "2610.19546v1",
+        "title": "Shrinking targets versus recurrence: A survey on the Hausdorff dimension theory",
+        "authors": [
+          "Zhang-nan Hu",
+          "Jun-jie Huang",
+          "Bing Li"
+        ],
+        "abstract": "This survey reviews results on the Hausdorff dimension of shrinking target sets and recurrence sets in dynamical systems. In their basic formulations, shrinking target sets concern orbits approaching a prescribed centre, whereas recurrence sets concern orbits returning close to their initial points. A central theme is the comparison of the Hausdorff dimensions of these two classes of limsup sets. The dynamical systems considered include expanding conformal systems, irrational rotations, affine iterated function systems, and matrix transformations. Related results on Hausdorff measure are also included when they provide natural refinements of the dimension theory. Finally, we review results on badly approximating orbits and non-recurrent sets, with particular attention to winning properties and intersections with self-conformal and self-affine sets.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.19546",
+        "pdf_url": "https://arxiv.org/pdf/2610.19546"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The survey is directly centered on Hausdorff dimension, recurrence, shrinking targets, winning properties, and self-affine or self-conformal sets.",
+        "tldr": "This survey compares the Hausdorff-dimension theory of shrinking-target and recurrence sets across several dynamical settings.",
+        "problem": "Review how the Hausdorff dimensions of orbit-approximation and orbit-recurrence limsup sets compare, together with measure refinements and exceptional sets.",
+        "main_result": "The article surveys results for expanding conformal systems, irrational rotations, affine iterated function systems, and matrix transformations. It also covers Hausdorff-measure refinements, badly approximating orbits, non-recurrent sets, winning properties, and intersections with self-conformal and self-affine sets.",
+        "methods": [
+          "Survey and comparison of existing dimension results"
+        ],
+        "context": "Hausdorff-dimension theory for shrinking targets, recurrence, and exceptional orbit sets.",
+        "keywords": [
+          "Hausdorff dimension",
+          "shrinking targets",
+          "recurrence",
+          "winning properties",
+          "self-affine sets"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.19812",
+        "versioned_id": "2610.19812v1",
+        "title": "Dimension of the Green measure of skew products with dominant exponent in the fibers",
+        "authors": [
+          "Clara Genes"
+        ],
+        "abstract": "Let $f(z,w)=(p(z),q(z,w))$ be a polynomial skew product of $\\mathbb{C}^2$ of degree $d\\geqslant 2$ and let $\\mu$ and $\\mu_p$ be the Green measures associated to $f$ and $p$ respectively. Let $\\lambda_1 > \\lambda_2$ and $\\lambda_p$ be the Lyapunov exponents of $(f,\\mu)$ and $(p,\\mu_p)$ respectively. We show that if $\\lambda_2 = \\lambda_p$, then $\\mu$ is exact dimensional and: \\begin{equation*}\\dim_H\\mu =\\frac{\\log d}{\\lambda_1}+\\frac{\\log d}{\\lambda_2}.\\end{equation*} The proof relies on the continuity of the conditional measures obtained by Jonsson, on the fact that $\\mu$ has constant Jacobian $d^2$, and on a fibered version of a normal form theorem for the inverse branches of the iterates of $f$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CV"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.19812",
+        "pdf_url": "https://arxiv.org/pdf/2610.19812"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Exact dimensionality and a Hausdorff-dimension formula for an invariant Green measure are directly aligned with dimension theory in dynamics.",
+        "tldr": "For a polynomial skew product with dominant fiber exponent and matching lower/base exponents, the Green measure is exact dimensional with dimension given by two logarithmic degree-to-exponent terms.",
+        "problem": "Establish exact dimensionality and compute the Hausdorff dimension of the Green measure for polynomial skew products under a specified Lyapunov-exponent relation.",
+        "main_result": "Let the skew product have degree \\(d\\geq 2\\), Lyapunov exponents \\(\\lambda_1>\\lambda_2\\), and base exponent \\(\\lambda_p\\). If \\(\\lambda_2=\\lambda_p\\), the Green measure is exact dimensional and \\[\\dim_H\\mu=\\frac{\\log d}{\\lambda_1}+\\frac{\\log d}{\\lambda_2}.\\]",
+        "methods": [
+          "Continuity of conditional measures obtained by Jonsson",
+          "Constant-Jacobian property of the Green measure",
+          "Fibered normal forms for inverse branches"
+        ],
+        "context": "Dimension theory for invariant measures in polynomial skew-product dynamics.",
+        "keywords": [
+          "exact dimensionality",
+          "Green measure",
+          "polynomial skew products",
+          "Lyapunov exponents",
+          "Hausdorff dimension"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.19953",
+        "versioned_id": "2610.19953v1",
+        "title": "Almost-global convergence to twisted states in discrete Huygens rings",
+        "authors": [
+          "Jorge Buescu",
+          "Henrique M. Oliveira"
+        ],
+        "abstract": "We study the discrete Huygens phase map on the ring $C_n$, the simplest oscillator network in which the coupling can be frustrated. Reciprocal coupling favours phase opposition between neighbours, while the edge phase differences must sum to zero modulo $2\\pi$ around the cycle; for odd $n$ these two requirements are incompatible. The parity of $n$ determines the absolute minima of the potential. When $4\\mid n$, the critical set also contains circles of critical points, all of which meet at two completely degenerate configurations. After quotienting by the common phase, the map is a gradient step for an intrinsic potential on an $(n-1)$-torus, and the cycle spectrum gives an explicit interval of interaction strengths on which every orbit converges to a critical point. Our main result is that, on this whole interval and for every $n\\ge3$, almost every orbit converges to a uniform twisted minimum, including at interaction strengths for which the map is not invertible. When $4\\mid n$, the non-minimal points of the critical circles are treated by a centre-stable manifold argument. At the two degenerate intersections, a local blow-up reduces the problem to the cubic leading term of the potential and its restriction to the unit sphere. Orbits approaching along directions where this restriction is positive form a null set, because the cubic is harmonic in the intrinsic metric. No orbit approaches along its zero level, where the critical points are non-degenerate saddles on invariant rays. Hence the degenerate equilibria also have basins of zero measure.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.19953",
+        "pdf_url": "https://arxiv.org/pdf/2610.19953"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Almost-everywhere convergence, invariant torus geometry, and centre-stable analysis give a clear smooth-dynamics connection.",
+        "tldr": "On an explicit interaction-strength interval, almost every orbit of the discrete Huygens ring converges to a uniform twisted minimum for every ring size at least three.",
+        "problem": "Describe global convergence for a frustrated oscillator-network map, including noninvertible parameters and degenerate critical configurations.",
+        "main_result": "After quotienting by common phase, the map is a gradient step on an \\((n-1)\\)-torus. On the full interval obtained from the cycle spectrum, every orbit converges to a critical point and almost every orbit converges to a uniform twisted minimum for every \\(n\\geq3\\); the remaining critical sets, including the degenerate intersections when \\(4\\mid n\\), have basins of measure zero.",
+        "methods": [
+          "Gradient-step formulation for an intrinsic potential",
+          "Cycle-spectrum estimates",
+          "Centre-stable manifold argument",
+          "Local blow-up at degenerate equilibria",
+          "Analysis of a harmonic cubic on the unit sphere"
+        ],
+        "context": "Smooth discrete dynamics of frustrated oscillator rings and almost-global convergence.",
+        "keywords": [
+          "twisted states",
+          "gradient dynamics",
+          "oscillator networks",
+          "centre-stable manifolds",
+          "almost-everywhere convergence"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.19990",
+        "versioned_id": "2610.19990v1",
+        "title": "An elementary proof of Br\\'emont's theorem on the convergence of equilibrium measures at temperature zero",
+        "authors": [
+          "Oliver Jenkinson",
+          "Mark Pollicott"
+        ],
+        "abstract": "We give an elementary proof that if $f$ is a locally constant function on a topologically mixing subshift of finite type, then the equilibrium measures for $tf$ converge as $t\\to\\infty$, a result due to Br\\'emont. The proof shows that the limit measure assigns an algebraic number to every cylinder.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.19990",
+        "pdf_url": "https://arxiv.org/pdf/2610.19990"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Zero-temperature convergence of equilibrium measures on a mixing subshift of finite type is central to thermodynamic formalism and symbolic dynamics.",
+        "tldr": "For a locally constant potential on a topologically mixing subshift of finite type, the equilibrium measures converge as inverse temperature tends to infinity.",
+        "problem": "Give an elementary proof of zero-temperature convergence for equilibrium measures of locally constant potentials on mixing shifts of finite type.",
+        "main_result": "If \\(f\\) is locally constant on a topologically mixing subshift of finite type, the equilibrium measures for \\(tf\\) converge as \\(t\\to\\infty\\). The limiting measure assigns an algebraic number to every cylinder.",
+        "methods": [
+          "Elementary proof"
+        ],
+        "context": "Thermodynamic formalism on symbolic dynamical systems.",
+        "keywords": [
+          "equilibrium measures",
+          "zero temperature",
+          "subshift of finite type",
+          "locally constant potentials",
+          "cylinder measures"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.20131",
+        "versioned_id": "2610.20131v1",
+        "title": "Mapping class groups of solenoidal manifolds",
+        "authors": [
+          "Steven Hurder",
+          "Olga Lukina"
+        ],
+        "abstract": "The goal of this work is to calculate the mapping class groups of solenoidal manifolds. We introduce the dynamical commensurator group associated to an odometer action, and develop methods to calculate the mapping class group using the dynamical commensurator. Our results generalize the previous results of Odden for the mapping class group of the universal solenoid over a Riemann surface, and of Bering and Studenmund for the pointed mapping class group of the universal solenoid over a compact aspherical manifold. We include a selection of examples.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GT"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.20131",
+        "pdf_url": "https://arxiv.org/pdf/2610.20131"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Solenoidal dynamics, odometer actions, and their dynamical commensurators are central group-action and topological-dynamics topics.",
+        "tldr": "The paper calculates mapping class groups of solenoidal manifolds using a dynamical commensurator associated with an odometer action.",
+        "problem": "Develop a dynamical method for calculating mapping class groups of solenoidal manifolds.",
+        "main_result": "The authors introduce the dynamical commensurator group of an odometer action and use it to calculate mapping class groups, generalizing stated earlier results for universal solenoids over Riemann surfaces and compact aspherical manifolds. A selection of examples is included.",
+        "methods": [
+          "Dynamical commensurator associated to an odometer action"
+        ],
+        "context": "Topological dynamics and mapping class groups of solenoidal manifolds.",
+        "keywords": [
+          "solenoidal manifolds",
+          "mapping class groups",
+          "odometer actions",
+          "dynamical commensurators"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.20176",
+        "versioned_id": "2610.20176v1",
+        "title": "Reciprocal Dynamics in Congruence Jumping: Integral Orbits and Valuation Cones",
+        "authors": [
+          "Max A. Alekseyev",
+          "Dmitry I. Khomovsky"
+        ],
+        "abstract": "For fixed positive degrees $n,m$, alternating monic reciprocal transformations define a rational discrete dynamical system on the finite-dimensional coefficient space of polynomial pairs. This system arises from congruence jumping in polynomial divisibility problems, where a quotient move changes the polynomial state, but its coefficient dynamics can be studied independently. We prove that every state with nonzero constant terms returns after four alternating updates to its rational gauge classes and classify when this return orbit is realized over $\\mathbb Z$. The local obstruction is encoded by endpoint $p$-adic valuation defects. After the first integral block, constant-term valuations evolve by an explicit matrix $M_{n,m}\\in\\operatorname{SL}_2(\\mathbb Z)$ whose trace depends only on $s=nm$. This yields a finite-order, elliptic-type regime for $s<4$, a parabolic dilation regime for $s=4$, and a hyperbolic regime for $s>4$. In the hyperbolic case, invariant thresholds, irrational eigencones, and discrete valley formulas give finite criteria for forward and bi-infinite integral orbits; nevertheless, failure can be delayed arbitrarily long. At the pointwise level, separated auxiliary-relation transport factors through the jumped-variable projection. One jump preserves the visible support rank, while two alternating jumps collapse it to dimension at most one; saturation cannot restore rank. In the quadratic specialization, a rank-two $p$-adic relation lattice gives an exact local cancellation-depth formula and a finite criterion on periodic Vieta orbits. We classify the fixed auxiliary relations that saturate indefinitely on an irreducible six-cycle and construct arbitrarily long persistence on parabolic and fixed hyperbolic orbits.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.20176",
+        "pdf_url": "https://arxiv.org/pdf/2610.20176"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "The rational discrete system has explicit elliptic, parabolic, and hyperbolic regimes with arithmetic orbit criteria, giving a substantive arithmetic-dynamics connection.",
+        "tldr": "Alternating reciprocal transformations have a four-step return on rational gauge classes, while integral realization is classified through valuation dynamics and regime-dependent finite criteria.",
+        "problem": "Classify rational and integral orbits of alternating monic reciprocal transformations arising from congruence jumping.",
+        "main_result": "For positive degrees and states with nonzero constant terms, four alternating updates return to the rational gauge classes. Integral realization is controlled by endpoint \\(p\\)-adic valuation defects and an explicit matrix in \\(\\operatorname{SL}_2(\\mathbb Z)\\), producing finite-order, parabolic, and hyperbolic regimes according to whether the degree product is below, equal to, or above four; the abstract also states finite orbit criteria, delayed failure, rank-collapse results, and a quadratic cancellation-depth formula.",
+        "methods": [
+          "Endpoint p-adic valuation defects",
+          "Explicit valuation matrix dynamics",
+          "Invariant thresholds and irrational eigencones",
+          "Discrete valley formulas",
+          "Auxiliary-relation transport"
+        ],
+        "context": "Arithmetic dynamics of reciprocal polynomial transformations and integral orbits.",
+        "keywords": [
+          "rational dynamics",
+          "p-adic valuations",
+          "integral orbits",
+          "hyperbolic regime",
+          "congruence jumping"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.20513",
+        "versioned_id": "2610.20513v1",
+        "title": "Effective equidistribution of polynomial trajectories in $\\operatorname{SL}_3(\\mathbb R)/\\operatorname{SL}_3(\\mathbb Z)$",
+        "authors": [
+          "Hao Xing"
+        ],
+        "abstract": "For a fixed matrix-polynomial trajectory in $\\operatorname{SL}_3(\\mathbb R)/\\operatorname{SL}_3(\\mathbb Z)$, we give a necessary and sufficient intrinsic Diophantine condition for its time averages to equidistribute at a power rate on its homogeneous orbit closure. The condition uses a lattice in the space of polynomial functions on the normalized orbit-closure group, each admitting a representative of total degree at most two in the matrix entries. These polynomial tests have a common degree bound of two, independent of the curve degree and optimal in general. The proof begins with a classification of the possible orbit-closure groups and derives lower bounds for polynomial coefficient vectors from the intrinsic condition. It combines quantitative nilmanifold equidistribution, unipotent tangent approximation, and effective flow estimates, with arithmetic separation and quantitative nondivergence controlling cusp excursions and periodic-orbit obstructions.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.20513",
+        "pdf_url": "https://arxiv.org/pdf/2610.20513"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Effective equidistribution on a homogeneous orbit closure is directly related to homogeneous and ergodic dynamics.",
+        "tldr": "The paper gives an intrinsic Diophantine criterion equivalent to power-rate equidistribution for a fixed polynomial trajectory in the indicated arithmetic quotient.",
+        "problem": "Characterize when a matrix-polynomial trajectory equidistributes effectively on its homogeneous orbit closure.",
+        "main_result": "For a fixed polynomial trajectory in \\(\\operatorname{SL}_3(\\mathbb R)/\\operatorname{SL}_3(\\mathbb Z)\\), time averages equidistribute at a power rate on the homogeneous orbit closure exactly when an intrinsic Diophantine condition holds. The testing polynomials admit representatives of degree at most two in matrix entries, a common bound independent of the curve degree and stated to be optimal in general.",
+        "methods": [
+          "Classification of orbit-closure groups",
+          "Quantitative nilmanifold equidistribution",
+          "Unipotent tangent approximation",
+          "Effective flow estimates",
+          "Arithmetic separation",
+          "Quantitative nondivergence"
+        ],
+        "context": "Effective homogeneous dynamics and Diophantine equidistribution.",
+        "keywords": [
+          "equidistribution",
+          "homogeneous dynamics",
+          "Diophantine condition",
+          "polynomial trajectories",
+          "quantitative nondivergence"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.20566",
+        "versioned_id": "2610.20566v1",
+        "title": "Completely parabolic surfaces are Veech",
+        "authors": [
+          "Inbo Gottlieb Fenves"
+        ],
+        "abstract": "We prove that completely parabolic translation surfaces are Veech, answering a question of Smillie-Weiss.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GT"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.20566",
+        "pdf_url": "https://arxiv.org/pdf/2610.20566"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Translation surfaces and the Veech property are related to geometric and smooth dynamics, although the abstract supplies no further mechanism or hypotheses.",
+        "tldr": "The paper proves that completely parabolic translation surfaces are Veech.",
+        "problem": "Resolve whether every completely parabolic translation surface is Veech.",
+        "main_result": "The authors prove that completely parabolic translation surfaces are Veech, answering a question of Smillie and Weiss.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Translation surfaces and Veech dynamics.",
+        "keywords": [
+          "translation surfaces",
+          "Veech surfaces",
+          "parabolic directions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.16394",
+        "versioned_id": "2610.16394v1",
+        "title": "Dynamical generalizations of the two-point Chowla conjecture",
+        "authors": [
+          "Biao Wang",
+          "Shaoyun Yi"
+        ],
+        "abstract": "In 1965, Chowla conjectured that the values of the Liouville function become asymptotically uncorrelated at consecutive natural numbers. Recently, the two-point case is resolved by OpenAI. In 2026, Charamaras and Richter conjectured a generalization of the Chowla conjecture to the asymptotic independence of the consecutive prime Omega functions. In this article, we prove the two-point case of their conjecture. As a consequence, we obtain a dynamical generalization of the two-point Chowla conjecture.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.16394",
+        "pdf_url": "https://arxiv.org/pdf/2610.16394"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "The stated consequence is a dynamical generalization of a two-point correlation conjecture, but the abstract does not specify its dynamical formulation.",
+        "tldr": "The authors prove the two-point case of a conjectured asymptotic-independence statement for consecutive prime Omega functions and derive a dynamical generalization of the two-point Chowla conjecture.",
+        "problem": "Prove a two-point asymptotic-independence statement extending Chowla-type correlation questions and obtain a dynamical consequence.",
+        "main_result": "The abstract states that the authors prove the two-point case of the Charamaras–Richter conjecture on asymptotic independence of consecutive prime Omega functions. It further states a dynamical generalization of the two-point Chowla conjecture as a consequence; the precise dynamical statement is not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Number-theoretic correlations with a stated dynamical consequence.",
+        "keywords": [
+          "Chowla conjecture",
+          "Liouville function",
+          "prime Omega functions",
+          "asymptotic independence"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.18920",
+        "versioned_id": "2610.18920v1",
+        "title": "Physiology-Informed Sparse Identification of Dynamic Crop Models",
+        "authors": [
+          "Corn\\'{e} Verburg",
+          "Alexander Heinlein",
+          "Fred van Eeuwijk",
+          "Neil Budko"
+        ],
+        "abstract": "Developing resilient crops requires models that accurately capture how plant growth dynamics emerge from the continuous interplay between genetic and environmental factors. While high-throughput phenotyping platforms generate data for dynamic growth models, current modelling approaches show limitations: process-based crop growth models (CGMs) capture environmental dynamics but are difficult to scale across many genotypes because they require calibration of many parameters, while quantitative genetic models allow modelling many genotypes but often summarise time-varying environments using static covariates. To address this gap, we propose a data-driven framework to identify reduced systems of ordinary differential equations (ODEs) describing crop growth dynamics as functions of environmental variables and a controllable number of genotype-specific coefficients (GSCs). Using the Sparse Identification of Nonlinear Dynamics (SINDy) method, we infer model structure directly from data via sparse regression on a physiologically informed library of candidate functions. In this framework, GSCs parameterise cultivar-specific differences in response to environmental conditions. The resulting models are linear in these GSCs, making them compatible with mixed-model and genomic prediction approaches. We evaluate the approach on an in silico dataset generated with WOFOST for five potato cultivars across twelve growing seasons. Our identified ODEs generalise to held-out years and achieve $R^2 > 0.9$ for end-of-season yield prediction across held-out years when compared to full-scale WOFOST simulations. These results provide a proof of concept for SINDy-based identification of parsimonious dynamic crop models from longitudinal crop-growth data.",
+        "announce_type": "cross",
+        "categories": [
+          "q-bio.PE",
+          "math.DS",
+          "q-bio.QM"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.18920",
+        "pdf_url": "https://arxiv.org/pdf/2610.18920"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The work is an applied, data-driven ODE model for crop growth and does not state a central entropy, symbolic, dimension, or topological-dynamics result.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.19023",
+        "versioned_id": "2610.19023v1",
+        "title": "Invariant von Neumann subalgebras of crossed products and tensor products",
+        "authors": [
+          "Tattwamasi Amrutam",
+          "Artem Dudko",
+          "Yongle Jiang",
+          "Adam Skalski"
+        ],
+        "abstract": "Let $\\Gamma$ be a countable discrete group acting on a tracial von Neumann algebra $(Q,\\tau_Q)$ in a trace-preserving way. We study invariant von Neumann subalgebras of $Q\\rtimes\\Gamma$ and of $L(\\Gamma)\\bar\\otimes Q$, where the latter is equipped with the diagonal action. We show that, under the pointwise weak mixing assumption, an invariant subalgebra whose image under the canonical conditional expectation onto $Q$ is scalar is necessarily contained in $L(\\Gamma)$. Further, under relative weak mixing and central freeness assumptions, we determine the structure of invariant subalgebras of the crossed product with non-trivial intersection with $Q$. For p.m.p. actions of groups with trivial amenable radical and the invariant subalgebras rigidity property, pointwise relative weak mixing gives a complete classification of invariant subalgebras in the tensor product case. We construct essentially free, prime, pointwise weakly mixing p.m.p. actions of $\\mathbb{F}_n$ for every $2\\leq n\\leq\\infty$, as well as non-prime examples with explicitly described factors.",
+        "announce_type": "cross",
+        "categories": [
+          "math.OA",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.19023",
+        "pdf_url": "https://arxiv.org/pdf/2610.19023"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Invariant subalgebras for measure-preserving group actions and crossed products are centrally aligned with the profile’s group-action interests.",
+        "tldr": "Under several mixing and freeness hypotheses, the paper constrains or classifies invariant von Neumann subalgebras and constructs free-group actions with prescribed primeness behavior.",
+        "problem": "Determine invariant von Neumann subalgebras of crossed products and tensor products associated with trace-preserving discrete-group actions.",
+        "main_result": "Under pointwise weak mixing, an invariant subalgebra whose canonical conditional expectation onto the base algebra is scalar lies in the group von Neumann algebra. Under relative weak mixing and central freeness, the authors describe invariant subalgebras meeting the base algebra nontrivially; for specified p.m.p. actions they obtain a complete tensor-product classification and construct essentially free, prime, pointwise weakly mixing free-group actions, together with explicit non-prime examples.",
+        "methods": [
+          "Canonical conditional expectations",
+          "Crossed-product and tensor-product analysis",
+          "Construction of p.m.p. free-group actions"
+        ],
+        "context": "Operator-algebraic rigidity for invariant structures arising from group actions.",
+        "keywords": [
+          "group actions",
+          "von Neumann algebras",
+          "crossed products",
+          "weak mixing",
+          "invariant subalgebras"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.19117",
+        "versioned_id": "2610.19117v1",
+        "title": "An algebro-geometric approach to profinite iterated monodromy groups",
+        "authors": [
+          "Daniel Tedeschi"
+        ],
+        "abstract": "We carefully construct the profinite iterated monodromy group of a rational map as a quotient of the \\'etale fundamental group of the punctured projective line. In doing so, we prove a number of folklore results regarding profinite IMGs; in particular, their topological generation by inertia concentrated in the post-critical orbit, and their relationship with the discrete iterated monodromy group over $\\mathbb{C}$.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.AG",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.19117",
+        "pdf_url": "https://arxiv.org/pdf/2610.19117"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Iterated monodromy groups encode group actions generated by rational-map iteration, connecting group structure directly with complex dynamics.",
+        "tldr": "The paper constructs the profinite iterated monodromy group of a rational map as an étale-fundamental-group quotient and proves structural results about its generators and its discrete counterpart.",
+        "problem": "Give an algebro-geometric construction of profinite iterated monodromy groups and establish their basic structural properties.",
+        "main_result": "The profinite iterated monodromy group of a rational map is constructed as a quotient of the étale fundamental group of the punctured projective line. The authors prove topological generation by inertia concentrated in the post-critical orbit and relate the profinite group to the discrete iterated monodromy group over \\(\\mathbb C\\).",
+        "methods": [
+          "Étale fundamental groups",
+          "Quotient construction",
+          "Inertia in the post-critical orbit"
+        ],
+        "context": "Group actions and monodromy structures associated with rational-map iteration.",
+        "keywords": [
+          "iterated monodromy groups",
+          "rational maps",
+          "étale fundamental group",
+          "post-critical orbit",
+          "inertia"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.19194",
+        "versioned_id": "2610.19194v1",
+        "title": "Enumeration of one-cycle signed chord diagrams and their duals for optimal Morse flows on closed surfaces",
+        "authors": [
+          "Alexandr Prishlyak"
+        ],
+        "abstract": "Optimal Morse vector fields on closed surfaces, i.e.\\ fields with the minimal possible number of critical points (a single source and a single sink), are classified up to topological trajectory equivalence by one-cycle signed chord diagrams in Kybalko, Prishlyak and Shchurko (2018). We recall this construction and the associated duality, which corresponds to reversing the direction of the flow, in a unified encoding in which both endpoints of a chord carry the same label, and we make it algorithmic. We give an explicit traversal procedure that detects one-cycle diagrams, a canonical form of an equivalence class under cyclic shifts, reversal and relabeling of chords, and a construction of the dual diagram. On this basis we describe an algorithm that enumerates all one-cycle signed chord diagrams with a given number of chords, both for orientable and for non-orientable surfaces, groups them into equivalence classes, pairs each class with its dual, and identifies the self-dual ones. The algorithm is implemented in Python and archived in Zenodo; its output is validated against the Harer--Zagier numbers in the orientable case and against orbit-size counts in both cases. We also note that, when a one-cycle diagram is read as a cellular embedding of a one-vertex graph, its dual diagram describes the embedding of the dual graph.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CO",
+          "math.DS",
+          "math.GT"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.19194",
+        "pdf_url": "https://arxiv.org/pdf/2610.19194"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "The classification of Morse flows by signed chord diagrams provides an explicit topological coding and duality for surface dynamics.",
+        "tldr": "The paper makes the chord-diagram classification and flow-reversal duality for optimal Morse flows algorithmic, then enumerates equivalence and duality classes.",
+        "problem": "Enumerate topological trajectory-equivalence classes of optimal Morse flows on closed surfaces and determine their duality under flow reversal.",
+        "main_result": "The authors give procedures to detect one-cycle signed chord diagrams, compute canonical representatives under cyclic shift, reversal, and chord relabeling, construct dual diagrams, enumerate orientable and non-orientable classes, pair dual classes, and identify self-dual classes. The implementation is checked against Harer–Zagier numbers and orbit-size counts.",
+        "methods": [
+          "One-cycle signed chord diagrams",
+          "Canonical-form algorithm",
+          "Dual-diagram construction",
+          "Enumeration algorithm",
+          "Validation against combinatorial counts"
+        ],
+        "context": "Topological classification and combinatorial coding of Morse flows on closed surfaces.",
+        "keywords": [
+          "Morse flows",
+          "chord diagrams",
+          "topological trajectory equivalence",
+          "duality",
+          "surface dynamics"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.19225",
+        "versioned_id": "2610.19225v1",
+        "title": "On generalized embeddability of a non-elliptic self-map",
+        "authors": [
+          "Manuel D. Contreras",
+          "Santiago D\\'{\\i}az-Madrigal",
+          "Pavel Gumenyuk"
+        ],
+        "abstract": "We study the structure of the centralizer of a non-elliptic holomorphic self-map of the unit disc and its relation with continuous dynamical structures. We prove that if the identity is not isolated in the centralizer of a non-elliptic self-map $\\varphi \\in \\mathrm{Hol}(\\mathbb D)$, then $\\varphi$ is univalent and its centralizer contains a non-trivial continuous one-parameter semigroup of holomorphic self-maps. This result provides a general criterion for the existence of continuous dynamics arising from discrete iteration. Our approach is based on the theory of holomorphic models and on simultaneous linearization techniques for commuting self-maps. In particular, we exploit recent developments on simultaneous linearization for parabolic self-maps with positive hyperbolic step. As a consequence, we obtain new sufficient conditions for the embeddability of holomorphic self-maps into continuous semigroups.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CV",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.19225",
+        "pdf_url": "https://arxiv.org/pdf/2610.19225"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Centralizers, iteration, and embeddings into holomorphic semigroups form a clear complex-dynamics and continuous-time connection.",
+        "tldr": "A non-elliptic holomorphic self-map whose centralizer does not isolate the identity must be univalent and belongs to a nontrivial continuous dynamical structure.",
+        "problem": "Relate the centralizer of a non-elliptic disc self-map to embeddability into continuous semigroups.",
+        "main_result": "If the identity is not isolated in the centralizer of a non-elliptic holomorphic self-map of the unit disc, the map is univalent and its centralizer contains a nontrivial continuous one-parameter semigroup. The paper derives further sufficient conditions for embeddability into continuous semigroups.",
+        "methods": [
+          "Holomorphic models",
+          "Simultaneous linearization of commuting self-maps",
+          "Simultaneous linearization for parabolic self-maps with positive hyperbolic step"
+        ],
+        "context": "Iteration and semigroup embeddings in holomorphic dynamics.",
+        "keywords": [
+          "holomorphic dynamics",
+          "centralizers",
+          "semigroup embedding",
+          "simultaneous linearization",
+          "unit disc"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.19787",
+        "versioned_id": "2610.19787v1",
+        "title": "Drift and joint minimal displacement for groups acting on hyperbolic spaces",
+        "authors": [
+          "Koji Fujiwara",
+          "Ryokichi Tanaka"
+        ],
+        "abstract": "We obtain a uniform lower bound for the drift of random walks on hyperbolic spaces in terms of joint minimal displacement. Our main theorem applies to weakly acylindrical actions on Gromov-hyperbolic spaces and is quantitative in all relevant constants. For discrete isometry groups of Hadamard manifolds with pinched negative curvature, the required assumptions are automatically satisfied by the Margulis lemma. This yields uniform gaps at zero in drift spectra for pinched negatively curved Hadamard manifolds, hyperbolic groups, and mapping class groups acting on curve graphs.",
+        "announce_type": "cross",
+        "categories": [
+          "math.PR",
+          "math.DS",
+          "math.GR",
+          "math.GT"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.19787",
+        "pdf_url": "https://arxiv.org/pdf/2610.19787"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Quantitative drift bounds for group actions on hyperbolic spaces are directly central to group-action dynamics.",
+        "tldr": "The paper bounds random-walk drift uniformly from below using joint minimal displacement for weakly acylindrical actions on hyperbolic spaces.",
+        "problem": "Relate drift spectra of random walks to geometric displacement for groups acting on hyperbolic spaces.",
+        "main_result": "The main theorem gives a quantitative uniform lower bound for drift in terms of joint minimal displacement under weak acylindricity. Via the Margulis lemma, the assumptions hold for discrete isometry groups of pinched negatively curved Hadamard manifolds, yielding uniform gaps at zero in drift spectra for those manifolds, hyperbolic groups, and mapping class groups acting on curve graphs.",
+        "methods": [
+          "Joint minimal displacement estimates",
+          "Margulis lemma for the stated geometric application"
+        ],
+        "context": "Random walks and quantitative geometry of group actions on hyperbolic spaces.",
+        "keywords": [
+          "group actions",
+          "hyperbolic spaces",
+          "random-walk drift",
+          "joint minimal displacement",
+          "weak acylindricity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.19954",
+        "versioned_id": "2610.19954v1",
+        "title": "Expansive operators on Fr\\'echet spaces without continuous norm",
+        "authors": [
+          "Antoni L\\'opez-Mart\\'inez",
+          "Quentin Menet"
+        ],
+        "abstract": "We investigate the existence of (metrically) expansive operators on Fr\\'echet spaces without continuous norm. We first solve a problem posed by Bernardes, Caraballo, Darji, F\\'avaro, and Peris in 2025, by showing that there is no expansive operator on the Fr\\'echet space $\\omega$ of all sequences. We prove this fact by investigating the existence of orbits remaining cofinitely inside some fixed closed subspace of finite codimension. We then give examples of expansive operators on some other Fr\\'echet spaces without continuous norm.",
+        "announce_type": "cross",
+        "categories": [
+          "math.FA",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.19954",
+        "pdf_url": "https://arxiv.org/pdf/2610.19954"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Expansivity and orbit behavior of continuous linear operators are direct topological-dynamical properties.",
+        "tldr": "The paper proves that the Fréchet space of all sequences admits no expansive operator and gives expansive examples on other Fréchet spaces without continuous norm.",
+        "problem": "Determine when Fréchet spaces lacking a continuous norm can support metrically expansive operators.",
+        "main_result": "There is no expansive operator on the Fréchet space \\(\\omega\\) of all sequences. The authors also construct examples of expansive operators on other Fréchet spaces without continuous norm.",
+        "methods": [
+          "Analysis of orbits remaining cofinitely in a fixed finite-codimensional closed subspace",
+          "Construction of examples"
+        ],
+        "context": "Linear topological dynamics on Fréchet spaces.",
+        "keywords": [
+          "expansive operators",
+          "Fréchet spaces",
+          "linear dynamics",
+          "orbit behavior"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.20024",
+        "versioned_id": "2610.20024v1",
+        "title": "Maximal subgroups of topological full groups of shifts of finite type",
+        "authors": [
+          "Hiroki Matui"
+        ],
+        "abstract": "We study maximal subgroups of topological full groups of irreducible one-sided shifts of finite type whose associated groupoids have Cantor unit space. For each wide open subgroupoid of such a groupoid, we construct a subgroupoid graph and identify the subgroupoid with a full compact open reduction of the corresponding countable graph groupoid. Every minimal wide open subgroupoid is either AF or purely infinite. A proper wide open subgroupoid is prime if it admits no proper intermediate wide open subgroupoid. We prove a trichotomy for prime subgroupoids: they are minimal, arise from a clopen bipartition, or have a unique nonempty proper closed invariant set, which is nowhere dense. For a prime subgroupoid, the normalizer of its topological full group is maximal in the ambient topological full group precisely when it maps onto the ambient abelianization. An analogous criterion holds in every subgroup containing the ambient commutator subgroup. For a minimal prime subgroupoid, its topological full group is maximal precisely when it equals its normalizer and the inclusion induces a surjection on first groupoid homology. We also describe all fully amplified maximal subgroups, namely those closed under local agreement. For Thompson's group $V$, the stabilizer of every simple type system is maximal, extending results of Belk, Bleak, Quick and Skipper for finite type systems and certain classes of infinite ones. Finally, every subgroup containing the ambient commutator subgroup has continuum many pairwise nonisomorphic maximal subgroups acting minimally on the unit space.",
+        "announce_type": "cross",
+        "categories": [
+          "math.GR",
+          "math.DS",
+          "math.OA"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.20024",
+        "pdf_url": "https://arxiv.org/pdf/2610.20024"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Topological full groups of shifts of finite type, Cantor groupoids, and invariant-set structure are central symbolic and topological dynamics.",
+        "tldr": "The paper classifies structural types of prime wide open subgroupoids and derives maximal-subgroup criteria for topological full groups of irreducible one-sided shifts of finite type.",
+        "problem": "Describe and construct maximal subgroups of topological full groups associated with one-sided shifts of finite type.",
+        "main_result": "The authors identify wide open subgroupoids with compact open reductions of graph groupoids, prove that minimal such subgroupoids are AF or purely infinite, and establish a trichotomy for prime subgroupoids. They give normalizer, abelianization, and homology criteria for maximality, classify fully amplified maximal subgroups, extend maximal-stabilizer results for Thompson’s group \\(V\\), and obtain continuum many nonisomorphic minimal maximal subgroups in every subgroup containing the ambient commutator subgroup.",
+        "methods": [
+          "Subgroupoid graphs",
+          "Full compact open reductions of graph groupoids",
+          "Normalizer and abelianization criteria",
+          "First groupoid homology"
+        ],
+        "context": "Symbolic dynamics, Cantor groupoids, and topological full groups.",
+        "keywords": [
+          "shifts of finite type",
+          "topological full groups",
+          "groupoids",
+          "maximal subgroups",
+          "Thompson group V"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2303.10320",
+        "versioned_id": "2303.10320v2",
+        "title": "Connected p.c.f self-similar fractals satisfying the angle separation condition have conformal dimension 1",
+        "authors": [
+          "Hui Rao",
+          "Zhi-Ying Wen",
+          "Qihan Yuan"
+        ],
+        "abstract": "Let ${\\mathcal G}$ be a graph-directed iterated function system (GIFS) satisfying the finite post-critical points property (p.c.f), and assume that the attractors $(M_\\ell)_{\\ell\\in{\\mathcal L}}$ are connected. In this paper, we use valuation pairs to construct new metrics on the attractor of ${\\mathcal G}$, which seems to be very natural but yet is not seen in literature. Surprisingly, under these new metrics, the GIFS becomes nearly self-similar. Moreover, we show that, if the original GIFS is self-similar and satisfies an angle separation condition, then for every $\\ell\\in {\\mathcal L}$, $(M_\\ell,d_\\ell)$ is symmetrically equivalent to $(M_\\ell,D_\\ell)$, where $d_\\ell$ is the original metric and $D_\\ell$ is the induced metric. Consequently, the conformal dimension of $M_\\ell$ is $1$ for every $\\ell\\in {\\mathcal L}$.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.MG",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2303.10320",
+        "pdf_url": "https://arxiv.org/pdf/2303.10320"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Conformal dimension of connected post-critically finite self-similar fractals is directly central to fractal geometry.",
+        "tldr": "Connected post-critically finite self-similar graph-directed attractors satisfying angle separation have conformal dimension one.",
+        "problem": "Construct adapted metrics on connected post-critically finite graph-directed attractors and determine their conformal dimension under self-similarity and angle separation.",
+        "main_result": "Valuation pairs produce new metrics under which the graph-directed system becomes nearly self-similar. If the original system is self-similar and satisfies the angle separation condition, each attractor with its original and induced metrics is symmetrically equivalent, and every attractor has conformal dimension \\(1\\).",
+        "methods": [
+          "Valuation pairs",
+          "Construction of induced metrics",
+          "Symmetric equivalence"
+        ],
+        "context": "Conformal geometry of connected post-critically finite self-similar fractals.",
+        "keywords": [
+          "conformal dimension",
+          "self-similar fractals",
+          "graph-directed systems",
+          "angle separation",
+          "valuation pairs"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2509.02587",
+        "versioned_id": "2509.02587v2",
+        "title": "On the Spectrum of Schr\\\"{o}dinger Operators Interacting at Two Distinct Scales",
+        "authors": [
+          "Emmanuel Fleurantin",
+          "Jeremy L. Marzuola",
+          "Christopher K. R. T. Jones"
+        ],
+        "abstract": "Schr\\\"{o}dinger operators of the form $\\Delta - W$ on $L^2_{\\text{rad}}(\\mathbb{R}^3)$, the space of radially symmetric square integrable functions, are relevant in a variety of physical contexts. The potential $W$ is taken to be radially symmetric (i.e. $W(x) = W(|x|)$) and to decompose into two components with distinct spatial scales: $W=W_\\varepsilon:= V_0+V_{1,\\varepsilon}$. The second component $V_{1,\\varepsilon}(|x|) = \\varepsilon^2V_1(\\varepsilon |x|)$ represents a scaled potential that becomes increasingly delocalized as $\\varepsilon \\to 0$. We will assume that both potentials $V_0(r), V_1(r)$ exhibit certain decay properties as $r \\to \\infty$. We show how the eigenvalue count on the positive real axis is built out of the spectra associated with the two reduced eigenvalue problems on their separate scales. The result is that the total number of eigenvalues of $\\Delta - W$ is the sum of the number of positive eigenvalues of $\\Delta - V_0$ and $\\Delta - V_1$. Our analysis combines dynamical systems techniques with a separation of scales argument, providing a novel framework for studying spectral properties of differential operators where multiple spatial scales interact.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math-ph",
+          "math.AP",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2509.02587",
+        "pdf_url": "https://arxiv.org/pdf/2509.02587"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The paper is centered on spectral analysis of multiscale Schrödinger operators; the abstract invokes dynamical-systems techniques but states no central entropy, symbolic, fractal-dimension, or topological-dynamics result.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2512.01997",
+        "versioned_id": "2512.01997v4",
+        "title": "$2$-large sets are sets of Bohr recurrence",
+        "authors": [
+          "Ryan Alweiss"
+        ],
+        "abstract": "Let $\\alpha_1,\\ldots,\\alpha_d$ be real numbers, fix $\\delta>0$, and let $S$ be the set of positive integers $s$ such that $\\|\\alpha_i s\\|_{\\R/\\Z}>\\delta$ for some $1\\le i\\le d$. We prove that $S$ is not \\enquote{$2$-large}, i.e. there is a $2$-coloring of $\\N$ that avoids arbitrarily long monochromatic arithmetic progressions with common differences in $S$. The case $d=1$ was previously known; here we prove the result in every finite dimension.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.CO",
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-10-15T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2512.01997",
+        "pdf_url": "https://arxiv.org/pdf/2512.01997"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Bohr recurrence and arithmetic progressions are directly connected with recurrence in topological dynamics.",
+        "tldr": "A set defined by avoiding simultaneous small rotations in a finite-dimensional torus is not 2-large.",
+        "problem": "Determine whether the indicated set of positive integers is 2-large, equivalently whether every two-coloring must contain arbitrarily long monochromatic arithmetic progressions with common difference in that set.",
+        "main_result": "For any finite list of real numbers and any positive \\(\\delta\\), let \\(S\\) contain the positive integers \\(s\\) for which \\(\\|\\alpha_i s\\|_{\\mathbb R/\\mathbb Z}>\\delta\\) for at least one index. The authors prove that \\(S\\) is not 2-large by establishing the existence of a two-coloring of the natural numbers that avoids arbitrarily long monochromatic arithmetic progressions with common differences in \\(S\\).",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Bohr recurrence, colorings, and arithmetic progressions.",
+        "keywords": [
+          "Bohr recurrence",
+          "2-large sets",
+          "arithmetic progressions",
+          "colorings",
+          "torus rotations"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 12,
+    "RELATED / POSSIBLY INTERESTING": 8,
+    "LOW PRIORITY": 4
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-10-15T10:06:13.158622Z",
+      "feed_published_at": "2026-10-15T00:00:00-04:00",
+      "feed_build_at": "2026-10-15T04:00:25Z",
+      "feed_date": "2026-10-15",
+      "sha256": "f38282b5735add99eaf82d84c2e61b1bb9474fa16fc8ecef7d1fdec12ce572d8",
+      "byte_length": 47438,
+      "capture_run_url": null
+    }
+  ]
+}
