@@ -1,0 +1,1207 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-10-16",
+  "generated_at": "2026-10-16T10:09:11.405287Z",
+  "feed_build_at": "2026-10-16T04:00:24Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 29 unseen announcements: 9 HIGH PRIORITY, 12 RELATED / POSSIBLY INTERESTING, and 8 LOW PRIORITY. Central themes include emergence, algebraic entropy, Julia-set uniformization, self-affine measures, nilpotent multicorrelations, smooth-word complexity, dynamical comparison and group-action rigidity. Related papers concern intermittent limit laws, stochastic persistence, invariant tori, geometric dynamics and critical lattice statistics, with indirect connections marked explicitly. No followed-author matches occur in the supplied input.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2610.20946",
+        "versioned_id": "2610.20946v1",
+        "title": "Emergence of partially hyperbolic skew-products with circle fibers",
+        "authors": [
+          "Odylo Costa",
+          "Mauricio Poletti"
+        ],
+        "abstract": "We study the statistical behavior of partially hyperbolic skew-products over Axiom A diffeomorphisms using emergence. Generically, these systems satisfy the Palis conjecture: they have a finite number of physical measures whose basins together have full volume. In particular, for Lebesgue almost every point, the empirical measures converge to one of finitely many physical measures. We study the non-generic case and prove that, even when the sequence of empirical measures may have uncountably many accumulation points, these systems have low emergence.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.20946",
+        "pdf_url": "https://arxiv.org/pdf/2610.20946"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Emergence is central to the study of statistical orbit complexity, one of the profile interests.",
+        "tldr": "The authors prove low emergence for partially hyperbolic skew-products over Axiom A diffeomorphisms, including nongeneric behavior in which empirical measures may have uncountably many accumulation points.",
+        "problem": "Describe the statistical behavior of partially hyperbolic skew-products with circle fibers beyond the generic finite-physical-measure situation.",
+        "main_result": "The abstract states that generically these systems have finitely many physical measures whose basins together have full volume, so empirical measures converge to one of them for Lebesgue almost every point. In the nongeneric case, the authors prove low emergence even when empirical measures may have uncountably many accumulation points; no quantitative emergence bound is specified.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Partially hyperbolic dynamics, physical measures, empirical measures and emergence.",
+        "keywords": [
+          "emergence",
+          "partially hyperbolic skew-products",
+          "physical measures",
+          "empirical measures"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.21175",
+        "versioned_id": "2610.21175v1",
+        "title": "Conditional limit laws for open intermittent dynamics",
+        "authors": [
+          "Can Wang",
+          "Yaofeng Su"
+        ],
+        "abstract": "We obtain conditional limit theorems for open intermittent Liverani-Saussol-Vaienti (LSV) maps. Unlike the results of closed systems (e.g. some uniformly expanding maps), we obtain a new limit distribution, which is different from the Gaussian law or the stable law, for both \"regular\" and singular observables.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.21175",
+        "pdf_url": "https://arxiv.org/pdf/2610.21175"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Conditional statistical laws for intermittent maps provide a substantial connection to ergodic dynamics, although entropy and dimension are not central in the abstract.",
+        "tldr": "The authors obtain conditional limit theorems for open intermittent LSV maps, with a limit distribution different from both Gaussian and stable laws for regular and singular observables.",
+        "problem": "Determine conditional limit laws for regular and singular observables in open intermittent Liverani-Saussol-Vaienti maps.",
+        "main_result": "The abstract reports a new conditional limit distribution for both types of observable, contrasting it with Gaussian or stable limits in some closed systems. The precise distribution, parameter restrictions and observable hypotheses are not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Open intermittent dynamics and statistical limit laws.",
+        "keywords": [
+          "open systems",
+          "intermittent maps",
+          "conditional limit theorems",
+          "singular observables"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.21247",
+        "versioned_id": "2610.21247v1",
+        "title": "Semisimplicity and Rigidity of the Kontsevich--Zorich Cocycle for Products of Strata",
+        "authors": [
+          "Polina Baron"
+        ],
+        "abstract": "We study the Kontsevich--Zorich cocycle, its fixed tensor constructions, and their finite direct sums over products of strata of Abelian differentials. The acting groups are closed subgroups $G\\subset(\\mathrm{SL}_2\\mathbb R)^n$ that, up to factor permutations and coordinatewise conjugation by rotations, are products of diagonal $\\mathrm{SL}_2\\mathbb R$ blocks and a finite central group. For ergodic invariant probability measures, we prove Deligne-type semisimplicity: the bundles admit Hodge-compatible decompositions into $G$-invariant pieces $V_i\\otimes_{A_i}W_i$, where $A_i$ are division algebras, $V_i$ carry pure variations of Hodge structure, and the multiplicity spaces $W_i$ carry finite direct sums of pure Hodge structures. Every invariant subbundle arises from $A_i$-submodules of the $W_i$. If block marginal measures have smooth local supports and are locally equivalent to smooth volume, Hodge-orthogonal projections onto invariant subbundles are locally polynomial in period coordinates on the normalized support. The proof obtains a local product-of-quadrics model and joint polynomiality from polynomiality along stable and unstable leaves. On the cone obtained by scaling each diagonal block together, projection coefficients admit homogeneous degree-zero expressions with integral powers of reciprocal block areas. For the full product group $(\\mathrm{SL}_2\\mathbb R)^n$, single-stratum measure classification supplies the support hypothesis, yielding rigidity for every ergodic invariant probability measure. Under the transported support hypothesis, arbitrary coordinatewise $\\mathrm{SL}_2\\mathbb R$-conjugates also admit polynomial equivariant projectors, though not necessarily Hodge-orthogonal. Genus-two examples show that nonrotational conjugation can destroy Deligne-torus invariance, and independent factor scalings can require square roots of area functions.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.21247",
+        "pdf_url": "https://arxiv.org/pdf/2610.21247"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Invariant structures and rigidity for explicitly specified group actions are central, directly matching the group-action interest.",
+        "tldr": "For ergodic invariant probability measures on products of strata of Abelian differentials, the authors prove Deligne-type semisimplicity for the Kontsevich-Zorich cocycle and stated tensor constructions. Under support hypotheses they obtain polynomial invariant projectors, with a stronger conclusion for the full product group.",
+        "problem": "Classify invariant subbundles and establish rigidity for the Kontsevich-Zorich cocycle, fixed tensor constructions and their finite direct sums under closed subgroups of \\((\\mathrm{SL}_2\\mathbb R)^n\\) that, up to factor permutations and coordinatewise rotational conjugation, are products of diagonal blocks and a finite central group.",
+        "main_result": "The bundles admit Hodge-compatible decompositions into \\(G\\)-invariant pieces \\(V_i\\otimes_{A_i}W_i\\), with division algebras \\(A_i\\), pure variations of Hodge structure on \\(V_i\\), and finite direct sums of pure Hodge structures on \\(W_i\\); invariant subbundles arise from submodules of the multiplicity spaces. If block marginal measures have smooth local supports and are locally equivalent to smooth volume, Hodge-orthogonal projections are locally polynomial in period coordinates on the normalized support. Single-stratum measure classification supplies the support hypothesis for the full product group. Under the transported support hypothesis, arbitrary coordinatewise conjugates admit polynomial equivariant projectors, which need not be Hodge-orthogonal. Genus-two examples show the stated limitations under nonrotational conjugation and independent scaling.",
+        "methods": [
+          "Local product-of-quadrics model",
+          "Joint polynomiality from stable- and unstable-leaf polynomiality",
+          "Single-stratum measure classification for the full product group"
+        ],
+        "context": "Group actions on products of strata, cocycle rigidity and Hodge structures.",
+        "keywords": [
+          "Kontsevich-Zorich cocycle",
+          "semisimplicity",
+          "group actions",
+          "invariant subbundles",
+          "polynomial projectors"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.21516",
+        "versioned_id": "2610.21516v1",
+        "title": "Algorithms for computing basins of attraction associated with a rational self-map of the Hopf fibration based on Lyapunov exponents",
+        "authors": [
+          "V. \\'Alvarez-Aparicio",
+          "J. M. Garc\\'{\\i}a-Calcines",
+          "L. J. Hern\\'andez-Paricio",
+          "M. T. Rivas-Rodr\\'{\\i}guez"
+        ],
+        "abstract": "The objective of this work is twofold. One, we develop a theory of iteration for complex rational functions so that the problems of overflow and indeterminacy caused by null, or almost null, denominators can be avoided when developing implementations. Second, we present easily implementable methods that allow the calculation of attracting cycles as well as the graphical representation of their basins of attraction. In order to deal with our first goal, we work with homogeneous complex coordinates, and we take the complex projective line as a model, which is expressed as a quotient of the 3-sphere through the Hopf fibration. An irreducible representation of a rational function can now be presented as a Hopf fibration endomorphism. As well as our second goal is concerned, we use Lyapunov functions and exponents to calculate the cycles associated with endomorphisms and to graphically represent the corresponding basins of attraction. We point out that our algorithms are based on the calculation of a finite set of non-negative real constants, and their calculation does not depend on the previous determination of the fixed points or attracting cycles.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.21516",
+        "pdf_url": "https://arxiv.org/pdf/2610.21516"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Rational iteration on the projective line and the geometry of attraction basins connect this computational work to complex dynamics; no entropy or dimension result is stated.",
+        "tldr": "The authors develop a homogeneous-coordinate approach to rational iteration and algorithms for attracting cycles and their basins using Lyapunov functions and exponents.",
+        "problem": "Avoid overflow and indeterminacy from zero or nearly zero denominators, and compute attracting cycles and visualize their basins for complex rational functions.",
+        "main_result": "The complex projective line is modeled as a quotient of the three-sphere by the Hopf fibration, and irreducible rational functions are represented as Hopf fibration endomorphisms. The algorithms use a finite set of nonnegative real constants whose computation does not require prior determination of fixed points or attracting cycles.",
+        "methods": [
+          "Homogeneous complex coordinates",
+          "Hopf fibration representation",
+          "Lyapunov functions and exponents"
+        ],
+        "context": "Complex rational dynamics and computational attraction basins.",
+        "keywords": [
+          "rational maps",
+          "Hopf fibration",
+          "basins of attraction",
+          "Lyapunov exponents"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.21559",
+        "versioned_id": "2610.21559v1",
+        "title": "Density of repelling periodic points for cubic rational maps",
+        "authors": [
+          "Nha Xuan Truong"
+        ],
+        "abstract": "We prove the repelling-density conjecture for cubic rational maps over $\\mathbf C_p$: for every prime $p$, the classical Julia set is the closure of the classical repelling periodic points. By B\\'ezivin's theorem, it suffices to prove that a nonempty classical Julia set contains a classical repelling periodic point. The case $p\\geq5$ follows from known results for tame maps, so we treat residue characteristics two and three. We argue by contraposition, assuming that the map has no classical repelling periodic points. Maps with potential good reduction already have empty classical Julia set. Otherwise, we conjugate the map to an explicit normalized form and analyze its coefficients. In each case, we obtain coefficient restrictions and establish a uniform bound on the spherical derivatives of all iterates. This bound implies equicontinuity on the classical projective line and hence emptiness of the classical Julia set.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.21559",
+        "pdf_url": "https://arxiv.org/pdf/2610.21559"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "The topological description of Julia sets through repelling periodic points is a substantial connection to complex and topological dynamics.",
+        "tldr": "The authors prove that, for every prime \\(p\\), the classical Julia set of a cubic rational map over \\(\\mathbf C_p\\) is the closure of its classical repelling periodic points.",
+        "problem": "Prove the repelling-density conjecture for cubic rational maps, including residue characteristics two and three.",
+        "main_result": "Using Bézivin’s theorem, the proof reduces to finding a repelling periodic point whenever the classical Julia set is nonempty. The case \\(p\\geq5\\) follows from known tame-map results. For residue characteristics two and three, contraposition, explicit normalized forms and coefficient restrictions yield a uniform bound on spherical derivatives of all iterates, hence equicontinuity and emptiness of the classical Julia set when no classical repelling periodic points exist.",
+        "methods": [
+          "Bézivin’s theorem",
+          "Contraposition and normalized rational-map forms",
+          "Coefficient analysis and spherical derivative bounds"
+        ],
+        "context": "Non-Archimedean rational dynamics and Julia sets.",
+        "keywords": [
+          "cubic rational maps",
+          "repelling periodic points",
+          "classical Julia sets",
+          "equicontinuity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.21599",
+        "versioned_id": "2610.21599v1",
+        "title": "Persistence in probability for stochastic delay equations with multiplicative noise",
+        "authors": [
+          "Mark van den Bosch",
+          "John Ioannis Stavroulakis"
+        ],
+        "abstract": "We study the stochastic delay equation \\begin{equation*} dX(t)=[-\\gamma X(t)+r f(X(t-\\tau))]\\,dt+\\sigma X(t)\\,dW(t), \\end{equation*} where $\\gamma,r,\\tau\\in(0,\\infty)$, $\\sigma\\in[0,\\infty)$, and with $f$ either globally Lipschitz or globally bounded and locally Lipschitz, with $f(0)=0$ and $f(x)\\ge0$ for all $x>0$. Under the condition \\begin{equation*} r\\liminf_{x\\to 0^{+}}\\frac{f(x)}{x}>\\gamma+\\frac{1}{2}\\sigma^2, \\end{equation*} independent of the time delay $\\tau,$ we obtain that every solution $X$ with nonnegative initial history and $X(0)>0$ is bounded away from zero in probability. This result then confirms a recent conjecture of van den Bosch, van Gaans, and Verduyn Lunel, and yields a non-trivial invariant measure for, e.g., the Mackey--Glass or Nicholson's blowflies equation with multiplicative noise. To get to this result, we apply a transformation to the solution process, essentially rewriting the equation using a stochastic integrating factor. A comparison with a linear equation gives contraction estimates for negative conditional moments and hence boundedness away from zero in probability. The same argument yields persistence whenever the linear comparison equation has a positive first Lyapunov exponent.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.21599",
+        "pdf_url": "https://arxiv.org/pdf/2610.21599"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Persistence yields a nontrivial invariant measure for stated stochastic delay models, providing an invariant-measure connection; the main focus remains stochastic equations.",
+        "tldr": "The authors establish delay-independent sufficient conditions for persistence in probability of a stochastic delay equation with multiplicative noise. The argument also gives persistence when a linear comparison equation has positive first Lyapunov exponent.",
+        "problem": "For \\(dX(t)=[-\\gamma X(t)+rf(X(t-\\tau))]dt+\\sigma X(t)dW(t)\\), determine conditions ensuring that positive solutions remain bounded away from zero in probability.",
+        "main_result": "Assume \\(\\gamma,r,\\tau>0\\), \\(\\sigma\\geq0\\), and that \\(f\\) is globally Lipschitz or globally bounded and locally Lipschitz, with \\(f(0)=0\\) and \\(f(x)\\geq0\\) for \\(x>0\\). If \\(r\\liminf_{x\\to0^+}f(x)/x>\\gamma+\\sigma^2/2\\), every solution with nonnegative initial history and \\(X(0)>0\\) is bounded away from zero in probability. The abstract states that this confirms the named conjecture and yields a nontrivial invariant measure for, for example, the Mackey-Glass or Nicholson blowflies equations with multiplicative noise.",
+        "methods": [
+          "Stochastic integrating-factor transformation",
+          "Comparison with a linear equation",
+          "Contraction estimates for negative conditional moments"
+        ],
+        "context": "Stochastic delay dynamics, persistence and invariant measures.",
+        "keywords": [
+          "stochastic delay equations",
+          "multiplicative noise",
+          "persistence in probability",
+          "invariant measure"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.21627",
+        "versioned_id": "2610.21627v1",
+        "title": "Degree Growth of Rational Maps with Laurent Property",
+        "authors": [
+          "Melih Emin Can"
+        ],
+        "abstract": "Algebraic entropy measures the exponential growth of the degrees of iterates of rational self-maps. It is introduced by Bellon and Viallet in \\cite{BellonandViallet}. We study degree growth for rational maps arising from recurrences with the Laurent property, with particular emphasis on Gale--Robinson recurrences. We develop a direct method for determining the degree growth from the recurrence relation itself, reducing the problem to the study of associated max-linear, or tropical recurrences. We first obtain a closed formula for the degrees of iterates for a broad class of homogeneous quadratic Laurent recurrences. We then apply this result to the two-term Gale--Robinson family and derive an explicit quadratic growth formula with a periodic correction term. For three-term Gale--Robinson recurrences, we express the algebraic entropy in terms of the associated tropical growth rate sequence. Based on explicit computations, we formulate a conjecture for the general three-term family predicting quadratic growth with a periodic correction. We prove the conjecture for the infinite family with parameters $p=1$, $q=2$, and $r\\geq3$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.21627",
+        "pdf_url": "https://arxiv.org/pdf/2610.21627"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Algebraic entropy and degree-growth invariants are central, matching the interest in entropy and dynamical complexity.",
+        "tldr": "The authors derive degree-growth formulas from tropical recurrences for rational maps with the Laurent property. They obtain an explicit quadratic formula with periodic correction for two-term Gale-Robinson recurrences and distinguish a general three-term conjecture from its proved subfamily.",
+        "problem": "Compute degree growth and algebraic entropy directly from Laurent recurrence relations, especially Gale-Robinson recurrences.",
+        "main_result": "A closed degree formula is obtained for a broad class of homogeneous quadratic Laurent recurrences, and an explicit quadratic growth formula with periodic correction is derived for the two-term Gale-Robinson family. For three-term recurrences, entropy is expressed through the associated tropical growth-rate sequence. Computations motivate a conjecture of quadratic growth with periodic correction for the general three-term family; the authors prove it for \\(p=1\\), \\(q=2\\), \\(r\\geq3\\). The broad class’s precise hypotheses are not specified in the abstract.",
+        "methods": [
+          "Associated max-linear or tropical recurrences",
+          "Direct analysis of recurrence relations",
+          "Explicit computations for the general three-term conjecture"
+        ],
+        "context": "Algebraic entropy, rational maps and Laurent recurrences.",
+        "keywords": [
+          "algebraic entropy",
+          "degree growth",
+          "Laurent property",
+          "Gale-Robinson recurrences",
+          "tropical recurrences"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.21635",
+        "versioned_id": "2610.21635v1",
+        "title": "Pantograph Difference Equations: Stability, Multistability, and Chaos",
+        "authors": [
+          "Prashant M. Gade",
+          "Sachin Bhalekar"
+        ],
+        "abstract": "Pantograph equations are functional differential equations with proportional delay, typically involving terms of the form $x(at)$, where $0<a<1$. These equations have been studied for several decades and have applications in areas ranging from number theory to electrodynamics. In this work, we investigate pantograph difference equations as discrete dynamical maps of the form \\[ x_{i+1}=F(x_{i})+G(x_{h(i)}), \\qquad i\\geq 0, \\] where $h(i)\\leq i$. In particular, we consider $h(i)=\\lfloor ai \\rfloor$ and $h(i)=\\lfloor ai^{\\alpha}\\rfloor$, with $0<a<1$ and $0<\\alpha<1$. We distinguish between homogeneous pantograph difference equations, for which $F(x)=0$, and inhomogeneous pantograph difference equations, for which $F(x)\\ne 0$. We first analyze linear pantograph difference equations and establish sufficient conditions for asymptotic stability and for nonconvergence to zero. For proportional delays, analytical stability and instability regions are combined with multi-horizon parameter scans to construct regime diagrams in the $(\\lambda,\\delta)$-plane. We then investigate pantograph versions of the logistic and tent maps. In the homogeneous case, the dynamics evolves through step-like plateaus whose lengths increase at least exponentially, leading to slow convergence and finite-time multistability within computationally accessible time scales. In the inhomogeneous case, numerical experiments show finite-time exponential separation of nearby trajectories, consistent with chaotic dynamics.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "nlin.CD"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.21635",
+        "pdf_url": "https://arxiv.org/pdf/2610.21635"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is stability, finite-time multistability and numerical chaos in delay difference equations, without a central entropy, dimension, symbolic or group-action component.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.21945",
+        "versioned_id": "2610.21945v1",
+        "title": "Uniformization of Julia sets of geometrically finite rational maps",
+        "authors": [
+          "Yusheng Luo",
+          "Dimitrios Ntalampekos"
+        ],
+        "abstract": "A Schottky set is the complement of a collection of disjoint open disks in the Riemann sphere. We completely characterize geometrically finite rational maps whose Julia sets are quasiconformally equivalent to Schottky sets. We also prove that the closure of the basin of infinity of a geometrically finite unicritical polynomial is quasiconformally equivalent to a Schottky set if and only if either there exists an attracting cycle and all bounded Fatou components have disjoint closures or there exists a parabolic cycle of multiplicity three. An ingredient of the proof is a new dynamical characterization of pairs of arbitrary quasicircles that are quasiconformally equivalent to pairs of tangent circles.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CV"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.21945",
+        "pdf_url": "https://arxiv.org/pdf/2610.21945"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Quasiconformal geometry of Julia sets is central and directly connects to fractal geometry in complex dynamics.",
+        "tldr": "The authors characterize geometrically finite rational maps whose Julia sets are quasiconformally equivalent to Schottky sets, and give an explicit criterion for closures of basins of infinity of geometrically finite unicritical polynomials.",
+        "problem": "Determine when Julia sets and specified basin closures admit quasiconformal uniformization by complements of disjoint open disks in the Riemann sphere.",
+        "main_result": "A complete characterization is asserted for Julia sets of geometrically finite rational maps, but its full criterion is not specified in the abstract. For a geometrically finite unicritical polynomial, the closure of the basin of infinity is quasiconformally equivalent to a Schottky set exactly when either there is an attracting cycle and all bounded Fatou components have disjoint closures, or there is a parabolic cycle of multiplicity three. An ingredient is a dynamical characterization of pairs of arbitrary quasicircles quasiconformally equivalent to pairs of tangent circles.",
+        "methods": [
+          "Dynamical characterization of pairs of quasicircles equivalent to tangent-circle pairs"
+        ],
+        "context": "Fractal geometry of Julia sets and quasiconformal uniformization.",
+        "keywords": [
+          "Julia sets",
+          "Schottky sets",
+          "geometrically finite maps",
+          "quasiconformal uniformization"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.22001",
+        "versioned_id": "2610.22001v1",
+        "title": "On effective equidistribution for product-type self-affine measures",
+        "authors": [
+          "Han Zhang"
+        ],
+        "abstract": "We establish an effective equidistribution theorem on homogeneous spaces for expanding translates of product-type self-affine measures seen on unipotent orbits along any sequence of diagonal elements drifting away from walls. In particular, we do not require the diagonal elements to lie in a fixed proper and closed subcone. The main new ingredients in the proof of our equidistribution theorem include an adaptation of the methods in \\cite{BHZ25} to the setting of product-type self-affine measures, as well as a weighted effective recurrence theorem for intertwined associated random walks. The latter involves decomposing the random walks according to suitable stopping times and applications of intertwined Benoist-Quint height functions.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.22001",
+        "pdf_url": "https://arxiv.org/pdf/2610.22001"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Self-affine measures and diagonal actions on homogeneous spaces are central, matching fractal-measure and group-action interests.",
+        "tldr": "The authors prove effective equidistribution for expanding translates of product-type self-affine measures on unipotent orbits along any sequence of diagonal elements drifting away from walls.",
+        "problem": "Obtain effective equidistribution on homogeneous spaces without restricting the diagonal sequence to a fixed proper closed subcone.",
+        "main_result": "The theorem applies to product-type self-affine measures on unipotent orbits and diagonal sequences drifting away from walls. The abstract explicitly removes the requirement of a fixed proper closed subcone. A weighted effective recurrence theorem for intertwined associated random walks is a main ingredient; numerical rates and the full measure hypotheses are not specified in the abstract.",
+        "methods": [
+          "Adaptation of methods identified in the abstract as BHZ25",
+          "Weighted effective recurrence for intertwined random walks",
+          "Stopping-time decompositions",
+          "Intertwined Benoist-Quint height functions"
+        ],
+        "context": "Self-affine measures, homogeneous dynamics and random walks.",
+        "keywords": [
+          "self-affine measures",
+          "effective equidistribution",
+          "diagonal actions",
+          "unipotent orbits",
+          "effective recurrence"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.22072",
+        "versioned_id": "2610.22072v1",
+        "title": "Nonpersistence of full-dimensional tori with polynomial decay in nonlinear Schr\\\"odinger equations",
+        "authors": [
+          "Zhicheng Tong",
+          "Yong Li"
+        ],
+        "abstract": "We establish local nonpersistence of full-dimensional invariant tori with polynomially decaying actions for the periodic quintic nonlinear Schr\\\"odinger equation \\[ iu_t-u_{xx}+T_vu+\\mu|u|^4u=0,\\qquad x\\in\\mathbb T:=\\mathbb R/(2\\pi\\mathbb Z). \\] For every $\\kappa\\geq1$, we construct a fixed bounded real Fourier multiplier $T_ve^{ijx}=v_je^{ijx}$ whose frequencies $\\lambda_j=j^2+v_j$ satisfy the Bourgain-type Diophantine condition \\[ \\operatorname{dist}\\left(\\sum_j\\ell_j\\lambda_j,\\mathbb Z\\right) \\geq\\gamma_\\kappa\\prod_j(1+\\ell_j^2\\langle j\\rangle^{2\\kappa})^{-1} \\] for some $\\gamma_\\kappa>0$ and every nonzero finitely supported integer sequence $\\ell$, where $\\langle j\\rangle=\\max\\{1,|j|\\}$. For this multiplier, every $3<M<4\\kappa+\\frac12$, every $A>0$, and all sufficiently small $\\mu A^2>0$, the closed relative action tube of radius $3/10$ around $I_j=A\\langle j\\rangle^{-M}$ contains no full-dimensional invariant torus in $H^1(\\mathbb T)$ carrying a complete flow, with arbitrary frequencies allowed. This advances the study of the polynomial-decay problem identified by Kuksin as a main open problem in KAM theory for one-dimensional Hamiltonian PDEs [Amer. Math. Soc. Transl. Ser. 2, 212 (2004), 237--258, Problem 7.1]. Bourgain discussed a related question for short-range Hamiltonian systems [Russian Math. Surveys 59 (2004), 231--246, Section 3]. The proof combines simultaneous Diophantine and weighted homological estimates, an exact common-phase transformation, and one normal-form step on four adjacent Fourier coordinates. Uniform phase rotation forces an action excursion, while overlapping parameter intervals cover all sufficiently small positive perturbations. The mechanism suggests applications to other Hamiltonian PDEs.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.AP",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.22072",
+        "pdf_url": "https://arxiv.org/pdf/2610.22072"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Invariant-torus nonpersistence and Diophantine Hamiltonian dynamics provide a conceptual connection, although the result is primarily about a nonlinear PDE.",
+        "tldr": "For the periodic quintic nonlinear Schrödinger equation, the authors construct a bounded Fourier multiplier with stated Diophantine frequencies and prove local nonpersistence of full-dimensional invariant tori near polynomially decaying actions.",
+        "problem": "Determine whether full-dimensional invariant tori with polynomially decaying actions persist under small positive perturbations in the stated periodic quintic equation.",
+        "main_result": "For every \\(\\kappa\\geq1\\), the authors construct a fixed bounded real Fourier multiplier whose frequencies satisfy the Bourgain-type Diophantine condition stated in the original abstract. For this multiplier, every \\(3<M<4\\kappa+1/2\\), every \\(A>0\\), and all sufficiently small \\(\\mu A^2>0\\), the closed relative action tube of radius \\(3/10\\) around \\(I_j=A\\langle j\\rangle^{-M}\\) contains no full-dimensional invariant torus in \\(H^1(\\mathbb T)\\) carrying a complete flow; arbitrary frequencies are allowed. Here \\(\\langle j\\rangle=\\max\\{1,|j|\\}\\). The abstract suggests, rather than proves, applications to other Hamiltonian PDEs.",
+        "methods": [
+          "Simultaneous Diophantine and weighted homological estimates",
+          "Exact common-phase transformation",
+          "One normal-form step on four adjacent Fourier coordinates",
+          "Action excursion from uniform phase rotation",
+          "Overlapping parameter intervals"
+        ],
+        "context": "Hamiltonian PDEs, KAM theory and invariant tori.",
+        "keywords": [
+          "invariant tori",
+          "nonpersistence",
+          "polynomial action decay",
+          "quintic nonlinear Schrödinger equation"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.22073",
+        "versioned_id": "2610.22073v1",
+        "title": "Strong invariance principles in deterministic systems",
+        "authors": [
+          "Zemer Kosloff",
+          "Dalibor Volny"
+        ],
+        "abstract": "We show that in every aperiodic, probability preserving dynamical system there is a function whose associated time series satisfies the almost sure invariance principle with rate asymptotically smaller then $\\sqrt{n}$ and the almost sure weak invariance principle of Brosamler and Schatte.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.22073",
+        "pdf_url": "https://arxiv.org/pdf/2610.22073"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "The existence of observables with strong statistical approximation in probability-preserving systems connects to ergodic theory; no entropy or dimension theorem is stated.",
+        "tldr": "Every aperiodic probability-preserving dynamical system admits a function whose time series satisfies the stated almost sure invariance principles.",
+        "problem": "Find observables supporting strong invariance principles in arbitrary aperiodic probability-preserving systems.",
+        "main_result": "The authors assert existence of a function whose associated time series satisfies an almost sure invariance principle with rate asymptotically smaller than \\(\\sqrt n\\), and the almost sure weak invariance principle of Brosamler and Schatte. No further observable class or quantitative rate is specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Probability-preserving dynamics and invariance principles.",
+        "keywords": [
+          "aperiodic systems",
+          "almost sure invariance principle",
+          "weak invariance principle"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.22076",
+        "versioned_id": "2610.22076v1",
+        "title": "On the structure of polynomial multicorrelation sequences arising from nilpotent actions",
+        "authors": [
+          "Jovan Andreevski",
+          "Felipe Hern\\'andez"
+        ],
+        "abstract": "We prove that every polynomial multicorrelation sequence arising from nilpotent actions admits a decomposition into a generalized nilsequence and a null-sequence. This resolves a long-standing question of Frantzikinakis concerning the structure of polynomial multicorrelation sequences of commuting transformations. Our proof builds upon ideas underlying the norm convergence theorem of Walsh.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CO"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.22076",
+        "pdf_url": "https://arxiv.org/pdf/2610.22076"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Nilpotent actions and the structure of their multicorrelations directly match the group-action and orbit-structure interests.",
+        "tldr": "Every polynomial multicorrelation sequence arising from nilpotent actions decomposes into a generalized nilsequence and a null-sequence.",
+        "problem": "Determine the structure of polynomial multicorrelation sequences for nilpotent actions, including those from commuting transformations.",
+        "main_result": "The authors prove the stated generalized-nilsequence plus null-sequence decomposition and report that it resolves Frantzikinakis’s question for commuting transformations. The abstract does not specify the definitions or quantitative properties of these components.",
+        "methods": [
+          "Ideas underlying Walsh’s norm convergence theorem"
+        ],
+        "context": "Nilpotent actions, polynomial multicorrelations and nilsequences.",
+        "keywords": [
+          "nilpotent actions",
+          "polynomial multicorrelations",
+          "generalized nilsequences",
+          "null-sequences"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.22123",
+        "versioned_id": "2610.22123v1",
+        "title": "An undecidable problem in dynamics",
+        "authors": [
+          "Jason Bell"
+        ],
+        "abstract": "Given a variety $X$ with a self-map $\\phi$ and subvarieties $Y$ and $Z$ of $X$, we consider the set of $n$ for which $\\phi^n(Y)$ intersects $Z$ nontrivially. Extending a beautiful construction of Lee and Nam, we show this gives rise to an undecidable problem for a fixed ambient variety $X$ and morphism $\\phi$. We further use this construction to give a counterexample to a conjecture of the author, Satriano, and Sierra.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.LO",
+          "math.NT"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.22123",
+        "pdf_url": "https://arxiv.org/pdf/2610.22123"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Undecidability of orbit-intersection questions is a conceptual connection to complexity in dynamics, although symbolic or topological invariants are not stated.",
+        "tldr": "The authors establish undecidability for an orbit-intersection problem with a fixed ambient variety and morphism, and use the construction to disprove a named conjecture.",
+        "problem": "Given a variety \\(X\\), a self-map \\(\\phi\\), and subvarieties \\(Y,Z\\), study the integers \\(n\\) for which \\(\\phi^n(Y)\\) intersects \\(Z\\) nontrivially.",
+        "main_result": "Extending a construction of Lee and Nam, the authors obtain an undecidable problem even with \\(X\\) and the morphism \\(\\phi\\) fixed. The same construction gives a counterexample to a conjecture of the author, Satriano and Sierra; the conjecture’s statement is not specified in the abstract.",
+        "methods": [
+          "Extension of the Lee-Nam construction"
+        ],
+        "context": "Algebraic dynamics, orbit intersections and undecidability.",
+        "keywords": [
+          "orbit intersections",
+          "undecidability",
+          "algebraic dynamics"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.22235",
+        "versioned_id": "2610.22235v1",
+        "title": "Classes of integrable metrics on Banach spaces",
+        "authors": [
+          "A. Konyaev",
+          "P. Topalov"
+        ],
+        "abstract": "We introduce a large new class of (weak) metrics on the Hardy space that have infinite families of conservation laws in involution. The construction of the metrics and the integrals involve the Hankel operator and a field of Nijehuis operators. The commutativity of the integrals is based on the notion of the coupling transform, which allows us to recursively construct new classes of metrics and integrals. We characterize the spectrum of the Nijenhuis operators. The paper establishes a connection between a rich class of completely integrable geodesic flows appearing in the finite dimensional Riemannian geometry and a new class of integrable systems in Banach spaces.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.AP"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.22235",
+        "pdf_url": "https://arxiv.org/pdf/2610.22235"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Integrable geodesic flows and conservation laws connect to geometric dynamics, although entropy, dimension and group actions are not central.",
+        "tldr": "The authors construct a large class of weak metrics on the Hardy space with infinitely many conservation laws in involution, relating finite-dimensional integrable geodesic flows to Banach-space integrable systems.",
+        "problem": "Construct weak metrics and commuting integrals on the Hardy space and characterize the spectra of the associated Nijenhuis operators.",
+        "main_result": "The metrics and integrals are built using a Hankel operator and a field of Nijenhuis operators. A coupling transform establishes commutativity and recursively produces further metrics and integrals. The authors characterize the Nijenhuis-operator spectrum, but the spectral characterization itself is not specified in the abstract.",
+        "methods": [
+          "Hankel operator",
+          "Field of Nijenhuis operators",
+          "Coupling transform"
+        ],
+        "context": "Integrable geodesic flows, weak metrics and Banach-space integrable systems.",
+        "keywords": [
+          "Hardy space",
+          "integrable metrics",
+          "conservation laws",
+          "Nijenhuis operators"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.22281",
+        "versioned_id": "2610.22281v1",
+        "title": "Counterexamples to the ordinary Fried conjecture near hyperbolic metrics",
+        "authors": [
+          "Simon Becker",
+          "Benjamin Lawton"
+        ],
+        "abstract": "We give an LLM-assisted construction of counterexamples to the ordinary Fried conjecture, with real analytic metrics arbitrarily close to a hyperbolic metric in dimension three. For acyclic unitary line characters tending to the trivial character, the modulus of the Ruelle zeta function at zero divided by analytic torsion squared tends to zero.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.DG",
+          "math.SP"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.22281",
+        "pdf_url": "https://arxiv.org/pdf/2610.22281"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Ruelle zeta functions near hyperbolic metrics connect to hyperbolic and geometric dynamics, while the abstract does not state an entropy or pressure result.",
+        "tldr": "The authors report counterexamples to the ordinary Fried conjecture with real analytic metrics arbitrarily close to a hyperbolic metric in dimension three.",
+        "problem": "Test the ordinary Fried conjecture near hyperbolic metrics in dimension three.",
+        "main_result": "For the constructed metrics and acyclic unitary line characters tending to the trivial character, the modulus of the Ruelle zeta function at zero divided by analytic torsion squared tends to zero. The abstract describes the construction as LLM-assisted but gives no mathematical details of that assistance.",
+        "methods": [
+          "LLM-assisted construction, as described in the abstract; the mathematical construction details are not specified in the abstract."
+        ],
+        "context": "Ruelle zeta functions, analytic torsion and hyperbolic metrics.",
+        "keywords": [
+          "Fried conjecture",
+          "Ruelle zeta function",
+          "analytic torsion",
+          "hyperbolic metrics"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.22286",
+        "versioned_id": "2610.22286v1",
+        "title": "Causal Fingerprints Reveal Hidden Mechanisms in Partially-Observed Dynamical Systems",
+        "authors": [
+          "Zhang Jiang",
+          "Marios Andreou",
+          "Nan Chen"
+        ],
+        "abstract": "In partially-observed dynamical systems, distinct hidden mechanisms can produce similar observable summary statistics while explaining individual events differently. We introduce causal fingerprints: realization-dependent patterns that track how information about a hidden state is revealed through subsequent evolution. Within a prescribed dynamical model, we compare the filtering posterior, based on observations up to a given time, with the smoothing posterior, obtained after adding an expanding window of future observations. We quantify this retrospective information gain using Kullback-Leibler divergence and track its evolution as the future window of observational data expands. The fingerprint reveals both the strength and temporal reach of hidden influence, which can vary across events and their stages. Because the observed trajectory is held fixed while hidden-state inference depends on the candidate model, fingerprints reveal how competing dynamical mechanisms explain the same observations even when selected statistics agree. In linear Gaussian systems, we derive a characteristic fingerprint timescale for the temporal reach of hidden influence. Calibrated surrogates matching the observable mean, variance, and decorrelation time can still produce distinct fingerprints when feedback memory, hidden-noise memory, or hidden forcing timescales are misrepresented. Nonlinear examples reveal mechanism-dependent signatures for extreme bursts, oscillatory variability, and regime switching, including multiplicative instability versus additive forcing, deterministic nonlinear feedback versus state-dependent multiplicative noise, and intrinsic bistability versus hidden double-well forcing. Causal fingerprints therefore provide a time- and event-resolved diagnostic for asking not only whether a model reproduces observed statistics, but how its hidden dynamics explain individual events.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "physics.ao-ph",
+          "physics.data-an",
+          "stat.ME"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.22286",
+        "pdf_url": "https://arxiv.org/pdf/2610.22286"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is model-dependent hidden-state inference and causal diagnostics, without a central connection to the profile’s dynamical entropy, dimension or symbolic topics.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.19586",
+        "versioned_id": "2610.19586v1",
+        "title": "Seven Limit Cycles in a Periodically Forced Three-Zone Equation",
+        "authors": [
+          "Chaoyu Hu",
+          "Jizheng Chen"
+        ],
+        "abstract": "We construct a seven-cycle example for a periodically forced scalar equation with a continuous three-zone piecewise-linear nonlinearity. Symbolic integration and linear elimination reduce the four-flight matching conditions to two equations in the residence times. The competing exterior visits produce an additional turn of the critical response and lead to the rational parameters $(A,B,\\mu)=(9,3/2,181363/100000)$. At these parameters, finite Taylor estimates give three sign changes of the return displacement. Scalar order, analyticity along transverse itineraries, and half-period reflection then establish at least seven distinct isolated periodic orbits on the phase cylinder.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.SC",
+          "math.CA",
+          "math.DS",
+          "nlin.CD"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.19586",
+        "pdf_url": "https://arxiv.org/pdf/2610.19586"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The main result constructs limit cycles in a periodically forced scalar equation, without a central connection to the strongest interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.21049",
+        "versioned_id": "2610.21049v1",
+        "title": "SALTO: Solver-Anchored Lifted Transfer Operators for Nonlinear Event Inference",
+        "authors": [
+          "Qi Wang",
+          "Rylie Foster"
+        ],
+        "abstract": "Learned dynamical models can accurately predict trajectories while producing unreliable sensitivities when differentiated or transposed, limiting their use in inverse problems and scientific decision-making. Classical adjoints provide exact local derivatives, but a single adjoint cannot represent the nonlinear response of a system to a family of finite-amplitude perturbations. We introduce SALTO (Solver-Anchored Lifted Transfer Operators), a Koopman-based framework for inferring finite-amplitude sources. In the lifted space, the nonlinear dynamics are approximated by a linear propagator, and its transpose carries each sensor backward in a single solve. The result is a reusable lifted adjoint that predicts the measurement produced by any candidate localized event with one encoder pass and an inner product. To give the model the simulator's exact local behavior, SALTO imposes three structural constraints: it anchors the physical-state dynamics to the simulator's linearized propagator, centers the learned observables so that they vanish to second order at the reference state, and uses a block-triangular lifted propagator. These constraints guarantee that the model reduces to the simulator's tangent dynamics and classical adjoint as the amplitude vanishes, while the learned observables carry only the finite-amplitude correction. On three nonlinear PDE systems, SALTO predicts the measurements of finite-amplitude sources to within 2-8% where the classical adjoint is in error by 41-165%, recovers source position and intensity from sparse sensors nearly as accurately as inversion through the solver, and samples the joint posterior of two interacting sources, matching the solver's posterior on reaction-diffusion at a twentieth of its cost. One trained model serves new sensor layouts and measurement times with a single backward solve.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.LG",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.21049",
+        "pdf_url": "https://arxiv.org/pdf/2610.21049"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is learned Koopman-based numerical event inference for PDE models, without a central entropy, dimension, symbolic or group-action result.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.21271",
+        "versioned_id": "2610.21271v1",
+        "title": "Beyond 11/16: dense Kuramoto networks that resist synchrony",
+        "authors": [
+          "Kevin P. O'Keeffe"
+        ],
+        "abstract": "How densely must a network of identical Kuramoto oscillators be wired before synchrony is its only stable state? The answer is a critical connectivity $\\mu_c$ (the minimum degree divided by $n-1$), known to satisfy $11/16\\le\\mu_c<3/4$. We raise the lower bound from $11/16=0.6875$ to $\\mu_c\\ge(4+2q^*)/(7+q^*)=0.6929077\\ldots$, where $q^*\\approx0.6506$ is a root of an explicit polynomial of degree 8. The networks approaching this bound carry stable states that hug the four-cluster state: three neighboring clusters each split into two slightly separated halves, and the four crossed links between neighboring halves (those whose phase gap deviates most from a quarter turn) have densities approaching $q^*$. We build these networks from a coarse-grained cluster model, verify stability with interval arithmetic, and blow the model up into large networks with an exact minimum degree. The states are fragile and easily missed by numerical searches that impose stability margins.",
+        "announce_type": "cross",
+        "categories": [
+          "nlin.AO",
+          "math.CO",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.21271",
+        "pdf_url": "https://arxiv.org/pdf/2610.21271"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is synchronization thresholds and stable clustered states in oscillator networks, without a central connection to the strongest interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.21326",
+        "versioned_id": "2610.21326v1",
+        "title": "Critical Ising Model on the Periodic Cubic Lattice $(\\mathbb{Z}/L\\mathbb{Z})^{3}$",
+        "authors": [
+          "Shenglan Yuan"
+        ],
+        "abstract": "We investigate the critical behaviour of the nearest-neighbour Ising model on the three-dimensional periodic cubic lattice $(\\mathbb{Z}/L\\mathbb{Z})^{3}$, and we present a companion set of Monte Carlo simulations. After recalling the rigorous results on the continuity of the spontaneous magnetization in $d=3$ and the triviality of the scaling limit in $d\\ge 4$, we compile modern high-precision estimates of the 3D Ising critical exponents and verify the scaling relations that connect them. We then describe numerical measurements of the Binder cumulant, the magnetic susceptibility, the specific heat, the two-point correlation function, and the finite-size scaling of the magnetization. We discuss the systematic uncertainties that affect the extraction of the exponent ratios $\\gamma/\\nu$ and $\\alpha/\\nu$, and we emphasize that an exponential fit of the correlation function is not appropriate at the critical point, where the decay is algebraic.",
+        "announce_type": "cross",
+        "categories": [
+          "cond-mat.stat-mech",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.21326",
+        "pdf_url": "https://arxiv.org/pdf/2610.21326"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Critical lattice statistics and scaling provide a possible connection to thermodynamic interests, but the abstract does not develop dynamical thermodynamic formalism; relevance is therefore indirect.",
+        "tldr": "The paper reviews rigorous and numerical aspects of the critical three-dimensional Ising model and presents companion Monte Carlo simulations, emphasizing finite-size scaling and systematic uncertainties.",
+        "problem": "Study critical behavior of the nearest-neighbor Ising model on a three-dimensional periodic cubic lattice and assess numerical extraction of exponent ratios.",
+        "main_result": "The abstract recalls rigorous continuity of spontaneous magnetization in dimension three and triviality of the scaling limit in dimensions at least four, compiles modern estimates of critical exponents, and checks their scaling relations. It describes measurements of the Binder cumulant, susceptibility, specific heat, two-point correlation and magnetization scaling, and discusses uncertainty in \\(\\gamma/\\nu\\) and \\(\\alpha/\\nu\\). It emphasizes algebraic critical correlation decay rather than an exponential fit. No new rigorous critical exponent values are stated.",
+        "methods": [
+          "Monte Carlo simulations",
+          "Finite-size scaling analysis"
+        ],
+        "context": "Critical lattice statistical mechanics and numerical scaling analysis.",
+        "keywords": [
+          "critical Ising model",
+          "Monte Carlo",
+          "finite-size scaling",
+          "critical exponents"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.21529",
+        "versioned_id": "2610.21529v1",
+        "title": "Frey-Mazur theorem for semistable elliptic curves over function fields",
+        "authors": [
+          "Fateme Sajadi"
+        ],
+        "abstract": "Let $k$ be a field, let $B/k$ be a smooth projective geometrically integral curve, and put $K=k(B)$. We prove a Frey--Mazur type theorem for nonisotrivial semistable elliptic curves over $K$. More precisely, after fixing the genus of $B$ and the characteristic of $k$, a sufficiently large prime-to-characteristic torsion representation determines the $K$-isogeny class.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.AG",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.21529",
+        "pdf_url": "https://arxiv.org/pdf/2610.21529"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The abstract concerns torsion representations and isogeny classes of elliptic curves, without an explicit connection to the profile’s dynamical interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.22189",
+        "versioned_id": "2610.22189v1",
+        "title": "The role of friction on heave-induced motion of offshore drilling systems: modelling, analysis, and numerical experiments",
+        "authors": [
+          "Luigi Romano",
+          "Ole Morten Aamo"
+        ],
+        "abstract": "This paper investigates the influence of friction dynamics on heave-induced disturbance propagation using a coupled hydraulic-structural drilling model formulated as a semilinear interconnection of ordinary and hyperbolic partial differential equations (ODE-PDEs), and capturing spatially distributed memory effects in the drillstring-wellbore interaction. First, local and global existence and uniqueness results are established, and sufficient conditions for boundedness and input-to-state stability are deduced via a small-gain analysis. Subsequently, extensive numerical investigations are carried out, including harmonic excitation studies, nonlinear distortion analysis, spatial amplification investigations, mechanism-isolation experiments, parameter sensitivity analysis, and broadband simulations under realistic offshore sea-state excitation. The simulation results indicate that, whilst the hydraulic response is governed primarily by wave propagation phenomena, compressibility, and boundary reflections, the structural dynamics display substantially greater sensitivity to distributed friction effects. Furthermore, drillstring-wellbore friction is shown to have a relatively limited influence on well-posedness but a potentially significant impact on stability margins. These findings highlight the importance of accounting for coupled hydraulic-structural dynamics and distributed friction mechanisms when analysing, monitoring, and controlling offshore drilling systems.",
+        "announce_type": "cross",
+        "categories": [
+          "physics.app-ph",
+          "cs.SY",
+          "eess.SY",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.22189",
+        "pdf_url": "https://arxiv.org/pdf/2610.22189"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is hydraulic-structural drilling models, input-to-state stability and numerical experiments, without a central connection to the strongest interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2412.13783",
+        "versioned_id": "2412.13783v2",
+        "title": "Minimum nonlinearity for pattern-forming Turing instability in a mathematical autocatalytic model",
+        "authors": [
+          "Javier L\\'opez-Pedrares",
+          "Marcos Su\\'arez-V\\'azquez",
+          "Juan P\\'erez-Mercader",
+          "Alberto P. Mu\\~nuzuri"
+        ],
+        "abstract": "Pattern formation is ubiquitous in nature and the mechanism widely-accepted to underlay them is based on the Turing instability, predicted by Alan Turing decades ago. This is a non-trivial mechanism that involves nonlinear interaction terms between the different species involved and transport mechanisms. We present here a mathematical analysis aiming to explore the mathematical constraints that a reaction-diffusion dynamical model should comply in order to exhibit a Turing instability. The main conclusion limits the existence of this instability to nonlinearity degrees larger or equal to three.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "nlin.PS",
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2412.13783",
+        "pdf_url": "https://arxiv.org/pdf/2412.13783"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is nonlinearity thresholds for Turing instability in reaction-diffusion models, without a central entropy, dimension, symbolic or group-action component.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2506.06781",
+        "versioned_id": "2506.06781v4",
+        "title": "Morse theory and moduli spaces of simple polylines and polygons",
+        "authors": [
+          "Te Ba",
+          "Ze Zhou"
+        ],
+        "abstract": "We prove that a smooth $d$-manifold $M$ is diffeomorphic to $\\mathbb R^d$ if it admits a Lyapunov-Reeb function, i.e., a smooth map $f\\colon M\\to\\mathbb R$ that is proper, lower-bounded, and possesses exactly one critical point. We further establish that the moduli spaces of simple polylines and positively oriented polygons with fixed or varying side lengths are diffeomorphic to Euclidean spaces, by explicitly constructing Lyapunov-Reeb functions on these spaces. This yields a refined resolution to the Carpenter's Rule Problem and settles a conjecture proposed by Gonz\\'{a}lez and Sedano-Mendoza. In addition, we describe foliation structures of the moduli spaces and develop algorithms for the refolding problem.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.CO",
+          "math.DS",
+          "math.GT"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2506.06781",
+        "pdf_url": "https://arxiv.org/pdf/2506.06781"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Lyapunov-Reeb functions and foliation structures provide a topological and geometric connection, although the central results concern moduli spaces of polygons.",
+        "tldr": "A smooth manifold admitting a proper lower-bounded smooth function with exactly one critical point is shown to be diffeomorphic to Euclidean space. Explicit functions of this kind identify the stated moduli spaces of simple polylines and positively oriented polygons with Euclidean spaces.",
+        "problem": "Determine the smooth structure of moduli spaces of simple polylines and positively oriented polygons, and develop refolding algorithms.",
+        "main_result": "The authors prove that a smooth \\(d\\)-manifold admitting a Lyapunov-Reeb function is diffeomorphic to \\(\\mathbb R^d\\); here that function is smooth, proper, lower-bounded and has exactly one critical point. Explicit constructions show that the specified moduli spaces with fixed or varying side lengths are Euclidean. The abstract reports a refined resolution of the Carpenter’s Rule Problem and settlement of a conjecture of González and Sedano-Mendoza, and also describes foliations and refolding algorithms; further specifications are not given.",
+        "methods": [
+          "Explicit construction of Lyapunov-Reeb functions"
+        ],
+        "context": "Morse theory, polygon moduli spaces and foliation structures.",
+        "keywords": [
+          "Lyapunov-Reeb functions",
+          "Morse theory",
+          "polygon moduli spaces",
+          "refolding"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2603.10733",
+        "versioned_id": "2603.10733v5",
+        "title": "The complexity of smooth words over binary alphabets",
+        "authors": [
+          "Julien Cassaigne",
+          "Rapha\\\"el Henry"
+        ],
+        "abstract": "Smooth sequences over an alphabet of positive integers $\\{a,b\\}$ are sequences that are infinitely derivable, the emblematic example being the Oldenburger-Kolakoski sequence $\\kappa$ over $\\{1,2\\}$. The main way to study their language is to consider a finite version of smooth sequences called smooth words. In this paper we prove that the smooth words are exactly the factors of smooth sequences and we make progress towards the conjecture that the complexity of smooth words over $\\{a,b\\}$ grows like $\\Theta\\left(n^{\\log(a+b)/\\log((a+b)/2)}\\right)$: we prove the lower bound over any alphabet and the upper bound over even alphabets, and we improve the known upper bound over odd and mixed alphabets. We also provide a dichotomy that links the language, the morphicity and the factor complexity of $\\kappa$.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cs.FL",
+          "math.CO",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2603.10733",
+        "pdf_url": "https://arxiv.org/pdf/2603.10733"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Languages and factor complexity of smooth sequences are central to symbolic dynamics and symbolic complexity.",
+        "tldr": "The authors identify smooth words with factors of smooth sequences and prove new bounds toward a complexity conjecture for binary alphabets. They also give a dichotomy connecting the language, morphicity and factor complexity of the Oldenburger-Kolakoski sequence.",
+        "problem": "Describe the language and growth of the number of smooth words over positive-integer alphabets \\(\\{a,b\\}\\), where smooth sequences are infinitely derivable.",
+        "main_result": "The authors prove that smooth words are exactly factors of smooth sequences. Toward growth \\(\\Theta(n^{\\log(a+b)/\\log((a+b)/2)})\\), they prove the lower bound for every alphabet and the upper bound for even alphabets, and improve the known upper bound for odd and mixed alphabets. The stated dichotomy for the Oldenburger-Kolakoski sequence links its language, morphicity and factor complexity; its precise alternatives are not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Symbolic languages, smooth sequences and factor complexity.",
+        "keywords": [
+          "smooth words",
+          "factor complexity",
+          "Oldenburger-Kolakoski sequence",
+          "binary alphabets"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2604.19237",
+        "versioned_id": "2604.19237v2",
+        "title": "Bott-integrable contact forms with large systolic ratio",
+        "authors": [
+          "Hansj\\\"org Geiges",
+          "Jakob Hedicke",
+          "Murat Sa\\u{g}lam"
+        ],
+        "abstract": "We show that there is no universal upper bound for the systolic ratio of Bott-integrable contact forms on closed 3-manifolds, thus providing further evidence for the relative flexibility of integrable contact forms. For the proof, we study piecewise linear approximations of Lutz forms and establish integrability of a `plug' constructed by Abbondandolo, Bramham, Hryniewicz and Salom\\~ao for pushing up the systolic ratio.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.SG",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2604.19237",
+        "pdf_url": "https://arxiv.org/pdf/2604.19237"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Integrable contact dynamics and systolic geometry are conceptually related to geometric dynamics, although entropy and dimension are not central.",
+        "tldr": "The authors prove that systolic ratios of Bott-integrable contact forms on closed three-manifolds have no universal upper bound.",
+        "problem": "Determine whether Bott-integrability imposes a universal upper bound on the systolic ratio of contact forms on closed three-manifolds.",
+        "main_result": "The unboundedness result is obtained by studying piecewise linear approximations of Lutz forms and establishing integrability of the plug constructed by Abbondandolo, Bramham, Hryniewicz and Salomão to increase the systolic ratio. The abstract interprets the result as evidence of relative flexibility of integrable contact forms.",
+        "methods": [
+          "Piecewise linear approximations of Lutz forms",
+          "Integrability analysis of the named plug construction"
+        ],
+        "context": "Contact geometry, integrable dynamics and systolic ratios.",
+        "keywords": [
+          "Bott-integrable contact forms",
+          "systolic ratio",
+          "Lutz forms",
+          "integrable plug"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2608.13000",
+        "versioned_id": "2608.13000v2",
+        "title": "Dynamical comparison for local homeomorphisms",
+        "authors": [
+          "Shirly Geffen",
+          "Shanshan Hua",
+          "Julian Kranz"
+        ],
+        "abstract": "We prove dynamical comparison for Deaconu--Renault groupoids associated to minimal surjective non-injective local homeomorphisms of compact metrizable spaces with finite Lebesgue covering dimension. As a corollary, the associated $C^*$-algebras are UCT Kirchberg algebras, recovering results by Carlsen--Thomsen via dynamical methods. In the zero-dimensional case, our result also verifies Matui's AH-conjecture for these groupoids using a recent breakthrough of Xin Li. Our proof combines techniques from both the purely infinite and stably finite regimes: We construct partial actions of non-abelian free groups as suitable ``large subgroupoids'' and establish comparison properties for these using the paradoxical towers technique developed by Gardella--Geffen--Kranz--Naryshkin. The boundary of the subgroupoid is controlled by a groupoid version of the topological small boundary property which we deduce from finite covering dimension of the unit space. As a byproduct, we prove the classical small boundary property for minimal actions of countable discrete groups on finite-dimensional compact metrizable spaces without any freeness assumption.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.OA",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2608.13000",
+        "pdf_url": "https://arxiv.org/pdf/2608.13000"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Dynamical comparison, finite-dimensional topological dynamics and discrete group actions are central, directly matching the profile.",
+        "tldr": "The authors prove dynamical comparison for specified Deaconu-Renault groupoids, with consequences for their operator algebras and, in dimension zero, Matui’s AH-conjecture. They also prove the classical small boundary property for minimal countable discrete group actions on finite-dimensional compact metrizable spaces without a freeness assumption.",
+        "problem": "Establish dynamical comparison for groupoids associated with minimal surjective non-injective local homeomorphisms of compact metrizable spaces with finite Lebesgue covering dimension.",
+        "main_result": "Under these hypotheses the associated \\(C^*\\)-algebras are UCT Kirchberg algebras. In the zero-dimensional case, the authors verify Matui’s AH-conjecture using Xin Li’s stated breakthrough. Partial actions of nonabelian free groups serve as large subgroupoids; their boundaries are controlled through a groupoid topological small boundary property deduced from finite covering dimension. A byproduct establishes the classical small boundary property for the stated minimal actions without requiring freeness.",
+        "methods": [
+          "Partial actions of nonabelian free groups as large subgroupoids",
+          "Paradoxical towers technique",
+          "Groupoid topological small boundary property",
+          "Xin Li’s result for the zero-dimensional AH-conjecture consequence"
+        ],
+        "context": "Topological dynamics, group actions, groupoids and operator algebras.",
+        "keywords": [
+          "dynamical comparison",
+          "local homeomorphisms",
+          "small boundary property",
+          "group actions",
+          "Deaconu-Renault groupoids"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2608.27326",
+        "versioned_id": "2608.27326v2",
+        "title": "Arbitrarily Fast Quantum Dispersion in Long-Range Crystals",
+        "authors": [
+          "Ga\\'etan Leclerc",
+          "Mostafa Sabri",
+          "Tuomas Sahlsten"
+        ],
+        "abstract": "We construct the first examples of one-dimensional long-range crystals exhibiting arbitrarily fast polynomial dispersive bounds. The Floquet functions of our Hamiltonians are highly oscillatory Weierstrass functions, whose rough autosimilar structure drives the fast dispersion. The proof develops a new Fourier decay theory for $C^\\alpha$ images of the Lebesgue measure, based on a Dolgopyat-inspired transfer operator method, and yields a van der Corput lemma for Weierstrass functions. As a consequence, the local time of classical Weierstrass functions of sufficiently large lacunarity exists and is $C^k$, answering a question raised by Geman and Horowitz in 1980.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.SP",
+          "math-ph",
+          "math.CA",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-16T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2608.27326",
+        "pdf_url": "https://arxiv.org/pdf/2608.27326"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Rough self-similar Weierstrass structure and Fourier decay for images of measures give a direct fractal-geometric connection, alongside spectral applications.",
+        "tldr": "The authors construct one-dimensional long-range crystals with arbitrarily fast polynomial dispersive bounds using highly oscillatory Weierstrass Floquet functions. The argument also yields a Fourier-decay theory and smooth local times for classical Weierstrass functions under stated lacunarity conditions.",
+        "problem": "Construct long-range crystals with very rapid polynomial dispersion and understand Fourier decay associated with rough Weierstrass functions.",
+        "main_result": "The proof develops Fourier decay for \\(C^\\alpha\\) images of Lebesgue measure through a Dolgopyat-inspired transfer-operator method and obtains a van der Corput lemma for Weierstrass functions. As a consequence, the local time of classical Weierstrass functions of sufficiently large lacunarity exists and is \\(C^k\\). The abstract does not specify the lacunarity threshold, permitted parameters or the dependence on \\(k\\).",
+        "methods": [
+          "Dolgopyat-inspired transfer-operator method",
+          "Fourier decay theory",
+          "Van der Corput lemma for Weierstrass functions"
+        ],
+        "context": "Fractal Weierstrass functions, Fourier decay and quantum dispersion in long-range crystals.",
+        "keywords": [
+          "Weierstrass functions",
+          "Fourier decay",
+          "quantum dispersion",
+          "transfer operators",
+          "local time"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 9,
+    "RELATED / POSSIBLY INTERESTING": 12,
+    "LOW PRIORITY": 8
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-10-16T10:05:55.379223Z",
+      "feed_published_at": "2026-10-16T00:00:00-04:00",
+      "feed_build_at": "2026-10-16T04:00:24Z",
+      "feed_date": "2026-10-16",
+      "sha256": "997163397bfedb6173cfbe51f60b324312fe18caae470436487401ba35f31b28",
+      "byte_length": 66712,
+      "capture_run_url": null
+    }
+  ]
+}
