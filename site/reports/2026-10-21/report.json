@@ -1,0 +1,985 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-10-21",
+  "generated_at": "2026-10-21T10:02:11.051814Z",
+  "feed_build_at": "2026-10-21T04:00:11Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 24 unseen announcements: 6 HIGH PRIORITY, 11 RELATED / POSSIBLY INTERESTING, and 7 LOW PRIORITY. Central themes include topological omega-limit sets, beta-expansions and transfer operators, entropy-maximizing and semiclassical measures, exceptional winning sets, and harmonic-measure dimensions. Related papers address geodesic and billiard ergodicity, invariant curves, quasiperiodic spectra, cut-and-project geometry, kinetic limits and stochastic invariant measures. Existence conditions, unnamed hypotheses and forthcoming results are identified explicitly. No followed-author matches occur in the supplied input.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2610.27188",
+        "versioned_id": "2610.27188v1",
+        "title": "Canard points in planar mass-action networks: a flux criterion, a duality, and a complete classification",
+        "authors": [
+          "Miruna-Mihaela Beldiman",
+          "Andrei-Dan Halanay"
+        ],
+        "abstract": "We determine which mass-action reaction networks on two species, one fast and one slow, admit a canard point: a singular Hopf bifurcation at a fold of the critical manifold, followed by a canard explosion. In flux coordinates, existence reduces to three linear equations, one linear inequation and a sign condition on the product of two linear forms, and the criticality of the explosion is the sign of an explicit cubic form. For four reactions with a balance matrix of full rank, both become integer polynomial conditions on the stoichiometry. A vacancy duality, which exchanges the activator-inhibitor and substrate-depletion mechanisms, preserves canard points together with their criticality. The central structural result is a mode criterion: a network has a canard point if and only if its elementary flux modes contain a sign-meeting pair and a mode carrying a fold. Hence every canard network contains a minimal one carried by at most three modes, and so by at most twelve reactions, whatever the molecularity. For complexes of molecularity at most three we enumerate all 138,754 minimal canard networks and label each exactly by the criticalities it admits. None has more than six reactions; 32 have canard points of codimension zero and no explosion; and most six-reaction networks admit both criticalities, separated by degenerate canard points. All labels rest on exact certificates.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.27188",
+        "pdf_url": "https://arxiv.org/pdf/2610.27188"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is canard bifurcations and classification of reaction networks, without a central connection to the strongest interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.27229",
+        "versioned_id": "2610.27229v1",
+        "title": "Connected $\\omega$-limit sets of Cournot maps: periodic orbits, realization and almost every point",
+        "authors": [
+          "Juan Luis Garc\\'ia Guirao"
+        ],
+        "abstract": "Let $F(x,y)=(f_2(y),f_1(x))$ be a Cournot map of the unit square, $\\varphi=f_2\\circ f_1$ and $\\chi=f_1\\circ f_2$. Linero Bas and Mu\\~noz Guillermo proved that an $\\omega$-limit set of $F$ with nonempty interior is connected if and only if \\textup{(C1)} its two projections are connected and \\textup{(C2)} $\\omega_{F^2}(z)\\cap\\omega_{F^2}(F(z))\\neq\\emptyset$, and conjectured that this holds for every $\\omega$-limit set. We prove the conjecture for every point $z=(x,y)$ such that $\\omega_\\varphi(x)$ or $\\omega_\\chi(y)$ is finite, and for Lebesgue almost every point $z$ of the square whenever $\\varphi$ is metrically regular (every metric attractor is a periodic orbit, a solenoid, or a cycle of intervals carrying a well-behaved absolutely continuous invariant measure). Over a periodic orbit the $\\omega$-limit set is a \\emph{comb}, whose sections are rigid; when one projection is connected it is a point, a \\emph{lattice} $(P\\times J)\\cup(K\\times Q)$ with $P\\subset K$, $Q\\subset J$ and $\\#P=\\#Q$, or an \\emph{alternating comb} of $2m$ disjoint segments. Conversely, every lattice and every alternating comb is an $\\omega$-limit set of a Cournot map with piecewise linear reaction functions; the construction rests on a lemma producing exact compositions of piecewise linear maps with prescribed values. This answers, for this class, the question of Balibrea, Linero and C\\'anovas of which nowhere dense sets are $\\omega$-limit sets of Cournot maps. For instance, the letter H is not an $\\omega$-limit set at any such point, and for metrically regular $\\varphi$ the points whose $\\omega$-limit set is connected, infinite, nowhere dense and not a lattice form a Lebesgue null set.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "nlin.PS"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.27229",
+        "pdf_url": "https://arxiv.org/pdf/2610.27229"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Connectedness, realization and classification of omega-limit sets are central topological-dynamical questions.",
+        "tldr": "The authors establish the proposed connectedness criterion for Cournot-map limit sets in the stated finite-projection and almost-everywhere regimes, and realize specified comb and lattice geometries.",
+        "problem": "For \\(F(x,y)=(f_2(y),f_1(x))\\), with \\(\\varphi=f_2\\circ f_1\\) and \\(\\chi=f_1\\circ f_2\\), determine when an omega-limit set is connected and which nowhere dense geometries occur.",
+        "main_result": "The criterion requires connected projections and nonempty intersection of \\(\\omega_{F^2}(z)\\) with \\(\\omega_{F^2}(F(z))\\). It holds whenever \\(\\omega_\\varphi(x)\\) or \\(\\omega_\\chi(y)\\) is finite, and for Lebesgue almost every point when \\(\\varphi\\) is metrically regular in the sense stated in the original abstract. Over periodic orbits the authors obtain rigid combs, with point, lattice or alternating-comb forms when one projection is connected. Every described lattice and alternating comb is realized by piecewise linear reaction functions. Under metric regularity, connected infinite nowhere dense non-lattice limit sets occur only on a null set.",
+        "methods": [
+          "Exact compositions of piecewise linear maps with prescribed values"
+        ],
+        "context": "Cournot maps and topology of omega-limit sets.",
+        "keywords": [
+          "omega-limit sets",
+          "connectedness",
+          "Cournot maps",
+          "realization",
+          "piecewise linear maps"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.27685",
+        "versioned_id": "2610.27685v1",
+        "title": "Multiplicity of closed geodesics on odd-dimensional bumpy Finsler compact space form",
+        "authors": [
+          "Hui Liu",
+          "Linxinzi Qi"
+        ],
+        "abstract": "Let $M = S^{2n+1}/\\Gamma$ be a manifold diffeomorphic to a compact space form, endowed with a bumpy Finsler metric $F$. In this paper, we prove that there exist at least $n+3$ contractible minimal closed geodesics on $M$, assuming that all contractible minimal closed geodesics have non-zero Morse indices. Here, a contractible closed geodesic is called minimal if it is not an iteration of any other contractible closed geodesic. In particular, this confirms the generalized Anosov-Katok conjecture for the bumpy quotient manifold $(S^3/\\Gamma, F)$ under the non-zero Morse index assumption.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.DG"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.27685",
+        "pdf_url": "https://arxiv.org/pdf/2610.27685"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Multiplicity of closed geodesics under topological and index hypotheses provides a geometric-dynamical connection.",
+        "tldr": "Under the nonzero-index assumption, the authors prove a lower bound for contractible minimal closed geodesics on odd-dimensional bumpy Finsler space forms.",
+        "problem": "Count contractible closed geodesics that are not iterates of other contractible closed geodesics.",
+        "main_result": "For a bumpy Finsler metric on \\(M=S^{2n+1}/\\Gamma\\), assuming every contractible minimal closed geodesic has nonzero Morse index, there are at least \\(n+3\\) such geodesics. Here minimal means not an iteration of another contractible closed geodesic. The stated three-dimensional quotient case confirms the named generalized Anosov-Katok conjecture under the same index assumption.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Finsler closed-geodesic multiplicity and Morse indices.",
+        "keywords": [
+          "closed geodesics",
+          "Finsler space forms",
+          "Morse index",
+          "contractible minimal geodesics"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.27697",
+        "versioned_id": "2610.27697v1",
+        "title": "Ergodicity of the geodesic flow on surfaces of nonpositive curvature",
+        "authors": [
+          "Federico Rodriguez Hertz",
+          "Jana Rodriguez Hertz",
+          "Weisheng Wu"
+        ],
+        "abstract": "We give a full proof that the geodesic flow of a closed surface of genus at least two with a \\(C^{3+\\mathrm{Lip}}\\) metric of nonpositive curvature is ergodic with respect to Liouville measure. In a forthcoming paper, we will present the corresponding result for smooth rank-one manifolds in every dimension.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.27697",
+        "pdf_url": "https://arxiv.org/pdf/2610.27697"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Ergodicity of geodesic flows is directly connected to geometric ergodic theory.",
+        "tldr": "The authors prove Liouville ergodicity for geodesic flows of the stated closed nonpositively curved surfaces.",
+        "problem": "Establish ergodicity under the specified curvature, genus and metric-regularity assumptions.",
+        "main_result": "A closed surface of genus at least two with a \\(C^{3+\\mathrm{Lip}}\\) metric of nonpositive curvature has geodesic flow ergodic for Liouville measure. The corresponding smooth rank-one result in every dimension is explicitly reserved for a forthcoming paper. Proof methods: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Nonpositive-curvature surface geometry and geodesic-flow ergodicity.",
+        "keywords": [
+          "geodesic flow",
+          "ergodicity",
+          "Liouville measure",
+          "nonpositive curvature"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.27796",
+        "versioned_id": "2610.27796v1",
+        "title": "Absolute winning properties of exceptional sets for rational maps",
+        "authors": [
+          "Haoyang Ji"
+        ],
+        "abstract": "We study Schmidt's game on the Julia set $J(f)$ of weak hyperbolic rational maps $f:\\CC\\to\\CC$. For each $y\\in J(f)$, let $E(f,y)$ be the set of points in $J(f)$ whose forward orbits stay a positive distance from $y$. We prove that $E(f,y)$ is absolute winning on $J(f)$ for each $y \\in J(f)$. To do this, we first prove the absolute winning property for the exceptional set associated to the critical points by a potential game argument, and then use uniform expansion to obtain the result for each target point $y$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.27796",
+        "pdf_url": "https://arxiv.org/pdf/2610.27796"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Winning exceptional orbit sets on Julia sets directly connect complex dynamics with the profile’s fractal-geometric interests.",
+        "tldr": "For weak hyperbolic rational maps, every target in the Julia set has an absolute-winning set of orbits staying a positive distance away.",
+        "problem": "For \\(y\\in J(f)\\), study \\(E(f,y)\\), the Julia-set points whose forward orbits stay a positive distance from \\(y\\).",
+        "main_result": "For each \\(y\\in J(f)\\), the authors prove \\(E(f,y)\\) is absolute winning on \\(J(f)\\). A potential-game argument first handles the exceptional set associated with critical points; uniform expansion then extends the result to every target. The exact weak-hyperbolicity hypothesis: Not specified in the abstract.",
+        "methods": [
+          "Schmidt’s game",
+          "Potential game argument",
+          "Uniform expansion"
+        ],
+        "context": "Julia-set orbit avoidance and winning sets.",
+        "keywords": [
+          "absolute winning",
+          "Julia sets",
+          "exceptional orbits",
+          "rational maps"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.27844",
+        "versioned_id": "2610.27844v1",
+        "title": "Beta-expansions induced by general Parry polynomials and sharp iteration asymptotics of their transfer operators",
+        "authors": [
+          "Horia D. Cornean",
+          "Ira W. Herbst",
+          "Kasper S. S{\\o}rensen"
+        ],
+        "abstract": "This paper generalizes previous results to any Parry polynomials $p_n(z)$ \\cite{Pa} of finite degree $n\\geq 2$. Let $\\beta>1$ be the unique positive root of $p_n$ and consider the transfer operator $\\mathscr{P}$ induced by the map $[0,1]\\ni x\\mapsto \\beta x-\\lfloor \\beta x\\rfloor \\in [0,1)$. Suppose all other roots of $p_n$ have magnitude less than one. Then for any smooth function $F$ on $[0,1]$ we prove two term asymptotics in $L^\\infty$ of the form \\begin{equation*} \\big(\\mathscr{P}^r(F)\\big)(\\cdot)= u(\\cdot) \\int_0^1 F(x)\\: \\mathrm{d} x +\\beta^{-r}v(\\cdot) \\big (F(1)-F(0)\\big )+o(\\beta^{-r}),\\quad r\\geq 1, \\end{equation*} where $u$ is piecewise constant and $\\mathscr{P}u=u$, while $v$ is piecewise equal to a polynomial of degree one and $\\mathscr{P}v= \\beta^{-1}v$. When $\\mathscr{P}$ is restricted to functions of bounded variation $BV([0,1])$, it is known that $\\vert z \\vert\\leq \\beta^{-1}$ contains its essential spectrum. Thus the contribution coming from $v$ in the above estimate is not guaranteed if $F$ is not smooth enough. Furthermore, we show that when $\\mathscr{P}$ is restricted to $BV([0,1])$ then any $\\vert z \\vert<\\beta^{-1}$ is an eigenvalue with infinite multiplicity. Moreover, we construct a meromorphic extension of $(\\mathscr{P}-z)^{-1}$ to the domain $\\vert z \\vert>\\beta^{-1}$, where the finite rank poles are numbers $\\zeta$ with $\\beta^{-1}<\\vert \\zeta \\vert\\leq 1$ such that $\\beta\\zeta$ is a root of $p_n(z)$. If such poles $\\zeta$ other than $1$ exist, then we construct eigenvectors of $\\mathscr{P}^*$ in $BV^*$ obeying $\\mathscr{P}^*\\hat{U}=\\zeta \\hat{U}$, where $\\hat{U}(F)$ is given by series involving the values of $F$ taken in some specially chosen, finer and finer partitions of $[0,1]$. When $F$ is either a polynomial or a characteristic function like $\\chi_{[0,x]}$, then $\\hat{U}(F)$ can be explicitly computed.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.27844",
+        "pdf_url": "https://arxiv.org/pdf/2610.27844"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Beta-expansions and their transfer operators centrally connect symbolic expansion dynamics and invariant densities.",
+        "tldr": "Under the stated root condition for a finite-degree Parry polynomial, the authors obtain sharp two-term transfer-operator asymptotics for smooth observables and describe additional bounded-variation spectral structure.",
+        "problem": "Analyze iteration asymptotics and resolvents of the beta-transformation transfer operator.",
+        "main_result": "Let \\(\\beta>1\\) be the unique positive root of a degree-\\(n\\) Parry polynomial, \\(n\\geq2\\). If all other roots have modulus below one, then for smooth \\(F\\), the iterates equal \\(u\\int_0^1F(x)\\,dx+\\beta^{-r}v(F(1)-F(0))+o(\\beta^{-r})\\) in \\(L^\\infty\\), where \\(u\\) is piecewise constant with eigenvalue one and \\(v\\) piecewise linear with eigenvalue \\(\\beta^{-1}\\). On bounded variation, every \\(|z|<\\beta^{-1}\\) is an eigenvalue of infinite multiplicity. A meromorphic resolvent extension for \\(|z|>\\beta^{-1}\\) has finite-rank poles at the stated scaled polynomial roots; associated dual eigenvectors have partition-series descriptions. Smoothness is essential for the guaranteed second term.",
+        "methods": [
+          "Transfer-operator spectral analysis",
+          "Meromorphic resolvent extension",
+          "Partition-series construction of dual eigenvectors"
+        ],
+        "context": "Beta-expansion dynamics and transfer-operator spectra.",
+        "keywords": [
+          "beta-expansions",
+          "Parry polynomials",
+          "transfer operators",
+          "iteration asymptotics",
+          "bounded variation"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.27893",
+        "versioned_id": "2610.27893v1",
+        "title": "Stability and instability for particle dynamics in magnetic fields",
+        "authors": [
+          "Alberto Enciso",
+          "Daniel Peralta-Salas"
+        ],
+        "abstract": "We study zero-speed equilibria of the Newton-Lorentz equation $\\ddot x=\\dot x\\times B(x)$ in $\\mathbf{R}^3$, which describes the motion of a charged particle in a magnetic field $B$. We prove Lyapunov instability wherever the field $B$ does not vanish (under $C^1$ regularity), and at every isolated zero of $B$ provided it is real-analytic. These results do not assume that the field is divergence-free. In contrast, we construct a compactly supported divergence-free $C^\\infty$ field that is flat at an isolated zero and makes the corresponding equilibrium Lyapunov stable.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.27893",
+        "pdf_url": "https://arxiv.org/pdf/2610.27893"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is equilibrium stability of charged-particle equations in magnetic fields, without a central connection to the strongest interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.28168",
+        "versioned_id": "2610.28168v1",
+        "title": "Finiteness of planar central configurations of five bodies with positive masses",
+        "authors": [
+          "Kefeng Liu",
+          "Yangshanshan Liu"
+        ],
+        "abstract": "We prove that, for every choice of positive masses, the planar Newtonian five-body problem has finitely many central configurations up to similarity. After normalization and removal of the translation and rotation freedoms, every physical configuration is isolated in the complex solution variety. The proof combines the classification of singular sequences by Albouy and Kaloshin with a lower bound for the potential, asymptotic estimates, and local analytic reductions.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.28168",
+        "pdf_url": "https://arxiv.org/pdf/2610.28168"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is finiteness of celestial central configurations, without a central connection to the strongest interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.28247",
+        "versioned_id": "2610.28247v1",
+        "title": "Strictly convex ergodic billiards",
+        "authors": [
+          "Wentao Fan",
+          "Boris Hasselblatt"
+        ],
+        "abstract": "We produce the first known strictly convex ergodic billiards: sufficiently asymmetric lemon billiards. These billiard tables are the intersection of two circles of which one contains the centers of both. We previously proved that they have \\emph{uniformly} hyperbolic returns to a suitable section, and we here control singularity curves, with an approach that seems new. This implies ergodicity and indeed the Bernoulli property.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.28247",
+        "pdf_url": "https://arxiv.org/pdf/2610.28247"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Bernoulli properties and singularities in a hyperbolic billiard are substantial ergodic-dynamical connections.",
+        "tldr": "The authors establish ergodicity and the Bernoulli property for sufficiently asymmetric lemon billiards.",
+        "problem": "Prove ergodicity for the stated strictly convex billiard tables.",
+        "main_result": "The tables are intersections of two circles, one containing both centers. Combining previously proved uniformly hyperbolic returns with the present control of singularity curves yields ergodicity and the Bernoulli property. The precise sufficient asymmetry threshold: Not specified in the abstract.",
+        "methods": [
+          "Control of singularity curves",
+          "Previously established uniformly hyperbolic returns"
+        ],
+        "context": "Strictly convex billiards and Bernoulli dynamics.",
+        "keywords": [
+          "lemon billiards",
+          "ergodicity",
+          "Bernoulli property",
+          "singularity curves"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.28449",
+        "versioned_id": "2610.28449v1",
+        "title": "Real-analytic standard families and rotational invariant curves",
+        "authors": [
+          "Salvador Addas-Zanata"
+        ],
+        "abstract": "In this paper we study one-parameter families of exact standard maps of the form $$\\widehat{f}_{k,g}(\\widehat{x},\\widehat{y}) =\\bigl(\\widehat{x}+\\widehat{y}+kg(\\widehat{x}) \\bmod 1,\\widehat{y}+kg(\\widehat{x})\\bigr),$$ where $k$ is a real parameter and $g:\\mathbb{T} \\rightarrow \\mathbb{R}$ is real-analytic, 1-periodic and has zero mean. The most famous example is when $g(\\widehat{x})=\\frac{\\sin(2\\pi\\widehat{x})}{2\\pi}$. In this case, the closed subset $A_{\\sin(2\\pi\\cdot)/(2\\pi)}\\subset \\mathbb{R}$ of values of $k$ for which $\\widehat{f}_{k,\\sin(2\\pi\\cdot)/(2\\pi)}$ has rotational invariant curves is conjectured to be a closed interval. Much has been done towards this conjecture, both numerically and analytically. But a complete proof has not yet been achieved. Our approach here goes in the opposite direction: we construct a function $\\theta:\\mathbb{T} \\rightarrow \\mathbb{R}$ satisfying the above conditions, such that $A_{\\theta}$ is not an interval: It contains at least 2 different connected components, which are non-degenerate closed intervals.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.28449",
+        "pdf_url": "https://arxiv.org/pdf/2610.28449"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Rotational invariant curves and the topology of their parameter set connect to geometric dynamics.",
+        "tldr": "The authors construct a real-analytic standard family whose parameter set admitting rotational invariant curves has at least two nondegenerate closed-interval components.",
+        "problem": "Determine whether the invariant-curve parameter set must be an interval for general real-analytic standard families.",
+        "main_result": "The constructed forcing is real-analytic, one-periodic and zero-mean, and its invariant-curve parameter set is not an interval. It has at least two different connected components that are nondegenerate closed intervals. This does not resolve the separately stated sine-forcing interval conjecture, which the abstract says remains unproved. Construction details: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Standard-map families and rotational invariant curves.",
+        "keywords": [
+          "standard maps",
+          "rotational invariant curves",
+          "parameter components",
+          "real-analytic forcing"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.28588",
+        "versioned_id": "2610.28588v1",
+        "title": "Generic finiteness of solutions to parametrized systems of generalized polynomial inequalities",
+        "authors": [
+          "Stefan M\\\"uller"
+        ],
+        "abstract": "We study parametrized systems of $\\mathit{generalized}$ polynomial inequalities, $(c \\circ x^B) \\in C$, for a positive variable vector $x \\in \\mathbb{R}^n_>$, a $\\mathit{real}$ exponent matrix $B \\in \\mathbb{R}^{n \\times m}$, a positive parameter vector $c \\in \\mathbb{R}^m_>$, and a positive, blunt coefficient cone $C \\subset \\mathbb{R}^m_>$. This setting includes (i) generalized polynomial equations, $A \\, (c \\circ x^B) = 0$, arising e.g. from power-law dynamical systems with real exponents (and involving a real coefficient matrix $A \\in \\mathbb{R}^{n' \\times m}$), and (ii) generalized semi-algebraic sets. Our main result guarantees the generic finiteness of solutions modulo unavoidable exponential fibers. Building on a framework for parametrized $\\mathit{polynomial}$ systems developed by M\\\"uller and Regensburger, we reformulate the problem as a system of $\\mathit{binomial}$ equations on the coefficient set $P = C \\cap \\Delta \\subseteq \\mathbb{R}^m_>$, where $\\Delta$ is a product of (standard) simplices. Solvability is governed by the monomial-dependency subspace $D$. Using elementary arguments from analysis and topology, including a logarithmic boundary analysis and Sard's theorem, we control the accumulation of solutions on the boundary and in the interior of $P$. We show that, if $\\dim P \\le \\dim D$, then generically in both the measure-theoretic and topological sense, there are finitely many solutions on $P$ (and hence finitely many exponential fibers of solutions in $\\mathbb{R}^n_>$). As an application, we prove generic finiteness of steady states (within forward-invariant sets) for parametrized power-law dynamical systems with real exponents.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.AG",
+          "q-bio.MN"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.28588",
+        "pdf_url": "https://arxiv.org/pdf/2610.28588"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is algebraic finiteness of inequalities and steady states of power-law systems, without a central connection to the strongest interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.28617",
+        "versioned_id": "2610.28617v1",
+        "title": "Measures of maximal entropy for meromorphic maps on compact K\\\"ahler manifolds",
+        "authors": [
+          "Muhan Luo",
+          "Qi Zhou"
+        ],
+        "abstract": "Let $f$ be a dominant meromorphic self-map of a compact K\\\"ahler manifold. Assume that $f$ has a strictly dominant intermediate dynamical degree $\\lambda$ and that the number of isolated $n$-periodic points, counted with multiplicity, is at most $\\lambda^n+o(\\lambda^n)$. Then $f$ admits at most one adapted invariant probability measure of entropy $\\log\\lambda$. If such a measure exists, its natural extension is Bernoulli, and the isolated periodic points equidistribute towards it when counted with or without multiplicity. We apply this criterion to several classes of maps in complex dynamics, resolving longstanding open problems.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CV"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.28617",
+        "pdf_url": "https://arxiv.org/pdf/2610.28617"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Uniqueness of entropy-maximizing measures and Bernoulli natural extensions are central entropy-theoretic interests.",
+        "tldr": "Under dynamical-degree dominance and a periodic-point count bound, there is at most one adapted invariant probability measure at the stated entropy; if it exists, its natural extension is Bernoulli and isolated periodic points equidistribute.",
+        "problem": "Establish a uniqueness and periodic-equidistribution criterion for dominant meromorphic self-maps of compact Kähler manifolds.",
+        "main_result": "Assume a strictly dominant intermediate dynamical degree \\(\\lambda\\) and at most \\(\\lambda^n+o(\\lambda^n)\\) isolated periodic points of period \\(n\\), counted with multiplicity. There is at most one adapted invariant probability measure of entropy \\(\\log\\lambda\\). If it exists, its natural extension is Bernoulli, and isolated periodic points equidistribute to it with or without multiplicity. Existence is not asserted by this criterion. The definition of adaptedness and the application classes: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Meromorphic dynamics, entropy and periodic-point equidistribution.",
+        "keywords": [
+          "maximal entropy",
+          "meromorphic maps",
+          "dynamical degree",
+          "Bernoulli extension",
+          "periodic equidistribution"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.26977",
+        "versioned_id": "2610.26977v1",
+        "title": "Polynomial Spectral Gap Estimates for Finitely Differentiable Quasi-Periodic Schr\\\"odinger Operators",
+        "authors": [
+          "Ao Cai",
+          "Yang Gao",
+          "Jiawei He"
+        ],
+        "abstract": "We prove polynomial upper bounds on spectral gaps of quasi-periodic Schr\\\"odinger operators with small $C^{k}$ potentials and Diophantine frequencies. For sufficiently large $k$, the decay exponent is $k-34\\tau$, where $\\tau$ is the Diophantine exponent. We construct examples with lower bounds along infinitely many gap labels, showing that the leading coefficient $1$ of $k$ is asymptotically optimal. The proof uses quantitative reducibility and the Moser-P\\\"oschel argument.",
+        "announce_type": "cross",
+        "categories": [
+          "math.SP",
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.26977",
+        "pdf_url": "https://arxiv.org/pdf/2610.26977"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Quasiperiodic spectral theory and quantitative reducibility provide a technical connection to dynamical methods.",
+        "tldr": "The authors prove polynomial spectral-gap upper bounds for small finitely differentiable quasiperiodic potentials and exhibit asymptotic optimality of the leading regularity coefficient.",
+        "problem": "Quantify spectral-gap decay with finite potential regularity and Diophantine frequencies.",
+        "main_result": "For small \\(C^k\\) potentials and Diophantine frequencies, sufficiently large \\(k\\) gives gap-decay exponent \\(k-34\\tau\\), where \\(\\tau\\) is the Diophantine exponent. Examples give lower bounds along infinitely many gap labels, showing the leading coefficient one of \\(k\\) is asymptotically optimal. The regularity threshold and smallness constants: Not specified in the abstract.",
+        "methods": [
+          "Quantitative reducibility",
+          "Moser-Pöschel argument"
+        ],
+        "context": "Quasiperiodic Schrödinger operators and reducibility.",
+        "keywords": [
+          "spectral gaps",
+          "finite differentiability",
+          "Diophantine frequencies",
+          "reducibility"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.27640",
+        "versioned_id": "2610.27640v1",
+        "title": "A cut-and-project set which is not bi-Lipschitz equivalent to a lattice",
+        "authors": [
+          "Alan Haynes"
+        ],
+        "abstract": "We construct a cut-and-project set in a totally irrational plane in $\\mathbb{R}^3$, with a compact window which is the closure of its interior and has countable boundary, which is not bi-Lipschitz equivalent to a lattice. This answers a question of Burago and Kleiner about cut-and-project sets, and shows in particular that the hypothesis of boundary measure zero is not enough to guarantee bi-Lipschitz equivalence to a lattice. Since our set has uniform density, it also shows that a non-rectifiable Delone set need not encode a non-realisable density, answering a question of Bhat and Dymond.",
+        "announce_type": "cross",
+        "categories": [
+          "math.MG",
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.27640",
+        "pdf_url": "https://arxiv.org/pdf/2610.27640"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Cut-and-project and Delone-set geometry gives a possible connection to tiling-related geometric interests, although no dynamical system is analyzed in the abstract.",
+        "tldr": "The authors construct a uniformly dense cut-and-project set with a regular compact window and countable boundary that is not bi-Lipschitz equivalent to a lattice.",
+        "problem": "Test whether small window boundary and uniform density imply lattice rectifiability.",
+        "main_result": "The cut-and-project set lies in a totally irrational plane in \\(\\mathbb R^3\\); its compact window is the closure of its interior and has countable boundary. It is not bi-Lipschitz equivalent to a lattice, so boundary measure zero does not suffice. Its uniform density also shows nonrectifiable Delone sets need not encode nonrealisable densities. Construction methods: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Cut-and-project sets, Delone geometry and bi-Lipschitz equivalence.",
+        "keywords": [
+          "cut-and-project set",
+          "Delone set",
+          "bi-Lipschitz equivalence",
+          "uniform density"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.27842",
+        "versioned_id": "2610.27842v1",
+        "title": "Payoff Polarization and Garbage Concentration in a Stochastic Garbage Disposal Game",
+        "authors": [
+          "Hsin-Lun Li"
+        ],
+        "abstract": "We study a stochastic garbage disposal game on a finite graph in which agents transfer garbage through pairwise interactions governed by payoff-dependent Fermi probabilities. We investigate the long-term behavior of both payoffs and garbage distributions. We prove that payoff dispersion grows at least linearly in time almost surely, leading to payoff polarization, with the maximum and minimum payoffs diverging to positive and negative infinity, respectively. Moreover, the payoff range grows at least on the order of the square root of time. For garbage dynamics, we establish almost-sure concentration on a single agent in the two-agent case for any positive disposal efficiency. When disposal is complete and the underlying graph is connected, we further prove that all garbage becomes concentrated on a single agent after a finite random time, although the agent holding the garbage may change over time. These results characterize the emergence of payoff inequality and garbage concentration in stochastic competitive interactions on networks.",
+        "announce_type": "cross",
+        "categories": [
+          "math.PR",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.27842",
+        "pdf_url": "https://arxiv.org/pdf/2610.27842"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is stochastic game payoffs and garbage concentration on networks, without a central connection to the strongest interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.27978",
+        "versioned_id": "2610.27978v1",
+        "title": "Error-correction Decoding for 2D Convolutional Codes with a Generalized Viterbi Algorithm",
+        "authors": [
+          "Zita Abreu",
+          "Elisa Junghans",
+          "Julia Lieb",
+          "Raquel Pinto"
+        ],
+        "abstract": "Two-dimensional (2D) convolutional codes are a generalization of one-dimensional (1D) convolutional codes and are naturally suitable for encoding two-dimensional data. Although their theoretical properties are well established, practical applications are limited due to the lack of error-correction decoding algorithms. While the Viterbi algorithm provides an efficient decoding method for 1D convolutional codes, no analogous approach exists for the 2D case. In this paper, we introduce a decoding algorithm for 2D convolutional codes, called the 2D Viterbi algorithm, extending the principles of the classical Viterbi algorithm to the two-dimensional setting. The presented 2D Viterbi algorithm works with linear systems representations of 2D convolutional codes and its complexity depends on the dimension of the corresponding 2D linear system. Hence, we also provide several algorithms to obtain 2D realizations of small dimension.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.IT",
+          "math.DS",
+          "math.IT"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.27978",
+        "pdf_url": "https://arxiv.org/pdf/2610.27978"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is error-correction decoding and small linear-system realizations of communication codes, without a stated symbolic-dynamical result.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.27992",
+        "versioned_id": "2610.27992v1",
+        "title": "Mean-field limit and Vlasov equation for a Gaussian-thermostatted Lorentz gas",
+        "authors": [
+          "Roberto Castorrini"
+        ],
+        "abstract": "We study N particles moving in a dispersing billiard under an electric field and coupled through a Gaussian thermostat. The corresponding mean-field equation is a Vlasov-type equation with specular reflection. We reformulate the equation as a fixed point problem for the time-integrated thermostat coefficient. This yields existence of weak solutions for every absolutely continuous initial datum of finite energy and, for bounded initial densities supported on velocities that are large compared with the field, uniqueness of the weak solution; under the finite horizon assumption, the upper bound on the velocities can be replaced by an exponential tail of the initial density. In these regimes, we prove convergence of the empirical measures of the particle system to the solution of the kinetic equation. In general, convergence holds along subsequences.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.27992",
+        "pdf_url": "https://arxiv.org/pdf/2610.27992"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Empirical-measure limits for dispersing billiard particles give a measure-dynamical connection despite the kinetic-equation setting.",
+        "tldr": "The authors derive a Vlasov-type mean-field limit with specular reflection for particles coupled by a Gaussian thermostat in a dispersing billiard.",
+        "problem": "Establish weak-solution existence, conditional uniqueness and convergence of empirical particle measures.",
+        "main_result": "A fixed-point formulation for the time-integrated thermostat coefficient yields weak solutions for all absolutely continuous finite-energy initial data. Uniqueness holds for bounded initial densities supported at velocities large relative to the field. With finite horizon, the upper velocity bound can be replaced by an exponential initial-density tail. Empirical measures converge to the kinetic solution in these regimes; in general only subsequential convergence is asserted.",
+        "methods": [
+          "Fixed-point formulation for the integrated thermostat coefficient"
+        ],
+        "context": "Dispersing billiards, thermostatted particles and kinetic mean-field limits.",
+        "keywords": [
+          "Lorentz gas",
+          "Vlasov equation",
+          "empirical measures",
+          "Gaussian thermostat"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.28026",
+        "versioned_id": "2610.28026v1",
+        "title": "Half-delocalization for semiclassical measures of split higher-dimensional quantum cat maps",
+        "authors": [
+          "Vincent Ferrari-Dominguez"
+        ],
+        "abstract": "We study quantum cat maps on multidimensional tori and prove an optimal lower bound for the Kolmogorov-Sinai entropy of their semiclassical measures under the hypothesis that the dynamics splits over the rationals. This is the first instance of such a bound for a dynamical system with multiple positive Lyapunov exponents. The proof is based on a new notion of conditional quantum dynamical entropy and a careful study of the multiple Ehrenfest time adapted to the dynamics.",
+        "announce_type": "cross",
+        "categories": [
+          "math-ph",
+          "math.AP",
+          "math.DS",
+          "math.MP",
+          "math.SP"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.28026",
+        "pdf_url": "https://arxiv.org/pdf/2610.28026"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Kolmogorov-Sinai entropy bounds for semiclassical measures are directly central.",
+        "tldr": "For quantum cat maps whose dynamics splits over the rationals, the authors prove an optimal entropy lower bound for semiclassical measures.",
+        "problem": "Bound entropy of semiclassical measures for multidimensional toral quantum cat maps with multiple positive Lyapunov exponents.",
+        "main_result": "Under rational splitting of the dynamics, an optimal lower bound for Kolmogorov-Sinai entropy is established. The abstract identifies this as the first such bound in a system with multiple positive Lyapunov exponents. The numerical bound and exact splitting formulation: Not specified in the abstract.",
+        "methods": [
+          "Conditional quantum dynamical entropy",
+          "Multiple Ehrenfest times adapted to the dynamics"
+        ],
+        "context": "Quantum cat maps and measure-theoretic entropy.",
+        "keywords": [
+          "Kolmogorov-Sinai entropy",
+          "semiclassical measures",
+          "quantum cat maps",
+          "Ehrenfest times"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.28119",
+        "versioned_id": "2610.28119v1",
+        "title": "Simultaneous visibility in cut-and-project sets",
+        "authors": [
+          "Rishi Kumar",
+          "Carlos Ospina"
+        ],
+        "abstract": "Visibility from the origin in integer lattices is a well-studied problem. More recently, the corresponding question for cut-and-project sets has attracted attention. We consider simultaneous visibility, which asks what points in a set are visible from every point of another set. This question was studied for the integer lattice by Rearick and Rumsey, among others. In this work, we investigate simultaneous visibility in cut-and-project sets associated with real quadratic fields satisfying the Hammarhjelm condition. Under suitable geometric conditions on the finite set, we prove that the density of the simultaneously visible points exists and derive an explicit formula for it. We also examine simultaneous visibility in more general cut-and-project sets under a condition on the associated lattice.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.28119",
+        "pdf_url": "https://arxiv.org/pdf/2610.28119"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Visibility densities in cut-and-project sets have a possible connection to tiling-related geometry and arithmetic distribution, without an explicit dynamics theorem.",
+        "tldr": "Under stated arithmetic and geometric conditions, the authors prove existence and an explicit formula for simultaneous-visibility density in cut-and-project sets.",
+        "problem": "Determine the density of points visible from every point of a prescribed finite set.",
+        "main_result": "For cut-and-project sets from real quadratic fields satisfying the Hammarhjelm condition, suitable geometric conditions on the finite set imply the density exists and has an explicit formula. More general cut-and-project sets are also considered under an associated-lattice condition. The conditions and formula: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Arithmetic cut-and-project geometry and visibility densities.",
+        "keywords": [
+          "simultaneous visibility",
+          "cut-and-project sets",
+          "density",
+          "real quadratic fields"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.28174",
+        "versioned_id": "2610.28174v1",
+        "title": "An exact coexistence criterion for stochastic Lotka--Volterra systems with Volterra--Lyapunov stable interactions",
+        "authors": [
+          "Jorge Ramirez Osorio"
+        ],
+        "abstract": "We consider stochastic Lotka-Volterra systems $dX=\\mathrm{Diag}(X)(\\alpha+AX)dt+\\mathrm{Diag}(X)\\Gamma dB$ with nondegenerate noise and a Volterra-Lyapunov stable interaction matrix $A$, that is, $DA+A^\\top D\\prec 0$ for some positive diagonal matrix $D$. This class covers every self-limited predator-prey food web that is conservative in the sense of Volterra, in particular every such web whose interaction graph is a forest. We give a necessary and sufficient condition for invariant coexistence: the process has an invariant probability measure on $(0,\\infty)^n$, that is, a stationary distribution under which all species have positive densities, if and only if $m=-A^{-1}\\beta$ is positive, where $\\beta=\\alpha-\\frac{1}{2}\\mathrm{diag}(\\Gamma\\Gamma^\\top)$ is the vector of noise-corrected growth rates. This measure is then unique and ergodic, has mean $m$, and attracts every interior initial condition exponentially fast in total variation. Thus environmental noise affects coexistence only through the It\\^o shift $\\alpha\\mapsto\\beta$, and the criterion is the exact counterpart of the feasibility criterion for the deterministic system $\\dot x=\\mathrm{Diag}(x)(\\beta+Ax)$. Both directions rest on the fact that, for Lotka-Volterra systems, invasion rates are affine in the mean of the underlying measure. Necessity follows from an exact formula for the means of invariant measures supported on faces of the orthant. Sufficiency follows from the persistence theorem of Hening and Nguyen, for which the explicit weights $Dm$ give a stochastic counterpart of Hofbauer's average Lyapunov function, so that no enumeration of the invariant measures on the boundary is required. Applied to subcommunities, the result also characterizes every stationary regime in which some species are absent.",
+        "announce_type": "cross",
+        "categories": [
+          "math.PR",
+          "math.DS",
+          "q-bio.PE"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.28174",
+        "pdf_url": "https://arxiv.org/pdf/2610.28174"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "A unique ergodic invariant measure and exponential total-variation attraction give a substantial invariant-measure connection despite the population-model setting.",
+        "tldr": "For stochastic Lotka-Volterra systems with nondegenerate noise and Volterra-Lyapunov stable interactions, positivity of the noise-corrected equilibrium mean exactly characterizes interior invariant coexistence.",
+        "problem": "Find a necessary and sufficient criterion for an invariant probability supported on the positive orthant.",
+        "main_result": "Assume \\(DA+A^\\top D\\prec0\\) for a positive diagonal \\(D\\) and nondegenerate noise. Put \\(\\beta=\\alpha-\\tfrac12\\operatorname{diag}(\\Gamma\\Gamma^\\top)\\) and \\(m=-A^{-1}\\beta\\). An invariant probability on \\((0,\\infty)^n\\) exists exactly when \\(m\\) is positive. It is then unique and ergodic, has mean \\(m\\), and attracts every interior initial condition exponentially in total variation. Applications to subcommunities characterize stationary regimes with absent species.",
+        "methods": [
+          "Affine invasion rates in invariant-measure means",
+          "Exact means of face-supported invariant measures",
+          "Hening-Nguyen persistence theorem",
+          "Explicit stochastic Lyapunov weights"
+        ],
+        "context": "Stochastic population dynamics, persistence and invariant measures.",
+        "keywords": [
+          "invariant coexistence",
+          "Lotka-Volterra systems",
+          "ergodicity",
+          "total-variation convergence"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.28328",
+        "versioned_id": "2610.28328v1",
+        "title": "A Joint Local Limit Theorem for Prime Divisor Counting Functions",
+        "authors": [
+          "Jovan Andreevski"
+        ],
+        "abstract": "We establish a uniform two-dimensional local limit theorem for the joint distribution of $\\Omega(n)$ and $\\Omega(n+1)$. More precisely, along a set of scales of logarithmic density one, the normalized joint counts are uniformly approximated by the density of two independent Gaussian random variables, each with mean and variance $\\log\\log x$, up to a power-saving error. The proof builds upon a recent circle-method framework of Tao and Ter\\\"av\\\"ainen. Our results equally hold for the additive function $\\omega$. Additionally, we explore applications of our local limit theorem in the setting of uniquely ergodic systems.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.28328",
+        "pdf_url": "https://arxiv.org/pdf/2610.28328"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Applications in uniquely ergodic systems provide an explicit ergodic-theoretic connection to the arithmetic limit theorem.",
+        "tldr": "Along logarithmic-density-one scales, joint prime-divisor counts at consecutive integers satisfy a uniform two-dimensional local limit approximation with power-saving error.",
+        "problem": "Describe the joint local distribution of \\(\\Omega(n)\\) and \\(\\Omega(n+1)\\), and the analogous distinct-prime-divisor function.",
+        "main_result": "Along a set of scales of logarithmic density one, normalized joint counts are uniformly approximated by the density of two independent Gaussians, each with mean and variance \\(\\log\\log x\\), with power-saving error. The result also holds for \\(\\omega\\). Applications to uniquely ergodic systems are explored, but their statements and the error exponent: Not specified in the abstract.",
+        "methods": [
+          "Tao-Teräväinen circle-method framework"
+        ],
+        "context": "Prime-divisor statistics and uniquely ergodic applications.",
+        "keywords": [
+          "joint local limit theorem",
+          "prime divisor counts",
+          "logarithmic density",
+          "unique ergodicity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.28433",
+        "versioned_id": "2610.28433v1",
+        "title": "Transversality at Virtual Centers",
+        "authors": [
+          "Tao Chen",
+          "Yunping Jiang",
+          "Linda Keen"
+        ],
+        "abstract": "We consider the family of transcendental meromorphic functions with finitely many singular values, none of whose asymptotic values is infinity. We prove that transversality holds at any boundary point of a shell component in a dynamically natural slice of the parameter space at which an asymptotic value is a prepole.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CV",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.28433",
+        "pdf_url": "https://arxiv.org/pdf/2610.28433"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Parameter transversality for transcendental meromorphic dynamics is a structural complex-dynamical connection.",
+        "tldr": "The authors prove transversality at the stated shell-component boundary parameters where an asymptotic value is a prepole.",
+        "problem": "Analyze virtual-center boundary behavior in dynamically natural parameter slices.",
+        "main_result": "For transcendental meromorphic functions with finitely many singular values and no asymptotic value equal to infinity, transversality holds at any shell-component boundary point in a dynamically natural slice at which an asymptotic value is a prepole. The precise transversality formulation and methods: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Transcendental meromorphic dynamics and parameter slices.",
+        "keywords": [
+          "transversality",
+          "virtual centers",
+          "shell components",
+          "asymptotic values"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.28565",
+        "versioned_id": "2610.28565v1",
+        "title": "The Dynamics of Collapse and Recovery in Clustered Federated Learning",
+        "authors": [
+          "Priyanka Sinha",
+          "Snigdhansu Chatterjee"
+        ],
+        "abstract": "Clustered federated learning (CFL) can suffer from cluster collapse. In particular, under unfavorable initialization, early client assignments concentrate heterogeneous groups on one cluster model, which is then trained toward a pooled compromise, while another model receives no updates. Since the current models determine client routing and routing determines subsequent model updates, we formulate clustered federated learning as control of an unknown dynamical system, with cluster models as the evolving state, client routing patterns as the control input, and routing interventions as state dependent controllers. In a two group linear model, we identify an initialization region in which greedy routing makes collapse self reinforcing. We then derive finite horizon error dynamics showing how routing interventions can reverse collapse by repeatedly training the starved model, primarily with updates from its compatible group. Motivated by this condition, each client uses blocked EXP3 to choose between greedy routing and interventions that redirect updates toward unused models. Experiments show that with simpler predictors and faster specialist formation, autonomous controller selection recovers usable specialists from unfavorable starts that trap standard CFL baselines. In transformed FEMNIST, the synchronized-entry configuration with persistent commitment recovers usable specialists in settings where the autonomous controller configuration often does not. Code and scripts for reproducing the experiments and figures are available at https://github.com/prsinha1/FedRecover.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.LG",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.28565",
+        "pdf_url": "https://arxiv.org/pdf/2610.28565"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is routing controllers and cluster recovery in federated learning, without a central connection to the strongest interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2403.11406",
+        "versioned_id": "2403.11406v2",
+        "title": "Dimension formula for harmonic measures in invariant random graphs on Gromov hyperbolic spaces",
+        "authors": [
+          "Kohki Sakamoto"
+        ],
+        "abstract": "For random walks in various group-invariant random graphs on Gromov hyperbolic spaces, we show that the associated harmonic measures are exact dimensional and their Hausdorff dimensions are equal to the entropy over the speed, Our method is inspired by cluster relations introduced by Gaboriau and applies to percolation clusters on hyperbolic groups and Poisson--Voronoi tessellations on rank one Riemannian symmetric spaces.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.PR",
+          "math.DS",
+          "math.GR"
+        ],
+        "announced_at": "2026-10-21T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2403.11406",
+        "pdf_url": "https://arxiv.org/pdf/2403.11406"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Exact dimensionality, Hausdorff dimension, entropy and group-invariant random geometry are central.",
+        "tldr": "Harmonic measures of the stated random walks are exact dimensional, with Hausdorff dimension equal to entropy divided by speed.",
+        "problem": "Compute harmonic-measure dimensions for random walks on group-invariant random graphs in Gromov hyperbolic spaces.",
+        "main_result": "The dimension formula applies to the various group-invariant random graphs treated in the paper, including percolation clusters on hyperbolic groups and Poisson-Voronoi tessellations on rank-one Riemannian symmetric spaces. The exact general assumptions and definitions of entropy and speed in each setting: Not specified in the abstract.",
+        "methods": [
+          "Method inspired by Gaboriau’s cluster relations"
+        ],
+        "context": "Harmonic measures, random graphs and hyperbolic geometry.",
+        "keywords": [
+          "exact dimensionality",
+          "Hausdorff dimension",
+          "entropy over speed",
+          "harmonic measures",
+          "hyperbolic spaces"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 6,
+    "RELATED / POSSIBLY INTERESTING": 11,
+    "LOW PRIORITY": 7
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-10-21T09:58:25.377030Z",
+      "feed_published_at": "2026-10-21T00:00:00-04:00",
+      "feed_build_at": "2026-10-21T04:00:11Z",
+      "feed_date": "2026-10-21",
+      "sha256": "d4950e0e6d663f3f2192906042a3ddb802fcfa334bdca4e1785b72a8321b8197",
+      "byte_length": 50739,
+      "capture_run_url": null
+    }
+  ]
+}
