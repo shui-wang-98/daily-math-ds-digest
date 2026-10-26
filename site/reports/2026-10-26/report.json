@@ -1,0 +1,836 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-10-26",
+  "generated_at": "2026-10-26T11:10:10.541986Z",
+  "feed_build_at": "2026-10-26T04:00:12Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 20 unseen announcements: 8 HIGH PRIORITY, 8 RELATED / POSSIBLY INTERESTING, and 4 LOW PRIORITY. Central themes include entropy rigidity and flexibility, Cantor homeomorphism groups, symbolic partial rigidity, sub-action and cohomology criteria, maximal-entropy measures in homogeneous dynamics, and amenable equivalence relations. Related work concerns Banach cocycles, rational renormalization, quasiperiodic Lyapunov exponents, Hamiltonian group geometry and marked length spectra. Unstated conditions and estimates are identified explicitly, and no followed-author matches occur in the supplied input.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2610.31823",
+        "versioned_id": "2610.31823v1",
+        "title": "Higher-order asymptotic formulae for periodic orbits of 3-dimensional volume-preserving Anosov flows and the Foulon conjecture",
+        "authors": [
+          "Andrey Gogolev"
+        ],
+        "abstract": "Let $X^t$ be a volume-preserving Anosov flow of class $C^7$ on a closed $3$-manifold. We consider a sequence of periodic orbits which shadow a homoclinic loop of a fixed periodic orbit $\\gamma$, and derive higher-order asymptotic expansions for their periods $T_n$ and for the logarithms of their unstable multipliers $\\log\\lambda_n$. We give geometric interpretations of the coefficients in these expansions, in particular in terms of the Anosov cocycle (\\`a la Hurder-Katok) and the longitudinal Anosov cocycle (\\`a la Foulon-Hasselblatt), evaluated on $\\gamma$. Following the idea of De Simoi-Leguil-Vinhage-Yang, we compare these asymptotics when volume is the measure of maximal entropy. In this case, the equilibrium-state characterizations of volume and the measure of maximal entropy synchronize periods and exponents: $\\log\\lambda_n=hT_n$. Matching the coefficients of the two asymptotic expansions forces the cohomology classes of both cocycles to vanish. Then the work of Foulon-Hasselblatt on the longitudinal Anosov cocycle, together with Foulon's work on the contact case, yields the Foulon Conjecture for flows of class $C^7$: if volume is the measure of maximal entropy, then, up to a finite cover, $X^t$ is smoothly conjugate either to a constant-roof suspension of a hyperbolic automorphism of the $2$-torus or to a finite cover of the constant-speed geodesic flow on a closed hyperbolic surface.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.31823",
+        "pdf_url": "https://arxiv.org/pdf/2610.31823"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Maximal entropy, equilibrium-state characterizations and rigidity of Anosov flows directly match the central entropy profile.",
+        "tldr": "The author derives higher-order periodic-orbit asymptotics and compares their coefficients when volume is a maximal-entropy measure. This proves the stated Foulon conjecture for seven-times continuously differentiable volume-preserving Anosov flows on closed three-manifolds.",
+        "problem": "Relate periodic-orbit periods and unstable multipliers to cocycles, and use maximal entropy of volume to classify the flow.",
+        "main_result": "For a volume-preserving \\(C^7\\) Anosov flow on a closed three-manifold, periodic orbits shadowing a homoclinic loop have higher-order expansions of their periods and logarithmic unstable multipliers. When volume is the maximal-entropy measure, \\(\\log\\lambda_n=hT_n\\); coefficient matching makes the cohomology classes of both the Anosov and longitudinal Anosov cocycles vanish. Using the cited cocycle and contact results, the author obtains, up to a finite cover, smooth conjugacy either to a constant-roof suspension of a hyperbolic two-torus automorphism or to a finite cover of a constant-speed geodesic flow on a closed hyperbolic surface.",
+        "methods": [
+          "Higher-order periodic-orbit expansions around a homoclinic loop",
+          "Geometric interpretation through Anosov and longitudinal Anosov cocycles",
+          "Equilibrium-state synchronization and coefficient matching",
+          "Use of the cited Foulon--Hasselblatt and contact-case results"
+        ],
+        "context": "Entropy rigidity and periodic-orbit geometry of three-dimensional Anosov flows.",
+        "keywords": [
+          "maximal entropy",
+          "Foulon conjecture",
+          "Anosov cocycles",
+          "periodic-orbit asymptotics",
+          "equilibrium states"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.31872",
+        "versioned_id": "2610.31872v1",
+        "title": "A generalization of Gordon's Theorem to arbitrary winding number",
+        "authors": [
+          "M. Fenucci"
+        ],
+        "abstract": "We study minimizers of the Keplerian action functional with homogeneous potential of type $1/|u|^\\alpha$ on periodic loops with fixed winding number $k \\in \\mathbb{Z}\\setminus\\{0\\}$. This extends the classical theorems of Gordon and Venturelli, closing the previously open case $\\alpha \\in (1,2)$, $|k|\\geq 2$. We show that the $k$-circular solution loses local minimality below the threshold $\\alpha = 2-1/|k|^2$, and that minimizers are collision-free above $\\alpha = 2-1/|k|$. Combining these results with the existence of precessing periodic orbits in between, we obtain a full classification of the minimizer in terms of $\\alpha$ and $k$, which we also verify numerically for $k=2$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.31872",
+        "pdf_url": "https://arxiv.org/pdf/2610.31872"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Fixed winding classes connect variational periodic-orbit dynamics with topology, although the entropy and fractal themes are not central.",
+        "tldr": "The author classifies Keplerian action minimizers with arbitrary nonzero winding number and a homogeneous potential. The abstract gives thresholds for loss of circular local minimality and for collision-free minimizers, together with intermediate precessing periodic orbits.",
+        "problem": "Classify minimizers of the Keplerian action with potential \\(1/|u|^\\alpha\\) on periodic loops with fixed \\(k\\in\\mathbb Z\\setminus\\{0\\}\\).",
+        "main_result": "The result covers the previously open range \\(1<\\alpha<2\\), \\(|k|\\geq2\\). The \\(k\\)-circular solution loses local minimality below \\(\\alpha=2-1/|k|^2\\), while minimizers are collision-free above \\(\\alpha=2-1/|k|\\). Combining these facts with precessing periodic orbits between the thresholds gives a full classification, with numerical verification for \\(k=2\\). The detailed classification and endpoint behavior are not stated. Not specified in the abstract.",
+        "methods": [
+          "Variational analysis of the Keplerian action",
+          "Use of precessing periodic orbits between the stated thresholds",
+          "Numerical verification for winding number two"
+        ],
+        "context": "Periodic action minimizers, winding number and homogeneous Kepler potentials.",
+        "keywords": [
+          "Keplerian action",
+          "winding number",
+          "collision-free minimizers",
+          "precessing periodic orbits"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.31921",
+        "versioned_id": "2610.31921v1",
+        "title": "Effective Multiplicative Ergodic Theorems for Banach Space Cocycles",
+        "authors": [
+          "Adam Zaidan"
+        ],
+        "abstract": "The multiplicative ergodic theorem (MET) describes the asymptotic growth rates of $q$-volumes under the iterates of an operator cocycle, i.e., compositions of operators driven by a stationary process, organizing the underlying space into equivariant filtrations or splittings into so called Oseledets subspaces. For operator cocycles in finite dimensions, and more generally in Hilbert spaces, one can control the geometry of the Oseledets subspaces given by the MET via the convergence rates of finite-time volume growth data. This makes the MET \"effective\" for matrix and Hilbert-space operator cocycles. We extend this effective theory to cocycles of Banach-space operators, obtaining quantitative angle estimates that are new even in the finite-dimensional setting. We take a sequential approach \\`{a} la Raghunathan and Ruelle, allowing us to separate the geometric argument of the MET from measure-theoretic considerations. This permits weaker cocycle measurability hypotheses for the non-invertible and semi-invertible METs on a broad class of Banach spaces, including nonseparable ones. As an application, we establish the MET for transfer operator cocycles on $\\operatorname{BV}[0,1]$ associated with jointly measurable random Lasota-Yorke maps.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.FA"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.31921",
+        "pdf_url": "https://arxiv.org/pdf/2610.31921"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Oseledets geometry, cocycles and transfer operators provide a substantial ergodic-theory connection.",
+        "tldr": "The author extends effective multiplicative ergodic theory to Banach-space cocycles, including quantitative angle estimates. A sequential argument weakens measurability requirements and yields a transfer-operator application for random Lasota--Yorke maps.",
+        "problem": "Control Oseledets geometry using finite-time volume-growth information in Banach spaces.",
+        "main_result": "The effective theory extends from matrix and Hilbert settings to Banach operators and gives quantitative angle estimates, stated to be new even in finite dimensions. Separating geometry from measure theory allows weaker measurability assumptions for non-invertible and semi-invertible METs on a broad class including nonseparable Banach spaces. An application proves the MET for transfer-operator cocycles on \\(\\operatorname{BV}[0,1]\\) from jointly measurable random Lasota--Yorke maps. The precise estimates and Banach-space hypotheses are not given. Not specified in the abstract.",
+        "methods": [
+          "Sequential approach in the style of Raghunathan and Ruelle",
+          "Separation of geometric arguments from measure-theoretic considerations"
+        ],
+        "context": "Effective multiplicative ergodic theory and random transfer operators.",
+        "keywords": [
+          "Banach cocycles",
+          "Oseledets subspaces",
+          "angle estimates",
+          "multiplicative ergodic theorem",
+          "transfer operators"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.31939",
+        "versioned_id": "2610.31939v1",
+        "title": "Flexibility of topological entropy and factor persistence in the $C^0$-Gromov Hausdorff topology",
+        "authors": [
+          "Richard Cubas",
+          "Jorge Crisostomo"
+        ],
+        "abstract": "We prove that every surjective topological dynamical system on a compact metric space can be approximated in the $C^0$-Gromov--Hausdorff topology by homeomorphisms with any prescribed topological entropy in $[0,+\\infty]$, even when simultaneous approximation of its sets of invariant and ergodic measures is required. We also establish a rigidity result under uniform geometric bounds in a fixed dimension: for a homeomorphism of a closed, connected Riemannian manifold, topological stability in the sense of Gromov--Hausdorff guarantees its persistence as a factor of sufficiently close perturbations within the same geometric class. This persistence prevents topological entropy from decreasing and ensures that every invariant or ergodic measure of the original system admits a lift of the same type to the perturbed system.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.31939",
+        "pdf_url": "https://arxiv.org/pdf/2610.31939"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Topological entropy, invariant measures, factors and topological stability directly match the strongest interests.",
+        "tldr": "Every surjective compact metric system admits approximating homeomorphisms with any prescribed entropy in the stated Gromov--Hausdorff topology, even with simultaneous measure-set approximation. Under uniform geometry and topological stability, a contrasting factor-persistence theorem prevents entropy loss and lifts invariant and ergodic measures.",
+        "problem": "Compare entropy flexibility under Gromov--Hausdorff approximation with factor persistence in geometrically controlled classes.",
+        "main_result": "Every surjective topological system on a compact metric space can be approximated in the \\(C^0\\)-Gromov--Hausdorff topology by homeomorphisms with any prescribed entropy in \\([0,+\\infty]\\), while also approximating its invariant- and ergodic-measure sets. For a Gromov--Hausdorff topologically stable homeomorphism of a closed connected Riemannian manifold, uniform geometric bounds in a fixed dimension ensure it remains a factor of sufficiently close perturbations in the same class. Consequently entropy cannot decrease, and each original invariant or ergodic measure has a lift of the same type. The specific geometric bounds are not supplied. Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Entropy approximation, topological stability and factor maps in Gromov--Hausdorff dynamics.",
+        "keywords": [
+          "topological entropy",
+          "Gromov--Hausdorff topology",
+          "factor persistence",
+          "invariant measures",
+          "topological stability"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.31961",
+        "versioned_id": "2610.31961v1",
+        "title": "Spectrum of the basilica group and the associated real and complex 2D dynamics",
+        "authors": [
+          "Eric Bedford",
+          "Rostislav Grigorchuk",
+          "Nguyen-Bac Dang",
+          "Mikhail Lyubich"
+        ],
+        "abstract": "In this paper, we study the iteration over the real and complex loci of a specific rational map, found by Grigorchuk and Zuk. This two dimensional map arises as the renormalization map which yields the density of states measure associated with the iterated monodromy group of the Basilica Julia set. It admits two natural complex currents, and we construct their real analogs and show that they are laminar. Finally, this yields some consequences on the properties of the density of states measures and its support.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GR"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.31961",
+        "pdf_url": "https://arxiv.org/pdf/2610.31961"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Rational renormalization dynamics and the Basilica iterated monodromy group provide a substantial complex and group-related connection.",
+        "tldr": "The authors study a two-dimensional rational renormalization map associated with the Basilica group density of states. They construct real analogues of two natural complex currents and prove laminarity, with consequences for the density-of-states measure and its support.",
+        "problem": "Understand real and complex iteration of the rational renormalization map associated with the Basilica Julia-set monodromy group.",
+        "main_result": "The authors construct real analogues of the map’s two natural complex currents and show that these real analogues are laminar. This yields consequences for the density-of-states measures and their support. The map, current definitions and precise consequences are not stated. Not specified in the abstract.",
+        "methods": [
+          "Real and complex rational-map iteration",
+          "Construction of real analogues of complex currents"
+        ],
+        "context": "Basilica iterated monodromy groups, renormalization and density-of-states measures.",
+        "keywords": [
+          "Basilica group",
+          "renormalization map",
+          "laminar currents",
+          "density of states"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.32391",
+        "versioned_id": "2610.32391v1",
+        "title": "Global injectivity and real Jacobian conjecture in $\\mathbb{R}^n$",
+        "authors": [
+          "Xinhao Hu",
+          "Jaume Llibre",
+          "Yilei Tang"
+        ],
+        "abstract": "In this paper, we study the global injectivity of local diffeomorphisms in $\\mathbb{R}^n$, extending the criterions of Braun and Llibre in [{\\it Pacific J. Math.} {\\bf 333} (2024) 1--15] from the planar radial case to arbitrary dimension. Then we extend the results of Llibre and Mello in [{\\it Bull. Sci. Math.} {\\bf 213} (2026) 103889] to arbitrary dimension, obtaining two necessary and sufficient conditions for the real Jacobian conjecture in $\\mathbb{R}^n$ by qualitative theory of differential equations. Finally, using weighted Poincar\\'e compactification in $\\mathbb{R}^n$, we provide a sufficient condition for the real Jacobian conjecture.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.32391",
+        "pdf_url": "https://arxiv.org/pdf/2610.32391"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Global injectivity and compactification connect qualitative differential equations with topology, though no entropy or dimensional invariant is central.",
+        "tldr": "The authors extend global-injectivity criteria to arbitrary dimension and give two equivalent conditions for the real Jacobian conjecture. A further sufficient condition uses weighted Poincaré compactification.",
+        "problem": "Extend criteria for global injectivity of local diffeomorphisms and for the real Jacobian conjecture beyond the planar setting.",
+        "main_result": "The abstract reports higher-dimensional extensions of earlier injectivity results, two necessary and sufficient conditions for the real Jacobian conjecture in \\(\\mathbb R^n\\), and an additional sufficient condition. The criteria themselves are not stated. Not specified in the abstract.",
+        "methods": [
+          "Qualitative theory of differential equations",
+          "Weighted Poincaré compactification in arbitrary dimension"
+        ],
+        "context": "Global injectivity of local diffeomorphisms and the real Jacobian conjecture.",
+        "keywords": [
+          "global injectivity",
+          "real Jacobian conjecture",
+          "local diffeomorphisms",
+          "weighted compactification"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.32424",
+        "versioned_id": "2610.32424v1",
+        "title": "On the homeomorphism group of the Cantor set: monotone and measure preserving maps",
+        "authors": [
+          "Benjamin Vejnar"
+        ],
+        "abstract": "Let $E$ be the Cantor set, $G=\\operatorname{Homeo}(E)$, let $P\\le G$ be the group of order preserving homeomorphisms and $L\\le G$ the group of homeomorphisms preserving the Cantor--Lebesgue measure $\\lambda$. We study how $G$ is built from these two subgroups. In 2003, Glasner and Weiss stated that $G=LP=PL$. We show that this is not the case, in fact $PL$ and $LP$ are two different proper subsets of $G$. On the other hand, $PL$ is a dense $G_\\delta$ subset of $G$, the multiplication map $P\\times L\\to PL$ is a homeomorphism, and $G=PLP=LPL$. In particular, every homeomorphism of $E$ is conjugate to an element of $PL$. We classify the double cosets $PgL$ using special clopen values set. There are continuum many of them, and $PL$ is the only one which is not meager. We prove that $G$ is topologically generated by one element of $P$ and one element of $L$ and these two generators produce the Thompson's group $V$. We also show that the generic homeomorphism of $E$ is the product of a generic element of $P$ and a generic element of $L$. The equality $G=PL$ fails also if $\\lambda$ is replaced by any other full nonatomic measure.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.32424",
+        "pdf_url": "https://arxiv.org/pdf/2610.32424"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Cantor homeomorphism groups, genericity and group generation are central to topological dynamics.",
+        "tldr": "The author disproves the proposed two-factor decomposition of the Cantor homeomorphism group into order-preserving and measure-preserving subgroups. Three factors suffice, and the paper describes generic products, double cosets and topological generation.",
+        "problem": "For \\(G=\\operatorname{Homeo}(E)\\), with \\(P\\) order-preserving and \\(L\\) preserving Cantor--Lebesgue measure, determine how these subgroups build \\(G\\).",
+        "main_result": "The sets \\(PL\\) and \\(LP\\) are distinct proper subsets of \\(G\\), but \\(PL\\) is dense \\(G_\\delta\\), multiplication \\(P\\times L\\to PL\\) is a homeomorphism, and \\(G=PLP=LPL\\). Every Cantor homeomorphism is conjugate to an element of \\(PL\\). Double cosets \\(PgL\\) are classified using special clopen values sets; there are continuum many and only \\(PL\\) is nonmeager. One element of each subgroup topologically generates \\(G\\), and the two generators generate Thompson’s group \\(V\\). The author also gives a generic-product statement, and \\(G=PL\\) still fails for any full nonatomic measure replacing Cantor--Lebesgue measure.",
+        "methods": [
+          "Special clopen values sets for double-coset classification"
+        ],
+        "context": "Cantor homeomorphism groups, order, measure preservation and Baire genericity.",
+        "keywords": [
+          "Cantor homeomorphisms",
+          "measure preservation",
+          "double cosets",
+          "generic homeomorphisms",
+          "Thompson group"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.32445",
+        "versioned_id": "2610.32445v1",
+        "title": "Partial rigidity and q-additive functions",
+        "authors": [
+          "Trist\\'an Radi\\'c"
+        ],
+        "abstract": "A system $(X,\\mu, T)$ is partially rigid with constant $\\delta>0$ if there exists an incresing sequence $(n_k)$ such that $\\displaystyle \\liminf_{k \\to \\infty } \\mu(A \\cap T^{-n_k}A) \\geq \\delta \\mu(A)$ for every measurable $A \\subset X$. The partial rigidity rate is the largest constant of partial rigidity. We characterize the partial rigidity rate of subshifts arising from $q$-additive functions $\\pmod M$ in terms of quantities arising from B\\'esineau's theorem. With this, we build a family of strongly $q$-additive functions to deduce that the collection of partial rigidity rates for substitution subshifts is dense in $[0,1]$ answering a question of Donoso, Maass and the author.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.32445",
+        "pdf_url": "https://arxiv.org/pdf/2610.32445"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Partial rigidity of substitution subshifts directly matches symbolic dynamics and measure-theoretic invariants.",
+        "tldr": "The author characterizes partial rigidity rates of subshifts from modular additive functions. A family of strongly additive functions shows density of substitution-subshift rigidity rates in the unit interval.",
+        "problem": "Characterize partial rigidity rates for subshifts arising from additive digit functions and determine the range of rates for substitution subshifts.",
+        "main_result": "For subshifts from \\(q\\)-additive functions modulo \\(M\\), the rate is characterized using quantities from Bésineau’s theorem. Constructing strongly \\(q\\)-additive functions then shows that partial rigidity rates of substitution subshifts are dense in \\([0,1]\\). The explicit characterization is not provided. Not specified in the abstract.",
+        "methods": [
+          "Quantities arising from Bésineau’s theorem",
+          "Construction of strongly additive functions"
+        ],
+        "context": "Partial rigidity and substitution symbolic systems.",
+        "keywords": [
+          "partial rigidity",
+          "substitution subshifts",
+          "additive functions",
+          "rigidity rates"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.32484",
+        "versioned_id": "2610.32484v1",
+        "title": "The convergence-divergence criterion for the Ma\\~n\\'e cohomology lemma and Liv\\v{s}ic theorem",
+        "authors": [
+          "Oliver Jenkinson",
+          "Yiwei Zhang",
+          "Hang Zhao"
+        ],
+        "abstract": "We establish a new dynamical convergence-divergence criterion for the existence of Lipschitz functions with continuous sub-actions, over general dynamical systems. This unifies and generalises various versions of the Ma\\~n\\'e cohomology lemma, in the setting of uniformly expanding maps, and systems with indifferent fixed points. One consequence is that for any compact metric space $(X,\\rho)$, and Lipschitz Ruelle-expanding map $T:X\\to X$, a metric transform $\\omega$ satisfies Dini's criterion $\\int_0 \\omega(s)s^{-1}\\, ds <\\infty$ if and only if every function that is Lipschitz for $\\omega\\circ\\rho$ has a continuous sub-action. Another consequence is that if $T$ is an expanding circle map of Manneville-Pomeau type $\\alpha\\in(0,1)$, then $\\omega$ satisfies the convergence criterion $\\int_0 \\omega(s)s^{-1-\\alpha}\\, ds <\\infty$ if and only if every function that is Lipschitz for $\\omega\\circ\\rho$ has a continuous sub-action. For the latter class of maps $T$, with $\\omega$ satisfying the convergence criterion, we prove a Liv\\v{s}ic theorem for functions that are Lipschitz for $\\omega\\circ\\rho$: if $\\int f\\, d\\mu=0$ for all invariant measures $\\mu$, then there exists a continuous function $\\varphi$ such that $f=\\varphi\\circ T-\\varphi$, where $\\varphi$ is Lipschitz with respect to $D_\\alpha(\\omega)\\circ\\rho$, and $D_\\alpha(\\omega)(t)= \\int_0^t \\omega(s)s^{-1-\\alpha} ds$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.32484",
+        "pdf_url": "https://arxiv.org/pdf/2610.32484"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Continuous sub-actions and cohomology criteria connect ergodic optimization, regularity and invariant measures.",
+        "tldr": "The authors give convergence-divergence tests for continuous sub-actions, including sharp integral criteria for expanding and intermittent maps. Under the intermittent convergence condition, they prove a Livšic theorem with an explicit transformed regularity for the transfer function.",
+        "problem": "Characterize when metric-transformed Lipschitz observables admit continuous sub-actions, and when they are continuous coboundaries.",
+        "main_result": "For a Lipschitz Ruelle-expanding map on a compact metric space \\((X,\\rho)\\), a metric transform \\(\\omega\\) obeys \\(\\int_0\\omega(s)s^{-1}\\,ds<\\infty\\) exactly when every \\(\\omega\\circ\\rho\\)-Lipschitz function has a continuous sub-action. For a Manneville--Pomeau-type expanding circle map with \\(0<\\alpha<1\\), the corresponding criterion is \\(\\int_0\\omega(s)s^{-1-\\alpha}\\,ds<\\infty\\). Under this latter condition, such an observable with zero integral for every invariant measure satisfies \\(f=\\varphi\\circ T-\\varphi\\), where \\(\\varphi\\) is Lipschitz for \\(D_\\alpha(\\omega)\\circ\\rho\\) and \\(D_\\alpha(\\omega)(t)=\\int_0^t\\omega(s)s^{-1-\\alpha}\\,ds\\).",
+        "methods": [
+          "Dynamical convergence-divergence criterion unifying cohomology lemmas"
+        ],
+        "context": "Mañé sub-actions, Livšic cohomology and intermittent expanding dynamics.",
+        "keywords": [
+          "continuous sub-actions",
+          "Livšic theorem",
+          "Dini criterion",
+          "intermittent maps",
+          "cohomology"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.32623",
+        "versioned_id": "2610.32623v1",
+        "title": "Energy Discontinuity of the Lyapunov Exponent for Quasiperiodic Schr\\\"odinger Operators with Gevrey Potentials",
+        "authors": [
+          "Jiahao Xu",
+          "Shuo Zhang"
+        ],
+        "abstract": "We construct quasiperiodic Schr\\\"odinger operators with Gevrey potentials for which the Lyapunov exponent is discontinuous in the spectral energy. More precisely, let \\(\\alpha\\in\\R\\setminus\\mathbb Q\\) satisfy the Diophantine condition \\(\\|k\\alpha\\|_{\\T}\\geq\\gamma |k|^{-\\tau}\\) for all \\(k\\in\\Z\\setminus\\{0\\}\\), with \\(\\gamma>0\\) and \\(\\tau\\geq1\\). For every Gevrey index \\(\\mathfrak s>1+\\tau\\) and every sufficiently large coupling \\(\\lambda\\), we construct a real-valued potential \\(v_\\lambda\\in G^{\\mathfrak s}(\\T,\\R)\\) and a sequence of energies \\(E_j\\downarrow0\\) such that \\[ L_{v_\\lambda}(0)\\geq(1-\\varepsilon_\\lambda)\\log\\lambda, \\qquad \\sup_{j\\geq1} L_{v_\\lambda}(E_j)\\leq(1-c_*)\\log\\lambda, \\] where \\(L_{v_\\lambda}(E)\\) denotes the Lyapunov exponent of the Schr\\\"odinger operator with potential \\(\\lambda v_\\lambda\\), \\(c_*>0\\) is an absolute constant, and \\(\\varepsilon_\\lambda\\to0\\) as \\(\\lambda\\to\\infty\\). For bounded-type frequencies (\\(\\tau=1\\)), the regularity range \\(\\mathfrak s>2\\) is sharp up to the endpoint \\(\\mathfrak s=2\\), since the Lyapunov exponent is known to be continuous in energy for \\(1<\\mathfrak s<2\\).",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.32623",
+        "pdf_url": "https://arxiv.org/pdf/2610.32623"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Lyapunov exponents and quasiperiodic operator cocycles provide a substantial ergodic and spectral-dynamics connection.",
+        "tldr": "The authors construct Gevrey quasiperiodic Schrödinger potentials whose Lyapunov exponents are discontinuous in energy. They give quantitative separation near zero under Diophantine-frequency and large-coupling assumptions.",
+        "problem": "Construct energy discontinuity of the Lyapunov exponent in specified Gevrey regularity classes.",
+        "main_result": "Assume \\(\\|k\\alpha\\|_{\\mathbb T}\\geq\\gamma|k|^{-\\tau}\\) for every nonzero integer \\(k\\), with \\(\\gamma>0\\) and \\(\\tau\\geq1\\). For every \\(\\mathfrak s>1+\\tau\\) and sufficiently large \\(\\lambda\\), a real potential \\(v_\\lambda\\in G^{\\mathfrak s}\\) and energies \\(E_j\\downarrow0\\) satisfy \\(L_{v_\\lambda}(0)\\geq(1-\\varepsilon_\\lambda)\\log\\lambda\\) and \\(\\sup_jL_{v_\\lambda}(E_j)\\leq(1-c_*)\\log\\lambda\\), with absolute \\(c_*>0\\) and \\(\\varepsilon_\\lambda\\to0\\). Here the operator potential is \\(\\lambda v_\\lambda\\). For bounded-type frequencies the stated range above two is sharp up to the endpoint; no endpoint conclusion is asserted.",
+        "methods": [
+          "Construction of Gevrey potentials and an energy sequence; further proof methods are not stated"
+        ],
+        "context": "Energy regularity of Lyapunov exponents for quasiperiodic Schrödinger operators.",
+        "keywords": [
+          "Lyapunov exponent",
+          "Gevrey potentials",
+          "Diophantine frequencies",
+          "energy discontinuity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.32739",
+        "versioned_id": "2610.32739v1",
+        "title": "Bistability with equal and independent removal in small bimolecular networks",
+        "authors": [
+          "Bo Peng"
+        ],
+        "abstract": "We classify two-species mass-action networks with at most three internal directed reactions on $\\{X,Y,2X,X+Y,2Y\\}$, positive inflows, and linear removal of both species. Among the 681 networks up to species exchange, exactly 27 admit two distinct positive hyperbolic attracting equilibria. The same 27 admit bistability with equal removal rates and with independently chosen positive removal rates. Each is minimal under reaction deletion. We give rational equal-removal witnesses for all positive cases and all-parameter exclusions for the remaining 654. The proof combines nullcline geometry, polynomial sign tests, resultant root bounds, and exact flux-cone decompositions. A separate rational-arithmetic implementation verifies the complete classification and its equilibrium certificates.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.32739",
+        "pdf_url": "https://arxiv.org/pdf/2610.32739"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "This is a finite chemical-network bistability classification, without a central entropy, fractal, symbolic or group-action theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.32751",
+        "versioned_id": "2610.32751v1",
+        "title": "Finiteness of Dziobek central configurations in the Newtonian five-body problem",
+        "authors": [
+          "Kefeng Liu",
+          "Yangshanshan Liu"
+        ],
+        "abstract": "We prove that, for any five fixed strictly positive masses, the Newtonian central configurations of exact affine dimension three form finitely many similarity classes. The proof uses the Dziobek equations, two constant identities, and local analysis of zeros and poles on a compact complex curve.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.32751",
+        "pdf_url": "https://arxiv.org/pdf/2610.32751"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is finiteness of specific celestial-mechanics configurations; affine dimension here is not fractal dimension theory.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.32814",
+        "versioned_id": "2610.32814v1",
+        "title": "Large deviations and applications in homogeneous dynamics",
+        "authors": [
+          "Taehyeong Kim",
+          "Ron Mor"
+        ],
+        "abstract": "We consider the left translation action of an element $a$ on a finite-volume semisimple homogeneous space $G/\\Gamma$, where $\\operatorname{Ad}(a)$ is diagonalizable over $\\mathbb{R}$. Assuming exponential mixing, we prove a sub-Gaussian large-deviation estimate for compactly supported smooth test functions. As an application, we prove effective uniqueness of the measure of maximal entropy. We also obtain quantitative pointwise equidistribution for Haar-almost every point on each full expanding horosphere.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.32814",
+        "pdf_url": "https://arxiv.org/pdf/2610.32814"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Effective uniqueness of maximal-entropy measures is central, with an explicit homogeneous group-action setting.",
+        "tldr": "Assuming exponential mixing, the authors prove sub-Gaussian large deviations for a diagonalizable homogeneous translation. Applications give effective uniqueness of maximal entropy and quantitative almost-everywhere equidistribution on each full expanding horosphere.",
+        "problem": "Obtain large deviations and effective entropy and equidistribution consequences for homogeneous translations.",
+        "main_result": "On a finite-volume semisimple space \\(G/\\Gamma\\), let \\(a\\) act by left translation with \\(\\operatorname{Ad}(a)\\) diagonalizable over \\(\\mathbb R\\). Under exponential mixing, compactly supported smooth observables satisfy a sub-Gaussian large-deviation estimate. The authors deduce effective uniqueness of the maximal-entropy measure and quantitative pointwise equidistribution for Haar-almost every point on each full expanding horosphere. Exact estimates and rates are not stated. Not specified in the abstract.",
+        "methods": [
+          "Sub-Gaussian large-deviation estimates under exponential mixing"
+        ],
+        "context": "Homogeneous dynamics, maximal entropy and horospherical equidistribution.",
+        "keywords": [
+          "large deviations",
+          "maximal-entropy measure",
+          "homogeneous translations",
+          "exponential mixing",
+          "horospheres"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.32820",
+        "versioned_id": "2610.32820v1",
+        "title": "Pesin's entropy formula on attractors with continuous invariant splittings",
+        "authors": [
+          "Xinyu Bai",
+          "Wanshan Lin",
+          "Xueting Tian"
+        ],
+        "abstract": "Under quantitative asymptotic hyperbolicity assumptions, we prove the existence of hyperbolic ergodic invariant probability measures satisfying Pesin's entropy formula for $C^1$ diffeomorphisms whose attractors admit extendable continuous invariant splittings. No dominated splitting is required on the attractor. For $C^{1+\\alpha}$ diffeomorphisms, the resulting measures are SRB measures. Our results apply to mostly expanding partially hyperbolic systems and to systems with strictly separated Lyapunov exponents under suitable statistical assumptions. We also construct examples with hyperbolic SRB measures of full support on attractors admitting no nontrivial dominated splitting, demonstrating the applicability of our criteria beyond results that require domination.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.32820",
+        "pdf_url": "https://arxiv.org/pdf/2610.32820"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Pesin’s entropy formula and invariant measures on attractors directly match entropy and measure-theoretic dynamics.",
+        "tldr": "Under quantitative asymptotic hyperbolicity, the authors obtain hyperbolic ergodic measures satisfying Pesin’s formula on attractors with extendable continuous invariant splittings. Domination is unnecessary, and higher regularity gives SRB measures.",
+        "problem": "Produce entropy-formula measures without requiring a dominated splitting on the attractor.",
+        "main_result": "For \\(C^1\\) diffeomorphisms with attractors admitting extendable continuous invariant splittings, quantitative asymptotic hyperbolicity yields hyperbolic ergodic invariant probability measures satisfying Pesin’s formula. For \\(C^{1+\\alpha}\\) maps these are SRB measures. Applications include mostly expanding partially hyperbolic systems and separated Lyapunov exponents under suitable statistical assumptions. Examples have full-support hyperbolic SRB measures on attractors with no nontrivial dominated splitting. The quantitative and statistical assumptions are not detailed. Not specified in the abstract.",
+        "methods": [
+          "Quantitative asymptotic hyperbolicity criteria",
+          "Construction of examples without nontrivial dominated splitting"
+        ],
+        "context": "Entropy-formula measures and SRB measures beyond domination.",
+        "keywords": [
+          "Pesin entropy formula",
+          "continuous invariant splittings",
+          "SRB measures",
+          "asymptotic hyperbolicity",
+          "attractors"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.31940",
+        "versioned_id": "2610.31940v1",
+        "title": "The space of equators has infinite Hofer's diameter",
+        "authors": [
+          "Leonid Polterovich",
+          "Egor Shelukhin"
+        ],
+        "abstract": "We settle several questions about Hofer's geometry of the two-sphere. We prove that the space of equators has infinite Hofer diameter, construct simple commutators of arbitrarily large Hofer norm, and exhibit a Hamiltonian diffeomorphism whose iterates escape to infinity in Hofer distance from the set of autonomous diffeomorphisms. Finally, we construct a bi-Lipschitz group monomorphism from the free group of rank two, equipped with its conjugation-invariant generator norm, into the Hamiltonian group equipped with Hofer's metric. The proof rests on an interplay between Lagrangian Floer theory in the fourth symmetric product of the sphere and combinatorial group theory. This paper was written with substantial assistance from AI.",
+        "announce_type": "cross",
+        "categories": [
+          "math.SG",
+          "math.DS",
+          "math.GT"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.31940",
+        "pdf_url": "https://arxiv.org/pdf/2610.31940"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Hamiltonian group geometry and a metric free-group embedding give substantial connections to groups and smooth dynamics.",
+        "tldr": "The authors prove unboundedness results in Hofer geometry of the two-sphere. They also embed a rank-two free group bi-Lipschitzly into the Hamiltonian group with the stated metrics.",
+        "problem": "Determine large-scale Hofer geometry of equators, commutators and distance from autonomous diffeomorphisms.",
+        "main_result": "The equator space has infinite Hofer diameter; simple commutators have arbitrarily large Hofer norm; and one Hamiltonian diffeomorphism has iterates escaping to infinite Hofer distance from the autonomous set. A bi-Lipschitz group monomorphism embeds the rank-two free group with conjugation-invariant generator norm into the Hamiltonian group with Hofer metric. Quantitative constants are not given. Not specified in the abstract.",
+        "methods": [
+          "Lagrangian Floer theory in the fourth symmetric product of the sphere",
+          "Combinatorial group theory"
+        ],
+        "context": "Hofer geometry of the sphere and Hamiltonian groups.",
+        "keywords": [
+          "Hofer diameter",
+          "Hamiltonian diffeomorphisms",
+          "free-group embedding",
+          "Lagrangian Floer theory"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.32038",
+        "versioned_id": "2610.32038v1",
+        "title": "Amenable subrelations of treeable equivalence relations and applications to anti-treeability",
+        "authors": [
+          "Anush Tserunyan",
+          "Robin Tucker-Drob"
+        ],
+        "abstract": "We study the structure of amenable subrelations of treeable measure-class-preserving equivalence relations, applying the Radon--Nikodym topography perspective initiated in our companion paper [TTD25]. For a nowhere smooth amenable subrelation, we show that the ends selected by each class in Adams's end selection theorem are precisely those which are nonvanishing along that class. From this, we derive a number of structure results about nowhere smooth amenable subrelations of treeable equivalence relations. For example, we show that every nowhere smooth amenable subrelation is contained in an essentially unique maximal amenable subrelation. This yields an anti-treeability criterion, which we use to show that every nonamenable locally compact second countable group with noncompact amenable radical is not treeable, and that every nonamenable nonunimodular treeable group has a compact open subgroup.",
+        "announce_type": "cross",
+        "categories": [
+          "math.LO",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.32038",
+        "pdf_url": "https://arxiv.org/pdf/2610.32038"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Amenability, equivalence relations and treeability directly connect to the profile of group-related dynamics.",
+        "tldr": "The authors identify selected ends of amenable subrelations through nonvanishing Radon--Nikodym topography. This yields essentially unique maximal amenable extensions and group anti-treeability consequences.",
+        "problem": "Describe nowhere smooth amenable subrelations of treeable measure-class-preserving equivalence relations.",
+        "main_result": "For a nowhere smooth amenable subrelation, the ends selected in Adams’s theorem are exactly those nonvanishing along its classes. Every such subrelation lies in an essentially unique maximal amenable subrelation. The resulting criterion shows that a nonamenable locally compact second countable group with noncompact amenable radical is not treeable, while a nonamenable nonunimodular treeable group has a compact open subgroup. The anti-treeability criterion itself is not stated. Not specified in the abstract.",
+        "methods": [
+          "Radon--Nikodym topography",
+          "Identification of Adams-selected ends with nonvanishing ends"
+        ],
+        "context": "Amenable subrelations, measured equivalence relations and group treeability.",
+        "keywords": [
+          "amenable subrelations",
+          "treeable equivalence relations",
+          "Radon--Nikodym topography",
+          "anti-treeability"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.32306",
+        "versioned_id": "2610.32306v1",
+        "title": "Dynamics of a Harvested Predator-Prey Model with a Generalized Holling Type~III Response Capturing Group Defense",
+        "authors": [
+          "Wael El Khateeb",
+          "Farjana Akter",
+          "Chanaka Kottegoda",
+          "Muner Mustafa Abou Hasan"
+        ],
+        "abstract": "We investigate a predator-prey model with constant prey harvesting and a generalized Holling type III functional response, focusing on the biological and dynamical consequences of allowing the parameter $b$ to be negative. In this regime, predation efficiency declines at high prey densities, potentially reflecting group defense. This change permits an additional coexistence equilibrium and introduces new bifurcation mechanisms affecting population persistence. We establish the existence of a codimension-three Bogdanov--Takens bifurcation, derive a codimension-three nilpotent-saddle unfolding, and investigate a codimension-two generalized Hopf bifurcation and the emergence of multiple limit cycles. Our analysis show that moderate harvesting weakens the protection conferred by high prey abundance; excessive harvesting leaves too few prey to sustain predator growth; and low harvesting preserves strong group defense, requiring high predator density for population persistence.",
+        "announce_type": "cross",
+        "categories": [
+          "q-bio.PE",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.32306",
+        "pdf_url": "https://arxiv.org/pdf/2610.32306"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "This is a harvested biological predator-prey bifurcation model, without a central connection to the strongest profile themes.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.32489",
+        "versioned_id": "2610.32489v1",
+        "title": "Marked length spectrum and area of surfaces with Anosov geodesic flow",
+        "authors": [
+          "Marcos Cossarini",
+          "St\\'ephane Sabourau"
+        ],
+        "abstract": "More than twenty years ago, Croke and Dairbekov showed that a negatively curved metric $g_0$ on a closed surface has minimal area among all negatively curved Riemannian metrics $g$ on the same surface whose marked length spectrum is greater or equal to that of $g_0$. We show that the curvature assumption on the second metric can be removed and extend this result to reversible Finsler metrics. More precisely, we prove that a reversible Finsler metric $F_0$ on a closed surface whose geodesic flow is Anosov has minimal area among all reversible Finsler metrics $F$ on the same surface whose marked length spectrum is greater or equal to that of $F_0$.",
+        "announce_type": "cross",
+        "categories": [
+          "math.DG",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.32489",
+        "pdf_url": "https://arxiv.org/pdf/2610.32489"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Marked-length comparisons for Anosov geodesic flows give a clear hyperbolic and rigidity-related connection.",
+        "tldr": "The authors prove area minimality for a reversible Finsler metric with Anosov geodesic flow under marked-length-spectrum domination. The comparison metric needs no curvature assumption.",
+        "problem": "Extend marked-length-spectrum area comparisons beyond negatively curved Riemannian metrics.",
+        "main_result": "For a reversible Finsler metric \\(F_0\\) on a closed surface with Anosov geodesic flow, every reversible Finsler metric \\(F\\) on the same surface whose marked length spectrum dominates that of \\(F_0\\) has area at least that of \\(F_0\\). The proof method and any equality characterization are not given. Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Anosov geodesic flows, marked length spectra and Finsler area comparison.",
+        "keywords": [
+          "marked length spectrum",
+          "Anosov geodesic flow",
+          "Finsler metrics",
+          "area minimality"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.32723",
+        "versioned_id": "2610.32723v1",
+        "title": "Counting curves with bounded intersection",
+        "authors": [
+          "Hugo Parlier"
+        ],
+        "abstract": "This paper counts curves, and multicurves, on hyperbolic surfaces, providing explicit upper bounds that depend polynomially on length and exponentially in terms of an upper bound on self-intersection.",
+        "announce_type": "cross",
+        "categories": [
+          "math.GT",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.32723",
+        "pdf_url": "https://arxiv.org/pdf/2610.32723"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Curve counting on hyperbolic surfaces offers an indirect geometric connection; the abstract does not specify a dynamical application.",
+        "tldr": "The author gives explicit upper bounds for counts of curves and multicurves on hyperbolic surfaces, polynomial in length and exponential in a bound on self-intersection.",
+        "problem": "Count curves and multicurves subject to length and self-intersection restrictions on hyperbolic surfaces.",
+        "main_result": "The stated upper bounds depend polynomially on length and exponentially on an upper bound for self-intersection. The polynomial degree, constants and precise curve conventions are not specified. Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Quantitative curve and multicurve counting on hyperbolic surfaces.",
+        "keywords": [
+          "curve counting",
+          "hyperbolic surfaces",
+          "self-intersection",
+          "length bounds"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.32917",
+        "versioned_id": "2610.32917v1",
+        "title": "Stationary bistable fronts on a periodic necklace graph: existence, stability and multiplicity",
+        "authors": [
+          "Yoichiro Mori",
+          "Toshiyuki Ogawa",
+          "Chanoknun Sintavanuruk"
+        ],
+        "abstract": "We study stationary fronts for a bistable reaction-diffusion equation with the McKean reaction on a periodic necklace metric graph. For profiles that agree on each pair of parallel edges, the problem reduces to a scalar equation on the real line with a periodic, piecewise constant diffusion coefficient. The diffusion contrast of the necklace is not small, so the coefficient cannot be treated as a small perturbation of a constant. Because the McKean reaction is piecewise linear, the equation is affine between threshold crossings and coefficient interfaces, and a front is determined explicitly by its crossing points. We find an explicit interval of reaction thresholds, the pinning interval, such that stationary fronts, monotone or not, exist exactly for thresholds in this interval. Up to translations by the spatial period, there are exactly two decreasing fronts at each interior threshold and one front at each endpoint. For each fixed interior threshold, one decreasing front is Lyapunov stable and the other is unstable in the $W^{1,\\infty}(\\mathbb{R})$ norm, among mild solutions with one continuously moving threshold crossing. The crossing phases of the two decreasing fronts also determine nonmonotone fronts. For each interior threshold and odd $m\\geq3$, choose $m$ periods of the coefficient that are sufficiently far apart. There are then exactly $2^m$ fronts with one threshold crossing in each chosen period and none elsewhere. Varying the chosen periods gives infinitely many inequivalent fronts with $m$ crossings.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-26T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.32917",
+        "pdf_url": "https://arxiv.org/pdf/2610.32917"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is reaction-diffusion front existence and stability on a specific metric graph, without a central entropy, fractal or symbolic theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 8,
+    "RELATED / POSSIBLY INTERESTING": 8,
+    "LOW PRIORITY": 4
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-10-26T11:06:27.885845Z",
+      "feed_published_at": "2026-10-26T00:00:00-04:00",
+      "feed_build_at": "2026-10-26T04:00:12Z",
+      "feed_date": "2026-10-26",
+      "sha256": "a8d0afbbd23837d301d17f6994138dd5eab35e9db6feefcea285155265914101",
+      "byte_length": 46482,
+      "capture_run_url": null
+    }
+  ]
+}
