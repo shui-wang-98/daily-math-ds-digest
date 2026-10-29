@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "source_url": "https://rss.arxiv.org/rss/math.DS",
+  "category": "math.DS",
+  "fetched_at": "2026-10-29T10:57:17.643392Z",
+  "feed_published_at": "2026-10-29T00:00:00-04:00",
+  "feed_build_at": "2026-10-29T04:00:04Z",
+  "feed_date": "2026-10-29",
+  "sha256": "4c9e72c3a83c45e1e9030b313340917b4190ae8a03547a955f037d012975b674",
+  "byte_length": 900,
+  "capture_run_url": null
+}
