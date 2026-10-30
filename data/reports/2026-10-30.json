@@ -1,0 +1,1497 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-10-30",
+  "generated_at": "2026-10-30T11:02:53.207322Z",
+  "feed_build_at": "2026-10-30T06:39:20Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 37 unseen announcements: 10 HIGH PRIORITY, 15 RELATED / POSSIBLY INTERESTING, and 12 LOW PRIORITY. Central themes include interval entropy spectra, slow entropy of homogeneous actions and Smale subsystems, tiling cocycles, measured group actions, nonadditive pressure, and fractal connectedness and restricted-digit recurrence. Related work concerns hyperbolic stable sets, return statistics, rational and arithmetic dynamics, localization, boundary measures and computational or Markov descriptions of dynamics. No followed-author matches occur in the supplied input; conditional statements, numerical estimates and unspecified hypotheses retain their stated scope.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2610.37730",
+        "versioned_id": "2610.37730v1",
+        "title": "Nonlinear springs with orbits in radicals: a solvability criterion",
+        "authors": [
+          "Unnikrishna Pillai"
+        ],
+        "abstract": "An odd polynomial oscillator has a periodic orbit given by a quadrature. When the zeros of the energy polynomial are all simple or all of even multiplicity, that quadrature is elementary exactly when the polynomial is a perfect square, and the time is a sum of inverse tangents. Recovering the displacement inverts that relation, algebraic when their coefficients are commensurate, making a closed form a Galois question. This paper identifies the group as the monodromy group of a rational map, computes its branch data from the parameters, and shows the branch value at the phase-angle singularity never vanishes, so every decomposition pairs the amplitudes reciprocally. In the commensurate family with distinct real factors, the orbit is radical exactly when the primitive inversion degree is at most four, or when reciprocal pairs leave a reduced spring of that degree. Radical orbits occur at the fifth, ninth, thirteenth and seventeenth force orders, the last only for reciprocal members, an expression recorded for each. The multiplicity hypothesis cannot be dropped. Factoring the energy polynomial into square and squarefree parts turns the quadrature into a differential of the third kind on a hyperelliptic curve, where elementarity is a torsion condition on the divisor of its poles with a vanishing holomorphic remainder. The first nonsquare elementary member appears at the ninth force order, and the power pullback inverts in closed form at every such order, giving a radical orbit for a confining spring of arbitrarily high degree with a sufficient condition for positive coefficients.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.37730",
+        "pdf_url": "https://arxiv.org/pdf/2610.37730"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Explicit solvability of polynomial oscillators is central, without a stated connection to the strongest profile themes.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.37990",
+        "versioned_id": "2610.37990v1",
+        "title": "Symmetry-resolved periods in a cyclic-dominance automaton: separating intrinsic from lattice-induced periodicity",
+        "authors": [
+          "Francisco J. Mu\\~noz",
+          "Juan Carlos Nu\\~no"
+        ],
+        "abstract": "Periodic attractors of spatially extended systems possess not one period but a hierarchy of periods, one for each level of observation and symmetry quotient, and this hierarchy separates how a pattern evolves from how it fits the finite domain. For a synchronous threshold model of cyclic dominance on an $L\\times L$ torus, equivalent to the three-color cyclic cellular automaton of Fisch, Gravner and Griffeath, we measure for every attractor a \\emph{tuple} of periods: that of the populations ($\\Tpop$), of the full configuration ($\\Tst$), and of the configuration up to color rotations ($\\Tcol$), lattice symmetries ($\\Tgeo$) and the full space--color group ($\\TG$). Equivariance implies exact divisibility relations and the factorization $\\Tst=\\TG\\,m$, where $m$ counts the applications of the symmetry $h$ that maps the configuration onto itself after $\\TG$ steps: $\\TG$ and the type of $h$ belong to the pattern, $m$ to the lattice, and the attractors are relative periodic orbits whose full period emerges from the interaction between the intrinsic dynamics and the lattice symmetries. A family of attractors built around a pair of counter-rotating spirals, with $\\Tpop=24$ and $\\TG=8$, persists from $L=9$ to $L=40$ while $\\Tst$ takes values from 24 to 960, given in every case by the order of $h$; on a rectangular $9\\times12$ torus it takes the value 48, absent from all square tori. With more than $4.5\\times10^5$ runs at each of $L=8$ and $L=9$ we estimate the basins of attraction: fixed points take 95--97\\% of the configuration space, and no single period is enough to tell the oscillating attractors apart. The same analysis locates local diversity: it is balanced whenever the cycle has a color symmetry and, on large lattices, it is concentrated at the spiral cores.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "cond-mat.stat-mech",
+          "nlin.PS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.37990",
+        "pdf_url": "https://arxiv.org/pdf/2610.37990"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Cellular automaton dynamics and symmetry-group quotients directly connect to symbolic and group-action interests.",
+        "tldr": "The authors separate intrinsic periodicity from lattice-induced periodicity using a hierarchy of symmetry-resolved periods in a three-color cyclic cellular automaton.",
+        "problem": "Distinguish periods of populations, configurations and symmetry quotients for a synchronous threshold cyclic-dominance model on finite tori.",
+        "main_result": "Equivariance gives exact divisibility relations and factors the full period into the full-group quotient period and the order of a returning symmetry. A counter-rotating spiral family has population period 24 and full-group quotient period 8 across square sizes 9 through 40, while full periods range from 24 to 960; a rectangular torus gives period 48. More than 450,000 runs at each of sizes 8 and 9 estimate fixed-point basins at 95–97 percent; these basin proportions are computational estimates.",
+        "methods": [
+          "Symmetry quotients and equivariance.",
+          "Numerical attractor-period measurements and basin estimation."
+        ],
+        "context": "Finite cellular automata, relative periodic orbits and lattice symmetries.",
+        "keywords": [
+          "cellular automata",
+          "symmetry quotients",
+          "relative periodic orbits",
+          "cyclic dominance"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.38099",
+        "versioned_id": "2610.38099v1",
+        "title": "Strong stable sets and asymptotic fineness",
+        "authors": [
+          "Sergi Burniol Clotet",
+          "Fran\\c{c}oise Dal'Bo"
+        ],
+        "abstract": "We investigate the strong stable sets of the geodesic flow on hyperbolic surfaces and their relation to the injectivity radius. We prove that the strong stable set of a vector does not coincide with its stable horocycle if and only if the injectivity radius along the associated geodesic ray is not bounded away from zero and the ray does not diverge through a cusp. In that case, the strong stable set is an uncountable union of stable horocycles. In previous works, we considered the particular cases where the ray meets arbitrarily short closed geodesics or closed horocycles. Here we complete the study by treating the third possible case, where the ray meets closed hypercycles of arbitrarily small length.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.38099",
+        "pdf_url": "https://arxiv.org/pdf/2610.38099"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Stable sets and horocycle geometry provide a substantial hyperbolic-dynamics connection.",
+        "tldr": "For geodesic flows on hyperbolic surfaces, the authors characterize when a strong stable set exceeds its stable horocycle using injectivity-radius behavior.",
+        "problem": "Relate the strong stable set of a vector to its stable horocycle along the associated geodesic ray.",
+        "main_result": "The two sets differ exactly when injectivity radius along the ray is not bounded away from zero and the ray does not diverge through a cusp. In that case the strong stable set is an uncountable union of stable horocycles. The paper completes the case of rays meeting closed hypercycles of arbitrarily small length.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Geodesic flows, horocycles and asymptotic geometry of hyperbolic surfaces.",
+        "keywords": [
+          "strong stable sets",
+          "horocycles",
+          "injectivity radius",
+          "geodesic flows"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.38374",
+        "versioned_id": "2610.38374v1",
+        "title": "A five-species counterexample to the Hofbauer--Kon--Saito conjecture on qualitative permanence",
+        "authors": [
+          "Beldiman Miruna-Mihaela",
+          "Halanay Andrei-Dan"
+        ],
+        "abstract": "Hofbauer, Kon and Saito (J. Math. Biol. 2008) showed that a Lotka-Volterra interaction matrix $A$ with negative diagonal can be qualitatively permanent only if (C1) every cycle of length $\\ge 2$ of $A$ is nonpositive and (C2) every negative cycle contains exactly one negative entry. They conjectured that these conditions are also sufficient, and proved this for $n\\le 3$. We give a $5\\times 5$ integer matrix with seven nonzero off-diagonal entries that satisfies (C1) and (C2) but is not qualitatively permanent. For an explicit integer growth vector the system has an interior equilibrium, and an asymptotically stable heteroclinic cycle on the boundary of the orthant attracts an open set of interior orbits. Adding non-interacting species gives counterexamples for every $n\\ge 5$. The interactions form a one-way feedback loop (two one-sided benefits and one one-sided harm) together with a predator of two prey. The verification is elementary except for one heteroclinic connection, which lies in a face that is not Volterra-Lyapunov stable. For it we prove a connection lemma based on invasion graphs.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "q-bio.PE"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.38374",
+        "pdf_url": "https://arxiv.org/pdf/2610.38374"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Qualitative permanence in a Lotka–Volterra model is central, without a stated entropy, fractal, symbolic or group-action connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.38866",
+        "versioned_id": "2610.38866v1",
+        "title": "Early warning of critical transitions: Distinguishing supercritical and subcritical bifurcations from noisy observations",
+        "authors": [
+          "Paul A. Sanders",
+          "Christian Kuehn",
+          "Bastian Hilder",
+          "Robbin Bastiaansen"
+        ],
+        "abstract": "Early-warning methods can indicate that a system is approaching a loss of stability, but they do not usually reveal whether the approaching bifurcation is supercritical or subcritical. We investigate whether this distinction can be made from noisy pre-transition observations. For this investigation, we extend a regression-based stability method by including the leading cubic nonlinear term, whose sign is used to predict the bifurcation type. We test the method on a stochastic pitchfork model and a spatial stochastic Swift-Hohenberg equation. In both models, classification improves with longer observation horizons, closer proximity to the bifurcation, stronger noise, and larger nonlinear effects. However, these conditions are also linked to a higher risk of noise-induced tipping in the subcritical case. The useful early-warning window is therefore determined by a balance between obtaining enough information to identify the bifurcation type and doing so before noise-induced tipping becomes too likely. In spatially extended systems, we find that observing the full spatial field allows classification over shorter observation horizons, and performance improves when a broader range of spatial modes contributes to the observed dynamics. Altogether, we identify the conditions under which the method can reliably distinguish between supercritical and subcritical bifurcations.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "nlin.CD",
+          "nlin.PS",
+          "physics.data-an"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.38866",
+        "pdf_url": "https://arxiv.org/pdf/2610.38866"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Regression-based warning of noisy bifurcations is central, without a central connection to the strongest interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.38995",
+        "versioned_id": "2610.38995v1",
+        "title": "Networks with Memory and Isospectral Reduction",
+        "authors": [
+          "Grant Molnar"
+        ],
+        "abstract": "Restricting the linear dynamics of a graph to selected vertices generally introduces memory, because interactions can pass through hidden vertices before returning. The resulting rational memory kernels give isospectral reduction a dynamical interpretation and identify latent graph symmetries with symmetries of the observed evolution.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.38995",
+        "pdf_url": "https://arxiv.org/pdf/2610.38995"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Latent graph symmetries and observed evolution provide a plausible symmetry-dynamics connection; no entropy or symbolic invariant is stated.",
+        "tldr": "Restricting graph linear dynamics to observed vertices introduces rational memory kernels and relates latent symmetries to symmetries of observed evolution.",
+        "problem": "Interpret isospectral graph reduction dynamically when interactions can return through hidden vertices.",
+        "main_result": "The abstract identifies rational memory kernels as a dynamical interpretation of isospectral reduction and latent graph symmetries as symmetries of observed evolution. Precise hypotheses and formulas are not specified in the abstract.",
+        "methods": [
+          "Restriction of graph linear dynamics to selected vertices; rational memory kernels."
+        ],
+        "context": "Graph dynamics, memory and isospectral reduction.",
+        "keywords": [
+          "graph symmetries",
+          "memory kernels",
+          "isospectral reduction"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39113",
+        "versioned_id": "2610.39113v1",
+        "title": "Frequency-induced Tipping: Resonance-Driven Tipping in a Threshold Predator-Prey System",
+        "authors": [
+          "Shan Gao",
+          "Silas Poloni",
+          "Hao Wang",
+          "Mark Lewis"
+        ],
+        "abstract": "Tipping points refer to abrupt, substantial, and often irreversible transitions in dynamic systems that can be triggered by minor perturbations. Existing tipping mechanisms are usually classified by the nature of the trigger: bifurcation-induced tipping occurs when a parameter crosses a critical threshold, noise-induced tipping is caused by random perturbations, rate-induced tipping occurs when a system fails to track a moving attractor, and phase-induced tipping is triggered by timed perturbations relative to an oscillatory state. In this paper, we identify a new mechanism for tipping: frequency-induced tipping, in which periodic forcing drives a transition through resonant amplification. This occurs by destabilization of an equilibrium via subthreshold perturbations of the appropriate frequency. Filippov analysis of a piecewise-smooth model identifies admissible crossings that lead either to predator loss or to extinction of predator and prey, and numerical simulations show that tipping persists after smoothing of the thresholds. These results extend the current tipping framework to include critical transitions under recurrent environmental forcing.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "q-bio.PE"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39113",
+        "pdf_url": "https://arxiv.org/pdf/2610.39113"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Resonance-driven tipping in a threshold predator–prey model is central, without the strongest profile themes stated.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39281",
+        "versioned_id": "2610.39281v1",
+        "title": "Dynamic invisibility of implicit and nested state-dependent delays in a class of externally forced delay equations",
+        "authors": [
+          "Samuel Bolduc-St-Aubin",
+          "Priya Subramanian",
+          "Bernd Krauskopf"
+        ],
+        "abstract": "Delayed feedback is a fundamental mechanism in many systems and is often modeled by delay differential equations (DDEs). While delays are frequently assumed to be constant, in realistic feedback processes they may depend on the state and even be defined implicitly or in a nested fashion by the feedback relation itself. In this work, we address the question of how such implicit and nested state-dependent delays affect the observed behavior of a class of externally forced systems with negative switched feedback. Our motivating example and principal case study is the piecewise-smooth limiting form of a conceptual DDE model for the El Ni\\~no-Southern Oscillation (ENSO) with a negative feedback term subject to implicit state-dependent delay. We prove, for a wider prototypical class of DDEs with switched negative feedback and more general forcing, that (subject to an explicit condition on the parameters) any finite level of nested state-dependent delay and the limiting implicit delay are dynamically invisible: they all generate exactly the same trajectory, namely, that of the corresponding constant-delay DDE. We also discuss how the delayed argument functions organize the temporal order of reactions (TOR) in this regime, and show that a more stringent condition is required to ensure TOR for nested state-dependent delays.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39281",
+        "pdf_url": "https://arxiv.org/pdf/2610.39281"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "State-dependent delay equivalence in forced switched-feedback equations is central, without the stated strongest-interest connections.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39443",
+        "versioned_id": "2610.39443v1",
+        "title": "The entropy spectra of chaotic maps of an interval",
+        "authors": [
+          "Vinod Kumar P B"
+        ],
+        "abstract": "For a continuous self-map f of a real interval L, let ent(f) denote the supremum of the topological entropies of the restrictions of f to its compact invariant sets; for a compact interval this is the usual topological entropy. For a class P of maps, the entropy spectrum of P is the set of values ent(f) taken by the maps f in P. We determine the entropy spectra of the three standard classes of chaotic maps of the compact interval [0,1]. Devaney chaotic maps have spectrum [(1/2) log 2, infinity], maps of positive entropy have spectrum (0, infinity], and Li-Yorke chaotic maps have spectrum [0, infinity]; thus every entropy compatible with the known lower bounds actually occurs, and the three spectra are strictly nested. Mixing maps have spectrum ((1/2) log 2, infinity], and Devaney chaotic maps with at least two fixed points have spectrum [log 2, infinity]. As a consequence, a Devaney chaotic map of the interval attains the minimal entropy (1/2) log 2 only if it has a unique fixed point and is not mixing. For an arbitrary interval, compact or not, maps with a point of least period n have spectrum [log sigma_n, infinity], where sigma_n are the Stefan constants, and Li-Yorke chaotic maps have spectrum [0, infinity]. The proofs combine a truncation theorem for maps of non-compact intervals, showing that clipping a map to a compact subinterval never creates entropy; a horseshoe argument showing that two fixed points force entropy log 2 on transitive maps; and explicit constructions, including an exact piecewise linear family, a mixing map of infinite entropy, and a square-root construction that halves the entropy of a transitive map.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39443",
+        "pdf_url": "https://arxiv.org/pdf/2610.39443"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Exact topological entropy spectra of interval dynamics are directly central.",
+        "tldr": "The authors determine exact entropy spectra for several chaos classes of continuous interval maps and give constructions realizing all permitted values.",
+        "problem": "Determine which entropy values occur within Devaney chaotic, positive-entropy, Li–Yorke chaotic and mixing interval maps.",
+        "main_result": "On the compact unit interval, the Devaney spectrum starts at half the logarithm of two inclusively, the positive-entropy spectrum at zero exclusively, and the Li–Yorke spectrum at zero inclusively; each also contains infinite entropy. Mixing maps exclude the half-logarithm endpoint, whereas Devaney maps with at least two fixed points have minimum logarithm of two. Thus a Devaney map attaining the half-logarithm minimum has a unique fixed point and is not mixing. On arbitrary intervals, the least-period spectra are described by Stefan constants, and Li–Yorke maps realize every nonnegative entropy including infinity.",
+        "methods": [
+          "A truncation theorem showing that clipping to a compact subinterval creates no entropy.",
+          "A horseshoe argument for transitive maps with two fixed points.",
+          "Explicit piecewise-linear, infinite-entropy mixing and entropy-halving square-root constructions."
+        ],
+        "context": "Topological entropy and chaos in one-dimensional continuous dynamics.",
+        "keywords": [
+          "topological entropy",
+          "entropy spectra",
+          "interval maps",
+          "Devaney chaos",
+          "mixing"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39490",
+        "versioned_id": "2610.39490v1",
+        "title": "A Sharp Bound of Crossing Limit Cycle for Planar piecewise linear Systems with a Straight Switching Line",
+        "authors": [
+          "Zijie Xu",
+          "Jiang Yu"
+        ],
+        "abstract": "Determining the maximum number of crossing limit cycles in planar discontinuous piecewise linear systems separated by a straight line is a central problem in nonsmooth dynamical systems and a natural piecewise-linear counterpart of Hilbert's sixteenth problem, yet its sharp uniform upper bound has long remained an open problem. In this paper, we prove that any such system admits at most three crossing limit cycles. Combined with known examples realizing three crossing limit cycles, this result establishes that three is the sharp uniform upper bound.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CA"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39490",
+        "pdf_url": "https://arxiv.org/pdf/2610.39490"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Counting crossing limit cycles in planar piecewise-linear systems is central, without a stated central profile connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39580",
+        "versioned_id": "2610.39580v1",
+        "title": "Learning Kolmogorov Backward Operators for Spectral Analysis and Forecasting: A Data-Driven Variational Galerkin Framework",
+        "authors": [
+          "Yuanchao Xu",
+          "Claire Valva",
+          "Ben Gao",
+          "Isao Ishikawa"
+        ],
+        "abstract": "For a time-homogeneous Markov process, the fixed-lag solution operator \\( (T_\\tau f)(x)=\\mathbb E[f(X_{t+\\tau})\\mid X_t=x] \\) of the Kolmogorov backward equation evolves observables linearly and deterministically, even when the dynamics are stochastic. We approximate this operator using a two-stage method where we first approximate this operator directly from data, without knowledge of the governing equation (e.g., Fourier Neural Operator), and then compress the Galerkin projection onto a finite-dimensional observable space that is fixed in advance or selected variationally. The error analysis traces the learning error of the estimator, the sampling error of the Galerkin inner products, and the invariance and reconstruction properties of the observable space to the computed spectra and forecasts. The sampling error enters only through a multiplicative factor. Near an isolated spectral cluster, the invariance defect of a subspace controls its distance from the target invariant subspace. The forecast error is controlled by the one-step error of the reduced model and the projection error of the observable; when the measure is invariant and the reduced model preserves constants and is stable on mean-zero observables, the bound is uniform in the horizon. For deterministic dynamics, a learning rate for Fourier neural operators (FNOs) gives one explicit bound for the learning error. Numerical experiments illustrate spectral approximation and forecasting, including long-rollout stability and a comparison with extended dynamic mode decomposition (EDMD) when fewer transition pairs than basis functions are observed.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "cs.LG"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39580",
+        "pdf_url": "https://arxiv.org/pdf/2610.39580"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Invariant measures and invariant observable subspaces provide a connection to dynamical spectral analysis.",
+        "tldr": "The authors learn fixed-lag Kolmogorov backward operators from data and compress them by Galerkin projection, tracing approximation errors to spectra and forecasts.",
+        "problem": "Control errors in data-driven spectral approximation and forecasting for time-homogeneous Markov processes.",
+        "main_result": "The analysis tracks learning and sampling errors together with invariance and reconstruction properties; sampling enters through a multiplicative factor. Near an isolated spectral cluster, invariance defect controls distance to the target invariant subspace. Forecast error is bounded by reduced-model one-step and observable projection errors, uniformly in the horizon when the measure is invariant and the reduced model preserves constants and is stable on mean-zero observables. A deterministic FNO learning rate gives one explicit learning-error bound.",
+        "methods": [
+          "Two-stage operator learning and Galerkin compression on a fixed or variationally selected observable space.",
+          "Error analysis and numerical comparison with EDMD."
+        ],
+        "context": "Markov operators, invariant subspaces and data-driven dynamical spectra.",
+        "keywords": [
+          "Kolmogorov backward operator",
+          "Galerkin projection",
+          "invariant measures",
+          "forecast error"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39611",
+        "versioned_id": "2610.39611v1",
+        "title": "Existence and spectral instability of steady rolls in the Nikolaevskiy equation: a computer-assisted study",
+        "authors": [
+          "Nikita V. Konev",
+          "Fedor A. Vyazanitsyn",
+          "Igor A. Knyazev"
+        ],
+        "abstract": "The Nikolaevskiy equation is a model of short-wave pattern formation coupled to a neutral long-wave mode, and it is believed that all of its spatially periodic steady states are unstable. Existing results are formal, numerical, or restricted to a small neighbourhood of onset. We give computer-assisted proofs of three results. First, for every wavenumber q in [0.9, 1.1] and every control parameter r between the onset value (1-q^2)^2 and 4, the equation has a nontrivial, real-analytic, odd steady roll; these rolls form a single continuous two-parameter family that bifurcates from the trivial state at onset, with an explicit amplitude bound proportional to the square root of the distance to onset. Second, every roll of this family with r in [0.25, 4] is spectrally unstable on the real line: its linearisation has a Bloch eigenvalue with real part at least 6.7e-4, and at least 0.13 for r >= 0.575. Third, at nine sample points we enclose, at a small Bloch number, the eigenvalue numerically identified with the long-wave (Matthews-Cox) branch; its real part is positive at seven points and negative at two, while strongly unstable eigenvalues exist at all nine. The proofs combine a parametrised Newton-Kantorovich theorem, a desingularisation near onset, Taylor-model bounds on parameter boxes, and a Weyl-sequence argument for the Bloch spectrum; all estimates are evaluated in rigorous interval arithmetic.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.AP",
+          "nlin.PS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39611",
+        "pdf_url": "https://arxiv.org/pdf/2610.39611"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Computer-assisted existence and spectral instability of PDE steady rolls dominate the abstract, without the strongest profile themes.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39722",
+        "versioned_id": "2610.39722v1",
+        "title": "Slow Entropy of Quasi-Unipotent Actions on S-Arithmetic Homogeneous Spaces",
+        "authors": [
+          "Jasurbek Imomov"
+        ],
+        "abstract": "We study metric and topological slow entropy for translations on a class of finite-volume $S$-arithmetic homogeneous spaces with a real and $p$-adic factor. We consider translations whose real component is quasi-unipotent and whose $p$-adic component lies in a compact open subgroup. At polynomial scales, we show that the metric and topological slow entropies coincide and are determined by the chain structure of the real adjoint action. In particular, the non-Archimedean component contributes no additional polynomial slow entropy. Our result extends the slow entropy formula of Kanigowski, Vinhage, and Wei for quasi-unipotent flows on real homogeneous spaces to this $S$-arithmetic setting.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39722",
+        "pdf_url": "https://arxiv.org/pdf/2610.39722"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Metric and topological slow entropy for homogeneous actions directly match entropy and group-action interests.",
+        "tldr": "For a class of finite-volume S-arithmetic translations, metric and topological slow entropy coincide at polynomial scales and are determined by the real adjoint chain structure.",
+        "problem": "Extend polynomial-scale slow entropy formulas from real homogeneous flows to spaces with real and non-Archimedean factors.",
+        "main_result": "The translations have quasi-unipotent real component and non-Archimedean component in a compact open subgroup. On the stated finite-volume class, the two slow entropies agree and depend on the chain structure of the real adjoint action; the non-Archimedean factor adds no polynomial slow entropy. The numerical formula and further specifications of the space class are not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Slow entropy and S-arithmetic homogeneous dynamics.",
+        "keywords": [
+          "slow entropy",
+          "quasi-unipotent actions",
+          "S-arithmetic spaces",
+          "adjoint chains"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39811",
+        "versioned_id": "2610.39811v1",
+        "title": "A complete theory of local minimizers for periodic variational problems",
+        "authors": [
+          "Marco Fenucci"
+        ],
+        "abstract": "We study the periodic problem in the Calculus of Variations and give a complete characterization of the positive definiteness of the second variation, extending the Reid Roundabout Theorem to periodic boundary conditions. Two formulations are established: one in terms of conjugate and semi-coupled points, and one in terms of the existence of a symmetric solution of the associated Riccati equation satisfying a boundary inequality. We show by an explicit example that the latter condition, while sufficient, is not necessary except in dimension one. As applications, we obtain sufficient conditions for weak and strong local minimizers of periodic solutions of the Euler-Lagrange equation.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CA"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39811",
+        "pdf_url": "https://arxiv.org/pdf/2610.39811"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Second variation and local minimizers in periodic calculus of variations are central, without a stated thermodynamic-formalism connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39907",
+        "versioned_id": "2610.39907v1",
+        "title": "Cocycles on Tiling Spaces",
+        "authors": [
+          "Aditya Thorat"
+        ],
+        "abstract": "The space of tilings by rectangles form an interesting collection of multidimensional subshifts. Here, we study cocycles on such tiling spaces and provide an algorithmically decidable necessary and sufficient condition for the tiling space associated with a collection of rectangles to admit a nontrivial cocycle. Along the way, we also prove that the tiling spaces corresponding to a class of rectangular tile sets satisfy certain mixing properties.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39907",
+        "pdf_url": "https://arxiv.org/pdf/2610.39907"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Multidimensional subshifts, cocycles and mixing directly match symbolic dynamics.",
+        "tldr": "For rectangular tiling spaces, the authors give an algorithmically decidable criterion for a nontrivial cocycle and establish mixing properties for a class of tile sets.",
+        "problem": "Decide when a space of rectangular tilings admits a nontrivial cocycle.",
+        "main_result": "An algorithmically decidable necessary-and-sufficient condition is obtained. The criterion, the specified class of rectangular tile sets and the precise mixing properties are not specified in the abstract.",
+        "methods": [
+          "An algorithmically decidable criterion; its construction is not specified in the abstract."
+        ],
+        "context": "Cocycles and mixing in multidimensional tiling subshifts.",
+        "keywords": [
+          "tiling spaces",
+          "multidimensional subshifts",
+          "cocycles",
+          "mixing",
+          "decidability"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39928",
+        "versioned_id": "2610.39928v1",
+        "title": "On record behaviours of returns for interval maps",
+        "authors": [
+          "Boyuan Zhao"
+        ],
+        "abstract": "Given a dynamical system $(X,T)$ and an ergodic invariant measure $\\mu$, a $\\mu$-typical point $x\\in X$ under $T$ visits arbitrarily small neighbourhood of $x$. We will use techniques based on extreme value theory and Laplace functional for point process to show that, for interval maps with suitable mixing and anti-clustering conditions, the limiting distributions of the record times and values of the return process $Y_j(x)=-\\log d(T^jx,x)$, after possible normalisation, has Poisson-type laws.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39928",
+        "pdf_url": "https://arxiv.org/pdf/2610.39928"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Return statistics for ergodic invariant measures connect directly to recurrence and mixing.",
+        "tldr": "Under suitable mixing and anti-clustering assumptions, record times and values of interval-map returns have Poisson-type limiting laws after possible normalization.",
+        "problem": "Describe record behavior of the negative logarithm of distance from an iterate to the initial point.",
+        "main_result": "For interval maps satisfying suitable mixing and anti-clustering conditions, the authors obtain Poisson-type laws for the limiting distributions of record times and values, after possible normalization. The exact conditions and normalizations are not specified in the abstract.",
+        "methods": [
+          "Extreme value theory.",
+          "Laplace functionals for point processes."
+        ],
+        "context": "Ergodic recurrence, return processes and extreme-value statistics.",
+        "keywords": [
+          "return times",
+          "record values",
+          "mixing",
+          "Poisson-type laws"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.40147",
+        "versioned_id": "2610.40147v1",
+        "title": "Dynamical relations on $\\mathbb{P}^1$, higher bifurcations, and arithmetic bigness",
+        "authors": [
+          "Laura DeMarco",
+          "Niki Myrto Mavraki"
+        ],
+        "abstract": "In this article, we study algebraic relations among rational maps on $\\mathbb{P}^1$ and among their preperiodic points. Working over $\\mathbb{C}$, we characterize algebraic families of positive-dimensional varieties in $(\\mathbb{P}^1)^N$ and tuples of maps $(f_1, \\ldots, f_N)$ for which the subvariety is dynamically special for a Zariski-dense set of parameters. Moreover, outside of well-understood elliptic phenomena, we show that all families of maps and subvarieties that bifurcate are maximally bifurcating. Working over $\\overline{\\mathbb{Q}}$, we characterize arithmetic and geometric potential bigness for the canonical line bundle associated to families of endomorphisms of $(\\mathbb{P}^1)^N$ when restricted to the subvarieties. As consequences, we obtain uniform bounds for the periods and preperiods of relations among non-exceptional maps, and we show uniform bounds on the geometry of preperiodic points satisfying these relations. Over $\\overline{\\mathbb{Q}}$, our results yield corresponding uniform bounds for points and subvarieties satisfying a height gap.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.40147",
+        "pdf_url": "https://arxiv.org/pdf/2610.40147"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Relations and bifurcations of rational maps provide a complex-dynamical connection.",
+        "tldr": "The authors characterize families with Zariski-densely dynamically special fibers and obtain uniform bounds for relations and preperiodic points in rational dynamics.",
+        "problem": "Understand algebraic relations among rational maps and preperiodic points, their bifurcations and associated arithmetic positivity.",
+        "main_result": "Over the complex numbers, the paper characterizes the stated families of positive-dimensional subvarieties in products of projective lines and map tuples; outside the described elliptic phenomena, bifurcating families are maximally bifurcating. Over algebraic numbers it characterizes potential bigness for restricted canonical line bundles. Consequences include uniform bounds on periods and preperiods of relations among non-exceptional maps and on geometry of related preperiodic points; arithmetic versions require the stated height gap. Definitions, bounds and exceptional-phenomenon details are not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Complex and arithmetic dynamics of rational maps and families of subvarieties.",
+        "keywords": [
+          "rational maps",
+          "dynamical relations",
+          "bifurcations",
+          "preperiodic points",
+          "arithmetic bigness"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.40152",
+        "versioned_id": "2610.40152v1",
+        "title": "Non-Archimedean Rigidity and the Uniform Dynamical Manin--Mumford for $\\left(\\mathbb{P}^1\\right)^n$",
+        "authors": [
+          "Jit Wu Yap",
+          "Zhuchao Ji"
+        ],
+        "abstract": "We prove a uniform form of the dynamical Manin-Mumford conjecture for split endomorphisms $\\Phi = \\left(f_1,\\ldots,f_n\\right): \\left(\\mathbb{P}^1\\right)^n \\to \\left(\\mathbb{P}^1\\right)^n$ over $\\mathbb{C}$, where each $f_i$ has degree $d \\geq 2$ and at most one $f_i$ is exceptional. Specifically, we bound the number of irreducible components of $\\overline{\\operatorname{Prep}\\left(\\Phi\\right)\\cap V\\left(\\mathbb{C}\\right)}^{\\operatorname{Zar}}$ uniformly, depending only on $\\left(n,d,\\operatorname{deg} V\\right)$. We also obtain uniform statements for the dynamical Bogomolov conjecture. Our approach combines a degeneration argument via ultrafilters with a new non-archimedean rigidity theorem, along with the quantitative dynamical Zhang's inequality by Mavraki and the second author.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.40152",
+        "pdf_url": "https://arxiv.org/pdf/2610.40152"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Rigidity and uniform preperiodic-locus bounds give a complex/arithmetic dynamics connection.",
+        "tldr": "The authors prove uniform dynamical Manin–Mumford bounds for equal-degree split endomorphisms of products of projective lines with at most one exceptional coordinate map.",
+        "problem": "Bound the complexity of the Zariski closure of preperiodic points lying on a subvariety uniformly.",
+        "main_result": "Over the complex numbers, for coordinate degrees at least two and at most one exceptional coordinate map, the number of irreducible components of that closure is bounded only in terms of ambient product dimension, common degree and subvariety degree. Uniform dynamical Bogomolov statements are also obtained, but their precise formulation is not specified in the abstract.",
+        "methods": [
+          "Degeneration via ultrafilters.",
+          "A new non-Archimedean rigidity theorem.",
+          "A cited quantitative dynamical Zhang inequality."
+        ],
+        "context": "Arithmetic and complex dynamical rigidity on products of projective lines.",
+        "keywords": [
+          "dynamical Manin–Mumford",
+          "preperiodic points",
+          "non-Archimedean rigidity",
+          "uniform bounds"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.40237",
+        "versioned_id": "2610.40237v1",
+        "title": "Ergodic treeable equivalence relations are richly ergodic",
+        "authors": [
+          "Wei Dai"
+        ],
+        "abstract": "We study the density of ergodic subrelations in the canonical Polish space of subequivalence relations of a probability-measure-preserving countable Borel equivalence relation. Our main result establishes rich ergodicity for ergodic treeable equivalence relations. The proof combines a strongly increasing exhaustion with relative ergodic hyperfinite decomposition. As an application, for every $2\\leq r<\\infty$, we show that the product of the dyadic odometer action of $\\mathbb{Z}$ with the Bernoulli action of $\\mathbb{F}_r$ has a richly ergodic orbit relation, whereas the Bernoulli action of $\\mathbb{Z}\\times\\mathbb{F}_r$ does not. Thus rich ergodicity of a free ergodic action is not determined by the acting group.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.LO"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.40237",
+        "pdf_url": "https://arxiv.org/pdf/2610.40237"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Measured group actions and their orbit relations are central group-action topics.",
+        "tldr": "Ergodic treeable probability-measure-preserving countable Borel equivalence relations are richly ergodic, with an application distinguishing actions of the same group.",
+        "problem": "Study density of ergodic subrelations in the canonical Polish space of subequivalence relations.",
+        "main_result": "The main theorem establishes rich ergodicity for ergodic treeable relations. For every finite free-group rank at least two, the product of the dyadic odometer action of the integers with the free-group Bernoulli action has a richly ergodic orbit relation, while the Bernoulli action of the product group does not. Hence rich ergodicity of a free ergodic action is not determined by its acting group.",
+        "methods": [
+          "A strongly increasing exhaustion.",
+          "Relative ergodic hyperfinite decomposition."
+        ],
+        "context": "Measured equivalence relations, Bernoulli actions and orbit relations.",
+        "keywords": [
+          "treeable equivalence relations",
+          "rich ergodicity",
+          "group actions",
+          "Bernoulli actions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.40438",
+        "versioned_id": "2610.40438v1",
+        "title": "On generic subsystems of a Smale space",
+        "authors": [
+          "Angela Flores-Concha (Pennsylvania State University)"
+        ],
+        "abstract": "We study properties of generic compact invariant subsystems of a fixed Smale space in the Hausdorff topology. For a transitive Smale space, we show that the hyperspace of all subsystems contains an open and dense family of NMC subsystems, a dynamically degenerate class with finite orbit structure. A substantially different picture emerges in the closure of the infinite transitive locus: minimality, unique ergodicity, and zero topological entropy are generic, while subsystems conjugate to regular Toeplitz shifts are dense. Despite generic zero entropy, typical subsystems exhibit large oscillations in complexity: we prove that they have infinite slow entropy at the polynomial scale, and their slow entropy at the stretched-exponential scale is equal to one. For mixing Smale spaces, we further study the closure of the infinite totally transitive subsystems. In this hyperspace, minimality, unique ergodicity, and zero entropy remain generic; the conjugacy class of any Sturmian subshift is dense; and uniquely ergodic subsystems whose invariant measure is weakly mixing form a residual set. In particular, topological weak mixing is generic in this space.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.40438",
+        "pdf_url": "https://arxiv.org/pdf/2610.40438"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Generic topological dynamics, symbolic models and scale-dependent entropy are central.",
+        "tldr": "Generic subsystems of Smale spaces exhibit different behavior in the full hyperspace and in closures of infinite transitive loci, including generic zero entropy with large slow complexity.",
+        "problem": "Determine generic properties of compact invariant subsystems in the Hausdorff topology.",
+        "main_result": "For a transitive Smale space, an open dense family consists of NMC subsystems with finite orbit structure. In the closure of the infinite transitive locus, minimality, unique ergodicity and zero topological entropy are generic, regular Toeplitz subsystems are dense, and typical subsystems have infinite polynomial-scale slow entropy but stretched-exponential slow entropy one. For mixing Smale spaces in the closure of the infinite totally transitive locus, minimality, unique ergodicity and zero entropy remain generic; each Sturmian conjugacy class is dense, and uniquely ergodic systems with weakly mixing measure form a residual set, yielding generic topological weak mixing.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Hyperspaces of hyperbolic dynamical subsystems, symbolic dynamics and slow entropy.",
+        "keywords": [
+          "Smale spaces",
+          "generic subsystems",
+          "slow entropy",
+          "Toeplitz shifts",
+          "Sturmian subshifts"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.38710",
+        "versioned_id": "2610.38710v1",
+        "title": "Spontaneous Spirals in Spatial Systems",
+        "authors": [
+          "Wim Hordijk"
+        ],
+        "abstract": "Several chemical and biological systems produce spontaneous spirals in their dynamical behavior, such as the Belousov-Zhabotinsky reaction in chemistry and the slime mold Dictyostelium in biology. In a previous study, such spiral wave formation was accurately replicated with a computational spatial system known as the Ideal Storage Cellular Automaton Model (ISCAM). Here, a more detailed investigation is presented of the ability of this model to generate spontaneous spirals depending on its parameter values. A dynamical systems analysis is performed, and bifurcation diagrams, phase space diagrams, and snapshots of the model's spatial dynamics are presented for a range of parameter values. This analysis reveals that spiral waves can only be sustained in the system when the parameter values of the model fall well within the regime of a so-called Neimark-Sacker bifurcation.",
+        "announce_type": "cross",
+        "categories": [
+          "q-bio.MN",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.38710",
+        "pdf_url": "https://arxiv.org/pdf/2610.38710"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Parameter-dependent spiral-wave simulations in a biological cellular-automaton model dominate, without symbolic invariants or the other central themes.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.38971",
+        "versioned_id": "2610.38971v1",
+        "title": "Regular closedness off the real axis for root closures of bounded-height integer polynomials",
+        "authors": [
+          "Bernat Espigule"
+        ],
+        "abstract": "For each integer $h\\ge1$, let $Z_h$ be the closure in the complex plane of the roots of nonzero integer polynomials whose coefficients have absolute value at most $h$, with no degree restriction. We prove that $Z_h$ is regular closed off the real axis: every non-real point of $Z_h$ is a limit of interior points. The root-closure identification of Espigul\\'e and Juher, for which we include a self-contained proof, shows that the same closure arises from monic polynomials and that outside the closed unit disc it is the connectedness locus of $h+1$ equally spaced collinear similarities. The main step proves that this locus is regular closed off the real axis; this was known for $h=1$ by Calegari, Koch and Walker, for $h\\ge19$, and inside an explicit lens. The symmetry $z\\mapsto1/z$ then gives the full-plane statement. The proof adapts the method of traps of Calegari, Koch and Walker, using a neighboring-piece criterion, short chains through consecutive digits, and Rouch\\'e's theorem. We also classify the convex attractors.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CV",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.38971",
+        "pdf_url": "https://arxiv.org/pdf/2610.38971"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Connectedness loci of similarity attractors give a direct fractal-geometry connection.",
+        "tldr": "For every positive integer coefficient bound, nonreal points of the polynomial root closure are limits of interior points.",
+        "problem": "Establish regular closedness off the real axis for roots of bounded-height integer polynomials without degree restriction.",
+        "main_result": "The root closure is unchanged when restricted to monic polynomials and, outside the closed unit disk, equals the connectedness locus of equally spaced collinear similarities, with one more similarity than the coefficient bound. That locus is regular closed off the real axis; reciprocal symmetry yields the full-plane statement. Convex attractors are also classified, but the classification is not specified in the abstract.",
+        "methods": [
+          "A self-contained root-closure identification.",
+          "Adaptation of the method of traps, using a neighboring-piece criterion, short consecutive-digit chains and Rouché’s theorem.",
+          "Reciprocal symmetry."
+        ],
+        "context": "Polynomial root loci and similarity attractors.",
+        "keywords": [
+          "root closures",
+          "regular closedness",
+          "connectedness loci",
+          "similarity attractors"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39033",
+        "versioned_id": "2610.39033v1",
+        "title": "Large deviations for random walks generated by countable groups: a unified approach",
+        "authors": [
+          "Emilio Corso"
+        ],
+        "abstract": "We present a unified treatment of various large deviation principles in the context of random walks induced by actions of countable groups. The fundamental notion undergirding the global perspective is that of weakly almost additive random walks, inspired by earlier works on the metric geometry of group actions as well as by recent developments in the theory of nonadditive thermodynamic formalism. We treat large deviations of the renormalized vector-valued distance function from the origin for groups acting simultaneously, by isometries and in a weakly almost additive fashion, on an arbitrary number of metric spaces. The foremost class of examples is provided by group actions with contracting elements, which encompasses, among others, actions on Gromov-hyperbolic spaces and mapping class group actions on Teichm\\\"uller spaces. We further establish large deviation principles for quasimorphisms on countable groups, and for random walks generated by compositions of Euclidean isometries; also, we discuss extensions and streamlining of known large deviation results for singular values of random matrix products. Finally, in all the contemplated cases, we investigate the analytic properties of the rate function, leveraging its expression as the Fenchel-Legendre transform of a pressure function for certain nonadditive sequences of potentials on shift spaces.",
+        "announce_type": "cross",
+        "categories": [
+          "math.PR",
+          "math.DS",
+          "math.GR",
+          "math.MG"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39033",
+        "pdf_url": "https://arxiv.org/pdf/2610.39033"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Group actions, pressure and nonadditive thermodynamic formalism are central.",
+        "tldr": "A unified weakly almost additive framework yields large deviation principles for several classes of group-generated random walks and studies their rate functions through pressure.",
+        "problem": "Treat vector-valued distances and other observables for countable-group random walks within one large-deviation framework.",
+        "main_result": "The paper treats normalized vector distances for simultaneous isometric weakly almost additive actions on arbitrarily many metric spaces. Examples include contracting actions on hyperbolic spaces and mapping-class actions on Teichmüller spaces. Further principles concern quasimorphisms and Euclidean-isometry compositions, with extensions for singular values of random matrix products. Rate functions are expressed as Fenchel–Legendre transforms of pressure for nonadditive potentials on shift spaces; exact analytic conclusions are not specified in the abstract.",
+        "methods": [
+          "Weakly almost additive random walks.",
+          "Nonadditive thermodynamic formalism and pressure on shift spaces.",
+          "Fenchel–Legendre transforms."
+        ],
+        "context": "Large deviations, group-action geometry and nonadditive pressure.",
+        "keywords": [
+          "large deviations",
+          "group actions",
+          "pressure",
+          "weak almost additivity",
+          "shift spaces"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39103",
+        "versioned_id": "2610.39103v1",
+        "title": "The inverse problem for Julia limiting directions in the Eremenko--Lyubich class",
+        "authors": [
+          "Jiaxing Huang",
+          "Jun Wang",
+          "Xiao Yao"
+        ],
+        "abstract": "We study the inverse problem for Julia limiting directions in the Eremenko-Lyubich class $\\mathcal B$, which is the class of transcendental entire functions with a bounded set of singular values, and its meromorphic generalization $\\mathcal B_{mer}$. Every nonempty compact subset of the circle can be the set of Julia limiting directions of an entire $f\\in\\mathcal B$. For finite unions of nondegenerate closed arcs, the corresponding $f\\in\\mathcal B$, even with every finite order at or above an explicit bound determined by the arc lengths, can be attained. We also refine the series construction of the latter two authors to obtain $f\\in \\mathcal B_{mer}$ with any prescribed order and the set of Julia limiting directions.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CV",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39103",
+        "pdf_url": "https://arxiv.org/pdf/2610.39103"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Prescribing Julia limiting directions is a geometric complex-dynamics question.",
+        "tldr": "The authors construct functions in bounded-singular-value classes with prescribed Julia limiting directions, with order refinements in specified settings.",
+        "problem": "Solve inverse problems for Julia limiting directions of entire and meromorphic functions in Eremenko–Lyubich classes.",
+        "main_result": "Every nonempty compact subset of the circle is realized for an entire function in the bounded-singular-value class. For finite unions of nondegenerate closed arcs, every finite order at or above an explicit arc-length-dependent bound is attainable; the bound is not specified in the abstract. A refined series construction realizes prescribed order and limiting directions in the meromorphic class.",
+        "methods": [
+          "A refinement of a series construction from earlier work."
+        ],
+        "context": "Julia-set geometry of transcendental entire and meromorphic functions.",
+        "keywords": [
+          "Julia limiting directions",
+          "Eremenko–Lyubich class",
+          "entire functions",
+          "meromorphic functions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39448",
+        "versioned_id": "2610.39448v1",
+        "title": "Arithmetic localization for quasiperiodic long-range operators with monotone potentials",
+        "authors": [
+          "Hongyi Cao"
+        ],
+        "abstract": "We study one-dimensional quasiperiodic operators with $\\alpha$-H\\\"older monotone potentials and long-range hopping satisfying $|T(x,y)|\\leq \\varepsilon e^{-\\rho |x-y|}$. Under an explicit smallness condition on $\\varepsilon$, we establish uniform Anderson localization for such operators in the regime $\\rho>\\alpha\\beta $, where $\\beta$ is the exponential strength of frequency resonances. Our proof extends the arithmetic localization strategy for monotone quasiperiodic Schr\\\"odinger operators by Jitomirskaya and Kachkovskiy to the long-range setting, without relying on the Lyapunov exponent.",
+        "announce_type": "cross",
+        "categories": [
+          "math-ph",
+          "math.DS",
+          "math.MP",
+          "math.SP"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39448",
+        "pdf_url": "https://arxiv.org/pdf/2610.39448"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Quasiperiodic localization provides a connection to dynamical spectral theory.",
+        "tldr": "For one-dimensional quasiperiodic long-range operators with Hölder monotone potentials, the authors establish uniform Anderson localization in an arithmetic parameter regime.",
+        "problem": "Extend arithmetic localization from monotone quasiperiodic Schrödinger operators to exponentially decaying long-range hopping.",
+        "main_result": "With \\(\\alpha\\)-Hölder monotone potentials and hopping bounded by \\(\\varepsilon e^{-\\rho|x-y|}\\), uniform Anderson localization holds under an explicit smallness condition on \\(\\varepsilon\\) and \\(\\rho>\\alpha\\beta\\), where \\(\\beta\\) measures exponential frequency resonances. The smallness condition is not specified in the abstract.",
+        "methods": [
+          "Extension of the Jitomirskaya–Kachkovskiy arithmetic localization strategy, without reliance on the Lyapunov exponent."
+        ],
+        "context": "Quasiperiodic spectral theory and arithmetic resonances.",
+        "keywords": [
+          "Anderson localization",
+          "quasiperiodic operators",
+          "long-range hopping",
+          "monotone potentials"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39637",
+        "versioned_id": "2610.39637v1",
+        "title": "Solutions to several problems on infinite sumset configurations",
+        "authors": [
+          "Shisheng Li",
+          "Yong Su"
+        ],
+        "abstract": "We resolve a number of the problems collected by Kra, Moreira, Richter and Robertson in their survey \"Problems on infinite sumset configurations in the integers and beyond\". Our main result is that in every countably infinite abelian group, every set of positive upper Banach density contains a sumset $B_1+\\dots+B_k$ of $k$ infinite sets, for every $k$; the proof uses the Kronecker factor, but no higher-order Host-Kra structure theory, nilsystems of step greater than one, or nilspaces. We also answer, positively or negatively, questions on monochromatic sets $B+mB$, on sumsets in sets of logarithmic density, on polynomial sumset configurations, on sums of the form $B_{i_1}+\\dots+B_{i_m}$ with $B_i$ drawn from a density family, on random sets, on ordered sumsets in shifted primes, on sums and products in $\\mathbb{N}$ and $\\mathbb{Q}$, and on sumsets in abelian groups. Several of these answers concern the questions as literally stated, and two follow directly from known examples; in each case we say so and discuss the natural corrected question. Finally, answering a question of Kousek and Radi\\'c, we show that the supremum of the lower Banach densities of sets $A\\subset\\mathbb{N}$ such that $B+B+t\\not\\subset A$ for every infinite $B\\subset\\mathbb{N}$ and every $t\\ge0$ (respectively $B+B\\not\\subset A$ for every infinite $B$) is $1/2$ (respectively $3/4$). The main theorem and most of the other results are formalized in Lean 4, with some published theorems entering as explicit hypotheses.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CO",
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39637",
+        "pdf_url": "https://arxiv.org/pdf/2610.39637"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "The explicit use of the Kronecker factor connects density combinatorics to ergodic theory.",
+        "tldr": "Positive-upper-Banach-density sets in every countably infinite abelian group contain sums of any prescribed finite number of infinite sets, alongside several other sumset results.",
+        "problem": "Resolve problems about infinite sumset configurations and determine extremal lower Banach densities for avoiding certain infinite sums.",
+        "main_result": "For each finite number of summands, the main theorem gives a sumset of that many infinite sets inside every positive-upper-Banach-density set in a countably infinite abelian group. The supremal lower Banach densities for subsets of the natural numbers excluding every translated infinite self-sum, or every unshifted infinite self-sum, are respectively one half and three quarters. Several further questions are answered as literally stated, with corrected questions discussed; detailed answers are not specified in the abstract.",
+        "methods": [
+          "The Kronecker factor, without higher-order Host–Kra theory, higher-step nilsystems or nilspaces.",
+          "Lean 4 formalization of the main theorem and most other results, with some published theorems as explicit hypotheses."
+        ],
+        "context": "Ergodic methods in additive density combinatorics.",
+        "keywords": [
+          "infinite sumsets",
+          "upper Banach density",
+          "Kronecker factor",
+          "abelian groups"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39698",
+        "versioned_id": "2610.39698v1",
+        "title": "Unified transform method for nonautonomous linear evolution equations: rigorous analysis and qualitative theory",
+        "authors": [
+          "Andreas Chatziafratis",
+          "Spyridon Kamvissis",
+          "Alain Miranville",
+          "Tohru Ozawa"
+        ],
+        "abstract": "Established herein is the rigorous extension of the celebrated Fokas unified transform method for linear evolution PDE with time-dependent coefficients. As illustrative examples, considered below and rigorously analysed in detail are non-homogeneous initial-boundary-value problems, formulated on the half-line, for the heat equation and the modified heat (also widely known as Barenblatt's pseudo-parabolic) equation with reaction terms and temporally varying coefficients. Solution formulae are derived formally via suitable implementation of the UTM, and rigorously verified a posteriori, in the classical sense. The latter task relies on complex-analytic tools and careful interpretation of the obtained integral representations. The explicit solutions established here are then used for investigating qualitative properties. These include regularity, boundary behavior near the axes of the domain as well as long-range and eventual periodicity asymptotics. Notably, smoothness of the solution up to the boundaries depends on compatibility conditions between initial, boundary and forcing data, into which interjected now are initial values of the coefficients. Further results pertaining to solution uniqueness, analyticity and controllability of the addressed problems are thence deduced in light of the preceding qualitative theory.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math-ph",
+          "math.CV",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39698",
+        "pdf_url": "https://arxiv.org/pdf/2610.39698"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Explicit solution and qualitative theory of nonautonomous linear PDEs are central, without the strongest profile themes.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.39820",
+        "versioned_id": "2610.39820v1",
+        "title": "Rational points of exact period three for the quadratic family",
+        "authors": [
+          "Antti K\\\"aenm\\\"aki",
+          "Pekka Kosunen"
+        ],
+        "abstract": "For the quadratic family $f_c(x) = x^2 + c$ over $\\Q$, we isolate a general $S$-unit and ABC template for rational periodic cycles: under the ABC conjecture, any rational quantity built from the consecutive-point sums of a rational period-$n$ cycle whose value and shift-by-$1$ are both $S$-units (with $S$ the support of the denominator of $c$) has logarithmic height at most $(1+\\eps)\\sum_{p \\in S} \\log p + O_\\eps(1)$. Specializing to period $3$ in the change of coordinates $u = x_0 + x_1$ and $v = x_0 + x_2$, the period-$3$ condition reduces to $v = -1/(1+u)$, forcing the parameter $t = u$ to satisfy $t, t+1 \\in \\Z[S^{-1}]^\\times$; the template then yields, under ABC, $\\max\\{|a|,|b|,|a+b|\\} \\le C_\\eps \\rad(d)^{1+\\eps}$ for $t = a/b$ in lowest terms. We also characterize the period-$3$ locus on the $(u,v)$-plane intrinsically, isolating the ghost curve. Extending the height bound to higher periods remains an open structural question.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.39820",
+        "pdf_url": "https://arxiv.org/pdf/2610.39820"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Rational periodic cycles give a direct arithmetic-dynamics connection.",
+        "tldr": "Assuming ABC, the authors give an S-unit height template for rational cycles and apply it to exact period three in the quadratic family.",
+        "problem": "Control heights of rational quantities from consecutive-point sums when both the quantity and its shift by one are S-units.",
+        "main_result": "Under ABC, the logarithmic height is at most one plus an arbitrary positive epsilon times the sum of logarithms of primes supporting the parameter denominator, up to an epsilon-dependent constant. For period three, the coordinate relation forces the parameter and its shift by one to be S-units and gives the stated radical-denominator bound. The period-three locus and ghost curve are characterized intrinsically. Extension of the height bound to higher periods remains an open structural question.",
+        "methods": [
+          "An S-unit and ABC template.",
+          "Change of coordinates using consecutive-point sums for period three."
+        ],
+        "context": "Arithmetic dynamics of rational cycles in the quadratic family.",
+        "keywords": [
+          "rational cycles",
+          "period three",
+          "ABC conjecture",
+          "S-units",
+          "height bounds"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.40013",
+        "versioned_id": "2610.40013v1",
+        "title": "Integrable and non-integrable LR geodesic flows on 5-dimensional 2-step nilpotent Lie groups",
+        "authors": [
+          "Milan Pavlovi\\'{c}",
+          "Tijana \\v{S}ukilovi\\'{c}"
+        ],
+        "abstract": "We investigate sub-Riemannian geodesic flows on 5-dimensional nilpotent Lie groups endowed with left-invariant Riemannian metrics. Up to isomorphism, there are exactly two such groups: the Heisenberg group $H_5$ and the 5-dimensional nilpotent Lie group with a 2-dimensional commutator subgroup. For each group, we study geodesic flows associated with both left-invariant (LL) and right-invariant (LR) distributions, deriving explicit descriptions of the corresponding geodesics and comparing their integrability properties. While the LL systems are known to be Liouville integrable, and even superintegrable, we show that LR systems are Liouville integrable only in two cases: on the Heisenberg group and, for the second group, on a distinguished invariant level set.",
+        "announce_type": "cross",
+        "categories": [
+          "math.MG",
+          "math.DG",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.40013",
+        "pdf_url": "https://arxiv.org/pdf/2610.40013"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Invariant geometric flows and integrability on Lie groups give a plausible geometric-dynamics connection.",
+        "tldr": "The authors compare left- and right-invariant distribution geodesic flows on the stated five-dimensional nilpotent groups and identify restricted integrability for the latter.",
+        "problem": "Describe geodesics and compare Liouville integrability for the stated sub-Riemannian flows with left-invariant Riemannian metrics.",
+        "main_result": "The abstract treats the five-dimensional Heisenberg group and a group with two-dimensional commutator subgroup. Left-invariant-distribution systems are stated to be Liouville integrable and superintegrable, whereas right-invariant-distribution systems are Liouville integrable only on the Heisenberg group or, for the second group, on a distinguished invariant level set. The invariant level set is not specified in the abstract.",
+        "methods": [
+          "Explicit descriptions of the corresponding geodesics."
+        ],
+        "context": "Sub-Riemannian geodesic flows and nilpotent Lie groups.",
+        "keywords": [
+          "geodesic flows",
+          "Liouville integrability",
+          "nilpotent Lie groups",
+          "invariant distributions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.40025",
+        "versioned_id": "2610.40025v1",
+        "title": "One Polynomial Field for Every Euler Step and the Flow: Polynomial Dynamics for P and PSPACE",
+        "authors": [
+          "Olivier Bournez"
+        ],
+        "abstract": "We construct, for each deterministic Turing machine that halts on all inputs, one polynomial vector field with rational coefficients that performs the same logical computation at unit Euler step, at every smaller or variable step in $(0,1]$ with divergent sum, and along the flow. This unifies discrete-time and continuous-time computation by polynomial dynamics, which earlier characterizations treated separately. For a machine making $T$ transitions in space $H$, a logical scale $h=2^{-s}$ with $s=O(H)$ suffices, with physical time $O(s(T+s))$, drift disturbances up to $h^{2K}$ for a fixed exponent $K$, and $2Ks+3$ fractional bits at unit step. On a fixed compact domain, polynomial time and robust eventual decision characterize P and PSPACE, respectively, with polynomial scale thresholds and no supplied stabilization horizon in the space case. Without sign, floor or conditional primitives, margin amplification at bounded speed, overlapping polynomial gates and interval-product estimates give the common realization, from which we derive shared logical traces, fixed-field PSPACE-complete prediction and a robust safety family with polynomial certificates common to all Euler steps and the flow.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.CC",
+          "cs.LO",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.40025",
+        "pdf_url": "https://arxiv.org/pdf/2610.40025"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Computational complexity realized by polynomial dynamics offers a plausible connection to orbit complexity, although no entropy or symbolic invariant is stated.",
+        "tldr": "For each total deterministic Turing machine, one rational-coefficient polynomial vector field realizes the same logical computation along its flow and across the stated Euler discretizations.",
+        "problem": "Unify robust discrete-time and continuous-time computation in a fixed polynomial vector field.",
+        "main_result": "The construction works at unit Euler step and at every smaller fixed or variable positive step at most one with divergent sum. On a fixed compact domain, polynomial time and robust eventual decision characterize P and PSPACE respectively, with polynomial scale thresholds and no supplied stabilization horizon in the space case. The authors also derive shared logical traces, fixed-field PSPACE-complete prediction and robust safety certificates common to Euler steps and flow; quantitative resource formulas are given in the abstract.",
+        "methods": [
+          "Bounded-speed margin amplification.",
+          "Overlapping polynomial gates and interval-product estimates, without sign, floor or conditional primitives."
+        ],
+        "context": "Analog computation and computational complexity of polynomial dynamics.",
+        "keywords": [
+          "polynomial vector fields",
+          "Euler discretization",
+          "P",
+          "PSPACE",
+          "robust computation"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.40067",
+        "versioned_id": "2610.40067v1",
+        "title": "Singularity of harmonic measure on Poisson--Voronoi tessellations in hyperbolic spaces",
+        "authors": [
+          "Kohki Sakamoto"
+        ],
+        "abstract": "We prove that the harmonic measure of simple random walk on the Poisson--Voronoi tessellation in $\\mathbb{H}^d$ is almost surely singular with respect to Lebesgue measure on the boundary. This answers a question of Benjamini, Paquette, and Pfeffer in the hyperbolic plane and establishes the analogous result in higher dimensions. Our proof is based on ergodic theory of rerooting relations and their boundary extensions.",
+        "announce_type": "cross",
+        "categories": [
+          "math.PR",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.40067",
+        "pdf_url": "https://arxiv.org/pdf/2610.40067"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Ergodic theory of rerooting relations and boundary measures gives a substantial measured-dynamics connection.",
+        "tldr": "Harmonic measure for simple random walk on Poisson–Voronoi tessellations of hyperbolic space is almost surely singular relative to boundary Lebesgue measure.",
+        "problem": "Determine singularity of random-walk harmonic measure on the stated hyperbolic tessellations.",
+        "main_result": "The authors prove almost-sure singularity, answering the cited hyperbolic-plane question and extending the result to higher dimensions. Additional assumptions are not specified in the abstract.",
+        "methods": [
+          "Ergodic theory of rerooting relations and their boundary extensions."
+        ],
+        "context": "Random walks, harmonic measures and ergodic boundary relations in hyperbolic geometry.",
+        "keywords": [
+          "harmonic measure",
+          "singularity",
+          "Poisson–Voronoi tessellations",
+          "rerooting relations"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.40392",
+        "versioned_id": "2610.40392v1",
+        "title": "A dynamical approach to Frobenius splitting",
+        "authors": [
+          "Alapan Mukhopadhyay",
+          "Ilya Smirnov"
+        ],
+        "abstract": "A dynamical system can be associated to the process of decomposing iterated Frobenius pushforwards of modules into indecomposable direct summands. Via this connection, we apply the theory of Markov chains to study asymptotic counts of multiplicities of indecomposable summands in the iterated Frobenius pushforwards of the given module, as the number of iterations grows. Our results recover and extend the existing results on the existence of the (generalized) F-signature due to Hashimoto--Symonds, Hashimoto--Kobayashi, Smith--Van den Bergh, Tucker, and Yao. We also develop further the theory of F-contributors, the modules for which the multiplicity grows at the maximal possible rate. As a key algebraic input, we define and develop strongly F-regular modules, extending Hochster--Huneke's notion of strongly F-regular rings. We use strongly F-regular modules to prove convergence of the relevant sequences and algebraically characterize F-contributors, when the underlying ring admits a module-finite strongly F-regular extension or has dimension at most two.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AC",
+          "math.AG",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.40392",
+        "pdf_url": "https://arxiv.org/pdf/2610.40392"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Iteration and Markov-chain asymptotics give a plausible dynamical connection to this algebraic problem; the strongest invariants are not stated.",
+        "tldr": "The authors associate dynamics to iterated Frobenius decompositions and apply Markov chains to asymptotic multiplicities and F-contributors.",
+        "problem": "Study convergence and maximal-rate multiplicities of indecomposable summands of iterated Frobenius pushforwards.",
+        "main_result": "The results recover and extend existence results for generalized F-signatures. Strongly F-regular modules are introduced and used for convergence and an algebraic characterization of F-contributors when the underlying ring admits a module-finite strongly F-regular extension or has dimension at most two. Precise limit formulas are not specified in the abstract.",
+        "methods": [
+          "A dynamical system associated to iterated Frobenius decompositions.",
+          "Markov-chain theory.",
+          "Strongly F-regular modules as an algebraic input."
+        ],
+        "context": "Iterative algebraic decompositions and Markov-chain asymptotics.",
+        "keywords": [
+          "Frobenius pushforwards",
+          "Markov chains",
+          "F-signature",
+          "F-contributors"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.40426",
+        "versioned_id": "2610.40426v1",
+        "title": "Aerodynamic Shape Optimization of unsteady flapping wings",
+        "authors": [
+          "Hamid R. Karbasian",
+          "Brian C. Vermeire"
+        ],
+        "abstract": "This study introduces a new approach for building surrogate models, in the form of Reduced Order Models (ROMs), for PDE-constrained optimization. A physics-constrained data-driven framework is developed to transform large-scale non-linear optimization problems into ROM-constrained optimization problems. Unlike conventional methods, which suffer from instability of the forward sensitivity function, the proposed approach projects optimization problems to system dynamics optimization problems in Hilbert space to increase stability, diminish memory requirements, and lower computational cost. The present approach is applied to shape optimization of a 2D flapping wing section at $Re=2,400$, where the non-linear interaction of the wing with fluid includes chaotic flow structures. It is shown that the proposed approach can significantly enhance the time-averaged thrust force and propulsive efficiency by 37\\% and 40\\%, respectively. We also tested this approach for a 3D flapping wing and the results reveal the potential of the proposed approach for more complex optimal designs in the aerospace industry.",
+        "announce_type": "cross",
+        "categories": [
+          "physics.flu-dyn",
+          "math.DS",
+          "math.OC",
+          "nlin.CD"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.40426",
+        "pdf_url": "https://arxiv.org/pdf/2610.40426"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Aerodynamic surrogate modeling and PDE-constrained shape optimization dominate, without central profile themes.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.40472",
+        "versioned_id": "2610.40472v1",
+        "title": "Bilinear operators along variable curves",
+        "authors": [
+          "Nicholas Gismondi",
+          "Mandon Pathak"
+        ],
+        "abstract": "Motivated by Zygmund's differentiation conjecture and Stein's conjecture for Lipschitz vector fields, we study bilinear singular integral and maximal operators along variable curves given by $$ \\begin{aligned} BH_a^\\alpha(f,g)(x) &= \\operatorname{p.v.}\\int_{\\mathbb R} f(x-t) g\\left(x + a(x)t^\\alpha\\right)\\,\\frac{dt}{t},\\\\ BM_a^\\alpha(f,g)(x) &= \\sup_{r>0}\\frac{1}{2r}\\int_{-r}^{r} \\left|f(x-t)g\\left(x+a(x)t^\\alpha\\right)\\right|\\,dt,\\\\ BSH_c^\\alpha(f,g)(x) &= \\operatorname{p.v.} \\int_{\\mathbb R} f(x-t) g(x + t^\\alpha)\\, \\frac{dt}{t-c(x)}, \\end{aligned} $$ where $\\alpha > 0$ and $a,c:\\mathbb R\\to\\mathbb R$ are measurable. For every $\\alpha>0$ and $0<A<B<\\infty$, we construct a smooth, globally Lipschitz coefficient $a:\\mathbb R\\to(A,B)$ such that, for every H\\\"{o}lder conjugate pair $1<p,q<\\infty$, no strong--type $L^p(\\mathbb R)\\times L^q(\\mathbb R)\\to L^1(\\mathbb R)$ estimate holds for $BH_a^\\alpha$ or $BM_a^\\alpha$ on $C_c^\\infty(\\mathbb R)\\times C_c^\\infty(\\mathbb R)$; moreover, there exist nonnegative smooth inputs in $\\bigcap_{s>1}L^s(\\mathbb R)$, one of which is compactly supported, whose outputs under $BH_a^\\alpha$ and $BM_a^\\alpha$ do not belong to $L^1(\\mathbb R)$. For any measurable $a:\\mathbb R\\to\\mathbb R$, $BM_a^\\alpha$ maps $L^p(\\mathbb R) \\times L^q(\\mathbb R)$ boundedly into $L^r(\\mathbb R)$ whenever $1<p,q\\leq\\infty$, $1/r = 1/p + 1/q$, and $r > 1$, and maps $L^p(\\mathbb R) \\times L^q(\\mathbb R)$ into weak $L^1(\\mathbb R)$ when $1/p+1/q=1$, with constants independent of $a$. Finally, we investigate the shifted operator $BSH_c^\\alpha$, including dyadic-integer-valued $c$, and prove that there is a measurable choice of $c$ such that the operator admits no bounded $L^p(\\mathbb R) \\times L^q(\\mathbb R) \\to L^{r,\\infty}(\\mathbb R)$ estimates in the range $1 \\leq p,q \\leq \\infty$ and $\\frac{1}{2}<r<\\infty$, resolving an open problem posed by Gaitan and Lie.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CA",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2610.40472",
+        "pdf_url": "https://arxiv.org/pdf/2610.40472"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Bilinear singular-integral estimates in harmonic analysis have no stated substantial connection to the strongest dynamical interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2512.12141",
+        "versioned_id": "2512.12141v2",
+        "title": "Irreducible groups and ergodicity in the boundary",
+        "authors": [
+          "Subhadip Dey",
+          "Sebastian Hurtado"
+        ],
+        "abstract": "We show that if $G$ is a real semi-simple Lie group, and $\\Gamma$ is a discrete subgroup of $G$ containing a subgroup $\\Sigma$ acting ergodically (in a strong sense) on the Furstenberg boundary of $G$, then $\\Gamma$ is not isomorphic to a free product of $\\Sigma$ with $\\mathbb{Z}$. Moreover, if $\\Sigma$ has algebraic entries, then $\\Gamma$ has algebraic entries as well. As a consequence, we show that if all irreducible discrete subgroups of ${\\rm SL}_2(\\mathbb{R}) \\times {\\rm SL}_2(\\mathbb{R})$ act ergodically on $\\mathbb{S}^1\\times \\mathbb{S}^1 $, such groups cannot be free groups (or even Gromov hyperbolic). In the appendix, we discuss a connection between the existence of discrete irreducible groups and diophantine properties of Lie groups.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.GR",
+          "math.DG",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2512.12141",
+        "pdf_url": "https://arxiv.org/pdf/2512.12141"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Boundary ergodicity and algebraic restrictions on group actions directly match group-action interests.",
+        "tldr": "A strongly boundary-ergodic subgroup of a discrete subgroup of a real semisimple Lie group imposes restrictions on free-product structure and algebraicity.",
+        "problem": "Relate Furstenberg-boundary ergodicity to algebraic and abstract-group properties of discrete subgroups.",
+        "main_result": "If a discrete subgroup contains a subgroup acting ergodically in the stated strong sense on the Furstenberg boundary, it is not isomorphic to the free product of that subgroup with the integers; algebraic entries of the smaller subgroup force algebraic entries of the larger. The exact strong ergodicity assumption is not specified in the abstract. Conditionally on boundary ergodicity of all irreducible discrete subgroups of the product of two copies of the real special linear group in dimension two, such groups cannot be free or even Gromov hyperbolic.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Discrete Lie-group subgroups, boundary actions and Diophantine connections.",
+        "keywords": [
+          "boundary ergodicity",
+          "discrete subgroups",
+          "free products",
+          "Furstenberg boundary"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2602.15299",
+        "versioned_id": "2602.15299v2",
+        "title": "Szemer\\'edi's Theorem Along Cantor Sets of Integers",
+        "authors": [
+          "Alex Burgin",
+          "Anastasios Fragkos",
+          "Michael T. Lacey",
+          "Dario Mena",
+          "Maria Carmen Reguera"
+        ],
+        "abstract": "Let $\\mathcal C= \\{k_1<k_2 < \\cdots\\}$ be Cantor set of integers, that is a set of integers with restricted digits modulo a base $b$, and suppose $0$ is one of the restricted digits. We show that $$ \\liminf_{M-N\\to\\infty}\\mathbb E _{n\\in [N]- [M]} m(A\\cap T^{-k_n} A \\cap \\cdots \\cap T^{-\\ell k_n} A )>0. $$ The averages above are uniform in the index $n$, and so the set of indices $n$ for which $m(A\\cap T^{-k_n} A \\cap \\cdots \\cap T^{-\\ell k_n} A )>0$ is syndetic. By the Furstenberg correspondence principle, it follows that for every set of integers $A$ of positive upper Banach density there is a syndetic set $B$ of indices such that, for each $n \\in B$, the set of $a$ with $a, a+k_n, \\ldots, a+ \\ell k_n \\in A$ again has positive upper Banach density. A Cantor set contains an IP-set, so the existence of such progressions, and the positivity of the density above for a single index, already follow from the IP Szemer\\'edi theorem of Furstenberg and Katznelson, and from the work of Kra and Shalom. The point of this paper is instead the frequency with which the step sizes $k_n$ may be found, measured in the natural enumeration of the Cantor set itself.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NT",
+          "math.CA",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2602.15299",
+        "pdf_url": "https://arxiv.org/pdf/2602.15299"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Restricted-digit Cantor sets and syndetic multiple recurrence connect fractal digit structure and ergodic dynamics.",
+        "tldr": "The authors prove positive uniform lower averages of multiple recurrence along the natural enumeration of restricted-digit integers, giving syndetically many successful step indices.",
+        "problem": "Determine the frequency of progression step sizes inside a Cantor set of integers, beyond existence of a single step.",
+        "main_result": "For the stated Cantor sets of integers with zero among the restricted digits, the abstract asserts a positive uniform lower limit of multiple-recurrence averages and hence syndetic successful indices. The precise dynamical and positive-measure assumptions are not specified in the abstract and are not supplied here. By correspondence, every positive-upper-Banach-density integer set has a syndetic set of step indices for which the starting points of the stated finite progressions again have positive upper Banach density. The novelty asserted is frequency in the Cantor enumeration rather than existence.",
+        "methods": [
+          "Furstenberg correspondence principle for the combinatorial consequence."
+        ],
+        "context": "Multiple recurrence and arithmetic progressions with restricted-digit step sizes.",
+        "keywords": [
+          "Cantor sets of integers",
+          "multiple recurrence",
+          "syndetic indices",
+          "Szemerédi theorem"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2603.06203",
+        "versioned_id": "2603.06203v4",
+        "title": "Rational Preperiodic Points of Quadratic Rational Maps over $\\mathbb{Q}$ with Nonabelian Automorphism Groups",
+        "authors": [
+          "Hasan Bilgili",
+          "Mohammad Sadek"
+        ],
+        "abstract": "Let $f:\\mathbb{P}^1\\to\\mathbb{P}^1$ be a quadratic rational map defined over the rational field $\\mathbb{Q}$ with nonabelian automorphism group. We prove that no such map has a $\\mathbb{Q}$-rational periodic point with exact period $N\\ge 4$. We also give an explicit parametrization of such maps that have $\\mathbb{Q}$-rational periodic points of exact period $1$, $2$, and $3$. In addition, we show that the number of $\\mathbb{Q}$-rational preperiodic points of such a map $f$ cannot exceed $6$. As a result, we completely classify all portraits of $\\mathbb{Q}$-rational preperiodic points for quadratic rational maps defined over $\\mathbb{Q}$ with nonabelian automorphism group, showing that there are exactly $7$ such portraits, one of which is the empty portrait.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-10-30T00:00:00-04:00",
+        "abstract_url": "https://arxiv.org/abs/2603.06203",
+        "pdf_url": "https://arxiv.org/pdf/2603.06203"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Uniform rational preperiodic portraits give an arithmetic-dynamics connection.",
+        "tldr": "For quadratic rational maps over the rationals with nonabelian automorphism group, the authors bound rational preperiodic points by six and classify exactly seven portraits.",
+        "problem": "Classify rational periodic and preperiodic points under the stated automorphism-group restriction.",
+        "main_result": "No such map has a rational periodic point of exact period at least four. The authors explicitly parametrize maps with exact rational periods one, two and three, prove the bound of six rational preperiodic points and classify seven portraits including the empty portrait.",
+        "methods": [
+          "Explicit parametrization for exact periods one, two and three."
+        ],
+        "context": "Arithmetic iteration of quadratic rational maps.",
+        "keywords": [
+          "quadratic rational maps",
+          "preperiodic portraits",
+          "nonabelian automorphisms",
+          "rational periodic points"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 10,
+    "RELATED / POSSIBLY INTERESTING": 15,
+    "LOW PRIORITY": 12
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-10-30T10:59:12.434393Z",
+      "feed_published_at": "2026-10-30T00:00:00-04:00",
+      "feed_build_at": "2026-10-30T06:39:20Z",
+      "feed_date": "2026-10-30",
+      "sha256": "ba51cf0ac84a3d36f6d5a46dbc70113650d951c843447643b51ee4d117fba30e",
+      "byte_length": 97708,
+      "capture_run_url": null
+    }
+  ]
+}
