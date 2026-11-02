@@ -1,0 +1,860 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-11-02",
+  "generated_at": "2026-11-02T11:04:30.747395Z",
+  "feed_build_at": "2026-11-02T05:00:14Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 21 unseen announcements: 7 HIGH PRIORITY, 5 RELATED / POSSIBLY INTERESTING, and 9 LOW PRIORITY. Central themes include symbolic dynamics of Smale spaces, Hom-shifts and cellular automata, quantitative estimates for measure-preserving actions, cuspidal group orbits, action rigidity and tame median compactifications. Related work concerns equivariant Hamiltonian indices, ergodic flows, minimizing invariant averages, random surface-map statistics and finite-precision recurrence. No followed-author matches occur in the supplied input; unspecified hypotheses and limiting formulations are not filled in from external knowledge.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2610.40896",
+        "versioned_id": "2610.40896v1",
+        "title": "Equivariant Gradient Degree Comparison via Clarke Duality for Strongly Indefinite Hamiltonian Systems",
+        "authors": [
+          "Shi Yu"
+        ],
+        "abstract": "We study equivariant gradient degree comparisons for strongly indefinite Hamiltonian systems through Clarke duality. Under suitable convexity and compactness assumptions, we establish a correspondence between the primal and dual equations that preserves the symmetries of their solutions. We derive an identity relating their negative spectral representations and show that the Galerkin-normalized local index of the primal linearization coincides with the equivariant gradient degree determined by the dual Hessian. This comparison extends to infinite-dimensional settings through stabilized Galerkin approximations. We also establish relations between primal and dual crossing forms, equivariant spectral flow, and local equivariant gradient degrees at nondegenerate fixed solutions. The results provide a framework for studying equivariant bifurcation in strongly indefinite systems. As an application, we consider periodic Hamiltonian ring equations with dihedral symmetry and illustrate the computation of equivariant gradient degrees and bifurcation invariants.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2610.40896",
+        "pdf_url": "https://arxiv.org/pdf/2610.40896"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Symmetry-preserving duality and equivariant topological degrees provide a plausible connection to symmetry in dynamics.",
+        "tldr": "Under suitable convexity and compactness assumptions, Clarke duality compares primal and dual equivariant gradient degrees for strongly indefinite Hamiltonian systems.",
+        "problem": "Relate primal linearized indices, dual Hessians and equivariant bifurcation invariants, including infinite-dimensional settings.",
+        "main_result": "The correspondence preserves solution symmetries and gives an identity for negative spectral representations. The Galerkin-normalized local index of the primal linearization equals the equivariant gradient degree determined by the dual Hessian; stabilized Galerkin approximations extend the comparison to infinite dimensions. Relations among crossing forms, equivariant spectral flow and local degrees are also established at nondegenerate fixed solutions, with a dihedrally symmetric Hamiltonian-ring application. The precise convexity and compactness assumptions are not specified in the abstract.",
+        "methods": [
+          "Clarke duality.",
+          "Stabilized Galerkin approximations.",
+          "Crossing forms and equivariant spectral flow."
+        ],
+        "context": "Equivariant bifurcation and strongly indefinite Hamiltonian dynamics.",
+        "keywords": [
+          "equivariant gradient degree",
+          "Clarke duality",
+          "Hamiltonian systems",
+          "spectral flow"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.41151",
+        "versioned_id": "2610.41151v1",
+        "title": "Solyanik Estimates for Ergodic Flows",
+        "authors": [
+          "Kesen Huang"
+        ],
+        "abstract": "Let $\\{T_t\\}_{t\\in\\mathbb R}$ be a measure-preserving flow on a probability space $(\\Omega,\\Sigma,\\mu)$ and let $T^*$ be the associated one-sided ergodic maximal operator. We show that the sharp Tauberian constant $C(\\alpha)=\\sup_{\\mu(E)>0}\\frac{\\mu(\\{T^*\\chi_E>\\alpha\\})}{\\mu(E)}$,$0<\\alpha<1$, equals $1/\\alpha$ for every $\\alpha\\in(0,1)$, unless every measurable set is invariant modulo null sets, in which case $C(\\alpha)=1$ for every $\\alpha$. In particular the Solyanik estimate $\\lim_{\\alpha\\to1^-}C(\\alpha)=1$ holds for every measure-preserving flow, and for ergodic flows on nonatomic spaces the estimate $C(\\alpha)-1\\le 1/\\alpha-1$ holds with equality. This answers the one-parameter case of a question of Hagelstein and Parissis. The main point is the lower bound, which is obtained from a lacunary cross-section built out of the upcrossings of a probe function along the orbits of the flow.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2610.41151",
+        "pdf_url": "https://arxiv.org/pdf/2610.41151"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Sharp maximal estimates for measure-preserving flows give a direct ergodic-theory connection.",
+        "tldr": "The one-sided ergodic maximal operator of any nontrivial measure-preserving flow has sharp Tauberian constant equal to the reciprocal of the threshold.",
+        "problem": "Determine sharp Tauberian constants and the Solyanik limit for one-parameter measure-preserving flows on probability spaces.",
+        "main_result": "For every \\(0<\\alpha<1\\), the authors prove \\(C(\\alpha)=1/\\alpha\\), unless every measurable set is invariant modulo null sets, when \\(C(\\alpha)=1\\). Thus the Solyanik limit is one for every such flow. For ergodic flows on nonatomic spaces, the estimate \\(C(\\alpha)-1\\leq1/\\alpha-1\\) is attained with equality, resolving the cited one-parameter question.",
+        "methods": [
+          "A lower bound from a lacunary cross-section built from orbit upcrossings of a probe function."
+        ],
+        "context": "Ergodic maximal operators and quantitative measure-preserving-flow estimates.",
+        "keywords": [
+          "ergodic flows",
+          "Solyanik estimates",
+          "Tauberian constants",
+          "lacunary cross-sections"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.41156",
+        "versioned_id": "2610.41156v1",
+        "title": "Sharp Solyanik Estimates for Discrete and Ergodic Hardy--Littlewood Maximal Operators",
+        "authors": [
+          "Kesen Huang"
+        ],
+        "abstract": "Let $U_1,\\dots,U_n$ be commuting invertible measure-preserving transformations of a probability space, and let $C^{*}_{\\mathrm{HL}}(\\alpha)$ denote the sharp Tauberian constant of the associated ergodic uncentered Hardy--Littlewood maximal operator. Hagelstein and Parissis showed that $C^{*}_{\\mathrm{HL}}(\\alpha)-1\\lesssim_n(1/\\alpha-1)^{1/(n(n+1))}$ as $\\alpha\\to1^-$ and asked whether this exponent is sharp. We prove that $C^{*}_{\\mathrm{HL}}(\\alpha)-1\\lesssim_n(1/\\alpha-1)^{1/n}$ for all such transformations, and that this is sharp: equality of the ergodic and discrete Tauberian constants holds for every action admitting arbitrarily large Rokhlin towers (in particular for every free action, ergodic or not), and the discrete constant satisfies $\\widetilde{C}_{\\mathrm{HL}}(\\alpha)-1\\asymp_n(1/\\alpha-1)^{1/n}$. For $n\\ge2$ the sharp ergodic exponent $1/n$ is strictly smaller than the sharp Euclidean exponent $2/(n+1)$ recently obtained by Mukherjee; the discrepancy is caused by a lattice ``first layer'' effect. We also show that the discrete Tauberian constants of the Hardy--Littlewood and strong maximal operators dominate their Euclidean counterparts; for the strong maximal operator this yields $C^{*}_{\\mathrm{S}}=C_{\\mathrm{S}}$ for every free action.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2610.41156",
+        "pdf_url": "https://arxiv.org/pdf/2610.41156"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Commuting measure-preserving actions and Rokhlin towers directly match the group-action profile.",
+        "tldr": "For ergodic uncentered Hardy–Littlewood maximal operators of commuting invertible transformations, the authors prove a sharp dimension-dependent Solyanik exponent.",
+        "problem": "Improve the known exponent and compare ergodic, discrete and Euclidean Tauberian constants.",
+        "main_result": "For \\(n\\) commuting invertible measure-preserving transformations, \\(C^*_{\\mathrm{HL}}(\\alpha)-1\\lesssim_n(1/\\alpha-1)^{1/n}\\). Ergodic and discrete constants agree for actions admitting arbitrarily large Rokhlin towers, in particular every free action, whether ergodic or not; the discrete constant has matching two-sided order. For \\(n\\geq2\\), this exponent is smaller than the cited Euclidean exponent \\(2/(n+1)\\), a discrepancy attributed to a lattice first-layer effect. Discrete constants dominate Euclidean counterparts, and strong maximal constants agree between ergodic and Euclidean settings for every free action.",
+        "methods": [
+          "Rokhlin towers.",
+          "Analysis of the lattice first-layer effect; further proof details are not specified in the abstract."
+        ],
+        "context": "Measure-preserving actions and discrete/ergodic maximal operators.",
+        "keywords": [
+          "commuting actions",
+          "Rokhlin towers",
+          "Solyanik estimates",
+          "Hardy–Littlewood maximal operator"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.41603",
+        "versioned_id": "2610.41603v1",
+        "title": "Worst-Case Relative Growth of Functionally Generated Portfolios under Restricted Market-Weight Dynamics",
+        "authors": [
+          "Jilong Xu",
+          "Xiaojun Cui"
+        ],
+        "abstract": "We study the worst-case relative growth rate of a fixed functionally generated portfolio under restrictions on market-weight dynamics over a compact convex market state space. For a nonempty compact forward shift-invariant path family, the pathwise wealth decomposition identifies the global rate with the minimum invariant average of the one-step $L$-divergence. For paths generated by a compact one-step transition relation, this rate is also the minimum over balanced transition measures, and a minimizing measure can be chosen on one relation basic set. For a fixed initial state, we study the lower limit of the minimum average $L$-divergence over the first $t$ periods as $t\\to\\infty$. We represent this value using empirical transition laws generated from that state. Their common state marginals are supported on chain-recurrent states that are chain-accessible from the initial state. The lower bound is obtained by minimizing the average $L$-divergence over balanced transition measures on chain-accessible basic sets. Finite exact reachability gives an upper bound. Examples show that both bounds can be strict. We also give a finite exact reachability condition under which the minimum average $L$-divergence over the first $t$ periods converges for paths confined to a basic set.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2610.41603",
+        "pdf_url": "https://arxiv.org/pdf/2610.41603"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Invariant averages, shift-invariant path spaces and chain-recurrent basic sets provide substantive dynamical connections.",
+        "tldr": "Worst-case portfolio growth over the stated compact path families is represented by minimizing invariant averages, with distinct lower and upper bounds from a fixed initial state.",
+        "problem": "Describe global and fixed-initial-state worst-case relative growth for a fixed functionally generated portfolio under restricted market-weight dynamics.",
+        "main_result": "On a nonempty compact forward shift-invariant path family, the global rate is the minimum invariant average of one-step L-divergence. For a compact one-step transition relation, it is also the minimum over balanced transition measures, with a minimizer on one relation basic set. From a fixed initial state, empirical transition laws represent the lower-limit value and have common marginals supported on chain-recurrent states chain-accessible from that state. Minimization on accessible basic sets gives a lower bound, finite exact reachability an upper bound, and examples make both strict; a further finite exact reachability condition ensures convergence within a basic set, but its precise form is not specified in the abstract.",
+        "methods": [
+          "Pathwise wealth decomposition.",
+          "Invariant averages, balanced transition measures and empirical transition laws.",
+          "Chain recurrence and finite exact reachability."
+        ],
+        "context": "Constrained path dynamics, invariant optimization and portfolio-growth modeling.",
+        "keywords": [
+          "invariant averages",
+          "chain recurrence",
+          "balanced transition measures",
+          "shift-invariant paths"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.41794",
+        "versioned_id": "2610.41794v1",
+        "title": "A note on surjective endomorphisms of Smale spaces",
+        "authors": [
+          "Tullio Ceccherini-Silberstein",
+          "Michel Coornaert"
+        ],
+        "abstract": "We give conditions that are all equivalent to surjectivity for endomorphisms of irreducible Smale spaces. This extends results previously obtained by Hedlund~\\cite{hedlund-endomorphisms} for full shifts, by Coven and Paul and by Lind and Marcus for irreducible subshifts of finite type.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2610.41794",
+        "pdf_url": "https://arxiv.org/pdf/2610.41794"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Smale-space endomorphisms and extensions of shift results directly match topological and symbolic dynamics.",
+        "tldr": "The authors characterize surjectivity of endomorphisms of irreducible Smale spaces by equivalent conditions.",
+        "problem": "Extend surjectivity criteria known for full shifts and irreducible shifts of finite type to irreducible Smale spaces.",
+        "main_result": "Several conditions are proved equivalent to surjectivity for endomorphisms of irreducible Smale spaces. The conditions themselves are not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Smale spaces, full shifts and irreducible shifts of finite type.",
+        "keywords": [
+          "Smale spaces",
+          "surjectivity",
+          "endomorphisms",
+          "shifts of finite type"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.41930",
+        "versioned_id": "2610.41930v1",
+        "title": "Nonequilibrium Transient Centers in Continuous-Time Systems",
+        "authors": [
+          "Anthony Pasion",
+          "Felicia Magpantay"
+        ],
+        "abstract": "Analysis of mathematical models in ecology and epidemiology often emphasizes asymptotic dynamics, such as stable equilibria, periodic orbits, and attractors. However, many biologically relevant trajectories exhibit long transient dynamics in which a relevant observable evolves slowly for an extended period before a comparatively rapid transition occurs. On finite time scales relevant to data collection, management, and intervention, such transient behavior can be more informative than the eventual asymptotic outcome. In this work, we study long-lasting and slowly varying transient dynamics in continuous-time systems through the framework of nonequilibrium transient centers. These centers are points in the state space near which the observable can remain nearly constant for a long time, even when the full state is not near an equilibrium. We develop finite-time escape criteria for identifying such centers and their reachable counterparts. These criteria provide practical conditions under which nearby trajectories can remain in a slow regime for a long period of time before eventually leaving it. We apply the theory to an epidemic model with delay of stability loss. In this model, trajectories may remain close to the disease-free manifold for a long time before the infectious population resurges. The framework developed here describes this behavior as slow evolution near a nonequilibrium transient center followed by finite-time escape from the slow regime.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "q-bio.PE"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2610.41930",
+        "pdf_url": "https://arxiv.org/pdf/2610.41930"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Finite-time transient criteria in ecological and epidemic models are central, without the strongest profile themes stated.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.41973",
+        "versioned_id": "2610.41973v1",
+        "title": "Limit theorems for cuspidal orbits on Fuchsian groups",
+        "authors": [
+          "Sandro Bettin",
+          "Sary Drappeau",
+          "Jungwon Lee"
+        ],
+        "abstract": "Let $\\Gamma\\subset \\operatorname{SL}(2, \\mathbb{R})$ be discrete, co-finite with cusps, and let ${\\frak b}\\in \\mathbb{R}\\cup\\{\\infty\\}$ be a cusp of $\\Gamma$. Let $f: \\Gamma{\\frak b} \\to \\mathbb{R}$ be a quantum modular form in the sense that the maps $$ \\phi_\\gamma(x) = f(x) - f(\\gamma x) \\qquad (x\\in \\Gamma{\\frak b}, \\gamma \\in \\Gamma) $$ extend to H\\\"older-regular functions. Under bounded moments assumptions of the shape $\\sum_n n^{-2} \\int |\\phi_{\\gamma^n}(x)|^\\alpha d x < \\infty$ for some $\\alpha>0$ and every fixed parabolic element $\\gamma\\in \\Gamma$, we prove asymptotic formulas for the characteristic functions of the values $f(x)$ for $x\\in \\Gamma{\\frak b}$, ordered by growing denominators. These yield Gaussian limits when $\\alpha>2$ and other stable limit laws under suitable further assumptions. This generalizes to Fuchsian groups the work of Baladi-Vall\\'ee on rational orbits of the Gauss map. In companion papers, we use this result, and in particular its flexible assumptions on $\\phi_\\gamma$, to deduce limit theorems for automorphic $L$-series at the central point. One ingredient in our proof is a particular cuspidal acceleration of the Bowen-Series map, whose inverse branches admit a convenient parametrization, and for which we describe explicitly a natural extension.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2610.41973",
+        "pdf_url": "https://arxiv.org/pdf/2610.41973"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Fuchsian-group orbits and explicit Bowen–Series coding connect directly to group actions and symbolic dynamics.",
+        "tldr": "For quantum modular forms on cuspidal Fuchsian-group orbits, the authors derive characteristic-function asymptotics and limit laws under Hölder and moment assumptions.",
+        "problem": "Study values on a cusp orbit ordered by growing denominators for a discrete cofinite subgroup of the real special linear group in dimension two.",
+        "main_result": "The defects between a quantum modular form and its translates must extend Hölder regularly. Under the stated weighted bounded-moment assumptions for every fixed parabolic element, characteristic-function asymptotics follow. A moment exponent greater than two yields Gaussian limits; other stable laws require suitable further assumptions, which are not specified in the abstract. Applications to central automorphic L-values are described as work in companion papers.",
+        "methods": [
+          "A cuspidal acceleration of the Bowen–Series map.",
+          "Convenient parametrization of inverse branches and an explicit natural extension."
+        ],
+        "context": "Cuspidal group orbits, symbolic interval coding and arithmetic limit theorems.",
+        "keywords": [
+          "Fuchsian groups",
+          "Bowen–Series map",
+          "cuspidal orbits",
+          "quantum modular forms",
+          "limit laws"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.42083",
+        "versioned_id": "2610.42083v1",
+        "title": "Long-time stochasticity for periodic iterations of random surface maps",
+        "authors": [
+          "Dmitry Dolgopyat",
+          "Bassam Fayad",
+          "Alexey Okunev"
+        ],
+        "abstract": "Let $M$ be a closed Riemannian surface, and let $f_1,\\ldots,f_s$ be area-preserving $C^2$ diffeomorphisms with fixed positive probabilities such that the resulting random dynamical system is uniformly expanding on average. For each $n$, choose $\\omega_1,\\ldots,\\omega_n$ independently according to these probabilities and set $F=f_{\\omega_n}\\circ\\cdots\\circ f_{\\omega_1}$. We prove that there exists $\\alpha>0$ such that, with probability at least $1-e^{-\\alpha n}$, the correlations of any two H\\\"older observables $\\phi,\\psi$ under $F^m$ are bounded by $e^{-\\alpha n}\\|\\phi\\|_{C^\\beta}\\|\\psi\\|_{C^\\beta}$, for all $m\\leq e^{\\alpha n}$. These estimates imply a law of large numbers and a central limit theorem for the Birkhoff sums along $F$ of any zero-mean H\\\"older observable $\\phi$, for exponentially long times in $n$. The limiting Gaussian has variance $\\int_M\\phi^2\\,d\\mathrm{vol}$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2610.42083",
+        "pdf_url": "https://arxiv.org/pdf/2610.42083"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Random area-preserving surface maps, average expansion and correlation decay provide a strong ergodic-dynamics connection.",
+        "tldr": "Random long compositions of area-preserving surface diffeomorphisms retain stochastic-like correlation and Birkhoff-sum behavior under periodic iteration for exponentially long times.",
+        "problem": "Quantify long-time statistics when one independently sampled composition is then iterated periodically.",
+        "main_result": "For area-preserving \\(C^2\\) diffeomorphisms of a closed Riemannian surface with fixed positive sampling probabilities and uniform expansion on average, some \\(\\alpha>0\\) gives, with probability at least \\(1-e^{-\\alpha n}\\), correlation bounds \\(e^{-\\alpha n}\\|\\phi\\|_{C^\\beta}\\|\\psi\\|_{C^\\beta}\\) for the stated Hölder observables throughout the stated range \\(m\\leq e^{\\alpha n}\\). The authors derive a law of large numbers and central limit theorem for zero-mean Hölder Birkhoff sums over exponentially long times; the limiting Gaussian variance is \\(\\int_M\\phi^2\\,d\\mathrm{vol}\\). The precise asymptotic formulation is not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Random smooth surface dynamics, correlations and long-time ergodic statistics.",
+        "keywords": [
+          "random surface maps",
+          "correlation decay",
+          "average expansion",
+          "central limit theorem"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.40984",
+        "versioned_id": "2610.40984v1",
+        "title": "RC Prediction: A Python Package for Parameter-Aware Reservoir Computing",
+        "authors": [
+          "Jin-Cheng Rao",
+          "Zheng-Meng Zhai",
+          "Ying-Cheng Lai"
+        ],
+        "abstract": "A nonlinear dynamical system can be characterized by the autonomous evolution of its state in time and its dependence on system parameters. As a parameter varies, the dynamics can change quantitatively and, at bifurcation points, qualitatively. When the governing equations are unknown, a data-driven model should therefore capture both elements from observational data, rather than reproduce the dynamics at a single operating condition only. Parameter-aware reservoir computing (PARC) is a model-free framework for this purpose, where the parameter is supplied to a reservoir computer through an additional input channel. PARC is trained on time series recorded at several parameter values, and the trained reservoir, run in closed loop as an autonomous dynamical system, generates trajectories at parameter values that were never observed. rc_prediction is an open-source Python package that implements this workflow. It provides multi-parameter training of a reservoir, autonomous closed-loop prediction at user-specified parameter values, parameter scans, and a standard echo state network for forecasting at a fixed parameter. Hyperparameter optimization and optional GPU acceleration through PyTorch are also provided. We use three benchmark dynamical systems as examples to demonstrate its usage. As one of the featured applications, here we illustrate the prediction of critical transitions and system collapse: trained only on pre-critical data, the model is queried beyond the training range to predict whether the system collapses, to estimate the critical parameter $p_c^{*}$, and to characterize transient lifetimes.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.LG",
+          "cs.SY",
+          "eess.SY",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2610.40984",
+        "pdf_url": "https://arxiv.org/pdf/2610.40984"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Reservoir-computing software and parameter-dependent forecasting dominate, without a central entropy, fractal, symbolic or group-action result.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.41013",
+        "versioned_id": "2610.41013v1",
+        "title": "Functorial Analysis of Group-Alphabet Cellular Automata",
+        "authors": [
+          "Fran\\c{c}ois Huard",
+          "Nathan Dion Larivi\\`ere"
+        ],
+        "abstract": "Let $G$ be a group and let $n\\in\\mathbb N$. We consider one-dimensional cellular automata of length $n$ over the alphabet $G$, with periodic boundary conditions and with local rules $\\phi$ given by words. We construct a functor $F$ from $\\mathbf{Grp}$, the category of groups (or any similar algebraic structure), to the category of pointed digraphs, and show its faithfulness. We introduce the image category $\\mathcal C_{n,\\phi}$ of state transition graphs of all such group-alphabet cellular automata, and show $F$ is an equivalence onto this category. Consequently we investigate the translation of categorical structures in $\\mathbf{Grp}$ in terms of automata, and give examples of how standard methods of homological algebra may now be applied to automata. Additionally, a graph-theoretical construction of the product in $\\mathcal C_{n,\\phi}$ is given, together with a formula for cycle lengths and multiplicities in this product. When $G$ is abelian, further structural properties of state transition graphs follow, and we contrast these results with non-abelian counterexamples.",
+        "announce_type": "cross",
+        "categories": [
+          "math.GR",
+          "cs.FL",
+          "math.CO",
+          "math.CT",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2610.41013",
+        "pdf_url": "https://arxiv.org/pdf/2610.41013"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Algebraic cellular automata and their state-transition structure directly match symbolic dynamics.",
+        "tldr": "Group-alphabet cellular automata with word rules yield a faithful functor equivalent onto the category of their state-transition graphs.",
+        "problem": "Translate group-category structures into finite-length one-dimensional periodic cellular automata.",
+        "main_result": "For a group alphabet, fixed length and word local rule, the constructed functor from groups to pointed digraphs is faithful and an equivalence onto its image category. The paper gives a graph construction of products there and a formula for cycle lengths and multiplicities, although the formula is not specified in the abstract. Abelian alphabets give further graph structure, contrasted with nonabelian counterexamples.",
+        "methods": [
+          "Functorial translation from groups to automaton transition graphs.",
+          "Standard homological-algebra methods and a graph-theoretic product construction."
+        ],
+        "context": "Group-alphabet cellular automata and categorical dynamical structure.",
+        "keywords": [
+          "cellular automata",
+          "group alphabets",
+          "state-transition graphs",
+          "category equivalence",
+          "cycle lengths"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.41243",
+        "versioned_id": "2610.41243v1",
+        "title": "Generative SDEs with Trainable Diffusion and Density-Based Losses",
+        "authors": [
+          "Angxiu Ni"
+        ],
+        "abstract": "We develop a divergence-kernel method for jointly optimizing neural SDE drift and diffusion fields and the initial Gaussian distribution, using losses that depend directly on the terminal density. In two- and eight-dimensional Gaussian-mixture experiments, we learn time-independent fields and obtain far fewer off-mode samples than score-based generators with similar parameter counts. The drift attracts samples toward the modes, while the diffusion helps disperse excess probability between them.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.LG",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2610.41243",
+        "pdf_url": "https://arxiv.org/pdf/2610.41243"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Training generative neural SDEs is central, without a stated connection to the strongest dynamical interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.41312",
+        "versioned_id": "2610.41312v1",
+        "title": "A Model for Fast Mining Blockchains",
+        "authors": [
+          "Rhys Bowden",
+          "Cengiz Gazi",
+          "Jan de Gier",
+          "Peter Taylor"
+        ],
+        "abstract": "We study a Markovian model for a blockchain mining process. In the limit where there is an infinite number of miners, the model satisfies a functional law of large numbers due to Barbour and Luczac (2008), leading to an infinite set of coupled ODEs characterising the blockchain heights. We show that the sequence of solutions to this system converges uniformly, to a limiting profile in an appropriate comoving frame. Utilising asymptotic arguments inspired by Brunet and Derrida (1997), we derive an explicit expression for the position of the travelling front, which exhibits a leading order logarithmic Bramson correction in time. For a finite number of miners, we further derive a correction to the travelling speed which is logarithmic in the number of miners. Finally, by application of a computation due to Ablowitz and Zeppetella (1979), we identify that, for a specific choice of the travelling speed, the Painlev\\'e integrable, travelling wave solution of the Fisher-KPP equation with drift accurately matches our limiting profile. Our results are supported by numerical simulations.",
+        "announce_type": "cross",
+        "categories": [
+          "math.PR",
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2610.41312",
+        "pdf_url": "https://arxiv.org/pdf/2610.41312"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "A blockchain-mining model and travelling-front asymptotics dominate, without central profile themes.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2610.41417",
+        "versioned_id": "2610.41417v1",
+        "title": "IRA Rigidity and boomerang subalgebras of group von Neumann algebras",
+        "authors": [
+          "Tattwamasi Amrutam",
+          "Yair Glasner",
+          "Yair Hartman",
+          "Yongle Jiang"
+        ],
+        "abstract": "We introduce the notion of Boomerang subalgebras of group von Neumann algebras and study their general properties. We show that every Boomerang subalgebra of $L(\\Gamma)$ is the group von Neumann algebra of a Boomerang subgroup when $\\Gamma$ is a countable $C^*$-simple acylindrically hyperbolic group or a finite product of such groups. Consequently, every such group is invariant random algebra (IRA) rigid: every IRA arises as the pushforward of an invariant random subgroup (IRS) under the group von Neumann algebra construction. We also establish IRA rigidity for adjoint $K$-split higher rank $S$-arithmetic groups, as well as for all countable mixed identity-free (MIF) groups and their finite products. Consequently, IRA rigidity holds for countable groups admitting a topologically free minimal extremely proximal action on a compact Hausdorff space with more than two points. The same conclusion holds for countable groups admitting a faithful minimal action of general type on a tree whose induced boundary action is topologically free, and for finite products of groups admitting either of these actions.",
+        "announce_type": "cross",
+        "categories": [
+          "math.OA",
+          "math.DS",
+          "math.FA",
+          "math.GN",
+          "math.GR"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2610.41417",
+        "pdf_url": "https://arxiv.org/pdf/2610.41417"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Topologically free proximal and tree-boundary actions are explicit central links to group-action dynamics.",
+        "tldr": "The authors prove invariant-random-algebra rigidity for several classes of countable groups and derive consequences from topological group actions.",
+        "problem": "Determine when invariant random von Neumann subalgebras arise from invariant random subgroups and identify Boomerang subalgebras.",
+        "main_result": "For countable C*-simple acylindrically hyperbolic groups and finite products of such groups, every Boomerang subalgebra is the group von Neumann algebra of a Boomerang subgroup, implying IRA rigidity. Rigidity also holds for the stated adjoint split higher-rank S-arithmetic groups and all countable mixed identity-free groups and their finite products. Consequences cover groups admitting topologically free minimal extremely proximal actions on compact Hausdorff spaces with more than two points, or faithful minimal general-type tree actions with topologically free boundary action, including the specified finite products.",
+        "methods": [
+          "Boomerang subalgebras of group von Neumann algebras.",
+          "Topological proximal and tree-boundary actions in the stated consequences."
+        ],
+        "context": "Group-action rigidity, invariant random subgroups and operator algebras.",
+        "keywords": [
+          "IRA rigidity",
+          "Boomerang subalgebras",
+          "extremely proximal actions",
+          "tree-boundary actions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2509.24754",
+        "versioned_id": "2509.24754v2",
+        "title": "One-sided Hom shifts",
+        "authors": [
+          "Marie-Pierre B\\'eal",
+          "Alexi Block Gorman"
+        ],
+        "abstract": "We prove that it is decidable whether a one-sided shift of finite type is conjugate to a one-sided Hom-shift, and whether a tree-shift of finite type is conjugate to a Hom tree-shift. The proof uses Williams's theory for one-sided shifts",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cs.FL",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2509.24754",
+        "pdf_url": "https://arxiv.org/pdf/2509.24754"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Conjugacy and decidability for shifts of finite type are central symbolic-dynamics topics.",
+        "tldr": "It is decidable whether a one-sided shift of finite type is conjugate to a one-sided Hom-shift, with an analogous result for tree shifts.",
+        "problem": "Recognize conjugacy to Hom-shifts in one-sided and tree settings.",
+        "main_result": "The authors prove decidability for one-sided shifts of finite type and for tree-shifts of finite type being conjugate to the corresponding Hom-shifts. The algorithm and criterion are not specified in the abstract.",
+        "methods": [
+          "Williams’s theory for one-sided shifts."
+        ],
+        "context": "Conjugacy and algorithmic problems in symbolic and tree dynamics.",
+        "keywords": [
+          "one-sided shifts",
+          "Hom-shifts",
+          "tree shifts",
+          "decidability",
+          "conjugacy"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2512.21208",
+        "versioned_id": "2512.21208v4",
+        "title": "A Learning Stability Profile for Finite-Dimensional Learning Dynamics",
+        "authors": [
+          "Ronald Katende"
+        ],
+        "abstract": "We develop a finite-dimensional sensitivity framework for studying stability in learning systems whose states include representations, parameters, and update variables. The central object is the \\emph{Learning Stability Profile}, a collection of directional sensitivity operators that records how perturbations in inputs, parameter initialization, and update mechanisms propagate along a specified learning trajectory. The main result is a Lyapunov criterion for controlling this profile. Under explicit regularity, coercivity, and dissipation assumptions, an incremental Lyapunov energy yields uniform or exponentially decaying bounds on the associated linearized transition operators. The result is stated as a sufficient stability criterion, not as an unconditional converse theorem. The framework also distinguishes terminal decay, profile-wise boundedness, and subexponential growth, avoiding the identification of nonpositive growth exponents with uniform boundedness. The profile is then specialized to several standard learning mechanisms. Spectral bounds give forward sensitivity estimates for feedforward networks. Dissipativity and step-size restrictions give stability bounds for residual architectures. Mean-square contraction assumptions yield parameter and update sensitivity bounds for stochastic gradient methods. Locally Lipschitz systems, including piecewise-linear networks, proximal maps, projected updates, and recurrent or state-space recursions, are handled through Clarke generalized Jacobians and variational Lyapunov inequalities. The resulting framework provides a common stability language for architecture, optimization, stochasticity, and nonsmoothness. Its role is structural: it organizes known stability mechanisms within one perturbation calculus while keeping the hypotheses needed for each guarantee explicit.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cs.LG",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2512.21208",
+        "pdf_url": "https://arxiv.org/pdf/2512.21208"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Sensitivity bounds for learning trajectories are central, without the strongest dynamical invariants stated.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2602.01136",
+        "versioned_id": "2602.01136v2",
+        "title": "A Unified Matrix-Spectral Framework for Stability and Interpretability in Deep Learning",
+        "authors": [
+          "Ronald Katende"
+        ],
+        "abstract": "We develop a unified matrix-spectral framework for analyzing stability and interpretability in deep neural networks. Representing networks as data-dependent products of linear operators reveals spectral quantities governing sensitivity to input perturbations, label noise, and training dynamics. We introduce a Global Matrix Stability Index that aggregates spectral information from Jacobians, parameter gradients, Neural Tangent Kernel operators, and loss Hessians into a single stability scale controlling forward sensitivity, attribution robustness, and optimization conditioning. We further show that spectral entropy refines classical operator-norm bounds by capturing typical, rather than purely worst-case, sensitivity. These quantities yield computable diagnostics and stability-oriented regularization principles. Synthetic experiments and controlled studies on MNIST, CIFAR-10, and CIFAR-100 confirm that modest spectral regularization substantially improves attribution stability even when global spectral summaries change little. The results establish a precise connection between spectral concentration and analytic stability, providing practical guidance for robustness-aware model design and training.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cs.LG",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2602.01136",
+        "pdf_url": "https://arxiv.org/pdf/2602.01136"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Neural-network stability and spectral entropy are central; the abstract does not identify dynamical entropy or thermodynamic formalism.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2604.14071",
+        "versioned_id": "2604.14071v2",
+        "title": "Finite-Step Bounds for Iterated Correlation Matrices",
+        "authors": [
+          "Ishrak AlhajjHassan (University of Ostrava)"
+        ],
+        "abstract": "We establish finite-step probabilistic upper bounds on the contraction ratios $\\rho_k = \\Delta_{k+1}/\\Delta_k$ for iterated Pearson correlation dynamics. Let $(P_k)_{k\\ge 0}$ be the sequence generated by the Pearson update. Define $\\Delta_k := \\|P_{k+1}-P_k\\|_F$, $\\rho_k := \\Delta_{k+1}/\\Delta_k$ for $\\Delta_k > 0$, and $\\delta_k := \\Delta_k/n$. Although $\\Delta_k \\to 0$ along convergent trajectories, the ratios $\\rho_k$ may exceed unity in finitely many steps. This behavior is invisible to local linearization. Our main contribution is a probabilistic bounding framework that captures these finite-step expansions. We initialize $P_0$ with i.i.d. $\\mathcal{U}[-1,1]$ entries and let $\\mathbb{P}$ be the induced measure. For $k \\ge 2$, we construct state-dependent bounds $B_p : \\mathbb{R}_+ \\to \\mathbb{R}_+$ satisfying $\\mathbb{P}(\\rho_k \\le B_p(\\delta_k)) \\ge p$. The functions $B^{\\mathrm{q}}_p(\\delta)$ are empirical conditional $p$-quantiles of $\\log \\rho_k$ given $\\delta_k$ under logarithmic binning. Larger families $B^{\\mathrm{TC}}_{p,\\tau}(\\delta)$ and $B^{\\mathrm{tol}}_{p,\\tau}(\\delta)$ are obtained via multiplicative adjustments, yielding pointwise larger bounds that preserve the $\\delta$-dependence. Validation on held-out trajectories confirms the bounds hold with empirical coverage matching nominal levels for all $n \\in [3,2000]$. The baseline $0.95$-quantile bound $B^{\\mathrm{q}}_{0.95}(\\delta)$ yields two concrete results: $\\mathbb{P}(\\rho \\le 1 \\mid \\delta \\le 0.03) \\ge 0.95$ uniformly in $n$, and $\\mathbb{P}(\\rho \\le 1.7) \\ge 0.95$ for 21 of 22 dimensions. The exception $n = 69$ attains $2.35$, revealing a rare extreme upper tail discontinuity not captured by asymptotic analysis. These are the first finite-step probabilistic bounds for Pearson correlation dynamics. The framework is fully reproducible with provided code and data.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.ST",
+          "math.DS",
+          "stat.TH"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2604.14071",
+        "pdf_url": "https://arxiv.org/pdf/2604.14071"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Empirical finite-step correlation-matrix bounds dominate, without a stated central entropy, fractal, symbolic or group-action theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2605.10931",
+        "versioned_id": "2605.10931v2",
+        "title": "Quantifying Concentration Phenomena of Mean-Field Transformers in the Low-Temperature Regime",
+        "authors": [
+          "Albert Alcalde",
+          "Leon Bungert",
+          "Konstantin Riedl",
+          "Tim Roith"
+        ],
+        "abstract": "Transformers with self-attention modules as their core components have become an integral architecture in modern large language and foundation models. In this paper, we study the evolution of tokens in deep encoder-only transformers at inference time which is described in the large-token limit by a mean-field continuity equation. Leveraging ideas from the convergence analysis of interacting multi-particle systems, with particles corresponding to tokens, we prove that the token distribution rapidly concentrates onto the push-forward of the initial distribution under a projection map induced by the key, query, and value matrices, and remains metastable for moderate times. Specifically, we show that the Wasserstein distance of the two distributions scales like $\\sqrt{{\\log(\\beta+1)}/{\\beta}}\\exp(Ct)+\\exp(-ct)$ in terms of the temperature parameter $\\beta^{-1}\\to 0$ and inference time $t\\geq 0$. For the proof, we establish Lyapunov-type estimates for the zero-temperature equation, identify its limit as $t\\to\\infty$, and employ a stability estimate in Wasserstein space together with a quantitative Laplace principle to couple the two equations. Our result implies that for time scales of order $\\log\\beta$, which correspond to the early-phase behavior most relevant for practical finite-depth models, the token distribution concentrates at the identified limiting distribution. Numerical experiments confirm this and, beyond that, complement our theory by showing that for finite $\\beta$ and large $t$ the dynamics enter a different terminal phase, dominated by the spectrum of the value matrix.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.AP",
+          "cs.LG",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2605.10931",
+        "pdf_url": "https://arxiv.org/pdf/2605.10931"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Mean-field transformer concentration is central; low-temperature terminology alone does not establish a thermodynamic-formalism connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2605.13504",
+        "versioned_id": "2605.13504v3",
+        "title": "Structural identifiability of partially-observed stochastic processes: from single-particle trajectories to total particle density data",
+        "authors": [
+          "Arianna Ceccarelli",
+          "Alexander P. Browning",
+          "Ruth E. Baker"
+        ],
+        "abstract": "The increasing availability of experimental data has intensified interest in calibrating stochastic models, raising fundamental questions about parameter identifiability. Structural identifiability determines whether parameters can be uniquely recovered from idealised data, a prerequisite to allow for parameter estimation in real-world scenarios. However, there is a lack of methodologies generally applicable to analyse the structural identifiability of such stochastic processes. Therefore, we develop a methodology for a class of spatio-temporal stochastic processes. We investigate how structural identifiability depends on the type of available data, distinguishing between single-particle trajectories and total particle density measurements. For trajectory data, we use a particle-based description that explicitly represents single-particle dynamics. For population-level data, we derive a partial differential equation representation, that describes the evolution of total particle density, and apply a differential algebra approach, common to ordinary differential equation analysis. We further introduce Taylor-series-expansion and Fourier-transform approaches to study the initial condition. We apply our methodology to an example model with a specified class of initial conditions. We show that the model is globally structurally identifiable given infinitely many, infinitely long single-particle trajectories, but only locally structurally identifiable from total particle density data, demonstrating that parameter identifiability depends on the type of data available.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "stat.ME",
+          "math.AP",
+          "math.DS",
+          "math.PR",
+          "q-bio.QM"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2605.13504",
+        "pdf_url": "https://arxiv.org/pdf/2605.13504"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Parameter identifiability for stochastic process models is central, without the strongest research themes stated.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2605.16096",
+        "versioned_id": "2605.16096v3",
+        "title": "Intrinsic uniform structure on median algebras",
+        "authors": [
+          "Michael Megrelishvili"
+        ],
+        "abstract": "We introduce the median uniformity $\\mathcal U_{\\mathrm m}$, an intrinsic precompact convex uniform structure on a median algebra. It is Hausdorff under natural assumptions, for instance for finite-rank median algebras. In the Hausdorff case, its uniform completion yields the Minimal Median Compactification (MMC). The induced topology $\\tau_{\\mathrm m}$ provides a natural higher-rank analogue of the interval topology on linearly ordered sets and of the shadow topology on rank-one median algebras. When the intrinsic topology $\\tau_{\\mathrm m}$ is Hausdorff and all intervals are compact, the MMC is the unique proper median compactification and is canonically isomorphic to the Roller--Fioravanti compactification. We apply this uniform framework to continuous actions of a topological group $G$ by median automorphisms. We show that the MMC is a median $G$-compactification. In the finite-rank case, the resulting compact $G$-system is Rosenthal representable and dynamically tame.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.GN",
+          "math.DS",
+          "math.FA"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2605.16096",
+        "pdf_url": "https://arxiv.org/pdf/2605.16096"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Compact group systems, tame dynamics and equivariant compactifications directly match topological dynamics and group actions.",
+        "tldr": "An intrinsic median uniformity yields a minimal median compactification, with equivariant and tame-dynamics consequences for continuous group actions.",
+        "problem": "Construct and characterize an intrinsic uniform structure and compactification on median algebras and apply them to median-automorphism actions.",
+        "main_result": "The median uniformity is precompact and convex, and Hausdorff under natural assumptions including finite rank. In the Hausdorff case its completion is the Minimal Median Compactification. When the intrinsic topology is Hausdorff and all intervals are compact, this is the unique proper median compactification and canonically the Roller–Fioravanti compactification. For continuous topological-group actions by median automorphisms it is a median group compactification; in finite rank the resulting compact group system is Rosenthal representable and dynamically tame.",
+        "methods": [
+          "Intrinsic median uniformity and uniform completion."
+        ],
+        "context": "Median algebras, compactifications and tame topological group systems.",
+        "keywords": [
+          "median uniformity",
+          "median compactification",
+          "group actions",
+          "tame dynamics",
+          "Rosenthal representability"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2608.16120",
+        "versioned_id": "2608.16120v2",
+        "title": "When more data become less informative: Finite-precision periodicization and collapse of forecast-error Lyapunov estimates",
+        "authors": [
+          "Andrei Velichko",
+          "Viet-Thanh Pham"
+        ],
+        "abstract": "Equation-free forecast-error analysis is useful when governing equations, Jacobians, tangent dynamics, or full state vectors are unavailable and only scalar time series are observed. In this setting, the multi-horizon forecast-error curve can provide both an instability estimate and nonlinear predictive features, making its numerical reliability important. We show that long finite-precision chaotic records can enter an information-saturation regime in which increasing record length N (the total number of analyzed samples) adds repeated histories rather than new dynamical information. For the float32 logistic map, exact recurrence progressively fills the training catalogue with duplicate histories and identical futures, suppressing forecast-error growth and driving the estimated Lyapunov slope toward zero. Across 10,000 initial conditions, exact recurrence occurred by iteration 7612; across 28 stratified seeds, collapse onset strongly followed the recurrence-occupancy scale. A two-dimensional H\\'enon-map control confirms that recurrence and estimator failure are separate events: the float32 trajectory enters an exact machine-state cycle after a transient of $\\mu = 103,039$ samples, with cycle period P = 12,268, yet the forecast-error estimate remains close to the positive Jacobian/QR reference until catalogue saturation near N = 200,000. Casting an already generated float32 record to float64 does not restore lost information, whereas genuine float64 generation, restarted short trajectories, and one-ULP perturbations prevent collapse over the tested range. A recursive local-linear predictor exhibits the same endpoint at a later, predictor-dependent threshold. The results identify a recurrence-to-catalogue-saturation failure mode specific to forecast-error/analogue inference rather than Lyapunov estimation in general.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "nlin.CD",
+          "math.DS",
+          "physics.comp-ph"
+        ],
+        "announced_at": "2026-11-02T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2608.16120",
+        "pdf_url": "https://arxiv.org/pdf/2608.16120"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Recurrence and numerical inference of instability in chaotic maps provide a relevant methodological connection, without a new entropy invariant.",
+        "tldr": "Finite-precision recurrence can saturate analogue-history catalogues and collapse forecast-error Lyapunov slopes, while recurrence alone need not cause immediate estimator failure.",
+        "problem": "Distinguish exact numerical recurrence from information saturation and estimator collapse in long finite-precision chaotic time series.",
+        "main_result": "For the float32 logistic map, exact recurrences duplicate histories and futures, suppressing forecast-error growth; across 10,000 initial conditions recurrence occurred by iteration 7612. In a float32 Hénon control, the transient is 103,039 samples and cycle period 12,268, yet the forecast-error estimate stays near the positive Jacobian/QR reference until catalogue saturation near 200,000 samples. Casting float32 data to float64 does not recover lost information; genuine float64 generation, restarted short trajectories and one-ULP perturbations prevent collapse over the tested range. The conclusion concerns forecast-error/analogue inference rather than Lyapunov estimation generally.",
+        "methods": [
+          "Multi-horizon forecast-error analysis.",
+          "Logistic and Hénon numerical controls; recurrence-occupancy comparisons.",
+          "Jacobian/QR references and a recursive local-linear predictor."
+        ],
+        "context": "Finite-precision chaotic dynamics and numerical reliability of instability inference.",
+        "keywords": [
+          "finite precision",
+          "recurrence",
+          "catalogue saturation",
+          "Lyapunov estimation",
+          "chaotic maps"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 7,
+    "RELATED / POSSIBLY INTERESTING": 5,
+    "LOW PRIORITY": 9
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-11-02T11:01:35.450214Z",
+      "feed_published_at": "2026-11-02T00:00:00-05:00",
+      "feed_build_at": "2026-11-02T05:00:14Z",
+      "feed_date": "2026-11-02",
+      "sha256": "b08d59ffb7ed215738bfc36569b341c6786f249bed5873edc1ab0821e6c66255",
+      "byte_length": 50132,
+      "capture_run_url": null
+    }
+  ]
+}

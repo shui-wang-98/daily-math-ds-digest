@@ -6666,10 +6666,136 @@
       "versioned_id": "2603.06203v4",
       "announce_type": "replace-cross",
       "analysis_status": "ok"
+    },
+    "2610.40896": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2610.40896v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2610.41151": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2610.41151v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2610.41156": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2610.41156v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2610.41603": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2610.41603v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2610.41794": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2610.41794v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2610.41930": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2610.41930v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2610.41973": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2610.41973v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2610.42083": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2610.42083v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2610.40984": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2610.40984v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2610.41013": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2610.41013v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2610.41243": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2610.41243v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2610.41312": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2610.41312v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2610.41417": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2610.41417v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2509.24754": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2509.24754v2",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2512.21208": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2512.21208v4",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2602.01136": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2602.01136v2",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2604.14071": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2604.14071v2",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2605.10931": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2605.10931v2",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2605.13504": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2605.13504v3",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2605.16096": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2605.16096v3",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2608.16120": {
+      "first_seen_report": "2026-11-02",
+      "versioned_id": "2608.16120v2",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
     }
   },
-  "last_feed_build": "2026-10-30T06:39:20+00:00",
-  "updated_at": "2026-10-30T11:02:56.652728+00:00",
+  "last_feed_build": "2026-11-02T05:00:14+00:00",
+  "updated_at": "2026-11-02T11:04:34.343558+00:00",
   "processed_inputs": {
     "2026-09-15/c2ead384a44e73215e6b26a60449e1dc3fbca5cfc22a4cfeea11a9ac47ae2441": {
       "report_date": "2026-09-15",
@@ -6806,6 +6932,10 @@
     "2026-10-30/ba51cf0ac84a3d36f6d5a46dbc70113650d951c843447643b51ee4d117fba30e": {
       "report_date": "2026-10-30",
       "sha256": "ba51cf0ac84a3d36f6d5a46dbc70113650d951c843447643b51ee4d117fba30e"
+    },
+    "2026-11-02/b08d59ffb7ed215738bfc36569b341c6786f249bed5873edc1ab0821e6c66255": {
+      "report_date": "2026-11-02",
+      "sha256": "b08d59ffb7ed215738bfc36569b341c6786f249bed5873edc1ab0821e6c66255"
     }
   }
 }
