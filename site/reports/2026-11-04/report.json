@@ -1,0 +1,1032 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-11-04",
+  "generated_at": "2026-11-04T11:03:56.209114Z",
+  "feed_build_at": "2026-11-04T05:12:26Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 25 unseen announcements: 10 HIGH PRIORITY, 9 RELATED / POSSIBLY INTERESTING, and 6 LOW PRIORITY. Central themes include forbidden-word entropy and maximal-entropy measures, thermodynamic formalism, symbolic automata and substitutions, group actions and operator spectra, and Floer-theoretic entropy. Related work concerns invariant suspension measures, surface dynamics, quantum equidistribution, prime ergodic averages, linear response and transfer operators. No followed-author matches occur in the supplied input; unnamed assumptions and conjectural or numerical conclusions retain their stated limitations.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2611.03701",
+        "versioned_id": "2611.03701v1",
+        "title": "Naturalization of Vinti's intermediary orbit---or how to get rid of small divisors in Brouwer's satellite solution",
+        "authors": [
+          "Martin Lara"
+        ],
+        "abstract": "A naturalization, in the sense of Deprit, of Vinti's dynamical system makes the construction of a first order analytical satellite perturbation solution without critical divisors possible. The process gives hints on how to recast Brouwer's classical solution in a form that is free from small divisors too. The functionality of classical perturbation solutions is in this way extended to the close vicinity of the critical inclination. The new analytical solution bears terms that may grow unbounded, but their negative effects do not disclose in time intervals in which this kind of solution may be useful in practice.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "astro-ph.EP"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.03701",
+        "pdf_url": "https://arxiv.org/pdf/2611.03701"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Satellite perturbation solutions are the central topic; no central entropy, symbolic or fractal connection is stated.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.03711",
+        "versioned_id": "2611.03711v1",
+        "title": "Spectral Dynamics and Fuglede--Kadison Determinants for Wreath Products",
+        "authors": [
+          "Penghui Wang",
+          "Xumin Wang",
+          "Rongwei Yang"
+        ],
+        "abstract": "We investigate connections between operator spectra, complex dynamics, and determinants for wreath product groups. For a nontrivial finite abelian group $G$, the natural action of $G\\wr\\mathbb Z$ on a rooted tree produces a family of operators with a recursive structure. Applying Schur complements to this family yields a rational map on complex projective space. We determine the projective spectrum--the parameter values for which the operator pencil fails to be invertible--as the union of the Julia set of this map and an explicitly described subset of its Fatou set. We also prove that the associated Koopman representation and the left regular representation are weakly equivalent and therefore give the same projective spectrum. We then compute Fuglede--Kadison determinants for a family of operators on more general wreath products. These formulas yield injective operators with zero determinant for wreath products $K\\wr\\mathbb Z$, where $K$ is a discrete group admitting a nontrivial projection $e\\in\\mathbb C[K]$. This answers negatively a question of Li and Thom about whether injectivity implies positive determinant for operators defined by matrices over complex group rings of amenable groups. For $G_{tf}\\rtimes_\\sigma\\mathbb Z$, where $G_{tf}$ is any countable torsion-free abelian group and $\\sigma\\in\\operatorname{Aut}(G_{tf})$, we prove that injectivity does imply positive determinant in every matrix size.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.OA"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.03711",
+        "pdf_url": "https://arxiv.org/pdf/2611.03711"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Wreath-product actions, Koopman representations and their spectra directly connect with group actions.",
+        "tldr": "The authors describe projective spectra through a rational dynamical system and obtain contrasting injectivity–determinant results for wreath products and torsion-free abelian semidirect products.",
+        "problem": "Relate spectra and Fuglede–Kadison determinants of group operators to dynamics and injectivity.",
+        "main_result": "For a nontrivial finite abelian group \\(G\\), the rooted-tree action of \\(G\\wr\\mathbb Z\\) yields a recursive operator family. Its projective spectrum is the union of the associated rational map’s Julia set and an explicitly described Fatou subset. The Koopman and left regular representations are weakly equivalent and have the same projective spectrum. Determinant formulas give injective zero-determinant operators for \\(K\\wr\\mathbb Z\\) when \\(K\\) admits a nontrivial projection in \\(\\mathbb C[K]\\), answering negatively the stated Li–Thom question for amenable groups. For \\(G_{tf}\\rtimes_\\sigma\\mathbb Z\\), with \\(G_{tf}\\) countable torsion-free abelian and \\(\\sigma\\) an automorphism, injectivity implies positive determinant in every matrix size.",
+        "methods": [
+          "Schur complements applied to recursive operator families.",
+          "Rational dynamics on complex projective space."
+        ],
+        "context": "Group actions, operator spectra and complex dynamics.",
+        "keywords": [
+          "wreath products",
+          "projective spectrum",
+          "Koopman representation",
+          "Fuglede–Kadison determinant"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.03745",
+        "versioned_id": "2611.03745v1",
+        "title": "Large deviation of preimages of points under the dynamics of a holomorphic correspondence",
+        "authors": [
+          "Bharath Krishna Seshadri",
+          "Shrihari Sridharan"
+        ],
+        "abstract": "Our main objective in this paper is to prove a large deviation result for the distribution of preimages of a point under the iteration of a holomorphic correspondence with respect to the unique equilibrium state associated to a H\\\"{o}lder continuous potential defined on the support of the Dinh-Sibony measure of the correspondence. As a consequence, we obtain a convergence result which generalises the result on equidistribution of preimages by Dinh and Sibony. We also study a situation where the Dinh-Sibony measure happens to be the unique measure of maximal entropy for an appropriate holomorphic correspondence and also record some comments that connect this work with some recent works in the literature.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.03745",
+        "pdf_url": "https://arxiv.org/pdf/2611.03745"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Equilibrium states, Hölder potentials and maximal entropy are central thermodynamic interests.",
+        "tldr": "The authors prove a preimage large-deviation result relative to an equilibrium state for a holomorphic correspondence and derive a convergence consequence.",
+        "problem": "Study the distribution of iterated preimages and its relation to equilibrium and maximal-entropy measures.",
+        "main_result": "The large-deviation statement concerns the unique equilibrium state of a Hölder continuous potential on the support of the correspondence’s Dinh–Sibony measure. A consequence generalizes Dinh–Sibony preimage equidistribution. The authors also study a situation in which the Dinh–Sibony measure is the unique maximal-entropy measure. The precise large-deviation formulation and the additional correspondence conditions are not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Holomorphic correspondences and thermodynamic formalism.",
+        "keywords": [
+          "preimages",
+          "large deviations",
+          "equilibrium state",
+          "Dinh–Sibony measure"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.03758",
+        "versioned_id": "2611.03758v1",
+        "title": "Generating Forbidden Words and Measures of Maximal Entropy for Subshifts",
+        "authors": [
+          "Xinxing Wu",
+          "Xu Zhang"
+        ],
+        "abstract": "We prove that if the entropy of generating forbidden words of a subshift over a finite alphabet is strictly smaller than its topological entropy, then the subshift has only finitely many ergodic measures of maximal entropy, each of which is Bernoulli up to a finite period, and admits a characteristic measure of maximal entropy. In particular, these conclusions hold when the entropy of minimal forbidden words is strictly smaller than the topological entropy, giving a negative answer to a question of Buzzi.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.03758",
+        "pdf_url": "https://arxiv.org/pdf/2611.03758"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Subshifts, forbidden words and measures of maximal entropy directly match the profile.",
+        "tldr": "A strict entropy gap for generating forbidden words gives finitely many ergodic maximal-entropy measures, each Bernoulli up to finite period.",
+        "problem": "Control maximal-entropy measures of finite-alphabet subshifts through forbidden-word entropy.",
+        "main_result": "If the entropy of generating forbidden words is strictly below the subshift’s topological entropy, the authors prove finiteness of its ergodic maximal-entropy measures, the Bernoulli-up-to-finite-period property for each, and existence of a characteristic maximal-entropy measure. These conclusions also hold when minimal-forbidden-word entropy is strictly below topological entropy, giving the stated negative answer to Buzzi’s question.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Symbolic dynamics and entropy.",
+        "keywords": [
+          "subshifts",
+          "forbidden words",
+          "maximal-entropy measures",
+          "Bernoulli property"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.03863",
+        "versioned_id": "2611.03863v1",
+        "title": "Statistical Stability and Linear Response for Suspension Measures under Base and Roof Perturbations",
+        "authors": [
+          "Aparna Rajput"
+        ],
+        "abstract": "We study the dependence of canonical invariant probability measures of suspension semiflows on simultaneous perturbations of the invariant base density and the roof function. We compare two natural representations of the suspension measure: physical-height coordinates, in which the support depends on the roof function, and normalised-height coordinates, in which all measures are defined on a fixed cylinder. In physical-height coordinates, we obtain an exact fibrewise formula for the $L^1$ discrepancy between suspension densities and derive quantitative total-variation estimates. In normalised-height coordinates, we establish corresponding stability estimates through the product of the base density and the roof function. These results transfer quantitative statistical-stability estimates for the base densities to the associated suspension measures. For one-parameter families whose base densities are differentiable in $L^1$ and whose roof functions are differentiable in $L^\\infty$, we derive an $L^1$ linear-response formula on the fixed cylinder and a bounded-Lipschitz first-variation formula in physical height. The latter contains a signed measure supported on the graph of the unperturbed roof. We further compute the exact first-order total-variation speed and prove that total-variation differentiability holds if and only if the first-order roof velocity vanishes almost everywhere with respect to the unperturbed fibre density. The results are measure-theoretic and do not require spectral or mixing assumptions on the suspension semiflow.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.03863",
+        "pdf_url": "https://arxiv.org/pdf/2611.03863"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Statistical stability and linear response of invariant suspension measures provide a substantial invariant-measure connection.",
+        "tldr": "The authors quantify suspension-measure stability under simultaneous base-density and roof perturbations and characterize total-variation differentiability.",
+        "problem": "Compare perturbations of canonical suspension measures in physical-height and fixed-cylinder representations.",
+        "main_result": "Physical-height coordinates give an exact fibrewise \\(L^1\\) discrepancy formula and total-variation estimates; normalized height gives stability through the product of base density and roof. For one-parameter families with base densities differentiable in \\(L^1\\) and roofs differentiable in \\(L^\\infty\\), the authors obtain fixed-cylinder \\(L^1\\) linear response and a physical-height bounded-Lipschitz first variation containing a signed measure on the unperturbed roof graph. They compute the exact first-order total-variation speed and prove total-variation differentiability exactly when first-order roof velocity vanishes almost everywhere for the unperturbed fibre density. No spectral or mixing assumptions on the suspension semiflow are required.",
+        "methods": [
+          "Physical-height and normalized-height representations.",
+          "Measure-theoretic comparison of suspension densities."
+        ],
+        "context": "Invariant measures of suspension semiflows.",
+        "keywords": [
+          "suspension measures",
+          "statistical stability",
+          "linear response",
+          "total variation"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.04127",
+        "versioned_id": "2611.04127v1",
+        "title": "Algorithmic Non-dimensionalisation of Polynomial Dynamical Systems with CRNNondim",
+        "authors": [
+          "Georgio Hawi",
+          "Martin Wechselberger"
+        ],
+        "abstract": "Although non-dimensionalisation is a fundamental step in modelling, it is rarely obvious, especially for large dynamical systems, how to systematically construct optimal non-dimensionalisations. In this work, we develop a general mathematical framework for non-dimensionalising polynomial ODEs by interpreting them as chemical reaction networks (CRNs) and characterise the space of admissible scalings. Within this viewpoint, admissible scalings of time and species are encoded by Laurent monomials, and we derive exact formulae for the minimal number of multiplicative dimensionless parameters required by the reaction-channel coefficients and by the full initial value problem, together with characterisations of the scale assignments that attain structural lower bounds. These counts are expressed in terms of structural properties of the underlying CRN, and we show that the full initial value problem requires no more parameters than the corresponding Buckingham count. These results lead to constructive algorithms which we analyse rigorously and implement in the open-source Python package CRNNondim, available at https://github.com/georgio-hawi/crnnondim . Given a polynomial system or CRN, CRNNondim determines species and time scalings that bring variables as close to unity as possible while minimising the number of free parameters, and among the admissible scalings it chooses free parameters that result in the corresponding dimensionless system being sparse and simple. We apply CRNNondim to numerous well-known biological and biochemical models, yielding simpler dimensionless systems with fewer free parameters, and interpreting the parameters that govern their dynamics.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.RA"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.04127",
+        "pdf_url": "https://arxiv.org/pdf/2611.04127"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Polynomial-ODE nondimensionalization and biochemical modeling are central, without a stated central connection to the strongest interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.04190",
+        "versioned_id": "2611.04190v1",
+        "title": "Quadratic Hubbard trees, automata, and ray connections",
+        "authors": [
+          "Eduardo Ventilari Sodr\\'e"
+        ],
+        "abstract": "We describe an algorithm that, given a postcritically finite quadratic polynomial, outputs a finite state machine whose regular language is the set of external arguments for all points on the Hubbard tree, generalizing an example of Milnor. We do this by extracting orbit portraits from angled internal addresses, and constructing a suitable Markov partition of angle intervals. A main application is computing direct ray connections between Hubbard trees in matings of quadratic polynomials. We use this to understand ray connections in quadratic matings along veins of the Mandelbrot set, and prove that first ray connections between Hubbard trees are picked up at parabolic parameters or tips of veins.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.04190",
+        "pdf_url": "https://arxiv.org/pdf/2611.04190"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Finite-state coding, regular languages and Markov partitions directly match symbolic dynamics.",
+        "tldr": "An algorithm constructs a finite-state machine encoding Hubbard-tree external arguments for postcritically finite quadratic polynomials and computes mating ray connections.",
+        "problem": "Encode Hubbard trees by automata and locate first ray connections in quadratic matings.",
+        "main_result": "Given a postcritically finite quadratic polynomial, the algorithm outputs a finite-state machine whose regular language is the set of external arguments for all Hubbard-tree points. It computes direct ray connections between Hubbard trees and is applied to matings along Mandelbrot veins. The authors prove that first ray connections are picked up at parabolic parameters or vein tips.",
+        "methods": [
+          "Extraction of orbit portraits from angled internal addresses.",
+          "Markov partitions of angle intervals."
+        ],
+        "context": "Symbolic descriptions of quadratic complex dynamics and matings.",
+        "keywords": [
+          "Hubbard trees",
+          "finite-state machines",
+          "Markov partitions",
+          "ray connections"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.04245",
+        "versioned_id": "2611.04245v1",
+        "title": "Limit cycles of singular algebraic foliations on the real projective plane",
+        "authors": [
+          "Tianwei Gan",
+          "Hongjin He",
+          "Dongmei Xiao"
+        ],
+        "abstract": "In this paper we consider cycles of singular algebraic foliations on the real projective plane. Our first result shows that there exists a limit cycle of singular algebraic foliations such that the limit cycle cannot be realized in any affine chart, that is, it fails to appear in any affine plane via the usual dehomogenization. On the other hand, under an appropriate convexity assumption, we verify that a cycle becomes fully visible, lying entirely in some affine chart. We then analyze the accumulation behavior of limit cycles of singular algebraic foliations on the real projective plane. Last we prove that algebraic foliations of degree at most two on the real projective plane have only finitely many limit cycles, and the maximum number of limit cycle is zero, one and at least six for algebraic foliations of degree zero, one and two on the real projective plane, respectively. This result extends Bamon's finiteness theorem for quadratic affine vector fields in [Publ. Math. IH\\'ES, (64)1986, pp. 111--142].",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CA"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.04245",
+        "pdf_url": "https://arxiv.org/pdf/2611.04245"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "The global visibility and accumulation of projective limit cycles give a topological connection, although entropy and symbolic invariants are not central.",
+        "tldr": "The authors exhibit projective limit cycles absent from every affine chart and prove finiteness for algebraic foliations of degree at most two.",
+        "problem": "Study affine visibility, accumulation and numbers of projective limit cycles.",
+        "main_result": "A limit cycle can fail to lie in any affine chart, whereas an appropriate convexity assumption guarantees full visibility in one chart. The authors analyze accumulation and prove that degrees at most two admit only finitely many limit cycles. The maximal count is zero in degree zero and one in degree one; in degree two it is at least six. The convexity assumption and the detailed accumulation conclusions are not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Singular algebraic foliations on the real projective plane.",
+        "keywords": [
+          "projective foliations",
+          "limit cycles",
+          "affine charts",
+          "finiteness"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.04404",
+        "versioned_id": "2611.04404v1",
+        "title": "Ergodic full measures and entropy spectrum for countable observables on compact spaces",
+        "authors": [
+          "Carllos Eduardo Holanda"
+        ],
+        "abstract": "We investigate conditions and obstructions for the existence of ergodic full measures in the context of countable observables on compact spaces. Extending the theory in a unified way, we are able to show a complete picture via thermodynamic formalism for symbolic, uniformly hyperbolic and related systems. We prove conditional variational principles for the topological entropy, showing good approximations by ergodic full measures, and we give conditions where we precisely get ergodic full measures. In contrast with the case with a finite number of observables, new phenomena appear: we exhibit explicit examples of level sets with a null measure with respect to any invariant measure but having large entropy. On the other hand, based on induced ergodic systems in the sense of Kakutani-Rokhlin and heavily utilizing the formalism for countable Markov shifts, we go beyond the classical thermodynamic approach and show a different way of building ergodic full measures. Additionally, we study the regularity and shape of the entropy spectrum and, in the end, we also give some applications of the main conditional variational principles.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.04404",
+        "pdf_url": "https://arxiv.org/pdf/2611.04404"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Entropy spectra, conditional variational principles and thermodynamic formalism are central.",
+        "tldr": "For countably many observables, the authors study ergodic full measures and entropy spectra, including large-entropy level sets null for every invariant measure.",
+        "problem": "Identify conditions and obstructions for ergodic full measures and describe conditional entropy spectra.",
+        "main_result": "The authors obtain conditional variational principles for topological entropy, approximations by ergodic full measures, and conditions for their existence in symbolic, uniformly hyperbolic and related systems. Unlike finite-observable settings, explicit level sets can have large entropy while being null for every invariant measure. An induced-system approach builds ergodic full measures beyond the classical thermodynamic approach. Regularity and shape of the entropy spectrum are also studied. The specific existence conditions and spectrum regularity statements are not specified in the abstract.",
+        "methods": [
+          "Thermodynamic formalism.",
+          "Kakutani–Rokhlin induced ergodic systems.",
+          "Formalism for countable Markov shifts."
+        ],
+        "context": "Entropy and invariant measures for countable observables.",
+        "keywords": [
+          "ergodic full measures",
+          "entropy spectrum",
+          "conditional variational principle",
+          "countable Markov shifts"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.04530",
+        "versioned_id": "2611.04530v1",
+        "title": "Star-shaped periodic solutions of a system of delay differential equations: A computer-assisted proof",
+        "authors": [
+          "Shoya Motonaga",
+          "Akitoshi Takayasu"
+        ],
+        "abstract": "In this paper, we consider a planar system of nonlinear delay differential equations and prove the existence of the star-shaped periodic solutions conjectured by Hara (Nonlinear Analysis: Theory, Methods \\& Applications, 30:4555--4563 (1997)) for seven parameter values. These solutions cannot be obtained by a direct application of the standard Fourier spectral method, since the corresponding linearized operator is degenerate. From numerical observations of the Fourier coefficients, we derive an ansatz that writes a star-shaped periodic solution as a periodic profile in a rotating frame. Restricting the profile to real Fourier coefficients, we show that the resonance between the delay and the period of the profile fixes the rotation frequency exactly. We then validate a zero of the resulting real system with the radii polynomial approach and interval arithmetic, with bounds that cover all Fourier modes. For each parameter value, we also determine the fundamental period and the winding number of the solution.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.04530",
+        "pdf_url": "https://arxiv.org/pdf/2611.04530"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Computer-assisted periodic solutions of delay equations are central, with no stated central entropy, fractal or symbolic connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.04737",
+        "versioned_id": "2611.04737v1",
+        "title": "Profinite approach to S-adic shift spaces II: Invertible directive sequences",
+        "authors": [
+          "Jorge Almeida",
+          "Alfredo Costa",
+          "Herman Goulet-Ouellet"
+        ],
+        "abstract": "This paper is the second in a series about (relatively) free profinite semigroups and S-adic representations of minimal shifts. The first installment introduced the key notions of profinite images and saturating properties. The present paper examines the relationship between relative invertibility conditions (on a directive sequence) and charging properties (of a shift). The main result shows that the two properties are equivalent under mild conditions. Moreover, charging properties are shown to be equivalent to density of subgroups generated by return words in relatively free profinite groups. The main result can then be used to deduce purely discrete statements about subgroups generated by return words in relatively free groups. We also highlight applications of the main result to the study of maximal bifix decoding, following earlier work by the second author. Finally, we establish some results on the effect of direct images on charging properties and explain how to apply these results to the case of episturmian shifts.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GR"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.04737",
+        "pdf_url": "https://arxiv.org/pdf/2611.04737"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Minimal shifts, return words and profinite representations directly match symbolic dynamics.",
+        "tldr": "The authors relate directive-sequence relative invertibility to charging properties of minimal shifts and to density of return-word subgroups.",
+        "problem": "Connect S-adic representations with charging and return-word subgroup properties.",
+        "main_result": "Under mild conditions, relative invertibility conditions on a directive sequence are equivalent to charging properties of a shift. Charging properties are also equivalent to density of subgroups generated by return words in relatively free profinite groups. The result yields discrete statements for relatively free groups and applications to maximal bifix decoding. The authors additionally study direct images and apply the results to episturmian shifts. The mild conditions are not specified in the abstract.",
+        "methods": [
+          "Relatively free profinite semigroups and groups.",
+          "S-adic representations."
+        ],
+        "context": "Minimal symbolic shifts and return-word subgroups.",
+        "keywords": [
+          "S-adic shifts",
+          "relative invertibility",
+          "charging properties",
+          "return words"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.01350",
+        "versioned_id": "2611.01350v1",
+        "title": "Lehmer's number is not an orientable stretch factor in genus six",
+        "authors": [
+          "Lizi Guo"
+        ],
+        "abstract": "Let $\\lambda_L \\approx 1.17628$ be Lehmer's number. We prove that no pseudo-Anosov homeomorphism of a closed orientable surface of genus six with orientable invariant foliations has stretch factor $\\lambda_L$. This gives a negative answer to a question of Lanneau and Thiffeault on the minimal stretch factor in even genus. As a consequence, the minimal stretch factor $\\delta_6^{+}$ of such maps is the largest root of $x^{12}-x^{9}-x^{7}+x^{6}-x^{5}-x^{3}+1$, approximately $1.20189$. The proof combines the Lefschetz method of Lanneau and Thiffeault, the standardly embedded train tracks of Hironaka and Tsang, an elementary analysis of the transition digraph, and an obstruction from periodic conjugacy classes in the fundamental group.",
+        "announce_type": "cross",
+        "categories": [
+          "math.GT",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.01350",
+        "pdf_url": "https://arxiv.org/pdf/2611.01350"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Pseudo-Anosov homeomorphisms and train-track transition graphs provide a substantial topological-dynamics connection.",
+        "tldr": "Lehmer’s number cannot be the stretch factor of a genus-six pseudo-Anosov map with orientable invariant foliations; the authors identify the minimum in this class.",
+        "problem": "Determine the least stretch factor for closed orientable genus-six surfaces with orientable invariant foliations.",
+        "main_result": "No pseudo-Anosov homeomorphism of a closed orientable genus-six surface with orientable invariant foliations has stretch factor \\(\\lambda_L\\approx1.17628\\). Consequently, the minimum \\(\\delta_6^+\\) is the largest root of \\(x^{12}-x^9-x^7+x^6-x^5-x^3+1\\), approximately \\(1.20189\\). This gives the stated negative answer to the Lanneau–Thiffeault question.",
+        "methods": [
+          "Lanneau–Thiffeault Lefschetz method.",
+          "Hironaka–Tsang standardly embedded train tracks.",
+          "Transition-digraph analysis and a periodic-conjugacy-class obstruction."
+        ],
+        "context": "Pseudo-Anosov surface dynamics.",
+        "keywords": [
+          "stretch factors",
+          "genus six",
+          "Lehmer number",
+          "train tracks"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.03866",
+        "versioned_id": "2611.03866v1",
+        "title": "Curve-Supported Concentrations of Vortices and Screw Dislocations Subject to Confinement",
+        "authors": [
+          "Carlos Garc\\'{\\i}a-Azpeitia",
+          "Thomas Hudson"
+        ],
+        "abstract": "We study the concentration of logarithmically interacting defects, such as Ginzburg--Landau vortices and screw dislocations, on closed curves in two dimensions, subject to a confining field. We prove that a measure supported on a smooth closed curve solves the mean-field transport equation exactly when, in Lagrangian labels, the curve moves with the negative induced velocity and each label keeps its mass. This contour law is a gradient flow of the mean-field energy. We prove that the gradient of the energy on a curve has a leading term proportional to the operator $|D|$ with Fourier symbol $|k|$, which prevents every smooth equilibrium curve from being a local minimizer, in a gradient-flow analogue of the Kelvin--Helmholtz instability of vortex sheets. In a radially symmetric case with quadratic confinement, we find an explicit circular equilibrium whose linearization is diagonal in Fourier modes, and we show that, as $N\\rightarrow \\infty $, the linear spectrum of the regular $N$-gon converges, mode by mode, to that of the circle. Finally, we compute a critical point on two concentric circles with lower energy than the single circle, indicating a rich family of multi-circle equilibria.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.03866",
+        "pdf_url": "https://arxiv.org/pdf/2611.03866"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Confined defect concentrations and their gradient-flow instability are central, without a stated central connection to the profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.03960",
+        "versioned_id": "2611.03960v1",
+        "title": "Invariant random subgroups of the finitary special linear group over a finite field",
+        "authors": [
+          "Noam Atar",
+          "Arie Levit"
+        ],
+        "abstract": "An invariant random subgroup of a discrete group is a conjugation-invariant probability measure on the space of its subgroups. We confirm a conjecture of Simon Thomas and classify the invariant random subgroups of the finitary special and general linear groups over a finite field. These are shown to be stabilizers of random tuples of vectors and functionals. The classification uses the character theory of the finitary special linear group established by Skudlarek and the theory of the invariant random subgroups of the finitary permutation group established by Vershik. In addition, we classify the invariant probability measures for several natural actions of these finitary groups.",
+        "announce_type": "cross",
+        "categories": [
+          "math.GR",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.03960",
+        "pdf_url": "https://arxiv.org/pdf/2611.03960"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Invariant measures and stabilizers for discrete-group actions directly match group-action interests.",
+        "tldr": "The authors classify invariant random subgroups of finitary special and general linear groups over a finite field as stabilizers of random vector–functional tuples.",
+        "problem": "Classify conjugation-invariant subgroup measures and invariant measures for natural finitary-group actions.",
+        "main_result": "The classification confirms the stated Simon Thomas conjecture: invariant random subgroups of these finitary linear groups are stabilizers of random tuples of vectors and functionals. The authors also classify invariant probability measures for several natural actions. The exact tuple distributions and the full list of natural actions are not specified in the abstract.",
+        "methods": [
+          "Skudlarek’s character theory for the finitary special linear group.",
+          "Vershik’s invariant-random-subgroup theory for the finitary permutation group."
+        ],
+        "context": "Discrete group actions and invariant probability measures.",
+        "keywords": [
+          "invariant random subgroups",
+          "finitary linear groups",
+          "stabilizers",
+          "invariant measures"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.04131",
+        "versioned_id": "2611.04131v1",
+        "title": "Schrodinger group along the horocycles and Egorov's theorem on compact hyperbolic surfaces",
+        "authors": [
+          "Xiaolong Han"
+        ],
+        "abstract": "In this paper, we study Egorov's theorem for Laplacian eigenfunctions on compact hyperbolic surfaces in Zelditch's quantization. In this quantization, the remainder in Egorov's theorem for eigenfunctions is given explicitly by the second derivatives of the symbols along the weak stable foliation of the geodesic flow. Forward in time, we show that Egorov's theorem for eigenfunctions is valid to all logarithmic times, far beyond the Ehrenfest time T_E=|log h|/2, where h going to 0 is the semiclassical parameter. Backward in time, we introduce the Schrodinger group along the stable horocycles, which absorbs the exponentially growing part of the remainder. We show that Egorov's theorem for eigenfunctions is valid up to -T_E+T_h for any Th going to infinity with 0<=T_h<=T_E. Moreover, the limit of the remainder in Egorov's theorem at the Ehrenfest time -T_E is exactly the difference between the semiclassical measure and the Liouville measure, tested against the symbols propagated by the Schrodinger group. Consequently, Egorov's theorem for a sequence of eigenfunctions holds at -T_E (and in fact, at -T_E-T for any fixed T in R if and only if the sequence tends to be equidistributed in the phase space. Thus, the quantum unique ergodicity (QUE) conjecture is equivalent to this Egorov property holding for every eigenbasis. Furthermore, QUE holds with a polynomial rate if and only if Egorov's theorem holds at -T_E with a polynomial remainder. In this case, Egorov's theorem holds beyond -T_E with a polynomial remainder, and the stronger the rate is in QUE, the longer the time is in Egorov's theorem.",
+        "announce_type": "cross",
+        "categories": [
+          "math.SP",
+          "math-ph",
+          "math.AP",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.04131",
+        "pdf_url": "https://arxiv.org/pdf/2611.04131"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Geodesic-flow foliations, semiclassical measures and equidistribution provide a substantial ergodic-dynamics connection.",
+        "tldr": "For compact hyperbolic surfaces, the authors extend eigenfunction Egorov results and characterize quantum unique ergodicity through backward Ehrenfest-time behavior.",
+        "problem": "Relate long-time Egorov remainders in Zelditch quantization to semiclassical equidistribution.",
+        "main_result": "The remainder is expressed through second derivatives along the weak stable foliation. Forward validity extends to all logarithmic times. Backward, a Schrödinger group along stable horocycles absorbs the exponentially growing remainder, giving validity to \\(-T_E+T_h\\) when \\(T_h\\to\\infty\\) and \\(0\\leq T_h\\leq T_E\\), with \\(T_E=|\\log h|/2\\). At \\(-T_E\\), the remainder limit is the difference between semiclassical and Liouville measures tested against propagated symbols. The stated Egorov property at this time, and at \\(-T_E-T\\) for fixed real \\(T\\), characterizes equidistribution. The abstract also states equivalence between polynomial QUE rates and polynomial Egorov remainders, with stronger rates allowing longer backward times.",
+        "methods": [
+          "Zelditch quantization.",
+          "Schrödinger propagation along stable horocycles."
+        ],
+        "context": "Quantum ergodicity and hyperbolic geodesic dynamics.",
+        "keywords": [
+          "Egorov theorem",
+          "horocycles",
+          "Ehrenfest time",
+          "quantum unique ergodicity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.04161",
+        "versioned_id": "2611.04161v1",
+        "title": "Categorical and Floer-theoretic entropies: comparison and counting conjugacy classes in symplectic mapping class groups",
+        "authors": [
+          "Sangjin Lee"
+        ],
+        "abstract": "Let $W$ be a Weinstein manifold and let $f: W \\to W$ be a compactly supported symplectic automorphism. Using Floer theories, one can define two different entropies of $f$, called \"Floer-theoretic\" entropy and \"categorical\" entropy. The current article compares these two entropies and show that the former bounds the latter from below. As an application of the comparison, using that these entropies are invariants up to the conjugate relation, we count conjugacy classes in symplectic mapping classes. Especially, we show an exponential abundance of conjugacy classes that are smoothly isotopic to the identity, when $W$ is a Weinstein manifold of dimension $4n \\geq 6$, satisfying a local condition.",
+        "announce_type": "cross",
+        "categories": [
+          "math.SG",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.04161",
+        "pdf_url": "https://arxiv.org/pdf/2611.04161"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Entropy comparisons and conjugacy invariants are central orbit-complexity interests.",
+        "tldr": "Floer-theoretic entropy bounds categorical entropy from below, with an application to exponential abundance of symplectic mapping-class conjugacy classes.",
+        "problem": "Compare two Floer-based entropies and use them to count conjugacy classes.",
+        "main_result": "For a compactly supported symplectic automorphism of a Weinstein manifold, the authors prove that Floer-theoretic entropy is at least categorical entropy. Their conjugacy invariance gives a counting application: in dimension \\(4n\\geq6\\), under a local condition, there is exponential abundance of conjugacy classes smoothly isotopic to the identity. The local condition and the precise counting scale are not specified in the abstract.",
+        "methods": [
+          "Floer theories.",
+          "Conjugacy invariance of the two entropies."
+        ],
+        "context": "Entropy in symplectic dynamics and mapping class groups.",
+        "keywords": [
+          "Floer-theoretic entropy",
+          "categorical entropy",
+          "conjugacy classes",
+          "Weinstein manifolds"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.04210",
+        "versioned_id": "2611.04210v1",
+        "title": "Rational points on loxodromic K3 surfaces and complex dynamics",
+        "authors": [
+          "Dami\\'an Gvirtz-Chen",
+          "Zhizhong Huang",
+          "Zhuchao Ji",
+          "Junyi Xie"
+        ],
+        "abstract": "We establish an analogue of the Hilbert irreducibility theorem for all K3 surfaces over number fields that admit an automorphism of positive entropy. Our method draws ingredients from both algebraic geometry and complex dynamics.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.AG",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.04210",
+        "pdf_url": "https://arxiv.org/pdf/2611.04210"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "A positive-entropy automorphism supplies a clear entropy connection to the arithmetic result.",
+        "tldr": "The authors establish a Hilbert-irreducibility analogue for K3 surfaces over number fields admitting positive-entropy automorphisms.",
+        "problem": "Obtain a Hilbert-irreducibility analogue using loxodromic K3 dynamics.",
+        "main_result": "The result applies to every K3 surface over a number field that admits an automorphism of positive entropy. The precise formulation of the analogue is not specified in the abstract.",
+        "methods": [
+          "Ingredients from algebraic geometry and complex dynamics."
+        ],
+        "context": "Arithmetic geometry and complex K3 dynamics.",
+        "keywords": [
+          "K3 surfaces",
+          "positive entropy",
+          "rational points",
+          "Hilbert irreducibility"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.04575",
+        "versioned_id": "2611.04575v1",
+        "title": "Polynomial configurations and pointwise averages along Piatetski--Shapiro primes",
+        "authors": [
+          "Hamed Mousavi"
+        ],
+        "abstract": "For every \\(c>1\\) sufficiently close to \\(1\\), we prove that there is \\(\\kappa>0\\) such that every sufficiently large \\(A\\subset[N]\\) of density at least \\((\\log N)^{-\\kappa}\\) contains \\[ x,\\ x+(p-1),\\ x+(p-1)^2,\\ldots,\\ x+(p-1)^k, \\qquad p=\\lfloor n^c\\rfloor\\in\\mathbb P. \\] We also prove pointwise almost-everywhere convergence of the corresponding multiple ergodic averages.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CO",
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.04575",
+        "pdf_url": "https://arxiv.org/pdf/2611.04575"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Pointwise convergence of multiple ergodic averages gives a substantial ergodic-theory connection.",
+        "tldr": "The authors find polynomial patterns with Piatetski–Shapiro-prime steps in sparse dense sets and prove almost-everywhere convergence of the corresponding ergodic averages.",
+        "problem": "Establish polynomial configurations and pointwise multiple-average convergence along this prime sequence.",
+        "main_result": "For every \\(c>1\\) sufficiently close to \\(1\\), there exists \\(\\kappa>0\\) such that every sufficiently large \\(A\\subset[N]\\) of density at least \\((\\log N)^{-\\kappa}\\) contains \\(x,x+(p-1),\\ldots,x+(p-1)^k\\), where \\(p=\\lfloor n^c\\rfloor\\) is prime. The corresponding multiple ergodic averages converge pointwise almost everywhere. The admissible range of \\(c\\), dependence of constants and precise average formulation are not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Polynomial recurrence and ergodic averages along primes.",
+        "keywords": [
+          "polynomial configurations",
+          "Piatetski–Shapiro primes",
+          "multiple ergodic averages",
+          "pointwise convergence"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.04655",
+        "versioned_id": "2611.04655v1",
+        "title": "Long-time behaviour and bifurcation analysis of a non-reciprocal two-species aggregation-diffusion system on the torus",
+        "authors": [
+          "Benjamin Gess",
+          "Paul Nikolaev"
+        ],
+        "abstract": "A two-species aggregation-diffusion system on the one-dimensional torus with antisymmetric cross-interactions modeling pursuit-evasion dynamics is studied. The self-interaction strength is used as a bifurcation parameter, and the linear stability of the homogeneous state is characterized by Fourier analysis. It is shown that non-reciprocal coupling enlarges the stability region. In a symmetric diffusion setting, exponential convergence to the homogeneous state is established for sufficiently weak self-interactions by means of an entropy argument, with a decay condition independent of the cross-interaction strength. Under suitable nondegeneracy and spectral assumptions, the first loss of stability is shown to occur through a Hopf bifurcation associated with a single spatial Fourier mode. A branch of time-periodic patterns is thereby obtained, along which the two species oscillate with a fixed phase difference. An explicit formula for the cubic Hopf coefficient is derived, and an essential dependence of the direction and stability of the bifurcating branch on the second spatial harmonic is identified. In the case of matching diffusion coefficients and interaction kernels, sufficiently strong non-reciprocity is shown to transform a subcritical stationary instability of the corresponding reciprocal system into a supercritical Hopf bifurcation with stable periodic solutions. An exchange-of-stability result is proved, and the theory is illustrated for Kuramoto, two-mode cosine, and top-hat interaction kernels.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.04655",
+        "pdf_url": "https://arxiv.org/pdf/2611.04655"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "An entropy argument for long-time convergence provides a technical connection; the main focus is an applied aggregation–diffusion bifurcation problem.",
+        "tldr": "For a two-species torus model, non-reciprocal coupling enlarges homogeneous-state stability and can produce stable Hopf patterns.",
+        "problem": "Understand stability, convergence and first bifurcation under antisymmetric cross-interactions.",
+        "main_result": "Fourier analysis characterizes homogeneous-state stability. In the symmetric-diffusion setting, sufficiently weak self-interactions imply exponential convergence by an entropy argument, with a decay condition independent of cross-interaction strength. Under suitable nondegeneracy and spectral assumptions, the first instability is a single-mode Hopf bifurcation with fixed interspecies phase difference. An explicit cubic coefficient identifies dependence on the second harmonic. With matching diffusion coefficients and kernels, sufficiently strong non-reciprocity converts a reciprocal subcritical stationary instability into a supercritical Hopf bifurcation with stable periodic solutions. The detailed nondegeneracy and spectral assumptions are not specified in the abstract.",
+        "methods": [
+          "Fourier analysis.",
+          "Entropy argument.",
+          "Hopf bifurcation and cubic-coefficient computation."
+        ],
+        "context": "Aggregation–diffusion, pursuit–evasion modeling and periodic patterns.",
+        "keywords": [
+          "non-reciprocal coupling",
+          "entropy argument",
+          "Hopf bifurcation",
+          "aggregation–diffusion"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.04880",
+        "versioned_id": "2611.04880v1",
+        "title": "Automaticity of structural defects in fixed points of block substitutions",
+        "authors": [
+          "Lior Tenenbaum"
+        ],
+        "abstract": "We study structural defects in fixed points of block substitutions, building on arXiv:2604.12637 and providing its technical supplement. We develop an automata-based framework to characterize their occurrence and derive verifiable combinatorial criteria. We also introduce simplifications for the construction and analysis of these automata, including tensor-product decompositions, that clarify the mechanisms underlying structural defects and their emergence.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CO",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.04880",
+        "pdf_url": "https://arxiv.org/pdf/2611.04880"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Block substitutions, automata and combinatorial occurrence criteria directly match symbolic dynamics.",
+        "tldr": "The authors give an automata framework for structural defects in block-substitution fixed points and simplify its construction.",
+        "problem": "Characterize defect occurrences and obtain verifiable combinatorial criteria.",
+        "main_result": "The framework characterizes occurrences of structural defects and yields verifiable combinatorial criteria. Simplifications, including tensor-product decompositions, clarify how defects emerge. The particular defect definitions and criteria are not specified in the abstract.",
+        "methods": [
+          "Automata-based framework.",
+          "Tensor-product decompositions."
+        ],
+        "context": "Block substitutions and symbolic combinatorics.",
+        "keywords": [
+          "block substitutions",
+          "structural defects",
+          "automata",
+          "tensor products"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.04990",
+        "versioned_id": "2611.04990v1",
+        "title": "Basic Reproductive Numbers in Host-Parasite Systems with Demographic Bistability",
+        "authors": [
+          "Carli Peterson",
+          "Erika Gallo",
+          "Christopher Kribs"
+        ],
+        "abstract": "The basic reproductive number, $\\mathcal{R}_0$, is widely used to determine whether an infectious disease can persist in a population. However, its interpretation may become unclear when the underlying disease-free demographic dynamics exhibit multiple types of stable attractors. In this study, we investigate how demographic bistability between fixed points and periodic cycles affects the calculation and interpretation of $\\mathcal{R}_0$. We consider two discrete-time host-parasite models with infection: a tick-host model motivated by Borrelia burgdorferi transmission and a Nicholson-Bailey host-parasitoid model with intraspecific competition and infection. For each model, we calculate reproductive numbers associated with different disease-free attractors using the next-generation operator method and compare their invasion thresholds. In the tick-host model, the reproduction number calculated on the stable demographic cycle differs from that calculated at the positive coexistence fixed point, resulting in parameter regions where infection can invade at one demographic attractor but not the other. In contrast, in the host-parasitoid model, the host-driven invasion threshold is necessarily the same at the positive coexistence fixed point and on the host-only periodic cycles. These contrasting results demonstrate that demographic bistability alone does not necessarily produce attractor-dependent invasion thresholds. Rather, the effect of demographic dynamics on invasion depends on the structure of pathogen transmission. In particular, a complete host--vector--host transmission pathway can allow differences between demographic attractors to alter the invasion threshold. Our results emphasize the importance of considering both demographic dynamics and transmission structure when interpreting $\\mathcal{R}_0$ in populations with multiple stable disease-free states.",
+        "announce_type": "cross",
+        "categories": [
+          "q-bio.PE",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.04990",
+        "pdf_url": "https://arxiv.org/pdf/2611.04990"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Host–parasite invasion thresholds and demographic bistability are central, with no stated central entropy or symbolic connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2503.00718",
+        "versioned_id": "2503.00718v3",
+        "title": "Path-Kernel Method for Differentiating Unstable Diffusions",
+        "authors": [
+          "Angxiu Ni"
+        ],
+        "abstract": "We derive and rigorously prove the path-kernel formula for the linear response of stochastic differential equations, namely, the derivative of averaged statistics with respect to a model parameter. The parameter may affect the diffusion coefficient, as well as the drift coefficient and initial condition. No hyperbolicity assumption is required. The proof introduces a single change of variables for the state path that transfers part of the unstable path perturbation to differentiation of the probability kernel. We also derive a pathwise Monte Carlo algorithm for estimating the response and demonstrate it on the 40-dimensional noisy Lorenz--96 system.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.PR",
+          "cs.NA",
+          "math.DS",
+          "math.NA"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2503.00718",
+        "pdf_url": "https://arxiv.org/pdf/2503.00718"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Linear response of averaged statistics provides an invariant-statistical connection despite the stochastic and computational setting.",
+        "tldr": "The path-kernel formula differentiates SDE averaged statistics under drift, diffusion and initial-condition perturbations without a hyperbolicity assumption.",
+        "problem": "Compute linear response for unstable diffusions when parameters affect more than the drift.",
+        "main_result": "The authors rigorously prove a path-kernel linear-response formula allowing parameter dependence in diffusion, drift and initial condition. No hyperbolicity assumption is required. They derive a pathwise Monte Carlo estimator and demonstrate it on the 40-dimensional noisy Lorenz–96 system. The formula itself and further regularity assumptions are not specified in the abstract.",
+        "methods": [
+          "A single state-path change of variables transferring part of unstable perturbation to differentiation of the probability kernel.",
+          "Pathwise Monte Carlo estimation."
+        ],
+        "context": "Stochastic dynamics and linear response.",
+        "keywords": [
+          "path-kernel formula",
+          "linear response",
+          "unstable diffusions",
+          "Monte Carlo"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2509.19930",
+        "versioned_id": "2509.19930v2",
+        "title": "How deep is your network? Deep vs. shallow learning of transfer operators",
+        "authors": [
+          "Mohammad Tabish",
+          "Benedict Leimkuhler",
+          "Stefan Klus"
+        ],
+        "abstract": "We introduce RaNNDy, a randomized neural network framework for learning transfer operators and their spectral decompositions. By fixing the weights of the hidden layers and training only the output layer, RaNNDy achieves significant reductions in computational costs -- often by two orders of magnitude -- with similar accuracy compared to state-of-the-art deep learning methods. The method is less sensitive to hyperparameter tuning and provides a closed-form solution for the output layer weights that directly represent eigenfunctions of the learned operator. Moreover, it is possible to estimate uncertainties associated with the computed spectral properties via ensemble learning. We demonstrate the efficacy of the proposed approach using diverse benchmark problems, including stochastic dynamical systems and protein folding processes, highlighting the strengths but also weaknesses of RaNNDy.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cs.LG",
+          "math.DS",
+          "stat.ML"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2509.19930",
+        "pdf_url": "https://arxiv.org/pdf/2509.19930"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Learning transfer-operator eigenfunctions and spectra provides a conceptual connection to operator descriptions of dynamics.",
+        "tldr": "RaNNDy learns transfer-operator spectra with fixed hidden-layer weights and a closed-form trained output layer, reducing computational costs in the reported comparisons.",
+        "problem": "Compare randomized shallow-style training with deep learning for transfer-operator spectral estimation.",
+        "main_result": "The authors report often two-orders-of-magnitude computational savings with similar accuracy against state-of-the-art deep methods, and less hyperparameter sensitivity. Output-layer weights directly represent learned eigenfunctions and admit a closed-form solution. Ensemble learning estimates uncertainty in spectral properties. Stochastic-dynamics and protein-folding benchmarks illustrate strengths and weaknesses. These are reported benchmark findings, not a universal performance guarantee.",
+        "methods": [
+          "Randomized neural networks with fixed hidden layers.",
+          "Closed-form output-layer training.",
+          "Ensemble learning for uncertainty."
+        ],
+        "context": "Computational transfer operators and spectral learning.",
+        "keywords": [
+          "transfer operators",
+          "randomized neural networks",
+          "eigenfunctions",
+          "spectral uncertainty"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2606.25726",
+        "versioned_id": "2606.25726v2",
+        "title": "Integrality of height-one formal groups",
+        "authors": [
+          "Martin Debaisieux"
+        ],
+        "abstract": "Let $K$ be a finite extension of $\\mathbb{Q}_p$. We prove that a one-dimensional formal group law over $K$ has integral coefficients if and only if its multiplication-by-$n$ endomorphisms have integral coefficients for all integers $n$, in the height-one case, that is when the multiplication by $p$ has Weierstrass degree $p$. The proof relies on $p$-adic Hodge theory.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2606.25726",
+        "pdf_url": "https://arxiv.org/pdf/2606.25726"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Integrality of formal group laws is central; no dynamical group action, entropy or symbolic connection is stated.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2606.25766",
+        "versioned_id": "2606.25766v2",
+        "title": "Symbol sequences from three-rotor coincidences and their word-complexity",
+        "authors": [
+          "Govind S. Krishnaswami",
+          "Anirudh Rameshan"
+        ],
+        "abstract": "In the three-rotor problem, three equally massive point particles move on a circle interacting via attractive pairwise cosine potentials. Rotors can represent superconducting phases of metallic segments in a chain of coupled Josephson junctions. We propose a digitization of the classical dynamics that records successive pair and triple coincidences of rotors using four symbols. Rotor coincidences correspond to boundaries in a disjoint partition of the configuration torus into cells where the rotors are ordered clockwise and anticlockwise. It is shown that isolated rotor coincidences must be crossings. Despite being a rather coarse digitization, we find that replacing trajectories by coincidence symbol sequences captures significant qualitative features of the dynamics through word statistics. Word-complexity $C_n$ measures the diversity of $n$-letter words in the symbol sequence while topological entropy governs asymptotic exponential growth of $C_n$. Sequences from periodic orbits have a word-complexity that saturates at the period. Ultra-high-energy trajectories with irrational `slope' are quasiperiodic. We show that they have zero entropy and $C_n = n+3$ by examining limiting slopes and by a mapping to Sturmian sequences. We examine their grammar rules and propose how their right-special words may be identified. On the other hand, numerical investigation of sequences from globally chaotic orbits leads us to conjecture an exponentially growing word-complexity $C_n = 3 \\times 2^{n-1}$ with a topological entropy $\\log 2$. We identify grammar rules that imply this conjectured word-complexity and model the resulting sequences as a subshift of finite type, unlike those at ultra-high energies which are not topological Markov chains.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "nlin.CD",
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-04T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2606.25766",
+        "pdf_url": "https://arxiv.org/pdf/2606.25766"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Symbolic coding, word complexity, entropy and subshifts are central even though the source model is physical.",
+        "tldr": "Three-rotor coincidences produce symbol sequences with proven zero-entropy ultra-high-energy behavior and a conjectural chaotic complexity law.",
+        "problem": "Encode rotor trajectories and compare word statistics across dynamical regimes.",
+        "main_result": "The four-symbol coding records pair and triple coincidences, and isolated coincidences must be crossings. Periodic-orbit complexity saturates at the period. Ultra-high-energy trajectories of irrational slope are quasiperiodic, with zero entropy and \\(C_n=n+3\\), proved through limiting slopes and a Sturmian-sequence mapping. For globally chaotic orbits, numerical evidence motivates the conjecture \\(C_n=3\\times2^{n-1}\\) and entropy \\(\\log2\\). Identified grammar rules imply this conjectured law and give a subshift-of-finite-type model; the ultra-high-energy sequences are not topological Markov chains. The chaotic complexity law remains conjectural in the abstract.",
+        "methods": [
+          "Coincidence coding by a partition of the configuration torus.",
+          "Limiting-slope analysis and mapping to Sturmian sequences.",
+          "Numerical word statistics and grammar rules."
+        ],
+        "context": "Symbolic dynamics of the three-rotor problem.",
+        "keywords": [
+          "word complexity",
+          "topological entropy",
+          "Sturmian sequences",
+          "subshift of finite type"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 10,
+    "RELATED / POSSIBLY INTERESTING": 9,
+    "LOW PRIORITY": 6
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-11-04T10:58:50.511512Z",
+      "feed_published_at": "2026-11-04T00:00:00-05:00",
+      "feed_build_at": "2026-11-04T05:12:26Z",
+      "feed_date": "2026-11-04",
+      "sha256": "6c30b1d75acd3d3d56c12119e2a97e5bea0f0a1232a5283f9097c5fdb3d74e3a",
+      "byte_length": 65670,
+      "capture_run_url": null
+    }
+  ]
+}
