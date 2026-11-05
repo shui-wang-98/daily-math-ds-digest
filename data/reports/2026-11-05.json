@@ -1,0 +1,952 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-11-05",
+  "generated_at": "2026-11-05T11:01:58.543958Z",
+  "feed_build_at": "2026-11-05T05:00:37Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 23 unseen announcements: 6 HIGH PRIORITY, 11 RELATED / POSSIBLY INTERESTING, and 6 LOW PRIORITY. Central themes include topological and measurable rigidity, maximal-entropy dynamics, expansiveness and pressure, Kolakoski symbolic dynamics, omega-limit sets and pointwise partial-orbit averages. Related papers concern Julia-set recurrence, Anosov accessibility, transfer-operator mixing, cocycle deviations, algebraic orbit structure and invariant occupation measures. No followed-author matches occur in the supplied input; unstated hypotheses and numerical comparisons retain their stated limitations.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2611.05607",
+        "versioned_id": "2611.05607v1",
+        "title": "IC-rigidity and generalizations of a theorem of Mahler",
+        "authors": [
+          "Bryna Kra",
+          "Scott Schmieding"
+        ],
+        "abstract": "Mahler showed that for every irrational $\\alpha$ and every base ${b\\geq 2}$, there is a single positive integer $n$ such that every digit in $\\{0, \\dots, b-1\\}$ occurs infinitely often in the base-$b$ expansion of $n\\alpha$. Furstenberg later observed that dynamical methods can be used to give a different proof. Building on this perspective, we give generalizations of Mahler's theorem in two directions: the multipliers are a syndetic subset of certain multiplicative semigroups, and analogous versions hold in higher dimensions. Our main tool is IC-rigidity, a type of rigidity which is a hybrid of topological and measurable constraints.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.05607",
+        "pdf_url": "https://arxiv.org/pdf/2611.05607"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Hybrid topological–measurable rigidity and multiplicative-semigroup dynamics directly match topological-dynamics interests.",
+        "tldr": "IC-rigidity yields syndetic-multiplier and higher-dimensional generalizations of Mahler’s digit-occurrence theorem.",
+        "problem": "Extend the existence of multipliers whose base expansions contain every digit infinitely often.",
+        "main_result": "The abstract recalls that for each irrational \\(\\alpha\\) and integer base \\(b\\geq2\\), one positive integer \\(n\\) makes every digit occur infinitely often in the base-\\(b\\) expansion of \\(n\\alpha\\). The authors generalize this in two directions: multipliers form a syndetic subset of certain multiplicative semigroups, and analogous results hold in higher dimensions. The specified semigroups and higher-dimensional formulations are not specified in the abstract.",
+        "methods": [
+          "IC-rigidity, combining topological and measurable constraints.",
+          "Dynamical methods."
+        ],
+        "context": "Digit expansions, rigidity and multiplicative semigroups.",
+        "keywords": [
+          "IC-rigidity",
+          "Mahler theorem",
+          "syndetic multipliers",
+          "digit expansions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.05696",
+        "versioned_id": "2611.05696v1",
+        "title": "Quartic polynomial differential systems with three disjoint invariant circles",
+        "authors": [
+          "Chen Cao",
+          "Jaume Llibre"
+        ],
+        "abstract": "We determine the normal forms of real planar polynomial differential systems of degree at most four with three prescribed pairwise disjoint invariant circles, covering all configurations of their centers. None of the prescribed circles is a limit cycle in the concentric case or in the coaxial case with three distinct centers, where the pairwise radical axes coincide. When exactly two centers coincide, or when the three centers are distinct and collinear and the circles are non-coaxial, we give necessary and sufficient conditions for all three circles to be algebraic limit cycles, which are necessarily hyperbolic. For non-collinear centers, we give explicit necessary and sufficient conditions for all three circles to be periodic orbits and for all three to be hyperbolic algebraic limit cycles. Each of the four configurations with non-collinear centers is realized by a coprime quartic polynomial differential system with three hyperbolic circular limit cycles.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.05696",
+        "pdf_url": "https://arxiv.org/pdf/2611.05696"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Normal forms and circular limit cycles of polynomial differential systems are central, without a stated central entropy, fractal or symbolic connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.05949",
+        "versioned_id": "2611.05949v1",
+        "title": "Wandering continua, renormalization, and Lebesgue measure on Julia sets",
+        "authors": [
+          "Willie Rush Lim"
+        ],
+        "abstract": "We study the Lebesgue measure of wandering continua and related invariant sets in Julia sets, using the hyperbolic area method recently developed by Ye. For entire functions of finite type, we show that a wandering continuum of positive area must escape to infinity uniformly. For infinitely renormalizable unicritical polynomials, we show that almost every point in the renormalization core (the intersection of the orbits of little Julia sets) is recurrent and contained in the postcritical set. The main tool is a conservativity theorem: if $f$ is injective on a forward invariant measurable subset $E$ of the Julia set, then $f|_E$ is conservative and almost every point of $E$ is recurrent and contained in the postsingular set.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.05949",
+        "pdf_url": "https://arxiv.org/pdf/2611.05949"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Julia-set measure, conservativity and recurrence provide a substantial complex and ergodic-dynamics connection.",
+        "tldr": "The authors constrain positive-area wandering continua and prove recurrence statements for renormalization cores through conservativity.",
+        "problem": "Determine Lebesgue-measure behavior of wandering continua and related Julia-set invariant sets.",
+        "main_result": "For finite-type entire functions, a positive-area wandering continuum must escape uniformly to infinity. For infinitely renormalizable unicritical polynomials, almost every point of the renormalization core is recurrent and belongs to the postcritical set. The stated conservativity theorem says that injectivity on a forward-invariant measurable Julia subset implies conservativity of the restriction and almost-everywhere recurrence and membership in the postsingular set.",
+        "methods": [
+          "Ye’s hyperbolic area method.",
+          "A conservativity theorem for injective restrictions."
+        ],
+        "context": "Lebesgue measure and recurrence in Julia sets.",
+        "keywords": [
+          "wandering continua",
+          "Julia sets",
+          "renormalization core",
+          "conservativity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06210",
+        "versioned_id": "2611.06210v1",
+        "title": "Accessibility of collapsed Anosov flow",
+        "authors": [
+          "Ziqiang Feng",
+          "Ra\\'ul Ures"
+        ],
+        "abstract": "We prove that every $C^1$ collapsed Anosov flow on a closed three-manifold with non-virtually-solvable fundamental group is accessible. No transitivity or nonwandering assumption is required, and the collapsing map need not satisfy the strong-collapse conditions. We also prove that every three-dimensional collapsed Anosov flow for which no positive iterate is a discretized Anosov flow is accessible.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06210",
+        "pdf_url": "https://arxiv.org/pdf/2611.06210"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Accessibility of Anosov-related systems directly connects with hyperbolic dynamics.",
+        "tldr": "Collapsed Anosov flows are accessible under a fundamental-group condition, or when no positive iterate is discretized Anosov.",
+        "problem": "Identify sufficient conditions for accessibility of three-dimensional collapsed Anosov flows.",
+        "main_result": "Every \\(C^1\\) collapsed Anosov flow on a closed three-manifold with non-virtually-solvable fundamental group is accessible. No transitivity or nonwandering assumption is imposed, and strong-collapse conditions on the collapsing map are unnecessary. The authors also prove accessibility for every three-dimensional collapsed Anosov flow with no positive iterate that is a discretized Anosov flow.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Three-dimensional hyperbolic dynamics.",
+        "keywords": [
+          "collapsed Anosov flows",
+          "accessibility",
+          "fundamental group",
+          "discretized Anosov flows"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06211",
+        "versioned_id": "2611.06211v1",
+        "title": "Equilibrium webs and stability for arbitrary families of endomorphisms of projective spaces",
+        "authors": [
+          "Fabrizio Bianchi",
+          "Zhuchao Ji",
+          "Junyi Xie"
+        ],
+        "abstract": "We consider arbitrary holomorphic families of endomorphisms of a complex projective space. We prove that the existence of an equilibrium web implies the holomorphic motion of all repelling cycles contained in the Julia set, i.e., the support of the unique measure of maximal entropy. Together with previous results of Berteloot, Bianchi, Br\\'evard, Buff, and Dupont, this completes the extension of the stability-bifurcation theory to arbitrary families of holomorphic endomorphisms. The same conclusions also hold for holomorphic families of polynomial-like maps of large topological degree.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CV"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06211",
+        "pdf_url": "https://arxiv.org/pdf/2611.06211"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Equilibrium webs and the support of maximal-entropy measures supply a central entropy and stability connection.",
+        "tldr": "For arbitrary holomorphic endomorphism families, an equilibrium web forces holomorphic motion of all repelling cycles in the Julia set.",
+        "problem": "Extend stability–bifurcation theory to arbitrary holomorphic families of projective endomorphisms.",
+        "main_result": "The existence of an equilibrium web implies holomorphic motion of every repelling cycle in the Julia set, identified as the support of the unique maximal-entropy measure. Combined with the earlier results named in the abstract, this completes the stated extension of stability–bifurcation theory. The same conclusions hold for holomorphic families of polynomial-like maps of large topological degree.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Complex dynamics, equilibrium webs and maximal-entropy measures.",
+        "keywords": [
+          "equilibrium webs",
+          "holomorphic motion",
+          "maximal entropy",
+          "stability"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06314",
+        "versioned_id": "2611.06314v1",
+        "title": "Dolgopyat estimate for partially hyperbolic systems: limit theorems and exponential mixing",
+        "authors": [
+          "Roberto Castorrini",
+          "Kasun Fernando"
+        ],
+        "abstract": "We prove a Dolgopyat-type estimate for the twisted transfer operators of a class of two-dimensional partially hyperbolic endomorphisms of the torus, not necessarily skew-products. The twist satisfies a quantitative transversality condition on the cotangent dynamics of the associated three-dimensional extension which, in the skew-product case, is related to Tsujii's notions of transversality and partial captivity conditions. We use the main estimate to prove higher order expansions in the central and mixing local limit theorems for the two-dimensional base, including the case of several ergodic absolutely continuous invariant measures, and we prove exponential decay of correlations for the associated three-dimensional circle extensions, with a partially hyperbolic base.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06314",
+        "pdf_url": "https://arxiv.org/pdf/2611.06314"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Transfer operators, partially hyperbolic systems and invariant measures give a substantial ergodic-dynamics connection.",
+        "tldr": "A Dolgopyat-type estimate gives higher-order limit-theorem expansions for torus endomorphisms and exponential mixing of associated circle extensions.",
+        "problem": "Control twisted transfer operators to derive statistical limit laws and mixing.",
+        "main_result": "The estimate concerns a class of two-dimensional partially hyperbolic torus endomorphisms, not necessarily skew-products. The twist obeys quantitative transversality on the cotangent dynamics of the associated three-dimensional extension; in the skew-product case this relates to Tsujii transversality and partial captivity. Applications include higher-order expansions in central and mixing local limit theorems for the base, allowing several ergodic absolutely continuous invariant measures, and exponential correlation decay for the circle extensions. The detailed system class and transversality inequality are not specified in the abstract.",
+        "methods": [
+          "Dolgopyat-type twisted-transfer-operator estimate.",
+          "Cotangent-dynamics transversality."
+        ],
+        "context": "Partially hyperbolic dynamics and statistical limit laws.",
+        "keywords": [
+          "Dolgopyat estimate",
+          "transfer operators",
+          "local limit theorems",
+          "exponential mixing"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06379",
+        "versioned_id": "2611.06379v1",
+        "title": "Exponential Deviations and H\\\"older Continuity for Moving-Law Mixed Cocycles",
+        "authors": [
+          "Zhongmin Liu",
+          "Dengdi Chen",
+          "Yan Zheng"
+        ],
+        "abstract": "We study mixed random-quasiperiodic cocycles whose one-step laws evolve along an ergodic environment. Under mixed-base ergodicity, bounded logarithmic growth, and stationary-value uniqueness, which we characterize by relative quasi-irreducibility, we prove exponential quenched deviations for finite-time directional growth. A renewal example shows that, in general ergodic environments, annealed exponential deviations can fail despite quenched exponential concentration. This obstruction motivates us to consider a fixed finite-state irreducible aperiodic Markov environment, where we establish annealed exponential deviation estimates uniform over a relative neighborhood of a reference sampling kernel in the bounded mixed-base-ergodic class at each fixed tolerance. These estimates yield local H\\\"older continuity of the maximal Lyapunov exponent near a stationary-value-unique kernel with a simple top exponent. Under common matrix and inverse bounds, the continuity applies to synchronized Wasserstein perturbations with fixed translation marginals and continuous matrix fields, or to ordinary Wasserstein perturbations with uniform H\\\"older regularity in the phase. As an application, suitable frequency-support and noise-nondegeneracy conditions yield H\\\"older energy dependence for moving-law Schr\\\"odinger cocycles with continuous potentials.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06379",
+        "pdf_url": "https://arxiv.org/pdf/2611.06379"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Lyapunov exponents and random–quasiperiodic cocycles provide an ergodic and spectral-dynamics connection.",
+        "tldr": "The authors distinguish quenched from annealed deviations for moving-law cocycles and obtain local Hölder continuity in a finite-state Markov environment.",
+        "problem": "Establish deviations and Lyapunov-exponent regularity when one-step sampling laws evolve in an ergodic environment.",
+        "main_result": "Under mixed-base ergodicity, bounded logarithmic growth and stationary-value uniqueness, characterized by relative quasi-irreducibility, the authors prove exponential quenched deviations for finite-time directional growth. A renewal example shows that annealed exponential deviations may fail in general ergodic environments. In a fixed finite-state irreducible aperiodic Markov environment, annealed exponential estimates are uniform in a relative neighborhood within the bounded mixed-base-ergodic class at each fixed tolerance. These yield local Hölder continuity near a stationary-value-unique kernel with a simple top exponent. With common matrix and inverse bounds, continuity applies to synchronized Wasserstein perturbations with fixed translation marginals and continuous matrix fields, or ordinary Wasserstein perturbations with uniform phase Hölder regularity. Suitable frequency-support and noise-nondegeneracy conditions yield Hölder energy dependence for moving-law Schrödinger cocycles; those conditions are not specified in the abstract.",
+        "methods": [
+          "Exponential quenched and annealed deviation estimates.",
+          "Renewal counterexample.",
+          "Relative quasi-irreducibility."
+        ],
+        "context": "Random–quasiperiodic cocycles and Lyapunov regularity.",
+        "keywords": [
+          "moving-law cocycles",
+          "quenched deviations",
+          "Markov environments",
+          "Hölder continuity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06465",
+        "versioned_id": "2611.06465v1",
+        "title": "Planar Central Configurations of Four Equal Masses: Classification and Morse Indices",
+        "authors": [
+          "Xiaoxiang Huangfu",
+          "Huatong Shen"
+        ],
+        "abstract": "We study the planar central configurations of four equal positive masses under homogeneous interactions with force exponent $A>2$. For $2<A\\le 3$, we prove that there are exactly four types of configurations up to similarity and relabeling: the square, the centered equilateral triangle, a unique nontrivial concave kite, and a unique collinear configuration. Combined with known results for $A>3$, this completes the classification for all $A>2$ and gives an affirmative answer to Problem 11 of Albouy, Cabral, and Santos. We also establish the nondegeneracy modulo rotation of these configurations and determine their Morse indices, confirming Hampton's Conjecture 2. Our proofs are based on analytic arguments and exact algebraic calculations.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CO"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06465",
+        "pdf_url": "https://arxiv.org/pdf/2611.06465"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Four-body central configurations and Morse indices are central, without a stated central connection to entropy, symbolic dynamics or fractal geometry.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06492",
+        "versioned_id": "2611.06492v1",
+        "title": "Largest-Angle Bisection and Statistical Regularization of Triangle Shapes",
+        "authors": [
+          "J\\'er\\^ome Michaud"
+        ],
+        "abstract": "Largest-angle bisection (LAB) repeatedly divides a triangle by bisecting its largest angle. Although this procedure is known to preserve nondegenerate triangle shapes, less is known about the distribution of shapes across the resulting refinement tree. We show that its long-term behavior is governed by a distinction between pure and mixed branches. A branch that eventually selects only one of the two children may approach an exceptional family of shapes. By contrast, every branch that changes children infinitely often converges in shape to a right-isosceles triangle. This follows from a projective Lyapunov function that is non-increasing at every refinement and decreases strictly whenever the selected child changes. Consequently, a random branch converges to the right-isosceles shape with probability one, and the proportion of triangles near that shape tends to one across complete refinement levels. Largest-angle bisection therefore produces statistical regularization even though exceptional branches remain present.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "cs.NA",
+          "math.NA"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06492",
+        "pdf_url": "https://arxiv.org/pdf/2611.06492"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Convergence and exceptional branches in a refinement-tree dynamical process give a plausible topological/statistical connection; relevance is less direct than for entropy or shifts.",
+        "tldr": "Every largest-angle-bisection branch switching children infinitely often converges in shape to a right-isosceles triangle, yielding statistical concentration.",
+        "problem": "Explain the distribution of triangle shapes throughout a largest-angle-bisection refinement tree.",
+        "main_result": "Eventually pure branches may approach an exceptional shape family, while every branch changing children infinitely often converges to the right-isosceles shape. A projective Lyapunov function is non-increasing at every refinement and strictly decreases at child changes. Consequently, a random branch converges to that shape with probability one and the fraction of nearby triangles tends to one across complete levels. The probability law and quantitative convergence rates are not specified in the abstract.",
+        "methods": [
+          "Projective Lyapunov function."
+        ],
+        "context": "Shape dynamics and statistical regularization of refinement trees.",
+        "keywords": [
+          "largest-angle bisection",
+          "refinement tree",
+          "shape convergence",
+          "Lyapunov function"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06565",
+        "versioned_id": "2611.06565v1",
+        "title": "Natural Expansiveness and Equilibrium States for Semiflows",
+        "authors": [
+          "Nelda Tamblay",
+          "Juan Francisco Pe\\~na"
+        ],
+        "abstract": "We introduce natural expansiveness, a notion of expansiveness for non-invertible dynamical systems which is defined by using the natural extension. We show that every expansive homeomorphism or flow, every positive expansive endomorphism and every positive expansive semiflow without end points is naturally expansive. Moreover, we prove that the suspension of a naturally expansive endomorphism is naturally expansive. This gives examples of naturally expansive semiflows which are neither positive expansive nor restrictions of expansive flows. Then we extend natural expansiveness and the topological pressure to semiflows which are not necessarily continuous, by using a pseudosemimetric $d_\\rho$. We introduce the notion of $d_\\rho$-conjugacy, and we prove that every regular impulsive semiflow is $d_\\rho$-conjugate to a continuous semiflow. As an application, we obtain the existence and uniqueness of equilibrium states for regular impulsive semiflows.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06565",
+        "pdf_url": "https://arxiv.org/pdf/2611.06565"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Expansiveness, topological pressure and equilibrium states are central interests.",
+        "tldr": "Natural extensions define an expansiveness notion covering new semiflow examples and supporting equilibrium-state results for regular impulsive semiflows.",
+        "problem": "Extend expansiveness and pressure to non-invertible and potentially discontinuous semiflows.",
+        "main_result": "Expansive homeomorphisms and flows, positively expansive endomorphisms, and positively expansive semiflows without endpoints are naturally expansive. Suspension preserves natural expansiveness, yielding examples that are neither positively expansive nor restrictions of expansive flows. Using a pseudosemimetric \\(d_\\rho\\), the authors extend natural expansiveness and topological pressure to semiflows not necessarily continuous. Every regular impulsive semiflow is \\(d_\\rho\\)-conjugate to a continuous semiflow, with existence and uniqueness of equilibrium states obtained as an application. Further potential hypotheses are not specified in the abstract.",
+        "methods": [
+          "Natural extensions.",
+          "Pseudosemimetric and conjugacy framework."
+        ],
+        "context": "Topological dynamics and thermodynamic formalism for semiflows.",
+        "keywords": [
+          "natural expansiveness",
+          "topological pressure",
+          "equilibrium states",
+          "impulsive semiflows"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06836",
+        "versioned_id": "2611.06836v1",
+        "title": "Delay-induced multirhythmicity in a 3-cell inhibitory network",
+        "authors": [
+          "Xinxin Qie",
+          "Morten Gram Pedersen",
+          "Jian Song",
+          "Shenquan Liu",
+          "Andrey L. Shilnikov"
+        ],
+        "abstract": "We study the dynamics of a delayed three-cell central pattern generator network using return-map analysis and a phase-reduced description derived from generalized FitzHugh-Nagumo oscillators. The phase model captures the emergence and stability of synchronous, pacemaker, and traveling-wave rhythms and provides a systematic, computationally efficient framework for characterizing the network dynamics beyond direct return-map calculations. We conduct extensive two-parameter analyses of both the full and phase-reduced models, revealing rich multi-rhythmic dynamics and transitions among coexisting rhythmic states. The close agreement between the two descriptions establishes phase reduction as an efficient and reliable framework for characterizing the dynamical organization of delayed neural oscillator networks.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06836",
+        "pdf_url": "https://arxiv.org/pdf/2611.06836"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Computational multirhythmicity in a delayed neural oscillator network is central, with no stated central entropy, fractal or symbolic connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06878",
+        "versioned_id": "2611.06878v1",
+        "title": "The full Kolakoski shift is topologically transitive",
+        "authors": [
+          "Andrew C. Mitchell",
+          "James J. Walton",
+          "Michael F. Whittaker"
+        ],
+        "abstract": "We prove that the full Kolakoski shift---namely, the subshift of all smooth sequences over the alphabet $\\{1,2\\}$---is topologically transitive. Consequently, we demonstrate the existence of a smooth sequence whose factors are invariant under both reversal and bitwise complementation. As a further application, we prove the existence of arbitrarily long smooth words containing an equal number of occurrences of the symbols $1$ and $2$, providing evidence in support of Keane's conjecture. Our approach leverages the hierarchical structure of the full Kolakoski shift to reimagine the shift action in terms of a self-similar semigroup, which allows techniques from group theory and combinatorics to be applied.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GR"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06878",
+        "pdf_url": "https://arxiv.org/pdf/2611.06878"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Kolakoski subshifts, transitivity and smooth-word combinatorics directly match symbolic dynamics.",
+        "tldr": "The full Kolakoski shift is topologically transitive and has arbitrarily long balanced smooth words; the latter supports, but does not prove, Keane’s conjecture.",
+        "problem": "Establish transitivity and symmetry/balance consequences for the full smooth-sequence shift.",
+        "main_result": "The authors prove transitivity of the subshift of all smooth sequences over \\(\\{1,2\\}\\). They construct a smooth sequence whose factor set is invariant under reversal and bitwise complementation, and prove existence of arbitrarily long smooth words with equal numbers of the two symbols. These balanced words are evidence for Keane’s conjecture, rather than a proof of the conjecture.",
+        "methods": [
+          "Hierarchical structure recast as a self-similar semigroup.",
+          "Group-theoretic and combinatorial techniques."
+        ],
+        "context": "Kolakoski symbolic dynamics.",
+        "keywords": [
+          "Kolakoski shift",
+          "topological transitivity",
+          "smooth words",
+          "self-similar semigroup"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06889",
+        "versioned_id": "2611.06889v1",
+        "title": "$\\omega$-limit sets of triangular maps over periodic orbits of the base",
+        "authors": [
+          "Juan Luis Garc\\'ia Guirao"
+        ],
+        "abstract": "Let $F(x,y)=(f(x),g(x,y))$ be a continuous triangular map of the unit square and let $z=(x_0,y_0)$ be a point such that $\\omega_f(x_0)$ is a periodic orbit $\\{p_0,\\dots,p_{m-1}\\}$ of $f$. Then $\\omega_F(z)=\\bigcup_{i}\\{p_i\\}\\times M_i$ for nonempty compact sets $M_i$, and we ask which $m$-tuples $(M_0,\\dots,M_{m-1})$ occur. For $m=1$ the answer is a theorem of Kolyada and Snoha. We show that a tuple occurs if and only if there are continuous surjections $M_i\\to M_{i+1}$, indices modulo $m$, whose composition around the cycle is chain transitive. This is a cyclic version of classical facts due to Dowker and Friedlander, Sharkovsky, Hirsch, Smith and Zhao, and Kolyada and Snoha. It yields two necessary conditions: no $M_i$ is one of the exceptional sets of Kolyada and Snoha, and there are continuous surjections $M_0\\to M_1\\to\\dots\\to M_{m-1}\\to M_0$. We prove that these conditions are also sufficient when every $M_i$ has uncountably many connected components, and when every $M_i$ has countably many components of which only finitely many are nondegenerate. In particular the sections of one $\\omega$-limit set need not be homeomorphic. Every tuple satisfying the two conditions falls into one of these cases or into a single remaining class, in which the sections have countably many components and infinitely many of them are nondegenerate; that class is studied in a companion paper.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06889",
+        "pdf_url": "https://arxiv.org/pdf/2611.06889"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Omega-limit sets, chain transitivity and topological structure of triangular maps are central topological-dynamics themes.",
+        "tldr": "The authors characterize cyclic fibre sections of omega-limit sets over periodic base orbits and resolve two broad component classes.",
+        "problem": "Which compact fibre-section tuples arise for a continuous triangular map of the unit square over a periodic base orbit?",
+        "main_result": "For a base omega-limit orbit \\(\\{p_0,\\ldots,p_{m-1}\\}\\), a tuple of nonempty compact sections \\((M_0,\\ldots,M_{m-1})\\) occurs exactly when continuous surjections \\(M_i\\to M_{i+1}\\), cyclically indexed, have a chain-transitive cyclic composition. Two necessary conditions are avoidance of Kolyada–Snoha exceptional sets and existence of the cyclic surjections. They are sufficient when every section has uncountably many components, or when every section has countably many components with only finitely many nondegenerate. Sections need not be homeomorphic. The remaining class with countably many components and infinitely many nondegenerate ones is deferred to a companion paper. The exceptional sets are not specified in the abstract.",
+        "methods": [
+          "Cyclic surjections and chain transitivity."
+        ],
+        "context": "Topological dynamics of triangular maps.",
+        "keywords": [
+          "omega-limit sets",
+          "triangular maps",
+          "chain transitivity",
+          "fibre sections"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.05679",
+        "versioned_id": "2611.05679v1",
+        "title": "Orbit Transversality for Projective Space",
+        "authors": [
+          "Kaiwen Lu"
+        ],
+        "abstract": "Let $f\\colon \\mathbb{P}^n\\to \\mathbb{P}^n$ be a dominant endomorphism defined over a number field $K$. We show that there is a finite extension $L/K$ such that every proper closed subset of $\\mathbb{P}^n$ misses at least one grand $(f,L)$-orbit. Equivalently, $(\\mathbb{P}^n,f,K)$ is strongly dense orbit transversal (S-DOT): every set containing exactly one representative of each grand $(f,L)$-orbit is Zariski dense in $\\mathbb{P}^n$.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.AG",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.05679",
+        "pdf_url": "https://arxiv.org/pdf/2611.05679"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Grand-orbit structure and Zariski-dense transversals give a substantial algebraic-dynamics connection.",
+        "tldr": "After a finite number-field extension, every grand-orbit transversal for a dominant projective-space endomorphism is Zariski dense.",
+        "problem": "Find an arithmetic orbit-transversality property for projective space.",
+        "main_result": "If \\(f:\\mathbb P^n\\to\\mathbb P^n\\) is a dominant endomorphism over a number field \\(K\\), there is a finite extension \\(L/K\\) such that each proper closed subset misses at least one grand \\((f,L)\\)-orbit. Equivalently, every set selecting exactly one point from each such grand orbit is Zariski dense.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Arithmetic dynamics on projective space.",
+        "keywords": [
+          "grand orbits",
+          "orbit transversals",
+          "Zariski density",
+          "projective space"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.05921",
+        "versioned_id": "2611.05921v1",
+        "title": "Occupation Measures in the ODE Method: Wasserstein Convergence and Rates",
+        "authors": [
+          "Dimitrios Katselis"
+        ],
+        "abstract": "We study occupation measures associated with stochastic approximation recursions within the ordinary differential equation (ODE) method. Under Lyapunov conditions ensuring that the limiting ODE has a globally exponentially stable equilibrium, we establish that the continuous-time occupation measures associated with the piecewise linear interpolation of the iterates converge almost surely in the $2$-Wasserstein topology to the Dirac mass at the equilibrium, the unique invariant probability measure of the limiting semiflow. The choice of the $2$-Wasserstein distance is naturally aligned with our continuous- and discrete-time Lyapunov drift analysis. We also consider two discrete-time sequences of occupation measures, induced by the algorithmic time scale and the iteration count, respectively, and we establish their almost sure convergence to the same invariant measure in the $2$-Wasserstein distance. We then derive corresponding convergence rates in expectation, providing a nonasymptotic complement to the almost sure results. These expectation bounds also imply some tail probability estimates. Finally, we verify that our results apply to a canonical class of linear recursions.",
+        "announce_type": "cross",
+        "categories": [
+          "math.PR",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.05921",
+        "pdf_url": "https://arxiv.org/pdf/2611.05921"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Occupation measures converging to an invariant probability measure provide a direct, though equilibrium-centered, statistical-dynamics connection.",
+        "tldr": "Under global exponential stability ensured by Lyapunov conditions, continuous- and discrete-time occupation measures converge almost surely in quadratic Wasserstein distance to the equilibrium mass.",
+        "problem": "Quantify occupation-measure convergence for stochastic approximation in the ODE method.",
+        "main_result": "Under the stated Lyapunov conditions, the limiting ODE has a globally exponentially stable equilibrium, whose Dirac mass is the semiflow’s unique invariant probability measure. Occupation measures of the piecewise-linear interpolation converge to it almost surely in quadratic Wasserstein topology. Two discrete occupation sequences, based respectively on algorithmic time and iteration count, have the same convergence. Expected convergence rates give nonasymptotic bounds and tail estimates, with applications to a canonical linear-recursion class. The exact Lyapunov assumptions, rates and recursion class are not specified in the abstract.",
+        "methods": [
+          "Continuous- and discrete-time Lyapunov drift analysis."
+        ],
+        "context": "Stochastic approximation and invariant occupation measures.",
+        "keywords": [
+          "occupation measures",
+          "ODE method",
+          "Wasserstein convergence",
+          "Lyapunov drift"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06106",
+        "versioned_id": "2611.06106v1",
+        "title": "PCF All The Way Down",
+        "authors": [
+          "Taylor Dupuy",
+          "Alon Levy",
+          "Thomas Tucker",
+          "Zhouran Wang"
+        ],
+        "abstract": "We prove that a finite surjective post-critically finite self-map of a variety in characteristic zero remains post-critically finite on every preperiodic integral effective divisor after passing to its periodic image with its return map. Iterating this result proves PCF all the way down. A detailed report on AI usage is contained in the manuscript.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AG",
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06106",
+        "pdf_url": "https://arxiv.org/pdf/2611.06106"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Postcritical finiteness on invariant subvarieties provides a complex/algebraic-dynamics connection.",
+        "tldr": "A finite surjective post-critically finite self-map remains post-critically finite on preperiodic integral effective divisors after passage to their periodic images and return maps.",
+        "problem": "Determine whether postcritical finiteness persists down preperiodic divisors.",
+        "main_result": "For a variety in characteristic zero and a finite surjective post-critically finite self-map, the authors prove persistence on every preperiodic integral effective divisor after taking its periodic image and return map. Iteration gives the stated “PCF all the way down” conclusion.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Postcritically finite algebraic dynamics.",
+        "keywords": [
+          "postcritical finiteness",
+          "preperiodic divisors",
+          "return maps",
+          "characteristic zero"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06382",
+        "versioned_id": "2611.06382v1",
+        "title": "From hydrological laws to catchment models: A process-based model matches deep-learning accuracy on three continents",
+        "authors": [
+          "Xilin Xia"
+        ],
+        "abstract": "Dooge asked whether hydrology has laws at the catchment scale. We ask whether a low-dimensional system built under physical laws can match the accuracy of neural networks that outperform process-based models on the same inputs. Three laws constrain a lumped catchment model. Conservation makes it a flux-connected storage network, dissipation fixes the sign of every flux and aggregation determines how the unresolved composition enters the fluxes, through effective laws over threshold distributions and a memory of the forcing. These laws admit four kinds of refinement. A parsimonious model under them, CaRT (11 parameters per catchment), is refined in a loop assisted by AI agents. Each refinement addresses an observed deficit through a hypothesis from the literature. The result, CaRT+, has fourteen states, 35 parameters per catchment and no daily neural network. Most refinements follow from aggregation over thresholds or from variables that carry no water but modulate fluxes. On 602 British and 593 US gauged catchments, single CaRT+ models reach median Nash-Sutcliffe efficiencies of 0.863 and 0.765 in held-out years. A stateful LSTM reaches 0.869 and 0.751 and an entity-aware LSTM 0.862 and 0.754, while three-seed LSTM ensembles remain ahead of the CaRT+ ensemble by 0.003-0.012 in median paired NSE. On 505 drier Australian gauged catchments unused in development, single CaRT+ models reach 0.778 against 0.762 and 0.753 for the two LSTMs. The results suggest that catchment-scale laws exist as laws of form, with the constitutive families shared and only their parameters learned.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.LG",
+          "cs.AI",
+          "math.DS",
+          "physics.geo-ph"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06382",
+        "pdf_url": "https://arxiv.org/pdf/2611.06382"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Catchment hydrological modeling and predictive comparisons with neural networks are central, without a stated central connection to the research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06388",
+        "versioned_id": "2611.06388v1",
+        "title": "Lyapunov spectrum, Harder--Narasimhan filtration and thin monodromy",
+        "authors": [
+          "Fei Yu",
+          "Junming Zhang"
+        ],
+        "abstract": "We study the equality case of the inequalities between the Lyapunov spectrum and the Harder--Narasimhan slopes of a semi-simple local system with non-expanding cusp monodromy over a finite-area hyperbolic surface. This gives a nonlattice-transversality alternative of the monodromy group. On the other hand, we generalize Filip's Assumptions A and B to give classes of polarized variation of Hodge structures that achieve the equality. As an application, we recover the thinness of C-32 in $\\mathrm{Sp}_6\\mathbb{R}$. Besides, we provide an upper bound, called average Cartan spectrum, that dominates the Lyapunov spectrum and study its rigidity.",
+        "announce_type": "cross",
+        "categories": [
+          "math.DG",
+          "math.AG",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06388",
+        "pdf_url": "https://arxiv.org/pdf/2611.06388"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Lyapunov spectra, rigidity and monodromy over hyperbolic surfaces supply a substantial geometric-dynamics connection.",
+        "tldr": "The equality case in Lyapunov–Harder–Narasimhan inequalities yields a monodromy alternative, with additional equality examples and a dominating Cartan-spectrum bound.",
+        "problem": "Analyze equality, upper bounds and rigidity for Lyapunov spectra of local systems.",
+        "main_result": "The setting is a semisimple local system with non-expanding cusp monodromy over a finite-area hyperbolic surface. Equality between the Lyapunov spectrum and Harder–Narasimhan slopes gives a nonlattice–transversality alternative for monodromy. Generalizations of Filip’s Assumptions A and B give classes of polarized variations of Hodge structures attaining equality, and recover thinness of C-32 in \\(\\mathrm{Sp}_6\\mathbb R\\). The authors introduce an average Cartan spectrum dominating the Lyapunov spectrum and study its rigidity. The alternative’s precise formulation, generalized assumptions and rigidity criteria are not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Lyapunov spectra, hyperbolic surfaces and Hodge structures.",
+        "keywords": [
+          "Lyapunov spectrum",
+          "Harder–Narasimhan slopes",
+          "thin monodromy",
+          "average Cartan spectrum"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06466",
+        "versioned_id": "2611.06466v1",
+        "title": "Phase Locking in Oscillator Networks with Uncertain and State-Dependent Couplings",
+        "authors": [
+          "Iva Ba\\v{c}i\\'c",
+          "Philipp C. B\\\"ottcher",
+          "Marc Hunkem\\\"oller",
+          "Carsten Hartmann",
+          "David Gross",
+          "Andrea Benigni",
+          "Dirk Witthaut"
+        ],
+        "abstract": "Phase locking in oscillator networks depends critically on the interaction strengths between coupled units. In many applications, however, these couplings are uncertain, state dependent, or time varying. We derive rigorous conditions for phase locking in Kuramoto-type networks when each coupling strength is known only within prescribed bounds. Building on a convex formulation of the nonlinear fixed-point equations, we obtain edge-wise error bounds for arbitrary feasible approximations that hold uniformly over all admissible couplings. These bounds yield sufficient conditions for the existence of phase-locked states with prescribed phase-difference limits. We illustrate the framework for AC power grids with uncertain voltage magnitudes and adaptive oscillator networks with state-dependent couplings. For the latter, the bounds can be further tightened by exploiting the state dependence of the couplings.",
+        "announce_type": "cross",
+        "categories": [
+          "nlin.AO",
+          "cs.SY",
+          "eess.SY",
+          "math.DS",
+          "math.OC",
+          "physics.soc-ph"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06466",
+        "pdf_url": "https://arxiv.org/pdf/2611.06466"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Robust phase-locking conditions for oscillator networks and power-grid applications are central, without a stated central entropy, fractal or symbolic connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.06567",
+        "versioned_id": "2611.06567v1",
+        "title": "A comparison of three models of a whirling string as it becomes chaotic",
+        "authors": [
+          "Nicholas B. Tufillaro"
+        ],
+        "abstract": "A stretched wire driven near its fundamental frequency can leave the plane of the driving force and whirl. At larger amplitudes the whirl becomes modulated, reverses its direction, and becomes chaotic. Three models of this motion are in common use: the geometrically exact string equations; a two-mode model -- the Kirchhoff-Carrier equation with one transverse mode in each plane; and the averaged equations for the slow amplitudes of those two modes. We integrate all three under similar conditions and compare them along the route to chaos, which starts with a Hopf bifurcation of the steady whirl and passes through period doublings to chaotic attractors organized by a Shil'nikov homoclinic orbit. The small parameter of the averaging, the ratio $\\varepsilon = c/\\omega_1$ of the modulation rate to the fundamental frequency, runs from 0.005 to 0.02. Qualitatively the three models agree in the sequence of bifurcations, the coexisting attractors, the return maps and the Lyapunov exponents. Quantitatively, averaging places each local bifurcation $0.7\\varepsilon$ to $1.2\\varepsilon$ higher in the scaled detuning. The geometrically exact and two-mode models agree with each other to within 0.002 at the local bifurcations for $\\varepsilon \\le 0.01$. The Shil'nikov ratio, which decides whether chaos accompanies the homoclinic orbit, agrees among the three models to within 1.5% for $\\varepsilon \\le 0.01$, yet the homoclinic bifurcation itself moves by about $\\varepsilon$ at the lower damping and by 6 to 9 times $\\varepsilon$ at the higher; the difference is set by how quickly the return of the homoclinic loop changes with detuning.",
+        "announce_type": "cross",
+        "categories": [
+          "nlin.CD",
+          "math.DS",
+          "physics.class-ph"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.06567",
+        "pdf_url": "https://arxiv.org/pdf/2611.06567"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Numerical comparison of whirling-string bifurcations is central, without a stated central connection to the strongest research interests.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2311.16928",
+        "versioned_id": "2311.16928v5",
+        "title": "Time-Averages along Partial Orbits for Dynamical Systems",
+        "authors": [
+          "Yunping Jiang",
+          "Jessica Liu"
+        ],
+        "abstract": "We investigate the convergence of time-averages of continuous functions along partial orbits for continuous dynamical systems on compact metric spaces. Unlike the classical focus of ergodic theory on convergence almost everywhere, our study emphasizes convergence at every point, motivated by problems in number theory. To this end, we consider a sequence having a uniform behavior property in the natural numbers. We also define and study two structural properties of dynamical systems along such partial orbits: minimal mean Lyapunov stability and minimal mean attractability. Our main result shows that if a continuous dynamical system is both minimally mean Lyapunov stable and minimally mean attractable along a given uniformly behaved sequence, and is minimally uniquely ergodic, then the time-average of any continuous function along the corresponding partial orbit converges to the space average at every point.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2311.16928",
+        "pdf_url": "https://arxiv.org/pdf/2311.16928"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Pointwise averages, unique ergodicity and mean stability of compact topological systems directly match topological dynamics.",
+        "tldr": "Uniformly behaved subsequences give everywhere convergence of continuous-function averages under minimal mean stability, attractability and unique ergodicity assumptions.",
+        "problem": "Obtain convergence at every point for partial-orbit time averages in compact metric systems.",
+        "main_result": "For a continuous dynamical system on a compact metric space and a uniformly behaved sequence, minimal mean Lyapunov stability and minimal mean attractability along that sequence, together with minimal unique ergodicity, imply convergence of every continuous-function partial-orbit average to the space average at every point. The definitions of uniform behavior and the two mean properties are not specified in the abstract.",
+        "methods": [
+          "Uniform-behavior property for sequences.",
+          "Minimal mean Lyapunov stability and minimal mean attractability."
+        ],
+        "context": "Topological dynamics and pointwise ergodic averages.",
+        "keywords": [
+          "partial orbits",
+          "time averages",
+          "minimal unique ergodicity",
+          "mean Lyapunov stability"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2603.17849",
+        "versioned_id": "2603.17849v3",
+        "title": "Koopman Generator Decomposition for Port-Hamiltonian Systems",
+        "authors": [
+          "Victor M. Preciado"
+        ],
+        "abstract": "Port-Hamiltonian energy balance and Koopman approximation describe different aspects of nonlinear dynamics. This paper distinguishes exact observable identities, measure-dependent Galerkin projections, constrained surrogate identification, and certification of a controller on the nonlinear plant. Conservative weak skewness requires compatible measure and boundary conditions. Dissipative positivity belongs to the metric bracket; it does not generally make the projected first-order dissipative derivation positive. We give an explicit fixed-metric compatibility condition and a constant--Hamiltonian dictionary obstruction, and state the assumptions under which surrogate certificates imply plant bounds. A reproduced pendulum experiment illustrates the practical gap: its learned controller admits an exact shaped-energy certificate on the nonlinear plant, although its fitted quadratic storage is not a plant Lyapunov function and its archived residual-norm diagnostic is uninformative. These conclusions use the specified plant structure; they are not generic finite-data guarantees. The bracket, projection, and Lyapunov arguments are positioned relative to existing structured identification and residual-aware control methods.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "eess.SY",
+          "cs.SY",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2603.17849",
+        "pdf_url": "https://arxiv.org/pdf/2603.17849"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Koopman projections and their measure dependence provide a technical operator-dynamics connection; the application is control-oriented.",
+        "tldr": "The authors separate exact identities, Galerkin models and plant certification, showing why dissipative brackets and fitted storage do not automatically certify the nonlinear plant.",
+        "problem": "Clarify when structured Koopman surrogates imply valid nonlinear-plant bounds.",
+        "main_result": "Conservative weak skewness requires compatible measure and boundary conditions. Dissipative positivity is a metric-bracket property and generally does not make the projected first-order dissipative derivation positive. The authors give a fixed-metric compatibility condition, a constant-Hamiltonian dictionary obstruction and assumptions transferring surrogate certificates to plant bounds. In a reproduced pendulum experiment, an exact plant shaped-energy certificate holds although the fitted quadratic storage is not a plant Lyapunov function and the archived residual diagnostic is uninformative. These depend on the specified plant structure, with no generic finite-data guarantee. The precise compatibility and transfer assumptions are not specified in the abstract.",
+        "methods": [
+          "Bracket, Galerkin-projection and Lyapunov arguments.",
+          "Reproduced pendulum experiment."
+        ],
+        "context": "Koopman approximation and port-Hamiltonian control.",
+        "keywords": [
+          "Koopman generator",
+          "Galerkin projection",
+          "metric bracket",
+          "plant certification"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2606.27850",
+        "versioned_id": "2606.27850v2",
+        "title": "Spectral clustering of time-evolving networks using spatio-temporal random walks",
+        "authors": [
+          "Filip Bla\\v{s}kovi\\'c",
+          "Tim O. F. Conrad",
+          "Stefan Klus",
+          "Nata\\v{s}a Djurdjevac Conrad"
+        ],
+        "abstract": "Temporal (or time-evolving) networks provide a natural framework for modeling complex systems with time-dependent interactions, where understanding the evolution of community structures is a central challenge. While random walk-based approaches to community detection in static networks are well established through the spectral analysis of associated transfer operators, extending these ideas to temporal networks is nontrivial due to the inherent time-dependence of the underlying dynamics. In this work, we develop a general framework for community detection in temporal networks that is based on multi-view canonical correlation analysis (mCCA). We show that the proposed formulation admits a spectral characterization via a time-reversible random walk on an augmented space-time network, providing a clear dynamical interpretation of temporal communities as metastable structures of the process. Furthermore, we analyze key spectral properties of the resulting transfer operators and the interplay between spatial and temporal effects, which allows us to distinguish between structural features and artifacts induced by the snapshot coupling. Finally, we derive a reduced-order model, which preserves the essential spectral properties while significantly improving computational efficiency. We show that the proposed approach effectively detects communities in temporal networks and captures their evolution.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cs.SI",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-05T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2606.27850",
+        "pdf_url": "https://arxiv.org/pdf/2606.27850"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Transfer operators and metastable random-walk structures give a substantive dynamical connection to temporal-network clustering.",
+        "tldr": "Multi-view canonical correlation yields a reversible space-time random walk whose metastability describes temporal communities.",
+        "problem": "Detect evolving communities while distinguishing genuine structure from snapshot-coupling artifacts.",
+        "main_result": "The framework has a spectral characterization through a time-reversible random walk on an augmented space-time network, interpreting communities as metastable structures. The authors analyze transfer-operator spectral properties and spatial–temporal effects, distinguish structural features from snapshot-coupling artifacts, and derive a reduced model preserving essential spectral properties with improved computational efficiency. The exact preserved spectral quantities and quantitative efficiency bounds are not specified in the abstract.",
+        "methods": [
+          "Multi-view canonical correlation analysis.",
+          "Spectral analysis of a reversible space-time random walk.",
+          "Reduced-order modeling."
+        ],
+        "context": "Transfer operators and temporal-network metastability.",
+        "keywords": [
+          "temporal networks",
+          "canonical correlation",
+          "transfer operators",
+          "metastability"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 6,
+    "RELATED / POSSIBLY INTERESTING": 11,
+    "LOW PRIORITY": 6
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-11-05T10:58:55.567253Z",
+      "feed_published_at": "2026-11-05T00:00:00-05:00",
+      "feed_build_at": "2026-11-05T05:00:37Z",
+      "feed_date": "2026-11-05",
+      "sha256": "958720ad083c6b635cb2b7fb3a45c6439441259699c9b572fba20231ecd8dde5",
+      "byte_length": 48146,
+      "capture_run_url": null
+    }
+  ]
+}
