@@ -1,0 +1,1075 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-11-06",
+  "generated_at": "2026-11-06T11:02:58.164865Z",
+  "feed_build_at": "2026-11-06T05:00:23Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 26 unseen announcements: 10 HIGH PRIORITY, 9 RELATED / POSSIBLY INTERESTING, and 7 LOW PRIORITY. Central themes include maximal-entropy factors, geometric Gibbs measures, amenable sequence entropy, Hausdorff measures and dimensions, topological semigroups and orbit spaces. Related work concerns entire-map realization, dichotomies, numeration synchronization, measured graph relations and geometric Hamiltonian or stochastic dynamics. No followed-author matches occur in the supplied input; unstated conditions and quantitative formulations are identified without importing external results.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2611.07236",
+        "versioned_id": "2611.07236v1",
+        "title": "Measures of maximal entropy for monotone factors of smooth surface diffeomorphisms",
+        "authors": [
+          "Sylvain Crovisier",
+          "Alejo Garc\\'ia-Sassi",
+          "Yuri Lima",
+          "F\\'abio Tal"
+        ],
+        "abstract": "We prove that a transitive monotone factor of a smooth surface diffeomorphism has a unique measure of maximal entropy whenever its topological entropy is positive. Its entropy is the entropy of a single homoclinic class of the diffeomorphism, and the factor map is a measure-theoretic isomorphism on every ergodic measure with positive entropy of that class. The other homoclinic classes are mapped to periodic orbits. We give an application to the essential factor of a diffeomorphism isotopic to a pseudo-Anosov map ---possibly relative to a finite invariant set--- constructed by Garc\\'ia-Sassi \\& Tal: the essential factor has a unique measure of maximal entropy, which is Bernoulli and has full support.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GT"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.07236",
+        "pdf_url": "https://arxiv.org/pdf/2611.07236"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Topological entropy, maximal-entropy measures and factor maps are central interests.",
+        "tldr": "Positive-entropy transitive monotone factors of smooth surface diffeomorphisms have unique maximal-entropy measures, with a Bernoulli full-support application.",
+        "problem": "Understand entropy and invariant measures under monotone surface factors.",
+        "main_result": "A transitive monotone factor of a smooth surface diffeomorphism has a unique maximal-entropy measure whenever its topological entropy is positive. Its entropy equals that of one homoclinic class, and the factor is a measure-theoretic isomorphism on every positive-entropy ergodic measure of that class; other homoclinic classes map to periodic orbits. For the García-Sassi–Tal essential factor of a diffeomorphism isotopic to a pseudo-Anosov map, possibly relative to a finite invariant set, the maximal-entropy measure is unique, Bernoulli and fully supported.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Surface diffeomorphisms, monotone factors and entropy.",
+        "keywords": [
+          "maximal-entropy measures",
+          "monotone factors",
+          "homoclinic classes",
+          "Bernoulli property"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.07396",
+        "versioned_id": "2611.07396v1",
+        "title": "Discrete history operators: Exact state-space realization for sequence memory",
+        "authors": [
+          "Bin Zhou",
+          "Rong Gao",
+          "Zhao-Yan Li"
+        ],
+        "abstract": "A prescribed finite-dimensional analysis of an evolving discrete history need not admit an exact recurrence driven only by its current state and the entering input. We study exact realizations of causal linear discrete history operators (DHOs). Operator factorization and kernel inclusion characterize exact closure, while the cross-projection defect characterizes closure failure for orthonormal analyses. For finite-dimensional history spaces over fixed finite horizons, we distinguish two minimality problems. Reachable task quotients determine the minimum state dimension for preserving prescribed future tasks on reachable histories. Backward invariant envelopes characterize the minimum dimension of exact linear realizations recovering prescribed analyses on full history spaces within the admissible class. The minimum number of additional independent state directions is given by the rank of the propagated closure defect operator restricted to the kernel of the current analysis. For geometrically weighted countable histories, matrix mode transport yields structured exact recurrences and a uniform exponential decay estimate for state transitions. Additional conditions provide uniform Gram bounds and refined decay estimates. A stationary Meixner specialization yields explicit recurrence matrices, an O(N) arithmetic state update, and minimum augmentation dimensions over finite horizons for selected coefficients. Numerical experiments examine recurrence accuracy, state transition bounds, Gram conditions, and minimum realization dimensions.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.07396",
+        "pdf_url": "https://arxiv.org/pdf/2611.07396"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Exact finite-dimensional state realization for sequence memory is central, without a stated central entropy, fractal or symbolic-dynamics connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.07816",
+        "versioned_id": "2611.07816v1",
+        "title": "The fixed-point proportion of Latt\\`es maps",
+        "authors": [
+          "Xin Li"
+        ],
+        "abstract": "How often does an element of the geometric iterated Galois group of a Latt\\`es map fix a vertex of the tree? Let A/K be an abelian variety over a separably closed field of characteristic 0, G <= Aut(A,0) finite, and alpha an isogeny of degree at least 2 normalising G. The Latt\\`es map on X=A/G has a preimage tree governed by alpha-power torsion; we determine the fixed-point proportion in every dimension. For zeta in G the weight is the reciprocal of the number of fixed points of zeta in alpha-power torsion (zero if infinite); equivalently, it is a product of p-adic absolute values of determinants on the alpha-active subspaces; for scalar alpha=m the proportion is (1/|G|) times the sum over 1 != zeta in G of the product over p dividing m of the p-adic absolute value of det(1 - zeta | H_1(A,Z)). We deduce positivity and vanishing criteria, prove the groups G_infinity are martingale groups, determine the limit law, and reduce groups with translations to the fixed-origin case. In dimension one we determine ten values for scalar multipliers and nontrivial G <= Aut(E,0), and for the eight quadratic Latt\\`es classes the proportions are 1/8, 1/4 and 5/16. Bridy-Jones-Kelsey-Lodge exclude the Latt\\`es case from their main theorem; their Theorem 2.5 periodic-point bound is attained, via reductions modulo split primes p = 1 (mod 4), for the map (x^2+a)/(x^2-a), a^2 = -1, and we settle the exceptional case of the Fari\\~na-Asategui-Radi conjecture.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.07816",
+        "pdf_url": "https://arxiv.org/pdf/2611.07816"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Galois-group actions on preimage trees and fixed-point proportions directly connect with group-action dynamics.",
+        "tldr": "The authors determine fixed-point proportions of geometric iterated Galois groups of Lattès maps in every dimension and derive criteria and limit laws.",
+        "problem": "Quantify how often a geometric iterated Galois-group element fixes a preimage-tree vertex.",
+        "main_result": "The setting is an abelian variety over a separably closed characteristic-zero field, a finite group of origin-preserving automorphisms, and a normalizing isogeny of degree at least two. The preimage tree is governed by isogeny-power torsion. Fixed-point weights are reciprocals of fixed-point counts on this torsion, with weight zero for infinite counts, equivalently determinant products on active p-adic subspaces. The authors derive positivity and vanishing criteria, prove the groups are martingale groups, determine the limit law and reduce translation-containing groups to the fixed-origin case. In dimension one they determine ten scalar-multiplier values for nontrivial automorphism groups; the eight quadratic Lattès classes have proportions one eighth, one quarter and five sixteenths. They also obtain the stated periodic-point-bound application and settle the named exceptional conjecture case. The full criteria and limit-law formula are not specified in the abstract.",
+        "methods": [
+          "Isogeny-power torsion and determinant weights.",
+          "Reduction of groups with translations to the fixed-origin case."
+        ],
+        "context": "Arithmetic dynamics and preimage-tree group actions.",
+        "keywords": [
+          "Lattès maps",
+          "iterated Galois groups",
+          "fixed-point proportion",
+          "preimage trees"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.07818",
+        "versioned_id": "2611.07818v1",
+        "title": "Thurston algorithm for real entire maps: existence and uniqueness",
+        "authors": [
+          "Sebastian van Strien"
+        ],
+        "abstract": "This paper deals with the real Thurston pullback algorithm for entire maps with finitely many finite singular values, all real. Given a finite forward-invariant marking containing the singular values and satisfying an interval no-Levy-cycle condition, the pullback is shown to have a unique fixed point and it is shown that every orbit converges to it. The resulting entire map uniquely realises the marked dynamics up to positive affine conjugacy. Thus this paper established Thurston realisation and uniqueness in the setting of real entire maps with a finite postsingular set. As usual, the realisation problem reduces to the existence of a fixed point of the Thurston map $T$ which in the real setting acts on a simplex $W$ of dimension $s-2$ if the required postsingular set consists of $s$ points. The key estimate concerns a finite real preimage interval: when its critical multiplicity is bounded and its endpoint values stay separated from the singular values unless they equal to one, its hyperbolic diameter grows at most double-logarithmically as the separation tends to zero. An expansive marking (absence of Levy cycles) then rules out configurations near the boundary of the simplex whose displacement under the Thurston map is at most a fixed multiple of their distance to the boundary. Using a version of the Brouwer fixed point theorem, this immediately implies that the Thurston map $T$ has a fixed point. The argument permits infinitely many real and non-real critical points and different behaviours as the real variable tends to $+\\infty$ and $-\\infty$. Additional estimates for fixed labelled inverse branches, which are not strictly necessary for the proof of the Main Theorem, are given in the appendices.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.07818",
+        "pdf_url": "https://arxiv.org/pdf/2611.07818"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Realization and conjugacy of marked entire-map dynamics give a substantial complex/topological-dynamics connection.",
+        "tldr": "A finite real postsingular marking satisfying an interval no-Levy-cycle condition gives a unique attracting fixed point for the real Thurston pullback.",
+        "problem": "Establish real Thurston realization and uniqueness for entire maps with finite postsingular sets.",
+        "main_result": "For entire maps with finitely many finite singular values, all real, a finite forward-invariant marking containing them and satisfying the interval no-Levy-cycle condition yields a unique pullback fixed point to which every orbit converges. The map realizing the marked dynamics is unique up to positive affine conjugacy. With \\(s\\) marked postsingular points, the real Thurston map acts on an \\((s-2)\\)-dimensional simplex. A bounded-critical-multiplicity preimage interval has at most double-logarithmic hyperbolic-diameter growth as its endpoint separation from singular values tends to zero, provided endpoint values stay separated unless equal to a singular value. Expansive marking excludes the stated low-displacement boundary configurations, allowing a Brouwer-type fixed-point argument. Infinitely many real and nonreal critical points and differing behavior at the two real infinities are allowed.",
+        "methods": [
+          "Real Thurston pullback on a simplex.",
+          "Hyperbolic-diameter estimate.",
+          "A version of Brouwer’s fixed-point theorem."
+        ],
+        "context": "Real entire dynamics and marked realization.",
+        "keywords": [
+          "Thurston algorithm",
+          "entire maps",
+          "Levy cycles",
+          "affine conjugacy"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.07833",
+        "versioned_id": "2611.07833v1",
+        "title": "Hausdorff dimension of nonergodic directions in higher genus via effective equidistribution",
+        "authors": [
+          "Yuming Wei"
+        ],
+        "abstract": "For each fixed $g\\ge3$, we prove that non-uniquely ergodic directions have Hausdorff dimension $1/2$ on almost every area-one surface in $\\mathcal H^{\\mathrm{odd}}(g-1,g-1)$ when $g$ is odd, and in $\\mathcal H^{\\mathrm{nonhyp}}(g-1,g-1)$ when $g$ is even. We construct these directions through cyclic splittings into $g$ slit tori. Effective equidistribution of Lindenstrauss--Mohammadi--Yang supplies sufficiently many children at each normal input. We estimate cusp and periodic-orbit failures with the original branching weights and prove that their total mass loss is summable. The surviving path measure yields the dimension lower bound, also for directions nonergodic for flat area.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.07833",
+        "pdf_url": "https://arxiv.org/pdf/2611.07833"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Exact Hausdorff dimension of non-uniquely ergodic directions directly matches fractal dimension interests.",
+        "tldr": "For every fixed genus at least three, almost every area-one surface in the specified component has non-uniquely ergodic directions of Hausdorff dimension one half.",
+        "problem": "Obtain an exact dimension result for higher-genus exceptional directions.",
+        "main_result": "For each fixed \\(g\\geq3\\), the dimension is \\(1/2\\) on almost every area-one surface in \\(\\mathcal H^{\\mathrm{odd}}(g-1,g-1)\\) for odd \\(g\\), and \\(\\mathcal H^{\\mathrm{nonhyp}}(g-1,g-1)\\) for even \\(g\\). Directions are constructed by cyclic splittings into \\(g\\) slit tori. Cusp and periodic-orbit failures have summable total mass loss with the original branching weights, and the surviving path measure gives the lower bound also for directions nonergodic for flat area.",
+        "methods": [
+          "Cyclic slit-torus splittings.",
+          "Lindenstrauss–Mohammadi–Yang effective equidistribution.",
+          "Branching-weight mass-loss estimates and a surviving path measure."
+        ],
+        "context": "Translation-surface ergodicity and Hausdorff dimension.",
+        "keywords": [
+          "nonergodic directions",
+          "Hausdorff dimension",
+          "effective equidistribution",
+          "slit tori"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.08002",
+        "versioned_id": "2611.08002v1",
+        "title": "Generalized Hopf bifurcations: a homological analysis and obstructions to their existence",
+        "authors": [
+          "H\\'ector Barge",
+          "J. J. S\\'anchez-Gabites"
+        ],
+        "abstract": "A generalized Hopf bifurcation takes place when varying a parameter of a (semi)dynamical system causes an attractor $K$ to become a repeller. In doing so, it expels a (parameter-dependent) family of attractors. In this paper we concentrate on two questions: (1) what do the expelled attractors look like?, and (2) can any attractor $K$ undergo a generalized Hopf bifurcation? Regarding (1), we compute the cohomology of the expelled attractors in terms of the cohomology of $K$; in the case of continuous-time dynamics this can be improved to a computation of their Borsuk shape. As for (2), we show that certain compacta cannot undergo generalized Hopf bifurcations and, when the ambient space has dimension $ \\leq 3$, give a complete topological characterization of which can.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GT"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.08002",
+        "pdf_url": "https://arxiv.org/pdf/2611.08002"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Cohomology, Borsuk shape and topological obstructions for attractors make topology central rather than an incidental bifurcation application.",
+        "tldr": "The authors compute the topology of attractors expelled in generalized Hopf bifurcations and characterize admissible compacta in ambient dimensions at most three.",
+        "problem": "Which attractors can become repellers in a generalized Hopf bifurcation, and what topology do the expelled attractors have?",
+        "main_result": "Cohomology of the expelled attractors is computed from that of the original attractor. In continuous time this improves to a computation of Borsuk shape. Certain compacta cannot undergo such bifurcations, and the authors give a complete topological characterization in ambient dimension at most three. The formulas and the precise characterization are not specified in the abstract.",
+        "methods": [
+          "Homological analysis.",
+          "Cohomology and Borsuk shape."
+        ],
+        "context": "Topology of attractors in parameter-dependent dynamics.",
+        "keywords": [
+          "generalized Hopf bifurcation",
+          "cohomology",
+          "Borsuk shape",
+          "topological obstructions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.08320",
+        "versioned_id": "2611.08320v1",
+        "title": "Hypercyclic and topologically transitive semigroups of composition operators (revised and extended version)",
+        "authors": [
+          "Mohammad Javaheri"
+        ],
+        "abstract": "Let $X$ be a separable locally compact metric space, let $E\\neq\\{0\\}$ be a normed space, and let $G$ be a semigroup of continuous self-maps of $X$. Every $\\varphi\\in G$ induces the composition operator $C_\\varphi f=f\\circ\\varphi$ on the space $C(X,E)$ of continuous functions endowed with the compact-open topology. We characterize the topological transitivity of the semigroup $\\widehat{G}=\\{C_\\varphi:\\varphi\\in G\\}$ by a condition that combines the run-away property of $G$ with an approximate form of injectivity, and we show that, when $E$ is separable, $\\widehat{G}$ is topologically transitive if and only if it is hypercyclic. In particular, if every element of $G$ is one-to-one and $G$ is run-away, then $\\widehat{G}$ is topologically transitive, and hypercyclic when $E$ is separable. For a single map $\\varphi$ we obtain: $C_\\varphi$ is hypercyclic $\\iff$ $C_\\varphi$ is topologically transitive $\\iff$ $\\varphi$ is one-to-one and run-away, and $C_\\varphi$ is mixing $\\iff$ $\\varphi$ is one-to-one and strongly run-away. If, moreover, $\\varphi$ is an open map (which is automatic on manifolds by invariance of domain), then $C_\\varphi$ is Devaney chaotic. On an open interval all of these properties are equivalent to $\\varphi$ being one-to-one without fixed points.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.08320",
+        "pdf_url": "https://arxiv.org/pdf/2611.08320"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Transitivity, hypercyclicity, mixing and semigroup actions are central topological-dynamics interests.",
+        "tldr": "Composition-operator semigroup transitivity is characterized by run-away behavior and approximate injectivity, with equivalence to hypercyclicity for separable range spaces.",
+        "problem": "Characterize dense-orbit and transitivity properties induced by semigroups of maps.",
+        "main_result": "Let \\(X\\) be separable locally compact metric, \\(E\\neq\\{0\\}\\) normed, and \\(G\\) a semigroup of continuous self-maps. On \\(C(X,E)\\) with the compact-open topology, transitivity of the induced composition-operator semigroup is equivalent to a condition combining run-away behavior and approximate injectivity. If \\(E\\) is separable, transitivity is equivalent to hypercyclicity. Injectivity of every element and the run-away property suffice for transitivity. For a single map the authors give injectivity/run-away characterizations of transitivity and a strong-run-away characterization of mixing, as well as an additional open-map chaos conclusion. On an open interval the stated properties reduce to injectivity without fixed points. The exact approximate-injectivity condition is not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Linear and semigroup topological dynamics.",
+        "keywords": [
+          "composition operators",
+          "topological transitivity",
+          "hypercyclicity",
+          "run-away property"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.08353",
+        "versioned_id": "2611.08353v1",
+        "title": "From elementary processes to chaos: a discrete-time two-stage contagion model and its continuous limit",
+        "authors": [
+          "Francisco J. Mu\\~noz",
+          "Juan Carlos Nu\\~no",
+          "Luca Meacci"
+        ],
+        "abstract": "Two-stage contagion, in which adoption requires two successive contacts with adopters, combined with population turnover produces bistability and relaxation oscillations in Katriel's differential-equation model, but no chaos. We derive from the elementary reactions of the process, without reference to the differential equations, a discrete-time model in which the population is updated in rounds of length $\\tau$, as in elections, meetings or turns of a game: each individual makes at most one transition per round, events compete as exponential risks, and adoptions take effect from the next round. The model is a Markov chain whose large-population limit is a map $F_\\tau$; Katriel's equations are recovered as $\\tau\\to0$. Taking the probability $p$ of adoption after a single contact as bifurcation parameter, with rates and round length fixed, $F_\\tau$ goes from extinction through a window of chaos to a stable equilibrium; for $\\beta/\\gamma=46$, $\\mu/\\gamma=0.002$, $\\gamma\\tau=5.5$ the window is $0.023\\le p\\le0.056$, bounded by the invasion threshold and by a boundary crisis beyond a subcritical Neimark--Sacker point. One-stage contagion ($p=1$), $p=0$ and permanent adoption showed no chaos. The chaotic attractor is essentially unique, with one positive Lyapunov exponent and an outbreak--recharge geometry. In the same window Katriel's equations have a periodic relaxation cycle with troughs of $10^{-44}$--$10^{-164}$: the round structure does not create the oscillation but turns it into chaos and shrinks the oscillatory range in $p$ from $(0.022,0.41)$ to $(0.022,0.056)$. The chaos is therefore not an artefact of discretising a stable state, but a property of two-stage contagion with synchronous updating.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "nlin.CD",
+          "physics.soc-ph"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.08353",
+        "pdf_url": "https://arxiv.org/pdf/2611.08353"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "A discrete contagion model and its numerical route to chaos are central, without a stated central entropy, fractal or symbolic connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.08370",
+        "versioned_id": "2611.08370v1",
+        "title": "Modelling and analysis of a cocktail phage therapy with coinfection",
+        "authors": [
+          "Xavier Bardina",
+          "Marc Cano",
+          "Silvia Cuadrado"
+        ],
+        "abstract": "We analyze a delay differential model for phage therapy in which a cocktail of $n$ different types of bacteriophages, each with its own latency period, is administered and coinfection is allowed. We prove the global existence, uniqueness and nonnegativity of solutions, and the existence of an invariant region, under suitable conditions, in which the bacteria are eradicated exponentially fast. We determine the stability of the bacteria-free equilibrium in terms of the administered doses and give sufficient conditions for the nonexistence of coexistence equilibria, showing that coinfection may allow bacteria and phages to coexist even when the doses are large. For a cocktail of two phage types with the same latency period, we obtain a complete description of the biologically feasible coexistence equilibria, which may be zero, one or two. Numerical simulations illustrate the theoretical results.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.08370",
+        "pdf_url": "https://arxiv.org/pdf/2611.08370"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Delay-equation modeling of phage therapy is central, without a stated central connection to the research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.08384",
+        "versioned_id": "2611.08384v1",
+        "title": "Space of Geometric Gibbs Measures: Uniqueness, Ergodicity, and Teichm\\\"uller Complex Manifold Structure",
+        "authors": [
+          "Yunping Jiang"
+        ],
+        "abstract": "Building on our previous work, in which geometric Gibbs measures were introduced to complete the space of classical Gibbs measures under the Teichm\\\"uller metric, we establish the uniqueness of geometric Gibbs measures in this paper. This result completes the construction of a Teichm\\\"uller complex manifold structure on the space of all geometric Gibbs measures. Using the welding technique, we uncover a connection between geometric Gibbs measures and harmonic measures on dynamical quasicircles. This connection allows us to establish asymptotic conformal rigidity for these dynamical quasicircles. Finally, we establish a foundation for the systematic study of the ergodic properties of geometric Gibbs measures.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.CV",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.08384",
+        "pdf_url": "https://arxiv.org/pdf/2611.08384"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Gibbs measures and their ergodic and geometric structure directly match the profile.",
+        "tldr": "Uniqueness of geometric Gibbs measures completes their Teichmüller complex-manifold construction and links them to harmonic measures on dynamical quasicircles.",
+        "problem": "Establish uniqueness and geometric structure for the completed space of Gibbs measures.",
+        "main_result": "Building on the earlier introduction of geometric Gibbs measures as a Teichmüller-metric completion of classical Gibbs measures, the authors prove uniqueness and complete the complex-manifold structure. Welding connects these measures to harmonic measures on dynamical quasicircles, yielding asymptotic conformal rigidity. The paper also lays a foundation for ergodic properties; specific ergodicity theorems and uniqueness formulations are not specified in the abstract.",
+        "methods": [
+          "Welding technique."
+        ],
+        "context": "Geometric Gibbs measures and Teichmüller geometry.",
+        "keywords": [
+          "geometric Gibbs measures",
+          "uniqueness",
+          "Teichmüller structure",
+          "conformal rigidity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.08408",
+        "versioned_id": "2611.08408v1",
+        "title": "Averages of sub-additive functions through non-F{\\o}lner sequences",
+        "authors": [
+          "Nicanor Carrasco-Vargas"
+        ],
+        "abstract": "We study the quantity $\\sup_{\\phi\\in\\Phi}\\limsup_{n\\to\\infty}\\phi(F_n)/|F_n|$, where $\\mathcal F= (F_n)_{n\\in\\mathbb{N}}$ is a sequence of finite subsets of a countable amenable group, and $\\Phi$ is a collection of subadditive functions. Under mild conditions on $\\Phi$ we prove that the aforementioned quantity equals the supremum over $\\phi\\in\\Phi$ of the limit of $\\phi(F)/|F|$ as $F$ becomes more and more invariant, multiplied by a ``F{\\o}lnerness'' constant $C(\\mathcal F)\\in[1,\\infty]$. We have $C(\\mathcal F)=1$ if and only if $\\mathcal F$ is F\\o lner. A corollary of this result is that every choice of a non-F\\o lner sequence overestimates topological and measure-theoretic entropy by the multiplicative factor $C(\\mathcal F)$ (in the positive entropy case). We obtain a generalization of classical results of Goodman, Krug, and Newton, on the so-called proportionality principle for sequence entropy, and their extension by Gao, Huang, and Zhu to countable amenable groups.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GR"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.08408",
+        "pdf_url": "https://arxiv.org/pdf/2611.08408"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Amenable groups, sequence entropy and subadditive averages are central interests.",
+        "tldr": "A Følnerness constant quantifies how non-Følner sequences overestimate positive topological and measure-theoretic entropy.",
+        "problem": "Relate subadditive-function averages along arbitrary finite-set sequences to invariant-set limits.",
+        "main_result": "For finite subsets \\(F_n\\) of a countable amenable group and a collection \\(\\Phi\\) of subadditive functions satisfying mild conditions, the supremum of the limsup normalized averages equals the supremum of the increasingly invariant-set limits multiplied by \\(C(\\mathcal F)\\in[1,\\infty]\\). The constant is one exactly for Følner sequences. In the positive-entropy case, every non-Følner sequence overestimates topological and measure-theoretic entropy by this multiplicative factor. The mild collection conditions and the constant’s explicit definition are not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Subadditive averages and amenable-group entropy.",
+        "keywords": [
+          "non-Følner sequences",
+          "subadditivity",
+          "sequence entropy",
+          "amenable groups"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.08451",
+        "versioned_id": "2611.08451v1",
+        "title": "h-dichotomies via noncritical uniformity and expansiveness for noninvertible evolution families",
+        "authors": [
+          "Davor Dragicevic"
+        ],
+        "abstract": "We establish characterizations of h-dichotomies for noninvertible evolution families acting on Banach spaces, in terms of appropriate notions of expansiveness and uniform noncriticality. Our results extend the corresponding characterizations previously obtained for invertible evolution families. To the best of our knowledge, no such characterizations have previously been established for general noninvertible evolution families. A key difference is that noninvertibility makes the structure of the stable spaces more delicate: in our positive-half-line result, finite codimension must be imposed at every time, rather than only at the initial time. We show by an example that the latter, weaker condition is insufficient. We also study evolution families on the negative half-line, using duality to obtain corresponding characterizations in terms of dual expansiveness and dual uniform noncriticality. General growth rates are treated by a time-rescaling argument.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.08451",
+        "pdf_url": "https://arxiv.org/pdf/2611.08451"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Expansiveness and stable-space structure in noninvertible evolution families give a substantial hyperbolicity connection.",
+        "tldr": "Appropriate expansiveness and uniform noncriticality characterize noninvertible Banach-space evolution-family dichotomies, with an every-time finite-codimension requirement.",
+        "problem": "Extend invertible-family dichotomy characterizations to noninvertible families and general growth rates.",
+        "main_result": "For the positive half-line, finite codimension of stable spaces must hold at every time, not merely initially; an example shows the initial-only condition fails. On the negative half-line, duality yields characterizations by dual expansiveness and dual uniform noncriticality. General growth rates are handled by time rescaling. The full definitions and characterization hypotheses are not specified in the abstract.",
+        "methods": [
+          "Duality.",
+          "Time-rescaling argument.",
+          "Counterexample to the weaker codimension condition."
+        ],
+        "context": "Banach-space evolution families and dichotomies.",
+        "keywords": [
+          "h-dichotomies",
+          "noninvertible evolution",
+          "expansiveness",
+          "uniform noncriticality"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.07446",
+        "versioned_id": "2611.07446v1",
+        "title": "Periodic counting, carry synchronization, and primes in nonstandard numeration systems",
+        "authors": [
+          "Nian Hong Zhou"
+        ],
+        "abstract": "Let $b\\ge2$ be an integer and let $D\\subset\\mathbb{N}_0$ be a finite digit set containing zero, with maximum residue multiplicity $\\mu=\\max_{0\\le r<b}\\#\\{d\\in D:d\\equiv r\\pmod b\\}$ and cardinality $q=\\#D\\ge2$. Under the condition $\\mu<q$, we prove that the summatory representation function satisfies an asymptotic formula with a strictly positive, H\\\"older continuous, $1$-periodic fluctuating profile and an error of $O_D(x^{\\log_b\\mu})$. An exact periodic factorization of the Laplace generating function furnishes an explicit, computable Fourier expansion for the periodic profile via Gamma factors, and yields the meromorphic continuation of the associated Dirichlet series to the entire complex plane. When $D$ is a complete residue system modulo $b$, we establish an arithmetic synchronization criterion showing that the associated finite carry system admits a zero-synchronizing word if and only if $\\gcd(D)=1$. This synchronization yields an exponentially accurate interval approximation and a general transfer principle for arithmetic weights. Consequently, we derive a prime number theorem for representable primes governed by the same periodic profile, alongside an exponentially convergent measurable scaling limit of the representable sets.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.07446",
+        "pdf_url": "https://arxiv.org/pdf/2611.07446"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Finite carry systems, synchronizing words and measurable scaling limits give a substantial symbolic/numeration connection.",
+        "tldr": "Nonstandard digit representations admit periodic counting profiles, while complete residue digit sets have a gcd criterion for carry synchronization and prime-counting consequences.",
+        "problem": "Analyze representation counts and arithmetic transfer through finite carry systems.",
+        "main_result": "For integer \\(b\\geq2\\) and a finite digit set \\(D\\subset\\mathbb N_0\\) containing zero, let \\(q=\\#D\\geq2\\) and let \\(\\mu\\) be the maximal residue multiplicity modulo \\(b\\). If \\(\\mu<q\\), the summatory representation function has a strictly positive Hölder, one-periodic fluctuating profile with error \\(O_D(x^{\\log_b\\mu})\\). The associated Dirichlet series continues meromorphically to the whole plane. For complete residue systems, a zero-synchronizing carry word exists exactly when \\(\\gcd(D)=1\\). This gives exponentially accurate interval approximation and arithmetic-weight transfer, with a prime number theorem governed by the same profile and an exponentially convergent measurable scaling limit. The leading asymptotic normalization and the prime-counting formula are not specified in the abstract.",
+        "methods": [
+          "Periodic factorization of the Laplace generating function.",
+          "Fourier expansion through Gamma factors.",
+          "Finite carry synchronization."
+        ],
+        "context": "Numeration systems, finite-state synchronization and arithmetic counting.",
+        "keywords": [
+          "digit representations",
+          "periodic profiles",
+          "carry synchronization",
+          "representable primes"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.07625",
+        "versioned_id": "2611.07625v1",
+        "title": "Multivariable Congruence Jumping: Periodic States, Integral Realizations, and Descent",
+        "authors": [
+          "Max A. Alekseyev",
+          "Dmitry I. Khomovsky"
+        ],
+        "abstract": "Congruence jumping replaces coordinates by integer quotients and updates polynomial divisibility relations. We extend this procedure to several variables and retain integer coefficients by recording their common factor separately. For three-variable systems of divisibilities with signed binomial numerators, we classify all positive integer exponent tuples of period at most two under three successive coordinate jumps: seven fixed tuples and twenty-two cycles of exact period two. No odd period greater than one occurs. At the chosen representatives of the twenty-two exponent two-cycles, there are eighty-four returning sign assignments. All have realizations with nonzero pairwise-coprime integer coordinates, and exactly seventy-four have such realizations with every coordinate positive throughout the six jumps. Explicit constructions and congruence arguments establish this classification. We also study jumps that decrease a specified height, distinguishing points that admit no immediate decrease from minima of entire connected components of the jump graph. For the four-variable family $Q_\\lambda(x,y,z,w)=kxyzw$, where $Q_\\lambda$ is the sum of the four squares plus $\\lambda$ times the six pairwise products, finite bounds give complete classifications for $\\lambda=1,2,3$. For $\\lambda=1$, positive integer solutions exist exactly for $k=2,8,10$. These results distinguish returns of the polynomial data from integrality and positivity of the coordinate sequences.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.07625",
+        "pdf_url": "https://arxiv.org/pdf/2611.07625"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Periodic jump states and orbit graphs give a plausible discrete-dynamics connection, though the main conclusions are arithmetic.",
+        "tldr": "The authors classify short exponent periods in multivariable congruence jumping and distinguish polynomial-data returns from integral positive realizations.",
+        "problem": "Extend congruence jumping while tracking coefficients, periodicity, integrality and descent.",
+        "main_result": "Three-variable signed-binomial divisibility systems have seven fixed positive exponent tuples and twenty-two exact two-cycles under three successive coordinate jumps, with no odd period above one. The chosen two-cycle representatives have eighty-four returning sign assignments, all realizable with nonzero pairwise-coprime integer coordinates, seventy-four with positivity throughout six jumps. Height-decreasing jumps distinguish immediate local obstructions from minima of entire jump-graph components. A four-variable quadratic family has complete classifications for parameters one, two and three; at parameter one positive solutions occur exactly at the three stated constants two, eight and ten.",
+        "methods": [
+          "Explicit constructions and congruence arguments.",
+          "Finite height bounds."
+        ],
+        "context": "Arithmetic discrete dynamics and jump graphs.",
+        "keywords": [
+          "congruence jumping",
+          "periodic states",
+          "integral realizations",
+          "descent"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.08257",
+        "versioned_id": "2611.08257v1",
+        "title": "Density and holes of the visible points in certain cut-and-project sets",
+        "authors": [
+          "Hayim David Shamir"
+        ],
+        "abstract": "We study the set of visible points from the origin in certain cut-and-project sets, specifically the density of the set. We generalize to all real quadratic number fields the formulas for the density found by G. Hammarhjelm, and the corresponding error bounds proved by I. Gringlaz, R. Kumar, B. Weiss. We also find the possible densities of the set of visible points in the cut-and-project set, with a constant generic lattice, and a changing window with constant volume. We also study bounds for the distance of large holes in the set of visible points of certain cut-and-project sets, generalizing theorems originally proved by P. Erd\\H{o}s for $\\mathbb{Z}^2$.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.08257",
+        "pdf_url": "https://arxiv.org/pdf/2611.08257"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Cut-and-project sets and their spatial density/holes offer a plausible connection to aperiodic geometric structures; the abstract does not state an entropy or action result.",
+        "tldr": "The authors extend visible-point density and error formulas to real quadratic fields and study densities under window variation and large-hole distances.",
+        "problem": "Determine visible-point densities and hole bounds in certain cut-and-project sets.",
+        "main_result": "The density formulas and associated errors are generalized to all real quadratic number fields. With a fixed generic lattice and a varying constant-volume window, the possible visible-point densities are determined. The authors also bound distances of large holes, extending the stated lattice results of Erdős. Exact formulas, error rates and hole bounds are not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Cut-and-project geometry and visible lattice-type points.",
+        "keywords": [
+          "cut-and-project sets",
+          "visible points",
+          "density",
+          "large holes"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.08421",
+        "versioned_id": "2611.08421v1",
+        "title": "Data-driven discovery of intrinsic Lie point symmetries of differential equation systems",
+        "authors": [
+          "Ilker Gurcan",
+          "Kadir Ustun",
+          "Ramazan Gokberk Cinbis"
+        ],
+        "abstract": "Discovering continuous symmetries directly from differential-equation data can reveal geometric structure for model reduction and scientific machine learning without symbolic determining equations or a closed-form representation of the governing system. We formulate intrinsic Lie point-symmetry discovery as an operator-theoretic problem on sampled jet-space data. Admissible generators are identified from a sampled determining operator and separated from redundant, solution-dependent, and geometrically trivial directions. The framework combines prolongation, sequential subspace restrictions, and a fixed nonlinear dictionary linear in trainable coefficients. A rank-stabilization preflight test diagnoses systems whose represented intrinsic symmetry algebra does not stabilize under dictionary refinement. On a controlled differential-equation benchmark with an analytically known 11-dimensional represented intrinsic symmetry algebra, the method recovers the complete represented generator set, reproduces its Lie-bracket structure to numerical precision, and approximates a known generator beyond the training domain. Here we show that explicit intrinsic continuous-symmetry generators can be recovered from data obtained from exact or approximate differential systems.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.LG",
+          "cs.NA",
+          "math.DG",
+          "math.DS",
+          "math.GR",
+          "math.NA"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.08421",
+        "pdf_url": "https://arxiv.org/pdf/2611.08421"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Continuous-symmetry generators and Lie brackets provide a group-symmetry connection, although the emphasis is data-driven discovery.",
+        "tldr": "A sampled determining-operator framework recovers an analytically known represented symmetry algebra on a controlled differential-equation benchmark.",
+        "problem": "Identify intrinsic Lie point symmetries from exact or approximate differential-system data.",
+        "main_result": "The framework separates admissible intrinsic generators from redundant, solution-dependent and geometrically trivial directions. A rank-stabilization preflight diagnoses represented algebras that fail to stabilize under dictionary refinement. On the controlled benchmark with an analytically known eleven-dimensional represented intrinsic algebra, the method recovers the full represented generator set, reproduces Lie brackets to numerical precision and approximates one known generator outside the training domain. These are benchmark conclusions, not a guarantee for arbitrary systems.",
+        "methods": [
+          "Sampled jet-space determining operator.",
+          "Prolongation and sequential subspace restrictions.",
+          "A fixed nonlinear dictionary linear in trainable coefficients."
+        ],
+        "context": "Lie symmetries of differential equations and operator-based discovery.",
+        "keywords": [
+          "Lie point symmetries",
+          "jet-space data",
+          "determining operator",
+          "rank stabilization"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "1104.5054",
+        "versioned_id": "1104.5054v2",
+        "title": "Dense 2-generator subsemigroups of $2\\times 2$ matrices (revised and extended version)",
+        "authors": [
+          "Mohammad Javaheri"
+        ],
+        "abstract": "We show that the semigroup of real linear fractional transformations of a proper subinterval of the real line does not contain a dense subsemigroup generated by two elements, while it does contain dense subsemigroups generated by three elements. For the semigroup generated by the two maps $x\\mapsto 1+a/x$ and $x\\mapsto x/b$ (the only pair not excluded by elementary arguments) we compute the closure exactly, and we describe all of its orbit closures in the plane. Consequently the semigroup of $2\\times2$ matrices with nonnegative entries has no dense $2$-generator subsemigroup but has dense $3$-generator ones. In contrast, we prove a general density criterion for subsemigroups of $M_2(\\mathbb{R})$ and $M_2(\\mathbb{C})$ generated by three explicit matrices, and use a word identity of length seven to produce, for both $\\mathbb{R}$ and $\\mathbb{C}$, uncountable families of pairs of matrices that generate dense subsemigroups; a fully explicit rational example is $\\left(\\begin{smallmatrix}1&1/2\\\\1&0\\end{smallmatrix}\\right)$ and $\\left(\\begin{smallmatrix}1&0\\\\0&-8/3\\end{smallmatrix}\\right)$. Thus the minimal number of generators of a dense subsemigroup is $3$ for the nonnegative cone and $2$ for $M_2(\\mathbb{R})$ and $M_2(\\mathbb{C})$.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/1104.5054",
+        "pdf_url": "https://arxiv.org/pdf/1104.5054"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Dense semigroups, generator counts and orbit closures directly match topological-action interests.",
+        "tldr": "The minimum number of generators for a dense two-by-two matrix semigroup is three in the nonnegative cone and two over the full real or complex matrix space.",
+        "problem": "Find sharp generator counts and closures for matrix and fractional-linear semigroups.",
+        "main_result": "Real fractional-linear maps of a proper real subinterval admit dense three-generator but no dense two-generator subsemigroups. The authors compute the exact closure and planar orbit closures of the remaining candidate pair. The nonnegative two-by-two matrix cone has minimum dense generator count three. In contrast, real and complex full two-by-two matrix spaces have minimum count two; a general three-matrix criterion and a seven-letter word identity produce uncountable families of dense pairs, including an explicit rational example.",
+        "methods": [
+          "Exact semigroup- and orbit-closure computations.",
+          "Three-matrix density criterion.",
+          "A word identity of length seven."
+        ],
+        "context": "Topological matrix semigroups and fractional-linear dynamics.",
+        "keywords": [
+          "dense subsemigroups",
+          "generator counts",
+          "orbit closures",
+          "matrix dynamics"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2504.03110",
+        "versioned_id": "2504.03110v2",
+        "title": "Averaging principle for rough slow-fast systems of level 3",
+        "authors": [
+          "Yuzuru Inahama"
+        ],
+        "abstract": "The averaging principle for slow-fast systems of various kind of stochastic (partial) differential equations has been extensively studied. An analogous result was shown for slow-fast systems of rough differential equations driven by random rough paths a few years ago and the study of ``rough slow-fast systems\" seems to be gaining momentum now. In all known results, however, the driving rough paths are of level 2. In this paper we formulate rough slow-fast systems driven by random rough paths of level 3 and prove the strong averaging principle of Khas'minskii-type.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.PR",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2504.03110",
+        "pdf_url": "https://arxiv.org/pdf/2504.03110"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Averaging for stochastic rough slow–fast differential systems is central, without a stated central entropy, symbolic or fractal connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2509.10631",
+        "versioned_id": "2509.10631v2",
+        "title": "Heavy repulsion of clusters in Bernoulli percolation",
+        "authors": [
+          "Sasha Bell",
+          "Tasmin Chu",
+          "Owen Rodgers",
+          "Grigory Terlov",
+          "Anush Tserunyan"
+        ],
+        "abstract": "We consider Bernoulli$(p)$ percolation on (non)unimodular quasi-transitive graphs and prove that, almost surely, for any two clusters $C$ and $C'$, the set of vertices in $C$ within distance one of $C'$ is light, i.e.\\ it has finite total modular weight. This is a significant step towards resolving a longstanding question of H\\\"aggstr\\\"om, Peres, and Schonmann, and a generalization of a theorem of Tim\\'ar, who proved the same result in the unimodular setting. We present two proofs. The first one is a hyperfiniteness argument that is specific to Bernoulli$(p)$ percolation and is new even in the unimodular case; the second is more general and follows Tim\\'ar's approach, but requires the development of weighted analogues of several classical unimodular results. The new insight in both proofs is nonhyperfiniteness, which we obtain from the recently developed theory of measure class preserving equivalence relations and graphs. In particular, along the way we establish a generalization of a theorem of Benjamini, Lyons, and Schramm on the existence of an invariant random subgraph with positive weighted Cheeger constant, which is of independent interest.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.PR",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2509.10631",
+        "pdf_url": "https://arxiv.org/pdf/2509.10631"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Measure-class-preserving equivalence relations, hyperfiniteness and invariant random graphs give a substantial measured-dynamics connection.",
+        "tldr": "On quasi-transitive graphs, distinct Bernoulli percolation clusters have only finite modular-weight contact at distance one, almost surely.",
+        "problem": "Extend cluster repulsion from the unimodular setting to potentially nonunimodular graphs.",
+        "main_result": "For Bernoulli percolation on quasi-transitive graphs, almost surely for every pair of clusters the vertices in one within distance one of the other form a light set, meaning finite total modular weight. Two proofs use nonhyperfiniteness from measure-class-preserving equivalence relations and graphs. A related result generalizes existence of invariant random subgraphs with positive weighted Cheeger constant. This is stated as progress toward the named longstanding question, not its full resolution.",
+        "methods": [
+          "A Bernoulli-specific hyperfiniteness argument.",
+          "Weighted analogues of classical unimodular results following Timár’s approach.",
+          "Nonhyperfiniteness of measured equivalence relations and graphs."
+        ],
+        "context": "Percolation and measured graph dynamics.",
+        "keywords": [
+          "cluster repulsion",
+          "modular weight",
+          "hyperfiniteness",
+          "measured equivalence relations"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2511.10328",
+        "versioned_id": "2511.10328v3",
+        "title": "Generalized Hausdorff measure of irrationals with Lagrange value exactly 3",
+        "authors": [
+          "Carlos Gustavo Moreira",
+          "Harold Erazo",
+          "Nicolas Angelini"
+        ],
+        "abstract": "We study the generalized Hausdorff measure of some natural subsets of $k^{-1}(3)$, where $k^{-1}(3)$ consists of the real numbers $x$ for which $\\left| x-\\frac{p}{q} \\right|<\\frac{1}{(3+\\varepsilon)q^2}$ has infinitely many rational solutions $\\frac{p}{q}$ for any $\\varepsilon<0$ but only finitely many for any $\\varepsilon>0$. It is well known that $k^{-1}(3)$ is an uncountable set with Hausdorff dimension zero. Given any dimension function $h$, we determine the exact ``cut point\" at which the generalized Hausdorff measure $\\mathcal{H}^h(k^{-1}(3))$ drops from infinity to zero. In particular we show that such a measure is always zero or not $\\sigma$--finite, and, as an application, we can classify topologically $k^{-1}(3)$. Moreover, we show that the subset of attainable elements of $k^{-1}(3)$ has the same generalized Hausdorff measure as $k^{-1}(3)$, but the subset of non--attainable elements of $k^{-1}(3)$ has a ``strictly smaller\" generalized Hausdorff measure.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2511.10328",
+        "pdf_url": "https://arxiv.org/pdf/2511.10328"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Generalized Hausdorff measures and fine size of dimension-zero sets directly match fractal geometry.",
+        "tldr": "The authors locate the gauge-measure cut point for irrationals of Lagrange value exactly three and obtain a zero/non-sigma-finite dichotomy.",
+        "problem": "Refine the size and topology of a zero-dimensional Diophantine exceptional set.",
+        "main_result": "For the uncountable dimension-zero set \\(k^{-1}(3)\\), the authors determine the exact gauge-function cut point between infinite and zero generalized Hausdorff measure. Every such measure on this set is zero or not sigma-finite, enabling a topological classification. Attainable elements have the same generalized Hausdorff measure as the whole set, while the nonattainable subset has strictly smaller generalized Hausdorff measure in the stated sense. The cut-point formula, topological classification and precise meaning of that strict comparison are not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Fractal measures in Diophantine approximation.",
+        "keywords": [
+          "generalized Hausdorff measure",
+          "Lagrange value three",
+          "gauge functions",
+          "dimension zero"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2604.24452",
+        "versioned_id": "2604.24452v2",
+        "title": "Dynamics in large scale geometry",
+        "authors": [
+          "Bruno de Mendon\\c{c}a Braga",
+          "Alcides Buss",
+          "Ruy Exel"
+        ],
+        "abstract": "We investigate the large scale geometry of certain metric spaces through the lens of dynamics. Our approach establishes a close connection between large scale dynamical phenomena and operator algebras by characterizing various large scale dynamic behaviors in terms of GNS representations of the uniform Roe algebras arising from natural canonical states. Our dynamical systems are given by the Stone-\\v{C}ech boundary of metric spaces together with their inverse semigroup of partial translations. This defines a space of orbits and we characterize Hausdorffness and $T_1$-ness of this space by the failure of coarse embeddability of certain metric spaces. Surprisingly, while the orbit space has very weak separation properties, we show that it satisfies a certain ''localized version'' of Urysohn's lemma. We show that the topology of the space of orbits and quasi-orbits are given by the space of irreducible representations of uniform Roe algebras and by the space of their primitive ideals, respectively. As a highlight of the theory developed herein, we provide classes of spaces such that the prime ideals of their uniform Roe algebras are primitive. This is the case for instance of spaces whose orbit space is $T_1$.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.OA",
+          "math.DS",
+          "math.FA"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2604.24452",
+        "pdf_url": "https://arxiv.org/pdf/2604.24452"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Orbit and quasi-orbit topology for inverse-semigroup dynamics directly match topological-action interests.",
+        "tldr": "Boundary dynamics of partial translations connect large-scale geometry with uniform Roe representation spaces and primitive ideals.",
+        "problem": "Characterize large-scale dynamical behavior and orbit-space separation through operator algebras.",
+        "main_result": "The dynamical system is the Stone–Čech boundary of a metric space with its inverse semigroup of partial translations. The authors characterize dynamical behavior via GNS representations of uniform Roe algebras from canonical states. Hausdorff and T-one orbit-space properties are characterized through failure of certain coarse embeddings; a localized Urysohn property also holds. Orbit and quasi-orbit topologies correspond respectively to irreducible-representation and primitive-ideal spaces. Classes with every prime ideal primitive include spaces with T-one orbit space. The detailed embedding criteria and localized lemma are not specified in the abstract.",
+        "methods": [
+          "GNS representations of uniform Roe algebras.",
+          "Boundary dynamics of inverse-semigroup partial translations."
+        ],
+        "context": "Large-scale geometry, topological dynamics and operator algebras.",
+        "keywords": [
+          "orbit spaces",
+          "quasi-orbits",
+          "uniform Roe algebras",
+          "partial translations"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2605.09062",
+        "versioned_id": "2605.09062v2",
+        "title": "Scaling Symmetries and Conformal Relative Equilibria on Poisson Manifolds, with Applications to Lie-Poisson Systems",
+        "authors": [
+          "Manuele Santoprete"
+        ],
+        "abstract": "We investigate conformal relative equilibria for Hamiltonian systems on exact Poisson manifolds equipped with scaling symmetries. By introducing conformally Poisson actions and conformal momentum maps, we characterize these equilibria through an augmented Hamiltonian formulation; in the nondegenerate case, this recovers the conditions recently developed for the exact symplectic case. Specializing to the Lie-Poisson manifold $\\mathfrak g^*$ associated with an arbitrary finite-dimensional real Lie algebra $\\mathfrak g$, we show that its natural scaling action makes $\\mathfrak g^*$ an exact Poisson manifold. We then establish a purely algebraic existence criterion: there exists a homogeneous Hamiltonian on $\\mathfrak g^*$ admitting a nontrivial conformal relative equilibrium if and only if $\\mathfrak g$ contains an element whose adjoint operator has a nonzero real eigenvalue. Applying this criterion to the Bianchi classification, we identify exactly the real three-dimensional Lie algebras for which there exists a homogeneous Hamiltonian admitting a nontrivial conformal relative equilibrium. As a prominent application, we show that nontrivial conformal relative equilibria exist for a rigid body on $\\mathfrak{so}(2,1)^*$, whereas the classical free rigid body on $\\mathfrak{so}(3)^*$ admits no nontrivial conformal relative equilibria.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math-ph",
+          "math.DG",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2605.09062",
+        "pdf_url": "https://arxiv.org/pdf/2605.09062"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Scaling actions and relative equilibria provide a substantial group-symmetry connection in Hamiltonian dynamics.",
+        "tldr": "Conformal relative equilibria admit an augmented-Hamiltonian description and an algebraic existence criterion on arbitrary finite-dimensional real Lie–Poisson spaces.",
+        "problem": "Characterize scaling-related equilibria on exact Poisson manifolds and Lie–Poisson duals.",
+        "main_result": "Conformally Poisson actions and conformal momentum maps characterize the equilibria through augmented Hamiltonians, recovering exact-symplectic conditions in the nondegenerate case. The natural scaling action makes \\(\\mathfrak g^*\\) exact Poisson for every finite-dimensional real Lie algebra \\(\\mathfrak g\\). A homogeneous Hamiltonian admitting a nontrivial conformal relative equilibrium exists exactly when some adjoint operator has a nonzero real eigenvalue. The Bianchi classification yields the corresponding three-dimensional Lie algebras; a rigid body on \\(\\mathfrak{so}(2,1)^*\\) admits such equilibria, whereas the classical free body on \\(\\mathfrak{so}(3)^*\\) does not.",
+        "methods": [
+          "Conformally Poisson actions and conformal momentum maps.",
+          "Augmented Hamiltonians.",
+          "Adjoint-eigenvalue criterion and Bianchi classification."
+        ],
+        "context": "Scaling symmetries in Poisson and Hamiltonian dynamics.",
+        "keywords": [
+          "conformal relative equilibria",
+          "scaling actions",
+          "Lie–Poisson systems",
+          "momentum maps"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2606.06018",
+        "versioned_id": "2606.06018v2",
+        "title": "On statistical inference for non-linear dynamical systems evolving in their global attractor",
+        "authors": [
+          "Dimitri Konen",
+          "Richard Nickl"
+        ],
+        "abstract": "We consider a periodic scalar reaction-diffusion system over a two-dimensional domain under natural conditions on the reaction function and with initial condition $\\theta$. We show that on the global attractor $\\mathcal A$ of the resulting dynamical system $(u_\\theta(t):t>0)$, a reverse Poincar\\'e inequality holds true, and that as a consequence the map $\\theta \\mapsto u_\\theta(t)$ satisfies an $L^2(\\Om)$-Lipschitz stability estimate on $\\mathcal A$ for any $t>0$ fixed. We then show that statistical recovery of an initial condition $\\theta$ in the attractor $\\mathcal A$, as well as prediction of the states $u_\\theta$, is possible from discrete measurements of the system at parametric $1/\\sqrt N$ convergence rates.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.ST",
+          "math.AP",
+          "math.DS",
+          "stat.TH"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2606.06018",
+        "pdf_url": "https://arxiv.org/pdf/2606.06018"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Statistical recovery in a reaction–diffusion attractor is central, without a stated central entropy, symbolic or fractal-dimension result.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2607.01809",
+        "versioned_id": "2607.01809v3",
+        "title": "Foliated and Mather-Jacobian discrepancies via tangential arcs",
+        "authors": [
+          "Maur\\'icio Corr\\^ea"
+        ],
+        "abstract": "We express the log discrepancies of co-rank one foliations on normal varieties in terms of arc codimensions and differential orders. On smooth threefolds, if a foliation has simple singularities and its separatrices form an algebraic simple normal crossings divisor, we identify its foliated discrepancies with those of an ordinary pair for every divisor centred on the separatrices. This gives adjunction and log canonical threshold formulae. For algebraic images of the separatrices, we estimate changes in boundary orders caused by failure of ideal generation and by descent through the conductor. For locally complete intersection images, comparison on a common resolution yields criteria for equality of discrepancies and bounds on log canonical thresholds.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.AG",
+          "math.CV",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2607.01809",
+        "pdf_url": "https://arxiv.org/pdf/2607.01809"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Algebraic discrepancies and log canonical thresholds of foliations are central, without a stated central dynamical entropy, symbolic or group-action connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2607.16217",
+        "versioned_id": "2607.16217v2",
+        "title": "Curvature-Dependent Path Concentration in Stochastic Fast-Slow Systems with Noise on the Slow Variable",
+        "authors": [
+          "Yefan Wu"
+        ],
+        "abstract": "We study stochastic fast-slow systems with noise acting exclusively on the slow variable near uniformly attracting, normally hyperbolic critical manifolds $x=X^\\ast(y)$. The deviation equation contains transmitted diffusion and an It\\^o curvature forcing of order $O(\\sigma^2\\lVert D^2X^\\ast\\rVert)$. Using a parameter-dependent Lyapunov function and stopped martingale estimates, we obtain geometry-dependent concentration bounds under the sufficient noise restriction $\\sigma\\le C_0\\min(\\sqrt{\\varepsilon},\\varepsilon^{1/4}L_{\\mathrm{geom}}/\\sqrt{\\lambda_0})$, where $\\lambda_0$ is the uniform spectral gap and $L_{\\mathrm{geom}}=\\sqrt{\\lambda_0/(\\lVert D^2X^\\ast\\rVert\\lVert h\\rVert^2)}$. For fixed geometry and any fixed $p>0$, the confidence radius on $[0,T/\\varepsilon]$ is $O(\\varepsilon+\\sigma^2+\\sigma\\sqrt{\\log(1/\\varepsilon)})$, with stopped fast-variable failure probability at most $\\varepsilon^p$; slow-variable exit is controlled separately. We also establish an adiabatic error bound of order $O(\\varepsilon+\\sigma\\sqrt{\\varepsilon}+\\sigma^2\\lVert D^2X^\\ast\\rVert)$, with explicit failure probabilities. These estimates quantify the curvature dependence of fast-variable concentration and its $O(\\varepsilon)$ contribution to the slow-error upper bound for fixed geometry.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.PR",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2607.16217",
+        "pdf_url": "https://arxiv.org/pdf/2607.16217"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Normally hyperbolic attracting manifolds and geometric stability estimates provide a substantial smooth-dynamics connection.",
+        "tldr": "Slow-variable noise generates transmitted diffusion and curvature forcing, leading to geometry-dependent fast-variable concentration and adiabatic-error bounds.",
+        "problem": "Quantify curvature effects near uniformly attracting normally hyperbolic critical manifolds under slow-only noise.",
+        "main_result": "Near \\(x=X^*(y)\\), the deviation equation has transmitted diffusion and Itô forcing of order \\(O(\\sigma^2\\lVert D^2X^*\\rVert)\\). Under the sufficient restriction \\(\\sigma\\leq C_0\\min(\\sqrt{\\varepsilon},\\varepsilon^{1/4}L_{\\mathrm{geom}}/\\sqrt{\\lambda_0})\\), where \\(\\lambda_0\\) is the uniform spectral gap and \\(L_{\\mathrm{geom}}=\\sqrt{\\lambda_0/(\\lVert D^2X^*\\rVert\\lVert h\\rVert^2)}\\), the authors obtain concentration bounds. For fixed geometry and any fixed \\(p>0\\), the radius on \\([0,T/\\varepsilon]\\) is \\(O(\\varepsilon+\\sigma^2+\\sigma\\sqrt{\\log(1/\\varepsilon)})\\), with stopped fast-variable failure probability at most \\(\\varepsilon^p\\); slow exit is controlled separately. The adiabatic error is \\(O(\\varepsilon+\\sigma\\sqrt{\\varepsilon}+\\sigma^2\\lVert D^2X^*\\rVert)\\), with explicit failure probabilities. The meaning of \\(h\\) and further hypotheses are not specified in the abstract.",
+        "methods": [
+          "Parameter-dependent Lyapunov function.",
+          "Stopped martingale estimates."
+        ],
+        "context": "Stochastic perturbations near normally hyperbolic critical manifolds.",
+        "keywords": [
+          "fast–slow systems",
+          "slow-variable noise",
+          "curvature forcing",
+          "concentration bounds"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2609.09384",
+        "versioned_id": "2609.09384v2",
+        "title": "Networked Admissibility-Preserving Control for Directed Safe Coordination",
+        "authors": [
+          "Abhinav Sinha",
+          "Lohitvel Gopikannan",
+          "Shashi Ranjan Kumar"
+        ],
+        "abstract": "This paper addresses safe coordination of scalar agents with constrained input dynamics over fixed rooted digraphs. We propose a networked Admissibility-Preserving Control (APC) architecture for a common moving output corridor under heterogeneous asymmetric input bounds, wherein the Admissibility-Preserving Input Realization (APIR) generates the physical inputs. In logarithmic barrier coordinates, the closed-loop dynamics form an exact cascade of exponentially decaying realization errors and directed consensus dynamics. We derive direction-specific compatibility conditions that guarantee uniform corridor and input margins, bounded commands, unique complete solutions, and exponential consensus for compact initial sets. The closed-form expression for the agreement value quantifies the effect of the initial APIR mismatch. Under the corresponding compatibility conditions, partial pinning guarantees safe reference tracking whenever the root component contains at least one informed agent. Simulations illustrate the coordination guarantees.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "eess.SY",
+          "cs.MA",
+          "cs.RO",
+          "cs.SY",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-06T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2609.09384",
+        "pdf_url": "https://arxiv.org/pdf/2609.09384"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Safe network coordination with constrained inputs is central, without a stated central connection to the research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 10,
+    "RELATED / POSSIBLY INTERESTING": 9,
+    "LOW PRIORITY": 7
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-11-06T10:59:15.678270Z",
+      "feed_published_at": "2026-11-06T00:00:00-05:00",
+      "feed_build_at": "2026-11-06T05:00:23Z",
+      "feed_date": "2026-11-06",
+      "sha256": "825b5a5b2455318ae6929b8aac9d5bb3773f991e575e8b6f85b9be9687185c17",
+      "byte_length": 65694,
+      "capture_run_url": null
+    }
+  ]
+}
