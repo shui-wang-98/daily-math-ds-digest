@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-11-12",
+  "generated_at": "2026-11-12T11:07:37.289754Z",
+  "feed_build_at": "2026-11-12T05:00:06Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "No new papers.",
+  "papers": [],
+  "counts": {
+    "HIGH PRIORITY": 0,
+    "RELATED / POSSIBLY INTERESTING": 0,
+    "LOW PRIORITY": 0
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-11-12T11:06:22.843051Z",
+      "feed_published_at": "2026-11-12T00:00:00-05:00",
+      "feed_build_at": "2026-11-12T05:00:06Z",
+      "feed_date": "2026-11-12",
+      "sha256": "708a5f971fa67cbdb195e36178118f915b6a135f9999af445a3136c4abe302ab",
+      "byte_length": 900,
+      "capture_run_url": null
+    }
+  ]
+}
