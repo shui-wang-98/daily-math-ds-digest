@@ -1,0 +1,639 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-11-16",
+  "generated_at": "2026-11-16T11:31:04.163321Z",
+  "feed_build_at": "2026-11-16T05:00:16Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 15 unseen announcements: 3 HIGH PRIORITY, 7 RELATED / POSSIBLY INTERESTING, and 5 LOW PRIORITY. Central themes are group actions on flag manifolds, Hausdorff-dimension bounds in time-delay reconstruction, and local-pattern fluctuations in uniquely ergodic symbolic systems. Related entries concern localization, homoclinic geometry, periodic orbits, nilspace structure and Bayesian transfer operators. No followed-author matches occur in this input; summaries retain the stated hypotheses and separate analytical claims from numerical evidence.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2611.17510",
+        "versioned_id": "2611.17510v1",
+        "title": "Cartan Dynamics and Limit Sets on Flag Manifolds",
+        "authors": [
+          "\\'Angel Cano",
+          "Marlon M. L\\'opez-Flores",
+          "Jos\\'e Seade",
+          "Andrew Shaw"
+        ],
+        "abstract": "The classical convergence principle describes the collapse of the Riemann sphere under divergent sequences of M\\\"obius transformations. We develop its counterpart for arbitrary real semisimple Lie groups acting on flag manifolds, and use it to study limit sets and domains of discontinuity of discrete subgroups. The key is to let the source move: the destination of $x$ under $(g_m)$ is the set of all limits of $g_mx_m$ with $x_m\\to x$. Our destination formula computes it as the closure of a unipotent orbit, determined by the Cartan data and a bounded Levi factor. The stratified convergence principle organises these destinations into families of translated Schubert varieties attached to boundary points of a compactification of the group. Over the complex numbers, the destination relation is the support of Brion's limiting graphs in the wonderful compactification, providing scheme structures, multidegrees and diagonal intersections. For discrete groups, the union of destination relations determines proper discontinuity and whether a largest domain exists. It relates Quint's flag limit set, Conze--Guivarc'h, Kulkarni and Myrberg sets to the recurrent set, while balanced choices of cells yield domains for every discrete subgroup, without Anosov hypotheses. For symmetric-power actions of non-elementary Kleinian groups on $\\mathbb{CP}^N$, we compute the largest domain by a multiplicity bound at points of the classical limit set; for $N\\ge3$ it strictly contains the Kulkarni domain, which equals the equicontinuity region. We also obtain nonempty largest domains for Zariski-dense cusped Hitchin groups with unipotent elements, and examples of strongly irreducible groups with no largest domain.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.17510",
+        "pdf_url": "https://arxiv.org/pdf/2611.17510"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Semisimple group actions on flag manifolds, limit sets and domains of discontinuity centrally concern group-action dynamics.",
+        "tldr": "A moving-source destination relation extends the convergence principle to semisimple group actions on flag manifolds and controls discontinuity domains.",
+        "problem": "Describe limits under divergent group sequences and determine domains of proper discontinuity for discrete subgroups.",
+        "main_result": "The destination of a point is computed as the closure of a unipotent orbit determined by Cartan data and a bounded Levi factor. A stratified convergence principle organizes destinations through translated Schubert varieties; over the complex numbers the relation is the support of Brion limiting graphs. For discrete groups, destination relations determine proper discontinuity and whether a largest domain exists, and balanced cells give domains for every discrete subgroup without Anosov hypotheses. For symmetric-power actions of non-elementary Kleinian groups on \\(\\mathbb{CP}^N\\), a multiplicity bound computes the largest domain; for \\(N\\geq3\\), it strictly contains the Kulkarni domain, which equals the equicontinuity region. The authors also obtain nonempty largest domains for Zariski-dense cusped Hitchin groups with unipotent elements and strongly irreducible examples with no largest domain. The precise multiplicity bound: Not specified in the abstract.",
+        "methods": [
+          "Moving-source destination formula",
+          "Cartan data and a bounded Levi factor",
+          "Translated Schubert varieties",
+          "Brion limiting graphs in the wonderful compactification"
+        ],
+        "context": "Group actions on flag manifolds, limit-set geometry and proper discontinuity.",
+        "keywords": [
+          "flag manifolds",
+          "Cartan dynamics",
+          "limit sets",
+          "domains of discontinuity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.17633",
+        "versioned_id": "2611.17633v1",
+        "title": "Complete Center Classification of a Quintic $\\mathbb Z_2$-Equivariant System via Rational Descent and Ramification",
+        "authors": [
+          "Feng Li",
+          "Meilan Cai",
+          "Chaochao Sun"
+        ],
+        "abstract": "We develop a new structural method to completely classify the elementary centers of a ten-parameter quintic $\\mathbb Z_2$-equivariant system. The method overcomes the computational bottleneck of direct focus-quantity elimination by combining a Li\\'enard reduction, a necessary-and-sufficient analytic involution criterion, and rational descent with residue and ramification analysis. We obtain forty-two explicit original-parameter conditions covering the entire center locus, including all degenerate and boundary cases. Sufficiency is established constructively through integrating factors, first integrals and explicit reversible realizations.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.17633",
+        "pdf_url": "https://arxiv.org/pdf/2611.17633"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is a quintic center classification rather than a central entropy, dimension or topological-dynamics question.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.17799",
+        "versioned_id": "2611.17799v1",
+        "title": "Localization for Lipschitz monotone quasi-periodic operators with power-law hopping",
+        "authors": [
+          "Hongyi Cao",
+          "Yunfeng Shi",
+          "Peizhen Wang"
+        ],
+        "abstract": "We prove spectral and dynamical localization for quasi-periodic operators on $\\mathbb Z^d$ with Lipschitz monotone potentials and power-law hopping. For sufficiently small coupling, localization holds at every allowed phase whenever the hopping decay exponent $r$ exceeds the Diophantine exponent $\\tau$. The proof is based on multiscale analysis with exponentially growing scales. We use homotopy in the coupling constant to select the local eigenvalue branches and Schur complement estimates to control the successive elimination of coordinates.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.17799",
+        "pdf_url": "https://arxiv.org/pdf/2611.17799"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Quasi-periodic spectral and dynamical localization provides a related connection to dynamics and Diophantine conditions.",
+        "tldr": "Lipschitz monotone quasi-periodic operators with power-law hopping localize at sufficiently small coupling when hopping decay exceeds the Diophantine exponent.",
+        "problem": "Establish spectral and dynamical localization with slowly decaying hopping.",
+        "main_result": "For quasi-periodic operators on \\(\\mathbb{Z}^d\\) with Lipschitz monotone potentials and power-law hopping, the authors prove spectral and dynamical localization at every allowed phase for sufficiently small coupling whenever the hopping decay exponent \\(r\\) exceeds the Diophantine exponent \\(\\tau\\). The precise allowed-phase set and coupling threshold: Not specified in the abstract.",
+        "methods": [
+          "Multiscale analysis with exponentially growing scales",
+          "Homotopy in the coupling constant to select local eigenvalue branches",
+          "Schur complement estimates for coordinate elimination"
+        ],
+        "context": "Quasi-periodic spectral theory and dynamical localization.",
+        "keywords": [
+          "quasi-periodic operators",
+          "dynamical localization",
+          "power-law hopping",
+          "Diophantine exponent"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.18087",
+        "versioned_id": "2611.18087v1",
+        "title": "On the convergence of the False Nearest Neighbours algorithm",
+        "authors": [
+          "Adam \\'Spiewak"
+        ],
+        "abstract": "The False Nearest Neighbours (FNN) algorithm is one of the most widely used methods for choosing the embedding dimension, i.e. the number $k$ of delay coordinates, in the time-delay reconstruction of a dynamical system from an observed scalar time series. We prove rigorous results on the behaviour of this algorithm for long time series. We consider a smooth dynamical system on a compact manifold $M$ and an invariant probability measure $\\mu$. For a typical measurement function and $\\mu$-almost every trajectory, we show that the proportion of false nearest neighbours tends to zero (provided that the tolerance threshold is large enough) once $k >\\dim M$. On the other hand, for systems with super-polynomial decay of correlations, we prove that this proportion tends to one whenever $k$ is smaller than the Hausdorff dimension of $\\mu$. Consequently, in this case, the FNN algorithm (run for long enough time series) returns an embedding dimension $k$ satisfying $\\dim_H \\mu \\leq k \\leq \\dim M + 1$. This is below the threshold $2\\dim M + 1$ required by the Takens embedding theorem, so the classical Takens embedding theory does not explain why reconstructions and predictions with $k$ chosen by the FNN algorithm work in practice. The explanation for this case is provided by a recent probabilistic theory of time-delay embeddings. We apply our results to the H\\'enon and Lorenz attractors, showing that the FNN algorithm typically returns $k=2$ for the H\\'enon map (in the chaotic case) and $k \\leq 3$ for the Lorenz system.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "nlin.CD"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.18087",
+        "pdf_url": "https://arxiv.org/pdf/2611.18087"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The rigorous embedding-dimension bounds directly involve Hausdorff dimension of invariant measures.",
+        "tldr": "Long-series limits of the False Nearest Neighbours algorithm are controlled by manifold and invariant-measure dimensions.",
+        "problem": "Determine rigorous asymptotic behavior of the False Nearest Neighbours algorithm in time-delay reconstruction.",
+        "main_result": "For a smooth system on a compact manifold \\(M\\) with invariant probability measure \\(\\mu\\), a typical measurement function and \\(\\mu\\)-almost every trajectory have a false-neighbour proportion tending to zero when \\(k>\\dim M\\), provided the tolerance threshold is sufficiently large. With super-polynomial decay of correlations, the proportion tends to one when \\(k<\\dim_H\\mu\\); in this case, sufficiently long runs return \\(\\dim_H\\mu\\leq k\\leq\\dim M+1\\). The authors relate successful reconstruction below the classical Takens threshold to a recent probabilistic embedding theory. Applications give typical output \\(k=2\\) for the chaotic Hénon map and \\(k\\leq3\\) for the Lorenz system. The precise typicality notion and tolerance threshold: Not specified in the abstract.",
+        "methods": [
+          "Probabilistic theory of time-delay embeddings"
+        ],
+        "context": "Dimension theory of invariant measures and time-delay reconstruction.",
+        "keywords": [
+          "Hausdorff dimension",
+          "invariant measures",
+          "false nearest neighbours",
+          "delay coordinates"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.18102",
+        "versioned_id": "2611.18102v1",
+        "title": "Singularly embedded solitons and Stokes phenomenon in the fifth order KdV equation",
+        "authors": [
+          "Roberto Barrio",
+          "Vassili Gelfreich",
+          "J. Tom\\'as L\\'azaro",
+          "Juan Ramon Pacha"
+        ],
+        "abstract": "We study embedded solitons (ES) in a fifth-order Korteweg-de Vries (KdV) equation near a reversible Hamiltonian saddle-centre bifurcation. The solitons correspond to homoclinic orbits to an equilibrium whose linearisation has a pair of real and a pair of purely imaginary eigenvalues. Existence of symmetric homoclinic near the bifurcation is a codimension-one phenomenon governed by a parameter-dependent Stokes constant associated with an inner equation. Using complex matching, we derive an oscillatory large-parameter asymptotic formula for the Stokes constant. This formula implies the existence of a countable sequence of zeros and gives their asymptotic distribution in parameter space. We also develop two complementary high-precision numerical procedures for evaluating the Stokes constant: one based on the late terms of the formal inner expansion and another on direct computation of the stable and unstable manifolds. The numerical results agree with each other and with the asymptotic prediction, confirming both the existence and the predicted locations of the embedded-soliton branches.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.18102",
+        "pdf_url": "https://arxiv.org/pdf/2611.18102"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Homoclinic geometry and stable/unstable manifolds offer a related smooth-dynamics connection, although entropy and dimension are not central.",
+        "tldr": "A Stokes-constant asymptotic predicts countably many embedded-soliton branches near a reversible Hamiltonian saddle-centre bifurcation.",
+        "problem": "Determine embedded-soliton existence and branch locations in a fifth-order KdV equation near the stated bifurcation.",
+        "main_result": "The solitons correspond to homoclinic orbits to an equilibrium with one real eigenvalue pair and one purely imaginary pair. Symmetric homoclinic existence near the bifurcation is a codimension-one phenomenon governed by a parameter-dependent Stokes constant of an inner equation. Complex matching gives an oscillatory large-parameter asymptotic formula, implying countably many zeros and their asymptotic distribution. Two high-precision numerical evaluations agree with each other and with the asymptotic prediction for embedded-soliton branches. The explicit asymptotic formula: Not specified in the abstract.",
+        "methods": [
+          "Complex matching",
+          "Late terms of the formal inner expansion",
+          "Direct computation of stable and unstable manifolds"
+        ],
+        "context": "Reversible Hamiltonian homoclinic dynamics, embedded solitons and the Stokes phenomenon.",
+        "keywords": [
+          "homoclinic orbits",
+          "embedded solitons",
+          "Stokes constant",
+          "saddle-centre bifurcation"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.18231",
+        "versioned_id": "2611.18231v1",
+        "title": "Periodic orbits of quadratic polynomials of periods six and seven",
+        "authors": [
+          "Pekka Kosunen"
+        ],
+        "abstract": "The dynamics of quadratic polynomials is commonly studied by using the family of maps f_{c}(x) = x^{2} + c, where c include C. In this paper we form equations of periodic orbits of periods six and seven on a new (u,v)-plane and consider also the corresponding equations on the (x,y)-plane. The new (u,v)-model produces equations for the periods six and seven with significantly lower degree than the ones obtained by the previous models which enables us to find their solutions.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.18231",
+        "pdf_url": "https://arxiv.org/pdf/2611.18231"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Periodic-orbit equations in quadratic iteration provide a related connection to complex dynamics.",
+        "tldr": "A new two-variable model lowers the degrees of period-six and period-seven equations for quadratic polynomials.",
+        "problem": "Form and solve equations describing quadratic-polynomial periodic orbits of periods six and seven.",
+        "main_result": "For the quadratic family \\(f_c(x)=x^2+c\\), the authors form period-six and period-seven orbit equations in a new \\((u,v)\\)-plane and also consider the corresponding equations in the \\((x,y)\\)-plane. They state that the new model significantly reduces the equation degrees compared with previous models, enabling their solutions. The coordinate transformation, exact degrees and solutions: Not specified in the abstract.",
+        "methods": [
+          "New \\((u,v)\\)-plane model for periodic-orbit equations"
+        ],
+        "context": "Quadratic-polynomial iteration and periodic orbits.",
+        "keywords": [
+          "quadratic polynomials",
+          "periodic orbits",
+          "period six",
+          "period seven"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.16685",
+        "versioned_id": "2611.16685v1",
+        "title": "Fluctuations of Local Patterns in Non-Periodic Uniquely Ergodic Systems",
+        "authors": [
+          "Jacek Mi\\k{e}kisz"
+        ],
+        "abstract": "We study various families of non-periodic configurations of symbols assigned to vertices of regular graphs. We restrict ourselves to such systems where considered configurations support a uniquely ergodic measure. Symbols can be interpreted as particles and we are concerned with configurations which minimize the interaction energy of particles, the so-called ground-state configurations. One of the main questions then is whether ground-state configurations are stable with respect to small perturbations of interactions. Such stability may be interpreted as a sort of rigidity of non-periodic structures such as tilings, substitution systems, Sturmian systems, and other uniquely ergodic non-periodic systems. We introduce a property of bounded fluctuations of finite patterns of non-periodic configurations, the so-called Strict Boundary Property. We discuss how relevant this property is for stability of non-periodic structures. Examples of Robinson's tilings, Thue-Morse, and Sturmian systems are presented. Some open problems are formulated.",
+        "announce_type": "cross",
+        "categories": [
+          "math-ph",
+          "cond-mat.stat-mech",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.16685",
+        "pdf_url": "https://arxiv.org/pdf/2611.16685"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Uniquely ergodic symbolic configurations, substitutions, tilings and Sturmian systems directly match the symbolic-dynamics profile.",
+        "tldr": "The Strict Boundary Property measures bounded local-pattern fluctuations and is examined in relation to stability of non-periodic ground states.",
+        "problem": "Understand stability of non-periodic uniquely ergodic ground-state configurations under small interaction perturbations.",
+        "main_result": "For non-periodic symbol configurations on regular graphs supporting a uniquely ergodic measure, the author introduces bounded fluctuations of finite patterns through the Strict Boundary Property and discusses its relevance to ground-state stability. Examples include Robinson tilings, Thue-Morse and Sturmian systems, and the paper formulates open problems. A precise definition and necessary or sufficient stability theorem: Not specified in the abstract.",
+        "methods": [
+          "Strict Boundary Property for fluctuations of finite patterns",
+          "Examples from Robinson tilings, Thue-Morse and Sturmian systems"
+        ],
+        "context": "Symbolic dynamics, unique ergodicity and stability of non-periodic ground-state structures.",
+        "keywords": [
+          "unique ergodicity",
+          "symbolic configurations",
+          "Strict Boundary Property",
+          "Sturmian systems"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.17397",
+        "versioned_id": "2611.17397v1",
+        "title": "Admissibility-Preserving Control for Block Strict-Feedback Systems Under Time-Varying Asymmetric Actuator and State Constraints",
+        "authors": [
+          "Saurabh Kumar",
+          "Lohitvel Gopikannan",
+          "Shashi Ranjan Kumar",
+          "Abhinav Sinha"
+        ],
+        "abstract": "This paper addresses the tracking control of block strict-feedback nonlinear systems subject to time-varying asymmetric actuator and full state constraints. To that end, we develop a time-varying Admissibility-Preserving Control (APC) framework, in which the Admissibility-Preserving Input Realization (APIR) generates the plant input through a dynamic realization. The APIR guarantees input admissibility under the moving actuator set whenever each actuator bound contracts slower than the decay rate of the realization, and a closed-form lower bound on its gain is derived. The state constraints are handled by a logarithmic barrier coordinate at every backstepping step, with widths measured from the virtual control to the moving envelope of the corresponding state. We prove that every state lies inside its envelope, with each virtual control only required to remain inside the envelope of the next state, while the tracking error converges to zero exponentially. Simulations demonstrate the efficacy of the proposed safety-critical control scheme.",
+        "announce_type": "cross",
+        "categories": [
+          "eess.SY",
+          "cs.SY",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.17397",
+        "pdf_url": "https://arxiv.org/pdf/2611.17397"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is constrained tracking control without a central connection to the research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.17542",
+        "versioned_id": "2611.17542v1",
+        "title": "On the Hofer-Zehnder conjecture for Reeb flows without symmetry",
+        "authors": [
+          "Erman Cineli",
+          "Viktor L. Ginzburg",
+          "Basak Z. Gurel"
+        ],
+        "abstract": "This paper continues our investigation of the Hofer-Zehnder conjecture for dynamically convex, non-degenerate Reeb pseudo-rotations of $S^{2n-1}$. The main result of the paper is that, for $n\\geq 3$, such a flow has at most $n-3$ alternating prime closed orbits and hence at most $2n-3$ prime closed orbits in total. In particular, the flow on $S^5$ has exactly three prime closed orbits, all of which are non-alternating and elliptic. In addition, we prove that a dynamically convex Reeb pseudo-rotation on a sphere has at least two non-degenerate, irrationally elliptic orbits.",
+        "announce_type": "cross",
+        "categories": [
+          "math.SG",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.17542",
+        "pdf_url": "https://arxiv.org/pdf/2611.17542"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Closed-orbit constraints for Reeb flows give a related connection to smooth and topological dynamics.",
+        "tldr": "Dynamically convex non-degenerate Reeb pseudo-rotations satisfy bounds on alternating and total prime closed orbits.",
+        "problem": "Study the Hofer-Zehnder conjecture for Reeb pseudo-rotations on odd-dimensional spheres.",
+        "main_result": "For a dynamically convex, non-degenerate Reeb pseudo-rotation of \\(S^{2n-1}\\) with \\(n\\geq3\\), the authors prove at most \\(n-3\\) alternating prime closed orbits and at most \\(2n-3\\) prime closed orbits in total. On \\(S^5\\), there are exactly three prime closed orbits, all non-alternating and elliptic. They also prove that a dynamically convex Reeb pseudo-rotation on a sphere has at least two non-degenerate, irrationally elliptic orbits. The proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Reeb dynamics, periodic orbits and the Hofer-Zehnder conjecture.",
+        "keywords": [
+          "Reeb flows",
+          "pseudo-rotations",
+          "prime closed orbits",
+          "elliptic orbits"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.17567",
+        "versioned_id": "2611.17567v1",
+        "title": "A proof of the Jamneshan-Tao conjecture by embedding nilspaces in nilmanifolds",
+        "authors": [
+          "Pablo Candela",
+          "Diego Gonz\\'alez-S\\'anchez",
+          "Bal\\'azs Szegedy"
+        ],
+        "abstract": "We prove that every compact finite-rank nilspace admits a continuous injective morphism into a toral nilspace of the same step, and hence into a connected filtered nilmanifold. Combining this embedding theorem with the general nilspace inverse theorem, we establish the Jamneshan-Tao conjecture and extend its conclusion to second-countable compact abelian groups. This yields an inverse theorem for Gowers norms on all such groups, in which the correlating functions factor through morphisms into nilmanifolds. The proof relies on substantial foundations developed in nilspace theory over the past decade, particularly the general nilspace inverse theorem and the representation of compact finite-rank nilspaces as quotients of free nilspaces.",
+        "announce_type": "cross",
+        "categories": [
+          "math.GR",
+          "math.CO",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.17567",
+        "pdf_url": "https://arxiv.org/pdf/2611.17567"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Nilspace and nilmanifold structure on compact abelian groups gives a related connection to structural group dynamics.",
+        "tldr": "An embedding theorem for compact finite-rank nilspaces proves the Jamneshan-Tao conjecture and extends the conclusion to second-countable compact abelian groups.",
+        "problem": "Embed compact finite-rank nilspaces into nilmanifolds and obtain corresponding inverse theorems for Gowers norms.",
+        "main_result": "Every compact finite-rank nilspace admits a continuous injective morphism into a toral nilspace of the same step, hence into a connected filtered nilmanifold. Combined with the general nilspace inverse theorem, this proves the Jamneshan-Tao conjecture and extends its conclusion to second-countable compact abelian groups. The resulting Gowers-norm inverse theorem has correlating functions factoring through morphisms into nilmanifolds. Quantitative correlation bounds: Not specified in the abstract.",
+        "methods": [
+          "General nilspace inverse theorem",
+          "Representation of compact finite-rank nilspaces as quotients of free nilspaces"
+        ],
+        "context": "Nilspace structure, nilmanifolds and Gowers-norm inverse theorems on compact groups.",
+        "keywords": [
+          "nilspaces",
+          "nilmanifolds",
+          "Gowers norms",
+          "compact abelian groups"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.17813",
+        "versioned_id": "2611.17813v1",
+        "title": "An accelerated multiobjective gradient flow with implicit Hessian-driven damping",
+        "authors": [
+          "Wen Jiang",
+          "Hao Luo"
+        ],
+        "abstract": "In this paper, we propose an accelerated multiobjective gradient flow with implicit Hessian-driven damping for unconstrained convex multiobjective optimization problems in a real Hilbert space. The continuous flow is formulated as a system of two first-order equations involving only a single multiobjective projection operator and suitable time-scaling factors. Formally, it can also be expressed as a second-order system with explicit multiobjective Hessian-driven damping, which corresponds to the usual Hessian-driven damping introduced by Alvarez et al. [J. Math. Pures Appl., 81(8):747--779, 2002]. The first-order formulation, however, involves no Hessian term and can be regarded as an extension of the Hessian-driven Nesterov accelerated gradient flow by Chen and Luo [arXiv:1912.09276, 2019]. Assuming that the objective gradients are Lipschitz continuous on bounded sets and that the common lower level sets are bounded, we establish global existence in finite dimensions under suitable time-scaling conditions. An a priori energy estimate confines the solutions to a fixed bounded set, and a Lyapunov argument yields fast decay of a merit function and the KKT residual. Under an additional bound on the time-scaling factors, the trajectory of every global solution converges weakly to a weak Pareto point. Numerical tests illustrate the rapid residual decay and reduced oscillations.",
+        "announce_type": "cross",
+        "categories": [
+          "math.OC",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.17813",
+        "pdf_url": "https://arxiv.org/pdf/2611.17813"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is accelerated multiobjective optimization rather than a central entropy, symbolic or dimension-theoretic theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.18083",
+        "versioned_id": "2611.18083v1",
+        "title": "Separability defects in artificial satellite theory: intermediaries, zonal harmonics and secular separatrices",
+        "authors": [
+          "Vladimir Martinusi"
+        ],
+        "abstract": "A five-input Poisson-bracket operator, which reproduces the Levi-Civita separability expressions and is cubic in the Hamiltonian, is used as a diagnostic of artificial satellite theory, in a modified polar-nodal chart regular at prograde equatorial orbits. For the general intermediary proposed by the author in 2020, covering those of Sterne, Garfinkel, Brouwer, Aksnes, Cid and Lahulla and Deprit, the linearised defects vanish if and only if the integrability ansatz holds, the condition for additive first-order Hamilton-Jacobi separation in polar-nodal variables. Second-order defects follow in closed form, and the coupling with the nodal pair comes from the dependence on the physical latitude, shared by the zonal term, Aksnes's intermediary and the originals of Sterne and Garfinkel. For every axisymmetric field the radial defect is linear, with a torque form, and the first-order zonal defect is the operator response to the first-order Lie generator, which also gives the second-order mean radial defect per revolution. In its gauge the long-period second-order average is common to intermediaries without latitude terms. Oblate structures with a displaced centre separate the zonal field exactly if and only if its coefficients satisfy the recurrence of Vinti's translated spheroidal potential, and along orbits propagated over 300 periods in the field truncated at $J_4$ they conserve the approximate third integral better than the centred structure, by median factors of 23 to 77. On secular separatrices the integrated defect is the derivative of the Melnikov function, tested in the eccentric Kozai-Lidov problem, and transverse zero sets of the operator define event surfaces.",
+        "announce_type": "cross",
+        "categories": [
+          "astro-ph.EP",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.18083",
+        "pdf_url": "https://arxiv.org/pdf/2611.18083"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is integrability diagnostics and numerical satellite propagation without a central connection to the profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.18320",
+        "versioned_id": "2611.18320v1",
+        "title": "All coupling Anderson localization in the quantum kicked rotor model",
+        "authors": [
+          "Yunfeng Shi",
+          "Li Wen"
+        ],
+        "abstract": "In this paper, we study $$\\mathscr{H}=\\lambda \\Delta +\\tan\\pi(\\theta+n^2\\alpha)\\delta_{n,n'},\\ n\\in\\Bbb Z$$ and prove its Anderson localization for all $\\lambda >0$ and Lebesgue almost every (a.e.) $(\\alpha, \\theta)\\in\\Bbb T^2$. This conforms in the full measure sense the main assumption of Fishman-Grempel-Prange [{\\it Phys. Rev. Lett.} 49(8), 509--512 (1982)] in the study of the quantum suppression of chaos: The pseudo-randomness of the sequence $\\{\\tan\\pi(\\theta+n^2\\alpha)\\}_{n\\in\\Bbb Z}$ (for $\\alpha\\in\\Bbb T\\setminus \\Bbb Q$) should result in all coupling Anderson localization for $H$ similar to that for the one-dimensional Anderson model. Our proof is based on nonperturbative Green's function estimates approach using Cayley transform, quadratic Weyl sum estimate and Rellich function analysis.",
+        "announce_type": "cross",
+        "categories": [
+          "math-ph",
+          "math.DS",
+          "math.MP",
+          "math.SP"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.18320",
+        "pdf_url": "https://arxiv.org/pdf/2611.18320"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Localization in the quantum kicked rotor provides a related spectral-dynamics connection.",
+        "tldr": "The stated quantum kicked-rotor operator exhibits Anderson localization at all positive couplings for almost every frequency-phase pair.",
+        "problem": "Establish all-coupling Anderson localization for the operator with the stated quadratic-phase tangent potential.",
+        "main_result": "For the operator with coupling \\(\\lambda\\Delta\\) and diagonal potential \\(\\tan\\pi(\\theta+n^2\\alpha)\\) on \\(\\mathbb{Z}\\), the authors prove Anderson localization for all \\(\\lambda>0\\) and Lebesgue-almost every \\((\\alpha,\\theta)\\in\\mathbb{T}^2\\). They interpret this as confirming, in a full-measure sense, the Fishman-Grempel-Prange localization assumption associated with quantum suppression of chaos. Localization rates: Not specified in the abstract.",
+        "methods": [
+          "Nonperturbative Green's function estimates",
+          "Cayley transform",
+          "Quadratic Weyl sum estimate",
+          "Rellich function analysis"
+        ],
+        "context": "Quantum kicked-rotor spectral theory, Anderson localization and quantum suppression of chaos.",
+        "keywords": [
+          "Anderson localization",
+          "quantum kicked rotor",
+          "quadratic phase",
+          "Green function estimates"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2509.22482",
+        "versioned_id": "2509.22482v3",
+        "title": "Bayesian Transfer Operators in Reproducing Kernel Hilbert Spaces",
+        "authors": [
+          "Septimus Boshoff",
+          "Stefan Klus",
+          "Sebastian Peitz"
+        ],
+        "abstract": "Transfer operators provide a linear description of nonlinear dynamical systems by propagating observables or probability distributions. In reproducing kernel Hilbert spaces, these operators are represented through conditional mean embeddings, whose regularized estimator coincides with the posterior mean of Gaussian process regression. Building on this correspondence, we formulate Gaussian Process Dynamic Mode Decomposition, a Bayesian transfer-operator method that combines sparse variational Gaussian processes with kernel-based Koopman and Perron--Frobenius operator approximation. The resulting framework provides a principled route to uncertainty quantification, scalable sparse approximations, and data-adaptive dictionary learning for prediction and spectral analysis. Additionally, the model-selection formulation naturally gives rise to a forward--backward operator structure, which establishes a connection between Bayesian transfer-operator learning and time-lagged canonical correlation analysis.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cs.LG",
+          "math.DS",
+          "nlin.CD",
+          "physics.data-an"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2509.22482",
+        "pdf_url": "https://arxiv.org/pdf/2509.22482"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Koopman and Perron-Frobenius transfer operators provide a related connection to the evolution of observables and probability distributions.",
+        "tldr": "Gaussian Process Dynamic Mode Decomposition combines sparse variational Gaussian processes with kernel transfer-operator approximation.",
+        "problem": "Develop uncertainty-aware, scalable Bayesian learning of transfer operators in reproducing kernel Hilbert spaces.",
+        "main_result": "The authors use the correspondence between a regularized conditional-mean-embedding estimator and the Gaussian-process-regression posterior mean to formulate Gaussian Process Dynamic Mode Decomposition. The framework combines sparse variational Gaussian processes with kernel Koopman and Perron-Frobenius approximation for uncertainty quantification, sparse approximation and adaptive dictionary learning in prediction and spectral analysis. Model selection produces a forward-backward operator structure connected to time-lagged canonical correlation analysis. Quantitative approximation guarantees: Not specified in the abstract.",
+        "methods": [
+          "Conditional mean embeddings",
+          "Sparse variational Gaussian processes",
+          "Kernel-based Koopman and Perron-Frobenius operator approximation"
+        ],
+        "context": "Transfer-operator learning in reproducing kernel Hilbert spaces and Bayesian spectral analysis.",
+        "keywords": [
+          "transfer operators",
+          "Gaussian processes",
+          "Koopman operator",
+          "uncertainty quantification"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2603.20891",
+        "versioned_id": "2603.20891v2",
+        "title": "Auto-differentiable data assimilation: Co-learning of states, dynamics, and filtering algorithms",
+        "authors": [
+          "Melissa Adrian",
+          "Daniel Sanz-Alonso",
+          "Rebecca Willett"
+        ],
+        "abstract": "Data assimilation algorithms estimate the state of a dynamical system from partial observations, where the successful performance of these algorithms hinges on costly parameter tuning and on employing an accurate model for the dynamics. This paper introduces a framework for jointly learning the state, dynamics, and parameters of filtering algorithms in data assimilation through a process we refer to as auto-differentiable filtering. The framework leverages a theoretically motivated loss function that enables learning from partial, noisy observations via gradient-based optimization using auto-differentiation. We further demonstrate how several well-known data assimilation methods can be learned or tuned within this framework. To underscore the versatility of auto-differentiable filtering, we perform experiments on dynamical systems spanning multiple scientific domains, such as the Clohessy-Wiltshire equations from aerospace engineering, the Lorenz-96 system from atmospheric science, the generalized Lotka-Volterra equations from systems biology, and the two-layer quasi-geostrophic model from geophysical fluid dynamics. Finally, we provide guidelines for practitioners to customize our framework according to their observation model, accuracy requirements, and computational budget.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "stat.ML",
+          "cs.LG",
+          "eess.SP",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-16T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2603.20891",
+        "pdf_url": "https://arxiv.org/pdf/2603.20891"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is learning data-assimilation states, models and filters through numerical optimization without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 3,
+    "RELATED / POSSIBLY INTERESTING": 7,
+    "LOW PRIORITY": 5
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-11-16T11:28:55.003081Z",
+      "feed_published_at": "2026-11-16T00:00:00-05:00",
+      "feed_build_at": "2026-11-16T05:00:16Z",
+      "feed_date": "2026-11-16",
+      "sha256": "3f8eb99a118f8a291605cbaa4635fef4598588dc611873937f98f7a94c1f469b",
+      "byte_length": 50429,
+      "capture_run_url": null
+    }
+  ]
+}
