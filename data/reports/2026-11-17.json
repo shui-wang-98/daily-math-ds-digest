@@ -1,0 +1,1998 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-11-17",
+  "generated_at": "2026-11-17T11:02:06.362492Z",
+  "feed_build_at": "2026-11-17T08:27:24Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 50 unseen announcements: 20 HIGH PRIORITY, 12 RELATED / POSSIBLY INTERESTING, and 18 LOW PRIORITY. Central themes include projected measure dimension, maximal-entropy measures, symbolic complexity and soficity, minimal group actions, dynamical dimension invariants, and the geometry of Julia sets. Related papers address invariant-measure rigidity, homoclinic geometry, cocycle fluctuations, stochastic contraction and arithmetic limit laws. No followed-author matches occur in this input; conditional conclusions and abstract-level omissions are retained explicitly.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2611.18709",
+        "versioned_id": "2611.18709v1",
+        "title": "Generalized particle systems: a locality-factorized metamodel for self-propelled particles and agent-based models",
+        "authors": [
+          "Igor Strozzi"
+        ],
+        "abstract": "We propose a single formal object, the generalized particle system (GPS), under which self-propelled particle systems (SPPS) and agent-based models (ABMs) are instances of one construction. A GPS is a typed finite population, a per-particle state space with arbitrary internal structure, a global environment, a neighbourhood map that may depend on the configuration, and type-indexed local rules; these assemble into a generator whose iteration is a monoid action, i.e. an autonomous dynamical system. Update schedules and stochastic rules are added at the same generality, so sequential and noisy models (the original Primordial Particle System, Vicsek) are covered, not approximated. The construction isolates the one ingredient separating the two communities: in the classical ABM reading the dependency graph is fixed; in an SPPS it is a function of the state. Under an exchangeability axiom (rules see neighbours only through the multiset of their types and states) the generator is equivariant for type-preserving permutations and descends to a dynamical system on counting measures, the setting of kinetic limits of swarming models. We read the tuple as a metamodel: its structural components coordinatize a space of models inside which numerical parameters live. Six pre-registered experiments on one engine implementing the generator test the claims: freezing the neighbourhood map destroys alignment ($\\varphi = 0.91 \\to 0.04$) while yielding a different, non-aligned aggregation; the realized neighbourhood graph rewires up to 64% of its edges per step, its rewiring rate anti-correlated with order ($-0.99$); a topological instead of metric neighbourhood reshapes a flocking phase diagram; the same rule with cohesion and separation off shows a Vicsek-type transition whose susceptibility peak grows with system size. One prediction failed and one subsumption claim is unconfirmed; both are reported.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.18709",
+        "pdf_url": "https://arxiv.org/pdf/2611.18709"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Equivariance, permutation quotients and monoid actions give a plausible group-action connection, although the main focus is a particle-model metamodel.",
+        "tldr": "A generalized particle-system formalism unifies self-propelled particles and agent-based models, with an exchangeability-based quotient on counting measures.",
+        "problem": "Identify a common formal structure for particle and agent-based dynamics, including update schedules and stochastic rules.",
+        "main_result": "The proposed typed-population construction assembles local rules and a configuration-dependent neighbourhood map into a generator whose iteration is a monoid action. Under the stated exchangeability axiom, the generator is equivariant under type-preserving permutations and descends to counting measures. Numerical experiments study neighbourhood freezing, rewiring, flocking and a Vicsek-type transition; the abstract explicitly reports one failed prediction and one unconfirmed subsumption claim.",
+        "methods": [
+          "Locality-factorized generator construction",
+          "Exchangeability axiom",
+          "Six pre-registered numerical experiments"
+        ],
+        "context": "Equivariant particle and agent-based dynamics and model structure.",
+        "keywords": [
+          "particle systems",
+          "exchangeability",
+          "equivariance",
+          "counting measures"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.18752",
+        "versioned_id": "2611.18752v1",
+        "title": "Lower semicontinuity of dimension for quasi-Bernoulli measures under conformal projections",
+        "authors": [
+          "Attila Losonczi"
+        ],
+        "abstract": "We study the dependence of the Hausdorff dimension of projected quasi-Bernoulli measures on a conformal iterated function system on the real line. For every fixed quasi-Bernoulli probability measure on the symbolic space, we prove that the dimension of its push-forward under the coding map is lower semicontinuous in the $C^{1+\\theta}$ topology, without any separation assumption or shift-invariance requirement on the symbolic measure. The proof combines bounded distortion and finite-scale entropy estimates with uniform control of the entropy dimension over measures whose densities are bounded above and below. For invariant Gibbs measures associated with H\\\"older continuous potentials, we also prove joint lower semicontinuity with respect to the defining system and the potential. As an application, we obtain a generic dimension formula: for each fixed shift-invariant quasi-Bernoulli measure, a dense $G_\\delta$ set of systems with derivative moduli strictly less than 1/2 has projected dimension equal to the minimum of one and the entropy-to-Lyapunov-exponent ratio.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.18752",
+        "pdf_url": "https://arxiv.org/pdf/2611.18752"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Projected Hausdorff dimension, entropy estimates and invariant Gibbs measures directly match dimension theory and thermodynamic formalism.",
+        "tldr": "Projected quasi-Bernoulli dimension is lower semicontinuous for conformal systems, without separation or symbolic shift-invariance assumptions.",
+        "problem": "Determine stability of projected measure dimension under perturbations of conformal iterated function systems.",
+        "main_result": "For every fixed quasi-Bernoulli probability on symbolic space, the Hausdorff dimension of its coding-map push-forward for a conformal iterated function system on the real line is lower semicontinuous in the \\(C^{1+\\theta}\\) topology, without separation or shift invariance. For invariant Gibbs measures of Hölder potentials, joint lower semicontinuity holds in the system and potential. For each fixed shift-invariant quasi-Bernoulli measure, a dense \\(G_\\delta\\) set of systems with derivative moduli strictly below \\(1/2\\) has projected dimension equal to the minimum of one and the entropy-to-Lyapunov-exponent ratio.",
+        "methods": [
+          "Bounded distortion",
+          "Finite-scale entropy estimates",
+          "Uniform entropy-dimension control for densities bounded above and below"
+        ],
+        "context": "Conformal projections, fractal measure dimension and Gibbs measures.",
+        "keywords": [
+          "Hausdorff dimension",
+          "quasi-Bernoulli measures",
+          "lower semicontinuity",
+          "Gibbs measures"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.18788",
+        "versioned_id": "2611.18788v1",
+        "title": "Self-adjoint boundary conditions for equation-free multiscale modelling",
+        "authors": [
+          "J. E. Bunder"
+        ],
+        "abstract": "Equation-free modelling is a computation multiscale modelling scheme for the simulation of complex dynamical systems. Efficient computations are achieved by solving the given microscale model in small, well-separated `patches' spread across the space-time domain, with each patch providing a data point for the macroscale simulation. Patch coupling bridges the unsimulated space between patches and supports the macroscale dynamics. Accurate simulations require coupling conditions that preserve underlying symmetries of the microscale equation. Failing to preserve such symmetries may result in an unphysical macroscale simulation that does not satisfy required conservation laws. Here we develop equation-free modelling that preserves self-adjoint symmetry for microscale models defined by a compact self-adjoint operator on a bounded domain with fixed boundary conditions. This new design for equation-free modelling greatly increases the range of systems for which equation-free modelling is applicable.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "cs.NA",
+          "math.NA"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.18788",
+        "pdf_url": "https://arxiv.org/pdf/2611.18788"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is symmetry-preserving multiscale numerical modelling without a central entropy, symbolic or fractal-dimension theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.18817",
+        "versioned_id": "2611.18817v1",
+        "title": "Invariant measures with uniform projection on surfaces and billiards",
+        "authors": [
+          "Xiaolong Han"
+        ],
+        "abstract": "In this paper, we study probability measures on the unit tangent bundle which are invariant under the geodesic flow and whose projection to the base manifold is the normalized Riemannian volume. We show that the Liouville measure is the only such measure on a complete oriented surface of finite area with ergodic geodesic flow. In particular, this resolves a conjecture of Katok--Knieper--Weiss in dimension two. The same holds for ergodic planar billiards with piecewise C2 boundary, such as the Bunimovich stadium, the Sinai billiard, and generic polygons. The proof combines the Fourier analysis in the fibers with holomorphic functions on the transport twistor space. As a consequence, on these surfaces and on the Bunimovich stadium, a high-energy sequence of normalized Laplacian eigenfunctions tends to be equidistributed in the phase space if and only if it tends to be equidistributed in the physical space. In particular, on every stadium, every failure of equidistribution in the phase space implies scarring in the physical space. Combined with Hassell's theorem, this gives a new proof of scarring in the physical space for almost every stadium. In higher dimensions, we obtain an entropy bound for the ergodic components of such measures. We also construct counterexamples for hyperbolic toral automorphisms.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.AP",
+          "math.DG",
+          "math.SP"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.18817",
+        "pdf_url": "https://arxiv.org/pdf/2611.18817"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Invariant-measure rigidity for geodesic flows and billiards, together with an entropy bound, is closely related to the ergodic-theory profile.",
+        "tldr": "Uniform projection characterizes Liouville measure for finite-area oriented surfaces with ergodic geodesic flow and for the stated ergodic planar billiards.",
+        "problem": "Classify flow-invariant probabilities whose base projection is normalized Riemannian volume.",
+        "main_result": "Liouville measure is the unique such probability on a complete oriented finite-area surface with ergodic geodesic flow, resolving the stated conjecture in dimension two. The analogous result holds for ergodic planar billiards with piecewise \\(C^2\\) boundary. On these surfaces and the Bunimovich stadium, high-energy normalized Laplacian eigenfunction sequences equidistribute in phase space if and only if they equidistribute in physical space. The authors obtain an entropy bound for ergodic components in higher dimensions and counterexamples for hyperbolic toral automorphisms. The higher-dimensional entropy bound: Not specified in the abstract.",
+        "methods": [
+          "Fourier analysis in the fibers",
+          "Holomorphic functions on transport twistor space"
+        ],
+        "context": "Geodesic and billiard invariant measures, entropy and eigenfunction equidistribution.",
+        "keywords": [
+          "Liouville measure",
+          "uniform projection",
+          "geodesic flow",
+          "billiards"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.18853",
+        "versioned_id": "2611.18853v1",
+        "title": "Quasi-product and multiplicative Markov measures Radon-Nikodym problem, random walks: the free group case",
+        "authors": [
+          "Vadim A. Kaimanovich"
+        ],
+        "abstract": "The purpose of this paper is a conceptual clarification of the role of a special class of measures on topological Markov chains - multiplicative Markov measures - in the context of random walks. It is achieved by combining the interpretation of multiplicative Markov measures on the boundary of a free group as the unique solutions of the Radon - Nikodym problem for product cocycles of the boundary action and the fact that the Radon - Nikodym cocycle of the harmonic measure of a nearest neighbour random walk on a free group is a product one.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.18853",
+        "pdf_url": "https://arxiv.org/pdf/2611.18853"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Topological Markov chains and cocycles of free-group boundary actions directly match symbolic dynamics and group actions.",
+        "tldr": "Multiplicative Markov measures on free-group boundaries are characterized through a Radon-Nikodym problem for product cocycles.",
+        "problem": "Clarify the role of multiplicative Markov measures in nearest-neighbour random walks on free groups.",
+        "main_result": "The paper combines uniqueness of multiplicative Markov measures as solutions of the Radon-Nikodym problem for product cocycles of a free-group boundary action with the product-cocycle property of harmonic measure for a nearest-neighbour random walk. This gives a conceptual interpretation of these measures in the random-walk setting. The precise hypotheses of the uniqueness statement: Not specified in the abstract.",
+        "methods": [
+          "Radon-Nikodym problem for product cocycles",
+          "Product-cocycle description of harmonic measure"
+        ],
+        "context": "Markov measures, free-group boundary dynamics and random walks.",
+        "keywords": [
+          "Markov measures",
+          "boundary actions",
+          "Radon-Nikodym cocycles",
+          "free groups"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.18917",
+        "versioned_id": "2611.18917v1",
+        "title": "History independence and base-dominant rigidity for polynomial skew products",
+        "authors": [
+          "Yan Mary He"
+        ],
+        "abstract": "We study history independence of fast directions and its relation to the Binder--DeMarco dimension formula for regular polynomial skew products of degree $d\\ge2$. Assuming uniform expansion on the support of the measure of maximal entropy and a base Lyapunov exponent larger than the vertical exponent, we prove that history independence is equivalent to conjugacy to a polynomial product by an affine shear map. Under history independence, the measure of maximal entropy satisfies the Binder--DeMarco dimension formula. If, in addition, the splitting is dominated, the dimension formula also implies history independence. The proof first upgrades the measurable fast direction to a holomorphic line field and then uses its invariance on periodic fibers to force the affine product structure. The converse dimension implication combines an entropy comparison argument with rigidity of local symmetries of periodic fiber Julia sets.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CV"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.18917",
+        "pdf_url": "https://arxiv.org/pdf/2611.18917"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Maximal-entropy measures and their dimension formula are central to the research profile.",
+        "tldr": "Under uniform expansion and base-dominant Lyapunov exponents, history independence is equivalent to an affine-shear product structure.",
+        "problem": "Relate history independence of fast directions to product rigidity and the Binder-DeMarco dimension formula.",
+        "main_result": "For regular polynomial skew products of degree \\(d\\geq2\\), assume uniform expansion on the support of the maximal-entropy measure and a base Lyapunov exponent larger than the vertical exponent. Then history independence is equivalent to conjugacy to a polynomial product by an affine shear. History independence implies the Binder-DeMarco dimension formula; conversely, the formula implies history independence if the splitting is additionally dominated. The explicit dimension formula: Not specified in the abstract.",
+        "methods": [
+          "Upgrade from a measurable fast direction to a holomorphic line field",
+          "Invariance on periodic fibers",
+          "Entropy comparison",
+          "Rigidity of local symmetries of periodic fiber Julia sets"
+        ],
+        "context": "Complex dynamics, entropy-measure dimension and polynomial skew-product rigidity.",
+        "keywords": [
+          "maximal entropy",
+          "dimension formula",
+          "polynomial skew products",
+          "history independence"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.18993",
+        "versioned_id": "2611.18993v1",
+        "title": "Zero area of quartic Fibonacci Julia sets",
+        "authors": [
+          "Runze Zhang"
+        ],
+        "abstract": "We give a computer-assisted proof that the Julia set of the degree-four Fibonacci renormalization 2-periodic point has zero planar Lebesgue measure. As a corollary, the degree four Fibonacci polynomial $z^4+c_{\\mathrm{Fib}}$ has zero measure Julia set.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.18993",
+        "pdf_url": "https://arxiv.org/pdf/2611.18993"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Planar measure of Julia sets is directly relevant to fractal geometry in dynamics.",
+        "tldr": "A computer-assisted proof establishes zero planar area for the stated quartic Fibonacci Julia sets.",
+        "problem": "Determine planar Lebesgue measure of the degree-four Fibonacci renormalization Julia set.",
+        "main_result": "The author gives a computer-assisted proof that the Julia set of the degree-four Fibonacci renormalization two-periodic point has zero planar Lebesgue measure. Consequently, the degree-four Fibonacci polynomial \\(z^4+c_{\\mathrm{Fib}}\\) also has a zero-measure Julia set. The computer-assisted bounds and certification procedure: Not specified in the abstract.",
+        "methods": [
+          "Computer-assisted proof"
+        ],
+        "context": "Fractal geometry and measure of Julia sets in complex dynamics.",
+        "keywords": [
+          "Julia sets",
+          "zero area",
+          "Fibonacci renormalization",
+          "quartic polynomials"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19243",
+        "versioned_id": "2611.19243v1",
+        "title": "Veech dichotomy for specific covering surface over Veech surface",
+        "authors": [
+          "Haoran Hu"
+        ],
+        "abstract": "It is known that Veech dichotomy, which states that minimal directions are uniquely ergodic, holds for Veech surface and covering surface branched at a single non-periodic connection point of Veech surface. We give a sufficient condition for Veech dichotomy holds for a finite translation cover of a Veech surface, and applies it on branched cover of square-tiled surfaces to construct examples that satisfy Veech dichotomy but aren't Veech surfaces.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19243",
+        "pdf_url": "https://arxiv.org/pdf/2611.19243"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Unique ergodicity of minimal directions on translation covers gives a related ergodic and topological-dynamics connection.",
+        "tldr": "A sufficient criterion yields translation covers with Veech dichotomy that are not Veech surfaces.",
+        "problem": "Find finite translation covers of Veech surfaces whose minimal directions are uniquely ergodic.",
+        "main_result": "The author gives a sufficient condition for Veech dichotomy on a finite translation cover of a Veech surface. Applying it to branched covers of square-tiled surfaces produces examples satisfying the dichotomy without being Veech surfaces. The precise sufficient condition and covering data: Not specified in the abstract.",
+        "methods": [
+          "Sufficient criterion for finite translation covers",
+          "Application to branched covers of square-tiled surfaces"
+        ],
+        "context": "Translation surfaces, minimal directions and unique ergodicity.",
+        "keywords": [
+          "Veech dichotomy",
+          "translation covers",
+          "unique ergodicity",
+          "square-tiled surfaces"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19478",
+        "versioned_id": "2611.19478v1",
+        "title": "Generic finiteness of rotating relative equilibria in the planar $N$-vortex problem",
+        "authors": [
+          "Jinxin Xue"
+        ],
+        "abstract": "For every $N\\ge2$, we prove that Zariski-generic nonzero real circulations, with any prescribed signs, admit at most $N^{2N}$ labeled, collision-free rotating relative equilibria modulo translations, rotations in $SO(2)$, and positive scaling. The excluded parameters lie in an explicit finite union of quadratic hypersurfaces. The proof combines a logarithmic-residue obstruction to positive-dimensional complex solution sets with B\\'ezout degree bounds.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19478",
+        "pdf_url": "https://arxiv.org/pdf/2611.19478"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is finite counting of vortex relative equilibria rather than a central entropy, symbolic or dimension-theoretic theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19490",
+        "versioned_id": "2611.19490v1",
+        "title": "Fixed-space indices and symmetry breaking in variational problems",
+        "authors": [
+          "Daniele Garrisi",
+          "Alessandro Portaluri",
+          "Li Wu"
+        ],
+        "abstract": "We establish a quantitative criterion for variational bifurcation with prescribed exact stabilizers under finite group actions. Combining scalar spectral flow on fixed spaces with overgroup nullities, we bound the number of bifurcation parameters when the restricted singular set is finite. The theorem allows strongly indefinite Fredholm Hessians and singular ambient endpoints, without parameter differentiability or regular crossings. Finite Morse index reduces the inputs to indices and nullities; extensions cover varying form domains and regular matrix Sturm--Liouville systems. For a Newtonian nine-body family containing a reported counterexample to Moeckel's stability conjecture, we prove analytically that two nonconjugate exact reflection types bifurcate at a common central mass, displacing the central body. Positivity excludes larger stabilizers, while a scalar Schur complement synchronizes the bifurcations, independently of the reported stability assertion.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19490",
+        "pdf_url": "https://arxiv.org/pdf/2611.19490"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Exact stabilizers and symmetry breaking under finite group actions provide a related group-action connection in variational dynamics.",
+        "tldr": "Fixed-space spectral flow and overgroup nullities give quantitative bifurcation criteria with prescribed exact stabilizers.",
+        "problem": "Detect and count variational bifurcations with specified symmetry types.",
+        "main_result": "When the restricted singular set is finite, the authors bound the number of bifurcation parameters by combining scalar spectral flow on fixed spaces with overgroup nullities. The theorem permits strongly indefinite Fredholm Hessians and singular ambient endpoints, without parameter differentiability or regular crossings. Extensions include varying form domains and regular matrix Sturm-Liouville systems. For the stated Newtonian nine-body family, two nonconjugate exact reflection types bifurcate at a common central mass, independently of the reported stability assertion. The quantitative bound: Not specified in the abstract.",
+        "methods": [
+          "Scalar spectral flow on fixed spaces",
+          "Overgroup nullities",
+          "Positivity to exclude larger stabilizers",
+          "Scalar Schur complement to synchronize bifurcations"
+        ],
+        "context": "Equivariant variational bifurcation and exact symmetry types.",
+        "keywords": [
+          "finite group actions",
+          "spectral flow",
+          "exact stabilizers",
+          "symmetry breaking"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19516",
+        "versioned_id": "2611.19516v1",
+        "title": "Denoising-Induced Recovery of Effective Dynamics",
+        "authors": [
+          "Narcicegi Kiran"
+        ],
+        "abstract": "Recovering dynamical equations from data is a central problem in nonlinear science. In practice, measurements are corrupted by noise and often contain fast oscillations that are not part of the slow dynamics of interest. For this reason, data are typically pre-processed before model recovery or classsification. Here, we reveal the effects of filtering, a specific denoising technique, on recovery. Our analysis show that equation discovery performed on filtered data recovers, up to a fixed precision, the normal-form (effective) equations rather than the original system.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "physics.data-an"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19516",
+        "pdf_url": "https://arxiv.org/pdf/2611.19516"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is filtering-induced equation recovery without a central connection to the research profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19805",
+        "versioned_id": "2611.19805v1",
+        "title": "Word complexity cutoffs for mixing properties of subshifts",
+        "authors": [
+          "Darren Creutz"
+        ],
+        "abstract": "Investigating word complexity cutoffs for partial and light mixing in subshifts, we construct partially mixing rank-one subshifts whose word complexity functions $p(q)$ satisfy $ \\liminf_{q\\to\\infty}\\frac{p(q)}q<2+\\epsilon $ for any prescribed $\\epsilon>0$ and, conversely, we prove that every lightly mixing rank-one subshift satisfies $ \\liminf_{q\\to\\infty}\\frac{p(q)}q>2, $ establishing $2$ as the optimal limiting threshold in the rank-one setting. More quantitatively, we show that every $\\alpha$-partially mixing rank-one subshift satisfies $ \\liminf_{q\\to\\infty}\\frac{p(q)}q\\geq 2+\\frac{\\alpha}{(1+\\alpha)}. $ Our constructions are a combination of staircase and Chacon-like rank-one stages; we introduce the independently interesting notion of mixing spans and meshes to establish partial mixing while retaining low word complexity.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19805",
+        "pdf_url": "https://arxiv.org/pdf/2611.19805"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Word complexity, mixing and rank-one subshifts directly match symbolic dynamics and orbit complexity.",
+        "tldr": "The limiting word-complexity threshold for the stated rank-one mixing properties is two, with a sharper partial-mixing bound.",
+        "problem": "Determine word-complexity cutoffs for partial and light mixing in rank-one subshifts.",
+        "main_result": "For every \\(\\epsilon>0\\), the author constructs partially mixing rank-one subshifts with \\(\\liminf_{q\\to\\infty}p(q)/q<2+\\epsilon\\). Every lightly mixing rank-one subshift has \\(\\liminf_{q\\to\\infty}p(q)/q>2\\). More quantitatively, every \\(\\alpha\\)-partially mixing rank-one subshift satisfies \\(\\liminf_{q\\to\\infty}p(q)/q\\geq2+\\alpha/(1+\\alpha)\\). The construction combines staircase and Chacon-like rank-one stages and introduces mixing spans and meshes.",
+        "methods": [
+          "Staircase and Chacon-like rank-one stages",
+          "Mixing spans and meshes"
+        ],
+        "context": "Symbolic word complexity and measure-theoretic mixing.",
+        "keywords": [
+          "word complexity",
+          "rank-one subshifts",
+          "partial mixing",
+          "light mixing"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19842",
+        "versioned_id": "2611.19842v1",
+        "title": "Splitting of separatrices in generalized standard maps",
+        "authors": [
+          "Inmaculada Baldom\\'a",
+          "D\\'idac Gil-Rams",
+          "Pau Mart\\'in"
+        ],
+        "abstract": "We consider generalized standard maps, that is, maps $F_h:(x,y) \\mapsto (x+y+f(x;h),y+f(x;h))$ under quite general assumptions. These maps are area preserving. In particular, the Chirikov standard map, the area preserving H\\'enon map and the case $f(x;h)= \\varepsilon(x-x^n)$, $n\\ge 2$, where $\\varepsilon = 4 \\sinh^2(h/2)$ satisfy our hypotheses. For all these cases, the problem of the existence of transverse homoclinic points arises. We prove that, for a wide class of generalized standard maps, the primary homoclinic points are transverse, provided that some constant is different from 0.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19842",
+        "pdf_url": "https://arxiv.org/pdf/2611.19842"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Transverse homoclinic geometry in area-preserving maps gives a direct smooth-dynamics connection.",
+        "tldr": "Primary homoclinic points in a wide class of generalized standard maps are transverse under a nonvanishing-constant condition.",
+        "problem": "Establish transverse homoclinic intersections for generalized standard maps.",
+        "main_result": "For a wide class of area-preserving maps \\(F_h(x,y)=(x+y+f(x;h),y+f(x;h))\\), primary homoclinic points are transverse provided a certain constant is nonzero. The hypotheses include the Chirikov standard map, the area-preserving Hénon map and \\(f(x;h)=\\varepsilon(x-x^n)\\), \\(n\\geq2\\), with \\(\\varepsilon=4\\sinh^2(h/2)\\). The full hypotheses, constant and proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Separatrix splitting and homoclinic geometry of area-preserving maps.",
+        "keywords": [
+          "standard maps",
+          "separatrix splitting",
+          "homoclinic transversality",
+          "area preservation"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19873",
+        "versioned_id": "2611.19873v1",
+        "title": "Uniqueness of limit cycle{s} in a class of classical trinomial Li\\'enard systems",
+        "authors": [
+          "Hebai Chen",
+          "Yuhuan Lu",
+          "Qian Wang Rui Zhang"
+        ],
+        "abstract": "This paper studies the number of limit cycles of the polynomial Li\\'enard system $\\dot x=y-F(x)$, $\\dot y=-x$, where $F(x)=a_1x^{2N}+a_2x^{2m+1}+x^{2n+1}$, with integers \\(N,m,n\\) satisfying $2\\le N\\le m<n$, $a_1\\ne0$ and $a_2\\neq 0$. It is proved that this system has exactly one limit cycle and that every periodic orbit is hyperbolic and attracting for $a_2<0$; this system has no limit cycles for $a_2>0$. The uniqueness proof compares the widths and relative midpoints of the two scalar arcs obtained in potential coordinates. This result gives a positive answer to Conjecture 1.4 of Cen et al. (Sci. China Math., 2026).",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19873",
+        "pdf_url": "https://arxiv.org/pdf/2611.19873"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is a polynomial Liénard limit-cycle classification without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19874",
+        "versioned_id": "2611.19874v1",
+        "title": "A Negative Answer to a Variant of the Lins-de Melo-Pugh Conjecture",
+        "authors": [
+          "Hebai Chen",
+          "Jie Jin",
+          "Zhijie Li",
+          "Jueliang Zhou"
+        ],
+        "abstract": "We study the polynomial Li\\'enard system $$\\dot x=y-(a_1x^{2m+1}+a_2x^{2n+1}+x^{2N}),\\qquad \\dot y=-x,$$ where $0\\leq m< n<N$ are integers and $a_1a_2<0$. The supremum of the numbers of limit cycles in this family is at least two for every integer $N\\geq3$ and at least three for $N=5$. These results disprove Conjectures 1.5 and 1.6 of Cen et al. [Sci. China Math. 69 (2026)].",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19874",
+        "pdf_url": "https://arxiv.org/pdf/2611.19874"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is lower bounds for Liénard limit-cycle counts without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19880",
+        "versioned_id": "2611.19880v1",
+        "title": "Instability of non-minimal critical points of Newton's equation with real analytic potentials",
+        "authors": [
+          "Xiaoping Yuan"
+        ],
+        "abstract": "We prove that any non-minimal critical point of a real analytic potential on a finite-dimensional Euclidean space possesses a nonconstant zero-energy Newton trajectory that converges to the equilibrium as \\(t\\to+\\infty\\). By time reversibility, this yields forward Lyapunov instability. We do not assume the critical point is isolated. The proof constructs angular minima via quadratic regularization, matching the regularization coefficient to the leading inertial term. A free forcing coefficient allows continuation past bounded accumulations of correction orders. For polynomial potentials, this produces a complete Hahn-series solution, and differential algebraicity gives a common Puiseux denominator. A fixed-denominator continuation estimate together with a finite Taylor transfer extends the construction to analytic potentials. The realization theorem for the resulting invariant formal phase curve then yields a genuine trajectory. We also exhibit an isolated polynomial singularity for which an exact Euler-field identity admits no relatively differentiable solution on the negative set of the potential.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19880",
+        "pdf_url": "https://arxiv.org/pdf/2611.19880"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is equilibrium instability for Newton equations without a central entropy, symbolic or dimension-theoretic theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19898",
+        "versioned_id": "2611.19898v1",
+        "title": "Minimal sets of countable group actions on regular curves",
+        "authors": [
+          "Enhui Shi",
+          "Suhua Wang",
+          "Yifei Yu"
+        ],
+        "abstract": "We study minimal sets of countable groups acting by homeomorphisms on regular curves. If the ambient action has a finite orbit, every infinite minimal set is an equicontinuous Cantor system. If there is no finite orbit, the minimal set is unique and remains minimal for every finite-index subgroup. A minimal set supporting an invariant probability is a finite orbit, an equicontinuous Cantor system, a circle isometry action, or a Cantor extension obtained by splitting a countable invariant subset of such a circle. Without an invariant probability, infinitely many nondegenerate components can occur. Their homeomorphism types determine the underlying space, and every nonempty countable family of types is realized. The two-generator free group admits an example with arc components on a dendrite, whereas its restricted wreath product with the integers admits none on any regular curve.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19898",
+        "pdf_url": "https://arxiv.org/pdf/2611.19898"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Minimal sets, invariant measures and countable group actions on curves directly match topological and group-action dynamics.",
+        "tldr": "Minimal sets of countable group actions on regular curves admit classifications distinguished by finite orbits and invariant probabilities.",
+        "problem": "Describe minimal sets and component structures for countable groups acting by homeomorphisms on regular curves.",
+        "main_result": "A finite orbit in the ambient action forces every infinite minimal set to be an equicontinuous Cantor system. Without finite orbits the minimal set is unique and stays minimal for every finite-index subgroup. With an invariant probability, the possibilities are a finite orbit, an equicontinuous Cantor system, a circle isometry action, or the stated Cantor extension formed by splitting a countable invariant subset of such a circle. Without an invariant probability, infinitely many nondegenerate components may occur; their types determine the space and every nonempty countable family of types is realized. The two-generator free group has an example with arc components on a dendrite, whereas its restricted wreath product with the integers has none on any regular curve.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Topological group actions, minimality and regular-curve continua.",
+        "keywords": [
+          "minimal sets",
+          "countable group actions",
+          "regular curves",
+          "equicontinuity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19977",
+        "versioned_id": "2611.19977v1",
+        "title": "Variants of Expansivity, Shadowing and Spectral Decomposition",
+        "authors": [
+          "Pramod Kumar Das",
+          "Manoj B. Prajapati"
+        ],
+        "abstract": "In this paper, we first distinguish a very recently introduced notion of mean asymptotic expansivity from asymptotic expansivity. Then, we extend the spectral decomposition theorem due to Smale to bi-mean asymptotically expansive homeomorphisms with the shadowing property. We also extend a measurable spectral decomposition theorem due to Shin to shadowable measures for bi-mean asymptotically expansive homeomorphisms. Each of the chain transitive sub-systems obtained by Shin can be further decomposed into chain mixing systems by using the ideas of Richeson and Wiseman. Next, we use a probabilistic argument to recover both Smale-like and Bowen-like spectral decompositions for expansive homeomorphisms with the shadowing property. Moreover, we investigate inter-relations among several variants of the shadowing property including the eventual shadowing property, the thick shadowing property, the ergodic shadowing property, the mean ergodic shadowing property and the $M_{\\alpha}$-shadowing property.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19977",
+        "pdf_url": "https://arxiv.org/pdf/2611.19977"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Expansivity, shadowing and spectral decomposition are central topological-dynamics themes.",
+        "tldr": "Spectral decomposition extends to bi-mean asymptotically expansive homeomorphisms and suitable shadowable measures.",
+        "problem": "Distinguish expansivity variants and extend topological and measurable spectral decompositions.",
+        "main_result": "The authors distinguish mean asymptotic expansivity from asymptotic expansivity and extend Smale spectral decomposition to bi-mean asymptotically expansive homeomorphisms with shadowing. They extend Shin measurable decomposition to shadowable measures for such homeomorphisms. They describe further chain-mixing decompositions using Richeson-Wiseman ideas and probabilistically recover Smale-like and Bowen-like decompositions for expansive homeomorphisms with shadowing. Relations among several shadowing variants are investigated. The precise inter-relations: Not specified in the abstract.",
+        "methods": [
+          "Probabilistic argument",
+          "Richeson-Wiseman ideas for chain-mixing decomposition"
+        ],
+        "context": "Topological expansivity, shadowing and spectral decomposition.",
+        "keywords": [
+          "expansivity",
+          "shadowing",
+          "spectral decomposition",
+          "chain mixing"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20055",
+        "versioned_id": "2611.20055v1",
+        "title": "Minimal Models for Free Quasi-Invariant and Stationary Actions",
+        "authors": [
+          "Yair Hartman",
+          "Tomer Zimhoni"
+        ],
+        "abstract": "In this paper, we generalize the fact that essentially free p.m.p. actions of a countably infinite group admit a minimal model, proved by Weiss and Zucker. We prove that minimal models exist for every essentially free non singular action. Furthermore, as in the p.m.p. case, we prove that all essentially free $\\mu$-stationary actions (with respect to a fixed generating probability measure $\\mu$) admit a common minimal model.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GR"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20055",
+        "pdf_url": "https://arxiv.org/pdf/2611.20055"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Minimal models of essentially free group actions directly match topological dynamics and group actions.",
+        "tldr": "Essentially free nonsingular actions admit minimal models, and stationary actions for a fixed generating measure share a common minimal model.",
+        "problem": "Extend minimal-model results beyond probability-measure-preserving actions.",
+        "main_result": "In the setting of actions of a countably infinite group, the authors prove existence of a minimal model for every essentially free nonsingular action. For a fixed generating probability measure \\(\\mu\\), all essentially free \\(\\mu\\)-stationary actions admit a common minimal model. The model construction and proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Minimal topological models of nonsingular and stationary group actions.",
+        "keywords": [
+          "minimal models",
+          "nonsingular actions",
+          "stationary actions",
+          "essential freeness"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20104",
+        "versioned_id": "2611.20104v1",
+        "title": "Stability of Carath\\'eodory Outer Measures Generated by Spatial Gauges",
+        "authors": [
+          "Ren\\'e Erlin Castillo",
+          "H\\'ector Camilo Chaparro"
+        ],
+        "abstract": "We study outer measures generated by covering costs that depend on both the diameter and the location of a covering set. After establishing the metric and Borel-regularity properties of this construction, we investigate its stability under perturbations of the spatial gauge. For power gauges, we prove a uniform logarithmic criterion: if the exponent perturbation multiplied by $\\log(1/r)$ converges uniformly to $\\lambda$, then the induced measure is multiplied by $e^{-\\lambda}$. Pointwise asymptotic equivalence, however, is insufficient: on $[0,1]$ we construct bounded gauges whose ratio is eventually equal to one at every fixed point, although their induced measures differ by a prescribed factor. In the converse direction, continuity of the ratio in the spatial variable on a Baire space yields equality of the measures on every compact subset of a suitable dense $G_\\delta$ set. The results identify a concrete obstruction to pointwise-to-measure stability and a localization principle, while leaving open the corresponding question for all Borel sets.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20104",
+        "pdf_url": "https://arxiv.org/pdf/2611.20104"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Gauge-generated covering measures and stability are directly relevant to fractal measure constructions.",
+        "tldr": "Uniform logarithmic control stabilizes spatial-gauge measures, while pointwise asymptotic equivalence can fail to do so.",
+        "problem": "Determine how location-dependent covering measures respond to perturbations of their spatial gauges.",
+        "main_result": "After establishing metric and Borel regularity, the authors show for power gauges that uniform convergence of the exponent perturbation times \\(\\log(1/r)\\) to \\(\\lambda\\) multiplies the induced measure by \\(e^{-\\lambda}\\). On \\([0,1]\\), bounded gauges can have ratio eventually one at every fixed point yet measures differing by a prescribed factor. Conversely, spatial continuity of the ratio on a Baire space gives equality on every compact subset of a suitable dense \\(G_\\delta\\) set. The corresponding statement for all Borel sets remains open.",
+        "methods": [
+          "Spatial covering gauges",
+          "Uniform logarithmic criterion",
+          "Baire-space localization principle"
+        ],
+        "context": "Carathéodory covering measures and spatial-gauge stability.",
+        "keywords": [
+          "outer measures",
+          "spatial gauges",
+          "measure stability",
+          "Baire localization"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20303",
+        "versioned_id": "2611.20303v1",
+        "title": "On dynamical and parameter spaces for the Maximally Generalized McMullen family of rational maps",
+        "authors": [
+          "Suzanne Boyd",
+          "Jillian Cervantes",
+          "Rachel Foster",
+          "Olivia Hwang",
+          "Sebastian Marcano",
+          "Molly Roughan"
+        ],
+        "abstract": "We explore the maximally generalized McMullen family of rational maps $F_{n,d,c,a}(z) = z^n + a/z^d + c$, for $n,d\\in \\mathbb{Z},$ with $n,d\\geq 3$, $a\\in \\mathbb{C}^*$ and $c\\in \\mathbb{C}$. In the dynamical plane, we establish annular regions containing the Julia sets, and show that the geometric limits of both the Julia and filled Julia sets as $n,d\\to \\infty$ are contained in the unit circle. In parameter space, for any fixed $a\\in \\mathbb{C}^*$, we examine the boundedness locus in the $c$-plane. When $n=d$ we find that as $n\\to \\infty$, the boundedness locus tends to the union of two unit circles centered at $\\pm 2\\sqrt{a}$. For arbitrary $n,d$, we identify a spine consisting of unit circles determined by the critical values, and prove that the boundedness locus tends to the spine as $n,d\\to \\infty$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20303",
+        "pdf_url": "https://arxiv.org/pdf/2611.20303"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Geometric limits of Julia sets and parameter loci directly concern fractal geometry in complex dynamics.",
+        "tldr": "Large-degree Julia-set limits lie in the unit circle, while boundedness loci approach the stated critical-value circle spines.",
+        "problem": "Describe dynamical and parameter-space limits of the maximally generalized McMullen family.",
+        "main_result": "For \\(F_{n,d,c,a}(z)=z^n+a/z^d+c\\), integers \\(n,d\\geq3\\), \\(a\\in\\mathbb C^*\\) and \\(c\\in\\mathbb C\\), the authors obtain annular regions containing the Julia sets; geometric limits of Julia and filled Julia sets as \\(n,d\\to\\infty\\) are contained in the unit circle. For fixed nonzero \\(a\\) and \\(n=d\\), the boundedness locus in the \\(c\\)-plane tends to the union of unit circles centered at \\(\\pm2\\sqrt a\\). For arbitrary \\(n,d\\), they identify a unit-circle spine determined by critical values and prove convergence of the boundedness locus to it as both degrees tend to infinity.",
+        "methods": [
+          "Annular bounds",
+          "Critical-value circle spines"
+        ],
+        "context": "Julia-set geometry and parameter loci for rational maps.",
+        "keywords": [
+          "McMullen maps",
+          "Julia sets",
+          "geometric limits",
+          "boundedness loci"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20486",
+        "versioned_id": "2611.20486v1",
+        "title": "Inverse Problem for Super-linearization with Single Observable and Diagonalizable Principal Submatrix",
+        "authors": [
+          "Haoyu Yin",
+          "Xudong Chen"
+        ],
+        "abstract": "Super-linearization is, roughly speaking, embedding an $n$-dimensional nonlinear dynamical system into an $(n + m)$-dimensional linear system. We introduce and address, in this paper, the inverse problem: given a linear system $\\dot x= M x$, what type of dynamical systems can be super-linearized to it? We focus on the special case where the dimension reduction is one (i.e., $m = 1$) and the leading $n$-by-$n$ principal submatrix of $M$ is diagonalizable, and provide a solution to the problem.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "cs.SY",
+          "eess.SY"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20486",
+        "pdf_url": "https://arxiv.org/pdf/2611.20486"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Embedding nonlinear dynamics into linear dynamics offers a plausible structural connection, although the abstract does not emphasize entropy or fractal dimension.",
+        "tldr": "The inverse super-linearization problem is solved for a single added observable with a diagonalizable leading principal submatrix.",
+        "problem": "Given a linear system, characterize nonlinear systems that can be embedded into it by super-linearization.",
+        "main_result": "Given \\(\\dot x=Mx\\), the authors solve the inverse problem in the special case of dimension reduction one, \\(m=1\\), and a diagonalizable leading \\(n\\)-by-\\(n\\) principal submatrix of \\(M\\). The resulting characterization, further hypotheses and proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Structural embeddings and linear representations of nonlinear dynamical systems.",
+        "keywords": [
+          "super-linearization",
+          "inverse problem",
+          "single observable",
+          "diagonalizability"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20668",
+        "versioned_id": "2611.20668v1",
+        "title": "Local limit theorems and counting for transverse subgroups",
+        "authors": [
+          "Sam Edwards",
+          "Minju Lee",
+          "Hee Oh"
+        ],
+        "abstract": "Transverse subgroups form a special class of discrete subgroups of connected semisimple real algebraic groups that includes all discrete subgroups of rank-one Lie groups, as well as Anosov and relatively Anosov subgroups. We study the joint distribution of partial Cartan projections and the two associated Cartan flags for Zariski dense $\\theta$-transverse subgroups. Assuming local mixing of the associated Bowen-Margulis-Sullivan measure, we prove two local limit theorems and deduce counting asymptotics in Euclidean balls and tubes, together with equidistribution of the Cartan flags. These qualitative conclusions hold for $\\theta$-Anosov subgroups, for which the local mixing hypothesis is satisfied. If the group is linearly $\\theta$-regular near the direction of maximal growth, a polynomial error in local mixing gives polynomial errors in these results. Applying the quantitative local mixing theorem of Kim-Oh-Pan, we obtain local limit and counting theorems with polynomial error estimates for several classes of relatively Anosov representations of Fuchsian groups.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GT",
+          "math.NT"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20668",
+        "pdf_url": "https://arxiv.org/pdf/2611.20668"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Cartan projections, flag distributions and semisimple group dynamics directly connect to group-action interests.",
+        "tldr": "BMS local mixing yields local limit theorems, subgroup counting and Cartan-flag equidistribution, with quantitative conclusions under additional regularity.",
+        "problem": "Describe joint partial-Cartan and flag distributions for transverse discrete subgroups.",
+        "main_result": "For Zariski-dense \\(\\theta\\)-transverse subgroups of connected semisimple real algebraic groups, local mixing of the associated Bowen-Margulis-Sullivan measure implies two local limit theorems, counting asymptotics in Euclidean balls and tubes, and Cartan-flag equidistribution. These qualitative conclusions apply to \\(\\theta\\)-Anosov subgroups. Under linear \\(\\theta\\)-regularity near maximal growth, polynomial local-mixing errors transfer to polynomial errors in these results. The authors apply the Kim-Oh-Pan theorem to several classes of relatively Anosov representations of Fuchsian groups. The explicit asymptotics and error exponents: Not specified in the abstract.",
+        "methods": [
+          "BMS local mixing",
+          "Quantitative local mixing theorem of Kim-Oh-Pan"
+        ],
+        "context": "Homogeneous group dynamics, local limit laws and orbit counting.",
+        "keywords": [
+          "transverse subgroups",
+          "Cartan projections",
+          "local mixing",
+          "flag equidistribution"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20681",
+        "versioned_id": "2611.20681v1",
+        "title": "Haar local mixing for transverse subgroups",
+        "authors": [
+          "Sam Edwards",
+          "Minju Lee",
+          "Hee Oh"
+        ],
+        "abstract": "Transverse subgroups form a special class of discrete subgroups of connected semisimple real algebraic groups that includes all discrete subgroups of rank-one Lie groups, as well as Anosov and relatively Anosov subgroups. For torsion-free Zariski dense $\\theta$-transverse subgroups, we establish Haar local mixing for the partial Weyl chamber action under a Bowen-Margulis-Sullivan (BMS) local mixing hypothesis. The proof is based on a transfer principle using the domains of discontinuity introduced by Delarue-Monclair-Sanders and extended to transverse subgroups by Guedes Bonthonneau-Lefeuvre-Weich. For $\\theta$-Anosov subgroups, we verify the BMS hypothesis by adapting existing arguments and hence obtain Haar local mixing. As a consequence, we obtain asymptotics for the volume and distribution of long returns and recover the growth indicator from return volumes. Under linear $\\theta$-regularity, the transfer also holds with polynomial error estimates. This condition is satisfied by subgroups of $\\theta$-Anosov or relatively $\\theta$-Anosov groups.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GT",
+          "math.NT"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20681",
+        "pdf_url": "https://arxiv.org/pdf/2611.20681"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Partial Weyl chamber actions and local mixing directly match group-action dynamics.",
+        "tldr": "A transfer principle derives Haar local mixing from BMS local mixing for the stated transverse subgroups.",
+        "problem": "Transfer local mixing to Haar measure and describe volumes and distributions of long returns.",
+        "main_result": "For torsion-free Zariski-dense \\(\\theta\\)-transverse subgroups, BMS local mixing implies Haar local mixing for the partial Weyl chamber action. The authors verify the hypothesis for \\(\\theta\\)-Anosov subgroups and obtain asymptotics for long-return volume and distribution, recovering the growth indicator from return volumes. Under linear \\(\\theta\\)-regularity, polynomial error estimates also transfer; the abstract states this condition for subgroups of \\(\\theta\\)-Anosov or relatively \\(\\theta\\)-Anosov groups. The precise asymptotics and error powers: Not specified in the abstract.",
+        "methods": [
+          "Transfer principle using domains of discontinuity",
+          "Adaptation of existing BMS local-mixing arguments"
+        ],
+        "context": "Haar and BMS local mixing in semisimple homogeneous dynamics.",
+        "keywords": [
+          "Weyl chamber actions",
+          "Haar local mixing",
+          "transverse subgroups",
+          "long returns"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20707",
+        "versioned_id": "2611.20707v1",
+        "title": "State-Dependent Saving and Heavy-Tailed Shocks in a Stochastic Solow Growth Model via a Logistic L\\'evy Framework",
+        "authors": [
+          "Wen Wang",
+          "Shenglan Yuan"
+        ],
+        "abstract": "This work develops a stochastic Solow growth model in which the aggregate saving rate is state dependent and evolves on a faster time scale than capital. The saving target follows a mean-reverting process driven by symmetric $\\alpha$-stable L\\'evy noise, while the saving control adjusts toward this target and capital accumulates according to a Solow equation. After scaling, the model is a three-dimensional stochastic dynamical system with multiplicative heavy-tailed noise and a logistic saving function. We establish invariance of the economically meaningful state space for the discrete reflected model, derive the stationary distribution of the saving target in the Gaussian limiting case, and characterize how the tail index and logistic sensitivity affect the coupled dynamics. Monte Carlo simulations show bimodal capital and saving distributions, asymmetric first-passage behavior between low- and high-capital regimes, and a nonlinear relationship between output volatility, the logistic sensitivity, and the tail index. In particular, heavier tails increase the dispersion of the scaled saving target and low-to-high first-passage frequencies, but do not necessarily increase relative output volatility. The results highlight the importance of state-dependent saving and non-Gaussian shocks for growth dynamics.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20707",
+        "pdf_url": "https://arxiv.org/pdf/2611.20707"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is stochastic economic growth modelling without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20816",
+        "versioned_id": "2611.20816v1",
+        "title": "Criterion for Glasner property and IC-Rigidity for actions on homogeneous space",
+        "authors": [
+          "Alexander Fish",
+          "Shrey Sanadhya"
+        ],
+        "abstract": "Let $G$ be a semi-group acting continuously on a compact metric space $X$. The action $G\\curvearrowright X$ is called Glasner if for every infinite set $A\\subseteq X$ and every $\\varepsilon>0$, there exists $g\\in G$ such that $gA$ is $\\varepsilon$-dense in $X$. Let $\\mathcal{K}(X)$ denote the space of nonempty compact subsets of $X$. A $G$-invariant Borel probability measure on $\\mathcal{K}(X)$ is called an invariant random compact (IRC), and the action is IC-rigid if $\\delta_X$ is the only IRC supported on infinite compact subsets of $X$. In this paper we give a pair-correlation criterion implying both IC-rigidity and the Glasner property. As an application, we prove both these properties for finitely generated $\\operatorname{Ad}$-Zariski-dense semi-groups acting on compact homogeneous spaces $G/\\Lambda$, where $G$ is connected and noncompact with simple Lie algebra and $\\Lambda<G$ is a cocompact lattice; in particular, this applies to finitely generated Zariski-dense semi-groups of $\\mathrm{SL}_d(\\mathbb{R})$ and $\\mathrm{PSL}_d(\\mathbb{R})$. We also derive a Fourier-analytic criterion for semi-group actions on $\\mathbb{T}^d$ and use it to prove IC-rigidity for actions arising from suitable matrix-valued polynomials.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20816",
+        "pdf_url": "https://arxiv.org/pdf/2611.20816"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Glasner density properties and invariant random compacts are central questions in topological group actions.",
+        "tldr": "A pair-correlation criterion implies IC-rigidity and the Glasner property, with homogeneous-space and torus applications.",
+        "problem": "Find criteria forcing dense images of infinite sets and rigidity of invariant random compact subsets.",
+        "main_result": "For continuous semigroup actions on compact metric spaces, a pair-correlation criterion implies the Glasner property and IC-rigidity: \\(\\delta_X\\) is the only invariant random compact supported on infinite compact subsets. Both properties hold for finitely generated \\(\\operatorname{Ad}\\)-Zariski-dense semigroups on compact homogeneous spaces \\(G/\\Lambda\\), where \\(G\\) is connected and noncompact with simple Lie algebra and \\(\\Lambda\\) is cocompact. A Fourier criterion on \\(\\mathbb T^d\\) gives IC-rigidity for suitable matrix-valued polynomial actions. The precise correlation criterion and polynomial conditions: Not specified in the abstract.",
+        "methods": [
+          "Pair-correlation criterion",
+          "Fourier-analytic criterion for torus actions"
+        ],
+        "context": "Topological semigroup actions, homogeneous spaces and invariant random compacts.",
+        "keywords": [
+          "Glasner property",
+          "IC-rigidity",
+          "invariant random compacts",
+          "homogeneous actions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20862",
+        "versioned_id": "2611.20862v1",
+        "title": "Unconditionally Positive Nonstandard Finite Difference Schemes for $p$-Laplacian Reaction--Diffusion Equations",
+        "authors": [
+          "Achraf Zinihi",
+          "Matthias Ehrhardt",
+          "Moulay Rchid Sidi Ammi"
+        ],
+        "abstract": "We propose a conservative, semi-implicit nonstandard finite difference scheme for the reaction--diffusion equation $u_t=\\lambda(|u_x|^{p-2}u_x)_x+f(u)$, $p>1$, where, as is customary, the $p$-Laplacian is regularized by a parameter $\\eps>0$. The scheme combines a denominator function, a lagged diffusion coefficient, and a nonlocal treatment of the loss part of the reaction. For every time step and mesh size we prove that the scheme is well posed and positive, that it preserves an invariant region $[0,K]$ whenever the reaction admits one, and that it reproduces every constant equilibrium exactly. Without reaction, it conserves mass, satisfies a discrete maximum principle, and, for $1<p\\le 2$, decreases a discrete energy. An example shows that the energy may increase for $p>2$. The truncation error is $O(k+h^2)$ at interior nodes. Numerical tests confirm first order in time and second order in space, and show that the scheme remains positive and bounded for step sizes at which the explicit method breaks down.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "cs.NA",
+          "math.NA"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20862",
+        "pdf_url": "https://arxiv.org/pdf/2611.20862"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is positivity-preserving numerical discretization of reaction-diffusion equations without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20966",
+        "versioned_id": "2611.20966v1",
+        "title": "Finite-order exponential mixing does not imply the central limit theorem for unique equilibrium states",
+        "authors": [
+          "Matheus M Castro"
+        ],
+        "abstract": "Let $M$ be a compact smooth manifold of dimension at least three, $\\varphi:M\\to\\mathbb R$ be continuous, and $R\\ge2$ be an integer. We construct a $\\mathcal C^\\infty$ diffeomorphism $T:M\\to M$ and an observable $f\\in\\mathcal C^\\infty(M,\\mathbb R)$ such that $(T,\\varphi)$ has a unique equilibrium state $\\mu$ and $\\mu(f)=0$. The system $(T,\\mu)$ is exponentially mixing of order $R$ but not of order $R+1$ for H\\\"older observables, and $n^{-1/2}\\sum_{i=0}^{n-1}f\\circ T^i$ does not satisfy the central limit theorem. The main results have been formalised in Lean 4.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20966",
+        "pdf_url": "https://arxiv.org/pdf/2611.20966"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Unique equilibrium states and mixing-order obstructions to limit laws directly concern thermodynamic formalism and ergodic theory.",
+        "tldr": "Unique equilibrium states can be exponentially mixing to any prescribed finite order while failing the central limit theorem.",
+        "problem": "Determine whether finite-order exponential mixing of a unique equilibrium state forces a central limit theorem.",
+        "main_result": "For any compact smooth manifold \\(M\\) of dimension at least three, continuous potential \\(\\varphi:M\\to\\mathbb R\\), and integer \\(R\\geq2\\), the author constructs a smooth diffeomorphism \\(T\\) and smooth real observable \\(f\\) with a unique equilibrium state \\(\\mu\\) and \\(\\mu(f)=0\\). The system is exponentially mixing of order \\(R\\), but not order \\(R+1\\), for Hölder observables, while \\(n^{-1/2}\\sum_{i=0}^{n-1}f\\circ T^i\\) fails the central limit theorem. The abstract reports formalization of the main results in Lean 4. The construction and proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Lean 4 formalization, as reported in the abstract"
+        ],
+        "context": "Equilibrium states, multiple mixing and statistical limit theorems.",
+        "keywords": [
+          "equilibrium states",
+          "exponential mixing",
+          "central limit theorem",
+          "finite mixing order"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.21008",
+        "versioned_id": "2611.21008v1",
+        "title": "The Odd Shift is not sofic in dimensions $d \\ge 3$",
+        "authors": [
+          "Nikita Gladkov",
+          "Ivan Mitrofanov"
+        ],
+        "abstract": "In this paper, we prove that the Odd Shift $S_{odd}$ is not sofic for dimensions $d \\ge 3$. Our proof uses lower bounds from communication complexity, specifically the result of Raz and Spieker on the nondeterministic communication complexity for the connectivity problem. We also prove that $S_{odd}$ is not sofic for dimension $d=2$ under the assumption we call Mute Ocean.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.21008",
+        "pdf_url": "https://arxiv.org/pdf/2611.21008"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Soficity of multidimensional shifts is a central symbolic-dynamics question.",
+        "tldr": "The Odd Shift is nonsofic in dimensions at least three; dimension two is conditional on the stated Mute Ocean assumption.",
+        "problem": "Determine soficity of the multidimensional Odd Shift.",
+        "main_result": "The authors prove that \\(S_{odd}\\) is not sofic for \\(d\\geq3\\), using communication-complexity lower bounds. They also prove nonsoficity for \\(d=2\\) under an assumption named Mute Ocean. The formulation of that assumption: Not specified in the abstract.",
+        "methods": [
+          "Communication-complexity lower bounds",
+          "Raz-Spieker result on nondeterministic communication complexity of connectivity"
+        ],
+        "context": "Multidimensional symbolic dynamics and sofic shifts.",
+        "keywords": [
+          "Odd Shift",
+          "nonsoficity",
+          "multidimensional shifts",
+          "communication complexity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.21133",
+        "versioned_id": "2611.21133v1",
+        "title": "Polynomial growth and dynamic asymptotic dimension",
+        "authors": [
+          "Are Austad",
+          "Christian B\\\"onicke"
+        ],
+        "abstract": "We show that principal ample groupoids with local polynomial growth of degree at most $s$ have dynamic asymptotic dimension at most $\\lfloor s\\rfloor$. As a consequence, $\\sigma$-compact principal ample groupoids with local polynomial growth have slow dynamic asymptotic dimension growth.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.OA"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.21133",
+        "pdf_url": "https://arxiv.org/pdf/2611.21133"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Dynamic asymptotic dimension directly matches dynamical dimension invariants and groupoid dynamics.",
+        "tldr": "Local polynomial growth bounds dynamic asymptotic dimension for principal ample groupoids.",
+        "problem": "Relate local groupoid growth to dynamic asymptotic dimension.",
+        "main_result": "Principal ample groupoids with local polynomial growth of degree at most \\(s\\) have dynamic asymptotic dimension at most \\(\\lfloor s\\rfloor\\). Consequently, \\(\\sigma\\)-compact principal ample groupoids with local polynomial growth have slow dynamic asymptotic dimension growth. The proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Groupoid growth and dynamical dimension invariants.",
+        "keywords": [
+          "dynamic asymptotic dimension",
+          "ample groupoids",
+          "polynomial growth",
+          "principal groupoids"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.21420",
+        "versioned_id": "2611.21420v1",
+        "title": "Siphon faces in slow-fast mass-action networks",
+        "authors": [
+          "Miruna-Mihaela Beldiman",
+          "Andrei-Dan Halanay"
+        ],
+        "abstract": "When the species of a siphon in a mass-action network, however many, are fast and their invariant face loses transverse stability along the slow flow, trajectories follow the face past this loss before leaving it. We study three consequences. (i) If the transverse Metzler linearisation is irreducible, the entry-exit relation with its Perron root gives the exit. Under acyclic feeding between its strongly connected components, a max-plus recursion over the reactions gives it; in general neither the Perron root nor the diagonal blocks do. (ii) With one slow species, acyclic feeding and a transversal exit, a fold of the interior critical manifold followed by a drop onto the face gives a unique, exponentially attracting relaxation oscillation whose turning points tend to the fold and exit point. Exactly $3474$ minimal planar networks of molecularity $\\leq 3$, with fast per-capita rate affine and decreasing in the slow species, meet our sufficient conditions for it. (iii) A siphon-breaking reaction of rate $\\delta$ and finite min-plus breaking order $w$ unfolds the transcritical point into a fold if a Perron-weighted second-order self-interaction is positive, and not if negative; the fold's critical component lies at distance of order $\\delta^{w/2}$ from the face. For $\\delta=e^{-\\mu/^Karepsilon}$ the broken face is a floor at $-\\mu$ in the recursion, and planar cycles leave it between the entry-exit and transcritical points, depending on $\\mu$. Simulations confirm predicted exits and cycles, including cyclic feeding, where the prediction is conjectural, and high-precision computations confirm the folds; the errors shrink as $^Karepsilon$ or $\\delta$ decreases.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.21420",
+        "pdf_url": "https://arxiv.org/pdf/2611.21420"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is slow-fast mass-action mechanisms and relaxation cycles without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.21499",
+        "versioned_id": "2611.21499v1",
+        "title": "Cantor Julia sets of positive area in non-autonomous dynamics",
+        "authors": [
+          "Lubashan Pathirana"
+        ],
+        "abstract": "For every $a>0$, we prove the existence of a sequence of polynomials with rational coefficients whose non-autonomous iteration produces a Julia set of planar area $a$. We also construct a sequence of rational maps with rational coefficients whose Julia set has the same prescribed area. No individual map in this rational sequence is M\\\"obius-conjugate to a polynomial, and no choice of M\\\"obius coordinates at successive phases turns it into a polynomial sequence. In both cases, for every $n\\geq1$, the Julia set obtained by starting the iteration at the $n$-th map, called the phase-$n$ Julia set, is a Cantor set and meets every neighborhood of each of its points in positive planar area. For every $A\\in(0,1)$, we construct two sequences of quadratic polynomials, each with $\\infty$ in every phase Julia set and with first phase Julia set of normalized spherical area $A$. In one sequence, every phase Julia set is a Cantor set of locally positive spherical area. In the other, every phase Julia set has countably infinitely many connected components and equals the closure of its interior. Both sequences admit invariant measurable line fields whose essential supports are the corresponding phase Julia sets. Finally, for every $d\\in[0,2]$, we construct a sequence of quadratic polynomials for which every phase Julia set is a Cantor set of zero spherical area with local Hausdorff dimension $d$ at each of its points.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.21499",
+        "pdf_url": "https://arxiv.org/pdf/2611.21499"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Prescribed Julia-set area, Cantor topology and local Hausdorff dimension directly match fractal geometry in dynamics.",
+        "tldr": "Non-autonomous polynomial and rational sequences realize prescribed positive Julia-set areas and zero-area Cantor sets with arbitrary local dimension in the stated range.",
+        "problem": "Construct non-autonomous Julia sets with controlled measure, topology and local Hausdorff dimension.",
+        "main_result": "For every \\(a>0\\), polynomial sequences with rational coefficients and rational-map sequences with rational coefficients realize first-phase Julia sets of planar area \\(a\\); every phase Julia set is Cantor and locally has positive planar area. The rational sequence cannot be changed into a polynomial sequence by phase-dependent Möbius coordinates, and none of its individual maps is Möbius-conjugate to a polynomial. For each \\(A\\in(0,1)\\), two quadratic sequences have first-phase normalized spherical area \\(A\\) and infinity in every phase Julia set: one has locally positive-area Cantor phase sets, the other countably infinitely many components and phase sets equal to their interior closures. Both admit invariant measurable line fields with the corresponding essential supports. Finally, every \\(d\\in[0,2]\\) is realized as the local Hausdorff dimension at every point of every phase Julia set of a quadratic sequence, with Cantor phase sets and zero spherical area.",
+        "methods": [
+          "Constructions of non-autonomous polynomial and rational-map sequences"
+        ],
+        "context": "Non-autonomous complex dynamics, Julia-set measure and fractal dimension.",
+        "keywords": [
+          "Cantor Julia sets",
+          "prescribed area",
+          "local Hausdorff dimension",
+          "non-autonomous iteration"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.21556",
+        "versioned_id": "2611.21556v1",
+        "title": "Random compositions of quasiperiodic cocycles",
+        "authors": [
+          "Ao Cai",
+          "Pedro Duarte",
+          "Silvius Klein"
+        ],
+        "abstract": "We consider the multiplicative process given by random compositions of linear cocycles over toral translations. Under appropriate generic assumptions, we establish effective large deviations estimates as well as the H\\\"older continuity of the associated Lyapunov exponent of the process. These properties in particular show the regularizing effect of randomness on quasiperiodic dynamics. The novelty of our approach allows for the study of such properties notwithstanding the lack of a spectral gap for the corresponding transition operator.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.21556",
+        "pdf_url": "https://arxiv.org/pdf/2611.21556"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Lyapunov regularity and large deviations for cocycles provide a related connection to ergodic and quasiperiodic dynamics.",
+        "tldr": "Random compositions of quasiperiodic cocycles have effective large deviations and Hölder-continuous Lyapunov exponents under unspecified generic assumptions.",
+        "problem": "Understand regularity and fluctuations of multiplicative processes built from random cocycle compositions.",
+        "main_result": "For random compositions of linear cocycles over toral translations, appropriate generic assumptions yield effective large-deviation estimates and Hölder continuity of the associated Lyapunov exponent. The approach works despite the absence of a spectral gap for the transition operator. The generic assumptions, quantitative estimates and proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Random and quasiperiodic cocycles, Lyapunov exponents and large deviations.",
+        "keywords": [
+          "random cocycles",
+          "Lyapunov exponents",
+          "large deviations",
+          "Hölder continuity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19378",
+        "versioned_id": "2611.19378v1",
+        "title": "Lower bounds for the Kolmogorov widths of global attractors of dissipative systems",
+        "authors": [
+          "Arthur Sinai"
+        ],
+        "abstract": "We introduce the notion of a strengthening set in a Hilbert space and prove an exponential lower bound for its Kolmogorov widths. For compact sets containing the origin, the strengthening property is equivalent to the existence of such a bound. As an application, we obtain an exact formula for the widths of the global attractor of a diagonal dissipative system.",
+        "announce_type": "cross",
+        "categories": [
+          "math.FA",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19378",
+        "pdf_url": "https://arxiv.org/pdf/2611.19378"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Widths of compact attractors offer a plausible connection to geometric complexity, although no fractal-dimension theorem is stated.",
+        "tldr": "Strengthening sets have exponential lower bounds for Kolmogorov widths, with an exact attractor-width application.",
+        "problem": "Identify geometric conditions guaranteeing lower bounds for Kolmogorov widths of compact sets.",
+        "main_result": "The author introduces strengthening sets in Hilbert space and proves an exponential lower bound for their Kolmogorov widths. For compact sets containing the origin, the strengthening property is equivalent to the existence of such a bound. An application gives an exact width formula for the global attractor of a diagonal dissipative system. The definition, lower bound and exact formula: Not specified in the abstract.",
+        "methods": [
+          "Strengthening-set criterion"
+        ],
+        "context": "Approximation geometry of compact sets and dissipative global attractors.",
+        "keywords": [
+          "Kolmogorov widths",
+          "global attractors",
+          "strengthening sets",
+          "Hilbert space"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19571",
+        "versioned_id": "2611.19571v1",
+        "title": "Orbital graph structure of alternating full groups and simple torsion amenable groups of exponential growth",
+        "authors": [
+          "Yitong Zhang"
+        ],
+        "abstract": "We develop a framework for constructing simple alternating full groups A(G, X), associated with finite fragmentations of minimal expansive dihedral Cantor actions, with controlled orbital-graph codings and purely non-Hausdorff singularities. We also prove that positive entropy of a naturally labeled admissible orbital line forces exponential word growth of the acting group. As an application, we construct continuum many pairwise abstractly nonisomorphic, finitely generated, infinite, simple, torsion, amenable groups of exponential word growth. They arise as alternating full groups of fragmented minimal expansive dihedral Cantor actions with linearly repetitive generic regular orbital graphs and purely non-Hausdorff singularities. Under the same minimality, expansivity, linear repetitivity and singularity assumptions, if every finite clopen coding is determined by a bounded fragmentation window, the alternating full group has intermediate word growth.",
+        "announce_type": "cross",
+        "categories": [
+          "math.GR",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19571",
+        "pdf_url": "https://arxiv.org/pdf/2611.19571"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Cantor actions, entropy, orbital coding and amenability directly match the strongest group-action and symbolic interests.",
+        "tldr": "Controlled fragmented Cantor actions yield continuum many simple torsion amenable groups of exponential word growth.",
+        "problem": "Relate orbital-graph coding and entropy to growth of alternating full groups.",
+        "main_result": "The author develops alternating full groups of finite fragmentations of minimal expansive dihedral Cantor actions with controlled orbital codings and purely non-Hausdorff singularities. Positive entropy of a naturally labelled admissible orbital line forces exponential word growth. The construction gives continuum many pairwise abstractly nonisomorphic finitely generated infinite simple torsion amenable groups of exponential growth, with linearly repetitive generic regular orbital graphs. Under the same minimality, expansivity, linear repetitivity and singularity assumptions, the additional condition that every finite clopen coding be determined by a bounded fragmentation window yields intermediate word growth.",
+        "methods": [
+          "Finite fragmentations of dihedral Cantor actions",
+          "Orbital-graph codings",
+          "Alternating full-group constructions"
+        ],
+        "context": "Cantor group actions, symbolic entropy and amenable group growth.",
+        "keywords": [
+          "alternating full groups",
+          "Cantor actions",
+          "entropy",
+          "amenable groups"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19639",
+        "versioned_id": "2611.19639v1",
+        "title": "State-space symmetry in Boolean network ensembles",
+        "authors": [
+          "Yi-Kai Mo",
+          "Kevin E. Bassler"
+        ],
+        "abstract": "Studies of evolving Boolean network systems have found that Boolean functions cluster into equivalence classes with a characteristic frequency distribution - a pattern governed by the Zyklenzeiger symmetry group - but the dynamical origin of this symmetry has remained unexplained. Here we show that it is a consequence of a fundamental symmetry of Boolean network dynamics itself. A Boolean network consists of nodes that update according to Boolean functions of their regulatory inputs; its global dynamics is encoded in a state-space network. We identify the dynamical symmetry group of ensembles of Boolean networks that average over random interaction topologies: for networks with $N$ nodes, it is the $N$-dimensional hyperoctahedral group, generated by node-flips and node-label permutations. These transformations are admissible for every Boolean network regardless of topology; for random-topology ensembles, including all ensembles of fixed in-degree $K<N$, they constitute the complete symmetry group. We also show that input-label permutations constitute a hidden gauge freedom of the dynamics. The Zyklenzeiger symmetry of Boolean functions follows directly from the node-flips of the hyperoctahedral group together with this gauge freedom. Boolean networks related by the hyperoctahedral group have isomorphic state-space networks and form its orbits, and Burnside's lemma gives the number of these orbits for any fixed network topology. It provides a symmetry reduction of the analysis of Boolean network dynamics and explains why the Boolean functions of evolved networks fall into Zyklenzeiger classes, and why these classes split in finite networks.",
+        "announce_type": "cross",
+        "categories": [
+          "cond-mat.stat-mech",
+          "cond-mat.dis-nn",
+          "math.DS",
+          "nlin.AO",
+          "q-bio.MN"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19639",
+        "pdf_url": "https://arxiv.org/pdf/2611.19639"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Symmetry groups, their orbits and finite state-space dynamics directly connect to group-action interests.",
+        "tldr": "The hyperoctahedral group describes complete dynamical symmetry of the stated random-topology Boolean-network ensembles.",
+        "problem": "Explain the dynamical origin of Zyklenzeiger symmetry in Boolean-network function classes.",
+        "main_result": "For random-interaction-topology ensembles of Boolean networks with \\(N\\) nodes, including all fixed-in-degree ensembles with \\(K<N\\), the complete dynamical symmetry group is the \\(N\\)-dimensional hyperoctahedral group generated by node flips and node-label permutations. These transformations are admissible for every Boolean network. Input-label permutations form a hidden gauge freedom; together with node flips they explain Zyklenzeiger symmetry. Networks in the same hyperoctahedral orbit have isomorphic state-space networks, and Burnside lemma counts the stated orbits for fixed network topology.",
+        "methods": [
+          "Node flips and node-label permutations",
+          "Input-label gauge freedom",
+          "Burnside lemma"
+        ],
+        "context": "Finite-state network dynamics, symmetry reduction and group orbits.",
+        "keywords": [
+          "Boolean networks",
+          "hyperoctahedral group",
+          "state-space symmetry",
+          "Burnside lemma"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.19895",
+        "versioned_id": "2611.19895v1",
+        "title": "Diagonal and Fine Tower Dimensions for Minimal Circle Homeomorphisms and Product Actions",
+        "authors": [
+          "Kang Li",
+          "Geng Wang"
+        ],
+        "abstract": "We study minimal circle homeomorphisms and their products with Cantor systems, and show that these actions have diagonal dimension at most two and fine tower dimension at least two. Consequently, diagonal dimension, fine tower dimension, and tower dimension are all equal to two for minimal circle homeomorphisms. We also obtain a strict separation between tower dimension and fine tower dimension on a one-dimensional space.",
+        "announce_type": "cross",
+        "categories": [
+          "math.OA",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.19895",
+        "pdf_url": "https://arxiv.org/pdf/2611.19895"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Tower dimensions and minimal product actions directly match topological dynamical dimension theory.",
+        "tldr": "Minimal circle homeomorphisms have diagonal, fine tower and tower dimensions all equal to two.",
+        "problem": "Compare dynamical dimension invariants for minimal circle homeomorphisms and products with Cantor systems.",
+        "main_result": "Minimal circle homeomorphisms and their products with Cantor systems have diagonal dimension at most two and fine tower dimension at least two. For minimal circle homeomorphisms themselves, diagonal dimension, fine tower dimension and tower dimension all equal two. The authors also obtain a strict separation between tower dimension and fine tower dimension on a one-dimensional space. The separating example and proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Topological dynamics, minimal actions and tower dimension invariants.",
+        "keywords": [
+          "diagonal dimension",
+          "fine tower dimension",
+          "minimal homeomorphisms",
+          "product actions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20256",
+        "versioned_id": "2611.20256v1",
+        "title": "Continuous-Time Stochastic Contraction Induced by Common White Noise",
+        "authors": [
+          "Sunghyun Koo",
+          "Jin Gyu Lee",
+          "Hyungbo Shim"
+        ],
+        "abstract": "This paper studies contraction properties of stochastic dynamical systems governed by It\\^o stochastic differential equations. We consider two trajectories driven by a common noise process and measure their separation using Finsler distances, which encompass Riemannian and norm-induced distances. Two notions of contraction are then investigated: $L^p$-contraction, defined by exponential decay of the $L^p$-norm (or the $p$-th moment) of the distance, and almost sure contraction, defined by exponential decay of the distance along almost every sample path. Each notion is characterized by a differential condition that is necessary and sufficient for contraction under mild hypotheses. Relations between contraction notions and an associated incremental input-to-state stability result are also established. As an illustration, we apply the established theory to analyze noise-induced synchronization and quantify its robustness with respect to parameter perturbations.",
+        "announce_type": "cross",
+        "categories": [
+          "eess.SY",
+          "cs.SY",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20256",
+        "pdf_url": "https://arxiv.org/pdf/2611.20256"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Common-noise contraction and synchronization give a plausible metric and random-dynamics connection, although the focus is stability.",
+        "tldr": "Differential conditions characterize moment and almost-sure contraction for common-noise stochastic trajectories under unspecified mild hypotheses.",
+        "problem": "Characterize contraction of two Itô-system trajectories driven by the same noise using Finsler distances.",
+        "main_result": "The authors give necessary and sufficient differential conditions, under mild hypotheses, for \\(L^p\\)-contraction and almost-sure exponential contraction of common-noise trajectory distances. Finsler distances encompass Riemannian and norm-induced distances. They relate these notions, establish an incremental input-to-state stability result and apply the theory to robustness of noise-induced synchronization under parameter perturbations. The mild hypotheses and differential conditions: Not specified in the abstract.",
+        "methods": [
+          "Differential contraction conditions",
+          "Finsler-distance formulation"
+        ],
+        "context": "Stochastic contraction and common-noise synchronization.",
+        "keywords": [
+          "stochastic contraction",
+          "common noise",
+          "Finsler distances",
+          "synchronization"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20276",
+        "versioned_id": "2611.20276v1",
+        "title": "Medicaid Quality Disparities: Domain-Specific Performance Analysis and Approaches for State-Level Improvement",
+        "authors": [
+          "Daniel Tesfay",
+          "Almaz Abebe"
+        ],
+        "abstract": "Medicaid covers nearly 78 million people, yet care quality varies across states, programs, and clinical domains. Using the 2024 CMS Child and Adult Core Sets (9,781 usable state-measure observations from 11,100 records), this study combined descriptive statistics, benchmark-gap analysis, correlation, and OLS regression to find where shortfalls cluster. Disparities were strongly domain-specific. Maternal and Perinatal Health scored lowest (28.0%), followed by Dental and Oral Health (38.5%) and Behavioral Health (44.4%), while Long-Term Services and Supports (82.8%) and Experience of Care (67.8%) scored highest. State performance correlated strongly with national benchmarks (r = 0.77, approximately), so rates should be read against each measure's benchmark. Domain was the strongest predictor, and the model explained 31.2% of variance. Because of heteroscedasticity and influential observations from mixing bounded and utilization measures, estimates are descriptive. Quality improvement should be targeted by domain, prioritizing maternal health, behavioral health network adequacy, and dental provider participation.",
+        "announce_type": "cross",
+        "categories": [
+          "stat.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20276",
+        "pdf_url": "https://arxiv.org/pdf/2611.20276"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is descriptive health-policy performance analysis rather than dynamical-systems research in the profile.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20344",
+        "versioned_id": "2611.20344v1",
+        "title": "Up or down at every integer: Collatz-type maps of arbitrary sets and the up-down graph",
+        "authors": [
+          "Oleg Vasilyev"
+        ],
+        "abstract": "For a set $S$ of positive integers let $T_S$ send $x$ to $\\lceil 3x/2\\rceil$ if $x\\in S$ and to $\\lceil x/2\\rceil$ otherwise. The odd numbers give the Collatz map, the even numbers give it again after a shift by one, and $S=\\mathbb{N}$ gives Mahler's map $x\\mapsto\\lceil 3x/2\\rceil$. All these maps are subgraphs of the up-down graph $G$, in which every $x$ has the edges $x\\to\\lceil x/2\\rceil$ and $x\\to\\lceil 3x/2\\rceil$, and so are the families of maps in which the direction is forced at some numbers and free at the others. The cycles of the maps are the simple cycles of the subgraph, their divergent orbits are its rays, and all maps of a family are bounded exactly when the subgraph has no ray. We classify the simplest sets and show that density says little: some sets of density one send every orbit to 1, and some periodic sets of arbitrarily small density have increasing orbits. Every positive integer is the least element of a cycle of some map. The critical proportion of steps up is $\\log_3 2$: cycles stay below it, divergent orbits stay above it, and both come arbitrarily close. For sets periodic modulo a power of 2, an effective up-frequency from a finite Markov chain takes the place of the density, and a finite computation can prove that every orbit reaches a cycle. Mahler's Z-number problem is implied by a question about one such map. Finally, we ask how far the Collatz map is from maps whose behaviour can be proved. Finite changes never help. Adding fewer than $\\log_{3/2}N+1$ even numbers below $N$ makes an orbit increase, while removing the odd numbers congruent to 9 or 15 modulo 16, an eighth of all integers, gives a map all of whose orbits provably reach the cycle (1,2); removing 22 residue classes modulo 512, a proportion 0.043, also suffices.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.DM",
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20344",
+        "pdf_url": "https://arxiv.org/pdf/2611.20344"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Orbit graphs, boundedness and cycle structure of arithmetic maps offer a related discrete-dynamics connection.",
+        "tldr": "An up-down graph unifies Collatz-type maps and distinguishes orbit boundedness from density of the defining integer set.",
+        "problem": "Relate cycles, divergent trajectories and up-step frequency across set-defined Collatz-type maps.",
+        "main_result": "The map sends \\(x\\) to \\(\\lceil3x/2\\rceil\\) on a chosen set and to \\(\\lceil x/2\\rceil\\) otherwise. Its cycles and divergent orbits correspond to simple cycles and rays of the associated subgraph, and a family is entirely bounded exactly when its subgraph has no ray. Density alone gives little control: density-one examples send all orbits to one, while periodic sets of arbitrarily small density can have increasing orbits. The critical up-step proportion is \\(\\log_3 2\\); cycles lie below and divergent orbits above, with both approaching the threshold. For sets periodic modulo a power of two, finite Markov-chain frequencies can yield computable boundedness proofs. The author also gives provable modifications of the Collatz map.",
+        "methods": [
+          "Up-down graph representation",
+          "Finite Markov-chain up-frequency",
+          "Finite computation for periodic sets"
+        ],
+        "context": "Arithmetic iteration, orbit graphs and Collatz-type problems.",
+        "keywords": [
+          "Collatz-type maps",
+          "orbit graphs",
+          "cycle structure",
+          "up-step frequency"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20450",
+        "versioned_id": "2611.20450v1",
+        "title": "Physics-informed neural network for model-based global computation of the asymptotic phase of limit-cycle oscillators",
+        "authors": [
+          "Petar Mircheski",
+          "Hiroya Nakao"
+        ],
+        "abstract": "The asymptotic phase is the central object of phase reduction theory for limit-cycle oscillators. It is a scalar coordinate defined throughout the basin of attraction of a limit cycle that advances at a constant natural frequency along every trajectory. Computing the phase from a given mathematical model requires solving a first-order partial differential equation (PDE) over the entire basin, which is challenging due to high computation costs and complex boundary conditions. In this study, we propose a physics-informed neural network to efficiently calculate the asymptotic phase of limit-cycle oscillators. By incorporating three types of loss functions, we train a physics-informed neural network (PINN) to satisfy the governing PDE for the asymptotic phase and the adjoint equation for the phase gradient. The trained network delivers the phase function accurately and, via automatic differentiation, allows the calculation of the phase gradient governing the oscillator's response to perturbations, which enables rapid entrainment closed-loop control using strong inputs. We validate the approach using three types of limit-cycle oscillators and demonstrate that the PINN can facilitate fast and global phase-locking control.",
+        "announce_type": "cross",
+        "categories": [
+          "nlin.AO",
+          "cs.SY",
+          "eess.SY",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20450",
+        "pdf_url": "https://arxiv.org/pdf/2611.20450"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is neural computation and control of oscillator phase without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.20638",
+        "versioned_id": "2611.20638v1",
+        "title": "Convergence rate of periodic homogenization for convex Hamilton--Jacobi equations with super critical viscosity",
+        "authors": [
+          "Gengyu Liu",
+          "Zibo Wang",
+          "Jianlu Zhang"
+        ],
+        "abstract": "This paper is devoted to studying the convergence rate in periodic homogenization of the viscous Hamilton--Jacobi equation (with supercritical viscosity index $\\sigma>1$) \\[ \\partial_t u_\\varepsilon+H(x/\\varepsilon,\\partial_xu_\\varepsilon)=\\varepsilon^\\sigma\\Delta u_\\varepsilon,\\quad (x,t)\\in\\mathbb{R}^n\\times\\mathbb{R}_+,\\ \\] subject to a given initial datum. For Tonelli Hamiltonians $H$, the solution $u_\\varepsilon$ is proved to converge to a certain $u:\\mathbb{R}^n\\times\\mathbb{R}\\rightarrow\\mathbb{R}$ (solving the effective problem) in the optimal rate $O(\\varepsilon^{\\min\\{\\sigma-1,1\\}})$. We also obtain a rate for the case of non-convex Hamiltonians and discussed its optimality therein.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.20638",
+        "pdf_url": "https://arxiv.org/pdf/2611.20638"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is homogenization rates for Hamilton-Jacobi PDEs without an explicit central profile connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.21213",
+        "versioned_id": "2611.21213v1",
+        "title": "A necessary regularity condition for finite-time stopping of the string with dry friction",
+        "authors": [
+          "Alain Haraux (LJLL)"
+        ],
+        "abstract": "We consider the one-dimensional wave equation with dry (Coulomb) friction, u\\_{tt} -u\\_{xx} + Sgn(u\\_t )= 0, with Dirichlet boundary conditions. Whether every finite-energy solution stops in finite time has been open since 1978. We show that stopping in finite time is impossible whenever the initial slope or the initial velocity is unbounded: the space W 1,$\\infty$ x L $\\infty$ for (u, u t ) is invariant under the flow in both time directions, while stopped states are Lipschitz. In particular the answer is negative for general finite-energy data, and the open question is reduced to Lipschitz data.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.21213",
+        "pdf_url": "https://arxiv.org/pdf/2611.21213"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is finite-time stopping and regularity for a frictional wave equation without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.21599",
+        "versioned_id": "2611.21599v1",
+        "title": "Hyperlyve: Parallelized Enumeration and Exact Lyapunov Stability Certification for Deep ReLU Networks",
+        "authors": [
+          "Brian Yarbrough",
+          "Jesse Wayment",
+          "Jingbo Wang",
+          "Philip E. Par\\'{e}",
+          "Shreyas Sundaram"
+        ],
+        "abstract": "We introduce Hyperlyve (Hyperplane Partitioned Lyapunov Verification and Enumeration), a framework for proving the asymptotic stability of nonlinear dynamical systems, including those with neural network controllers. Hyperlyve learns and formally certifies continuous piecewise-affine (CPA) neural Lyapunov functions within a counterexample-guided inductive synthesis (CEGIS) loop. Hyperlyve's key innovation is a parallel algorithm that enumerates the hyperplane arrangement formed by the ReLU activations of deep networks and certifies that Lyapunov conditions hold within each polyhedral region. We derive sound and complete regional tests to verify the asymptotic stability of the exact smooth dynamics (rather than a piecewise-linear approximation) within a compact domain of interest. Furthermore, we formally characterize the computational complexity of the CPA neural Lyapunov verification problem as co-NP-complete, filling a key gap in the literature. Empirical results demonstrate that Hyperlyve enumerates ReLU networks over 150-times faster than competing tools, which contributes to Hyperlyve proving the asymptotic stability of systems that are currently intractable for state-of-the-art verifiers.",
+        "announce_type": "cross",
+        "categories": [
+          "eess.SY",
+          "cs.CG",
+          "cs.LG",
+          "cs.LO",
+          "cs.SY",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.21599",
+        "pdf_url": "https://arxiv.org/pdf/2611.21599"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is computational Lyapunov certification for neural controllers without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2307.13191",
+        "versioned_id": "2307.13191v2",
+        "title": "Almost Sure Averaging for Fast-slow Stochastic Differential Equations via Controlled Rough Path",
+        "authors": [
+          "Bin Pei",
+          "Robert Hesse",
+          "Bjoern Schmalfuss",
+          "Yong Xu"
+        ],
+        "abstract": "This paper establishes the averaging method to a coupled system consisting of two stochastic differential equations which has a slow component driven by fractional Brownian motion (FBM) with less regularity $1/3< H \\leq 1/2$ and a fast dynamics under additive FBM with Hurst-index $1/3< \\hat H \\leq 1/2$. We prove that the solution of the slow component converges almost surely to the solution of the corresponding averaged equation using the approach of time discretization and controlled rough path. To do this, we employ the random dynamical system (RDS) to obtain a stationary solution by an exponentially attracting random fixed point of the RDS generated by the non-Markovian fast component.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.PR",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2307.13191",
+        "pdf_url": "https://arxiv.org/pdf/2307.13191"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Stationary random fixed points and almost-sure averaging provide a related random-dynamics connection.",
+        "tldr": "Controlled rough paths and time discretization yield almost-sure averaging for the stated fractional-Brownian fast-slow system.",
+        "problem": "Prove averaging for coupled non-Markovian fast-slow stochastic differential equations with rough driving signals.",
+        "main_result": "The slow component is driven by fractional Brownian motion with \\(1/3<H\\leq1/2\\), and the fast component has additive fractional Brownian noise with \\(1/3<\\hat H\\leq1/2\\). The slow solution converges almost surely to the averaged solution. The authors obtain a stationary fast solution through an exponentially attracting random fixed point of its random dynamical system. Additional coefficient assumptions: Not specified in the abstract.",
+        "methods": [
+          "Time discretization",
+          "Controlled rough paths",
+          "Random dynamical systems and exponentially attracting random fixed points"
+        ],
+        "context": "Random dynamical systems, rough stochastic equations and averaging.",
+        "keywords": [
+          "almost-sure averaging",
+          "fractional Brownian motion",
+          "controlled rough paths",
+          "random fixed points"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2501.12763",
+        "versioned_id": "2501.12763v2",
+        "title": "On a Problem of Kac concerning Anisotropic Lacunary Sums",
+        "authors": [
+          "Lorenz Fruehwirth",
+          "Manuel Hauke-Treuer"
+        ],
+        "abstract": "Given a sequence of integers $(n_k)_{k \\in \\mathbb{N}}$ satisfying $\\liminf_{k \\rightarrow \\infty}\\frac{n_{k+1}}{n_k} \\ge q > 1$, a scheme of real-valued weights $(c_{k,N})_{k \\leq N}$, and a function $f: \\mathbb{T} = \\mathbb{R}/\\mathbb{Z} \\to \\mathbb{R}$, it is a classical problem to determine whether \\[ S_N(x):=\\frac{\\sum_{k=1}^N c_{k,N} f(n_k x)}{ \\sqrt{\\sum_{k=1}^N c_{k,N}^2}} \\] converges to a normal distribution as $N \\rightarrow \\infty$. This question can be traced back to early works of Kac and Erd\\H{o}s and has since then been investigated. It is well known that the asymptotic behavior of $S_N$ is determined not only by the analytic properties of $f$, but also by the arithmetic properties of the sequence $(n_k)_{k \\in \\mathbb{N}}$ and by the subtle interaction between the two. In this article, we identify conditions on $(n_k)_{k \\in \\mathbb{N}}$, $f$ and $(c_{k,N})_{k \\leq N}$ that can be regarded as minimal for a central limit theorem to hold for $S_N$. This addresses a question raised by Mark Kac [Ann. of Math., 1946].",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.PR",
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2501.12763",
+        "pdf_url": "https://arxiv.org/pdf/2501.12763"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Statistical limit laws for lacunary toral evaluations give a related ergodic and arithmetic-dynamics connection.",
+        "tldr": "The authors identify conditions described as minimal for a central limit theorem for anisotropically weighted lacunary sums.",
+        "problem": "Determine when normalized weighted sums of function evaluations along lacunary integer frequencies converge normally.",
+        "main_result": "For integer frequencies with \\(\\liminf_{k\\to\\infty}n_{k+1}/n_k\\geq q>1\\), real weights \\(c_{k,N}\\), and a real function on \\(\\mathbb T\\), the authors identify conditions on all three inputs for a central limit theorem for the weighted sums normalized by the square root of the sum of squared weights. They describe these conditions as minimal and as addressing Kac question. The actual conditions and proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Lacunary sums, arithmetic frequency structure and statistical limit theorems.",
+        "keywords": [
+          "lacunary sums",
+          "central limit theorem",
+          "anisotropic weights",
+          "toral functions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2510.04419",
+        "versioned_id": "2510.04419v3",
+        "title": "Non-algebraicity of non-abundant foliations and abundance for adjoint foliated structures",
+        "authors": [
+          "Jihao Liu",
+          "Zheng Xu"
+        ],
+        "abstract": "Assuming the abundance conjecture in dimension $d$, we establish a non-algebraicity criterion of foliations: any log canonical foliation of rank $\\le d$ with $\\nu\\neq\\kappa$ is not algebraically integrable, answering question of Ambro--Cascini--Shokurov--Spicer. Under the same hypothesis, we prove abundance for klt algebraically integrable adjoint foliated structures of dimension $\\le d$ and show the existence of good minimal models or Mori fiber spaces. In particular, when $d=3$, all these results hold unconditionally. Using similar arguments, we solve a problem proposed by Lu and Wu on abundance of surface adjoint foliated structures that are not necessarily algebraically integrable.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.AG",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2510.04419",
+        "pdf_url": "https://arxiv.org/pdf/2510.04419"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is algebraic abundance and integrability of foliations without an explicit entropy, symbolic or fractal-dimension connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2603.15346",
+        "versioned_id": "2603.15346v2",
+        "title": "A superposition approach for the ISS Lyapunov-Krasovskii theorem with pointwise dissipation",
+        "authors": [
+          "Andrii Mironchenko",
+          "Fabian Wirth",
+          "Antoine Chaillet",
+          "Lucas Brivadis"
+        ],
+        "abstract": "For nonlinear time-delay systems, we show that the existence of a Lyapunov-Krasovskii functional (LKF) with pointwise dissipation (i.e., dissipation in terms of the current solution norm) suffices for input-to-state stability, provided that uniform global stability can also be ensured using the same LKF. To this end, we employ elements of a recently developed stability theory in which the behavior of solutions is not assessed through the classical norm but rather through a specific LKF. As a consequence of our results, we obtain a strengthening and extension of the classical Lyapunov-Krasovskii theorem for undisturbed systems to systems with uniformly bounded disturbances. We discuss the advantages of our approach by means of an example.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.OC",
+          "cs.SY",
+          "eess.SY",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2603.15346",
+        "pdf_url": "https://arxiv.org/pdf/2603.15346"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is input-to-state stability of delay systems without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2604.26280",
+        "versioned_id": "2604.26280v3",
+        "title": "Structure-Aware Tensorial Model Reduction",
+        "authors": [
+          "Arjun Vijaywargiya",
+          "Eric C. Cyr",
+          "Anthony Gruber"
+        ],
+        "abstract": "This work investigates a two-stage method for constructing projection-based reduced-order models (ROMs) of parameterized partial differential equations (PDEs). Based on established tensorial ROM methodology, the proposed approach reduces dimensionality offline by encoding solution snapshots using a multi-linear Tucker factorization, so that a reduced basis which varies nonlinearly with PDE parameters can be rapidly constructed online and used in a Galerkin ROM. Two novel extensions of this strategy, tailored to the cases of structured PDEs and sparse parameter sampling, are presented: the construction of reduced bases orthonormalized with respect to a general discrete inner product, and the interpolation of encoded states via radial basis functions. Basic representation and ROM error estimates are presented demonstrating the validity of these modifications, and the approach is challenged on state-linear examples where monolithic-basis ROMs are known to struggle, including a realistic instance of Maxwell's equations in 3D. Results suggest that the proposed nonlinear basis ROM can effectively mitigate linear restrictions on Kolmogorov $n$-width while improving upon previous tensorial ROM technology, particularly in the highly nonlinear and data-limited regimes characteristic of practical use cases.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NA",
+          "cs.NA",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2604.26280",
+        "pdf_url": "https://arxiv.org/pdf/2604.26280"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is numerical tensorial PDE model reduction without a central dynamical-dimension theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2606.30289",
+        "versioned_id": "2606.30289v2",
+        "title": "Structural functional identifiability and model discovery in differential equation models",
+        "authors": [
+          "Torkel E Loman",
+          "Alexander P Browning",
+          "Ruth E Baker"
+        ],
+        "abstract": "Differential equation models are widely used to describe, interpret, and predict dynamical phenomena across science and engineering. In practice, however, the governing dynamics are rarely fully known and must be inferred from observational data. Traditionally, inverse problems in differential equation modelling have focused on estimating unknown parameter values. In this setting, structural identifiability determines whether parameter values can, in principle, be uniquely recovered from ideal observations and is, therefore, a prerequisite for meaningful inference. More recently, the integration of machine learning with mechanistic modelling has enabled the discovery of unknown equations, functions, and constitutive relationships, substantially expanding the space of admissible models. This raises a fundamental question: under what conditions can unknown functional components be uniquely recovered from data? In this paper, we generalise the classical notion of structural parameter identifiability to functional identifiability. We first identify broad classes of models for which unique functional recovery is impossible. We then show how functional identifiability can be assessed for differential equation models using differential algebra-based techniques which are well-established as a means of assessing structural identifiability for ordinary differential equation models. Our framework reveals new phenomena that arise in the transition from parametric to function inference and have no analogue in the classical setting. Finally, we characterise functional identifiability in several common model classes. Taken together, our results demonstrate that functional identifiability provides a theoretical foundation for modern inverse problems in differential equation modelling, particularly those that use machine learning representations of unknown system components.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.ST",
+          "math.DS",
+          "stat.TH"
+        ],
+        "announced_at": "2026-11-17T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2606.30289",
+        "pdf_url": "https://arxiv.org/pdf/2606.30289"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is functional identifiability in equation-model inference without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 20,
+    "RELATED / POSSIBLY INTERESTING": 12,
+    "LOW PRIORITY": 18
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-11-17T10:58:03.802907Z",
+      "feed_published_at": "2026-11-17T00:00:00-05:00",
+      "feed_build_at": "2026-11-17T08:27:24Z",
+      "feed_date": "2026-11-17",
+      "sha256": "dc7f0720cd096eb747fc6ed260a473ae2f6993596b5e757f1a2c8d702b7b629b",
+      "byte_length": 125872,
+      "capture_run_url": null
+    }
+  ]
+}
