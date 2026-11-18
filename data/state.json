@@ -9012,10 +9012,190 @@
       "versioned_id": "2606.30289v2",
       "announce_type": "replace-cross",
       "analysis_status": "ok"
+    },
+    "2611.21818": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.21818v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2611.22018": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.22018v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2611.22204": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.22204v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2611.22364": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.22364v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2611.22390": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.22390v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2611.22451": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.22451v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2611.22918": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.22918v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2611.23033": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.23033v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2611.23117": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.23117v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2611.23195": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.23195v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2611.23230": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.23230v1",
+      "announce_type": "new",
+      "analysis_status": "ok"
+    },
+    "2611.21656": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.21656v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2611.21983": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.21983v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2611.22034": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.22034v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2611.22145": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.22145v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2611.22249": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.22249v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2611.22340": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.22340v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2611.22365": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.22365v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2611.22703": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.22703v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2611.22710": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.22710v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2611.22957": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.22957v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "2611.23176": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2611.23176v1",
+      "announce_type": "cross",
+      "analysis_status": "ok"
+    },
+    "1912.05893": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "1912.05893v3",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2407.01602": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2407.01602v3",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2509.17045": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2509.17045v2",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2511.06655": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2511.06655v3",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2512.11357": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2512.11357v3",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2602.08478": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2602.08478v2",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2603.04096": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2603.04096v4",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
+    },
+    "2606.16259": {
+      "first_seen_report": "2026-11-18",
+      "versioned_id": "2606.16259v2",
+      "announce_type": "replace-cross",
+      "analysis_status": "ok"
     }
   },
-  "last_feed_build": "2026-11-17T08:27:24+00:00",
-  "updated_at": "2026-11-17T11:02:10.597577+00:00",
+  "last_feed_build": "2026-11-18T05:02:40+00:00",
+  "updated_at": "2026-11-18T11:07:43.576705+00:00",
   "processed_inputs": {
     "2026-09-15/c2ead384a44e73215e6b26a60449e1dc3fbca5cfc22a4cfeea11a9ac47ae2441": {
       "report_date": "2026-09-15",
@@ -9200,6 +9380,10 @@
     "2026-11-17/dc7f0720cd096eb747fc6ed260a473ae2f6993596b5e757f1a2c8d702b7b629b": {
       "report_date": "2026-11-17",
       "sha256": "dc7f0720cd096eb747fc6ed260a473ae2f6993596b5e757f1a2c8d702b7b629b"
+    },
+    "2026-11-18/6be1f1c37c7be56d2f5b31b7af8e79907d977c999dc52ef962b045f71c555788": {
+      "report_date": "2026-11-18",
+      "sha256": "6be1f1c37c7be56d2f5b31b7af8e79907d977c999dc52ef962b045f71c555788"
     }
   }
 }

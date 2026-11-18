@@ -1,0 +1,1235 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-11-18",
+  "generated_at": "2026-11-18T11:07:53.586688Z",
+  "feed_build_at": "2026-11-18T05:02:40Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 30 unseen announcements: 9 HIGH PRIORITY, 9 RELATED / POSSIBLY INTERESTING, and 12 LOW PRIORITY. Central themes include mean dimension and conditional entropy, multifractal regularity, group cellular automata, semigroup largeness, Julia-set geometry and symbolic Gibbs dynamics. Related entries concern analytic foliations, invariant tori and slow manifolds, action spectra, spectral gaps and arithmetic iteration. One paper matches both followed authors, Ruxi Shi and Masaki Tsukamoto, and receives a full HIGH PRIORITY entry; conditional and computer-assisted claims retain their stated qualifications.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2611.21818",
+        "versioned_id": "2611.21818v1",
+        "title": "Hill's Lunar Equation as a Leaf: Riccati Reduction and Frobenius Theory for Second-Order PDEs",
+        "authors": [
+          "V\\'ictor Le\\'on",
+          "Bruno Sc\\'ardua"
+        ],
+        "abstract": "The equations of Hill and Adams for the lunar perigee and node, Mathieu's equation and Lam\\'e's equation arise as leafwise restrictions of one class of linear partial differential equations, the \\emph{square-type foliated equations} $L^2u+A\\,Lu+B\\,u=0$, where $L$ is an analytic vector field and $A,B$ are analytic functions. Such an equation has a regular singularity exactly when the foliation defined by $L$ is analytically linearizable. At rational saddles, where every point of the indicial conic is resonant, we obtain convergent solutions whose exponents are holomorphic functions of a first integral; their variation describes the monodromy along the leaves and decides when classical Frobenius solutions exist. For a Hill equation, the characteristic exponent becomes the value of such a holomorphic function, given by a convergent series. This yields rigorous computer-assisted proofs of Hill's constant for the motion of the lunar perigee and of Adams' constant for the motion of the node: Hill's value is confirmed within his own error estimate and its fifteenth decimal is determined, his value of the motion of the perigee is shown to be correct in all its digits, and Adams' value is confirmed to twelve decimals. For Mathieu's equation, the curves of constant characteristic exponent that govern ion trapping appear as classical Frobenius loci. For Lam\\'e's equation, we prove a product formula for the logarithmic obstructions, which coincide with the leading coefficients of the eigenvalue splittings computed by Volkmer and whose vanishing reflects the finite-gap property.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.21818",
+        "pdf_url": "https://arxiv.org/pdf/2611.21818"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Leafwise dynamics, analytic linearization and monodromy provide a related connection to foliation dynamics, although the main focus is analytic equations.",
+        "tldr": "A foliated PDE framework unifies the stated classical equations and yields analytic and computer-assisted consequences.",
+        "problem": "Relate square-type foliated equations, regular singularities and leafwise characteristic exponents.",
+        "main_result": "The authors study \\(L^2u+A\\,Lu+B\\,u=0\\) with analytic vector field \\(L\\) and analytic functions \\(A,B\\). Regular singularity is equivalent to analytic linearizability of the foliation. At rational saddles they construct convergent solutions with exponents holomorphic in a first integral, describing leafwise monodromy and classical Frobenius loci. Applications rigorously confirm the stated Hill and Adams constants, determine Hill fifteenth decimal, and confirm Adams value to twelve decimals. For Lamé equation, a product formula for logarithmic obstructions matches the stated eigenvalue-splitting coefficients and relates their vanishing to the finite-gap property.",
+        "methods": [
+          "Frobenius theory",
+          "Holomorphic characteristic exponents",
+          "Rigorous computer-assisted proofs"
+        ],
+        "context": "Analytic foliations, monodromy and classical differential equations.",
+        "keywords": [
+          "foliated equations",
+          "analytic linearization",
+          "Frobenius solutions",
+          "monodromy"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.22018",
+        "versioned_id": "2611.22018v1",
+        "title": "Structural functional identifiability of unknown differential equation observation maps",
+        "authors": [
+          "Torkel E Loman",
+          "Alexander P Browning",
+          "Ruth E Baker"
+        ],
+        "abstract": "In many differential equation models of real-world systems, the mechanistic structure of the dynamics is known, but the map from the dynamics to the observations is not. This is potentially problematic, as it can prevent us from e.g. learning model parameter values from data. Examples where this occurs include measuring a fluorescent marker as a proxy for the dynamics of a cellular circuit, and using wastewater measurements to follow the development of an epidemic. The nascent field of hybrid modelling, in which machine learning components (like neural networks) are embedded within mechanistic models, provides the tools to learn such maps. Here, the system's dynamics keep their mechanistic form, while a neural network represents the unknown observation map and is trained alongside any unknown core system parameters. This raises a question of identifiability: when can the true observation map be learnt, and when does one simply learn some map that transforms the dynamics into the available data? Building on previous work, we show how structural functional identifiability analysis can establish whether a model's unknown observation maps and core system parameters are identifiable, i.e. can be uniquely learnt from data. We both prove general results on when models with unknown observation maps are, and are not, identifiable, and demonstrate a general methodology (based on differential algebra) for assessing the identifiability of such models. This paves the way for applying classic differential equation workflows to the many real-world systems that contain such unknown maps.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.22018",
+        "pdf_url": "https://arxiv.org/pdf/2611.22018"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is identifiability of unknown observation maps in differential-equation inference without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.22204",
+        "versioned_id": "2611.22204v1",
+        "title": "Flocking Time and Graph Volume in Nonlinear Cucker-Smale Models with Dynamic Networks",
+        "authors": [
+          "Sooyeon Song",
+          "Jea-Hyun Park"
+        ],
+        "abstract": "This study proposes a Cucker-Smale model incorporating dynamic networks and the discrete $p$-Laplacian ($p \\in (1,2)$) and analyzes the relationship between flocking time constraints and graph connectivity from both theoretical and experimental perspectives. We establish that this model achieves flocking within finite time and derive a quantitative relationship between the lower bound of flocking time and graph volume. Based on these results, we observe that imposing sufficiently small flocking time induces an increase in network volume, and that larger initial velocity variance requires greater volume under the same time constraint. In our experiments, we trained a transformer-based PPO policy to select network structures at each time step. Under the most stringent time constraint, the maximum average number of connections increased sharply, confirming a threshold effect. The negative correlation between convergence time and average number of connections reflects the theoretical results well. This study provides quantitative evidence for the phenomenon that time constraints induce connection mobilization.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "cs.LG",
+          "nlin.AO"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.22204",
+        "pdf_url": "https://arxiv.org/pdf/2611.22204"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is quantitative flocking constraints and learned network selection without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.22364",
+        "versioned_id": "2611.22364v1",
+        "title": "A new premodel for bounded type Siegel disks of some transcendental entire functions",
+        "authors": [
+          "Fei Yang",
+          "Gaofei Zhang",
+          "Yanhua Zhang"
+        ],
+        "abstract": "In the 1980s, Douady and Sullivan conjectured that the Siegel disks of rational maps with degree at least two are Jordan domains. Based on the study of Blaschke models, this conjecture was settled by Zhang under the condition that the Siegel disks are of bounded type, and by Zakeri for a large number of transcendental entire functions under the same condition. The entire functions studied by Zakeri have exactly one finite asymptotic value, which is the center of the fixed Siegel disk. Ch\\'{e}ritat, and later with Epstein, also studied the Siegel disk boundaries of such type transcendental entire functions by developing Ghys-like models. In this paper, by introducing a new premodel, we prove that the fixed bounded type Siegel disk centered at the non-zero point $\\lambda-1$ of $f_\\lambda(z)=e^{1-\\lambda}ze^z$ is a quasi-disk whose boundary contains the critical point $-1$. The asymptotic value $0$ is not contained in the Siegel disk of these entire functions, which is essentially different from the previous results. Moreover, we prove that the Julia sets of these functions with a fixed bounded type Siegel disk are locally connected.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.22364",
+        "pdf_url": "https://arxiv.org/pdf/2611.22364"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Quasi-disks, Siegel boundaries and local connectivity of Julia sets directly concern fractal geometry and topological complex dynamics.",
+        "tldr": "The stated bounded-type Siegel disk is a quasi-disk containing the critical point on its boundary, and the associated Julia sets are locally connected.",
+        "problem": "Describe Siegel-disk boundaries for the specified transcendental entire family when its asymptotic value is outside the disk.",
+        "main_result": "For \\(f_\\lambda(z)=e^{1-\\lambda}ze^z\\) with a fixed bounded-type Siegel disk centered at the nonzero point \\(\\lambda-1\\), a new premodel proves that the disk is a quasi-disk and its boundary contains the critical point \\(-1\\). The asymptotic value \\(0\\) is outside that Siegel disk. The authors also prove local connectivity of Julia sets of these functions with a fixed bounded-type Siegel disk.",
+        "methods": [
+          "New premodel"
+        ],
+        "context": "Transcendental complex dynamics and topology of Siegel and Julia sets.",
+        "keywords": [
+          "Siegel disks",
+          "bounded type",
+          "quasi-disks",
+          "local connectivity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.22390",
+        "versioned_id": "2611.22390v1",
+        "title": "Waist inequality and a Hurewicz-type theorem for mean dimension",
+        "authors": [
+          "Qiang Huo",
+          "Kangbo Ouyang",
+          "Ruxi Shi",
+          "Masaki Tsukamoto"
+        ],
+        "abstract": "We establish a Hurewicz-type inequality relating mean dimension and conditional metric mean dimension. For every equivariant continuous map between dynamical systems, the mean dimension of the domain is bounded above by the sum of the mean dimension of the target and the conditional metric mean dimension of the map. In particular, any equivariant continuous map that decreases mean dimension must have infinite topological conditional entropy. The key ingredient is a new waist inequality, which we believe is of independent geometric interest beyond its application to dynamical systems. Compared with Gromov's original waist inequality, a distinctive feature of this inequality is that it applies to finite simplicial complexes of arbitrary topology, subject only to dimensional restrictions.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.22390",
+        "pdf_url": "https://arxiv.org/pdf/2611.22390"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Followed authors Ruxi Shi and Masaki Tsukamoto require HIGH PRIORITY; the paper also directly addresses mean dimension, metric mean dimension and conditional entropy.",
+        "tldr": "A Hurewicz-type inequality bounds domain mean dimension by target mean dimension plus conditional metric mean dimension.",
+        "problem": "Relate mean dimension across equivariant continuous maps through a geometric waist inequality.",
+        "main_result": "For every equivariant continuous map between dynamical systems, mean dimension of the domain is at most the sum of target mean dimension and conditional metric mean dimension of the map. Consequently, every such map that decreases mean dimension has infinite topological conditional entropy. The key waist inequality applies to finite simplicial complexes of arbitrary topology subject to dimensional restrictions. The precise dimensional restrictions: Not specified in the abstract.",
+        "methods": [
+          "New waist inequality for finite simplicial complexes"
+        ],
+        "context": "Mean dimension, conditional metric mean dimension and geometric waist inequalities.",
+        "keywords": [
+          "mean dimension",
+          "conditional metric mean dimension",
+          "conditional entropy",
+          "waist inequality"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": [
+        "Ruxi Shi",
+        "Masaki Tsukamoto"
+      ]
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.22451",
+        "versioned_id": "2611.22451v1",
+        "title": "Global phase-plane organization of a toxin-mediated plant-herbivore model",
+        "authors": [
+          "Gabriele Grif\\`o"
+        ],
+        "abstract": "Plant-herbivore interactions with chemical plant defence mechanisms can generate complex population dynamics through the nonlinear interplay between resource availability, herbivore pressure, and defence-induced feedbacks. In this work, we investigate the dynamical organization of a plant-herbivore model characterized by a non-monotone functional response accounting for inhibitory effects on grazing activity. In particular, we perform a qualitative and geometric analysis of the associated homogeneous system, characterizing the dynamical regimes supported by the model and the transitions between them. The results reveal the emergence of oscillatory behaviour through a Hopf bifurcation and the occurrence of stable periodic solutions. We further characterize the global phase-plane organization, providing a complete classification of equilibrium configurations and heteroclinic structures supported by the model. In addition, we identify the conditions under which homoclinic connections may occur and discuss their role in shaping the global dynamics. The analysis provides a unified description of the phase-plane organization and highlights how nonlinear defence feedbacks generate qualitatively distinct ecological outcomes, including extinction, stable coexistence, persistent oscillations, and global bifurcation scenarios organized by heteroclinic and homoclinic structures.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.22451",
+        "pdf_url": "https://arxiv.org/pdf/2611.22451"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Heteroclinic and homoclinic organization offers a plausible smooth-dynamics connection, although the application is ecological modelling.",
+        "tldr": "The plant-herbivore model has classified equilibrium and heteroclinic configurations, Hopf-generated oscillations and conditions for homoclinic connections.",
+        "problem": "Describe global phase-plane regimes of a plant-herbivore model with inhibitory, non-monotone grazing response.",
+        "main_result": "The author gives qualitative and geometric analysis of the associated homogeneous system, finding Hopf bifurcation and stable periodic solutions. The paper classifies equilibrium configurations and heteroclinic structures, identifies conditions for homoclinic connections, and relates these to extinction, stable coexistence and persistent oscillations. The model equations and precise bifurcation conditions: Not specified in the abstract.",
+        "methods": [
+          "Qualitative and geometric phase-plane analysis"
+        ],
+        "context": "Planar ecological dynamics and homoclinic/heteroclinic organization.",
+        "keywords": [
+          "phase-plane organization",
+          "Hopf bifurcation",
+          "homoclinic connections",
+          "heteroclinic structures"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.22918",
+        "versioned_id": "2611.22918v1",
+        "title": "Reconstructing hidden attractors with reservoir computing",
+        "authors": [
+          "Mohammad Zaman",
+          "Emel Khan",
+          "Thomas Geert de Jong"
+        ],
+        "abstract": "Hidden attractors are difficult to locate as their basins of attraction do not intersect with any small neighborhood of an equilibrium point. We examine the possibility of reconstructing the hidden chaotic attractor from time series via reservoir computing, where the reservoir is built by a network of driven Kuramoto oscillators. We compare all-to-all coupling, nearest-neighbour ring coupling, and a ring with one modified oscillator equation which ensures that any attractor will be hidden. The numerical results suggest that ring coupling supports accurate reconstruction over a wider range of coupling and forcing strengths than all-to-all coupling. Searches near reservoir equilibria nevertheless show why agreement in short-term prediction and long-term statistics does not establish preservation of hiddenness. Numerics for the modified ring show that it has the highest performance which coincides with our intuition that reconstructing the global dynamics would yield a more faithful attractor reconstruction. We also show that this construction precludes global forgetting of initial conditions for constant inputs, although local conditional contraction along a nonconstant signal remains possible. The distinction between reconstructing attractor dynamics and preserving basin structure provides a basis for evaluating and designing reservoir models of hidden attractors.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "nlin.CD"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.22918",
+        "pdf_url": "https://arxiv.org/pdf/2611.22918"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is numerical reservoir reconstruction of hidden attractors without a central entropy, symbolic or dimension-theoretic theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.23033",
+        "versioned_id": "2611.23033v1",
+        "title": "The orbital architecture of 14 Herculis system as a KAM-stable three-body configuration",
+        "authors": [
+          "Francisco Crespo",
+          "Jes\\'us F. Palaci\\'an",
+          "Edward A. Turner",
+          "Patricia Yanguas"
+        ],
+        "abstract": "The 14 Herculis system hosts two massive giant planets on eccentric and mutually inclined orbits, making it a compelling test case for long-term stability in the spatial planetary three-body problem. We develop an analytical description of its dynamics using averaging, symplectic reduction of symmetries and KAM theory. For parameters compatible with the observed architecture, the secular quadrupole Hamiltonian possesses two elliptic relative equilibria that organise the nearby dynamics. The octupole contribution introduces a second slow angle and yields a properly-degenerate multiscale Hamiltonian. Under the corresponding smallness, non-resonance, and non-degeneracy conditions, families of quasi-periodic orbits coming from the relative equilibria of the quadrupolar approximation fill invariant 2-tori. Restoring the two fast mean anomalies and the cyclic angle conjugate to the angular-momentum, and considering the full system, produce two Cantor families of five-dimensional quasi-periodic tori in the reconstructed planetary problem. These invariant structures provide a Hamiltonian mechanism for the long-term confinement of eccentric and mutually inclined configurations compatible with 14 Her.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.23033",
+        "pdf_url": "https://arxiv.org/pdf/2611.23033"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "KAM invariant tori and geometric confinement give a related smooth Hamiltonian-dynamics connection.",
+        "tldr": "Under stated types of smallness, nonresonance and nondegeneracy conditions, the reconstructed planetary problem has two Cantor families of five-dimensional quasiperiodic tori.",
+        "problem": "Identify invariant Hamiltonian structures supporting long-term confinement in configurations compatible with 14 Herculis.",
+        "main_result": "For compatible parameters, the secular quadrupole Hamiltonian has two elliptic relative equilibria. The octupole term introduces a second slow angle and a properly degenerate multiscale Hamiltonian. Under the corresponding smallness, nonresonance and nondegeneracy conditions, quasiperiodic families from the quadrupolar relative equilibria fill invariant two-tori. Restoring two fast mean anomalies and the cyclic angular-momentum angle yields two Cantor families of five-dimensional quasiperiodic tori in the full reconstructed problem. The precise conditions and parameter bounds: Not specified in the abstract.",
+        "methods": [
+          "Averaging",
+          "Symplectic reduction of symmetries",
+          "KAM theory"
+        ],
+        "context": "Hamiltonian celestial mechanics, invariant tori and orbital confinement.",
+        "keywords": [
+          "KAM stability",
+          "quasiperiodic tori",
+          "symplectic reduction",
+          "planetary three-body problem"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.23117",
+        "versioned_id": "2611.23117v1",
+        "title": "Tropicalization and slow manifolds: A case study of the Michaelis--Menten reaction",
+        "authors": [
+          "Kristian Uldal Kristiansen",
+          "Peter Szmolyan"
+        ],
+        "abstract": "We present a case study of a recently developed approach to multiple-scale systems based on exponential scaling and tropicalization (Kristiansen and Sarantaris, \\emph{On a tropicalization of planar polynomial ODEs}). Parameters and variables are scaled exponentially with respect to a small parameter $\\epsilon$, so that orders of magnitude become a genuine non-smooth singular limit $\\epsilon\\to 0$. Tropical geometry, via subdivisions of the Newton polygon, classifies the asymptotic regimes and locates the candidates for slow manifolds on all scales of the variables simultaneously. Here we combine this framework with blow-up and geometric singular perturbation theory. {In particular,} the non-smooth singular limit is resolved by spherical and cylindrical blow-ups, and degeneracies caused by exponentially small terms with flat contact are treated by adding the exponential quantities as new variables {(following Kristiansen, \\emph{Blowup for flat slow manifolds})}. As the case study, we take the Michaelis--Menten reaction. The tropical classification yields three asymptotic regimes of parameters. In two of these, we find a sequence of blowups and desingularizations where the system has a {global} normally hyperbolic critical manifold on the blown up space. In the remaining case, we obtain a similar result, but only for a subcase. In particular, there is an asymptotic regime of parameters where there is no global slow manifold of the Michaelis--Menten reaction.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.23117",
+        "pdf_url": "https://arxiv.org/pdf/2611.23117"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Normally hyperbolic manifolds and geometric singular perturbation provide a related geometric-dynamics connection.",
+        "tldr": "Tropical scaling and blow-ups distinguish regimes with global normally hyperbolic critical manifolds from a regime lacking a global slow manifold.",
+        "problem": "Resolve multiscale slow-manifold geometry of the Michaelis-Menten reaction across exponentially scaled regimes.",
+        "main_result": "Exponential scaling and Newton-polygon subdivisions identify three parameter regimes. Spherical and cylindrical blow-ups resolve the nonsmooth singular limit, while exponential quantities are added as variables to treat flat-contact degeneracies. In two regimes, a sequence of blow-ups and desingularizations yields a global normally hyperbolic critical manifold on the blown-up space; a similar result holds only in a subcase of the third. The authors identify an asymptotic parameter regime without a global slow manifold. The exact regime inequalities: Not specified in the abstract.",
+        "methods": [
+          "Exponential scaling and tropicalization",
+          "Newton-polygon subdivisions",
+          "Spherical and cylindrical blow-ups",
+          "Geometric singular perturbation theory"
+        ],
+        "context": "Slow-fast dynamics, tropical regimes and normally hyperbolic manifolds.",
+        "keywords": [
+          "tropicalization",
+          "slow manifolds",
+          "blow-up",
+          "normal hyperbolicity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.23195",
+        "versioned_id": "2611.23195v1",
+        "title": "Multifractal analysis of Takagi-type functions built from beta-expansion cylinders",
+        "authors": [
+          "Samuel Nicolay"
+        ],
+        "abstract": "We study a family of Takagi functions obtained by placing a normalized tent on each beta-expansion cylinder, with amplitude $\\beta^{-\\alpha n}$ at order $n$, where $\\beta>1$ and $0<\\alpha\\le1$. We characterize their pointwise H\\\"older regularity in terms of cylinder lengths and distances from the point under consideration. The characterization holds more generally for nested interval partitions with exponentially decreasing mesh, without requiring interval lengths at a given order to be comparable. For beta-expansion cylinders, we compute the full multifractal spectrum whenever the remainders of the expansion of $1$ have a finite upper exponential decay rate. The functions are monofractal when this rate vanishes, as it does for Parry, Pisot and Salem bases. When it is positive, the spectrum is affine on a nondegenerate interval. The bases defined by $\\sum_{k\\ge0}\\beta_\\ell^{-\\ell^k}=1$, for integers $\\ell\\ge2$, give explicit non-monofractal examples. We also prove that every function in the family is nowhere differentiable.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.23195",
+        "pdf_url": "https://arxiv.org/pdf/2611.23195"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Multifractal spectra, Hölder regularity and beta-expansion cylinders directly match multifractal and symbolic interests.",
+        "tldr": "Takagi-type functions on beta cylinders have computable multifractal spectra under the stated finite decay-rate condition and are nowhere differentiable.",
+        "problem": "Determine pointwise regularity and multifractal spectra of cylinder-based Takagi functions.",
+        "main_result": "For \\(\\beta>1\\) and \\(0<\\alpha\\leq1\\), normalized tents of amplitude \\(\\beta^{-\\alpha n}\\) are placed on order-\\(n\\) beta cylinders. Pointwise Hölder regularity is characterized by cylinder lengths and distances, with an extension to nested interval partitions of exponentially decreasing mesh without same-order comparability. If expansion-of-one remainders have finite upper exponential decay rate, the full multifractal spectrum is computed. Zero rate gives monofractality, including Parry, Pisot and Salem bases; positive rate gives an affine spectrum on a nondegenerate interval. The paper constructs explicit non-monofractal examples and proves every family member nowhere differentiable. The explicit spectrum formula: Not specified in the abstract.",
+        "methods": [
+          "Normalized tent construction on beta cylinders",
+          "Cylinder-length and distance regularity characterization"
+        ],
+        "context": "Multifractal regularity, beta expansions and Takagi-type functions.",
+        "keywords": [
+          "multifractal spectrum",
+          "Hölder regularity",
+          "beta cylinders",
+          "nowhere differentiability"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.23230",
+        "versioned_id": "2611.23230v1",
+        "title": "On the multiplicity of crossing limit cycles of double diagonalizable piecewise linear vector fields",
+        "authors": [
+          "Lucas Queiroz Arakaki",
+          "Daniel Panazzolo"
+        ],
+        "abstract": "We consider planar piecewise linear vector fields with two zones separated by a straight line and having two diagonalizable components, which we call the \\emph{double diagonalizable configuration}. In this configuration, the Poincar\\'{e} half-maps correspond to separatrices of saddle points in the foliations of symmetric differential forms $\\omega_r(x)-\\omega_r(y)$, where $\\omega_r$ is a rational $1$-form with exactly three simple poles. Limit cycles correspond to non-diagonal intersections of two such separatrices, and the multiplicity of a limit cycle is precisely the order of contact at the intersection point. We prove that two distinct separatrices which are not nested segments of the same straight line have a contact of order at most $4$ at a diagonal point and at most $2$ at a non-diagonal point. As a consequence, we obtain that the multiplicity of limit cycles in the double diagonalizable configuration is at most two, this bound being sharp.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CA"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.23230",
+        "pdf_url": "https://arxiv.org/pdf/2611.23230"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is multiplicity bounds for piecewise-linear limit cycles without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.21656",
+        "versioned_id": "2611.21656v1",
+        "title": "Cycles of Arbitrary Period in Multidimensional Heterogeneous Hegselmann-Krause Dynamics",
+        "authors": [
+          "Anton V. Proskurnikov",
+          "Iryna Zabarianska"
+        ],
+        "abstract": "We study periodic behavior in heterogeneous Hegselmann-Krause opinion dynamics with multidimensional opinions and norm-defined confidence neighborhoods. We prove that, for every dimension $d\\ge3$, every $\\ell_q$ norm with $q\\in[1,\\infty]\\setminus\\{2\\}$, and every integer $m\\ge2$, a system of five agents admits a periodic trajectory of minimal period $m$; moreover, different periods can coexist for fixed confidence radii. Four agents remain stationary, while the fifth moves along a line segment contained in their convex hull. The stationary agents may share a common strictly positive confidence radius, and all confidence inequalities are strict. A geometric criterion underlying the construction extends these results to further classes of norms. However, this criterion cannot be satisfied in dimensions one and two, regardless of the confidence norm. We also prove that no heterogeneous Hegselmann-Krause system with less than five agents admits a nonconstant periodic trajectory, under any norm and in any dimension; every trajectory with at most three agents converges exponentially.",
+        "announce_type": "cross",
+        "categories": [
+          "physics.soc-ph",
+          "cs.MA",
+          "cs.SI",
+          "cs.SY",
+          "eess.SY",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.21656",
+        "pdf_url": "https://arxiv.org/pdf/2611.21656"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Arbitrary minimal periods and geometric obstructions provide a plausible orbit-structure connection, although the system models opinion dynamics.",
+        "tldr": "Five agents realize any prescribed nonconstant period in the stated higher-dimensional non-Euclidean norm setting, whereas fewer agents cannot cycle.",
+        "problem": "Determine possible periods and minimal agent counts in heterogeneous Hegselmann-Krause systems.",
+        "main_result": "For every \\(d\\geq3\\), every \\(\\ell_q\\) norm with \\(q\\in[1,\\infty]\\setminus\\{2\\}\\), and every integer \\(m\\geq2\\), a five-agent system has a trajectory of minimal period \\(m\\); different periods can coexist at fixed radii. Four agents are stationary and the fifth moves on a segment in their convex hull; stationary agents can share a positive radius and all confidence inequalities are strict. A geometric criterion extends the construction to further norms but cannot hold in dimensions one or two. Independently, fewer than five agents cannot have nonconstant periodic trajectories under any norm in any dimension, and at most three agents always converge exponentially.",
+        "methods": [
+          "Geometric periodic-orbit construction",
+          "Norm-based geometric criterion"
+        ],
+        "context": "Periodic-orbit geometry of heterogeneous opinion dynamics.",
+        "keywords": [
+          "minimal period",
+          "Hegselmann-Krause dynamics",
+          "norm geometry",
+          "periodic trajectories"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.21983",
+        "versioned_id": "2611.21983v1",
+        "title": "Large Language Models as Nonlinear Dynamical Systems: The Three Clocks of Depth, Training, and Generation",
+        "authors": [
+          "Maor Farid"
+        ],
+        "abstract": "Language models are dynamical systems. A transformer is iterated over its layers, over the steps of its training and over the tokens it generates, and on each of these three clocks it shows behavior that nonlinear dynamics has studied for a century: fixed points, bifurcations, synchronization, chaos and noise-driven escape from potential wells. The two communities rarely meet, so this behavior is often rediscovered under new names. We build a bridge between them. To describe, we condense about 200 papers into the Three-Clock Dictionary, which maps fifteen concepts of nonlinear dynamics onto each clock and marks every correspondence as proved, measured or conjectured, and we show each concept in a mechanical system and in a language model side by side. To explain, we derive reduced-order models: the softmax is a Boltzmann distribution, gradient descent an Euler step on a nonlinear spring, a loss spike a ball thrown out of a stiff valley, attention on the circle a Kuramoto model, and a repetition loop a well that deepens while it is occupied. We then test these explanations on open language models, on a laptop CPU. Escape from repetition loops in GPT-2 and Pythia follows the Arrhenius law with the logit gap as the barrier, and the barrier deepens and then saturates, so the temperature needed to leave a loop falls like $1/\\ln N$ with the generation length $N$ and rises with model size. Coherent text lives in a narrow window of temperatures, which a small reasoning model shares at its recommended temperature. Training makes each Pythia layer more expansive, and a small transformer trains at a multi-mode edge of stability. The third step, solving problems of language models, is still ahead: controllers derived from the escape analysis remove loops but do not yet beat the best fixed temperature. We state twelve open problems where nonlinear dynamics could get there.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.LG",
+          "cs.CL",
+          "math.DS",
+          "nlin.CD"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.21983",
+        "pdf_url": "https://arxiv.org/pdf/2611.21983"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is language-model interpretation and empirical reduced models without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.22034",
+        "versioned_id": "2611.22034v1",
+        "title": "Klarner's sequences have density $0$",
+        "authors": [
+          "Alexander Kalmynin"
+        ],
+        "abstract": "We prove that the set of non-negative integers $n$ which can be obtained from $0$ by repeated application of affine maps $x\\mapsto 2x$, $x\\mapsto 3x+2$ and $x\\mapsto 6x+3$ has density $0$. Moreover, we reach the same conclusion for five other sequences of similar type introduced by D. Klarner. More generally, we establish a criterion excluding stationary measures with bounded density on the profinite group $\\mathbb Z_P\\cong\\prod_{p\\mid P}\\mathbb Z_p$. A density-to-measure construction using invariant Banach limits and a combinatorial argument involving rational orbits and affine words yield our density-zero results. The criterion also applies to an infinite family of mixed-slope affine semigroups.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.22034",
+        "pdf_url": "https://arxiv.org/pdf/2611.22034"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Stationary measures on profinite groups and affine semigroup dynamics directly connect to group-action interests.",
+        "tldr": "Klarner-type affine orbits have density zero through a criterion excluding bounded-density stationary measures.",
+        "problem": "Prove density-zero statements for integer sets generated by affine maps.",
+        "main_result": "The set generated from \\(0\\) by \\(x\\mapsto2x\\), \\(x\\mapsto3x+2\\) and \\(x\\mapsto6x+3\\) has density zero, as do five other Klarner sequences. A general criterion excludes stationary measures with bounded density on \\(\\mathbb Z_P\\cong\\prod_{p\\mid P}\\mathbb Z_p\\), and also applies to an infinite family of mixed-slope affine semigroups. The criterion itself: Not specified in the abstract.",
+        "methods": [
+          "Density-to-measure construction using invariant Banach limits",
+          "Combinatorial argument with rational orbits and affine words"
+        ],
+        "context": "Arithmetic semigroup actions, profinite stationary measures and density.",
+        "keywords": [
+          "affine semigroups",
+          "Klarner sequences",
+          "stationary measures",
+          "density zero"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.22145",
+        "versioned_id": "2611.22145v1",
+        "title": "The topology of the mean action spectrum",
+        "authors": [
+          "Habib Alizadeh",
+          "Dan Cristofaro-Gardiner",
+          "Abror Pirnapasov",
+          "Egor Shelukhin"
+        ],
+        "abstract": "We prove that if an area-preserving diffeomorphism of the closed two-disk is neither a pseudo-rotation nor a periodic map, then the closure of its mean action spectrum contains an interval of positive length. This partially answers a question of Hutchings. We do not require any additional assumptions on the area-preserving map, such as non-degeneracy or specific behavior near the boundary.",
+        "announce_type": "cross",
+        "categories": [
+          "math.SG",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.22145",
+        "pdf_url": "https://arxiv.org/pdf/2611.22145"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Topology of action spectra for area-preserving disk maps is closely related to smooth and topological dynamics.",
+        "tldr": "Outside pseudo-rotations and periodic maps, the closed mean action spectrum of an area-preserving disk diffeomorphism contains a positive-length interval.",
+        "problem": "Determine when a disk diffeomorphism has a mean action spectrum with interval structure.",
+        "main_result": "For an area-preserving diffeomorphism of the closed two-disk that is neither a pseudo-rotation nor a periodic map, the closure of the mean action spectrum contains an interval of positive length. No additional nondegeneracy or boundary-behaviour assumptions are required. This partially answers the stated question of Hutchings. The proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Area-preserving dynamics and topology of mean action spectra.",
+        "keywords": [
+          "mean action spectrum",
+          "disk diffeomorphisms",
+          "area preservation",
+          "pseudo-rotations"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.22249",
+        "versioned_id": "2611.22249v1",
+        "title": "$H_2$-optimal riblet profiles for turbulence suppression in channel flows",
+        "authors": [
+          "Daniel W. Hartman",
+          "Armin Zare"
+        ],
+        "abstract": "The drag-reducing properties of streamwise-elongated surface corrugations, commonly referred to as riblets, have been extensively studied through experiments, simulations, and reduced-order modeling. Notably, the linearized Navier-Stokes framework introduced by Ran, Zare, and Jovanovic (J. Fluid Mech., vol. 906, 2021) employs volume penalization to model riblet-induced boundary conditions and predict drag reduction. These approaches typically quantify drag reduction as a function of a single geometric parameter, such as spanwise spacing or groove cross-sectional area, evaluated over fixed riblet shapes. As a result, identifying optimal riblet geometries across a broader design space often necessitates exhaustive parametric studies. To address this problem, we propose an optimization framework for the systematic design of optimal riblet shapes. Accordingly, we reformulate the volume penalization term in the linearized dynamics as a structured state-feedback operator. Targeting maximal suppression of turbulence, we pose a composite optimization problem that minimizes the steady-state variance of velocity fluctuations and riblet-induced dynamical augmentations while maintaining a constant bulk-flux. For a fixed spanwise wavelength (riblet spacing), this framework yields optimal wall-normal profiles that achieve maximal turbulence attenuation.",
+        "announce_type": "cross",
+        "categories": [
+          "physics.flu-dyn",
+          "math.AP",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.22249",
+        "pdf_url": "https://arxiv.org/pdf/2611.22249"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is optimized turbulence-suppressing riblet design without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.22340",
+        "versioned_id": "2611.22340v1",
+        "title": "Growth of Sobolev Norms for Linear Schrodinger Equations with Denjoy--Carleman Potentials",
+        "authors": [
+          "Yuan Wu",
+          "Huining Xue"
+        ],
+        "abstract": "We consider the linear Schr\\\"odinger equation on a torus of arbitrary dimension with a real time-dependent potential satisfying a mixed space--time Denjoy--Carleman condition. More precisely, for an increasing concave weight \\(\\omega(r)\\asymp \\log^\\sigma(e+r)\\), \\(\\sigma> 1\\),we assume \\[ \\sup_{t\\in\\mathbb R}|\\partial_t^q\\widehat V(k,t)| \\le Ae^{Bq^{p}}e^{-\\rho_{0}\\omega(|k|)},\\qquad p=\\frac{\\sigma}{\\sigma-1}. \\] The corresponding spatial class is strictly larger than every Gevrey class, while the moment factor gives the quantitative ultradifferentiable control in time needed by the finite normal form. We adapt the method of Delort and Fang--Zhang to this non-power Fourier weight. The essential new point is a quantitative operator calculus whose majorant is built from the moment sequence and an auxiliary factorial that closes the exact Leibniz convolutions. For every $s>0$ we prove \\[ \\|u(t)\\|_{H^s}\\le C_s \\exp\\{C_s[\\log(2+|t|)]^{\\frac{1}{\\sigma}}\\} \\|u(0)\\|_{H^s}. \\] The estimate is valid for every \\(t\\in\\mathbb R\\), holds in every space dimension, requires neither smallness, quasi-periodicity, nor a transversality condition.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.22340",
+        "pdf_url": "https://arxiv.org/pdf/2611.22340"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is PDE Sobolev-norm growth under time-dependent potentials without an explicit central profile connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.22365",
+        "versioned_id": "2611.22365v1",
+        "title": "Strong Transitivity of Group Cellular Automata: Characterization and Decidability",
+        "authors": [
+          "Niccol\\`o Castronuovo",
+          "Alberto Dennunzio",
+          "Luciano Margara"
+        ],
+        "abstract": "A discrete-time dynamical system is strongly transitive if every point can be reached, in finitely many steps, from every non-empty open set. We study this property for group cellular automata, \\ie cellular automata over a finite group alphabet whose global map is a group endomorphism, in every dimension $d\\geq1$. We prove that no group cellular automaton over a non-abelian group is strongly transitive, and we develop a decomposition of group cellular automata over abelian groups, via quotients by power subgroups, which preserves strong transitivity. For linear cellular automata over $(\\mathbb Z/p\\mathbb Z)^n$ we use Pontryagin duality to characterize strong transitivity in terms of the characteristic polynomial $\\chi_A$ of the associated matrix $A$ of Laurent polynomials: the automaton is strongly transitive if and only if $\\det(A)\\neq0$ and no irreducible factor of $\\chi_A$ has an invertible constant term. Combining these results, we obtain that strong transitivity is decidable for group cellular automata in every dimension. For every fixed dimension $d$, we give an explicit decision procedure whose running time is polynomial in the group size $N$, the number $k$ of neighbours, and the neighbourhood radius $\\varrho$.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.DM",
+          "cs.FL",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.22365",
+        "pdf_url": "https://arxiv.org/pdf/2611.22365"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Strong transitivity and decidability for group cellular automata directly match symbolic and topological dynamics.",
+        "tldr": "Strong transitivity is decidable for group cellular automata in every dimension, with a polynomial-time procedure at each fixed dimension.",
+        "problem": "Characterize strong transitivity algebraically for cellular automata over finite groups.",
+        "main_result": "No group cellular automaton over a nonabelian group is strongly transitive. Quotient decompositions by power subgroups preserve strong transitivity in the abelian case. For linear cellular automata over \\((\\mathbb Z/p\\mathbb Z)^n\\), with Laurent-polynomial matrix \\(A\\), strong transitivity is equivalent to \\(\\det(A)\\neq0\\) and the absence of any irreducible factor of \\(\\chi_A\\) having an invertible constant term. Combining these results gives decidability for all \\(d\\geq1\\); for fixed \\(d\\), the explicit procedure is polynomial in group size, neighbour count and neighbourhood radius.",
+        "methods": [
+          "Quotients by power subgroups",
+          "Pontryagin duality",
+          "Characteristic-polynomial factor criterion"
+        ],
+        "context": "Group cellular automata, strong transitivity and algorithmic symbolic dynamics.",
+        "keywords": [
+          "strong transitivity",
+          "group cellular automata",
+          "decidability",
+          "Pontryagin duality"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.22703",
+        "versioned_id": "2611.22703v1",
+        "title": "The Minimal Background Period for Infinitely Many Spectral Gaps in Anderson-Bernoulli Models",
+        "authors": [
+          "Cong Chen",
+          "Yong Li"
+        ],
+        "abstract": "We prove that three is the smallest background period for which a one-dimensional discrete Anderson-Bernoulli operator can have infinitely many gaps in its almost-sure spectrum. For an explicit period-three background and coupling, we construct infinitely many bounded gaps accumulating from the right at a spectral energy, for every nondegenerate Bernoulli law. This property persists on an open set of background and coupling parameters. The proof combines a transverse heteroclinic connection and invariant multicones with spectral points from periodic realizations. A strict geometric window permits integer scale matching, and the required parameter inequalities are verified by exact rational arithmetic.",
+        "announce_type": "cross",
+        "categories": [
+          "math.SP",
+          "math.AP",
+          "math.DG",
+          "math.DS",
+          "math.SG"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.22703",
+        "pdf_url": "https://arxiv.org/pdf/2611.22703"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Transverse heteroclinic geometry and invariant multicones link the spectral problem to hyperbolic dynamics.",
+        "tldr": "Three is the minimal background period allowing infinitely many almost-sure spectral gaps in the stated one-dimensional Anderson-Bernoulli setting.",
+        "problem": "Find the smallest periodic background that permits infinitely many gaps and establish robustness of such examples.",
+        "main_result": "An explicit period-three background and coupling yield infinitely many bounded spectral gaps accumulating from the right at a spectral energy, for every nondegenerate Bernoulli law. The property persists on an open set of background and coupling parameters, and period three is minimal. The explicit parameters, accumulation energy and inequalities: Not specified in the abstract.",
+        "methods": [
+          "Transverse heteroclinic connection",
+          "Invariant multicones",
+          "Periodic realizations for spectral points",
+          "Integer scale matching",
+          "Exact rational verification of parameter inequalities"
+        ],
+        "context": "Random-operator spectra and hyperbolic geometric mechanisms.",
+        "keywords": [
+          "Anderson-Bernoulli operators",
+          "spectral gaps",
+          "heteroclinic connections",
+          "invariant multicones"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.22710",
+        "versioned_id": "2611.22710v1",
+        "title": "Feedback and Resource Competition in Incoherent Feedforward Loops: When Is Cumulative Dose Ordering Preserved?",
+        "authors": [
+          "Iva Jankovi\\'c",
+          "Fabiana Calandra",
+          "Giansimone Perrino",
+          "Velia Siciliano",
+          "Filippo Menolascina"
+        ],
+        "abstract": "Biochemical coupling can change the expression levels and timing predicted by an incoherent feedforward loop (IFFL) model without changing cumulative dose ordering. We derive ordering conditions using shared-production identities and Metzler comparison bounds, with tail guarantees beyond finite computation. A nonlinear example exhibits delayed slope reversal at a fixed dose, on an $O(1/\\eta)$ timescale as pathway mismatch $\\eta$ vanishes. At one fixed joint fit, validated bounds establish decreasing cumulative output across 20-100 ng nominal burden, from zero to full target loading, at every positive finite observation time for a translation-blocking model and an RNA-decay model. Full loading at 20 ng reduces 48-hour cumulative output by 13.35% and 10.18%, respectively, while endpoint concentration in the first model changes by only +0.15%. Preserved ordering therefore does not ensure quantitative agreement.",
+        "announce_type": "cross",
+        "categories": [
+          "q-bio.MN",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.22710",
+        "pdf_url": "https://arxiv.org/pdf/2611.22710"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is biochemical dose-order preservation without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.22957",
+        "versioned_id": "2611.22957v1",
+        "title": "Sums and Products in Dynamically Central Syndetic Sets",
+        "authors": [
+          "Arpita Ghosh"
+        ],
+        "abstract": "Glasscock and Le introduced the notion \\textit{dynamically central syndetic sets} in a minimal topological dynamical system under the minimal action of the semigroup $(\\mathbb{N}, +).$ In this short note, we introduce these large sets in the semigroup $(\\mathbb{N}, \\cdot)$ and establish that dynamically central syndetic sets contain the Hindman configuration $\\{x,y,x+y,xy\\}$. Furthermore, we show that there are dynamically central piecewise syndetic sets that do not contain such configurations.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CO",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.22957",
+        "pdf_url": "https://arxiv.org/pdf/2611.22957"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Minimal topological semigroup actions and dynamical largeness directly match topological dynamics.",
+        "tldr": "Dynamically central syndetic sets contain the stated simultaneous sum-product configuration, unlike some dynamically central piecewise syndetic sets.",
+        "problem": "Extend dynamically central syndetic sets to multiplicative natural-number actions and study sum-product patterns.",
+        "main_result": "The author introduces dynamically central syndetic sets in \\((\\mathbb N,\\cdot)\\), extending the stated additive setting, and proves containment of a Hindman configuration \\(\\{x,y,x+y,xy\\}\\). There also exist dynamically central piecewise syndetic sets without such configurations. The exact definitions and proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Topological semigroup dynamics and additive-multiplicative combinatorics.",
+        "keywords": [
+          "minimal actions",
+          "central syndetic sets",
+          "Hindman configuration",
+          "sum-product patterns"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.23176",
+        "versioned_id": "2611.23176v1",
+        "title": "Dynamics-preserving graph sparsification",
+        "authors": [
+          "Emmie Fitz-Gibbon",
+          "Maximilian Jerdee",
+          "Yuanzhao Zhang",
+          "Rosemary Braun",
+          "Cristopher Moore"
+        ],
+        "abstract": "Many dynamical systems unfold on networks of nodes coupled by edge interactions. This work is motivated by the following question: can we remove most edges from a networked dynamical system without significantly altering its behavior? For a given network, our goal is to find a sparser network that approximately preserves the dynamics on the nodes. We first study linear diffusion, where node values evolve according to the graph Laplacian. The dominant network sparsification method, effective resistance sampling, preserves all Laplacian eigenvalues within a uniform multiplicative bound. We show that with a limited edge budget, this is dynamically inefficient: diffusion is dominated by the slowest-decaying modes, so enforcing a uniform guarantee spends edges on fast modes that barely affect long-term dynamics. Based on this observation, we derive Diffusion Spectral Error (DSE), which evaluates in closed form the typical error in trajectories between the original and sparsified graphs over random initial conditions. Minimizing this error, which naturally prioritizes slow modes, yields sparse networks explicitly designed to preserve dynamics. At the same sparsification levels, DSE sparsification often preserves diffusion dynamics with several-fold lower error than effective resistance sampling, and up to two orders of magnitude lower on strongly modular networks. Although derived in a linear context, we empirically find that DSE sparsification gives similar improvements in the Kuramoto model (a nonlinear system of coupled oscillators), where DSE sparsification approximately preserves the synchronization threshold and, at strong coupling, order-parameter trajectories.",
+        "announce_type": "cross",
+        "categories": [
+          "nlin.AO",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.23176",
+        "pdf_url": "https://arxiv.org/pdf/2611.23176"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is numerical network sparsification and trajectory-error optimization without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "1912.05893",
+        "versioned_id": "1912.05893v3",
+        "title": "An application of \"Selmer group Chabauty\" to arithmetic dynamics",
+        "authors": [
+          "Michael Stoll"
+        ],
+        "abstract": "We describe how one can use the \"Selmer group Chabauty\" method developed by the author to show that certain hyperelliptic curves of the form $$ C \\colon y^2 = x^{2g+1} + h(x)^2 \\,, $$ with $h \\in \\mathbb{Z}[x]$ such that $\\operatorname{deg} h \\le g$ and $h(0)$ is odd, have only the \"obvious\" rational points $\\infty$ (the unique point at infinity on the smooth projective model of the curve) and $(0, \\pm h(0))$. Let $c \\in \\mathbb{Q}$ and write $f_c(x) = x^2 + c$. We denote the iterates of $f_c$ by $f_c^{\\circ n}$; i.e., we set $f_c^{\\circ 0}(x) = x$ and $f_c^{\\circ(n+1)}(x) = f_c(f_c^{\\circ n}(x))$. As an application of the method, we prove that if $f_c^{\\circ 2}$ is irreducible, then $f_c^{\\circ 6}$ is also irreducible. Assuming the Generalized Riemann Hypothesis (GRH), it also follows that $f_c^{\\circ 10}$ is irreducible.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NT",
+          "math.AG",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/1912.05893",
+        "pdf_url": "https://arxiv.org/pdf/1912.05893"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Irreducibility of polynomial iterates provides a related arithmetic-dynamics connection.",
+        "tldr": "Irreducibility of the second quadratic iterate implies irreducibility of the sixth, and conditionally the tenth under GRH.",
+        "problem": "Use rational-point methods to control irreducibility along quadratic iteration.",
+        "main_result": "The method identifies only the stated obvious rational points on certain curves \\(y^2=x^{2g+1}+h(x)^2\\), with integer-coefficient \\(h\\), \\(\\deg h\\leq g\\) and odd \\(h(0)\\). For \\(c\\in\\mathbb Q\\) and \\(f_c(x)=x^2+c\\), irreducibility of \\(f_c^{\\circ2}\\) implies irreducibility of \\(f_c^{\\circ6}\\). Assuming the Generalized Riemann Hypothesis, irreducibility also follows for \\(f_c^{\\circ10}\\). The additional conditions selecting those curves: Not specified in the abstract.",
+        "methods": [
+          "Selmer group Chabauty"
+        ],
+        "context": "Arithmetic dynamics and rational points on hyperelliptic curves.",
+        "keywords": [
+          "quadratic iteration",
+          "irreducibility",
+          "Selmer group Chabauty",
+          "GRH"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2407.01602",
+        "versioned_id": "2407.01602v3",
+        "title": "Clustering in pure-attention hardmax transformers and its role in sentiment analysis",
+        "authors": [
+          "Albert Alcalde",
+          "Giovanni Fantuzzi",
+          "Enrique Zuazua"
+        ],
+        "abstract": "Transformers are extremely successful machine learning models whose mathematical properties remain poorly understood. Here, we rigorously characterize the behavior of transformers with hardmax self-attention and normalization sublayers as the number of layers tends to infinity. By viewing such transformers as discrete-time dynamical systems describing the evolution of points in a Euclidean space, and thanks to a geometric interpretation of the self-attention mechanism based on hyperplane separation, we show that the transformer inputs asymptotically converge to a clustered equilibrium determined by special points called \\textit{leaders}. We then leverage this theoretical understanding to solve sentiment analysis problems from language processing using a fully interpretable transformer model, which effectively captures `context' by clustering meaningless words around leader words carrying the most meaning. Finally, we outline remaining challenges to bridge the gap between the mathematical analysis of transformers and their real-life implementation.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cs.CL",
+          "cs.LG",
+          "math.DS",
+          "stat.ML"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2407.01602",
+        "pdf_url": "https://arxiv.org/pdf/2407.01602"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is transformer clustering and sentiment-analysis applications without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2509.17045",
+        "versioned_id": "2509.17045v2",
+        "title": "Boundary Feller-Dynkin processes associated with Laguerre processes and Pickrell diffusions",
+        "authors": [
+          "Alexander I. Bufetov",
+          "Yosuke Kawamoto"
+        ],
+        "abstract": "In this paper, we construct a Feller-Dynkin boundary process by applying the method of intertwiners to the coherent family, introduced in our previous work, of Laguerre processes with a fixed parameter. The corresponding boundary process is computed explicitly, and it turns out to be a deterministic dynamical system. Since the Pickrell diffusions that leave the Pickrell measure invariant are coherent with respect to the same projective system, we also obtain the stochastic boundary process associated with the coherent family of Pickrell diffusions.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.PR",
+          "math.CA",
+          "math.DS",
+          "math.FA"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2509.17045",
+        "pdf_url": "https://arxiv.org/pdf/2509.17045"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Boundary dynamics and invariant-measure-compatible diffusions provide a related measure-theoretic dynamics connection.",
+        "tldr": "Intertwiners construct an explicit deterministic Laguerre boundary dynamical system and a stochastic Pickrell boundary process.",
+        "problem": "Construct boundary Feller-Dynkin processes for coherent families of Laguerre and Pickrell processes.",
+        "main_result": "Applying the method of intertwiners to the previously introduced coherent Laguerre family with fixed parameter produces an explicitly computed Feller-Dynkin boundary process that is deterministic. Pickrell diffusions preserving the Pickrell measure are coherent for the same projective system and yield the corresponding stochastic boundary process. The explicit boundary formula and parameter restrictions: Not specified in the abstract.",
+        "methods": [
+          "Method of intertwiners",
+          "Coherent projective families"
+        ],
+        "context": "Boundary processes, projective systems and invariant-measure diffusions.",
+        "keywords": [
+          "Feller-Dynkin processes",
+          "intertwiners",
+          "Laguerre processes",
+          "Pickrell diffusions"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2511.06655",
+        "versioned_id": "2511.06655v3",
+        "title": "A kernel method for the learning of Wasserstein geometric flows",
+        "authors": [
+          "Jianyu Hu",
+          "Juan-Pablo Ortega",
+          "Daiying Yin"
+        ],
+        "abstract": "Wasserstein gradient and Hamiltonian flows provide geometric formulations of many partial differential equations. We develop a structure-preserving kernel method for jointly estimating the external potential and interaction kernel governing these flows, assuming a known internal energy. The inverse problem is formulated through a trajectory-dependent observation operator and regularized in a product of reproducing kernel Hilbert spaces, yielding an explicit finite representation of the estimator. We characterize joint non-identifiability through the null space of the observation operator and derive a Fourier criterion on the torus, distinguishing uniqueness of the regularized estimator from recovery of the underlying physical components. We establish reconstruction error bounds and convergence rates under source conditions and suitable regularization and mesh refinement, together with a stability estimate for Hamiltonian flows with vanishing internal energy. Numerical experiments demonstrate joint reconstruction and illustrate how unobservable interaction modes can prevent accurate potential recovery despite small observation-equation residuals. A comparison with sparse learning illustrates the dependence of reconstruction accuracy on the chosen dictionary.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NA",
+          "cs.NA",
+          "math.DS",
+          "math.ST",
+          "stat.TH"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2511.06655",
+        "pdf_url": "https://arxiv.org/pdf/2511.06655"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is kernel inverse learning of Wasserstein flows without an explicit entropy, symbolic or fractal-dimension connection.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2512.11357",
+        "versioned_id": "2512.11357v3",
+        "title": "Asymptotic statistics for finite continued fractions with restricted digits",
+        "authors": [
+          "Jungwon Lee"
+        ],
+        "abstract": "Zaremba's conjecture concerns a formation of continued fraction expansions for rational numbers with partial quotient bounded by an absolute constant. We present asymptotic estimates for the size of $\\epsilon$-thickening of certain fractal sets of bounded-type, which in turn provide a remark on Zaremba's conjecture in an averaging sense. We also discuss a generalisation for complex continued fractions over imaginary quadratic fields.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2512.11357",
+        "pdf_url": "https://arxiv.org/pdf/2512.11357"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Restricted continued-fraction digits and thickening estimates for fractal sets directly match symbolic and fractal interests.",
+        "tldr": "Asymptotic thickening estimates for bounded-type fractal sets give an averaging-sense observation on Zaremba conjecture.",
+        "problem": "Estimate sizes of neighbourhoods of restricted-digit continued-fraction sets and their arithmetic implications.",
+        "main_result": "The author obtains asymptotic estimates for the size of epsilon-thickenings of certain bounded-type fractal sets, providing a remark on Zaremba conjecture in an averaging sense. The paper also discusses complex continued fractions over imaginary quadratic fields. The exact estimates, sets and averaging statement: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Continued-fraction fractals and Diophantine approximation.",
+        "keywords": [
+          "restricted digits",
+          "fractal thickenings",
+          "continued fractions",
+          "Zaremba conjecture"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2602.08478",
+        "versioned_id": "2602.08478v2",
+        "title": "Time-Delayed Transformers for Data-Driven Modeling of Low-Dimensional Dynamics",
+        "authors": [
+          "Albert Alcalde",
+          "Markus Widhalm",
+          "Emre Y{\\i}lmaz"
+        ],
+        "abstract": "We propose the time-delayed transformer (TD-TF), a simplified transformer architecture for data-driven modeling of unsteady spatio-temporal dynamics. TD-TF bridges linear operator-based methods and deep sequence models by showing that a single-layer, single-head transformer can be interpreted as a nonlinear generalization of time-delayed dynamic mode decomposition (TD-DMD). The architecture is deliberately minimal, consisting of one self-attention layer with a single query per prediction and one feedforward layer, resulting in linear computational complexity in sequence length and a small parameter count. Numerical experiments demonstrate that TD-TF matches the performance of strong linear baselines on near-linear systems, while significantly outperforming them in nonlinear and chaotic regimes, where it accurately captures long-term dynamics. Validation studies on synthetic signals, unsteady aerodynamics, the Lorenz '63 system, and a reaction-diffusion model show that TD-TF preserves the interpretability and efficiency of linear models while providing substantially enhanced expressive power for complex dynamics.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cs.LG",
+          "cs.NA",
+          "math.DS",
+          "math.NA"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2602.08478",
+        "pdf_url": "https://arxiv.org/pdf/2602.08478"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is numerical transformer modelling of spatiotemporal dynamics without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2603.04096",
+        "versioned_id": "2603.04096v4",
+        "title": "Strong Approximation for the Relative Character Variety of the Four-Times Punctured Sphere",
+        "authors": [
+          "Nathaniel Kingsbury-Neuschotz"
+        ],
+        "abstract": "We study the orbits of solutions to the Markoff-type equation $$X^2 + Y^2 + Z^2 = XYZ + AX + BY + CZ + D$$ in $\\mathbb{F}_p$ for fixed integers $A,B,C,D$ under the group $\\Gamma$ generated by \\[\\begin{split}&V_1: (x, y, z)\\mapsto (A + yz - x, y, z),\\\\ &V_2: (x, y, z)\\mapsto (x, B + xz - y, z),\\text{ and}\\\\ &V_3: (x, y, z)\\mapsto (x, y, C + xy - z).\\end{split}\\] This equation defines the Relative Character Variety of the Four-Times Punctured Sphere, with $\\Gamma$ arising from the Pure Mapping Class Group. Outside an explicit degeneracy locus, $\\Gamma$ acts transitively on almost all solutions for a density-one set of primes independent of the parameters; the others split into small orbits reflecting finite orbits over $\\mathbb{C}$. For ``degenerate'' parameters, we show there are two large orbits (most cases) or four (the rest, excluding $(0, 0, 0, 4)$) for the same primes. These results strengthen for two subfamilies. The first, $$X^2 + Y^2 + Z^2 = XYZ + k,\\,\\,\\,k\\neq 4,$$ arises in the combinatorial group theory of $\\text{SL}_2(\\mathbb{F}_p)$. Combined with Chen's work, $\\Gamma$ acts transitively for all large primes, uniformly in $k$, so the $Q$-classification conjecture of McCullough and Wanderley holds over $\\mathbb{F}_p$ for $p$ large. By Martin's work, so do their Classification and $T$-Classification Conjectures. The second, $$x_1^2 + x_2^2 + x_3^2 + a_1x_2x_3 + a_2x_1x_3 + a_3x_1x_2 = (3+a_1+a_2+a_3)x_1x_2x_3,$$ arises from generalized cluster algebras. Our degeneracy notion specializes to that of de Courcy-Ireland, Litman, and Mizuno, whose results similarly imply our orbit count (1, 2, or 4) for all large primes for all nondegenerate and some degenerate surfaces in that family.ds for all sufficiently large primes.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.NT",
+          "math.DS",
+          "math.GR"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2603.04096",
+        "pdf_url": "https://arxiv.org/pdf/2603.04096"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Mapping-class-related group actions and orbit structure on character varieties directly connect to group-action dynamics.",
+        "tldr": "Outside an explicit degeneracy locus, the stated group has one orbit covering almost all finite-field solutions for a parameter-independent density-one set of primes.",
+        "problem": "Determine orbit decompositions of Markoff-type character-variety equations over finite fields.",
+        "main_result": "For fixed integer parameters in \\(X^2+Y^2+Z^2=XYZ+AX+BY+CZ+D\\), the group generated by the stated Vieta involutions comes from the Pure Mapping Class Group. Outside an explicit degeneracy locus, it acts transitively on almost all solutions for a density-one set of primes independent of the parameters; the remaining small orbits reflect finite complex orbits. Degenerate parameters give two large orbits in most cases or four in the remaining cases, excluding \\((0,0,0,4)\\). Two subfamilies admit stronger all-sufficiently-large-prime results under the conditions described in the abstract. The explicit degeneracy locus and small-orbit bounds: Not specified in the abstract.",
+        "methods": [
+          "Vieta-involution group action",
+          "Combination with the stated results of Chen, Martin, and de Courcy-Ireland-Litman-Mizuno for subfamilies"
+        ],
+        "context": "Character varieties, arithmetic group orbits and strong approximation.",
+        "keywords": [
+          "character varieties",
+          "Markoff-type equations",
+          "mapping class groups",
+          "finite-field orbits"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2606.16259",
+        "versioned_id": "2606.16259v2",
+        "title": "Super-Arrhenius relaxation of the triangular plaquette model in any dimension",
+        "authors": [
+          "Laurent Bartholdi",
+          "Ivailo Hartarsky",
+          "Ivan Mitrofanov"
+        ],
+        "abstract": "Consider the following plaquette model from statistical physics: a lamp lies at every vertex of the triangular lattice and a switch lies at every even vertex of the (bipartite) dual hexagonal lattice. Each switch toggles the three lamps on its face. The energy of a configuration is the number of ON lamps. For the Glauber dynamics associated with the Gibbs measure defined by this Hamiltonian at any inverse temperature $\\beta>0$, we show that, in any dimension $d\\ge 2$, the infinite volume relaxation time satisfies \\[e^{\\beta^2/C}/C \\le T_{\\mathrm{rel}}\\le Ce^{e^{C\\beta}}\\] for some $C>0$. Our result entails that the Gibbs measure is unique. The $e^{\\beta^2}$ scaling was conjectured by Garrahan and Newman in 2000 and matches the behaviour of supercritical rooted kinetically constrained models such as the East model, thus recovering fragile glass phenomenology in the absence of kinetic constraints. More precisely, we show that, on a torus of side length $2^k$, when $\\beta\\to\\infty$ and $k/\\beta\\to0$, we have $T_{\\mathrm{rel}}=e^{2\\beta k(1+o(1))}$, confirming a prediction of Newman and Moore. Quite surprisingly, however, we also prove that, on non-periodic finite domains of size $n\\le e^{\\beta/C}$ for large $C>0$, we have the much larger asymptotics $\\ln T_{\\mathrm{rel}}=\\beta n^{\\Theta(1)}$. The main ingredients of the proofs are new results in extremal and enumerative combinatorics and rely on renormalisation ideas for the dynamics and its groundstates also known as the Ledrappier subshift. Our combinatorial results also have consequences in geometric group theory (more precisely to the complexity of the word problem for the Baumslag finitely presented group), ergodic theory and linear coding theory.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.PR",
+          "cond-mat.stat-mech",
+          "math.CO",
+          "math.DS",
+          "math.GR"
+        ],
+        "announced_at": "2026-11-18T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2606.16259",
+        "pdf_url": "https://arxiv.org/pdf/2606.16259"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Gibbs-measure uniqueness, Ledrappier subshift ground states and relaxation connect thermodynamic and symbolic interests.",
+        "tldr": "The triangular plaquette dynamics has super-Arrhenius relaxation bounds, with sharply different periodic and nonperiodic finite-volume behaviour.",
+        "problem": "Bound relaxation times of the plaquette Glauber dynamics and determine boundary-dependent asymptotics.",
+        "main_result": "For every inverse temperature \\(\\beta>0\\) and dimension \\(d\\geq2\\), the infinite-volume relaxation time satisfies \\(e^{\\beta^2/C}/C\\leq T_{\\mathrm{rel}}\\leq C e^{e^{C\\beta}}\\) for some \\(C>0\\), and the Gibbs measure is unique. On a torus of side \\(2^k\\), as \\(\\beta\\to\\infty\\) and \\(k/\\beta\\to0\\), the authors obtain \\(T_{\\mathrm{rel}}=e^{2\\beta k(1+o(1))}\\). On nonperiodic finite domains of size \\(n\\leq e^{\\beta/C}\\), for large \\(C\\), they instead obtain \\(\\ln T_{\\mathrm{rel}}=\\beta n^{\\Theta(1)}\\). The combinatorial results also have stated consequences for geometric group theory, ergodic theory and coding theory.",
+        "methods": [
+          "Extremal and enumerative combinatorics",
+          "Renormalization of dynamics and ground states",
+          "Ledrappier subshift structure"
+        ],
+        "context": "Gibbs dynamics, symbolic ground states and relaxation in statistical mechanics.",
+        "keywords": [
+          "Gibbs measures",
+          "relaxation time",
+          "Ledrappier subshift",
+          "plaquette model"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 9,
+    "RELATED / POSSIBLY INTERESTING": 9,
+    "LOW PRIORITY": 12
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-11-18T11:04:38.206623Z",
+      "feed_published_at": "2026-11-18T00:00:00-05:00",
+      "feed_build_at": "2026-11-18T05:02:40Z",
+      "feed_date": "2026-11-18",
+      "sha256": "6be1f1c37c7be56d2f5b31b7af8e79907d977c999dc52ef962b045f71c555788",
+      "byte_length": 61592,
+      "capture_run_url": null
+    }
+  ]
+}
