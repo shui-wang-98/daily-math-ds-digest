@@ -1,0 +1,1082 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-11-20",
+  "generated_at": "2026-11-20T11:02:39.748135Z",
+  "feed_build_at": "2026-11-20T05:06:26Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 26 unseen announcements: 8 HIGH PRIORITY, 10 RELATED / POSSIBLY INTERESTING, and 8 LOW PRIORITY. Central themes include group-action matings and orbit equivalence, entropy under time changes, Hausdorff-dimension limits, invariant curves with positive entropy, shadowing and minimal p-adic actions. Related work concerns Teichmüller dynamics, dispersing billiards, low-regularity rigidity, heteroclinic graphs and invariant tori. No followed-author matches occur in this input; possible exceptions, unspecified hypotheses and numerical evidence remain distinguished from the stated theorem claims.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2611.24966",
+        "versioned_id": "2611.24966v1",
+        "title": "Lattice-ordered Spectral Systems for Morse Representations",
+        "authors": [
+          "Samuel Castelo-Mourelle",
+          "Robert Vandervorst"
+        ],
+        "abstract": "We show that Morse representations can be algebraically described by spectral systems, a notion introduced by B. Matschke for poset-filtered chain complexes. This provides an algebraic alternative to connection matrices and yields algebraic invariants via R-modules over an arbitrary ring R. This approach applies in particular to Conley index theory for semi-flows. We discuss the theory of spectral systems and, as an application to dynamical systems, explain the relation to R. Franzosa's theory of connection matrices. In this context we introduce the concept of a spectral net. In contrast to traditional spectral sequences, spectral nets over a lattice display a rich network of (higher) differentials. In the application to dynamical systems these differentials provide information about connecting orbits.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.AT"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.24966",
+        "pdf_url": "https://arxiv.org/pdf/2611.24966"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Morse representations, Conley index theory and connecting-orbit invariants directly concern topological dynamics.",
+        "tldr": "Spectral systems algebraically describe Morse representations, and lattice spectral nets encode information about connecting orbits.",
+        "problem": "Describe Morse representations algebraically beyond the connection-matrix framework.",
+        "main_result": "The authors describe Morse representations by spectral systems for poset-filtered chain complexes, yielding invariants valued in modules over an arbitrary ring \\(R\\). The approach applies to Conley index theory for semiflows and is related to Franzosa connection matrices. The introduced spectral nets over a lattice carry networks of higher differentials that provide information about connecting orbits. The precise reconstruction statements and hypotheses: Not specified in the abstract.",
+        "methods": [
+          "Matschke spectral systems for poset-filtered chain complexes",
+          "Lattice spectral nets",
+          "Comparison with connection matrices"
+        ],
+        "context": "Algebraic topology in Morse-Conley dynamics and connecting-orbit structure.",
+        "keywords": [
+          "Morse representations",
+          "spectral systems",
+          "Conley index",
+          "connecting orbits"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.25006",
+        "versioned_id": "2611.25006v1",
+        "title": "Mateability of Fuchsian lattices with polynomials, and failure of algebraicity",
+        "authors": [
+          "Yusheng Luo",
+          "Mahan Mj",
+          "Sabyasachi Mukherjee"
+        ],
+        "abstract": "We prove that all Fuchsian lattices, with the possible exceptions of those associated with compact orbifolds of type (0,3) and (1,1), can be mated with complex polynomials, providing the first examples of such combinations beyond genus-zero orbifolds. We also present the first construction of matings between simply degenerate Kleinian groups and polynomial maps. These matings are realized as holomorphic, though not necessarily algebraic, correspondences, demonstrating that Fatou's vision of unifying Kleinian group actions and polynomial dynamics can be fulfilled in the wider setting of transcendental correspondences. We achieve this by generalizing the orbit equivalence mating framework introduced in our earlier work. Specifically, we use pinching and acceleration techniques to construct a new class of piecewise M\\\"obius covering maps of the circle that are orbit equivalent to Fuchsian groups. By mating these circle coverings with polynomials, we construct degenerate polynomial-like maps whose analytic continuations yield the desired correspondences. The quality of this orbit equivalence plays a crucial role in the mating description, as well as in governing whether the resulting correspondences are algebraic.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CV",
+          "math.GT"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.25006",
+        "pdf_url": "https://arxiv.org/pdf/2611.25006"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Orbit equivalence and the interaction of group actions with polynomial dynamics directly match group-action interests.",
+        "tldr": "Fuchsian lattices, apart from two possible compact-orbifold exceptions, admit polynomial matings as holomorphic correspondences that need not be algebraic.",
+        "problem": "Unify Fuchsian or Kleinian group actions with polynomial dynamics and understand algebraicity of the resulting correspondences.",
+        "main_result": "All Fuchsian lattices can be mated with complex polynomials, with possible exceptions for compact orbifolds of types \\((0,3)\\) and \\((1,1)\\). The authors also construct matings between simply degenerate Kleinian groups and polynomial maps. These yield holomorphic correspondences that are not necessarily algebraic. Pinching and acceleration produce piecewise Möbius circle coverings orbit equivalent to Fuchsian groups; mating these coverings with polynomials gives degenerate polynomial-like maps whose analytic continuations yield the correspondences. The quality of orbit equivalence influences the mating description and algebraicity. The precise algebraicity criterion: Not specified in the abstract.",
+        "methods": [
+          "Orbit-equivalence mating framework",
+          "Pinching and acceleration",
+          "Analytic continuation of degenerate polynomial-like maps"
+        ],
+        "context": "Group actions, complex polynomial dynamics and holomorphic correspondences.",
+        "keywords": [
+          "Fuchsian lattices",
+          "matings",
+          "orbit equivalence",
+          "holomorphic correspondences"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.25118",
+        "versioned_id": "2611.25118v1",
+        "title": "Rank and Rel in Strata of Abelian Differentials",
+        "authors": [
+          "Ruocheng Yang"
+        ],
+        "abstract": "We prove that every invariant subvariety M in a genus g stratum H(k_1,...,k_n) of Abelian differentials satisfies rank(M) <= rel(M) + 1 + sum_i (k_i - 1). In particular, every invariant subvariety with rel zero in a principal stratum is a Teichm\\\"uller curve. Combined with work of Eskin, Filip and Wright, this implies that each principal stratum contains only finitely many nonarithmetic Teichm\\\"uller curves. If rank(M) < g, we also show that rank(M) + rel(M) <= g - 1 + n/2.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.AG",
+          "math.GT"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.25118",
+        "pdf_url": "https://arxiv.org/pdf/2611.25118"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Invariant subvarieties and Teichmüller curves give a direct connection to geometric dynamics.",
+        "tldr": "Rank-rel inequalities imply that rel-zero invariant subvarieties in principal strata are Teichmüller curves and yield a finiteness consequence.",
+        "problem": "Bound rank and relative dimension of invariant subvarieties in strata of Abelian differentials.",
+        "main_result": "Every invariant subvariety \\(M\\) in a genus-\\(g\\) stratum \\(H(k_1,\\ldots,k_n)\\) satisfies \\(\\operatorname{rank}(M)\\leq\\operatorname{rel}(M)+1+\\sum_i(k_i-1)\\). In a principal stratum, every rel-zero invariant subvariety is therefore a Teichmüller curve. Combined with work of Eskin, Filip and Wright, this implies that each principal stratum contains only finitely many nonarithmetic Teichmüller curves. If \\(\\operatorname{rank}(M)<g\\), then \\(\\operatorname{rank}(M)+\\operatorname{rel}(M)\\leq g-1+n/2\\). The proof techniques for the inequalities: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Strata of Abelian differentials, invariant subvarieties and Teichmüller dynamics.",
+        "keywords": [
+          "rank and rel",
+          "Abelian differentials",
+          "principal strata",
+          "Teichmüller curves"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.25175",
+        "versioned_id": "2611.25175v1",
+        "title": "An Explicit Three-Dimensional Dispersing Billiard with Finite Horizon",
+        "authors": [
+          "Peyman Eslami"
+        ],
+        "abstract": "We construct an explicit three-dimensional periodic Lorentz gas whose quotient by the period lattice \\(2\\Z^3\\) has 38 spherical scatterers with rational centers and four rational radii. The scatterers are strictly separated, so the associated dispersing billiard has no corners or cusps. We prove finite horizon by establishing a common blocking margin for every rational direction. A projected-lattice estimate for the face-centered cubic core leaves nine exceptional directions, handled by a finite line-space covering certificate. Simultaneous rational approximation transfers this margin to every direction and yields an explicit upper horizon bound. All finite calculations use exact arithmetic, with verification data and algorithms included. The positive separation and blocking margins also ensure stability under sufficiently small independent perturbations of the centers and radii.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.25175",
+        "pdf_url": "https://arxiv.org/pdf/2611.25175"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "An explicit dispersing billiard with finite horizon is directly related to hyperbolic billiard dynamics.",
+        "tldr": "A periodic three-dimensional Lorentz gas with 38 rational spherical scatterers has finite horizon and persists under small scatterer perturbations.",
+        "problem": "Construct and certify a strictly separated three-dimensional dispersing billiard with finite horizon.",
+        "main_result": "The quotient by \\(2\\mathbb Z^3\\) has 38 spherical scatterers with rational centers and four rational radii. Strict separation excludes corners and cusps. A common blocking margin for rational directions, together with simultaneous rational approximation, gives finite horizon and an explicit upper horizon bound. A projected-lattice estimate leaves nine exceptional directions, resolved by a finite line-space covering certificate. All finite computations use exact arithmetic. Positive separation and blocking margins give stability under sufficiently small independent changes of centers and radii. The numerical horizon bound: Not specified in the abstract.",
+        "methods": [
+          "Projected-lattice estimate",
+          "Finite line-space covering certificate",
+          "Simultaneous rational approximation",
+          "Exact arithmetic"
+        ],
+        "context": "Periodic Lorentz gases and the geometry of dispersing billiards.",
+        "keywords": [
+          "finite horizon",
+          "dispersing billiards",
+          "Lorentz gas",
+          "exact certificates"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.25275",
+        "versioned_id": "2611.25275v1",
+        "title": "Moduli of continuity preserved by the Hilbert Transform",
+        "authors": [
+          "Pedro Duarte",
+          "Tom\\'e Graxinha"
+        ],
+        "abstract": "It has long been known that the Hilbert transform preserves certain moduli of continuity such as H\\\"older continuity. In~\\cite{GS01}, M. Goldstein and W. Schlag provided a criterion, based on two simple conditions, for a modulus of continuity to be preserved under the Hilbert transform. These conditions are not satisfied by the weak-H\\\"older and the log-H\\\"older moduli of continuity. More recently, A. Avila, Y. Last, M. Shamis and Q. Zhou proved in~\\cite{ALSZ21} that for compactly supported $t$-log-H\\\"older continuous functions ($t>1$) their Hilbert transforms are at least $(t-1)$-log-H\\\"older continuous. A similar result holds for weak-H\\\"older continuous functions. In this note we extend these results to a class of continuous functions satisfying a couple of mild integrability conditions.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math-ph",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.25275",
+        "pdf_url": "https://arxiv.org/pdf/2611.25275"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Weak and logarithmic continuity estimates offer a possible technical connection, but the abstract states no specific dynamical application.",
+        "tldr": "Hilbert-transform continuity results are extended to continuous functions satisfying additional mild integrability conditions.",
+        "problem": "Extend preservation and loss-of-modulus results beyond the previously described compactly supported cases.",
+        "main_result": "The abstract recalls that compactly supported \\(t\\)-log-Hölder functions with \\(t>1\\) have Hilbert transforms that are at least \\((t-1)\\)-log-Hölder, with a similar prior result for weak-Hölder functions. The authors extend these results to a class of continuous functions satisfying two mild integrability conditions. The new integrability conditions and the precise extended estimates: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Hilbert transforms and moduli of continuity.",
+        "keywords": [
+          "Hilbert transform",
+          "log-Hölder continuity",
+          "weak-Hölder continuity",
+          "integrability"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.25318",
+        "versioned_id": "2611.25318v1",
+        "title": "Kakutani equivalence of higher rank unipotent abelian actions I",
+        "authors": [
+          "Adam Kanigowski",
+          "Philipp Kunde",
+          "Kurt Vinhage",
+          "Daren Wei"
+        ],
+        "abstract": "We study Kakutani equivalence of higher-rank abelian unipotent actions. We construct a Kakutani invariant for general $\\mathbb{R}^n$-actions and establish a quantitative vanishing criterion. By this criterion, we prove that ergodic abelian horocyclic actions on finite-volume quotients of connected semisimple Lie groups are loosely Kronecker. We also include a proof of the Abramov entropy formula for time changes of Rn-actions, following the strategy developed by Nadler.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.25318",
+        "pdf_url": "https://arxiv.org/pdf/2611.25318"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Kakutani invariants, entropy under time changes and higher-rank actions directly match entropy and group-action interests.",
+        "tldr": "A Kakutani invariant with a vanishing criterion shows the stated abelian horocyclic actions are loosely Kronecker.",
+        "problem": "Study Kakutani equivalence of higher-rank abelian unipotent actions.",
+        "main_result": "The authors construct a Kakutani invariant for general \\(\\mathbb R^n\\)-actions and prove a quantitative criterion for its vanishing. They use it to show that ergodic abelian horocyclic actions on finite-volume quotients of connected semisimple Lie groups are loosely Kronecker. They also give a proof of the Abramov entropy formula for time changes of \\(\\mathbb R^n\\)-actions following the strategy of Nadler. The invariant, quantitative criterion and entropy formula in explicit form: Not specified in the abstract.",
+        "methods": [
+          "Kakutani invariant with quantitative vanishing criterion",
+          "Nadler strategy for the Abramov entropy formula"
+        ],
+        "context": "Kakutani equivalence, higher-rank homogeneous actions and time-change entropy.",
+        "keywords": [
+          "Kakutani equivalence",
+          "unipotent actions",
+          "loosely Kronecker",
+          "Abramov formula"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.25362",
+        "versioned_id": "2611.25362v1",
+        "title": "Rigidity and Non-Rigidity of Disk Pseudo-Rotations below $C^2$",
+        "authors": [
+          "Jian Wang",
+          "Peizheng Yu"
+        ],
+        "abstract": "For every $0<\\beta\\le1$, we prove $C^0$-rigidity of area-preserving $C^{1,\\beta}$ disk pseudo-rotations with non-Brjuno rotation number. At the $C^1$ endpoint, every non-Brjuno rotation number of zero exponential type admits non-rigid examples. We also obtain a different rigidity result when the rotation number has positive exponential type: the boundary restriction of every $C^1$ pseudo-rotation is rigid and topologically conjugate to a rotation. We show that this boundary conclusion fails in the bi-Lipschitz class by constructing non-rigid examples for every rotation number of finite positive exponential type. The proof of rigidity is based on a finite-information closing theorem under H\\\"older regularity. For the construction of counterexamples, we use disjoint supports instead of a summable perturbation scheme.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.25362",
+        "pdf_url": "https://arxiv.org/pdf/2611.25362"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Rigidity, topological conjugacy and regularity thresholds give a substantial smooth and topological-dynamics connection.",
+        "tldr": "Disk pseudo-rotation rigidity holds at positive Hölder derivative regularity, while endpoint and bi-Lipschitz counterexamples depend on arithmetic type.",
+        "problem": "Determine rigidity and non-rigidity below twice continuous differentiability for disk pseudo-rotations.",
+        "main_result": "For every \\(0<\\beta\\leq1\\), area-preserving \\(C^{1,\\beta}\\) disk pseudo-rotations with non-Brjuno rotation number are \\(C^0\\)-rigid. At \\(C^1\\), every non-Brjuno number of zero exponential type admits non-rigid examples. For positive exponential type, the boundary restriction of every \\(C^1\\) pseudo-rotation is rigid and topologically conjugate to a rotation. This boundary conclusion fails in the bi-Lipschitz class for every rotation number of finite positive exponential type. The proof uses finite-information closing under Hölder regularity; counterexamples use disjoint supports.",
+        "methods": [
+          "Finite-information closing theorem under Hölder regularity",
+          "Disjoint-support counterexample construction"
+        ],
+        "context": "Low-regularity conservative dynamics, rotation arithmetic and rigidity.",
+        "keywords": [
+          "disk pseudo-rotations",
+          "rigidity",
+          "non-Brjuno numbers",
+          "regularity thresholds"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.25600",
+        "versioned_id": "2611.25600v1",
+        "title": "Criteria for memory-induced blow-up in distributed delay differential equations",
+        "authors": [
+          "Yu Ichida"
+        ],
+        "abstract": "This paper investigates the conditions under which solutions to distributed delay differential equations describing memory accumulation and forgetting blow up in finite time. It provides criteria for memory-induced blow-up, which means finite-time blow-up of the delayed equation while the corresponding non-delayed equation, obtained in a certain limit, has global solutions. In the author's previous work, memory-induced blow-up was shown for specific nonlinearities by means of Poincar\\'e-type compactification, but a general theory was not established. Here, the two-dimensional ODE system derived by the linear chain trick is rewritten as an orbit equation, and a comparison theorem and an Osgood-type integral condition are applied to obtain a blow-up criterion based on the existence of a subsolution. This characterizes the nonlinearities for which memory-induced blow-up occurs. This paper also gives a necessary condition in a special case, a global existence condition based on a supersolution, and a systematic method for constructing subsolutions for separable nonlinearities. These results recover the author's previous results and are illustrated through several examples.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.25600",
+        "pdf_url": "https://arxiv.org/pdf/2611.25600"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is delay-equation blow-up criteria without a central entropy, symbolic, dimensional or group-action theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.25996",
+        "versioned_id": "2611.25996v1",
+        "title": "Rational maps with at most three critical values have no Herman rings",
+        "authors": [
+          "Yuming Fu",
+          "Weiwei Su",
+          "Fei Yang"
+        ],
+        "abstract": "We prove that any rational map with at most three critical values has no Herman rings. This generalizes previous results of Shishikura and Milnor on bi-critical rational maps.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.25996",
+        "pdf_url": "https://arxiv.org/pdf/2611.25996"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Excluding Herman rings concerns invariant structures in complex dynamics.",
+        "tldr": "A rational map with at most three critical values has no Herman rings.",
+        "problem": "Exclude Herman rings under a bound on the number of critical values.",
+        "main_result": "The authors prove that every rational map with at most three critical values has no Herman rings, extending the stated results of Shishikura and Milnor for bi-critical rational maps. Further hypotheses and proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Rational complex dynamics and Herman rings.",
+        "keywords": [
+          "rational maps",
+          "critical values",
+          "Herman rings"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26028",
+        "versioned_id": "2611.26028v1",
+        "title": "On the dimension of $V$-variable fractals",
+        "authors": [
+          "Corey de Wit"
+        ],
+        "abstract": "Random recursive sets have been used to model a wide range of fractal phenomena, but they can be slow and difficult to generate. $V$-variability address this problem by allowing these sets at most $V$ distinct shapes at each level of magnification. The formulae for the almost sure Hausdorff dimension of both classes is known, and it has been conjectured that (under mild assumptions) the $V$-variable dimension converges to the random recursive dimension as $V\\to\\infty$. We prove this conjecture.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26028",
+        "pdf_url": "https://arxiv.org/pdf/2611.26028"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Almost-sure Hausdorff dimension and random fractal limits directly match fractal-dimension interests.",
+        "tldr": "Under the stated mild assumptions, variable-fractal dimensions converge to the random-recursive dimension as the variability parameter grows.",
+        "problem": "Resolve convergence of the almost-sure Hausdorff dimensions of variable fractals to the random-recursive dimension.",
+        "main_result": "In \\(V\\)-variable recursive sets, at most \\(V\\) distinct shapes occur at each magnification level. The authors prove the conjectured convergence of the \\(V\\)-variable almost-sure Hausdorff dimension to the random-recursive dimension as \\(V\\to\\infty\\), under mild assumptions referred to in the abstract. The assumptions, convergence rate and proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Random recursive fractals and Hausdorff dimension.",
+        "keywords": [
+          "Hausdorff dimension",
+          "V-variable fractals",
+          "random recursive sets",
+          "dimension convergence"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26184",
+        "versioned_id": "2611.26184v1",
+        "title": "Invariant real curves arising from semiconjugacies of rational maps",
+        "authors": [
+          "Hongxin Sun"
+        ],
+        "abstract": "In this paper, we study real analytic invariant curves arising from semiconjugacies of real rational maps. Such semiconjugacies arise naturally in Eremenko's work on invariant Jordan analytic curves. While invariant generalized circles are easy to obtain from real rational maps, we are interested in curves not contained in any generalized circle. First, for a non-exceptional polynomial of degree at least two, we prove that every invariant curve arising from such a semiconjugacy is contained in a generalized circle. Second, in the rational map case, we construct invariant curves arising in this way that are not contained in any generalized circle and have arbitrarily many self-intersections, counted with multiplicity. Moreover, the rational maps can be chosen so that their restrictions to these curves have positive topological entropy.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26184",
+        "pdf_url": "https://arxiv.org/pdf/2611.26184"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Invariant real curves, semiconjugacy and positive topological entropy directly match topological and complex dynamics.",
+        "tldr": "Polynomial semiconjugacy curves are constrained to generalized circles, whereas rational maps admit self-intersecting examples with positive entropy.",
+        "problem": "Describe real analytic invariant curves arising from semiconjugacies of real rational maps.",
+        "main_result": "For a non-exceptional polynomial of degree at least two, every invariant curve arising from the specified semiconjugacy is contained in a generalized circle. For rational maps, the authors construct curves arising in this way that lie in no generalized circle and have arbitrarily many self-intersections, counted with multiplicity. The rational maps can be chosen so that their restrictions to these curves have positive topological entropy. The precise semiconjugacy data, exceptional class and proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Semiconjugacy, invariant analytic curves and entropy in rational dynamics.",
+        "keywords": [
+          "invariant curves",
+          "semiconjugacy",
+          "self-intersections",
+          "topological entropy"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26205",
+        "versioned_id": "2611.26205v1",
+        "title": "Convergence of the Most Probable Transition Paths in Multiscale Systems",
+        "authors": [
+          "Qiqi Lian",
+          "Shanqi Liu",
+          "Jinqiao Duan"
+        ],
+        "abstract": "This paper is devoted to study the convergence behavior of the most probable transition paths in a class of multiscale stochastic dynamical systems. First, based on Euler-Lagrange equations, we establish proximity and convergence results in the space of continuous functions endowed with the supremum norm. These results compare the most probable paths of the multiscale system with those of averaged system derived from the averaging principle. Next, we utilize a variational framework and analyze the Onsager-Machlup functionals using $\\Gamma$-convergence. Together with the equi-coercivity of the functional family, we prove the convergence of both their minima and minimizers. Specifically, we show weak convergence of the minimizers in the Cameron-Martin space $H^1$, which implies their strong convergence in $L^2$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26205",
+        "pdf_url": "https://arxiv.org/pdf/2611.26205"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is variational convergence of stochastic transition paths without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26473",
+        "versioned_id": "2611.26473v1",
+        "title": "Preventing cycles in Lotka--Volterra systems",
+        "authors": [
+          "Matheus C. Bortolan",
+          "Piotr Kalita",
+          "Jos\\'e Antonio Langa",
+          "Rafael O. Moura"
+        ],
+        "abstract": "We study cycles of heteroclinic connections between equilibria of Lotka--Volterra systems with negative self-interactions. We prove that generalized strict diagonal dominance makes the invasion, connection, and weak graphs acyclic for every intrinsic growth vector. No hyperbolicity assumption is needed, and the associated semiflow is gradient with respect to its equilibria. For the broader class of Volterra--Lyapunov stable matrices, we show that two equilibria are joined by a heteroclinic connection exactly when the species that enter have positive invasion rates at the source and the species that leave have nonpositive invasion rates at the target. We show by examples that the three graphs can differ, that the dominance threshold is sharp, and that generalized dominance is not necessary for acyclicity. We also give a quantitative criterion for cycle exclusion in terms of the symmetric and skew parts of a weighted interaction matrix.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26473",
+        "pdf_url": "https://arxiv.org/pdf/2611.26473"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Heteroclinic orbit graphs, acyclicity and gradient semiflows give a related qualitative-dynamics connection.",
+        "tldr": "Generalized strict diagonal dominance prevents heteroclinic graph cycles for every growth vector without assuming hyperbolicity.",
+        "problem": "Characterize and exclude heteroclinic cycles between equilibria of Lotka-Volterra systems with negative self-interactions.",
+        "main_result": "Generalized strict diagonal dominance makes the invasion, connection and weak graphs acyclic for every intrinsic growth vector; no hyperbolicity is assumed, and the semiflow is gradient with respect to its equilibria. For Volterra-Lyapunov stable matrices, a heteroclinic connection exists exactly when entering species have positive invasion rates at the source and leaving species have nonpositive invasion rates at the target. Examples distinguish the three graphs, show sharpness of the dominance threshold and show generalized dominance is not necessary. A quantitative exclusion criterion uses symmetric and skew parts of a weighted interaction matrix. The explicit criterion: Not specified in the abstract.",
+        "methods": [
+          "Invasion-rate characterization",
+          "Symmetric/skew decomposition of a weighted interaction matrix",
+          "Examples testing graph distinctions and sharpness"
+        ],
+        "context": "Heteroclinic structure and gradient behavior in population dynamics.",
+        "keywords": [
+          "heteroclinic graphs",
+          "acyclicity",
+          "Lotka-Volterra systems",
+          "diagonal dominance"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26566",
+        "versioned_id": "2611.26566v1",
+        "title": "Topological notions of Shadowing under Semi-Conjugacy",
+        "authors": [
+          "Adarsh Bura",
+          "Chris Good"
+        ],
+        "abstract": "We study various notions of shadowing and investigate whether they are preserved under semi-conjugacy and inverse limits. In particular, we study Inverse shadowing, $H$-shadowing, Periodic shadowing, Ramsey shadowing, Density shadowing and Ergodic shadowing.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26566",
+        "pdf_url": "https://arxiv.org/pdf/2611.26566"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Shadowing, semiconjugacy and inverse limits are central topological-dynamics themes.",
+        "tldr": "The paper studies preservation of several shadowing notions under semiconjugacy and inverse limits.",
+        "problem": "Investigate whether shadowing variants are preserved under semiconjugacy and inverse-limit constructions.",
+        "main_result": "The authors study inverse shadowing, \\(H\\)-shadowing, periodic shadowing, Ramsey shadowing, density shadowing and ergodic shadowing. The abstract does not state which notions are preserved or the hypotheses for any preservation theorem. The specific preservation results and proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Topological shadowing properties and dynamical factor constructions.",
+        "keywords": [
+          "shadowing",
+          "semiconjugacy",
+          "inverse limits",
+          "topological dynamics"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.24982",
+        "versioned_id": "2611.24982v1",
+        "title": "Orbits of $p$-adic flows: balls, time-one maps and minimal group actions",
+        "authors": [
+          "Kirill Terskii"
+        ],
+        "abstract": "Let $f$ be a vector field on $\\mathbb{Z}_p^d$ given by polynomials, or by power series converging on $\\mathbb{Z}_p^d$, whose coefficients are divisible by $p^c$, where $c \\ge 1$ ($c \\ge 2$ when $p = 2$). Its flow exists for every $p$-adic time. I show that $t \\mapsto \\varphi_t(x)$ multiplies distances by exactly $\\|f(x)\\|_p$, in every dimension. This gives explicit flow-box coordinates, closed formulas for hitting times, return times and orbit averages, and a Newton iteration that computes them with quadratic convergence; in dimension one it recovers Mukhamedov's theorem that interpolated orbits are balls. I then show that the analytic maps $g$ congruent to the identity modulo $p^c$, coefficientwise, are exactly the time-one maps of such fields, and that the field is congruent to $g - \\mathrm{id}$ modulo $p^{c+1}$. So the interpolated iterates of Bell and Poonen are flows of this kind, and I obtain a quantitative minimality criterion: if the displacements $g_i(x_0) - x_0$ of $d$ such maps span $p^k\\mathbb{Z}_p^d$, the group they generate acts minimally on the ball of radius $p^{-k}$ about $x_0$. Where the argument of Cantat and Jang gives an orbit closure containing some open set, this names the ball, at every level $k$ and in every dimension; for $d = 2$ and $k = 1$ it is Jang's criterion for Markoff surfaces, which I test numerically at $7830$ points. Finally, the formal logarithm of $\\mathbb{G}_m$ or of an elliptic curve is the rectifying coordinate of an explicit field, so the local divisibility $v_p([t]z) = v_p(z) + v_p(t)$ for $v_p(z) \\ge 1 + c$, deep in the kernel of reduction, follows from the metric identity alone.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.24982",
+        "pdf_url": "https://arxiv.org/pdf/2611.24982"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Explicit orbit geometry and quantitative minimality of group actions directly match group-action and topological-dynamics interests.",
+        "tldr": "A metric identity for analytic p-adic flows yields orbit formulas, time-one-map characterization and explicit balls carrying minimal group actions.",
+        "problem": "Determine orbit geometry and minimality for sufficiently identity-close analytic p-adic maps and flows.",
+        "main_result": "For polynomial or convergent-power-series fields on \\(\\mathbb Z_p^d\\) with coefficients divisible by \\(p^c\\), where \\(c\\geq1\\) and \\(c\\geq2\\) if \\(p=2\\), the flow exists at every p-adic time and its orbit map scales distances by exactly \\(\\|f(x)\\|_p\\). This yields flow-box coordinates, hitting and return times, orbit averages and a quadratically convergent Newton iteration. Analytic maps coefficientwise congruent to the identity modulo \\(p^c\\) are exactly time-one maps of such fields, with field congruent to the displacement modulo \\(p^{c+1}\\). If displacements of \\(d\\) such maps at \\(x_0\\) span \\(p^k\\mathbb Z_p^d\\), their generated group acts minimally on the radius-\\(p^{-k}\\) ball about \\(x_0\\). Formal logarithms also give the stated local divisibility identity deep in reduction kernels; the Markoff-surface criterion is tested numerically at 7830 points.",
+        "methods": [
+          "Exact metric identity for orbit maps",
+          "Flow-box coordinates",
+          "Newton iteration",
+          "Formal logarithms",
+          "Numerical tests of the Markoff-surface criterion"
+        ],
+        "context": "p-adic analytic dynamics, orbit geometry and minimal group actions.",
+        "keywords": [
+          "p-adic flows",
+          "time-one maps",
+          "minimal actions",
+          "orbit averages"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.25313",
+        "versioned_id": "2611.25313v1",
+        "title": "Variational integrators for time-dependent Lagrangian systems on Lie groups",
+        "authors": [
+          "Leonardo Colombo",
+          "Mar\\'ia Emma Eyrea Iraz\\'u",
+          "David Mart\\'in de Diego",
+          "Mar\\'ia Daniela S\\'anchez",
+          "Marcela Zuccalli"
+        ],
+        "abstract": "We develop fixed-step variational integrators for time-dependent Lagrangian systems on Lie groups, derive their reduced dynamics, and analyze their long-time behavior by backward error analysis. We derive the continuous Euler-Lagrange equations, energy balance, and Noether conservation laws, and construct time-indexed discrete Lagrangians using retractions, with the midpoint-Cayley scheme treated explicitly. On their regularity domains, the resulting phase-space maps are symplectic. For left-invariant discrete Lagrangians, they reduce to Lie-Poisson maps that preserve coadjoint orbits and, when $G$ is connected, every Casimir function. A variational error analysis establishes second-order accuracy of the midpoint-Cayley method. We also construct an exactly symplectic, projectable extension on $T^*(\\mathbb R\\times G)$ whose formal modified Hamiltonian is affine in the momentum conjugate to time and admits symmetry reduction. Under uniform analyticity, coefficient bounds, and domain-containment assumptions, optimal truncation yields exponentially accurate interpolation and near-conservation of the modified extended Hamiltonian over exponentially long intervals. For a connected attitude network on $SO(3)^N$ with damping and uniformly positive, non-increasing coupling weights, we prove local asymptotic stability of the static consensus set for the continuous dynamics and exact preservation of total spatial momentum by the discrete scheme. Numerical experiments on the network and on a time-dependent rigid body on $SO(3)$ illustrate second-order convergence and the extended energy balance.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NA",
+          "cs.NA",
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.25313",
+        "pdf_url": "https://arxiv.org/pdf/2611.25313"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Symplectic reduction, coadjoint orbits and long-time geometric dynamics provide a related connection despite the numerical focus.",
+        "tldr": "Fixed-step variational schemes on Lie groups retain symplectic and reduced geometric structure, with conditional long-time backward-error estimates.",
+        "problem": "Construct and analyze geometric integrators for time-dependent Lagrangian systems on Lie groups.",
+        "main_result": "Phase-space maps are symplectic on their regularity domains. For left-invariant discrete Lagrangians they reduce to Lie-Poisson maps preserving coadjoint orbits and, when \\(G\\) is connected, every Casimir. The midpoint-Cayley method is second order. An exactly symplectic projectable extension on \\(T^*(\\mathbb R\\times G)\\) has a formal modified Hamiltonian affine in time-conjugate momentum. Exponentially accurate interpolation and long-time near-conservation require uniform analyticity, coefficient bounds and domain containment. For a connected attitude network on \\(SO(3)^N\\), damping and uniformly positive non-increasing coupling weights give continuous local asymptotic stability of static consensus; the discrete scheme exactly preserves total spatial momentum. Numerical experiments illustrate convergence and extended energy balance.",
+        "methods": [
+          "Retraction-based discrete Lagrangians",
+          "Midpoint-Cayley scheme",
+          "Variational error analysis",
+          "Backward error analysis",
+          "Symmetry reduction"
+        ],
+        "context": "Geometric numerical integration, Lie-Poisson reduction and attitude dynamics.",
+        "keywords": [
+          "variational integrators",
+          "Lie groups",
+          "symplectic maps",
+          "backward error analysis"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.25465",
+        "versioned_id": "2611.25465v1",
+        "title": "DeoPC: Data-Enabled Output-Feedback Predictive Control for State Regulation",
+        "authors": [
+          "Jingyuan Li",
+          "Dawei Shi",
+          "Ling Shi"
+        ],
+        "abstract": "Constrained regulation of the internal state of an unknown linear system is challenging when only input-output measurements are available online. In this work, we develop a data-enabled output-feedback predictive control (DeoPC) framework for constrained state regulation using input-output data. Specifically, a data-driven state estimate is constructed from past input-output data via a subspace-based singular value decomposition. Based on this state representation, we formulate a predictive controller that directly penalizes the state and control effort while enforcing the system constraints. Under persistent excitation and initialization conditions, we establish recursive feasibility and closed-loop stability of DeoPC in both noise-free and bounded-noise settings. In addition, we show that DeoPC can be calibrated to the physical state coordinates using a few offline state measurements, or treated as a model predictive control tuning problem when no state measurements are available. The effectiveness of DeoPC is demonstrated through simulations on an unstable batch reactor system.",
+        "announce_type": "cross",
+        "categories": [
+          "eess.SY",
+          "cs.SY",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.25465",
+        "pdf_url": "https://arxiv.org/pdf/2611.25465"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is data-enabled predictive control and constrained state regulation without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.25758",
+        "versioned_id": "2611.25758v1",
+        "title": "Global-in-Time Nonrelativistic Limit and KAM Tori for the Complex Klein-Gordon Equation on the Circle",
+        "authors": [
+          "Andrea Belloni"
+        ],
+        "abstract": "This paper establishes a global-in-time nonrelativistic limit for families of small-amplitude quasi-periodic solutions of the cubic complex Klein-Gordon equation on the circle. Firstly, we construct by a KAM block scheme, small-amplitude two-frequency invariant tori and show that their linear stability depends on whether the two excited Fourier indices coincide or are distinct: coincident indices yield linearly stable tori, whereas distinct indices yield partially hyperbolic tori. Moreover, controlling the dependence of the KAM scheme on the speed of light, we construct quasi-periodic solutions whose frequencies, after a gauge transformation, coincide exactly with those of quasi-periodic solutions of the limiting coupled NLS system, obtaining an approximation uniform for all times in the nonrelativistic regime. By this result, we further show that there exists a positive-measure set of frequencies such that, for each frequency, we can fix a quasi-periodic solution of the coupled NLS system and a suitable subsequence of Klein-Gordon solutions converging globally in time to the fixed NLS solution.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.25758",
+        "pdf_url": "https://arxiv.org/pdf/2611.25758"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Invariant tori, quasi-periodic solutions and partial hyperbolicity give a direct geometric-dynamics connection in a PDE setting.",
+        "tldr": "Two-frequency Klein-Gordon tori have stability determined by their excited modes and admit global-in-time approximation by coupled-NLS solutions.",
+        "problem": "Construct small quasi-periodic Klein-Gordon solutions and control their nonrelativistic limit uniformly in time.",
+        "main_result": "For the cubic complex Klein-Gordon equation on the circle, a KAM block scheme constructs small-amplitude two-frequency invariant tori. Coincident excited Fourier indices give linearly stable tori, while distinct indices give partially hyperbolic tori. Controlling the speed-of-light dependence yields quasi-periodic solutions whose gauge-transformed frequencies agree exactly with those of limiting coupled-NLS solutions, giving all-time approximation in the nonrelativistic regime. There is a positive-measure frequency set such that, at each frequency, one can fix an NLS solution and choose a subsequence of Klein-Gordon solutions converging globally in time to it. Quantitative smallness and approximation estimates: Not specified in the abstract.",
+        "methods": [
+          "KAM block scheme",
+          "Control of speed-of-light dependence",
+          "Gauge transformation"
+        ],
+        "context": "Infinite-dimensional quasi-periodic dynamics and nonrelativistic limits.",
+        "keywords": [
+          "KAM tori",
+          "partial hyperbolicity",
+          "Klein-Gordon equation",
+          "global-in-time approximation"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26092",
+        "versioned_id": "2611.26092v1",
+        "title": "Control of Complex Social Systems via Committed Minorities and Opinion Broadcast",
+        "authors": [
+          "Roberta Raineri",
+          "Mengbin Ye",
+          "Lorenzo Zino"
+        ],
+        "abstract": "Complex social systems are often characterized by a deep interconnection between individuals' opinion formation and their decision-making processes. In this chapter, we show how these two dynamics can be incorporated within a unifying game-theoretic coevolutionary model for actions and opinions. We present the main theoretical results concerning the convergence of the coevolutionary model, and its recent extensions to incorporate further features of real-world social systems. Then, we focus on the problem of controlling such a coevolutionary model. In particular, we present two distinct approaches: i) introducing a committed minority in the population, and ii) broadcasting information to some target individuals. For both of these methods, we discuss their implementation and provide theoretical guarantees on their performance. Finally, we demonstrate the effectiveness of the proposed control methods on different case studies, illustrating their implementation on simple academic examples, as well as exploring their performance in realistic scenarios using network structures inferred from real-world data. In summary, this chapter provides an overview of the mathematical approaches developed to model a population of individuals with coevolving actions and opinions, providing effective tools to study and, ultimately, control this complex socio-technical system.",
+        "announce_type": "cross",
+        "categories": [
+          "eess.SY",
+          "cs.SI",
+          "cs.SY",
+          "math.DS",
+          "math.OC"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26092",
+        "pdf_url": "https://arxiv.org/pdf/2611.26092"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is control of social opinion-action models without a central entropy, symbolic, dimensional or group-action theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26151",
+        "versioned_id": "2611.26151v1",
+        "title": "Power topologies and uniformities on bistochastic operators",
+        "authors": [
+          "Alexandru Chirvasitu"
+        ],
+        "abstract": "We prove that the set of invertible Koopman operators attached to the usual interval probability space is dense (and hence dense $G_{\\delta}$) in the space of bistochastic operators in the polynomial weak topology. This extends the non-polynomial analogue (due to Brown/Vershik/Ryzhikov/Eisner). We also show that the plain and polynomial weak topologies are distinct on bistochastic operators, confirming the distinction between the two results.",
+        "announce_type": "cross",
+        "categories": [
+          "math.FA",
+          "math.DS",
+          "math.GN"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26151",
+        "pdf_url": "https://arxiv.org/pdf/2611.26151"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Density of invertible Koopman dynamics in an operator topology directly concerns topological structures associated with measure-preserving dynamics.",
+        "tldr": "Invertible Koopman operators form a dense G-delta set in the polynomial weak topology on bistochastic operators.",
+        "problem": "Compare ordinary and polynomial weak density phenomena for Koopman and bistochastic operators.",
+        "main_result": "Invertible Koopman operators associated with the usual interval probability space are dense, and hence form a dense \\(G_\\delta\\), in the polynomial weak topology on bistochastic operators. This extends the stated ordinary weak-topology analogue. The ordinary and polynomial weak topologies on bistochastic operators are distinct. Definitions of the polynomial topology and proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Operator topologies and Koopman representations of probability-preserving dynamics.",
+        "keywords": [
+          "Koopman operators",
+          "bistochastic operators",
+          "polynomial weak topology",
+          "density"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26463",
+        "versioned_id": "2611.26463v1",
+        "title": "Neural Conditional Gaussian Model: Efficient Data Assimilation with Sequential Uncertainty Quantification for Nonlinear Dynamics",
+        "authors": [
+          "Chuanqi Chen",
+          "Nan Chen"
+        ],
+        "abstract": "Data assimilation (DA) in partially observed nonlinear systems requires repeated estimation of both hidden states and their uncertainty. Conventional nonlinear filtering can be computationally expensive and often relies on an explicit dynamical model. In this paper, we develop the Neural Conditional Gaussian Model (Neural CGM), a data-driven dynamical model that maps unobserved physical states into a learned latent space, where the dynamics of the latent states follow a conditional Gaussian structure. This structure allows closed-form DA updates in the latent space, while nonlinear encoder-decoder mappings retain the flexibility needed to represent complex dynamics in physical space. A key feature of Neural CGM is its treatment of uncertainty in DA. The latent posterior mean and covariance are mapped to the physical variables through a Gaussian decoder that combines local moment propagation with learned nonlinear corrections. The resulting physical-space posterior statistics depend on the sequentially updated latent distribution rather than on a separate post-processing estimate. The same statistics enter a Gaussian negative log-likelihood during training, so both the posterior mean and uncertainty affect the learned model. Because Neural CGM learns the dynamical model itself, it can also be used for state forecasting and simulation without explicit knowledge of the governing equations. Numerical experiments on benchmark nonlinear dynamical systems show accurate state estimation and forecasting while substantially reducing online assimilation cost relative to conventional nonlinear DA methods. Neural CGM is therefore suited to repeated state estimation, uncertainty quantification, and prediction from partial observations.",
+        "announce_type": "cross",
+        "categories": [
+          "cs.LG",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26463",
+        "pdf_url": "https://arxiv.org/pdf/2611.26463"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is learned data assimilation and uncertainty quantification without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26465",
+        "versioned_id": "2611.26465v1",
+        "title": "Global existence versus blow-up for Fermi-Pasta-Ulam-Tsingou lattices",
+        "authors": [
+          "Gerald Teschl",
+          "Anton Zand"
+        ],
+        "abstract": "This paper investigates the global behavior of infinite nonlinear lattices. In particular, for the Fermi--Pasta--Ulam--Tsingou-$\\alpha$ lattice (FPUT-$\\alpha$), we show global existence for small initial data via a region-based approach, and prove blow-up for negative energy and some positive energy, given appropriate conditions on the initial momentum and dispersion. Moreover, we extend these results to the nonlinear Klein-Gordon (DNKG) equation and nonlinear wave (DNW) equation. \\",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26465",
+        "pdf_url": "https://arxiv.org/pdf/2611.26465"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is existence and blow-up for nonlinear lattices without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26580",
+        "versioned_id": "2611.26580v1",
+        "title": "Existence and Uniqueness of Mild Solutions to Rough Stochastic Partial Differential Equations driven by Fractional Brownian Motion with Hurst Index $H > 1/4$",
+        "authors": [
+          "Maksim Vaskouski",
+          "Maksim Firsau"
+        ],
+        "abstract": "In this paper we prove a theorem on the unique solvability of the Cauchy problem for a stochastic partial differential equation driven by the fractional Brownian motion with Hurst index $H>\\frac{1}{4}$.",
+        "announce_type": "cross",
+        "categories": [
+          "math.PR",
+          "math.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26580",
+        "pdf_url": "https://arxiv.org/pdf/2611.26580"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is stochastic-PDE solvability without a central entropy, symbolic, dimensional or topological-dynamics theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26622",
+        "versioned_id": "2611.26622v1",
+        "title": "Quasipolynomial pyjamas",
+        "authors": [
+          "Sida Li"
+        ],
+        "abstract": "The ``pyjama stripe\" $E(\\varepsilon)$ is the set of all complex numbers whose real part lies within $\\varepsilon$ of the nearest integer. The Pyjama Problem asks whether, for each $\\varepsilon > 0$, there exists some union of finitely many rotations of $E(\\varepsilon)$ about the origin that covers the plane. This was answered in the affirmative by Manners. Kravitz and Leng subsequently showed that $\\exp(\\exp(\\exp(\\varepsilon^{-O(1)})))$ rotations suffice. In this paper, we prove an upper bound of \\[\\exp((\\log \\varepsilon^{-1})^{50000})\\] rotations. We also show that at least $(\\pi/2 + 0.003 + o(1))\\varepsilon^{-1}$ rotations are necessary, improving upon the natural lower bound of $(\\pi/2 + o(1))\\varepsilon^{-1}$.",
+        "announce_type": "cross",
+        "categories": [
+          "math.CO",
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26622",
+        "pdf_url": "https://arxiv.org/pdf/2611.26622"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Finite rotational coverings give a possible geometric group-action connection, although the main question is combinatorial.",
+        "tldr": "The Pyjama Problem receives a quasipolynomial upper bound on rotations and a strengthened linear-in-reciprocal-width lower bound.",
+        "problem": "Bound how many rotations of a stripe set are needed to cover the complex plane.",
+        "main_result": "For \\(\\varepsilon>0\\), the stripe set consists of complex numbers whose real part is within \\(\\varepsilon\\) of an integer. The authors improve the reported covering upper bound to \\(\\exp((\\log\\varepsilon^{-1})^{50000})\\) rotations about the origin. They also give the lower bound \\((\\pi/2+0.003+o(1))\\varepsilon^{-1}\\), improving the stated natural bound \\((\\pi/2+o(1))\\varepsilon^{-1}\\). The proof methods and precise asymptotic qualifications: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Geometric covering problems and rotations of periodic stripes.",
+        "keywords": [
+          "Pyjama Problem",
+          "rotational coverings",
+          "quasipolynomial bound",
+          "stripe sets"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2601.02932",
+        "versioned_id": "2601.02932v3",
+        "title": "Data-driven Reduction of Transfer Operators for Particle Clustering Dynamics",
+        "authors": [
+          "Nathalie Wehlitz",
+          "Grigorios A. Pavliotis",
+          "Christof Sch\\\"utte",
+          "Stefanie Winkelmann"
+        ],
+        "abstract": "We develop an operator-based framework to coarse-grain interacting particle systems that exhibit clustering dynamics. Starting from the particle-based transfer operator, we first construct a sequence of reduced representations: the operator is projected onto concentrations and then further reduced by representing the concentration dynamics on a geometric low-dimensional manifold and an adapted finite-state discretization. The resulting coarse-grained transfer operator is finally estimated from dynamical simulation data by inferring the transition probabilities between the Markov states. Applied to systems with multichromatic and Morse interaction potentials, the reduced model reproduces key features of the clustering process, including transitions between cluster configurations and the emergence of metastable states. Spectral analysis and transition-path analysis of the estimated operator reveal implied time scales and dominant transition pathways, providing an interpretable and efficient description of particle-clustering dynamics.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "cond-mat.stat-mech",
+          "math.DS",
+          "physics.comp-ph"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2601.02932",
+        "pdf_url": "https://arxiv.org/pdf/2601.02932"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Transfer-operator spectra, metastability and transition pathways give a plausible statistical-dynamics connection despite the data-driven modelling focus.",
+        "tldr": "A coarse-grained transfer operator estimated from simulations captures clustering transitions and metastable behavior.",
+        "problem": "Reduce interacting-particle clustering dynamics while retaining interpretable transition structure.",
+        "main_result": "The particle transfer operator is projected onto concentrations, then onto a geometric low-dimensional manifold and an adapted finite-state discretization. Transition probabilities are estimated from dynamical simulations. For multichromatic and Morse potentials, the reduced model reproduces key clustering features, including transitions between configurations and metastable states. Spectral and transition-path analyses reveal implied time scales and dominant pathways. Rigorous approximation guarantees and quantitative error bounds: Not specified in the abstract.",
+        "methods": [
+          "Transfer-operator projection",
+          "Geometric manifold reduction",
+          "Finite-state discretization",
+          "Simulation-based transition-probability estimation",
+          "Spectral and transition-path analysis"
+        ],
+        "context": "Statistical particle dynamics, transfer operators and metastability.",
+        "keywords": [
+          "transfer operators",
+          "coarse-graining",
+          "metastability",
+          "particle clustering"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2606.28318",
+        "versioned_id": "2606.28318v2",
+        "title": "Drift Behavior in a Bounded-Confidence Opinion Model with Media Influence",
+        "authors": [
+          "Oliver Zheng",
+          "Mason A. Porter"
+        ],
+        "abstract": "People's opinions can change both from their interactions with each other and from their interactions with media sources. Bounded-confidence models (BCMs) of opinion dynamics provide one framework to study such dynamics. In a BCM, the nodes of a network are agents with continuous-valued opinions, and these agents interact with each other via the edges of the network. In this paper, we extend the original Deffuant--Weisbuch (DW) BCM by incorporating influence from two media sources --- one with a positive value and one with a negative value --- to capture the effects of a polarized media landscape. We show both numerically and analytically that our extended DW model exhibits drifting behavior in which a large cluster of opinions shifts toward one of the media agents. We analyze how the drift trajectory and speed depend on the model parameters, and we identify conditions in which drift is promoted or suppressed. Our results provide insight into how competing media sources can influence collective opinion formation in social systems.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "physics.soc-ph",
+          "cs.SI",
+          "math.DS",
+          "math.PR",
+          "nlin.AO"
+        ],
+        "announced_at": "2026-11-20T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2606.28318",
+        "pdf_url": "https://arxiv.org/pdf/2606.28318"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is media-driven opinion drift in an applied social model without a central profile theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 8,
+    "RELATED / POSSIBLY INTERESTING": 10,
+    "LOW PRIORITY": 8
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-11-20T10:59:41.490922Z",
+      "feed_published_at": "2026-11-20T00:00:00-05:00",
+      "feed_build_at": "2026-11-20T05:06:26Z",
+      "feed_date": "2026-11-20",
+      "sha256": "cf547499640e31145df0efa3f168dd518ff1b76e5238897c2fbc182b3ccc622a",
+      "byte_length": 57102,
+      "capture_run_url": null
+    }
+  ]
+}
