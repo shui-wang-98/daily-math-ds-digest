@@ -1,0 +1,794 @@
+{
+  "schema_version": 2,
+  "report_date": "2026-11-23",
+  "generated_at": "2026-11-23T11:06:23.212078Z",
+  "feed_build_at": "2026-11-23T05:00:38Z",
+  "category": "math.DS",
+  "analysis_source": "Codex",
+  "overview": "This report covers 18 unseen announcements: 10 HIGH PRIORITY, 7 RELATED / POSSIBLY INTERESTING, and 1 LOW PRIORITY. Central themes include real-analytic lattice actions, stationary and translation-invariant measures, symbolic rigidity, fractal boundaries and Diophantine dimensions, together with topological realization and recurrence. Related entries concern symplectic ergodicity, random attractors, KAM tori, cut-and-project geometry and quantum equidistribution. No followed-author matches occur in this input; open-set classifications, survey contributions, conditional numerical guarantees and sharp-scale limitations retain their stated qualifications.",
+  "papers": [
+    {
+      "paper": {
+        "arxiv_id": "2611.26654",
+        "versioned_id": "2611.26654v1",
+        "title": "Local connectivity of Julia sets of Newton maps of trigonometric and hyperbolic functions",
+        "authors": [
+          "Molla Basir Ahamed",
+          "Sayantan Chakraborty"
+        ],
+        "abstract": "We study the Newton maps of $\\sin z$, $\\cos z$, $\\sinh z$, and $\\cosh z$, each of which is transcendental meromorphic and has infinitely many unbounded immediate attracting basins. We first verify directly that, for the cosine Newton map $N_{\\cos}(z) = z + \\cot z$, the half-planes $\\{\\pm \\operatorname{Im} z > M\\}$ are repelling petals at infinity for every $M \\ge 2$. These explicit petals allow us to apply the tame-basin criterion of Bara\\'nski, Fagella, Jarque, and Karpi\\'nska and obtain local connectivity of the spherical boundary of each immediate basin of $N_{\\cos}$. We also show that the Newton map of $Ae^{\\lambda z} + Be^{-\\lambda z}$, where $AB\\lambda \\neq 0$, is affinely conjugate to the sine Newton map $N_{\\sin}(z) = z - \\tan z$. The published local-connectivity theorem for $J(N_{\\sin})$ therefore applies to this entire family, including the cosine and the two hyperbolic Newton maps. We describe the invariant lines and basin geometry of the four maps and illustrate the corresponding dynamical planes numerically.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CV"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26654",
+        "pdf_url": "https://arxiv.org/pdf/2611.26654"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Local connectivity of Julia sets and basin boundaries directly concerns the topology of complex dynamical systems.",
+        "tldr": "Explicit repelling petals give local connectivity of immediate-basin boundaries, while affine conjugacy transfers a published Julia-set theorem to the stated Newton family.",
+        "problem": "Establish local connectivity and describe basin geometry for Newton maps of trigonometric and hyperbolic functions.",
+        "main_result": "For \\(N_{\\cos}(z)=z+\\cot z\\), the half-planes \\(\\{\\pm\\operatorname{Im}z>M\\}\\) are repelling petals at infinity for every \\(M\\geq2\\). The tame-basin criterion then gives local connectivity of the spherical boundary of each immediate basin. The Newton map of \\(Ae^{\\lambda z}+Be^{-\\lambda z}\\), with \\(AB\\lambda\\ne0\\), is affinely conjugate to \\(N_{\\sin}(z)=z-\\tan z\\). A published local-connectivity theorem for the latter Julia set therefore applies to the entire family, including the cosine and hyperbolic cases. The authors also describe invariant lines and basin geometry, with numerical dynamical-plane illustrations.",
+        "methods": [
+          "Explicit repelling petals",
+          "Barański-Fagella-Jarque-Karpińska tame-basin criterion",
+          "Affine conjugacy",
+          "Numerical dynamical-plane illustrations"
+        ],
+        "context": "Transcendental meromorphic dynamics and local connectivity of invariant boundaries.",
+        "keywords": [
+          "Newton maps",
+          "Julia sets",
+          "local connectivity",
+          "basin boundaries"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26727",
+        "versioned_id": "2611.26727v1",
+        "title": "Dynabase: A Database of Extreme Examples in Arithmetic Dynamics",
+        "authors": [
+          "Benjamin Hutz"
+        ],
+        "abstract": "We introduce Dynabase, a database cataloging extreme examples in arithmetic dynamics related to several major open conjectures: the Morton--Silverman uniform boundedness conjecture and the dynamical analogue of Lang's conjecture on canonical heights, as well as data on postcritically finite maps and maps with nontrivial automorphisms. This database collects the known examples of extreme behavior for these problems and tracks the current status of subproblems based on degree and field of definition.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26727",
+        "pdf_url": "https://arxiv.org/pdf/2611.26727"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Postcritically finite maps and automorphisms give a plausible arithmetic-dynamics connection, although this is a database contribution.",
+        "tldr": "Dynabase catalogs extreme arithmetic-dynamics examples and organizes conjectural subproblems by degree and field.",
+        "problem": "Collect known extreme examples relevant to arithmetic-dynamics conjectures.",
+        "main_result": "The database collects known examples related to the Morton-Silverman uniform boundedness conjecture and the dynamical analogue of the canonical-height conjecture of Lang, together with postcritically finite maps and maps with nontrivial automorphisms. It tracks subproblem status by degree and field of definition. The abstract presents a database rather than a claimed resolution of these conjectures. Database size, construction algorithms and completeness guarantees: Not specified in the abstract.",
+        "methods": [
+          "Cataloging known extreme examples by degree and field of definition"
+        ],
+        "context": "Arithmetic dynamics, canonical heights and postcritical finiteness.",
+        "keywords": [
+          "arithmetic dynamics",
+          "extreme examples",
+          "canonical heights",
+          "postcritically finite maps"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26798",
+        "versioned_id": "2611.26798v1",
+        "title": "Thurston measure is stationary with exponential Teichm\\\"uller moment",
+        "authors": [
+          "Alex Eskin",
+          "Kasra Rafi"
+        ],
+        "abstract": "In 1967, Furstenberg proved that every lattice in a connected semisimple Lie group with finite center admits a probability measure whose stationary measure on the associated Furstenberg boundary belongs to the Lebesgue measure class. We prove an analogue of this theorem for the action of the mapping class group on Teichm\\\"uller space. Every regular probability measure in the Thurston measure class on the space of projective measured foliations is the stationary measure of a non-elementary random walk with a finite exponential moment in the Teichm\\\"uller metric.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GN"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26798",
+        "pdf_url": "https://arxiv.org/pdf/2611.26798"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Stationary measures for mapping-class-group actions directly match group-action and invariant-measure interests.",
+        "tldr": "Every stated regular probability in the Thurston measure class is stationary for a non-elementary random walk with finite exponential Teichmüller moment.",
+        "problem": "Realize Thurston-class probabilities as stationary measures for mapping-class-group random walks.",
+        "main_result": "The authors prove that every regular probability measure in the Thurston measure class on projective measured foliations is stationary for a non-elementary random walk whose Teichmüller-metric exponential moment is finite. This is presented as an analogue of the stated Furstenberg theorem for lattice boundary measures. The regularity definition, walk construction and quantitative moment bounds: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Mapping class group actions, Teichmüller geometry and stationary boundary measures.",
+        "keywords": [
+          "Thurston measure",
+          "stationary measures",
+          "mapping class groups",
+          "exponential moment"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.27055",
+        "versioned_id": "2611.27055v1",
+        "title": "Real-analytic actions of lattices in $\\mathrm{SL}(n,\\mathbb R)$ on compact $n$-manifolds",
+        "authors": [
+          "Federico Rodriguez Hertz",
+          "Zhiren Wang"
+        ],
+        "abstract": "We classify real-analytic actions of arbitrary lattices in $\\mathrm{SL}(n,\\mathbb R)$ on compact connected $n$-manifolds without boundary, $n\\geq 3$, with no invariant-volume assumption. After finite-index restriction, the action has finite image, extends to a connected Lie group locally isomorphic to $\\mathrm{SL}(n,\\mathbb R)$ with an equivariant finite cover when needed, or is obtained by analytic surgery with at least one torus piece. In the last case the lattice is commensurable with a conjugate of $\\mathrm{SL}(n,\\mathbb Z)$. As a main input, we prove a general cocycle superrigidity theorem for real analytic germs.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GR"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.27055",
+        "pdf_url": "https://arxiv.org/pdf/2611.27055"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Classification and cocycle superrigidity of lattice actions directly match group-action dynamics.",
+        "tldr": "Real-analytic lattice actions in the stated dimension fall, after finite-index restriction, into finite-image, Lie-extension or analytic-surgery cases without assuming invariant volume.",
+        "problem": "Classify real-analytic actions of special-linear lattices on compact manifolds of matching dimension.",
+        "main_result": "For arbitrary lattices in \\(\\mathrm{SL}(n,\\mathbb R)\\), acting real analytically on compact connected boundaryless \\(n\\)-manifolds with \\(n\\geq3\\), no invariant-volume assumption is made. After restriction to finite index, the action has finite image, extends to a connected Lie group locally isomorphic to \\(\\mathrm{SL}(n,\\mathbb R)\\) with an equivariant finite cover when needed, or is obtained by analytic surgery with at least one torus piece. In the surgery case, the lattice is commensurable with a conjugate of \\(\\mathrm{SL}(n,\\mathbb Z)\\). A main input is a general cocycle superrigidity theorem for real-analytic germs. The detailed surgery models: Not specified in the abstract.",
+        "methods": [
+          "Cocycle superrigidity for real-analytic germs",
+          "Analytic surgery"
+        ],
+        "context": "Real-analytic lattice actions, Lie-group extensions and action classification.",
+        "keywords": [
+          "lattice actions",
+          "real-analytic rigidity",
+          "cocycle superrigidity",
+          "analytic surgery"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.27429",
+        "versioned_id": "2611.27429v1",
+        "title": "Non-local ergodic measures in symplectic dynamics",
+        "authors": [
+          "Jaime Paradela"
+        ],
+        "abstract": "We consider the direct product of two symplectomorphisms, one of which exhibits a basic set and the other one acts on a compact surface and has a non-degenerate elliptic equilibrium. Under a local domination condition we show that a typical real-analytic perturbation of this system displays a large normally hyperbolic lamination on which the natural invariant measure is ergodic. The proof, which introduces a novel geometric source of semi-local ergodicity, combines tools ranging from KAM theory to geometric measure theory and is robust enough to be of interest in more general configurations.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.27429",
+        "pdf_url": "https://arxiv.org/pdf/2611.27429"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Ergodic measures and normally hyperbolic invariant geometry give a substantial smooth-dynamics connection.",
+        "tldr": "Under local domination, typical analytic perturbations of the stated symplectic product possess a normally hyperbolic lamination whose natural measure is ergodic.",
+        "problem": "Construct non-local ergodic measures in a product setting with a basic set and an elliptic factor.",
+        "main_result": "The starting system is the direct product of two symplectomorphisms, one with a basic set and the other acting on a compact surface with a nondegenerate elliptic equilibrium. Under a local domination condition, for a typical real-analytic perturbation the authors obtain a large normally hyperbolic lamination with an ergodic natural measure. The abstract describes a geometric mechanism for semi-local ergodicity using tools ranging from KAM theory to geometric measure theory. The precise local domination condition, definition of typicality, size of the lamination and measure construction: Not specified in the abstract.",
+        "methods": [
+          "KAM theory",
+          "Geometric measure theory",
+          "Geometric mechanism for semi-local ergodicity"
+        ],
+        "context": "Symplectic dynamics, invariant laminations and ergodic measures.",
+        "keywords": [
+          "ergodic measures",
+          "symplectic dynamics",
+          "normally hyperbolic laminations",
+          "KAM theory"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.27528",
+        "versioned_id": "2611.27528v1",
+        "title": "Rigidity and nonrigidity for interval translation maps",
+        "authors": [
+          "Pascal Hubert",
+          "Alexandra Skripchenko"
+        ],
+        "abstract": "Almost every infinite-type interval translation map in the Bruin--Troubetzkoy family, and in Bruin's family with any fixed number of branches, is rigid for its invariant probability, where typicality is understood with respect to the intrinsic induction parameter measure. We prove this by exhibiting explicit repeated-word blocks in the induction and showing that their cylinders recur. In the opposite direction, we give a sufficient condition for nonrigidity of a primitive aperiodic substitution: the existence of a rational periodic vector of its incidence matrix in the return-word space whose coordinate sum is nonzero. The proof gives a uniform positive lower bound for symbol discrepancies at all sufficiently large times. For self-similar Bruin maps with primitive period substitution, the same condition also implies weak mixing. We apply the nonrigidity condition to an explicit self-similar infinite-type Bruin map on eight intervals, specifying its algebraic parameters and verifying its return words.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.27528",
+        "pdf_url": "https://arxiv.org/pdf/2611.27528"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Repeated words, substitutions and symbolic discrepancies directly match symbolic and topological dynamics.",
+        "tldr": "Typical infinite-type interval translations are rigid for the specified induction measure, while a return-word condition gives substitution nonrigidity and certain weak-mixing examples.",
+        "problem": "Compare measure rigidity and symbolic nonrigidity for interval translation maps and self-similar substitutions.",
+        "main_result": "Almost every infinite-type map in the Bruin-Troubetzkoy family, and in each fixed-branch Bruin family, is rigid for its invariant probability, with typicality measured by the intrinsic induction parameter measure. Recurrence of cylinders of explicit repeated-word blocks proves this. A primitive aperiodic substitution is nonrigid if its incidence matrix has a rational periodic vector in the return-word space with nonzero coordinate sum; the proof gives a uniform positive symbol-discrepancy bound at all sufficiently large times. For self-similar Bruin maps with primitive period substitution, that condition also implies weak mixing. The authors verify the condition on an explicit infinite-type eight-interval example.",
+        "methods": [
+          "Repeated-word blocks and recurrent induction cylinders",
+          "Return-word incidence-matrix criterion",
+          "Symbol-discrepancy bounds",
+          "Explicit self-similar example"
+        ],
+        "context": "Interval translation dynamics, symbolic induction and substitution rigidity.",
+        "keywords": [
+          "interval translations",
+          "substitutions",
+          "rigidity",
+          "weak mixing"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.27557",
+        "versioned_id": "2611.27557v1",
+        "title": "Real-analytic actions of higher-rank lattices preserving an ergodic volume",
+        "authors": [
+          "Federico Rodriguez Hertz",
+          "Zhiren Wang"
+        ],
+        "abstract": "We classify real-analytic actions of higher-rank lattices that preserve an ergodic smooth volume on a compact manifold. On an invariant open dense set of full volume, the action is analytically conjugate to the restriction of an affine action on finitely many copies of one double quotient. The conjugacy carries Haar probability to the given volume. Analytic germ superrigidity supplies local coordinates with measurable dependence on the center. The conditional measures on coarse Lyapunov manifolds determine the law of a displaced center. A two-point joining pairs charts whose evaluations agree there and gives the change of coordinates. The resulting analytic frame bundle carries a coframe whose vector fields integrate to the homogeneous model. This gives the open homogeneous classification in Zimmer's program.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.GR"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.27557",
+        "pdf_url": "https://arxiv.org/pdf/2611.27557"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Higher-rank lattice actions, ergodic volume and homogeneous models directly match group-action dynamics.",
+        "tldr": "The stated volume-preserving analytic actions have an affine homogeneous model on an invariant open dense set of full volume.",
+        "problem": "Classify real-analytic higher-rank lattice actions preserving an ergodic smooth volume.",
+        "main_result": "On a compact manifold, such an action is analytically conjugate, on an invariant open dense set of full volume, to the restriction of an affine action on finitely many copies of one double quotient. The conjugacy carries Haar probability to the given volume. Analytic germ superrigidity supplies local coordinates with measurable center dependence; conditional measures on coarse Lyapunov manifolds and a two-point joining yield chart changes. A coframe on the analytic frame bundle then integrates to the homogeneous model. The abstract claims an open homogeneous classification, rather than a conjugacy on the entire compact manifold. Further lattice hypotheses and the precise double quotient: Not specified in the abstract.",
+        "methods": [
+          "Analytic germ superrigidity",
+          "Conditional measures on coarse Lyapunov manifolds",
+          "Two-point joining of charts",
+          "Integration of a frame-bundle coframe"
+        ],
+        "context": "Volume-preserving higher-rank actions and homogeneous classification in Zimmer theory.",
+        "keywords": [
+          "higher-rank lattices",
+          "ergodic volume",
+          "homogeneous models",
+          "analytic conjugacy"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.27687",
+        "versioned_id": "2611.27687v1",
+        "title": "Random pullback attractors for evolution equations with nonlocal perturbations and fractional Brownian motion",
+        "authors": [
+          "Shiqi Li",
+          "Jiawei He",
+          "Jianhua Huang"
+        ],
+        "abstract": "We study semilinear evolution equations with time-nonlocal perturbations of \\(\\mu\\ge0\\) and additive fractional Brownian noise with Hurst parameter \\(H\\in(1/2,1)\\). Under the regularity assumptions and a globally Lipschitz nonlinearity, we establish global existence and uniqueness in the concept of pathwise mild solutions. We overcome the difficult in which the solution family lacks the cocycle property, by shifting the corresponding stochastic Volterra equation on a weighted space, and then the continuous random dynamical system follows. Based on a dissipativity condition, we establish the pullback random asymptotic compactness and the compact random pullback attractor \\(\\mathcal A_\\mu\\). Finally, we prove that the family of random pullback attractors \\(\\mathcal A_\\mu\\) is upper semicontinuous at \\(\\mu=0\\) almost surely.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.PR"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.27687",
+        "pdf_url": "https://arxiv.org/pdf/2611.27687"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Random attractors, cocycle construction and upper semicontinuity give a plausible topological-dynamics connection in an evolution-equation setting.",
+        "tldr": "A shifted Volterra formulation yields random pullback attractors and almost-sure upper semicontinuity as the nonlocal perturbation vanishes.",
+        "problem": "Recover a random dynamical system and analyze attractors for nonlocal equations driven by fractional Brownian noise.",
+        "main_result": "For semilinear evolution equations with time-nonlocal perturbation \\(\\mu\\geq0\\) and additive fractional Brownian noise with \\(H\\in(1/2,1)\\), the stated regularity assumptions and globally Lipschitz nonlinearity give unique global pathwise mild solutions. Because the solution family lacks a cocycle property, the associated stochastic Volterra equation is shifted on a weighted space to obtain a continuous random dynamical system. Under a dissipativity condition, pullback random asymptotic compactness yields a compact random pullback attractor \\(\\mathcal A_\\mu\\). This family is upper semicontinuous at \\(\\mu=0\\) almost surely. The detailed regularity and dissipativity hypotheses: Not specified in the abstract.",
+        "methods": [
+          "Shifted stochastic Volterra equation on a weighted space",
+          "Pullback random asymptotic compactness"
+        ],
+        "context": "Random dynamical systems, nonlocal memory and pullback attractors.",
+        "keywords": [
+          "random attractors",
+          "fractional Brownian motion",
+          "cocycle construction",
+          "upper semicontinuity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.27731",
+        "versioned_id": "2611.27731v1",
+        "title": "Boundary of the Lagrange and Markov spectra near Hall's ray",
+        "authors": [
+          "Harold Erazo",
+          "Carlos Matheus",
+          "Carlos Gustavo Moreira"
+        ],
+        "abstract": "The Lagrange and Markov spectra, denoted by $L$ and $M$, respectively, are closed subsets of the real line with intricate fractal geometry related to Diophantine approximations. In 1975, Freiman proved that both spectra contain the ray $[c_F,\\infty)$, where $c_F=4.527829566\\dots$, and that this ray is optimal, as both spectra avoid a tiny interval $(\\nu_F,c_F)$. Using renormalization techniques and the thickness of Cantor sets, we prove that the boundaries $\\partial L$ and $\\partial M$ have positive Hausdorff dimensions arbitrarily close to $\\nu_F$. Furthermore, in connection with Berstein's conjecture, which predicts that $[4.1,4.52]\\subset L$, we exhibit a gap in $L$ near $4.08$, the first known gap in the region $L\\cap[3.945,4.52]$. We also prove that the boundaries of both spectra have positive Hausdorff dimension near $4.5213$ and $4.08$.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.27731",
+        "pdf_url": "https://arxiv.org/pdf/2611.27731"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Positive Hausdorff dimensions of spectral boundaries and Cantor-set thickness directly match fractal-geometry interests.",
+        "tldr": "Lagrange and Markov spectral boundaries have positive Hausdorff dimension near the stated locations, and a Lagrange-spectrum gap is found near 4.08.",
+        "problem": "Describe fractal boundaries and gaps of the Lagrange and Markov spectra near Hall-ray geometry.",
+        "main_result": "The abstract recalls the common optimal Hall ray \\([c_F,\\infty)\\), with \\(c_F=4.527829566\\ldots\\), and the avoided interval \\((\\nu_F,c_F)\\). Using renormalization and Cantor-set thickness, the authors prove that \\(\\partial L\\) and \\(\\partial M\\) have positive Hausdorff dimensions arbitrarily close to \\(\\nu_F\\), and also near \\(4.5213\\) and \\(4.08\\). They exhibit a gap in \\(L\\) near \\(4.08\\), within the stated region \\([3.945,4.52]\\). This is discussed in relation to the conjectured inclusion \\([4.1,4.52]\\subset L\\); the reported gap is below that proposed interval. Explicit gap endpoints and dimension bounds: Not specified in the abstract.",
+        "methods": [
+          "Renormalization",
+          "Thickness of Cantor sets"
+        ],
+        "context": "Fractal geometry of Diophantine Lagrange and Markov spectra.",
+        "keywords": [
+          "Hausdorff dimension",
+          "Lagrange spectrum",
+          "Markov spectrum",
+          "Cantor thickness"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.27887",
+        "versioned_id": "2611.27887v1",
+        "title": "Recurrent sets and Lyapunov functions: from topological dynamics to weak KAM theory",
+        "authors": [
+          "Olga Bernardi",
+          "Mattia Sensi",
+          "Jim Wiseman"
+        ],
+        "abstract": "The aim of this survey is to clarify the intimate relations between Lyapunov functions and chain recurrent sets. The study of this subject comes from a seminal paper by Conley and has had recent advances by the so-called Weak KAM Theory for homeomorphisms. We provide a survey of the state of the art, presenting recent improvements and connections with the stationary Hamilton-Jacobi equation. Finally, in order to illustrate the distinctions between recurrent sets in a non-trivial case as well as their dependence on a parameter, we discuss a compartmental model from mathematical epidemiology and a fast-slow version of a prey-predator model with Allee effect.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.27887",
+        "pdf_url": "https://arxiv.org/pdf/2611.27887"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Chain recurrence, Lyapunov functions and topological dynamics are central profile themes.",
+        "tldr": "This survey relates chain recurrent sets to Lyapunov functions, weak KAM theory and stationary Hamilton-Jacobi equations.",
+        "problem": "Clarify relations between recurrent-set notions and Lyapunov functions.",
+        "main_result": "The survey presents the state of the art and recent developments connecting Conley recurrence theory, weak KAM theory for homeomorphisms and the stationary Hamilton-Jacobi equation. A compartmental epidemiological model and a fast-slow prey-predator model with Allee effect illustrate differences between recurrent sets and their dependence on a parameter. The abstract does not specify individual new theorem statements, detailed hypotheses or quantitative estimates: Not specified in the abstract.",
+        "methods": [
+          "Survey of Conley recurrence and weak KAM theory",
+          "Compartmental and fast-slow model illustrations"
+        ],
+        "context": "Topological recurrence, Lyapunov functions and weak KAM theory.",
+        "keywords": [
+          "chain recurrence",
+          "Lyapunov functions",
+          "weak KAM theory",
+          "Hamilton-Jacobi equation"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.27925",
+        "versioned_id": "2611.27925v1",
+        "title": "The Thurston algorithm for general entire maps on the complex plane: Existence and uniqueness",
+        "authors": [
+          "Sebastian van Strien"
+        ],
+        "abstract": "We prove that a marked topological entire Thurston map $(f,A)$ of stable parabolic type is Thurston equivalent relative to $A$ to a postsingularly finite entire function if and only if it has no Levy cycle relative to $A\\cup\\{\\infty\\}$. Here $A$ is a finite forward-invariant set containing the postsingular set. In the realizable case, the entire function is unique up to complex affine conjugacy, and every orbit of the Thurston pullback converges to its fixed point. We establish a Wolff--Denjoy type estimate for nonexpanding self-maps $T$ of the Teichm\\\"uller space of any connected orientable surface of finite type without boundary. If $T$ has an unbounded orbit, there are a nonzero measured foliation $G$ and a constant $C$ such that $\\operatorname{Ext}_{T^k x}(G)\\le C\\operatorname{Ext}_x(G)$ for every $x$ and $k\\ge0$. For a fixed-point-free transcendental Thurston pullback, this supplies the foliation used in the existence proof. A central tool is a fixed finite measure obtained as the total-variation limit of renormalized pushforward measures transported back along a Teichm\\\"uller ray. It allows us to select a cylinder at a late time and compare the mass of the same marked region at different times. If $G$ has a cylinder, a four-point extremal-length estimate and the Thurston matrix force a Levy cycle. Otherwise, in the absence of a Levy cycle, cluster rescaling shows that cylinders of large modulus carry almost all the fixed measure at all late times. Following a cylinder of definite mass until its modulus decreases gives a contradiction. We compare this geometric argument with the proofs for real entire maps and exponential maps.",
+        "announce_type": "new",
+        "categories": [
+          "math.DS",
+          "math.CV"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.27925",
+        "pdf_url": "https://arxiv.org/pdf/2611.27925"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Topological realization, Thurston equivalence and convergence of pullback dynamics directly match topological and complex dynamics.",
+        "tldr": "For stable-parabolic marked entire Thurston maps, absence of a relative Levy cycle characterizes unique entire realization and convergence of every pullback orbit.",
+        "problem": "Characterize existence and uniqueness of postsingularly finite entire realizations for marked topological entire maps.",
+        "main_result": "For a marked topological entire Thurston map \\((f,A)\\) of stable parabolic type, with \\(A\\) finite, forward invariant and containing the postsingular set, realization by a postsingularly finite entire function relative to \\(A\\) is equivalent to absence of a Levy cycle relative to \\(A\\cup\\{\\infty\\}\\). In the realizable case the function is unique up to complex affine conjugacy and every Thurston-pullback orbit converges to its fixed point. A Wolff-Denjoy type estimate for a nonexpanding self-map \\(T\\) of the Teichmüller space of a connected orientable finite-type boundaryless surface says that an unbounded orbit yields a nonzero measured foliation \\(G\\) and constant \\(C\\) with \\(\\operatorname{Ext}_{T^k x}(G)\\leq C\\operatorname{Ext}_x(G)\\) for all \\(x\\) and \\(k\\geq0\\). The existence proof uses a fixed finite measure obtained as a total-variation limit of transported renormalized pushforwards, cylinder mass comparisons, extremal-length estimates and cluster rescaling.",
+        "methods": [
+          "Wolff-Denjoy type extremal-length estimate",
+          "Total-variation limit of transported renormalized pushforwards",
+          "Cylinder mass comparison",
+          "Thurston matrix and four-point extremal-length estimate",
+          "Cluster rescaling"
+        ],
+        "context": "Entire Thurston realization, Teichmüller pullback dynamics and Levy obstructions.",
+        "keywords": [
+          "Thurston algorithm",
+          "entire functions",
+          "Levy cycles",
+          "extremal length"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26634",
+        "versioned_id": "2611.26634v1",
+        "title": "Almost-sure quenched KAM tori for nonlinear wave equations with a spatial white-noise potential",
+        "authors": [
+          "Yingdu Dong",
+          "Wenwen Jian",
+          "Xiaoping Yuan"
+        ],
+        "abstract": "Let \\[ A_\\omega=-\\partial_x^2+\\rho\\,\\partial_xB(x,\\omega), \\qquad \\rho\\ne0, \\] be the Dirichlet Schr\\\"odinger operator on $(0,\\pi)$ with a spatial Gaussian white-noise potential, realized pathwise via quasi-derivatives. Here $B$ is Brownian motion in the spatial variable $x$, and $\\partial_xB$ denotes its distributional derivative. We consider the nonlinear wave equation \\[ u_{tt}+A_\\omega u+f(u)=0, \\] where $f$ is odd and real analytic near zero, with $f(u)=\\kappa u^3+O(u^5)$ and $\\kappa\\ne0$. We show that, on a single event of probability one, no nontrivial finitely supported integer combination of the positive wave frequencies is an integer, and the quartic twist matrix is nonsingular for every finite tangential set of positive modes. After fixing a path in this event, we construct a partial Birkhoff normal form of the Hamiltonian up to degree ten. For every finite nonempty tangential set $J$ of cardinality $b$ associated with positive eigenvalues, we obtain a Cantor family of real-analytic, small-amplitude invariant $b$-tori in $H^1_0(0,\\pi;\\mathbb{R})\\times L^2(0,\\pi;\\mathbb{R})$. The family is parametrized by a Cantor subset of $[\\nu,2\\nu]^b$ whose relative measure tends to one as $\\nu\\to0$. The tori are normally elliptic when $A_\\omega$ is positive. Otherwise, they have $h$ stable and $h$ unstable normal directions, where $h$ is the number of negative eigenvalues of $A_\\omega$.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26634",
+        "pdf_url": "https://arxiv.org/pdf/2611.26634"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Invariant tori, normal ellipticity and stable/unstable directions directly connect to geometric and hyperbolic dynamics despite the PDE setting.",
+        "tldr": "Almost every spatial white-noise realization supports small-amplitude KAM tori for every finite positive-mode tangential set, with stability determined by the negative spectrum.",
+        "problem": "Construct quenched invariant tori for nonlinear wave equations with a spatial white-noise potential.",
+        "main_result": "The Dirichlet operator on \\((0,\\pi)\\) has spatial Gaussian white-noise potential with nonzero coupling, and the nonlinearity is odd and real analytic near zero with \\(f(u)=\\kappa u^3+O(u^5)\\), \\(\\kappa\\ne0\\). On one probability-one event, no nontrivial finitely supported integer combination of positive wave frequencies is an integer, and every finite positive-mode tangential set has nonsingular quartic twist matrix. Fixing such a path, a degree-ten partial Birkhoff normal form gives invariant real-analytic \\(b\\)-tori for every nonempty positive-mode set of size \\(b\\), in \\(H^1_0(0,\\pi;\\mathbb R)\\times L^2(0,\\pi;\\mathbb R)\\). The parameter Cantor set in \\([\\nu,2\\nu]^b\\) has relative measure tending to one as \\(\\nu\\to0\\). The tori are normally elliptic if the operator is positive; otherwise they have \\(h\\) stable and \\(h\\) unstable normal directions, where \\(h\\) counts its negative eigenvalues.",
+        "methods": [
+          "Pathwise quasi-derivative realization",
+          "Partial Birkhoff normal form through degree ten",
+          "KAM construction",
+          "Almost-sure frequency and twist properties"
+        ],
+        "context": "Random-potential wave equations and infinite-dimensional invariant-torus dynamics.",
+        "keywords": [
+          "quenched KAM tori",
+          "white-noise potential",
+          "normal ellipticity",
+          "partial hyperbolicity"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.26707",
+        "versioned_id": "2611.26707v1",
+        "title": "Planar cut-and-project sets with interval windows are bi-Lipschitz equivalent to lattices",
+        "authors": [
+          "Alan Haynes"
+        ],
+        "abstract": "We prove that every cut-and-project set in a plane in $\\mathbb{R}^3$ whose window is a line segment is bi-Lipschitz equivalent to a lattice: if $V\\subseteq\\mathbb{R}^3$ is a plane which is not spanned by vectors in $\\mathbb{Z}^3$, $x\\in\\mathbb{R}^3$, and $\\sigma$ is a segment of any length which is transverse to $V$, then the set of points $v\\in V$ with $v+x\\in\\sigma+\\mathbb{Z}^3$ is bi-Lipschitz equivalent to $\\mathbb{Z}^2$. For planes of Diophantine slope this is a theorem of Burago and Kleiner, and the point of the present paper is that no Diophantine condition on the plane is needed. We also show that the same conclusion holds when the window is a finite union of intervals. Together with the author's construction of a cut-and-project set in a plane in $\\mathbb{R}^3$, with a compact window of countable boundary, which is not bi-Lipschitz equivalent to any lattice, this shows that for planes in $\\mathbb{R}^3$ the answer to the bi-Lipschitz question depends on the shape of the window rather than on the Diophantine properties of the plane.",
+        "announce_type": "cross",
+        "categories": [
+          "math.MG",
+          "math.DS",
+          "math.NT"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.26707",
+        "pdf_url": "https://arxiv.org/pdf/2611.26707"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Bi-Lipschitz geometry of cut-and-project sets gives a plausible geometric-dynamics connection, though no dynamical theorem is stated.",
+        "tldr": "Planar cut-and-project sets with interval windows are bi-Lipschitz equivalent to lattices without a Diophantine slope assumption.",
+        "problem": "Determine whether window shape or plane arithmetic controls bi-Lipschitz equivalence of planar cut-and-project sets.",
+        "main_result": "If \\(V\\subset\\mathbb R^3\\) is a plane not spanned by integer vectors, \\(x\\in\\mathbb R^3\\), and \\(\\sigma\\) is a segment of any length transverse to \\(V\\), then \\(\\{v\\in V:v+x\\in\\sigma+\\mathbb Z^3\\}\\) is bi-Lipschitz equivalent to \\(\\mathbb Z^2\\), with no Diophantine condition on the plane. The conclusion also holds for finite unions of interval windows. Compared with the stated earlier compact-window example with countable boundary that is not bi-Lipschitz to a lattice, this shows dependence on window shape rather than Diophantine slope properties. The proof techniques and quantitative distortion bounds: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Cut-and-project geometry, lattices and bi-Lipschitz equivalence.",
+        "keywords": [
+          "cut-and-project sets",
+          "interval windows",
+          "bi-Lipschitz equivalence",
+          "lattices"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.27036",
+        "versioned_id": "2611.27036v1",
+        "title": "Nonlinear stability of periodic waves in the Benjamin-Ono equation",
+        "authors": [
+          "Jinbing Chen",
+          "Colin Grant",
+          "Dmitry E. Pelinovsky"
+        ],
+        "abstract": "We construct the Lyapunov functional for the periodic waves of the Benjamin-Ono equation based on the conservation of momentum, energy, and a higher-order energy, which exists due to integrability. Positivity of the second variation of the Lyapunov functional for perturbations in Sobolev space $H^1(\\mathbb{R})$ is established by utilizing the basis properties of eigenfunctions of the linearized Benjamin-Ono equation in $L^2(\\mathbb{R})$. Coercivity of the Lyapunov functional for co-periodic and multiple-periodic perturbations yields the nonlinear orbital stability of the periodic waves in the periodic domain.",
+        "announce_type": "cross",
+        "categories": [
+          "math.AP",
+          "math-ph",
+          "math.DS",
+          "math.MP",
+          "nlin.PS",
+          "nlin.SI"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.27036",
+        "pdf_url": "https://arxiv.org/pdf/2611.27036"
+      },
+      "analysis": {
+        "priority": "LOW PRIORITY",
+        "confidence": "high",
+        "relevance_note": "The focus is nonlinear orbital stability of PDE waves without a central entropy, symbolic, dimensional or group-action theme.",
+        "tldr": "",
+        "problem": "",
+        "main_result": "",
+        "methods": [],
+        "context": "",
+        "keywords": []
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.27098",
+        "versioned_id": "2611.27098v1",
+        "title": "Idempotent generically stable measures in NIP groups",
+        "authors": [
+          "Artem Chernikov"
+        ],
+        "abstract": "Let $\\mu$ be a global generically stable Keisler measure on a type-definable group in an NIP theory. Then $\\mu$ is idempotent if and only if it is the unique translation-invariant measure on its type-definable stabilizer subgroup. This resolves the NIP case of the Idempotent Measure problem studied by Chernikov, Gannon, and Krupi\\'nski.",
+        "announce_type": "cross",
+        "categories": [
+          "math.LO",
+          "math.DS",
+          "math.GR"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.27098",
+        "pdf_url": "https://arxiv.org/pdf/2611.27098"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Translation-invariant measures and stabilizer groups directly match group-action and invariant-measure interests.",
+        "tldr": "A global generically stable Keisler measure in the stated NIP setting is idempotent exactly when it is the unique invariant measure on its stabilizer.",
+        "problem": "Characterize idempotent generically stable measures on type-definable groups.",
+        "main_result": "For a global generically stable Keisler measure \\(\\mu\\) on a type-definable group in an NIP theory, idempotence is equivalent to being the unique translation-invariant measure on its type-definable stabilizer subgroup. The authors thereby resolve the stated NIP case of the Idempotent Measure problem. The proof techniques and definitions of the measure product: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Model-theoretic groups, translation invariance and idempotent measures.",
+        "keywords": [
+          "NIP groups",
+          "Keisler measures",
+          "idempotence",
+          "translation invariance"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.27730",
+        "versioned_id": "2611.27730v1",
+        "title": "Convex Structure-Preserving EDMD: Passive Koopman Matrices as $Q$-Contractions",
+        "authors": [
+          "Matthias Ehrhardt",
+          "Achraf Zinihi"
+        ],
+        "abstract": "Extended dynamic mode decomposition (EDMD) approximates the Koopman operator using a matrix based on a finite set of observables. However, the least-squares matrix of a port-Hamiltonian (pH) system is generally neither passive nor invariant-preserving. We demonstrate that the implicit midpoint discretization of a lifted pH model precisely preserves energy balance, passivity, and all linear Casimirs for every step size. For a fixed storage metric $Q$, the resulting Koopman matrices are the Cayley transforms of $(J-R)Q$, where $J$ is skew-symmetric and $R$ is positive semidefinite. This set does not depend on the step size and is the closure of all Q-contractions. This set is LMI-representable; therefore, structure-preserving EDMD, including ports through a discrete-time Kalman-Yakubovich-Popov condition and Casimirs through affine constraints, is a semidefinite program. The constrained estimate is a projection of the unconstrained estimate in the data-weighted norm and cannot increase estimation error when the population target is pH-compatible. For every $Q$-contraction, a certified bound on the lifted prediction error grows linearly at most in time, whereas it grows geometrically for unconstrained models with Q-gain above one. Benchmarks on a damped pendulum and a damped rigid body demonstrate that constrained models never generate energy and that imposed Casimirs are maintained with solver accuracy (approximately $10^{-8}$). In contrast, EDMD may diverge or lose the Casimir with noisy data. The benchmarks also demonstrate that when $Q$ is the physical energy, the constrained models are less accurate than EDMD and can exhibit significant structural bias.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NA",
+          "cs.NA",
+          "math-ph",
+          "math.DS",
+          "math.MP"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.27730",
+        "pdf_url": "https://arxiv.org/pdf/2611.27730"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "medium",
+        "relevance_note": "Koopman operators, invariant preservation and contraction structure give a plausible operator-dynamics connection despite the numerical-control focus.",
+        "tldr": "Passive Koopman estimates admit convex structure constraints and conditional error guarantees, while physical-energy metrics can introduce substantial bias.",
+        "problem": "Enforce passivity, energy balance and linear Casimirs in extended dynamic mode decomposition.",
+        "main_result": "The implicit midpoint discretization of the lifted port-Hamiltonian model preserves energy balance, passivity and linear Casimirs at every step size. For fixed storage metric \\(Q\\), the authors describe a step-size-independent Cayley-transform class associated with \\((J-R)Q\\), where \\(J\\) is skew symmetric and \\(R\\) positive semidefinite, and identify it with the stated closure of \\(Q\\)-contractions. Linear matrix inequalities, port conditions and affine Casimir constraints yield a semidefinite program. Its data-weighted projection cannot increase estimation error when the population target is port-Hamiltonian compatible. Certified lifted prediction error grows at most linearly for \\(Q\\)-contractions. Benchmarks preserve imposed Casimirs to roughly \\(10^{-8}\\), but using physical energy for \\(Q\\) can make the constrained models less accurate than ordinary EDMD with significant structural bias.",
+        "methods": [
+          "Implicit midpoint discretization",
+          "Cayley transform",
+          "Linear matrix inequalities and semidefinite programming",
+          "Discrete-time Kalman-Yakubovich-Popov condition",
+          "Data-weighted projection",
+          "Numerical benchmarks"
+        ],
+        "context": "Structure-preserving Koopman approximation and passive port-Hamiltonian models.",
+        "keywords": [
+          "EDMD",
+          "Koopman matrices",
+          "passivity",
+          "structural bias"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2611.27825",
+        "versioned_id": "2611.27825v1",
+        "title": "An arithmetic theory of simultaneous rational-translation Lagrange equality spectra",
+        "authors": [
+          "Jimmy Tseng"
+        ],
+        "abstract": "We show geometric and dimensional properties of simultaneous rational-translation Lagrange equality spectra for both $\\boldsymbol{\\mathrm{Bad}}$ and $\\boldsymbol{\\mathrm{Bad}(\\delta)}$ using the projective cocycle steering method, which we introduce. In particular, we show the existence of a simultaneous Hall ray for $\\boldsymbol{\\mathrm{Bad}}$, a simultaneous Hall interval for $\\boldsymbol{\\mathrm{Bad}(\\delta)}$, regimes of full and positive Hausdorff dimension, a scaling law, empty low spectra in certain cases, a compact set of full Hausdorff dimension in $(2Q\\sqrt 3 - \\varepsilon, 2Q\\sqrt 3)$ where $Q$ is a common denominator of the finite set of rationals giving the translations, and the density of Lagrange equality sets in $\\mathbb{R}$ for Lagrange constants in the Hall ray or Hall interval, respectively. Furthermore, we show that the Lagrange equality set for $\\boldsymbol{\\mathrm{Bad}}$, for a finite set of rational translations, is thick but, for the set of all rational translations, is empty. Likewise, we bound the Hausdorff dimension of the Lagrange equality sets for $\\boldsymbol{\\mathrm{Bad}(\\delta)}$ in every nonempty open interval of $\\mathbb{R}$. For each fixed $Q$, our result on the Hall interval, the density result, and the dimension bounds for $\\boldsymbol{\\mathrm{Bad}(\\delta)}$ hold for all sufficiently small $\\delta>0$. Both emptiness results (low spectra and the Lagrange equality set under all rational translations) hold for every $\\delta>0$.",
+        "announce_type": "cross",
+        "categories": [
+          "math.NT",
+          "math.DS"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2611.27825",
+        "pdf_url": "https://arxiv.org/pdf/2611.27825"
+      },
+      "analysis": {
+        "priority": "HIGH PRIORITY",
+        "confidence": "high",
+        "relevance_note": "Hausdorff-dimension regimes, thick equality sets and Diophantine spectra directly match fractal-geometry interests.",
+        "tldr": "Simultaneous rational-translation Lagrange equality spectra exhibit Hall regions, full-dimension regimes and a sharp finite-versus-all-translations distinction.",
+        "problem": "Describe geometry and Hausdorff dimension of simultaneous Lagrange equality spectra for rational translations.",
+        "main_result": "For \\(\\mathrm{Bad}\\), the authors obtain a simultaneous Hall ray, and for \\(\\mathrm{Bad}(\\delta)\\) a simultaneous Hall interval, together with full and positive Hausdorff-dimension regimes, a scaling law and some empty low spectra. They construct a full-Hausdorff-dimension compact set in \\((2Q\\sqrt3-\\varepsilon,2Q\\sqrt3)\\), where \\(Q\\) is a common denominator for the finite translation set. Equality sets are dense for constants in the respective Hall regions. For \\(\\mathrm{Bad}\\), the equality set is thick for finitely many rational translations but empty for all rational translations. For each fixed \\(Q\\), the Hall-interval, density and dimension-bound results for \\(\\mathrm{Bad}(\\delta)\\) require sufficiently small \\(\\delta>0\\); the two stated emptiness conclusions hold for every \\(\\delta>0\\). The dimension bounds concern equality sets in every nonempty open real interval. The explicit bounds, scaling law and regime conditions: Not specified in the abstract.",
+        "methods": [
+          "Projective cocycle steering method"
+        ],
+        "context": "Diophantine Lagrange spectra, rational translations and Hausdorff dimension.",
+        "keywords": [
+          "Lagrange equality spectra",
+          "Hausdorff dimension",
+          "Hall ray",
+          "rational translations"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    },
+    {
+      "paper": {
+        "arxiv_id": "2005.00648",
+        "versioned_id": "2005.00648v2",
+        "title": "Small scale quantum ergodicity in cat maps",
+        "authors": [
+          "Xiaolong Han"
+        ],
+        "abstract": "We study small scale quantum ergodicity in quantum cat maps, with semiclassical parameter 1/N, and prove three groups of results. First, for every N and every eigenbasis, almost all eigenstates are equidistributed on phase space balls of radius (log N)^(-a) for a<1/2, and on position space balls for a<1. For a set of N of full density and for Hecke eigenbases, almost all eigenstates, and even all of them, are equidistributed at polynomial scales. Second, every invariant probability measure is the semiclassical measure of quasimodes of order 1/log N, one for each N, that are not equidistributed at any scale between 4N^(-1/8) and a prescribed scale tending to zero. Third, there are orthonormal bases of quasimodes of order 1/log N for every N, and eigenbases for N with short periods, in which a full density subset is equidistributed at every fixed scale, but not at the scales (log N)^(-a) for a>1/2 in phase space and a>1 in position space. Hence, the exponents 1/2 and 1 in the first group are sharp: even for a full density subset of eigenstates, quantum ergodicity at fixed scales does not extend beyond the critical logarithmic scales.",
+        "announce_type": "replace-cross",
+        "categories": [
+          "math.AP",
+          "math-ph",
+          "math.DS",
+          "math.MP",
+          "math.SP"
+        ],
+        "announced_at": "2026-11-23T00:00:00-05:00",
+        "abstract_url": "https://arxiv.org/abs/2005.00648",
+        "pdf_url": "https://arxiv.org/pdf/2005.00648"
+      },
+      "analysis": {
+        "priority": "RELATED / POSSIBLY INTERESTING",
+        "confidence": "high",
+        "relevance_note": "Invariant semiclassical measures, cat maps and sharp equidistribution scales give a substantial ergodic-dynamics connection.",
+        "tldr": "Quantum cat maps have sharp logarithmic equidistribution thresholds, while explicit quasimodes distinguish fixed-scale from shrinking-scale quantum ergodicity.",
+        "problem": "Determine small-scale quantum ergodicity and its limitations for cat maps.",
+        "main_result": "With semiclassical parameter \\(1/N\\), the authors prove almost-all-eigenstate equidistribution for every eigenbasis at phase-space ball scales \\((\\log N)^{-a}\\) with \\(a<1/2\\), and position-space scales with \\(a<1\\). Further polynomial-scale conclusions cover full-density sets of \\(N\\) and Hecke eigenbases, including an all-eigenstate statement; the precise polynomial exponents: Not specified in the abstract. Every invariant probability is realized by order-\\(1/\\log N\\) quasimodes, one for each \\(N\\), which fail equidistribution at every scale from \\(4N^{-1/8}\\) to a prescribed shrinking scale. Orthonormal quasimode bases for every \\(N\\), and eigenbases for short-period \\(N\\), have a full-density subset equidistributed at all fixed scales but failing at logarithmic exponents \\(a>1/2\\) in phase space and \\(a>1\\) in position space. Thus the two logarithmic thresholds are sharp. The proof techniques: Not specified in the abstract.",
+        "methods": [
+          "Not specified in the abstract."
+        ],
+        "context": "Quantum cat-map dynamics, semiclassical invariant measures and equidistribution.",
+        "keywords": [
+          "quantum ergodicity",
+          "cat maps",
+          "quasimodes",
+          "shrinking scales"
+        ]
+      },
+      "analysis_status": "ok",
+      "analysis_error": null,
+      "followed_authors": []
+    }
+  ],
+  "counts": {
+    "HIGH PRIORITY": 10,
+    "RELATED / POSSIBLY INTERESTING": 7,
+    "LOW PRIORITY": 1
+  },
+  "source_inputs": [
+    {
+      "schema_version": 1,
+      "source_url": "https://rss.arxiv.org/rss/math.DS",
+      "category": "math.DS",
+      "fetched_at": "2026-11-23T11:03:03.129928Z",
+      "feed_published_at": "2026-11-23T00:00:00-05:00",
+      "feed_build_at": "2026-11-23T05:00:38Z",
+      "feed_date": "2026-11-23",
+      "sha256": "0e00bfb3a4357b34a08f099903f10b2c23e99af887982638c971b654e987c866",
+      "byte_length": 35886,
+      "capture_run_url": null
+    }
+  ]
+}
