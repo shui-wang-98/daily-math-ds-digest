@@ -10292,8 +10292,8 @@
       "analysis_status": "ok"
     }
   },
-  "last_feed_build": "2026-11-26T05:03:26+00:00",
-  "updated_at": "2026-11-26T08:08:18.816947+00:00",
+  "last_feed_build": "2026-11-27T05:00:15+00:00",
+  "updated_at": "2026-11-27T08:04:05.976316+00:00",
   "processed_inputs": {
     "2026-09-15/c2ead384a44e73215e6b26a60449e1dc3fbca5cfc22a4cfeea11a9ac47ae2441": {
       "report_date": "2026-09-15",
@@ -10506,6 +10506,10 @@
     "2026-11-26/c0327359c6fbb1467d1ac9938d5f6a48ad540e5ba1aa9d1857757d8d9e13ad57": {
       "report_date": "2026-11-26",
       "sha256": "c0327359c6fbb1467d1ac9938d5f6a48ad540e5ba1aa9d1857757d8d9e13ad57"
+    },
+    "2026-11-27/ea264bfa67e97640854dc90f2c67fbfe1bcb27773ba5ed377a17f6f812db0cb3": {
+      "report_date": "2026-11-27",
+      "sha256": "ea264bfa67e97640854dc90f2c67fbfe1bcb27773ba5ed377a17f6f812db0cb3"
     }
   }
 }
